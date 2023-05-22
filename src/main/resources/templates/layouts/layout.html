@@ -9,12 +9,12 @@
 	<title>[[#{global.title}]]</title>
 	<link rel="icon" type="image/png" th:href="@{/img/favicon.ico}">
 
-	<th:block th:replace="fragments/layout :: headLinks"></th:block>
+	<th:block th:replace="~{fragments/layout :: headLinks}"></th:block>
 </head>
 
 <body>
 	<!-- NAVBAR -->
-	<nav th:replace="fragments/layout :: navbar"></nav>
+	<nav th:replace="~{fragments/layout :: navbar}"></nav>
 
 	<!-- CONTENT -->
 	<main role="main" class="container">
@@ -22,7 +22,7 @@
 	</main>
 
 	<!-- JAVASCRIPT -->
-	<script th:replace="fragments/layout :: jsLinks"></script>
+	<script th:replace="~{fragments/layout :: jsLinks}"></script>
 	<div layout:fragment="javascript"></div>
 </body>
 </html>

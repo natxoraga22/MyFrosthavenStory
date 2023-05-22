@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- -------- -->
+	<!-- SCENARIO -->
+	<!-- -------- -->
+	<div th:fragment="scenario(scenario)" th:object="${scenario}" class="scenario my-4">
+		<!-- Title -->
+		<h1 class="h2">[[|*{id} *{name}|]]</h1>
+
+		<!-- Scenario goals -->
+		<div>[(*{goals})]</div>
+
+		<!-- Special rules -->
+		<div>[(*{specialRules})]</div>
+
+		<!-- Introduction -->
+		<div>[(*{introduction})]</div>
+	</div>
+</body>
+</html>

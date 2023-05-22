@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<!-- Bootstrap required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title & favicon -->
+	<title>[[#{global.title}]]</title>
+	<link rel="icon" type="image/png" th:href="@{/img/favicon.ico}">
+
+	<th:block th:replace="fragments/layout :: headLinks"></th:block>
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav th:replace="fragments/layout :: navbar"></nav>
+
+	<!-- CONTENT -->
+	<main role="main" class="container">
+		<div layout:fragment="content"></div>
+	</main>
+
+	<!-- JAVASCRIPT -->
+	<script th:replace="fragments/layout :: jsLinks"></script>
+	<div layout:fragment="javascript"></div>
+</body>
+</html>

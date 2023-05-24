@@ -1,0 +1,103 @@
+
+.scenario {
+	font-family: var(--font-tinos);
+	color: #2c2e35;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* TITLE */
+
+.title {
+	font-family: var(--font-pirata-one);
+	font-size: 28pt;
+}
+
+.title .number {
+	font-family: var(--font-germania-one);
+	font-size: 25pt;
+	vertical-align: bottom;
+}
+
+
+/* SECTIONS */
+
+.card {
+	--bs-card-spacer-x: 8px;
+	--bs-card-spacer-y: 8px;
+
+	--bs-card-border-width: 0;
+	--bs-card-inner-border-radius: 0;
+
+	--bs-card-cap-padding-y: 4px;
+	--bs-card-cap-padding-x: 8px;
+
+	--bs-card-cap-color: white;
+
+	--bs-card-color: #2c2e35;
+}
+
+.card-header {
+	border-bottom-width: 3px;
+
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}
+
+.card-body {
+	border-width: 0px 2px 2px 2px;
+	border-style: solid;
+}
+
+
+/* GOALS */
+
+.goals {
+	--bs-card-cap-bg: #a14f11;
+	--bs-card-bg: #f5bf70;
+}
+
+.goals .card-header {
+	border-bottom-color: #d27f20;
+}
+
+.goals .card-body {
+	border-color: #cf5621;
+}
+
+
+/* SPECIAL RULES */
+
+.special-rules {
+	--bs-card-cap-bg: #422071;
+	--bs-card-bg: #d5c7df;
+}
+
+.special-rules .card-header {
+	border-bottom-color: #732c8c;
+}
+
+.special-rules .card-body {
+	border-color: #412168;
+}
+
+
+/* INTRODUCTION */
+
+.introduction {
+	--bs-card-spacer-x: 0;
+	--bs-card-cap-bg: #226526;
+	--bs-card-bg: white;
+}
+
+.introduction .card-header {
+	border-bottom-color: #73c34b;
+}
+
+.introduction .card-body {
+	border-width: 0;
+}

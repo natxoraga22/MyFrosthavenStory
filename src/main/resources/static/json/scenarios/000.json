@@ -1,7 +1,7 @@
 {
-	"id": 1,
-    "coordinates": "FR",
-    "name": "A Town in Flames",
+	"id": 0,
+    "coordinates": "n6",
+    "name": "Howling in the Snow",
     "complexity": 1,
 
     "goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>2.2</strong>.",

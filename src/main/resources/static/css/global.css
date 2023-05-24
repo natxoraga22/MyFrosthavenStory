@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Pirata One';
+	src: url('/fonts/PirataOne.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Germania One';
+	src: url('/fonts/GermaniaOne.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('/fonts/Tinos-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('/fonts/Tinos-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('/fonts/Tinos-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('/fonts/Tinos-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+:root {
+	--font-pirata-one: 'Pirata One';
+	--font-germania-one: 'Germania One';
+	--font-tinos: 'Tinos';
+}

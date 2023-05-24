@@ -27,7 +27,7 @@ public class CampaignController {
 		// TEST
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File scenarioFile = new ClassPathResource("static/json/scenarios/001.json").getFile();
+			File scenarioFile = new ClassPathResource("static/json/scenarios/000.json").getFile();
 			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
 			log.debug("{}", scenario);
 

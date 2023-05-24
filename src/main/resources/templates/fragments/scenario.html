@@ -22,7 +22,7 @@
 		</div>
 
 		<!-- Special rules -->
-		<div class="card special-rules mb-3">
+		<div th:if="*{specialRules}" class="card special-rules mb-3">
 			<div class="card-header">Special Rules</div>
 			<div class="card-body">
 				[(*{specialRules})]

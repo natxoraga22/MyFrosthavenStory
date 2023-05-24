@@ -1,6 +1,8 @@
 package txraga.frosthaven.controllers;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
@@ -27,11 +29,15 @@ public class CampaignController {
 		// TEST
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File scenarioFile = new ClassPathResource("static/json/scenarios/000.json").getFile();
-			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
-			log.debug("{}", scenario);
-
-			model.addAttribute("scenario", scenario);
+			List<String> scenarioIds = List.of("000", "001", "002", "004-B");
+			List<Scenario> scenarios = new ArrayList<>();
+			for (String scenarioId : scenarioIds) {
+				File scenarioFile = new ClassPathResource("static/json/scenarios/" + scenarioId + ".json").getFile();
+				Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
+				log.debug("{}", scenario);
+				scenarios.add(scenario);
+			}
+			model.addAttribute("scenarioList", scenarios);
 		} 
 		catch (Exception e) {
 			log.catching(e);

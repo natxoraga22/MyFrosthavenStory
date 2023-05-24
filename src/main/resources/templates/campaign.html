@@ -8,7 +8,9 @@
 <body>
 	<!-- Content -->
 	<th:block layout:fragment="content">
-		<th:block th:replace="~{fragments/scenario :: scenario(${scenario})}"></th:block>
+		<th:block th:each="scenario : ${scenarioList}">
+			<th:block th:replace="~{fragments/scenario :: scenario(${scenario})}"></th:block>
+		</th:block>
 	</th:block>
 
 	<!-- Javascript -->

@@ -14,6 +14,7 @@ public class Scenario {
     private String coordinates;
     private String name;
     private int complexity;
+    private String location;
 
     private String goals;
     private String specialRules;

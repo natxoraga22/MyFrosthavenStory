@@ -8,6 +8,10 @@ p:last-child {
 	margin-bottom: 0;
 }
 
+.icon {
+	vertical-align: text-top;
+}
+
 
 /* TITLE */
 

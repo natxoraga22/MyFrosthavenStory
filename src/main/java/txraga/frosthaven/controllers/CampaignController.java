@@ -34,6 +34,7 @@ public class CampaignController {
 			for (String scenarioId : scenarioIds) {
 				File scenarioFile = new ClassPathResource("static/json/scenarios/" + scenarioId + ".json").getFile();
 				Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
+				scenario.replaceIcons();
 				log.debug("{}", scenario);
 				scenarios.add(scenario);
 			}

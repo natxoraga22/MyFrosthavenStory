@@ -1,35 +1,22 @@
 
+/* ------ */
+/* COMMON */
+/* ------ */
+
 .scenario {
 	font-family: var(--font-tinos);
 	color: #2c2e35;
 }
 
-p:last-child {
+.scenario p:last-child {
 	margin-bottom: 0;
 }
 
-.icon {
+.scenario .icon {
 	vertical-align: text-top;
 }
 
-
-/* TITLE */
-
-.title {
-	font-family: var(--font-pirata-one);
-	font-size: 28pt;
-}
-
-.title .number {
-	font-family: var(--font-germania-one);
-	font-size: 25pt;
-	vertical-align: bottom;
-}
-
-
-/* SECTIONS */
-
-.card {
+.scenario .card {
 	--bs-card-spacer-x: 8px;
 	--bs-card-spacer-y: 8px;
 
@@ -44,7 +31,7 @@ p:last-child {
 	--bs-card-color: #2c2e35;
 }
 
-.card-header {
+.scenario .card-header {
 	border-bottom-width: 3px;
 
 	font-family: var(--font-germania-one);
@@ -52,56 +39,131 @@ p:last-child {
 	line-height: 14pt;
 }
 
-.card-body {
+.scenario .card-body {
 	border-width: 0px 2px 2px 2px;
 	border-style: solid;
 }
 
 
-/* GOALS */
+/* ----- */
+/* TITLE */
+/* ----- */
 
-.goals {
+.scenario .title {
+	font-family: var(--font-pirata-one);
+	font-size: 28pt;
+}
+
+.scenario .title .number {
+	font-family: var(--font-germania-one);
+	font-size: 25pt;
+	vertical-align: bottom;
+}
+
+.scenario .title .location {
+	font-family: var(--font-tinos);
+	font-size: 12pt;
+}
+
+
+/* ----- */
+/* GOALS */
+/* ----- */
+
+.scenario .goals {
 	--bs-card-cap-bg: #a14f11;
 	--bs-card-bg: #f5bf70;
 }
 
-.goals .card-header {
+.scenario .goals .card-header {
 	border-bottom-color: #d27f20;
 }
 
-.goals .card-body {
+.scenario .goals .card-body {
 	border-color: #cf5621;
 }
 
 
+/* ------------- */
 /* SPECIAL RULES */
+/* ------------- */
 
-.special-rules {
+.scenario .special-rules {
 	--bs-card-cap-bg: #422071;
 	--bs-card-bg: #d5c7df;
 }
 
-.special-rules .card-header {
+.scenario .special-rules .card-header {
 	border-bottom-color: #732c8c;
 }
 
-.special-rules .card-body {
+.scenario .special-rules .card-body {
 	border-color: #412168;
 }
 
 
+/* ------------ */
 /* INTRODUCTION */
+/* ------------ */
 
-.introduction {
+.scenario .introduction {
 	--bs-card-spacer-x: 0;
 	--bs-card-cap-bg: #226526;
 	--bs-card-bg: white;
 }
 
-.introduction .card-header {
+.scenario .introduction .card-header {
 	border-bottom-color: #73c34b;
 }
 
-.introduction .card-body {
+.scenario .introduction .card-body {
 	border-width: 0;
+}
+
+
+/* ---------- */
+/* CONCLUSION */
+/* ---------- */
+
+.scenario .conclusion {
+	--bs-card-spacer-x: 0;
+	--bs-card-cap-bg: #6d0c07;
+	--bs-card-bg: white;
+}
+
+.scenario .conclusion .card-header {
+	border-bottom-color: #c92918;
+}
+
+.scenario .conclusion .card-body {
+	border-width: 0;
+}
+
+
+/* ------- */
+/* REWARDS */
+/* ------- */
+
+.scenario .rewards {
+	--bs-card-cap-bg: #eba128;
+	--bs-card-bg: #ebd3a0;
+}
+
+.scenario .rewards .card-header {
+	border-bottom-color: #ffcb34;
+}
+
+.scenario .rewards .card-body {
+	border-color: #a77b2a;
+}
+
+
+/* -------- */
+/* SECTIONS */
+/* -------- */
+
+.section .trigger {
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
 }

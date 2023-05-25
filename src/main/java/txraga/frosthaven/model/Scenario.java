@@ -1,5 +1,7 @@
 package txraga.frosthaven.model;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,6 +21,8 @@ public class Scenario {
 	private String goals;
 	private String specialRules;
 	private String introduction;
+
+	private List<Section> sections;
 
 
 	public void replaceIcons() {

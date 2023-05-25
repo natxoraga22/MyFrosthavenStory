@@ -7,11 +7,14 @@
 	<!-- -------- -->
 	<!-- SCENARIO -->
 	<!-- -------- -->
-	<div th:fragment="scenario(scenario)" th:object="${scenario}" class="scenario my-4">
+	<div th:fragment="scenario(scenario)" th:object="${scenario}" class="scenario mt-4 mb-5">
 		<!-- Title -->
-		<h1 class="title mb-3">
-			<span class="number">[[*{id}]]</span> · [[*{name}]]
-		</h1>
+		<div class="title mb-3">
+			<h1 class="mb-0">
+				<span class="number">[[*{id}]]</span> · [[*{name}]]
+			</h1>
+			<div th:if="*{location}" class="location">[[*{location}]]</div>
+		</div>
 
 		<!-- Scenario goals -->
 		<div class="card goals mb-3">
@@ -30,10 +33,45 @@
 		</div>
 
 		<!-- Introduction -->
-		<div class="card introduction">
+		<div class="card introduction mb-3">
 			<div class="card-header">Introduction</div>
 			<div class="card-body">
 				[(*{introduction})]
+			</div>
+		</div>
+
+		<!-- Sections -->
+		<th:block th:each="section : *{sections}">
+			<div th:replace="~{:: section(${section})}"></div>
+		</th:block>
+	</div>
+
+
+	<!-- -------- -->
+	<!-- SCENARIO -->
+	<!-- -------- -->
+	<div th:fragment="section(section)" th:object="${section}" class="section">
+		<!-- Trigger -->
+		<div th:if="*{trigger}" class="trigger">· [[*{trigger}]]:</div>
+
+		<!-- Text -->
+		<div th:if="*{text}" class="text py-2 mb-3">
+			[[*{text}]]
+		</div>
+
+		<!-- Conclusion -->
+		<div th:if="*{conclusion}" class="card conclusion mb-3">
+			<div class="card-header">Conclusion</div>
+			<div class="card-body">
+				[(*{conclusion})]
+			</div>
+		</div>
+
+		<!-- Rewards -->
+		<div th:if="*{rewards}" class="card rewards">
+			<div class="card-header">Rewards</div>
+			<div class="card-body">
+				[(*{rewards})]
 			</div>
 		</div>
 	</div>

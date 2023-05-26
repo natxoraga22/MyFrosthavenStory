@@ -13,7 +13,12 @@
 }
 
 .scenario .icon {
+	height: 12pt;
 	vertical-align: text-top;
+}
+
+.scenario .scenarioNumber {
+	font-family: var(--font-germania-one);
 }
 
 .scenario .card {
@@ -88,16 +93,16 @@
 /* SPECIAL RULES */
 /* ------------- */
 
-.scenario .special-rules {
+.scenario .specialRules {
 	--bs-card-cap-bg: #422071;
 	--bs-card-bg: #d5c7df;
 }
 
-.scenario .special-rules .card-header {
+.scenario .specialRules .card-header {
 	border-bottom-color: #732c8c;
 }
 
-.scenario .special-rules .card-body {
+.scenario .specialRules .card-body {
 	border-color: #412168;
 }
 
@@ -118,6 +123,21 @@
 
 .scenario .introduction .card-body {
 	border-width: 0;
+}
+
+
+/* ------- */
+/* TRIGGER */
+/* ------- */
+
+.scenario .trigger {
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}
+
+.scenario .trigger .icon {
+	height: 14pt;
 }
 
 
@@ -155,15 +175,4 @@
 
 .scenario .rewards .card-body {
 	border-color: #a77b2a;
-}
-
-
-/* -------- */
-/* SECTIONS */
-/* -------- */
-
-.section .trigger {
-	font-family: var(--font-germania-one);
-	font-size: 14pt;
-	line-height: 14pt;
 }

@@ -7,11 +7,11 @@
 	<!-- -------- -->
 	<!-- SCENARIO -->
 	<!-- -------- -->
-	<div th:fragment="scenario(scenario)" th:object="${scenario}" class="scenario mt-4 mb-5">
+	<div th:fragment="scenario(scenario)" th:object="${scenario}" th:id="|scenario_*{id}|" class="scenario mt-4 mb-5">
 		<!-- Title -->
 		<div class="title mb-3">
 			<h1 class="mb-0">
-				<span class="number">[[*{id}]]</span> · [[*{name}]]
+				<span class="number">[[*{id}]] ·</span> [[*{name}]]
 			</h1>
 			<div th:if="*{location}" class="location">[[*{location}]]</div>
 		</div>
@@ -24,8 +24,22 @@
 			</div>
 		</div>
 
+		<!-- Sections -->
+		<th:block th:each="pathItem : *{path}">
+			<div th:replace="~{:: section(*{sections[__${pathItem}__]})}"></div>
+		</th:block>
+	</div>
+
+
+	<!-- ------- -->
+	<!-- SECTION -->
+	<!-- ------- -->
+	<div th:fragment="section(section)" th:object="${section}" class="section">
+		<!-- Trigger -->
+		<div th:if="*{trigger}" class="trigger">· [(*{trigger})]:</div>
+
 		<!-- Special rules -->
-		<div th:if="*{specialRules}" class="card special-rules mb-3">
+		<div th:if="*{specialRules}" class="card specialRules my-3">
 			<div class="card-header">Special Rules</div>
 			<div class="card-body">
 				[(*{specialRules})]
@@ -33,30 +47,16 @@
 		</div>
 
 		<!-- Introduction -->
-		<div class="card introduction mb-3">
+		<div th:if="*{introduction}" class="card introduction mb-3">
 			<div class="card-header">Introduction</div>
 			<div class="card-body">
 				[(*{introduction})]
 			</div>
 		</div>
 
-		<!-- Sections -->
-		<th:block th:each="section : *{sections}">
-			<div th:replace="~{:: section(${section})}"></div>
-		</th:block>
-	</div>
-
-
-	<!-- -------- -->
-	<!-- SCENARIO -->
-	<!-- -------- -->
-	<div th:fragment="section(section)" th:object="${section}" class="section">
-		<!-- Trigger -->
-		<div th:if="*{trigger}" class="trigger">· [[*{trigger}]]:</div>
-
 		<!-- Text -->
 		<div th:if="*{text}" class="text py-2 mb-3">
-			[[*{text}]]
+			[(*{text})]
 		</div>
 
 		<!-- Conclusion -->

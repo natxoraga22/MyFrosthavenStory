@@ -1,6 +1,7 @@
 package txraga.frosthaven.model;
 
 import java.util.List;
+import java.util.Map;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,20 +20,19 @@ public class Scenario {
 	private String location;
 
 	private String goals;
-	private String specialRules;
-	private String introduction;
+	private Map<String,Section> sections;
 
-	private List<Section> sections;
+	private List<String> path;
 
 
 	public void replaceIcons() {
-		this.goals = replaceIcons(this.goals);
-		this.specialRules = replaceIcons(this.specialRules);
+		this.goals = Scenario.replaceIcons(this.goals);
+		for (Section section : sections.values()) section.replaceIcons();
 	}
 
-	private String replaceIcons(String original) {
+	public static String replaceIcons(String original) {
 		if (original == null) return original;
-		return original.replaceAll("\\[(.*?)\\]", "<img class=\"icon\" src=\"/img/icons/$1.png\" height=\"16\">");
+		return original.replaceAll("\\[(.*?)\\]", "<img class=\"icon\" src=\"/img/icons/$1.png\">");
 	}
 
 }

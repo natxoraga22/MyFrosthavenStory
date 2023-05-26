@@ -1,6 +1,7 @@
 package txraga.frosthaven.controllers;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,10 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Scenario;
+import txraga.frosthaven.model.StoryItem;
 
 
 @XSlf4j
@@ -25,25 +28,25 @@ public class CampaignController {
 @GetMapping("")
 	public ModelAndView campaign(Model model) {
 		log.entry();
-
-		// TEST
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			List<String> scenarioIds = List.of("000", "001", "002", "004-B");
+			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
+			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
+
 			List<Scenario> scenarios = new ArrayList<>();
-			for (String scenarioId : scenarioIds) {
-				File scenarioFile = new ClassPathResource("static/json/scenarios/" + scenarioId + ".json").getFile();
+			for (StoryItem storyItem : myStory) {
+				File scenarioFile = new ClassPathResource("static/json/scenarios/" + storyItem.getScenario() + ".json").getFile();
 				Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
+				if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
 				scenario.replaceIcons();
 				log.debug("{}", scenario);
 				scenarios.add(scenario);
 			}
 			model.addAttribute("scenarioList", scenarios);
-		} 
-		catch (Exception e) {
+		}
+		catch (IOException e) {
 			log.catching(e);
 		}
-
 		return log.exit(new ModelAndView("campaign"));
 	}
 

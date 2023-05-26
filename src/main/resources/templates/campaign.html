@@ -8,9 +8,16 @@
 <body>
 	<!-- Content -->
 	<th:block layout:fragment="content">
-		<th:block th:each="scenario : ${scenarioList}">
-			<th:block th:replace="~{fragments/scenario :: scenario(${scenario})}"></th:block>
-		</th:block>
+		<div class="row">
+			<div class="col-3">
+				<th:block th:replace="~{fragments/campaign :: tableOfContents(${scenarioList})}"></th:block>
+			</div>
+			<div class="col-9">
+				<th:block th:each="scenario : ${scenarioList}">
+					<th:block th:replace="~{fragments/scenario :: scenario(${scenario})}"></th:block>
+				</th:block>
+			</div>
+		</div>
 	</th:block>
 
 	<!-- Javascript -->

@@ -20,6 +20,7 @@ public class Scenario {
 	private String location;
 
 	private String goals;
+	private String effects;
 	private Map<String,Section> sections;
 
 	private List<String> path;

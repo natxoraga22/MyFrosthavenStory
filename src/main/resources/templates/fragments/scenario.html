@@ -9,7 +9,7 @@
 	<!-- -------- -->
 	<div th:fragment="scenario(scenario)" th:object="${scenario}" th:id="|scenario_*{id}|" class="scenario mt-4 mb-5">
 		<!-- Title -->
-		<div class="title mb-3">
+		<div class="title">
 			<h1 class="mb-0">
 				<span class="number">[[*{id}]] ·</span> [[*{name}]]
 			</h1>
@@ -17,7 +17,7 @@
 		</div>
 
 		<!-- Scenario goals -->
-		<div class="card goals mb-3">
+		<div class="card goals my-3">
 			<div class="card-header">Scenario Goals</div>
 			<div class="card-body">
 				[(*{goals})]
@@ -26,7 +26,7 @@
 
 		<!-- Sections -->
 		<th:block th:each="pathItem : *{path}">
-			<div th:replace="~{:: section(*{sections[__${pathItem}__]})}"></div>
+			<div th:replace="~{:: section(*{sections['__${pathItem}__']})}"></div>
 		</th:block>
 	</div>
 
@@ -36,7 +36,7 @@
 	<!-- ------- -->
 	<div th:fragment="section(section)" th:object="${section}" class="section">
 		<!-- Trigger -->
-		<div th:if="*{trigger}" class="trigger">· [(*{trigger})]:</div>
+		<div th:if="*{trigger}" class="trigger mb-2">· [(*{trigger})]:</div>
 
 		<!-- Special rules -->
 		<div th:if="*{specialRules}" class="card specialRules my-3">
@@ -47,7 +47,7 @@
 		</div>
 
 		<!-- Introduction -->
-		<div th:if="*{introduction}" class="card introduction mb-3">
+		<div th:if="*{introduction}" class="card introduction my-3">
 			<div class="card-header">Introduction</div>
 			<div class="card-body">
 				[(*{introduction})]
@@ -55,12 +55,12 @@
 		</div>
 
 		<!-- Text -->
-		<div th:if="*{text}" class="text py-2 mb-3">
+		<div th:if="*{text}" class="text mb-3">
 			[(*{text})]
 		</div>
 
 		<!-- Conclusion -->
-		<div th:if="*{conclusion}" class="card conclusion mb-3">
+		<div th:if="*{conclusion}" class="card conclusion my-3">
 			<div class="card-header">Conclusion</div>
 			<div class="card-body">
 				[(*{conclusion})]
@@ -68,7 +68,7 @@
 		</div>
 
 		<!-- Rewards -->
-		<div th:if="*{rewards}" class="card rewards">
+		<div th:if="*{rewards}" class="card rewards my-3">
 			<div class="card-header">Rewards</div>
 			<div class="card-body">
 				[(*{rewards})]

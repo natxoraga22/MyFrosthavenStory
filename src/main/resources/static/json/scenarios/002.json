@@ -20,7 +20,7 @@
 		"6.1": {
 			"id": "6.1",
 			"trigger": "Door [2] is opened",
-			"specialRules": "Ice sheet A has Cx(L+2) hit points. It is an enemy to both you and the Algox Priest and an ally to all other monsters.",
+			"specialRules": "Ice sheet [a] has Cx(L+2) hit points. It is an enemy to both you and the Algox Priest and an ally to all other monsters.",
 			"text": "<p>Finally you make it inside the mountain, but your victory is short-lived. Just past the cave opening huddles another group of defenders: musclebound Algox with icy fists. They’ve gathered in a circle, positioned like a lord’s private guard around some person of value, except all they seem to be protecting is an icecovered gap in the floor.</p><p>“They guard the Skyhall,” your Algox companion whispers. “We must break through that barrier if we are to end this fight.”</p><p>The guards, noticing your approach, turn and shout.</p><p>“You cannot pass, intruders! The Skyhall is closed to your kind!” They move quickly, uncrossing their arms and stepping forward. Your body is worn and your lungs still burn from the climb, while these guards are fresh to the battle, wholly rested and prepared to brawl. But it matters little. There is no other way forward.</p>"
 		},
 		"77.3": {

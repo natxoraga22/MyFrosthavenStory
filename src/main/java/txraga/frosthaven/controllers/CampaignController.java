@@ -2,6 +2,7 @@ package txraga.frosthaven.controllers;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +30,10 @@ public class CampaignController {
 	public ModelAndView campaign(Model model) {
 		log.entry();
 		try {
+			File welcomeFile = new ClassPathResource("static/txt/welcome.txt").getFile();
+			List<String> welcomeLines = Files.readAllLines(welcomeFile.toPath());
+			String welcome = String.join("<br/>", welcomeLines);
+
 			ObjectMapper objectMapper = new ObjectMapper();
 			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
 			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
@@ -42,6 +47,8 @@ public class CampaignController {
 				log.debug("{}", scenario);
 				scenarios.add(scenario);
 			}
+
+			model.addAttribute("welcome", welcome);
 			model.addAttribute("scenarioList", scenarios);
 		}
 		catch (IOException e) {

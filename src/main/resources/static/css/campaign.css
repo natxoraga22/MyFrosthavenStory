@@ -3,3 +3,13 @@
 	font-family: var(--font-pirata-one);
 	font-size: 28pt;
 }
+
+.welcome .text {
+	font-family: var(--font-texturina);
+	font-weight: 300;
+}
+
+.party .title {
+	font-family: var(--font-pirata-one);
+	font-size: 28pt;
+}

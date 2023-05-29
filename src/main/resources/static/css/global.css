@@ -36,8 +36,16 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: 'Texturina';
+	src: url('/fonts/Texturina-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
 :root {
 	--font-pirata-one: 'Pirata One';
 	--font-germania-one: 'Germania One';
 	--font-tinos: 'Tinos';
+	--font-texturina: 'Texturina';
 }

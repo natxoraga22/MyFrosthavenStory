@@ -9,10 +9,20 @@
 	<!-- ----------------- -->
 	<div th:fragment="tableOfContents(scenarioList)" class="tableOfContents mt-4 mb-5">
 		<div class="list-group list-group-flush">
+			<a class="list-group-item list-group-item-action" href="#welcome">Welcome to Frosthaven</a>
 			<a th:each="scenario : ${scenarioList}" th:object="${scenario}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 				[[*{id}]] · [[*{name}]]
 			</a>
 		</div>
+	</div>
+
+
+	<!-- ------- -->
+	<!-- WELCOME -->
+	<!-- ------- -->
+	<div th:fragment="welcome" id="welcome" class="welcome mt-4 mb-5">
+		<h1 class="title mb-0">Welcome to Frosthaven</h1>
+		<div class="text">[[${welcome}]]</div>
 	</div>
 </body>
 </html>

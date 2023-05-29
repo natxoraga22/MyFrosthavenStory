@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
@@ -17,7 +18,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.model.Party;
 import txraga.frosthaven.model.Scenario;
+import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
 
 
@@ -29,14 +32,26 @@ public class CampaignController {
 @GetMapping("")
 	public ModelAndView campaign(Model model) {
 		log.entry();
+		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			File welcomeFile = new ClassPathResource("static/txt/welcome.txt").getFile();
+			// Welcome
+			File welcomeFile = new ClassPathResource("static/json/welcome.txt").getFile();
 			List<String> welcomeLines = Files.readAllLines(welcomeFile.toPath());
 			String welcome = String.join("<br/>", welcomeLines);
+			log.debug("{}", welcome);
 
-			ObjectMapper objectMapper = new ObjectMapper();
+			// Party
+			File partyFile = new ClassPathResource("static/json/party.json").getFile();
+			Party party = objectMapper.readValue(partyFile, Party.class);
+			File charactersFile = new ClassPathResource("static/json/characters.json").getFile();
+			Map<String,String> characters = objectMapper.readValue(charactersFile, new TypeReference<Map<String,String>>(){});
+			log.debug("{}", party);
+			log.debug("{}", characters);
+
+			// Scenarios
 			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
 			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
+			log.debug("{}", myStory);
 
 			List<Scenario> scenarios = new ArrayList<>();
 			for (StoryItem storyItem : myStory) {
@@ -49,6 +64,8 @@ public class CampaignController {
 			}
 
 			model.addAttribute("welcome", welcome);
+			model.addAttribute("party", party);
+			model.addAttribute("characters", characters);
 			model.addAttribute("scenarioList", scenarios);
 		}
 		catch (IOException e) {

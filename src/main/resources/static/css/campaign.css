@@ -13,3 +13,7 @@
 	font-family: var(--font-pirata-one);
 	font-size: 28pt;
 }
+
+.party .character {
+	text-align: center;
+}

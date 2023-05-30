@@ -12,7 +12,12 @@ import lombok.ToString;
 @ToString
 public class StoryItem {
 
+	/* Scenario */
 	private String scenario;
 	private List<String> path;
+
+	/* Event */
+	private String event;
+	private String option;
 	
 }

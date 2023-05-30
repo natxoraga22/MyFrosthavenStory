@@ -3,15 +3,6 @@
 /* COMMON */
 /* ------ */
 
-.scenario {
-	font-family: var(--font-tinos);
-	color: #2c2e35;
-}
-
-.scenario p:last-child {
-	margin-bottom: 0;
-}
-
 .scenario .icon {
 	height: 12pt;
 	vertical-align: text-top;

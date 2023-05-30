@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+	<conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+	<conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+	
+	<property name="CONSOLE_LOG_PATTERN" value="%d{HH:mm:ss.SSS} [%-5p] %40.40logger{39}::%-30.30method - %msg%n%wEx"/>
+	<property name="CONSOLE_LOG_PATTERN_COLOR" value="%d{HH:mm:ss.SSS} [%clr(%-5p)] %cyan(%40.40logger{39})::%boldYellow(%-30.30method) - %msg%n%wEx"/>
+	
+	<!-- APPENDERS -->
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN_COLOR}</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- LOGGERS -->
+	<logger name="txraga" level="TRACE"/>
+	<root level="INFO">
+		<appender-ref ref="Console"/>
+	</root>
+		
+</configuration>

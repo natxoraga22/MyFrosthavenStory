@@ -1,4 +1,22 @@
 
+/* ------ */
+/* COMMON */
+/* ------ */
+
+.campaign {
+	font-family: var(--font-tinos);
+	color: #2c2e35;
+}
+
+.campaign p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* ------- */
+/* WELCOME */
+/* ------- */
+
 .welcome .title {
 	font-family: var(--font-pirata-one);
 	font-size: 28pt;
@@ -9,11 +27,25 @@
 	font-weight: 300;
 }
 
+
+/* ----- */
+/* PARTY */
+/* ----- */
+
 .party .title {
 	font-family: var(--font-pirata-one);
 	font-size: 28pt;
 }
 
 .party .character {
+	margin-top: 2rem;
 	text-align: center;
+}
+
+.party .character:first-of-type {
+	margin-top: 1rem;
+}
+
+.party .character .background {
+	text-align: start;
 }

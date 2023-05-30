@@ -1,6 +1,7 @@
 [
 	{ "scenario": "000" },
 	{ "scenario": "001" },
+	{ "event": "SO-19", "option": "A" },
 	{ "scenario": "002" },
 	{ "scenario": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] },
 	{ "scenario": "007" }

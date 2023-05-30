@@ -16,8 +16,15 @@
 			<div class="col-9">
 				<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
 				<th:block th:replace="~{fragments/campaign :: party}"></th:block>
+				<!--
 				<th:block th:each="scenario : ${scenarioList}">
 					<th:block th:replace="~{fragments/scenario :: scenario(${scenario})}"></th:block>
+				</th:block>
+				-->
+				<th:block th:each="storyObject : ${storyObjectsList}">
+					<th:block th:if="${storyObject.type.name() == 'SCENARIO'}">
+						<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
+					</th:block>
 				</th:block>
 			</div>
 		</div>

@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Character {
+public class FhCharacter {
 	
 	private String background;
 

@@ -11,9 +11,13 @@
 		<div class="list-group list-group-flush">
 			<a class="list-group-item list-group-item-action" href="#welcome">Welcome to Frosthaven</a>
 			<a class="list-group-item list-group-item-action" href="#party">The party</a>
-			<a th:each="scenario : ${scenarioList}" th:object="${scenario}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
-				[[*{id}]] · [[*{name}]]
-			</a>
+
+			<th:block th:each="storyObject : ${storyObjectsList}">
+				<a th:if="${storyObject.type.name() == 'SCENARIO'}" th:object="${storyObject}"
+				   class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
+					[[*{id}]] · [[*{name}]]
+				</a>
+			</th:block>
 		</div>
 	</div>
 
@@ -35,7 +39,7 @@
 		<div th:each="character : ${party.characters}" class="character">
 			<img th:src="@{img/characters/__${character}__.png}">
 			<img class="mt-2" th:src="@{img/characters/__${character}___back.png}">
-			<div class="background mt-3">[(${characters['__${character}__']})]</div>
+			<div class="background mt-3">[(${characters['__${character}__'].background})]</div>
 		</div>
 	</div>
 </body>

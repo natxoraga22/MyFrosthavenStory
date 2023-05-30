@@ -11,7 +11,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Scenario {
+public class Scenario extends StoryObject {
 	
 	private int id;
 	private String coordinates;
@@ -25,6 +25,11 @@ public class Scenario {
 
 	private List<String> path;
 
+
+	@Override
+	public StoryObject.Type getType() {
+		return StoryObject.Type.SCENARIO;
+	}
 
 	public void replaceIcons() {
 		this.goals = Scenario.replaceIcons(this.goals);

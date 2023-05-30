@@ -10,13 +10,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Event {
+public class Event extends StoryObject {
 	
 	public enum Season { S, W; }
 	public enum Type { O, R, B; }
-
-	private String text;
-	private Map<String,Option> options;
 
 	@Getter
 	@Setter
@@ -25,6 +22,15 @@ public class Event {
 		private String trigger;
 		private String text;
 		private String rewards;
+	}
+
+	private String id;
+	private String text;
+	private Map<String,Option> options;
+	
+	@Override
+	public StoryObject.Type getType() {
+		return StoryObject.Type.EVENT;
 	}
 
 }

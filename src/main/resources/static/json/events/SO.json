@@ -1,5 +1,6 @@
 {
 	"SO-19": {
+		"id": "SO-19",
 		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: \"We've stocked enough away and the harvest is plentiful. It's about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?\"</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
 		"options": {
 			"A": {
@@ -10,7 +11,7 @@
 			"B": {
 				"trigger": "Encourage her to store the resources for a winter holiday, when the town may need to lift its spirits.",
 				"text": "<p>You explain the virtues of a wintertime holiday, highlighting that hot drinks and bonfires could warm the hearts of the townsfolk, providing much needed merriment during the dark winter days. Satha is readily swayed.</p><p>\"It's settled, then! We'll have a Winter Festival!\"</p>",
-				"reward": "Add event WO-61 to the winter outpost deck."
+				"rewards": "Add event WO-61 to the winter outpost deck."
 			}
 		}
 	}

@@ -19,10 +19,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Event;
+import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.Party;
 import txraga.frosthaven.model.Scenario;
-import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
+import txraga.frosthaven.model.StoryObject;
 
 
 @XSlf4j
@@ -40,24 +41,28 @@ public class CampaignController {
 			Party party = objectMapper.readValue(partyFile, Party.class);
 			log.debug("{}", party);
 
-			// Scenarios
+			// My Story
 			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
 			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
 			log.debug("{}", myStory);
+			Map<String,Event> events = getEvents(Event.Season.S, Event.Type.O);
 
-			List<Scenario> scenarios = new ArrayList<>();
+			List<StoryObject> storyObjects = new ArrayList<>();
 			for (StoryItem storyItem : myStory) {
-				Scenario scenario = getScenario(storyItem.getScenario());
-				if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
-				scenario.replaceIcons();
-				log.debug("{}", scenario);
-				scenarios.add(scenario);
+				// Scenario
+				if (storyItem.getScenario() != null) {
+					storyObjects.add(getScenario(storyItem));
+				}
+				// Event
+				else if (storyItem.getEvent() != null) {
+					storyObjects.add(getEvent(storyItem, events));
+				}
 			}
 
 			model.addAttribute("welcome", getWelcome());
 			model.addAttribute("party", party);
 			model.addAttribute("characters", getCharacters());
-			model.addAttribute("scenarioList", scenarios);
+			model.addAttribute("storyObjectsList", storyObjects);
 		}
 		catch (IOException e) {
 			log.catching(e);
@@ -72,25 +77,36 @@ public class CampaignController {
 		return log.exit(String.join("<br/>", welcomeLines));
 	}
 
-	private Map<String,Character> getCharacters() throws IOException {
+	private Map<String,FhCharacter> getCharacters() throws IOException {
 		log.entry();
 		ObjectMapper objectMapper = new ObjectMapper();
 		File charactersFile = new ClassPathResource("static/json/characters.json").getFile();
-		return log.exit(objectMapper.readValue(charactersFile, new TypeReference<Map<String,Character>>(){}));		
+		return log.exit(objectMapper.readValue(charactersFile, new TypeReference<Map<String,FhCharacter>>(){}));		
 	}
 
-	private Scenario getScenario(String id) throws IOException {
-		log.entry();
+	private Scenario getScenario(StoryItem storyItem) throws IOException {
+		log.entry(storyItem);
 		ObjectMapper objectMapper = new ObjectMapper();
-		File scenarioFile = new ClassPathResource("static/json/scenarios/" + id + ".json").getFile();
-		return log.exit(objectMapper.readValue(scenarioFile, Scenario.class));
+		File scenarioFile = new ClassPathResource("static/json/scenarios/" + storyItem.getScenario() + ".json").getFile();
+		Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
+		if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
+		scenario.replaceIcons();
+		return log.exit(scenario);
 	}
 
 	private Map<String,Event> getEvents(Event.Season season, Event.Type type) throws IOException {
-		log.entry();
+		log.entry(season, type);
 		ObjectMapper objectMapper = new ObjectMapper();
 		File eventsFile = new ClassPathResource("static/json/events/" + season + type + ".json").getFile();
 		return log.exit(objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){}));
 	}
+
+	private Event getEvent(StoryItem storyItem, Map<String,Event> events) {
+		log.entry(storyItem);
+		Event event = events.get(storyItem.getEvent());
+		// TODO: Chose option
+		//if (storyItem.getOption() != null) event.setOption(storyItem.getOption());
+		return log.exit(event);
+	} 
 
 }

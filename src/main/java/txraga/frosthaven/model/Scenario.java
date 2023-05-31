@@ -27,7 +27,7 @@ public class Scenario extends StoryObject {
 
 
 	@Override
-	public StoryObject.Type getType() {
+	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.SCENARIO;
 	}
 

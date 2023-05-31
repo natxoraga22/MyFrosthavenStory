@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" th:href="@{css/campaign.css}">
 	<link rel="stylesheet" th:href="@{css/scenario.css}">
+	<link rel="stylesheet" th:href="@{css/event.css}">
 </head>
 
 <body>
@@ -14,16 +15,19 @@
 				<th:block th:replace="~{fragments/campaign :: tableOfContents(${scenarioList})}"></th:block>
 			</div>
 			<div class="col-9">
+				<!-- Welcome -->
 				<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
+				<!-- The party -->
 				<th:block th:replace="~{fragments/campaign :: party}"></th:block>
-				<!--
-				<th:block th:each="scenario : ${scenarioList}">
-					<th:block th:replace="~{fragments/scenario :: scenario(${scenario})}"></th:block>
-				</th:block>
-				-->
+				
 				<th:block th:each="storyObject : ${storyObjectsList}">
-					<th:block th:if="${storyObject.type.name() == 'SCENARIO'}">
+					<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
+						<!-- Scenario -->
 						<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
+					</th:block>
+					<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
+						<!-- Event -->
+						<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
 					</th:block>
 				</th:block>
 			</div>

@@ -36,7 +36,9 @@
 	<!-- ------- -->
 	<div th:fragment="section(section)" th:object="${section}" class="section">
 		<!-- Trigger -->
-		<div th:if="*{trigger}" class="trigger mb-2">· [(*{trigger})]:</div>
+		<div th:if="*{trigger}" class="trigger mb-2">
+			· [(*{trigger})]:
+		</div>
 
 		<!-- Special rules -->
 		<div th:if="*{specialRules}" class="card specialRules my-3">

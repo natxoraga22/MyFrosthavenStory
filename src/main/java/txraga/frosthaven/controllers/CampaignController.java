@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +46,7 @@ public class CampaignController {
 			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
 			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
 			log.debug("{}", myStory);
-			Map<String,Event> events = getEvents(Event.Season.S, Event.Type.O);
+			Map<String,Map<String,Event>> events = getEvents();
 
 			List<StoryObject> storyObjects = new ArrayList<>();
 			for (StoryItem storyItem : myStory) {
@@ -55,7 +56,8 @@ public class CampaignController {
 				}
 				// Event
 				else if (storyItem.getEvent() != null) {
-					storyObjects.add(getEvent(storyItem, events));
+					Event event = getEvent(storyItem, events);
+					if (event != null) storyObjects.add(event);
 				}
 			}
 
@@ -94,19 +96,39 @@ public class CampaignController {
 		return log.exit(scenario);
 	}
 
-	private Map<String,Event> getEvents(Event.Season season, Event.Type type) throws IOException {
-		log.entry(season, type);
+	private Map<String,Map<String,Event>> getEvents() throws IOException {
+		log.entry();
 		ObjectMapper objectMapper = new ObjectMapper();
-		File eventsFile = new ClassPathResource("static/json/events/" + season + type + ".json").getFile();
-		return log.exit(objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){}));
+		Map<String,Map<String,Event>> events = new HashMap<>();
+
+		for (Event.Season season : Event.Season.values()) {
+			for (Event.Type type : Event.Type.values()) {
+				String seasonAndType = type == Event.Type.B ? "B" : season.name() + type.name();
+
+				log.debug("seasonAndType: {}", seasonAndType);
+
+				File eventsFile = new ClassPathResource("static/json/events/" + seasonAndType + ".json").getFile();
+				Map<String,Event> seasonAndTypeEvents = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
+				for (Event event : seasonAndTypeEvents.values()) {
+					event.setSeason(season);
+					event.setType(type);
+				}
+
+				log.debug("seasonAndTypeEvents: {}", seasonAndTypeEvents);
+
+				events.put(seasonAndType, seasonAndTypeEvents);
+			}
+		}
+		return log.exit(events);
 	}
 
-	private Event getEvent(StoryItem storyItem, Map<String,Event> events) {
+	private Event getEvent(StoryItem storyItem, Map<String,Map<String,Event>> events) {
 		log.entry(storyItem);
-		Event event = events.get(storyItem.getEvent());
-		// TODO: Chose option
-		//if (storyItem.getOption() != null) event.setOption(storyItem.getOption());
+		String eventId = storyItem.getEvent();
+		String eventSeasonAndType = eventId.substring(0, eventId.indexOf("-"));
+		Event event = events.get(eventSeasonAndType).get(eventId);
+		if (event != null) event.setChosenOption(storyItem.getOption());
 		return log.exit(event);
-	} 
+	}
 
 }

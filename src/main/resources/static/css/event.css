@@ -1,0 +1,33 @@
+
+/* ----- */
+/* TITLE */
+/* ----- */
+
+.event .title {
+	font-family: var(--font-pirata-one);
+	font-size: 28pt;
+}
+
+.event .title .number {
+	font-family: var(--font-germania-one);
+	font-size: 25pt;
+	vertical-align: bottom;
+}
+
+
+/* ---- */
+/* TEXT */
+/* ---- */
+
+.event .text {
+	font-style: italic;
+}
+
+
+/* ------ */
+/* OPTION */
+/* ------ */
+
+.event .option .rewards {
+	font-weight: bold;
+} 

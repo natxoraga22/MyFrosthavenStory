@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ----- -->
+	<!-- EVENT -->
+	<!-- ----- -->
+	<div th:fragment="event(event)" th:object="${event}" th:id="|event_*{id}|" class="event mt-4 mb-5">
+		<!-- Title -->
+		<h1 class="title mb-3">
+			<span class="number">[[*{id}]] ·</span> [[*{season}]] [[*{type}]] Event
+		</h1>
+
+		<!-- Text -->
+		<div class="text">
+			[(*{text})]
+		</div>
+
+		<!-- Option -->
+		<div class="option mt-4" th:object="${event.options[__${event.chosenOption}__]}">
+			<!-- Trigger -->
+			<div class="trigger">
+				<strong>· Option [[${event.chosenOption}]]:</strong> [[*{trigger}]]
+			</div>
+	
+			<!-- Text -->
+			<div class="text mt-3">
+				[(*{text})]
+			</div>
+
+			<!-- Rewards -->
+			<div class="rewards mt-3">
+				[(*{rewards})]
+			</div>
+		</div>
+	</div>
+</body>
+</html>

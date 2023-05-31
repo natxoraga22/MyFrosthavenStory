@@ -2,7 +2,11 @@
 	{ "scenario": "000" },
 	{ "scenario": "001" },
 	{ "event": "SO-19", "option": "A" },
+	{ "event": "SR-02", "option": "B" },
 	{ "scenario": "002" },
 	{ "scenario": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] },
-	{ "scenario": "007" }
+	{ "event": "SO-11", "option": "B" },
+	{ "event": "SR-03", "option": "Right" },
+	{ "scenario": "007" },
+	{ "event": "B-03", "option": "A" }
 ]

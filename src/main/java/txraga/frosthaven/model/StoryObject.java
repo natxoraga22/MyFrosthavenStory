@@ -8,6 +8,6 @@ public abstract class StoryObject {
 		EVENT
 	}
 	
-	public abstract Type getType();
+	public abstract Type getObjectType();
 
 }

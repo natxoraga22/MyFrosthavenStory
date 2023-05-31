@@ -12,8 +12,32 @@ import lombok.ToString;
 @ToString
 public class Event extends StoryObject {
 	
-	public enum Season { S, W; }
-	public enum Type { O, R, B; }
+	public enum Season { 
+		S, W;
+
+		@Override
+		public String toString() {
+			switch(this) {
+				case S: return "Summer";
+				case W: return "Winter";
+				default: throw new IllegalArgumentException();
+			}
+		}
+	}
+
+	public enum Type { 
+		O, R, B;
+	
+		@Override
+		public String toString() {
+			switch(this) {
+				case O: return "Outpost";
+				case R: return "Road";
+				case B: return "Boat";
+				default: throw new IllegalArgumentException();
+			}
+		}
+	}
 
 	@Getter
 	@Setter
@@ -25,11 +49,14 @@ public class Event extends StoryObject {
 	}
 
 	private String id;
+	private Season season;
+	private Type type;
 	private String text;
 	private Map<String,Option> options;
+	private String chosenOption;
 	
 	@Override
-	public StoryObject.Type getType() {
+	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.EVENT;
 	}
 

@@ -12,10 +12,12 @@
 			<a class="list-group-item list-group-item-action" href="#welcome">Welcome to Frosthaven</a>
 			<a class="list-group-item list-group-item-action" href="#party">The party</a>
 
-			<th:block th:each="storyObject : ${storyObjectsList}">
-				<a th:if="${storyObject.type.name() == 'SCENARIO'}" th:object="${storyObject}"
-				   class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
+			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}">
+				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 					[[*{id}]] · [[*{name}]]
+				</a>
+				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
+					[[*{id}]] · [[*{season}]] [[*{type}]] Event
 				</a>
 			</th:block>
 		</div>

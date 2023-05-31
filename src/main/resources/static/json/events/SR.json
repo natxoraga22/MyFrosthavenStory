@@ -1,0 +1,30 @@
+{
+	"SR-02" : {
+		"id": "SR-02",
+		"text": "<p>\"Ho there! A moment of your time?\" from just off the path, a weathered Valrath calls for your attention. He approaches you with surprising speed despite the pack and gear strapped to his back. \"Edwin Merlsgate, Cartographer. You look familiar, have we met?\"</p><p>Before you can respond, he continues. \"I always forget a face, but never forget a trail. I can only cover so much ground, though—could we compare notes?\" He pulls out a scroll and quill, looking up expectantly.</p>",
+		"options": {
+			"A": {
+				"trigger": "Share notes of your travels.",
+				"text": "<p>Edwin is overjoyed to hear of your travels.<br/><strong class=\"fst-normal\">Mark a box next to each location in which you've completed at least one scenario:</strong></p><ul><li>Radiant Forest</li><li>Copperneck Mountains</li><li>Whitefire Wood</li><li>Crystal Fields</li><li>The Biting Sea</li></ul><p>\"Thank you tremendously, that helps confirm several of the first-hand accounts I've collected. Nearly identical!\"</p>",
+				"rewards": "<p>Gain 3 collective gold for each checked box above.</p><p>When all boxes are checked, remove this card from the deck and add event SO-42 to the summer outpost deck.</p>"
+			},
+			"B": {
+				"trigger": "Ask him about his more notable travels.",
+				"text": "<p>You note that you're not as well-traveled as he is, and ask if there's any locales he'd recommend.</p><p>\"I'm not a huge fan of the tourist-y places, but I can tell you about some exciting regions I've noted from afar...\"</p>",
+				"rewards": "Gain 1 inspiration."
+			}
+		}
+	},
+	"SR-03" : {
+		"id": "SR-03",
+		"text": "Camouflaged into an outcropping of a stone cliff face sits a savvas. You're trying to determine whether it's still alive when it proudly reveals itself with a long, gravely clearing Of its throat. \"Hello, adventurers. \" It lifts itself from the rock, standing with a creaking stretch. Some Savvas modify their bodies through painful sculpting, shaping their rocky skin like carved marble. This one has chiseled its face into the visage ofa lion, and its chest glows with a swirl of black and white. \"You look clever... answer me correctly, and I'll give you something worthy ofyour answer. Fail, and you shall suffer the punishment.\" \"Fished from the waters, drawn from the earth. My presence bears both jealousy, and mirth. I've corrupted and captivated, I'm sought out and sold. If you still can guess me: I'm worth my weight. .. in gold.\"",
+		"options": {
+			"A": {
+
+			},
+			"B": {
+
+			}
+		}
+	}
+}

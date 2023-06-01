@@ -20,7 +20,7 @@
 				<!-- The party -->
 				<th:block th:replace="~{fragments/campaign :: party}"></th:block>
 				
-				<th:block th:each="storyObject : ${storyObjectsList}">
+				<div th:each="storyObject : ${storyObjectsList}" class="storyObject mt-4 mb-5">
 					<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
 						<!-- Scenario -->
 						<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
@@ -33,7 +33,7 @@
 						<!-- Event -->
 						<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
 					</th:block>
-				</th:block>
+				</div>
 			</div>
 		</div>
 	</th:block>

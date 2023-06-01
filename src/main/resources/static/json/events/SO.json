@@ -1,4 +1,20 @@
 {
+	"SO-11": {
+		"id": "SO-11",
+		"text": "<p>Pinter Droman, Frosthaven's resident Quatryl tinkerer, is unwrapping a package wrapped in brocade in his workshop.</p><p>\"Come take a look. Can't believe it. One of the guards just dropped this off. Says he found it on the hillside.\" Out from the cloth comes what looks like a long metallic-purple blade. \"Remarkable! Believe it or not, this is an antler from a Brummix. Quatryl settlers brought them here over a century ago, but they all died out. Or so I thought.\"</p><p>\"Watch this!\" He swings a heavy wrench at the antler, snapping it in two pieces.</p><p>\"Alright, let's see if the myths are true...\" He grabs the two halves of the antler and gently touches them together. Like magic, the two pieces fuse back together, looking as perfect as when he first unwrapped the antler. Pinter is grinning from ear to ear.\"</p><p>\"A marvel of nature! Now what should we use it for?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Use it as a mutable material for crafting.",
+				"text": "<p>Pinter fires up the furnace. \"We'll need to get it nice and toasty to melt this beauty!\" Pinter lobs the Brummix antler in. Soon, a purple liquid pours out the side and drains into the mold for three shiny purple bars.</p><p>\"Should be good for just about anything. Take it—just promise me if you ever find that beautiful Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
+				"rewards": "Gain 1 morale.<br/>Gain 3 collective material resources of any kind.<br/>Gain \"Brummix\" campaign sticker."
+			},
+			"B": {
+				"trigger": "Weave it into an art piece.",
+				"text": "<p>You return several hours later to find Pinter filing the last edges off a stunning purple necklace. He wipes it with the edge of his shirt sleeve and hands it to you.</p><p>\"You take it. Just promise me, if you ever find that enchanting Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
+				"rewards": "Gain 1 morale.<br/>Gain \"Deathproof Charm\" [item_031].<br/>Gain \"Brummix\" campaign sticker."
+			}
+		}
+	},
 	"SO-19": {
 		"id": "SO-19",
 		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: \"We've stocked enough away and the harvest is plentiful. It's about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?\"</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",

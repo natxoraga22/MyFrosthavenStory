@@ -6,7 +6,9 @@
 	{ "scenario": "002" },
 	{ "scenario": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] },
 	{ "event": "SO-11", "option": "B" },
-	{ "event": "SR-03", "option": "Right" },
+	{ "event": "SR-03", "option": "Gold" },
 	{ "scenario": "007" },
-	{ "event": "B-03", "option": "A" }
+	{ "event": "SO-1", "option": "B" },
+	{ "event": "B-03", "option": "A" },
+	{ "scenario": "014" }
 ]

@@ -52,7 +52,8 @@ public class CampaignController {
 			for (StoryItem storyItem : myStory) {
 				// Scenario
 				if (storyItem.getScenario() != null) {
-					storyObjects.add(getScenario(storyItem));
+					Scenario scenario = getScenario(storyItem);
+					if (scenario != null) storyObjects.add(scenario);
 				}
 				// Event
 				else if (storyItem.getEvent() != null) {
@@ -89,11 +90,17 @@ public class CampaignController {
 	private Scenario getScenario(StoryItem storyItem) throws IOException {
 		log.entry(storyItem);
 		ObjectMapper objectMapper = new ObjectMapper();
-		File scenarioFile = new ClassPathResource("static/json/scenarios/" + storyItem.getScenario() + ".json").getFile();
-		Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
-		if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
-		scenario.replaceIcons();
-		return log.exit(scenario);
+		try {
+			File scenarioFile = new ClassPathResource("static/json/scenarios/" + storyItem.getScenario() + ".json").getFile();
+			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
+			if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
+			scenario.replaceIcons();
+			return log.exit(scenario);
+		}
+		catch (IOException e) {
+			log.warn("JSON file for scenario '{}' not found", storyItem.getScenario());
+			return log.exit(null);
+		}
 	}
 
 	private Map<String,Map<String,Event>> getEvents() throws IOException {

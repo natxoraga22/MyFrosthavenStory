@@ -4,7 +4,7 @@
 	{ 
 		"outpost": true,
 		"event": "SO-19", "option": "A",
-		"upgrade": [{ "name": "Craftsman", "level": 2}]
+		"upgrade": [{ "name": "Craftsman", "level": 2 }]
  	},
 	{ "event": "SR-02", "option": "B" },
 	{ "scenario": "002" },

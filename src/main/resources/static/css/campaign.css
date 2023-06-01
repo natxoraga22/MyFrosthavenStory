@@ -8,6 +8,18 @@
 	color: #2c2e35;
 }
 
+.campaign .title {
+	margin-bottom: 1rem;
+	font-family: var(--font-pirata-one);
+	font-size: 28pt;
+}
+
+.campaign .title .number {
+	font-family: var(--font-germania-one);
+	font-size: 25pt;
+	vertical-align: bottom;
+}
+
 .campaign p:last-child {
 	margin-bottom: 0;
 }
@@ -16,11 +28,6 @@
 /* ------- */
 /* WELCOME */
 /* ------- */
-
-.welcome .title {
-	font-family: var(--font-pirata-one);
-	font-size: 28pt;
-}
 
 .welcome .text {
 	font-family: var(--font-texturina);
@@ -31,11 +38,6 @@
 /* ----- */
 /* PARTY */
 /* ----- */
-
-.party .title {
-	font-family: var(--font-pirata-one);
-	font-size: 28pt;
-}
 
 .party .character {
 	margin-top: 2rem;
@@ -55,13 +57,28 @@
 /* OUTPOST PHASE */
 /* ------------- */
 
-.outpost .title {
-	font-family: var(--font-pirata-one);
-	font-size: 28pt;
+.outpost .construction .building {
+	text-align: center;
 }
 
-.outpost .title .number {
-	font-family: var(--font-germania-one);
-	font-size: 25pt;
-	vertical-align: bottom;
+.outpost .construction .building .text {
+	text-align: start;
+}
+
+.outpost .construction .building img {
+	max-height: 400px;
+	margin-top: 0.5rem;
+}
+
+
+/* ----- */
+/* EVENT */
+/* ----- */
+
+.event .text {
+	font-style: italic;
+}
+
+.event .option .rewards {
+	font-weight: bold;
 }

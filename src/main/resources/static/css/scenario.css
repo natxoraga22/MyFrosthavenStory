@@ -45,17 +45,6 @@
 /* TITLE */
 /* ----- */
 
-.scenario .title {
-	font-family: var(--font-pirata-one);
-	font-size: 28pt;
-}
-
-.scenario .title .number {
-	font-family: var(--font-germania-one);
-	font-size: 25pt;
-	vertical-align: bottom;
-}
-
 .scenario .title .location {
 	font-family: var(--font-tinos);
 	font-size: 12pt;

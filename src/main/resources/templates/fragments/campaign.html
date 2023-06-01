@@ -39,7 +39,7 @@
 	<!-- WELCOME -->
 	<!-- ------- -->
 	<div th:fragment="welcome" id="welcome" class="welcome mt-4 mb-5">
-		<h1 class="title mb-3">Welcome to Frosthaven</h1>
+		<h1 class="title">Welcome to Frosthaven</h1>
 		<div class="text">[(${welcome})]</div>
 	</div>
 
@@ -62,7 +62,7 @@
 	<!-- ------------- -->
 	<div th:fragment="outpost(outpost)" th:object="${outpost}" th:id="|outpost_*{id}|" class="outpost">
 		<!-- Title -->
-		<h1 class="title mb-3">
+		<h1 class="title">
 			Outpost phase <span class="number">#[[*{id}]]</span>
 		</h1>
 
@@ -70,10 +70,35 @@
 		<th:block th:replace="~{fragments/event :: event(*{event})}"></th:block>
 
 		<!-- Downtime -->
-		<h2>Downtime</h2>
-
+		<div th:if="*{levelUp}" class="downtime mt-4">
+			<h2 class="title">Downtime</h2>
+			<div class="levelUp">
+				<div th:each="character : *{levelUp}">
+					<strong>[[${character.name}]]</strong> levels up to <strong>level [[${character.level}]]</strong>.
+				</div>
+			</div>
+		</div>
+		
 		<!-- Construction -->
-		<h2>Construction</h2>
+		<div class="construction mt-4">
+			<h2 class="title">Construction</h2>
+			<div class="build">
+				<div th:each="building : *{build}" class="building">
+					<div class="text">
+						<strong>[[${building.name}]]</strong> is built<th:block th:if="${building.level}"> at <strong>level [[${building.level}]]</strong></th:block>.
+					</div>
+					<img th:src="@{img/buildings/__${#strings.toLowerCase(building.name)}____${building.level}__.png}">
+				</div>
+			</div>
+			<div class="upgrade">
+				<div th:each="building : *{upgrade}" class="building">
+					<div class="text">
+						<strong>[[${building.name}]]</strong> is upgraded to <strong>level [[${building.level}]]</strong>.
+					</div>
+					<img th:src="@{img/buildings/__${#strings.toLowerCase(building.name)}____${building.level}__.png}">
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

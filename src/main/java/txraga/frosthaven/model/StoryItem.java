@@ -19,5 +19,11 @@ public class StoryItem {
 	/* Event */
 	private String event;
 	private String option;
+
+	/* Outpost phase */
+	private boolean outpost;
+	private List<FhCharacter> levelUp;
+	private List<Building> build;
+	private List<Building> upgrade;
 	
 }

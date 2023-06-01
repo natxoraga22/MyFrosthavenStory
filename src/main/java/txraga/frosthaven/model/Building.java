@@ -8,10 +8,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class FhCharacter {
+public class Building {
 	
 	private String name;
-	private String background;
 	private int level;
 
 }

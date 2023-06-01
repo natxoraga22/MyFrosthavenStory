@@ -5,6 +5,7 @@ public abstract class StoryObject {
 	
 	public enum Type {
 		SCENARIO,
+		OUTPOST,
 		EVENT
 	}
 	

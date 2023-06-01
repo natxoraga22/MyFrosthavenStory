@@ -55,6 +55,7 @@ public class Event extends StoryObject {
 	private Map<String,Option> options;
 	private String chosenOption;
 	
+	
 	@Override
 	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.EVENT;

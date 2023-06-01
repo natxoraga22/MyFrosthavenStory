@@ -21,6 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
+import txraga.frosthaven.model.OutpostPhase;
 import txraga.frosthaven.model.Party;
 import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.StoryItem;
@@ -46,14 +47,22 @@ public class CampaignController {
 			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
 			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
 			log.debug("{}", myStory);
-			Map<String,Map<String,Event>> events = getEvents();
 
+			Map<String,Map<String,Event>> events = getEvents();
+			int outpostPhaseId = 1;
 			List<StoryObject> storyObjects = new ArrayList<>();
 			for (StoryItem storyItem : myStory) {
 				// Scenario
 				if (storyItem.getScenario() != null) {
 					Scenario scenario = getScenario(storyItem);
 					if (scenario != null) storyObjects.add(scenario);
+				}
+				// Outpost phase
+				else if (storyItem.isOutpost()) {
+					OutpostPhase outpostPhase = getOutpostPhase(storyItem);
+					outpostPhase.setId(outpostPhaseId++);
+					outpostPhase.setEvent(getEvent(storyItem, events));
+					if (outpostPhase != null) storyObjects.add(outpostPhase);
 				}
 				// Event
 				else if (storyItem.getEvent() != null) {
@@ -101,6 +110,15 @@ public class CampaignController {
 			log.warn("JSON file for scenario '{}' not found", storyItem.getScenario());
 			return log.exit(null);
 		}
+	}
+
+	private OutpostPhase getOutpostPhase(StoryItem storyItem) {
+		log.entry(storyItem);
+		OutpostPhase outpostPhase = new OutpostPhase();
+		outpostPhase.setLevelUp(storyItem.getLevelUp());
+		outpostPhase.setBuild(storyItem.getBuild());
+		outpostPhase.setUpgrade(storyItem.getUpgrade());
+		return log.exit(outpostPhase);
 	}
 
 	private Map<String,Map<String,Event>> getEvents() throws IOException {

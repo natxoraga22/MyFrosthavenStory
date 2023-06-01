@@ -49,3 +49,19 @@
 .party .character .background {
 	text-align: start;
 }
+
+
+/* ------------- */
+/* OUTPOST PHASE */
+/* ------------- */
+
+.outpost .title {
+	font-family: var(--font-pirata-one);
+	font-size: 28pt;
+}
+
+.outpost .title .number {
+	font-family: var(--font-germania-one);
+	font-size: 25pt;
+	vertical-align: bottom;
+}

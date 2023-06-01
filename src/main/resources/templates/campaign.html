@@ -25,6 +25,10 @@
 						<!-- Scenario -->
 						<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
 					</th:block>
+					<th:block th:if="${storyObject.objectType.name() == 'OUTPOST'}">
+						<!-- Outpost phase -->
+						<th:block th:replace="~{fragments/campaign :: outpost(${storyObject})}"></th:block>
+					</th:block>
 					<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
 						<!-- Event -->
 						<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>

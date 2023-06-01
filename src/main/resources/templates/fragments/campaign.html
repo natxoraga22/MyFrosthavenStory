@@ -12,10 +12,21 @@
 			<a class="list-group-item list-group-item-action" href="#welcome">Welcome to Frosthaven</a>
 			<a class="list-group-item list-group-item-action" href="#party">The party</a>
 
-			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}">
+			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}" th:with="outpostCount=0">
+				<!-- Scenario -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 					[[*{id}]] · [[*{name}]]
 				</a>
+				<!-- Outpost phase -->
+				<th:block th:if="*{objectType.name() == 'OUTPOST'}">
+					<a class="list-group-item list-group-item-action" th:href="|#outpost_*{id}|">
+						Outpost phase #[[*{id}]]
+					</a>
+					<a class="list-group-item list-group-item-action ps-5" th:object="${storyObject.event}" th:href="|#event_*{id}|">
+						[[*{id}]] · [[*{season}]] [[*{type}]] Event
+					</a>
+				</th:block>
+				<!-- Event -->
 				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
 					[[*{id}]] · [[*{season}]] [[*{type}]] Event
 				</a>
@@ -43,6 +54,26 @@
 			<img class="mt-2" th:src="@{img/characters/__${character}___back.png}">
 			<div class="background mt-3">[(${characters['__${character}__'].background})]</div>
 		</div>
+	</div>
+
+
+	<!-- ------------- -->
+	<!-- OUTPOST PHASE -->
+	<!-- ------------- -->
+	<div th:fragment="outpost(outpost)" th:object="${outpost}" th:id="|outpost_*{id}|" class="outpost mt-4 mb-5">
+		<!-- Title -->
+		<h1 class="title mb-3">
+			Outpost phase <span class="number">#[[*{id}]]</span>
+		</h1>
+
+		<!-- Event -->
+		<th:block th:replace="~{fragments/event :: event(*{event})}"></th:block>
+
+		<!-- Downtime -->
+		<h2>Downtime</h2>
+
+		<!-- Construction -->
+		<h2>Construction</h2>
 	</div>
 </body>
 </html>

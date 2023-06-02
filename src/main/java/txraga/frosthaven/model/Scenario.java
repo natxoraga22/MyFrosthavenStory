@@ -31,6 +31,10 @@ public class Scenario extends StoryObject {
 		return StoryObject.Type.SCENARIO;
 	}
 
+	public String getIdString() {
+		return String.format("%03d", id);
+	}
+
 	public void replaceIcons() {
 		this.goals = Scenario.replaceIcons(this.goals);
 		for (Section section : sections.values()) section.replaceIcons();

@@ -1,5 +1,8 @@
 package txraga.frosthaven.model;
 
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,6 +22,11 @@ public class Section {
 	private String conclusion;
 	private String rewards;
 
+
+	public boolean hasMap(String scenarioId) {
+		Resource resource = new ClassPathResource("static/img/scenarios/" + scenarioId + "_" + id + ".png");
+		return resource.exists();
+	}
 
 	public void replaceIcons() {
 		this.trigger = Scenario.replaceIcons(this.trigger);

@@ -52,6 +52,10 @@
 	text-align: center;
 }
 
+.party .character .mat img:not(:first-of-type) {
+	margin-top: 0.5rem;
+}
+
 .party .character .background {
 	margin-top: 1rem;
 }

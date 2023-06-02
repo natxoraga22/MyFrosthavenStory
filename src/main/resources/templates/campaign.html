@@ -14,30 +14,29 @@
 				<th:block th:replace="~{fragments/campaign :: tableOfContents(${scenarioList})}"></th:block>
 			</div>
 			<div class="col-9">
-				<!-- Welcome -->
-				<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
-				<!-- The party -->
-				<th:block th:replace="~{fragments/campaign :: party}"></th:block>
-				
-				<div th:each="storyObject : ${storyObjectsList}" class="storyObject mt-4 mb-5">
-					<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
-						<!-- Scenario -->
-						<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
-					</th:block>
-					<th:block th:if="${storyObject.objectType.name() == 'OUTPOST'}">
-						<!-- Outpost phase -->
-						<th:block th:replace="~{fragments/campaign :: outpost(${storyObject})}"></th:block>
-					</th:block>
-					<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
-						<!-- Event -->
-						<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
-					</th:block>
+				<div class="myStory">
+					<!-- Welcome -->
+					<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
+					<!-- The party -->
+					<th:block th:replace="~{fragments/campaign :: party}"></th:block>
+					
+					<div th:each="storyObject : ${storyObjectsList}" class="storyObject">
+						<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
+							<!-- Scenario -->
+							<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
+						</th:block>
+						<th:block th:if="${storyObject.objectType.name() == 'OUTPOST'}">
+							<!-- Outpost phase -->
+							<th:block th:replace="~{fragments/campaign :: outpost(${storyObject})}"></th:block>
+						</th:block>
+						<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
+							<!-- Event -->
+							<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
+						</th:block>
+					</div>
 				</div>
 			</div>
 		</div>
 	</th:block>
-
-	<!-- Javascript -->
-	<th:block layout:fragment="javascript"></th:block>
 </body>
 </html>

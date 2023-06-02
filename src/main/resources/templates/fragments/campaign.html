@@ -7,7 +7,7 @@
 	<!-- ----------------- -->
 	<!-- TABLE OF CONTENTS -->
 	<!-- ----------------- -->
-	<div th:fragment="tableOfContents(scenarioList)" class="tableOfContents mt-4 mb-5">
+	<div th:fragment="tableOfContents(scenarioList)" class="tableOfContents">
 		<div class="list-group list-group-flush">
 			<a class="list-group-item list-group-item-action" href="#welcome">Welcome to Frosthaven</a>
 			<a class="list-group-item list-group-item-action" href="#party">The party</a>
@@ -38,7 +38,7 @@
 	<!-- ------- -->
 	<!-- WELCOME -->
 	<!-- ------- -->
-	<div th:fragment="welcome" id="welcome" class="welcome mt-4 mb-5">
+	<div th:fragment="welcome" id="welcome" class="welcome">
 		<h1 class="title">Welcome to Frosthaven</h1>
 		<div class="text">
 			[(${welcome})]
@@ -49,7 +49,7 @@
 	<!-- ----- -->
 	<!-- PARTY -->
 	<!-- ----- -->
-	<div th:fragment="party" id="party" class="party mt-4 mb-5">
+	<div th:fragment="party" id="party" class="party">
 		<h1 class="title">The party</h1>
 		<div th:each="character : ${party.characters}" th:object="${character}" class="character">
 			<h2 class="title">[[*{name}]]</h2>

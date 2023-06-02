@@ -4,6 +4,7 @@
 /* ------ */
 
 .campaign {
+	padding-top: 2rem;
 	font-family: var(--font-tinos);
 	color: #2c2e35;
 }
@@ -22,6 +23,12 @@
 
 .campaign p:last-child {
 	margin-bottom: 0;
+}
+
+.myStory {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
 }
 
 

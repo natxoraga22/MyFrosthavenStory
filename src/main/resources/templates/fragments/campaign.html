@@ -40,7 +40,9 @@
 	<!-- ------- -->
 	<div th:fragment="welcome" id="welcome" class="welcome mt-4 mb-5">
 		<h1 class="title">Welcome to Frosthaven</h1>
-		<div class="text">[(${welcome})]</div>
+		<div class="text">
+			[(${welcome})]
+		</div>
 	</div>
 
 
@@ -49,10 +51,18 @@
 	<!-- ----- -->
 	<div th:fragment="party" id="party" class="party mt-4 mb-5">
 		<h1 class="title">The party</h1>
-		<div th:each="character : ${party.characters}" class="character">
-			<img th:src="@{img/characters/__${character}__.png}">
-			<img class="mt-2" th:src="@{img/characters/__${character}___back.png}">
-			<div class="background mt-3">[(${characters['__${character}__'].background})]</div>
+		<div th:each="character : ${party.characters}" th:object="${character}" class="character">
+			<h2 class="title">[[*{name}]]</h2>
+			<div class="mat">
+				<img th:src="@{img/characters/__*{nameId}__.png}">
+				<img class="mt-2" th:src="@{img/characters/__*{nameId}___back.png}">
+			</div>
+			<div th:if="*{background}" class="background">
+				[(*{background})]
+			</div>
+			<div th:if="*{personalQuest}" class="personalQuest">
+				<img th:src="@{img/personalQuests/__*{personalQuest}__.png}">
+			</div>
 		</div>
 	</div>
 
@@ -87,7 +97,8 @@
 					<div class="text">
 						<strong>[[${building.name}]]</strong> is built<th:block th:if="${building.level}"> at <strong>level [[${building.level}]]</strong></th:block>.
 					</div>
-					<img th:src="@{img/buildings/__${#strings.toLowerCase(building.name)}____${building.level}__.png}">
+					<img th:with="imgName = ${building.nameId} + ${building.level != 0 ? building.level : ''}"
+					     th:src="@{img/buildings/__${imgName}__.png}">
 				</div>
 			</div>
 			<div class="upgrade">
@@ -95,7 +106,7 @@
 					<div class="text">
 						<strong>[[${building.name}]]</strong> is upgraded to <strong>level [[${building.level}]]</strong>.
 					</div>
-					<img th:src="@{img/buildings/__${#strings.toLowerCase(building.name)}____${building.level}__.png}">
+					<img th:src="@{img/buildings/__${building.nameId}____${building.level}__.png}">
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,6 @@
 {
-	"characters": ["blinkblade", "deathwalker"]
+	"characters": [
+		{ "name": "Blinkblade", "personalQuest": "04" }, 
+		{ "name": "Deathwalker" }
+	]
 }

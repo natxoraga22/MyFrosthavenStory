@@ -38,12 +38,6 @@ public class CampaignController {
 		log.entry();
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			// Party
-			File partyFile = new ClassPathResource("static/json/party.json").getFile();
-			Party party = objectMapper.readValue(partyFile, Party.class);
-			log.debug("{}", party);
-
-			// My Story
 			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
 			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
 			log.debug("{}", myStory);
@@ -72,8 +66,7 @@ public class CampaignController {
 			}
 
 			model.addAttribute("welcome", getWelcome());
-			model.addAttribute("party", party);
-			model.addAttribute("characters", getCharacters());
+			model.addAttribute("party", getParty());
 			model.addAttribute("storyObjectsList", storyObjects);
 		}
 		catch (IOException e) {
@@ -87,6 +80,19 @@ public class CampaignController {
 		File welcomeFile = new ClassPathResource("static/json/welcome.txt").getFile();
 		List<String> welcomeLines = Files.readAllLines(welcomeFile.toPath());
 		return log.exit(String.join("<br/>", welcomeLines));
+	}
+
+	private Party getParty() throws IOException {
+		log.entry();
+		ObjectMapper objectMapper = new ObjectMapper();
+		File partyFile = new ClassPathResource("static/json/party.json").getFile();
+		Party party = objectMapper.readValue(partyFile, Party.class);
+
+		Map<String,FhCharacter> characterBackgrounds = getCharacters();
+		for (FhCharacter character : party.getCharacters()) {
+			character.setBackground(characterBackgrounds.get(character.getNameId()).getBackground());
+		}
+		return log.exit(party);
 	}
 
 	private Map<String,FhCharacter> getCharacters() throws IOException {

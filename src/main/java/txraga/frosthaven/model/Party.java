@@ -12,6 +12,6 @@ import lombok.ToString;
 @ToString
 public class Party {
 	
-	private List<String> characters;
+	private List<FhCharacter> characters;
 
 }

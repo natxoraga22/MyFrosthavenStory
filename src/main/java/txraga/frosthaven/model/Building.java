@@ -13,4 +13,8 @@ public class Building {
 	private String name;
 	private int level;
 
+	public String getNameId() {
+		return name.toLowerCase().replace(" ", "");
+	}
+
 }

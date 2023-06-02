@@ -39,17 +39,30 @@
 /* PARTY */
 /* ----- */
 
-.party .character {
+.party .character:not(:first-of-type) {
 	margin-top: 2rem;
+}
+
+.party .character .title {
+	font-family: var(--font-germania-one);
+	font-size: 25pt;
+}
+
+.party .character .mat {
 	text-align: center;
 }
 
-.party .character:first-of-type {
+.party .character .background {
 	margin-top: 1rem;
 }
 
-.party .character .background {
-	text-align: start;
+.party .character .personalQuest {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.party .character .personalQuest img {
+	max-height: 400px;
 }
 
 
@@ -66,6 +79,7 @@
 }
 
 .outpost .construction .building img {
+	max-width: 400px;
 	max-height: 400px;
 	margin-top: 0.5rem;
 }

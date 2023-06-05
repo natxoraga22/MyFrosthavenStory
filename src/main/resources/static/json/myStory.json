@@ -2,7 +2,7 @@
 	{ "scenario": "000" },
 	{ "scenario": "001" },
 	{ 
-		"outpost": true,
+		"outpostPhase": true,
 		"event": "SO-19", "option": "A",
 		"upgrade": [{ "name": "Craftsman", "level": 2 }]
  	},
@@ -10,7 +10,7 @@
 	{ "scenario": "002" },
 	{ "scenario": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] },
 	{
-		"outpost": true,
+		"outpostPhase": true,
 		"event": "SO-11", "option": "B",
 		"levelUp": [{ "name": "Deathwalker", "level": 2 }],
 		"build": [{ "name": "Logging Camp", "level": 1 }]
@@ -18,7 +18,7 @@
 	{ "event": "SR-03", "option": "Gold" },
 	{ "scenario": "007" },
 	{
-		"outpost": true,
+		"outpostPhase": true,
 		"event": "SO-1", "option": "B",
 		"levelUp": [{ "name": "Blinkblade", "level": 2 }],
 		"build": [{ "name": "Boat" }]

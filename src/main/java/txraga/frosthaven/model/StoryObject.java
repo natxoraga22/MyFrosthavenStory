@@ -5,7 +5,7 @@ public abstract class StoryObject {
 	
 	public enum Type {
 		SCENARIO,
-		OUTPOST,
+		OUTPOST_PHASE,
 		EVENT
 	}
 	

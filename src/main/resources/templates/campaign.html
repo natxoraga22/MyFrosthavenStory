@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" th:href="@{css/campaign.css}">
 	<link rel="stylesheet" th:href="@{css/scenario.css}">
+	<link rel="stylesheet" th:href="@{css/event.css}">
 </head>
 
 <body>
@@ -11,7 +12,7 @@
 	<th:block layout:fragment="content">
 		<div class="row campaign">
 			<div class="col-3">
-				<th:block th:replace="~{fragments/campaign :: tableOfContents(${scenarioList})}"></th:block>
+				<th:block th:replace="~{fragments/campaign :: tableOfContents}"></th:block>
 			</div>
 			<div class="col-9">
 				<div class="myStory">
@@ -25,9 +26,9 @@
 							<!-- Scenario -->
 							<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
 						</th:block>
-						<th:block th:if="${storyObject.objectType.name() == 'OUTPOST'}">
+						<th:block th:if="${storyObject.objectType.name() == 'OUTPOST_PHASE'}">
 							<!-- Outpost phase -->
-							<th:block th:replace="~{fragments/campaign :: outpost(${storyObject})}"></th:block>
+							<th:block th:replace="~{fragments/campaign :: outpostPhase(${storyObject})}"></th:block>
 						</th:block>
 						<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
 							<!-- Event -->

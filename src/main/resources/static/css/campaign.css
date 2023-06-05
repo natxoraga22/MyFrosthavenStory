@@ -5,6 +5,7 @@
 
 .campaign {
 	padding-top: 2rem;
+	padding-bottom: 2rem;
 	font-family: var(--font-tinos);
 	color: #2c2e35;
 }
@@ -25,10 +26,14 @@
 	margin-bottom: 0;
 }
 
+.campaign img:not(.icon) {
+	border: 2px solid;
+}
+
 .myStory {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: 5rem;
 }
 
 
@@ -68,7 +73,7 @@
 }
 
 .party .character .personalQuest {
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	text-align: center;
 }
 
@@ -81,29 +86,20 @@
 /* OUTPOST PHASE */
 /* ------------- */
 
-.outpost .construction .building {
+.outpostPhase .downtime {
+	margin-top: 2rem;
+}
+
+.outpostPhase .construction {
+	margin-top: 2rem;
+}
+
+.outpostPhase .construction .building .fhCard {
+	margin-top: 1rem;
 	text-align: center;
 }
 
-.outpost .construction .building .text {
-	text-align: start;
-}
-
-.outpost .construction .building img {
+.outpostPhase .construction .building .fhCard img {
 	max-width: 400px;
 	max-height: 400px;
-	margin-top: 0.5rem;
-}
-
-
-/* ----- */
-/* EVENT */
-/* ----- */
-
-.event .text {
-	font-style: italic;
-}
-
-.event .option .rewards {
-	font-weight: bold;
 }

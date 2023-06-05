@@ -7,20 +7,25 @@
 	<!-- ----------------- -->
 	<!-- TABLE OF CONTENTS -->
 	<!-- ----------------- -->
-	<div th:fragment="tableOfContents(scenarioList)" class="tableOfContents">
+	<div th:fragment="tableOfContents" class="tableOfContents">
 		<div class="list-group list-group-flush">
-			<a class="list-group-item list-group-item-action" href="#welcome">Welcome to Frosthaven</a>
-			<a class="list-group-item list-group-item-action" href="#party">The party</a>
+			<!-- Welcome -->
+			<a class="list-group-item list-group-item-action" href="#welcome">[[#{welcome.title}]]</a>
+			<!-- Party -->
+			<a class="list-group-item list-group-item-action" href="#party">[[#{party.title}]]</a>
+			<th:block th:each="character : ${party.characters}">
+				<a class="list-group-item list-group-item-action ps-5" th:href="|#character_*{nameId}|">[[${character.name}]]</a>
+			</th:block>
 
-			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}" th:with="outpostCount=0">
+			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}">
 				<!-- Scenario -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 					[[*{id}]] · [[*{name}]]
 				</a>
 				<!-- Outpost phase -->
-				<th:block th:if="*{objectType.name() == 'OUTPOST'}">
-					<a class="list-group-item list-group-item-action" th:href="|#outpost_*{id}|">
-						Outpost phase #[[*{id}]]
+				<th:block th:if="*{objectType.name() == 'OUTPOST_PHASE'}">
+					<a class="list-group-item list-group-item-action" th:href="|#outpostPhase_*{id}|">
+						[(#{outpostPhase.title(*{id})})]
 					</a>
 					<a class="list-group-item list-group-item-action ps-5" th:object="${storyObject.event}" th:href="|#event_*{id}|">
 						[[*{id}]] · [[*{season}]] [[*{type}]] Event
@@ -39,7 +44,7 @@
 	<!-- WELCOME -->
 	<!-- ------- -->
 	<div th:fragment="welcome" id="welcome" class="welcome">
-		<h1 class="title">Welcome to Frosthaven</h1>
+		<h1 class="title">[[#{welcome.title}]]</h1>
 		<div class="text">
 			[(${welcome})]
 		</div>
@@ -50,9 +55,11 @@
 	<!-- PARTY -->
 	<!-- ----- -->
 	<div th:fragment="party" id="party" class="party">
-		<h1 class="title">The party</h1>
-		<div th:each="character : ${party.characters}" th:object="${character}" class="character">
+		<h1 class="title">[[#{party.title}]]</h1>
+		<!-- Characters -->
+		<div th:each="character : ${party.characters}" th:object="${character}" class="character" th:id="|character_*{nameId}|">
 			<h2 class="title">[[*{name}]]</h2>
+			<!-- Mat & background -->
 			<div class="mat">
 				<img th:src="@{img/characters/__*{nameId}__.png}">
 				<img th:src="@{img/characters/__*{nameId}___back.png}">
@@ -60,6 +67,7 @@
 			<div th:if="*{background}" class="background">
 				[(*{background})]
 			</div>
+			<!-- Personal quest -->
 			<div th:if="*{personalQuest}" class="personalQuest">
 				<img th:src="@{img/personalQuests/__*{personalQuest}__.png}">
 			</div>
@@ -70,43 +78,49 @@
 	<!-- ------------- -->
 	<!-- OUTPOST PHASE -->
 	<!-- ------------- -->
-	<div th:fragment="outpost(outpost)" th:object="${outpost}" th:id="|outpost_*{id}|" class="outpost">
+	<div th:fragment="outpostPhase(outpostPhase)" th:object="${outpostPhase}" th:id="|outpostPhase_*{id}|" class="outpostPhase">
 		<!-- Title -->
-		<h1 class="title">
-			Outpost phase <span class="number">#[[*{id}]]</span>
-		</h1>
+		<h1 class="title">[(#{outpostPhase.title(*{id})})]</h1>
 
 		<!-- Event -->
 		<th:block th:replace="~{fragments/event :: event(*{event})}"></th:block>
 
 		<!-- Downtime -->
-		<div th:if="*{levelUp}" class="downtime mt-4">
-			<h2 class="title">Downtime</h2>
+		<div th:if="*{levelUp}" class="downtime">
+			<h2 class="title">[[#{outpostPhase.downtime.title}]]</h2>
 			<div class="levelUp">
-				<div th:each="character : *{levelUp}">
-					<strong>[[${character.name}]]</strong> levels up to <strong>level [[${character.level}]]</strong>.
+				<div th:each="character : *{levelUp}" th:object="${character}">
+					[(#{outpostPhase.downtime.levelUp.text(*{name},*{level})})]
 				</div>
 			</div>
 		</div>
 		
 		<!-- Construction -->
-		<div class="construction mt-4">
-			<h2 class="title">Construction</h2>
+		<div class="construction">
+			<h2 class="title">[[#{outpostPhase.construction.title}]]</h2>
+			<!-- Build -->
 			<div class="build">
-				<div th:each="building : *{build}" class="building">
+				<div th:each="building : *{build}" th:object="${building}" class="building">
 					<div class="text">
-						<strong>[[${building.name}]]</strong> is built<th:block th:if="${building.level}"> at <strong>level [[${building.level}]]</strong></th:block>.
+						<th:block th:if="*{level}">[(#{outpostPhase.construction.build.textWithLevel(*{name},*{level})})]</th:block>
+						<th:block th:unless="*{level}">[(#{outpostPhase.construction.build.textWithoutLevel(*{name})})]</th:block>
 					</div>
-					<img th:with="imgName = ${building.nameId} + ${building.level != 0 ? building.level : ''}"
-					     th:src="@{img/buildings/__${imgName}__.png}">
+					<div class="fhCard">
+						<img th:with="imgName = *{nameId} + *{level != 0 ? level : ''}" th:src="@{img/buildings/__${imgName}__.png}">
+					</div>
 				</div>
 			</div>
+			<!-- Upgrade -->
 			<div class="upgrade">
-				<div th:each="building : *{upgrade}" class="building">
+				<div th:each="building : *{upgrade}" th:object="${building}" class="building">
 					<div class="text">
-						<strong>[[${building.name}]]</strong> is upgraded to <strong>level [[${building.level}]]</strong>.
+						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]
 					</div>
-					<img th:src="@{img/buildings/__${building.nameId}____${building.level}__.png}">
+					<div class="fhCard">
+						<img th:src="@{img/buildings/__*{nameId}____*{level - 1}__.png}">
+						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
+						<img th:src="@{img/buildings/__*{nameId}____*{level}__.png}">
+					</div>
 				</div>
 			</div>
 		</div>

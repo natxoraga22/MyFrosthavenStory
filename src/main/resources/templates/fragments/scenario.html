@@ -13,7 +13,9 @@
 			<h1 class="mb-0">
 				<span class="number">[[*{id}]] ·</span> [[*{name}]]
 			</h1>
-			<div th:if="*{location}" class="location">[[*{location}]]</div>
+			<div th:if="*{location}" class="location">
+				<i class="fa-solid fa-map-location me-1"></i> [[*{location}]]
+			</div>
 		</div>
 
 		<!-- Scenario goals -->
@@ -26,7 +28,7 @@
 
 		<!-- Sections -->
 		<th:block th:each="pathItem : *{path}">
-			<div th:replace="~{:: section(*{sections[__${pathItem}__]})}"></div>
+			<div th:replace="~{:: section(*{sections['__${pathItem}__']})}"></div>
 		</th:block>
 	</div>
 

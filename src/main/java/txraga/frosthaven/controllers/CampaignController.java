@@ -52,7 +52,7 @@ public class CampaignController {
 					if (scenario != null) storyObjects.add(scenario);
 				}
 				// Outpost phase
-				else if (storyItem.isOutpost()) {
+				else if (storyItem.isOutpostPhase()) {
 					OutpostPhase outpostPhase = getOutpostPhase(storyItem);
 					outpostPhase.setId(outpostPhaseId++);
 					outpostPhase.setEvent(getEvent(storyItem, events));

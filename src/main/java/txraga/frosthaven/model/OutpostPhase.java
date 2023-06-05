@@ -21,7 +21,7 @@ public class OutpostPhase extends StoryObject {
 
 	@Override
 	public StoryObject.Type getObjectType() {
-		return StoryObject.Type.OUTPOST;
+		return StoryObject.Type.OUTPOST_PHASE;
 	}
 	
 }

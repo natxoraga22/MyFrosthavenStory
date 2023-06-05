@@ -21,7 +21,7 @@ public class StoryItem {
 	private String option;
 
 	/* Outpost phase */
-	private boolean outpost;
+	private boolean outpostPhase;
 	private List<FhCharacter> levelUp;
 	private List<Building> build;
 	private List<Building> upgrade;

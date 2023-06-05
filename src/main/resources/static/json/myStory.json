@@ -19,7 +19,7 @@
 	{ "scenario": "007" },
 	{
 		"outpostPhase": true,
-		"event": "SO-1", "option": "B",
+		"event": "SO-01", "option": "B",
 		"levelUp": [{ "name": "Blinkblade", "level": 2 }],
 		"build": [{ "name": "Boat" }]
 	},

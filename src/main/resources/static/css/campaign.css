@@ -4,21 +4,21 @@
 /* ------ */
 
 .campaign {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: var(--campaign-padding-y);
+	padding-bottom: var(--campaign-padding-y);
 	font-family: var(--font-tinos);
 	color: #2c2e35;
 }
 
 .campaign .title {
-	margin-bottom: 1rem;
+	margin-bottom: var(--title-margin-bottom);
 	font-family: var(--font-pirata-one);
-	font-size: 28pt;
+	font-size: var(--title-size);
 }
 
 .campaign .title .number {
 	font-family: var(--font-germania-one);
-	font-size: 25pt;
+	font-size: var(--title-size-small);
 	vertical-align: bottom;
 }
 
@@ -27,13 +27,18 @@
 }
 
 .campaign img:not(.icon) {
-	border: 2px solid;
+	border: var(--img-border);
+}
+
+.campaign .fhCard img {
+	max-width: var(--img-card-max-size);
+	max-height: var(--img-card-max-size);
 }
 
 .myStory {
 	display: flex;
 	flex-direction: column;
-	gap: 5rem;
+	gap: var(--story-objects-gap);
 }
 
 
@@ -52,12 +57,12 @@
 /* ----- */
 
 .party .character:not(:first-of-type) {
-	margin-top: 2rem;
+	margin-top: var(--section-margin-top);
 }
 
 .party .character .title {
 	font-family: var(--font-germania-one);
-	font-size: 25pt;
+	font-size: var(--title-size-small);
 }
 
 .party .character .mat {
@@ -65,20 +70,16 @@
 }
 
 .party .character .mat img:not(:first-of-type) {
-	margin-top: 0.5rem;
+	margin-top: var(--img-margin);
 }
 
 .party .character .background {
-	margin-top: 1rem;
+	margin-top: var(--element-margin-top);
 }
 
 .party .character .personalQuest {
 	margin-top: 1.5rem;
 	text-align: center;
-}
-
-.party .character .personalQuest img {
-	max-height: 400px;
 }
 
 
@@ -87,19 +88,14 @@
 /* ------------- */
 
 .outpostPhase .downtime {
-	margin-top: 2rem;
+	margin-top: var(--section-margin-top);
 }
 
 .outpostPhase .construction {
-	margin-top: 2rem;
+	margin-top: var(--section-margin-top);
 }
 
 .outpostPhase .construction .building .fhCard {
-	margin-top: 1rem;
+	margin-top: var(--img-margin);
 	text-align: center;
-}
-
-.outpostPhase .construction .building .fhCard img {
-	max-width: 400px;
-	max-height: 400px;
 }

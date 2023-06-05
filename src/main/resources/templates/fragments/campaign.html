@@ -11,6 +11,7 @@
 		<div class="list-group list-group-flush">
 			<!-- Welcome -->
 			<a class="list-group-item list-group-item-action" href="#welcome">[[#{welcome.title}]]</a>
+
 			<!-- Party -->
 			<a class="list-group-item list-group-item-action" href="#party">[[#{party.title}]]</a>
 			<th:block th:each="character : ${party.characters}">
@@ -33,7 +34,7 @@
 				</th:block>
 				<!-- Event -->
 				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
-					[[*{id}]] · [[*{season}]] [[*{type}]] Event
+					[(#{event.title(*{id},*{season},*{type})})]
 				</a>
 			</th:block>
 		</div>
@@ -68,7 +69,7 @@
 				[(*{background})]
 			</div>
 			<!-- Personal quest -->
-			<div th:if="*{personalQuest}" class="personalQuest">
+			<div th:if="*{personalQuest}" class="personalQuest fhCard">
 				<img th:src="@{img/personalQuests/__*{personalQuest}__.png}">
 			</div>
 		</div>

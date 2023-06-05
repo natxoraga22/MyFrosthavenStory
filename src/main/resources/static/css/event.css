@@ -1,6 +1,16 @@
 
+.event .fhCard {
+	float: left;
+	margin-right: var(--img-margin);
+	margin-bottom: var(--img-margin);
+}
+
 .event .text {
 	font-style: italic;
+}
+
+.event .option {
+	margin-top: var(--section-margin-top);
 }
 
 .event .option .rewards {

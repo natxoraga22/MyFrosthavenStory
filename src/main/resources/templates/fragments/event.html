@@ -9,9 +9,12 @@
 	<!-- ----- -->
 	<div th:fragment="event(event)" th:object="${event}" th:id="|event_*{id}|" class="event">
 		<!-- Title -->
-		<h1 class="title mb-3">
-			<span class="number">[[*{id}]] ·</span> [[*{season}]] [[*{type}]] Event
-		</h1>
+		<h1 class="title">[(#{event.title(*{id},*{season},*{type})})]</h1>
+
+		<!-- Card -->
+		<div class="fhCard">
+			<img th:src="@{img/events/__*{id}__.png}">
+		</div>
 
 		<!-- Text -->
 		<div class="text">
@@ -19,10 +22,10 @@
 		</div>
 
 		<!-- Option -->
-		<div class="option mt-4" th:object="${event.options['__${event.chosenOption}__']}">
+		<div class="option" th:object="${event.options['__${event.chosenOption}__']}">
 			<!-- Trigger -->
 			<div class="trigger">
-				<strong>· Option [[${event.chosenOption}]]:</strong> [[*{trigger}]]
+				<i class="fa-solid fa-angles-right"></i> <strong>Option [[${event.chosenOption}]]:</strong> [[*{trigger}]]
 			</div>
 	
 			<!-- Text -->

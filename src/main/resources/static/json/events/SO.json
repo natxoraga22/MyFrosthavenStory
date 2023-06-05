@@ -1,6 +1,6 @@
 {
-	"SO-1": {
-		"id": "SO-1",
+	"SO-01": {
+		"id": "SO-01",
 		"text": "<p>Knock knock knock! \"Mail call, open up.\"</p><p>You open the door to find a grumpy Quatryl With a low-riding sack of mail. She tosses a lumpy package wrapped in cord to you. \"No name, but this address. It's yours now!\"</p><p>As she walks away she snaps her fingers, remembering something. \"Oh, right. This too.\" She hands over a letter addressed to you. As she wanders off toward a drink, you rip the letter open to read a note scrawled in excellent cursive:</p><p class=\"ms-4\">\"Please do not open the package.<br/>We will retrieve it.<br/>—Leonidas and Maximus\"</p>",
 		"options": {
 			"A": {

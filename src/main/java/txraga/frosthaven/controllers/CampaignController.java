@@ -85,7 +85,7 @@ public class CampaignController {
 	private Party getParty() throws IOException {
 		log.entry();
 		ObjectMapper objectMapper = new ObjectMapper();
-		File partyFile = new ClassPathResource("static/json/party.json").getFile();
+		File partyFile = new ClassPathResource("static/json/myParty.json").getFile();
 		Party party = objectMapper.readValue(partyFile, Party.class);
 
 		Map<String,FhCharacter> characterBackgrounds = getCharacters();

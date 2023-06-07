@@ -13,6 +13,11 @@
 	margin-top: var(--section-margin-top);
 }
 
+.event .option .text {
+	margin-top: var(--element-margin-top);
+}
+
 .event .option .rewards {
+	margin-top: var(--element-margin-top);
 	font-weight: bold;
 }

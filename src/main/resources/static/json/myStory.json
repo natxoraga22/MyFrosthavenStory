@@ -24,5 +24,20 @@
 		"build": [{ "name": "Boat" }]
 	},
 	{ "event": "B-03", "option": "A" },
-	{ "scenario": "014" }
+	{ "scenario": "014" },
+	{
+		"outpostPhase": true,
+		"event": "SO-15", "option": "A",
+		"levelUp": [{ "name": "Deathwalker", "level": 3 }],
+		"build": [{ "name": "Climbing Gear" }]
+	},
+	{ "event": "B-04", "option": "A" },
+	{ "scenario": "022" },
+	{
+		"outpostPhase": true,
+		"passageOfTime": ["32.3", "156.1"],
+		"event": "SO-52", "option": "A",
+		"levelUp": [{ "name": "Blinkblade", "level": 3 }],
+		"upgrade": [{ "name": "Craftsman", "level": 3 }]
+	}
 ]

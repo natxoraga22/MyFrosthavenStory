@@ -22,6 +22,7 @@ public class StoryItem {
 
 	/* Outpost phase */
 	private boolean outpostPhase;
+	private List<String> passageOfTime;
 	private List<FhCharacter> levelUp;
 	private List<Building> build;
 	private List<Building> upgrade;

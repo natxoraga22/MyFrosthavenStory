@@ -2,9 +2,7 @@ package txraga.frosthaven.controllers;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,10 +18,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Event;
-import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.OutpostPhase;
-import txraga.frosthaven.model.Party;
 import txraga.frosthaven.model.Scenario;
+import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
 import txraga.frosthaven.model.StoryObject;
 
@@ -36,13 +33,14 @@ public class CampaignController {
 	@GetMapping("")
 	public ModelAndView campaign(Model model) {
 		log.entry();
-		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			File myStoryFile = new ClassPathResource("static/json/myStory.json").getFile();
-			List<StoryItem> myStory = objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){});
-			log.debug("{}", myStory);
+			List<StoryItem> myStory = CampaignUtils.getMyStory();
+			
+			// Get all sections and events
+			Map<String,Section> sections = CampaignUtils.getSections();
+			Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
 
-			Map<String,Map<String,Event>> events = getEvents();
+			// Fill storyObjects list with the elements from myStory list
 			int outpostPhaseId = 1;
 			List<StoryObject> storyObjects = new ArrayList<>();
 			for (StoryItem storyItem : myStory) {
@@ -55,6 +53,7 @@ public class CampaignController {
 				else if (storyItem.isOutpostPhase()) {
 					OutpostPhase outpostPhase = getOutpostPhase(storyItem);
 					outpostPhase.setId(outpostPhaseId++);
+					//outpostPhase.setSections(storyItem.getPassageOfTime().stream().map(section -> sections.get(section)).toList());
 					outpostPhase.setEvent(getEvent(storyItem, events));
 					if (outpostPhase != null) storyObjects.add(outpostPhase);
 				}
@@ -65,41 +64,14 @@ public class CampaignController {
 				}
 			}
 
-			model.addAttribute("welcome", getWelcome());
-			model.addAttribute("party", getParty());
+			model.addAttribute("welcome", CampaignUtils.getWelcome());
+			model.addAttribute("party", CampaignUtils.getParty());
 			model.addAttribute("storyObjectsList", storyObjects);
 		}
 		catch (IOException e) {
 			log.catching(e);
 		}
 		return log.exit(new ModelAndView("campaign"));
-	}
-
-	private String getWelcome() throws IOException {
-		log.entry();
-		File welcomeFile = new ClassPathResource("static/json/welcome.txt").getFile();
-		List<String> welcomeLines = Files.readAllLines(welcomeFile.toPath());
-		return log.exit(String.join("<br/>", welcomeLines));
-	}
-
-	private Party getParty() throws IOException {
-		log.entry();
-		ObjectMapper objectMapper = new ObjectMapper();
-		File partyFile = new ClassPathResource("static/json/myParty.json").getFile();
-		Party party = objectMapper.readValue(partyFile, Party.class);
-
-		Map<String,FhCharacter> characterBackgrounds = getCharacters();
-		for (FhCharacter character : party.getCharacters()) {
-			character.setBackground(characterBackgrounds.get(character.getNameId()).getBackground());
-		}
-		return log.exit(party);
-	}
-
-	private Map<String,FhCharacter> getCharacters() throws IOException {
-		log.entry();
-		ObjectMapper objectMapper = new ObjectMapper();
-		File charactersFile = new ClassPathResource("static/json/characters.json").getFile();
-		return log.exit(objectMapper.readValue(charactersFile, new TypeReference<Map<String,FhCharacter>>(){}));		
 	}
 
 	private Scenario getScenario(StoryItem storyItem) throws IOException {
@@ -125,32 +97,6 @@ public class CampaignController {
 		outpostPhase.setBuild(storyItem.getBuild());
 		outpostPhase.setUpgrade(storyItem.getUpgrade());
 		return log.exit(outpostPhase);
-	}
-
-	private Map<String,Map<String,Event>> getEvents() throws IOException {
-		log.entry();
-		ObjectMapper objectMapper = new ObjectMapper();
-		Map<String,Map<String,Event>> events = new HashMap<>();
-
-		for (Event.Season season : Event.Season.values()) {
-			for (Event.Type type : Event.Type.values()) {
-				String seasonAndType = type == Event.Type.B ? "B" : season.name() + type.name();
-
-				log.debug("seasonAndType: {}", seasonAndType);
-
-				File eventsFile = new ClassPathResource("static/json/events/" + seasonAndType + ".json").getFile();
-				Map<String,Event> seasonAndTypeEvents = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
-				for (Event event : seasonAndTypeEvents.values()) {
-					event.setSeason(season);
-					event.setType(type);
-				}
-
-				log.debug("seasonAndTypeEvents: {}", seasonAndTypeEvents);
-
-				events.put(seasonAndType, seasonAndTypeEvents);
-			}
-		}
-		return log.exit(events);
 	}
 
 	private Event getEvent(StoryItem storyItem, Map<String,Map<String,Event>> events) {

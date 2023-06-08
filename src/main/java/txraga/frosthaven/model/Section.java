@@ -14,9 +14,11 @@ import lombok.ToString;
 public class Section {
 	
 	private String id;
+	private boolean sectionBook = false;
+
+	private String trigger;
 	private String title;
 	private StoryItem unlockedBy;
-	private String trigger;
 
 	private String specialRules;
 	private String introduction;

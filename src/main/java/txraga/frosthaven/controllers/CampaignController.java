@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
@@ -51,11 +50,9 @@ public class CampaignController {
 				}
 				// Outpost phase
 				else if (storyItem.isOutpostPhase()) {
-					OutpostPhase outpostPhase = getOutpostPhase(storyItem);
-					outpostPhase.setId(outpostPhaseId++);
-					//outpostPhase.setSections(storyItem.getPassageOfTime().stream().map(section -> sections.get(section)).toList());
-					outpostPhase.setEvent(getEvent(storyItem, events));
+					OutpostPhase outpostPhase = getOutpostPhase(storyItem, outpostPhaseId, sections, events);
 					if (outpostPhase != null) storyObjects.add(outpostPhase);
+					outpostPhaseId++;
 				}
 				// Event
 				else if (storyItem.getEvent() != null) {
@@ -90,9 +87,14 @@ public class CampaignController {
 		}
 	}
 
-	private OutpostPhase getOutpostPhase(StoryItem storyItem) {
+	private OutpostPhase getOutpostPhase(StoryItem storyItem, int id, Map<String,Section> sections, Map<String,Map<String,Event>> events) {
 		log.entry(storyItem);
 		OutpostPhase outpostPhase = new OutpostPhase();
+		outpostPhase.setId(id);
+		if (storyItem.getPassageOfTime() != null) {
+			outpostPhase.setSections(storyItem.getPassageOfTime().stream().map(section -> sections.get(section)).toList());
+		}
+		outpostPhase.setEvent(getEvent(storyItem, events));
 		outpostPhase.setLevelUp(storyItem.getLevelUp());
 		outpostPhase.setBuild(storyItem.getBuild());
 		outpostPhase.setUpgrade(storyItem.getUpgrade());

@@ -64,7 +64,7 @@
 		</div>
 
 		<!-- Map -->
-		<div th:if="${section.hasMap(scenario.idString)}" class="map my-3">
+		<div th:if="${!section.sectionBook && section.hasMap(scenario.idString)}" class="map my-3">
 			<img th:with="imgName = ${scenario.idString} + '_' + *{id}" th:src="@{img/scenarios/__${imgName}__.png}" onload="this.width*=0.66;">
 		</div>
 

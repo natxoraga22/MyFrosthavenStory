@@ -73,8 +73,10 @@ public class CampaignUtils {
 	public static Map<String,Section> getSections() throws IOException {
 		log.entry();
 		ObjectMapper objectMapper = new ObjectMapper();
-		File charactersFile = new ClassPathResource(SECTIONS_FILE_PATH).getFile();
-		return log.exit(objectMapper.readValue(charactersFile, new TypeReference<Map<String,Section>>(){}));		
+		File sectionsFile = new ClassPathResource(SECTIONS_FILE_PATH).getFile();
+		Map<String,Section> sections = objectMapper.readValue(sectionsFile, new TypeReference<Map<String,Section>>(){});
+		sections.values().forEach(section -> section.setSectionBook(true));
+		return log.exit(sections);
 	}
 
 	/** Get all Frosthaven events (road, outpost, etc.) from all files inside "events" folder (there is a file by each type of event) */

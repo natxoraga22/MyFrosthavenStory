@@ -16,7 +16,6 @@
 	margin-bottom: var(--title-margin-bottom);
 	font-family: var(--font-pirata-one);
 	font-size: var(--title-size);
-	line-height: var(--title-line-height);
 }
 
 .campaign .title .number {

@@ -46,18 +46,21 @@ public class CampaignController {
 				// Scenario
 				if (storyItem.getScenario() != null) {
 					Scenario scenario = getScenario(storyItem);
-					if (scenario != null) storyObjects.add(scenario);
+					if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario());
+					else storyObjects.add(scenario);
 				}
 				// Outpost phase
 				else if (storyItem.isOutpostPhase()) {
 					OutpostPhase outpostPhase = getOutpostPhase(storyItem, outpostPhaseId, sections, events);
-					if (outpostPhase != null) storyObjects.add(outpostPhase);
+					if (outpostPhase == null) log.warn("Outpost phase #{} not found", outpostPhaseId);
+					else storyObjects.add(outpostPhase);
 					outpostPhaseId++;
 				}
 				// Event
 				else if (storyItem.getEvent() != null) {
 					Event event = getEvent(storyItem, events);
-					if (event != null) storyObjects.add(event);
+					if (event == null) log.warn("Event {} not found", storyItem.getEvent());
+					else storyObjects.add(event);
 				}
 			}
 

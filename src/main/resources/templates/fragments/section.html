@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------- -->
+	<!-- SECTION -->
+	<!-- ------- -->
+	<div th:fragment="section(section)" th:object="${section}" th:id="|section_*{id}|" class="section">
+		<!-- Trigger -->
+		<div th:if="*{trigger}" class="trigger">
+			<i class="fa-solid fa-angles-right"></i> [(*{trigger})]:
+		</div>
+
+		<!-- Title -->
+		<h2 th:if="*{title}" class="title mb-0">
+			<span class="number">[[*{id}]] ·</span> [[*{title}]]
+		</h2>
+
+		<!-- Special rules -->
+		<div th:if="*{specialRules}" class="card specialRules">
+			<div class="card-header">[[#{section.specialRules}]]</div>
+			<div class="card-body">
+				[(*{specialRules})]
+			</div>
+		</div>
+
+		<!-- Introduction -->
+		<div th:if="*{introduction}" class="card introduction">
+			<div class="card-header">[[#{section.introduction}]]</div>
+			<div class="card-body">
+				[(*{introduction})]
+			</div>
+		</div>
+
+		<!-- Text -->
+		<div th:if="*{text}" class="text">
+			[(*{text})]
+		</div>
+
+		<!-- Map -->
+		<div th:if="${section.scenario && section.hasMap(scenario.idString)}" class="map">
+			<img th:with="imgName = ${scenario.idString} + '_' + *{id}" th:src="@{img/scenarios/__${imgName}__.png}" onload="this.width*=0.66;">
+		</div>
+
+		<!-- Conclusion -->
+		<div th:if="*{conclusion}" class="card conclusion">
+			<div class="card-header">[[#{section.conclusion}]]</div>
+			<div class="card-body">
+				[(*{conclusion})]
+			</div>
+		</div>
+
+		<!-- Rewards -->
+		<div th:if="*{rewards}" class="card rewards">
+			<div class="card-header">[[#{section.rewards}]]</div>
+			<div class="card-body">
+				[(*{rewards})]
+			</div>
+		</div>
+	</div>
+</body>
+</html>

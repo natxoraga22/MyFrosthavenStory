@@ -28,61 +28,8 @@
 
 		<!-- Sections -->
 		<th:block th:each="pathItem : *{path}">
-			<div th:replace="~{:: section(*{sections['__${pathItem}__']})}"></div>
+			<div th:replace="~{fragments/section :: section(*{sections['__${pathItem}__']})}"></div>
 		</th:block>
-	</div>
-
-
-	<!-- ------- -->
-	<!-- SECTION -->
-	<!-- ------- -->
-	<div th:fragment="section(section)" th:object="${section}" class="section">
-		<!-- Trigger -->
-		<div th:if="*{trigger}" class="trigger mb-2">
-			· [(*{trigger})]:
-		</div>
-
-		<!-- Special rules -->
-		<div th:if="*{specialRules}" class="card specialRules my-3">
-			<div class="card-header">Special Rules</div>
-			<div class="card-body">
-				[(*{specialRules})]
-			</div>
-		</div>
-
-		<!-- Introduction -->
-		<div th:if="*{introduction}" class="card introduction my-3">
-			<div class="card-header">Introduction</div>
-			<div class="card-body">
-				[(*{introduction})]
-			</div>
-		</div>
-
-		<!-- Text -->
-		<div th:if="*{text}" class="text mb-3">
-			[(*{text})]
-		</div>
-
-		<!-- Map -->
-		<div th:if="${!section.sectionBook && section.hasMap(scenario.idString)}" class="map my-3">
-			<img th:with="imgName = ${scenario.idString} + '_' + *{id}" th:src="@{img/scenarios/__${imgName}__.png}" onload="this.width*=0.66;">
-		</div>
-
-		<!-- Conclusion -->
-		<div th:if="*{conclusion}" class="card conclusion my-3">
-			<div class="card-header">Conclusion</div>
-			<div class="card-body">
-				[(*{conclusion})]
-			</div>
-		</div>
-
-		<!-- Rewards -->
-		<div th:if="*{rewards}" class="card rewards my-3">
-			<div class="card-header">Rewards</div>
-			<div class="card-body">
-				[(*{rewards})]
-			</div>
-		</div>
 	</div>
 </body>
 </html>

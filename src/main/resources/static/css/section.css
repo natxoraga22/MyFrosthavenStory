@@ -1,0 +1,150 @@
+
+/* ------ */
+/* COMMON */
+/* ------ */
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--section-inner-gap);
+}
+
+.scenario .card, .section .card {
+	--bs-card-spacer-x: 8px;
+	--bs-card-spacer-y: 8px;
+
+	--bs-card-border-width: 0;
+	--bs-card-inner-border-radius: 0;
+
+	--bs-card-cap-padding-y: 4px;
+	--bs-card-cap-padding-x: 8px;
+
+	--bs-card-cap-color: white;
+
+	--bs-card-color: #2c2e35;
+}
+
+.scenario .card-header, .section .card-header {
+	border-bottom-width: 3px;
+
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}
+
+.scenario .card-body, .section .card-body {
+	border-width: 0px 2px 2px 2px;
+	border-style: solid;
+}
+
+
+/* ----- */
+/* TITLE */
+/* ----- */
+
+.section .title {
+	font-family: var(--font-germania-one);
+	font-size: var(--title-size-small);
+}
+
+.section .title .number {
+	font-size: var(--title-size-smaller);
+}
+
+
+/* ------------- */
+/* SPECIAL RULES */
+/* ------------- */
+
+.section .specialRules {
+	--bs-card-cap-bg: #422071;
+	--bs-card-bg: #d5c7df;
+}
+
+.section .specialRules .card-header {
+	border-bottom-color: #732c8c;
+}
+
+.section .specialRules .card-body {
+	border-color: #412168;
+}
+
+
+/* ------------ */
+/* INTRODUCTION */
+/* ------------ */
+
+.section .introduction {
+	--bs-card-spacer-x: 0;
+	--bs-card-cap-bg: #226526;
+	--bs-card-bg: white;
+}
+
+.section .introduction .card-header {
+	border-bottom-color: #73c34b;
+}
+
+.section .introduction .card-body {
+	border-width: 0;
+}
+
+
+/* ------- */
+/* TRIGGER */
+/* ------- */
+
+.section .trigger {
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}
+
+.section .trigger .icon {
+	height: 14pt;
+}
+
+
+/* --- */
+/* MAP */
+/* --- */
+
+.section .map {
+	text-align: center;
+}
+
+
+/* ---------- */
+/* CONCLUSION */
+/* ---------- */
+
+.section .conclusion {
+	--bs-card-spacer-x: 0;
+	--bs-card-cap-bg: #6d0c07;
+	--bs-card-bg: white;
+}
+
+.section .conclusion .card-header {
+	border-bottom-color: #c92918;
+}
+
+.section .conclusion .card-body {
+	border-width: 0;
+}
+
+
+/* ------- */
+/* REWARDS */
+/* ------- */
+
+.section .rewards {
+	--bs-card-cap-bg: #eba128;
+	--bs-card-bg: #ebd3a0;
+}
+
+.section .rewards .card-header {
+	border-bottom-color: #ffcb34;
+}
+
+.section .rewards .card-body {
+	border-color: #a77b2a;
+}

@@ -10,14 +10,14 @@
 }
 
 .event .option {
-	margin-top: var(--section-margin-top);
+	margin-top: var(--part-margin);
 }
 
 .event .option .text {
-	margin-top: var(--element-margin-top);
+	margin-top: var(--element-margin);
 }
 
 .event .option .rewards {
-	margin-top: var(--element-margin-top);
+	margin-top: var(--element-margin);
 	font-weight: bold;
 }

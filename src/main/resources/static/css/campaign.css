@@ -10,10 +10,13 @@
 	color: #2c2e35;
 }
 
+/* TITLE */
+
 .campaign .title {
 	margin-bottom: var(--title-margin-bottom);
 	font-family: var(--font-pirata-one);
 	font-size: var(--title-size);
+	line-height: var(--title-line-height);
 }
 
 .campaign .title .number {
@@ -22,8 +25,15 @@
 	vertical-align: bottom;
 }
 
+/* UTILITY */
+
 .campaign p:last-child {
 	margin-bottom: 0;
+}
+
+.campaign .icon {
+	height: 12pt;
+	vertical-align: text-top;
 }
 
 .campaign img:not(.icon) {
@@ -34,6 +44,12 @@
 	max-width: var(--img-card-max-size);
 	max-height: var(--img-card-max-size);
 }
+
+.scenarioNumber {
+	font-family: var(--font-germania-one);
+}
+
+/* MY STORY */
 
 .myStory {
 	display: flex;
@@ -57,7 +73,7 @@
 /* ----- */
 
 .party .character:not(:first-of-type) {
-	margin-top: var(--section-margin-top);
+	margin-top: var(--part-margin);
 }
 
 .party .character .title {
@@ -74,7 +90,7 @@
 }
 
 .party .character .background {
-	margin-top: var(--element-margin-top);
+	margin-top: var(--element-margin);
 }
 
 .party .character .personalQuest {
@@ -87,12 +103,14 @@
 /* OUTPOST PHASE */
 /* ------------- */
 
-.outpostPhase .downtime {
-	margin-top: var(--section-margin-top);
+.outpostPhase {
+	display: flex;
+	flex-direction: column;
+	gap: var(--outpost-inner-gap);
 }
 
-.outpostPhase .construction {
-	margin-top: var(--section-margin-top);
+.outpostPhase > .title {
+	margin-bottom: -1rem;
 }
 
 .outpostPhase .construction .building .fhCard {

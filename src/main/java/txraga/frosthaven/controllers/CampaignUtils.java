@@ -75,7 +75,7 @@ public class CampaignUtils {
 		ObjectMapper objectMapper = new ObjectMapper();
 		File sectionsFile = new ClassPathResource(SECTIONS_FILE_PATH).getFile();
 		Map<String,Section> sections = objectMapper.readValue(sectionsFile, new TypeReference<Map<String,Section>>(){});
-		sections.values().forEach(section -> section.setSectionBook(true));
+		sections.values().forEach(section -> section.setScenario(false));
 		return log.exit(sections);
 	}
 

@@ -12,7 +12,11 @@
 		<div class="title">
 			<h1 class="mb-0">
 				<span class="number">[[*{id}]] ·</span> [[*{name}]]
+				<img th:if="*{requirement}" class="requirement" th:src="@{img/icons/__*{#strings.toLowerCase(requirement)}__.png}">
 			</h1>
+			<th:block th:if="*{unlockedBy}">
+				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>
+			</th:block>
 			<div th:if="*{location}" class="location">
 				<i class="fa-solid fa-map-location me-1"></i> [[*{location}]]
 			</div>
@@ -20,9 +24,17 @@
 
 		<!-- Scenario goals -->
 		<div class="card goals my-3">
-			<div class="card-header">Scenario Goals</div>
+			<div class="card-header">[[#{scenario.goals}]]</div>
 			<div class="card-body">
 				[(*{goals})]
+			</div>
+		</div>
+
+		<!-- Scenario effects -->
+		<div th:if="*{effects}" class="card effects my-3">
+			<div class="card-header">[[#{scenario.effects}]]</div>
+			<div class="card-body">
+				[(*{effects})]
 			</div>
 		</div>
 

@@ -16,6 +16,8 @@ public class Scenario extends StoryObject {
 	private int id;
 	private String coordinates;
 	private String name;
+	private String requirement;
+	private StoryItem unlockedBy;
 	private int complexity;
 	private String location;
 
@@ -37,6 +39,7 @@ public class Scenario extends StoryObject {
 
 	public void replaceIcons() {
 		this.goals = Scenario.replaceIcons(this.goals);
+		this.effects = Scenario.replaceIcons(this.effects);
 		for (Section section : sections.values()) section.replaceIcons();
 	}
 

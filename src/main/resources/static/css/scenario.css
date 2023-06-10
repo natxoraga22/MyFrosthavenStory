@@ -9,6 +9,15 @@
 	line-height: 1.5;
 }
 
+.scenario .title .requirement {
+	max-width: 40px;
+	margin-left: 0.5rem;
+	padding: 5px;
+	border: 4px solid #e9cdad;
+	border-radius: 30px;
+	background-color: #d6a465;
+}
+
 
 /* ----- */
 /* GOALS */
@@ -25,4 +34,22 @@
 
 .scenario .goals .card-body {
 	border-color: #cf5621;
+}
+
+
+/* ------- */
+/* EFFECTS */
+/* ------- */
+
+.scenario .effects {
+	--bs-card-cap-bg: #00756d;
+	--bs-card-bg: #b9d7d2;
+}
+
+.scenario .effects .card-header {
+	border-bottom-color: #008d83;
+}
+
+.scenario .effects .card-body {
+	border-color: #009a8b;
 }

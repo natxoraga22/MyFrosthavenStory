@@ -85,7 +85,7 @@ public class CampaignController {
 			return log.exit(scenario);
 		}
 		catch (IOException e) {
-			log.warn("JSON file for scenario '{}' not found", storyItem.getScenario());
+			log.warn("Error reading and parsing JSON file for scenario " + storyItem.getScenario(), e);
 			return log.exit(null);
 		}
 	}

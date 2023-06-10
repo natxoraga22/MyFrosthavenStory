@@ -52,12 +52,6 @@
 	font-size: var(--title-size-smaller);
 }
 
-.section .title .unlockedBy {
-	font-family: var(--font-tinos);
-	font-size: 12pt;
-	line-height: 1.5;
-}
-
 
 /* ------------- */
 /* SPECIAL RULES */

@@ -9,11 +9,23 @@
 	<!-- ----- -->
 	<div th:fragment="event(event)" th:object="${event}" th:id="|event_*{id}|" class="event">
 		<!-- Title -->
-		<h1 class="title">[(#{event.title(*{id},*{season},*{type})})]</h1>
+		<div class="title">
+			<h1 class="mb-0">[(#{event.title(*{id},*{season},*{type})})]</h1>
+			<th:block th:if="*{unlockedBy}">
+				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>
+			</th:block>
+		</div>
 
 		<!-- Card -->
-		<div class="fhCard">
-			<img th:src="@{img/events/__*{id}__.png}">
+		<div class="fhCard flip">
+			<div class="fhCardInner">
+				<div class="front">
+					<img th:src="@{img/events/__*{id}__.png}">
+				</div>
+				<div class="back">
+					<img th:src="@{img/events/__*{id}___back.png}">
+				</div>
+			</div>
 		</div>
 
 		<!-- Text -->

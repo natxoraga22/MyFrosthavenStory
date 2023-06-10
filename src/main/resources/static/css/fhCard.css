@@ -1,0 +1,24 @@
+
+.fhCard.flip {
+	width: 287px;
+	height: 400px;
+	perspective: 1000px;
+}
+
+.fhCard.flip .fhCardInner {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.fhCard.flip:hover .fhCardInner {
+	transform: rotateY(180deg);
+}
+
+.fhCard.flip .front, .fhCard.flip .back {
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.fhCard.flip .back {
+	transform: rotateY(180deg);
+}

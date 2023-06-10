@@ -48,6 +48,20 @@
 		}
 	},
 	"SO-52": {
-		"id": "SO-52"
+		"id": "SO-52",
+		"unlockedBy": { "event": "B-04" },
+		"text": "<p>You rush to the docks in response to the alarm bells and find a massive shell washed up on the icy shore. Slowly... slowly, a head wider than the guard tower emerges. It is a giant sea turtle, beached on the land. It opens its mouth and addresses Frosthaven with a slow drawl:</p><p>\"Hello, City. I apologize for intruding, when I last came through here it looked very different. I knew you when you were just Ice. Or perhaps time has not been kind on my eyes.\" The turtle's eyes are nearly glazed over in a white film. It looks blind, or close to it.</p><p>Children playing on the docks laugh at the silliness of the creature. A young girl shouts, \"Did you get stuck, Mr. Turtle?\"</p><p>\"Oh, how youthful you sound, City! You must be quite new to this world. I do appear stuck. Any chance for a push?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Rally the guard and give a push.",
+				"text": "<p>The town guard puts their backs into it and heaves the massive turtle back into the water.</p><p>\"Oh my, thank you, City! Such a polite young city. I will be sure to tell my friends.</p>",
+				"rewards": "Gain 2 morale."
+			},
+			"B": {
+				"trigger": "This creature is on its last legs. It could be put to better use supplying the town with meat and armor.",
+				"text": "<p>You pull the children back from the creature—Frosthaven has enough horrors without needing to see the circle of life so clearly.</p><p>The guards finish their dark task and you thank the turtle for helping this town survive.</p>",
+				"rewards": "Gain 5 collective [hide].<br/>Gain 3 soldiers."
+			}
+		}
 	}
 }

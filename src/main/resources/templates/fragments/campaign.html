@@ -4,46 +4,6 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<!-- ----------------- -->
-	<!-- TABLE OF CONTENTS -->
-	<!-- ----------------- -->
-	<div th:fragment="tableOfContents" class="tableOfContents">
-		<div class="list-group list-group-flush">
-			<!-- Welcome -->
-			<a class="list-group-item list-group-item-action" href="#welcome">[[#{welcome.title}]]</a>
-
-			<!-- Party -->
-			<a class="list-group-item list-group-item-action" href="#party">[[#{party.title}]]</a>
-			<th:block th:each="character : ${party.characters}">
-				<a class="list-group-item list-group-item-action ps-5" th:href="|#character_*{nameId}|">[[${character.name}]]</a>
-			</th:block>
-
-			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}">
-				<!-- Scenario -->
-				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
-					[[*{id}]] · [[*{name}]]
-				</a>
-				<!-- Outpost phase -->
-				<th:block th:if="*{objectType.name() == 'OUTPOST_PHASE'}">
-					<a class="list-group-item list-group-item-action" th:href="|#outpostPhase_*{id}|">
-						[(#{outpostPhase.title(*{id})})]
-					</a>
-					<a th:each="section : *{sections}" class="list-group-item list-group-item-action ps-5" th:object="${section}" th:href="|#section_*{id}|">
-						[[*{id}]] · [[*{title}]]
-					</a>
-					<a th:if="*{event}" class="list-group-item list-group-item-action ps-5" th:object="${storyObject.event}" th:href="|#event_*{id}|">
-						[[*{id}]] · [[*{season}]] [[*{type}]] Event
-					</a>
-				</th:block>
-				<!-- Event -->
-				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
-					[(#{event.title(*{id},*{season},*{type})})]
-				</a>
-			</th:block>
-		</div>
-	</div>
-
-
 	<!-- ------- -->
 	<!-- WELCOME -->
 	<!-- ------- -->
@@ -135,6 +95,21 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+
+	<!-- ----------- -->
+	<!-- UNLOCKED BY -->
+	<!-- ----------- -->
+	<div th:fragment="unlockedBy(unlockedBy)" th:object="${unlockedBy}" class="unlockedBy">
+		<i class="fa-solid fa-unlock me-1"></i> Unlocked by:
+		<a th:if="*{scenario}" th:with="scenarioId = ${#numbers.formatInteger(unlockedBy.scenario,1)}"
+		   class="link-secondary" th:href="|#scenario_${scenarioId}|">
+			Scenario [[${scenarioId}]]
+		</a>
+		<a th:if="*{event}" class="link-secondary" th:href="|#event_*{event}|">
+			Event [[*{event}]]
+		</a>
 	</div>
 </body>
 </html>

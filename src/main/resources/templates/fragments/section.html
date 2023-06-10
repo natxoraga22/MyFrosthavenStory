@@ -18,13 +18,9 @@
 			<h2 class="mb-0">
 				<span class="number">[[*{id}]] ·</span> [[*{title}]]
 			</h2>
-			<div th:if="*{unlockedBy}" class="unlockedBy">
-				<i class="fa-solid fa-unlock me-1"></i> Unlocked by:
-				<a th:if="*{unlockedBy.scenario}" th:with="scenarioId = ${#numbers.formatInteger(section.unlockedBy.scenario,1)}"
-				   class="link-secondary" th:href="|#scenario_${scenarioId}|">
-					Scenario [[${scenarioId}]]
-				</a>
-			</div>
+			<th:block th:if="*{unlockedBy}">
+				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>
+			</th:block>
 		</div>
 
 		<!-- Special rules -->

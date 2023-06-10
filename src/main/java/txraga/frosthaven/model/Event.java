@@ -51,6 +51,7 @@ public class Event extends StoryObject {
 	private String id;
 	private Season season;
 	private Type type;
+	private StoryItem unlockedBy;
 	private String text;
 	private Map<String,Option> options;
 	private String chosenOption;

@@ -1,7 +1,28 @@
 
+/* ------ */
+/* COMMON */
+/* ------ */
+
+.scenario {
+	display: flex;
+	flex-direction: column;
+	gap: var(--scenario-inner-gap);
+}
+
+.scenario .sections {
+	display: flex;
+	flex-direction: column;
+	gap: var(--scenario-sections-gap);
+}
+
+
 /* ----- */
 /* TITLE */
 /* ----- */
+
+.scenario .title {
+	margin-bottom: 0;
+}
 
 .scenario .title .location {
 	font-family: var(--font-tinos);

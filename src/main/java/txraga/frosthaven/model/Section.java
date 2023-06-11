@@ -25,6 +25,7 @@ public class Section {
 	private String text;
 	private String conclusion;
 	private String rewards;
+	private String sectionLinks;
 
 
 	public boolean hasMap(String scenarioId) {
@@ -36,5 +37,6 @@ public class Section {
 		this.trigger = Scenario.replaceIcons(this.trigger);
 		this.specialRules = Scenario.replaceIcons(this.specialRules);
 		this.rewards = Scenario.replaceIcons(this.rewards);
+		this.sectionLinks = Scenario.replaceIcons(this.sectionLinks);
 	}
 }

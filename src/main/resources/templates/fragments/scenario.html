@@ -23,7 +23,7 @@
 		</div>
 
 		<!-- Scenario goals -->
-		<div class="card goals my-3">
+		<div class="card goals">
 			<div class="card-header">[[#{scenario.goals}]]</div>
 			<div class="card-body">
 				[(*{goals})]
@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- Scenario effects -->
-		<div th:if="*{effects}" class="card effects my-3">
+		<div th:if="*{effects}" class="card effects">
 			<div class="card-header">[[#{scenario.effects}]]</div>
 			<div class="card-body">
 				[(*{effects})]
@@ -39,9 +39,11 @@
 		</div>
 
 		<!-- Sections -->
-		<th:block th:each="pathItem : *{path}">
-			<div th:replace="~{fragments/section :: section(*{sections['__${pathItem}__']})}"></div>
-		</th:block>
+		<div class="sections">
+			<th:block th:each="pathItem : *{path}">
+				<div th:replace="~{fragments/section :: section(*{sections['__${pathItem}__']})}"></div>
+			</th:block>
+		</div>
 	</div>
 </body>
 </html>

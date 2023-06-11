@@ -12,8 +12,29 @@
 	"sections": {
 		"main": {
 			"id": "main",
-			"introduction": "<p>You’ve followed the shards’ pull on your quest to restore the Lurkers’ crown. It’s been several days of hard sailing, dodging icebergs and huddling against the wind, you’ve arrived at your destination. You float at the exact spot where the shards want you to be, but strangely, there is nothing here.</p><p>Your ship sits in open water, sails secured, while you look for any sign of another shard: a spit of land, a wayward berg, another shoal perhaps, but there is nothing here except the frigid, steady chop of the sea. Frustrated, you retire below deck, but as you descend you notice the shards’ renewed excitement. Only then do you realize where you must go: down into the water.</p><p>Just then the ship heaves upward. For a moment you feel like you’re floating, your body tossed weightless into the air. But then that feeling ends, and you slam back down onto the cabin floor with cracking force. Something has struck the hull.</p><p>You heave yourselves back up to the main deck and see jets of saltwater spraying all around the ship. Lurkers have boarded your vessel, and their huge bodies are rocking it back and forth like a toy. You draw your weapon, ready to charge, but someone shouts up from the hold—the crab-people have made it inside and they’re beginning to smash holes in the ship. The Lurkers know you have the shards, and they will sink you to get them.</p>"
+			"introduction": "<p>You’ve followed the shards’ pull on your quest to restore the Lurkers’ crown. It’s been several days of hard sailing, dodging icebergs and huddling against the wind, you’ve arrived at your destination. You float at the exact spot where the shards want you to be, but strangely, there is nothing here.</p><p>Your ship sits in open water, sails secured, while you look for any sign of another shard: a spit of land, a wayward berg, another shoal perhaps, but there is nothing here except the frigid, steady chop of the sea. Frustrated, you retire below deck, but as you descend you notice the shards’ renewed excitement. Only then do you realize where you must go: down into the water.</p><p>Just then the ship heaves upward. For a moment you feel like you’re floating, your body tossed weightless into the air. But then that feeling ends, and you slam back down onto the cabin floor with cracking force. Something has struck the hull.</p><p>You heave yourselves back up to the main deck and see jets of saltwater spraying all around the ship. Lurkers have boarded your vessel, and their huge bodies are rocking it back and forth like a toy. You draw your weapon, ready to charge, but someone shouts up from the hold—the crab-people have made it inside and they’re beginning to smash holes in the ship. The Lurkers know you have the shards, and they will sink you to get them.</p>",
+			"sectionLinks": "When all revealed enemies are dead, read [section] <strong>26.3</strong>."
+		},
+		"26.3": {
+			"id": "26.3",
+			"trigger": "All revealed enemies are dead",
+			"specialRules": "Border hex [a] is a stairway to below deck and can now be entered.",
+			"text": "You drive the Lurkers, chittering and clawing, from your ship, but there is no peace yet. Below deck, you hear more creaking and crashing, as if your boat is being torn apart from the inside.",
+			"sectionLinks": "The first time any character enters [a], read [section] <strong>41.2</strong>."
+		},
+		"41.2": {
+			"id": "41.2",
+			"trigger": "A character enters [a]",
+			"specialRules": "<p>[a] and all [b] are linked hexes.</p><p>If any monster would perform an attack ability but lacks a primary target, it instead attacks the closest empty hex or border hex, prioritizing those with the most damage on them. Place damage tokens on the attacked hex equal to the damage dealt. Hexes cannot be damaged in any other way and are immune to all conditions. If a hex accumulates 4+(2xL) damage tokens, remove those tokens and place one 1-hex water tile in the hex.</p><p>If tile 7-G ever has 5+(3xC) water hexes on it, the scenario is lost.</p>",
+			"text": "Below deck is madness. Saltwater has filled the hold up to your ankles and loose boards float freely about. Lurkers clack in the darkness and they’ve brought with them several glistening black fish: lightning eels. Together the creatures are blasting holes in the ship. You must bring them down before they drop you to the sea floor."
+		},
+		"96.4": {
+			"id": "96.4",
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>The last Lurker slumps to your feet and gurgles under the rising pool of seawater. Hunks of ruined hardtack and broken barrel float about your knees, blood dying everything a sickly pink. The attackers are dead, but the ship is still sinking.</p><p>The crew work faster than they’ve ever worked before, and together you manage to stem the flood before the ship sinks too far. When it’s done, you get rid of the bodies.</p><p>It takes several people to remove each of the dead Lurkers. Their wide, awkward bodies are difficult to maneuver, but they plunge into the icy depths with a satisfying noise. Then there’s only one last problem to solve: the shards. You hold the things tight, but they’re still directing you downward, deep into the sea. It’s impossible; to dive into this water would be certain death. You hate to admit it, but you’ll have to return to town until you can find another way forward.</p>",
+			"rewards": "<strong>Lose 1 collective [lumber] for each set of five hexes with water tiles on tile 7-G.<br/>Gain 15 [xp] each.</strong>",
+			"sectionLinks": "Add [section] <strong>62.2</strong> to the calendar in two weeks."
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "26.3", "41.2", "96.4"]
 }

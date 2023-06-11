@@ -86,6 +86,7 @@
 }
 
 .section .introduction .card-body {
+	padding-bottom: 0;
 	border-width: 0;
 }
 
@@ -129,6 +130,7 @@
 }
 
 .section .conclusion .card-body {
+	padding-bottom: 0;
 	border-width: 0;
 }
 

@@ -1,20 +1,22 @@
 
 :root {
-	--campaign-padding-y: 2rem;     /* Padding top and bottom for the campaign page content */
+	--campaign-padding-y: 2rem;         /* Padding top and bottom for the campaign page content */
 
-	--title-margin-bottom: 1rem;    /* Margin bottom for all titles */
+	--title-margin-bottom: 1rem;        /* Margin bottom for all titles */
 	--title-size: 28pt;
 	--title-size-small: 25pt;
 	--title-size-smaller: 22pt;
 
 	--img-margin: 1rem;
-	--img-border: 2px solid;        /* Image border for all big images (excluding icons) */
-	--img-card-max-size: 400px;     /* Max size for images representing standard sized cards (personal quests, events, buildings, etc.) */
+	--img-border: 2px solid;            /* Image border for all big images (excluding icons) */
+	--img-card-max-size: 400px;         /* Max size for images representing standard sized cards (personal quests, events, buildings, etc.) */
 
-	--story-objects-gap: 5rem;      /* Gap between story objects */
-	--section-inner-gap: 1rem;      /* Gap between section elements */
-	--outpost-inner-gap: 2rem;      /* Gap between outpost phase elements */
+	--story-objects-gap: 5rem;          /* Gap between story objects */
+	--scenario-inner-gap: 1rem;         /* Gap between scenario elements */
+	--scenario-sections-gap: 1.5rem;    /* Gap between scenario sections */
+	--section-inner-gap: 1rem;          /* Gap between section elements */
+	--outpost-inner-gap: 2rem;          /* Gap between outpost phase elements */
 
-	--part-margin: 2rem;            /* Margin for parts of same story object (characters inside party, outpost phase parts, etc.) */
-	--element-margin: 1rem;         /* Margin for elements inside same section */
+	--part-margin: 2rem;                /* Margin for parts of same story object (characters inside party, outpost phase parts, etc.) */
+	--element-margin: 1rem;             /* Margin for elements inside same section */
 }

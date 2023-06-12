@@ -92,7 +92,7 @@ public class CampaignUtils {
 				File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + seasonAndType + ".json").getFile();
 				Map<String,Event> seasonAndTypeEvents = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
 				for (Event event : seasonAndTypeEvents.values()) {
-					event.setSeason(season);
+					event.setSeason(type == Event.Type.B ? null : season);
 					event.setType(type);
 				}
 				events.put(seasonAndType, seasonAndTypeEvents);

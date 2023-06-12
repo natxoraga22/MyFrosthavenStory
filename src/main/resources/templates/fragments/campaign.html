@@ -44,7 +44,9 @@
 	<!-- ------------- -->
 	<div th:fragment="outpostPhase(outpostPhase)" th:object="${outpostPhase}" th:id="|outpostPhase_*{id}|" class="outpostPhase">
 		<!-- Title -->
-		<h1 class="title">[(#{outpostPhase.title(*{id})})]</h1>
+		<h1 class="title">
+			[[#{outpostPhase.title}]] <span class="number">#[[*{id}]]</span>
+		</h1>
 
 		<!-- Sections -->
 		<th:block th:each="section : *{sections}">

@@ -26,5 +26,8 @@ public class StoryItem {
 	private List<FhCharacter> levelUp;
 	private List<Building> build;
 	private List<Building> upgrade;
-	
+
+	/* Section */
+	private String section;
+
 }

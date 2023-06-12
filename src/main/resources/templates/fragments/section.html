@@ -13,7 +13,7 @@
 			<i class="fa-solid fa-angles-right"></i> [(*{trigger})]:
 		</div>
 
-		<!-- Title & UnlockedBy -->
+		<!-- Title -->
 		<div th:if="*{title}" class="title">
 			<h2 class="mb-0">
 				<span class="number">[[*{id}]] ·</span> [[*{title}]]
@@ -46,7 +46,7 @@
 
 		<!-- Map -->
 		<div th:if="${section.scenario && section.hasMap(scenario.idString)}" class="map">
-			<img th:with="imgName = ${scenario.idString} + '_' + *{id}" th:src="@{img/scenarios/__${imgName}__.png}" onload="this.width*=0.66;">
+			<img th:with="imgName = ${scenario.idString} + '_' + *{id}" th:src="@{img/scenarios/__${imgName}__.png}" onload="this.width*=0.8;">
 		</div>
 
 		<!-- Conclusion -->
@@ -62,6 +62,14 @@
 			<div class="card-header">[[#{section.rewards}]]</div>
 			<div class="card-body">
 				[(*{rewards})]
+			</div>
+		</div>
+
+		<!-- Section Links -->
+		<div th:if="*{conclusion != null && sectionLinks != null}" class="card sectionLinks">
+			<div class="card-header">[[#{section.sectionLinks}]]</div>
+			<div class="card-body">
+				[(*{sectionLinks})]
 			</div>
 		</div>
 	</div>

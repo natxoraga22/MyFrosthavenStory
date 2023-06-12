@@ -5,6 +5,10 @@
 		"text": "<p>A carriage piled high with blankets and carpets is tucked between a snowbank and a building near the edge of town. Its old owner sees you wandering by and looks both ways before beckoning you over.</p><p>“Nice place, nice place this Frosthaven. Cold though, eh? Heh. Maybe you’re the sort of people who would like some hot items.” He chuckles a bit to himself as he pins back a blanket on his carriage, revealing assorted items in like-new condition.</p><p>“I just need a few motivated buyers. Shouldn’t be trouble up here, no... but I wouldn’t wear these out in, let’s say, uh, Gloomhaven for a while. Heh.”</p><p>You’re not planning on heading south to that decrepit city any time soon. Might as well pick up a few items at a steal of a price.</p>",
 		"rewards": "<strong>Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold.</strong>"
 	},
+	"62.2": {
+		"id": "62.2",
+		"unlockedBy": { "scenario": "022" }
+	},
 	"156.1": {
 		"id": "156.1",
 		"title": "Opening the Pass",

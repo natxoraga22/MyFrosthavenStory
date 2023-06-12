@@ -10,7 +10,9 @@
 	<div th:fragment="event(event)" th:object="${event}" th:id="|event_*{id}|" class="event">
 		<!-- Title -->
 		<div class="title">
-			<h1 class="mb-0">[(#{event.title(*{id},*{season},*{type})})]</h1>
+			<h1 class="mb-0">
+				<span class="number">[[*{id}]] ·</span> [[*{season}]] [[*{type}]] [[#{event.title}]]
+			</h1>
 			<th:block th:if="*{unlockedBy}">
 				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>
 			</th:block>

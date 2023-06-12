@@ -90,9 +90,9 @@
 						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]
 					</div>
 					<div class="fhCard">
-						<img th:src="@{img/buildings/__*{nameId}____*{level - 1}__.png}">
+						<img th:with="imgName = *{nameId} + '_' + *{level - 1}" th:src="@{img/buildings/__${imgName}__.png}">
 						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
-						<img th:src="@{img/buildings/__*{nameId}____*{level}__.png}">
+						<img th:with="imgName = *{nameId} + '_' + *{level}" th:src="@{img/buildings/__${imgName}__.png}">
 					</div>
 				</div>
 			</div>

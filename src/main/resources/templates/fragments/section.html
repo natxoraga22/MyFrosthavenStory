@@ -23,14 +23,6 @@
 			</th:block>
 		</div>
 
-		<!-- Special rules -->
-		<div th:if="*{specialRules}" class="card specialRules">
-			<div class="card-header">[[#{section.specialRules}]]</div>
-			<div class="card-body">
-				[(*{specialRules})]
-			</div>
-		</div>
-
 		<!-- Introduction -->
 		<div th:if="*{introduction}" class="card introduction">
 			<div class="card-header">[[#{section.introduction}]]</div>
@@ -42,6 +34,14 @@
 		<!-- Text -->
 		<div th:if="*{text}" class="text">
 			[(*{text})]
+		</div>
+
+		<!-- Special rules -->
+		<div th:if="*{specialRules}" class="card specialRules">
+			<div class="card-header">[[#{section.specialRules}]]</div>
+			<div class="card-body">
+				[(*{specialRules})]
+			</div>
 		</div>
 
 		<!-- Map -->

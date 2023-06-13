@@ -23,7 +23,7 @@
 		"levelUp": [{ "name": "Blinkblade", "level": 2 }],
 		"build": [{ "name": "Boat" }]
 	},
-	{ "event": "B-03", "option": "A" },
+	{ "event": "B-03", "option": "A1" },
 	{ "scenario": "014" },
 	{
 		"outpostPhase": true,

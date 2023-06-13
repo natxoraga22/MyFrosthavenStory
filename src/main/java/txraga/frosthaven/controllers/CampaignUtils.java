@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 
@@ -94,6 +95,11 @@ public class CampaignUtils {
 				for (Event event : seasonAndTypeEvents.values()) {
 					event.setSeason(type == Event.Type.B ? null : season);
 					event.setType(type);
+					if (event.getOptions() != null) {
+						for (Entry<String,Event.Option> optionEntry : event.getOptions().entrySet()) {
+							if (optionEntry.getValue().getId() == null) optionEntry.getValue().setId(optionEntry.getKey());
+						}
+					}
 				}
 				events.put(seasonAndType, seasonAndTypeEvents);
 			}

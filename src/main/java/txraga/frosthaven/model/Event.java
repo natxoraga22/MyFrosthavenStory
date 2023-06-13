@@ -43,7 +43,9 @@ public class Event extends StoryObject {
 	@Setter
 	@ToString
 	public static class Option {
+		private String id;
 		private String trigger;
+		private String requirement;
 		private String text;
 		private String rewards;
 	}

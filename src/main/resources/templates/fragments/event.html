@@ -19,13 +19,13 @@
 		</div>
 
 		<!-- Card -->
-		<div class="fhCard flip">
+		<div class="fhCard flip" th:with="typeFolder = *{#strings.toLowerCase(type.toString())}">
 			<div class="fhCardInner">
 				<div class="front">
-					<img th:src="@{img/events/__*{id}__.png}">
+					<img th:src="@{img/events/__${typeFolder}__/__*{id}__.png}">
 				</div>
 				<div class="back">
-					<img th:src="@{img/events/__*{id}___back.png}">
+					<img th:src="@{img/events/__${typeFolder}__/__*{id}___back.png}">
 				</div>
 			</div>
 		</div>
@@ -39,12 +39,12 @@
 		<div class="option" th:object="${event.options['__${event.chosenOption}__']}">
 			<!-- Trigger -->
 			<div class="trigger">
-				<i class="fa-solid fa-angles-right fa-sm"></i> <strong>Option [[${event.chosenOption}]]:</strong> [[*{trigger}]]
+				<i class="fa-solid fa-angles-right fa-sm"></i> <strong>Option [[*{id}]]:</strong> [[*{trigger}]]
 			</div>
 	
 			<!-- Text -->
 			<div class="text">
-				[(*{text})]
+				<span th:if="*{requirement}">[[*{requirement}]]: </span>[(*{text})]
 			</div>
 
 			<!-- Rewards -->

@@ -1,9 +1,27 @@
 {
 	"B-03": {
 		"id": "B-03",
-		"text": "",
+		"text": "<p>It's a cold but gorgeous day for sailing. You're making excellent time, the wind is at your back, and with any luck, you'll arrive to your destination before sunset. Your gaze drifts off the side of the boat, then you spot it: a Lurker keeping perfect pace with your ship.</p><p>It breaches the surface of the water, flipping in the air before splashing back down. It locks eyes with you and you can almost feel its thoughts... it wants to race. Can that be right? Yes—yes, you're sure of it, it wants to race your boat.</p>",
 		"options": {
-			
+			"A1": {
+				"id": "A",
+				"trigger": "Accept the challenge to race.",
+				"requirement": "[trait] NIMBLE",
+				"text": "You rush about the deck, hoisting sails, changing tack, and expertly maneuvering the rudder. The Lurker speeds up in multiple bursts but finally breaks off, defeated. You raise the sails and allow it to catch up, where it bows its head in concession. Before it departs, it throws something on deck—a small satchel from the ocean floor.",
+				"rewards": "Gain 15 collective gold."
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Accept the challenge to race.",
+				"requirement": "[trait] NIMBLE",
+				"text": "You do your best to keep pace, but the Lurker is designed for the ocean, and you Ye fumbling with ropes on deck. It handily beats you.",
+				"rewards": "All characters start the next scenario discarding two cards."
+			},
+			"B": {
+				"trigger": "This is undoubtedly a trap. Attack before it ambushes you.",
+				"text": "You agree to the race as a pretense, but meanwhile prepare to attack. Halfway through the race you open fire on the Lurker. It disappears under the water, and after some rumblings under the ship, reappears off to the side of your vessel. You spin the ship's wheel to turn toward it, but notice your rudder is floating in your wake. It wins this round, and you'll have to make repairs before challenging a Lurker again.",
+				"rewards": "Lose 1 collective [lumber]."
+			}
 		}
 	},
 	"B-04": {

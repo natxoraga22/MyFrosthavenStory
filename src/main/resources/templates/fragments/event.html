@@ -39,7 +39,7 @@
 		<div class="option" th:object="${event.options['__${event.chosenOption}__']}">
 			<!-- Trigger -->
 			<div class="trigger">
-				<i class="fa-solid fa-angles-right fa-sm"></i> <strong>Option [[*{id}]]:</strong> [[*{trigger}]]
+				<i class="fa-solid fa-angles-right fa-sm"></i> <strong>Option<span th:if="*{!#strings.isEmpty(id)}"> [[*{id}]]</span>:</strong> [[*{trigger}]]
 			</div>
 	
 			<!-- Text -->

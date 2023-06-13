@@ -9,13 +9,14 @@
 	{ "event": "SR-02", "option": "B" },
 	{ "scenario": "002" },
 	{ "scenario": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] },
+	{ "scenario": "004", "path": ["mainA", "75.1A", "15.2", "63.1"] },
 	{
 		"outpostPhase": true,
 		"event": "SO-11", "option": "B",
 		"levelUp": [{ "name": "Deathwalker", "level": 2 }],
 		"build": [{ "name": "Logging Camp", "level": 1 }]
 	},
-	{ "event": "SR-03", "option": "Gold" },
+	{ "event": "SR-03", "option": "A1" },
 	{ "scenario": "007" },
 	{
 		"outpostPhase": true,

@@ -27,7 +27,7 @@
 			"B": {
 				"trigger": "Weave it into an art piece.",
 				"text": "<p>You return several hours later to find Pinter filing the last edges off a stunning purple necklace. He wipes it with the edge of his shirt sleeve and hands it to you.</p><p>\"You take it. Just promise me, if you ever find that enchanting Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
-				"rewards": "Gain 1 morale.<br/>Gain \"Deathproof Charm\" [item_031].<br/>Gain \"Brummix\" campaign sticker."
+				"rewards": "Gain 1 morale.<br/>Gain \"Deathproof Charm\" [item].<br/>Gain \"Brummix\" campaign sticker."
 			}
 		}
 	},

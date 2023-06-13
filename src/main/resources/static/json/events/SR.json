@@ -19,14 +19,24 @@
 		"id": "SR-03",
 		"text": "<p>Camouflaged into an outcropping of a stone cliff face sits a savvas. You're trying to determine whether it's still alive when it proudly reveals itself with a long, gravely clearing of its throat.</p><p>\"Hello, adventurers.\" It lifts itself from the rock, standing with a creaking stretch. Some Savvas modify their bodies through painful sculpting, shaping their rocky skin like carved marble. This one has chiseled its face into the visage of a lion, and its chest glows with a swirl of black and white.</p><p>\"You look clever... answer me correctly, and I'll give you something worthy of your answer. Fail, and you shall suffer the punishment.\"</p><p>\"Fished from the waters, drawn from the earth.<br/>My presence bears both jealousy, and mirth.<br/>I've corrupted and captivated, I'm sought out and sold.<br/>If you still can't guess me: I'm worth my weight... in gold.\"</p>",
 		"options": {
-			"Gold": {
+			"A1": {
+				"id": "",
+				"trigger": "Solve the riddle and say your answer aloud now.",
+				"requirement": "IF YOU SAID \"GOLD\"",
 				"text": "\"Clever, good.\" It scratches its stony fingers along its face in thought. \"Perhaps you are the ones. Return someday, we'll see.\" It curls back into the cliff face, then remembers your deal. \"Ah, and as promised, something worth its weight, right?\"",
 				"rewards": "Gain 1 inspiration.<br/>Gain 20 collective gold.<br/>Add event SR-33 to the summer road deck."
 			},
-			"Otherwise": {
+			"A2": {
+				"id": "",
+				"trigger": "Solve the riddle and say your answer aloud now.",
+				"requirement": "IF YOU DIDN\"T SAY \"GOLD\"",
 				"text": "\"Foolish. Only one thing is worth its weight in gold: gold itself. Not the ones I was looking for. Begone.\" The Savvas curls back into the cliff face, turning its lion head away. It ignores you as you move on, but you hear it mutter something under its breath.",
 				"rewards": "All characters start the next scenario with [muddle].<br/>During battle goal selection in the next scenario, all characters draw one fewer card."
 			}
 		}
+	},
+	"SR-33": {
+		"id": "SR-33",
+		"unlockedBy": { "event": "SR-03" }
 	}
 }

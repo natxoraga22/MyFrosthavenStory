@@ -15,6 +15,7 @@
 /* ------- */
 
 .section .trigger {
+	margin-bottom: calc(var(--section-inner-gap)*-1/2);
 	font-family: var(--font-germania-one);
 	font-size: 14pt;
 	line-height: 14pt;

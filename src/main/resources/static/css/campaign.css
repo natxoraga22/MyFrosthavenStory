@@ -122,3 +122,15 @@
 	margin-top: var(--img-margin);
 	text-align: center;
 }
+
+.building .fhCard .boat {
+	max-width: 350px;
+	max-height: 350px;
+	border: 0;
+}
+
+.building .fhCard .climbinggear {
+	max-width: 250px;
+	max-height: 250px;
+	border: 0;
+}

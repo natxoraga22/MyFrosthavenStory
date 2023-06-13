@@ -1,3 +1,6 @@
 {
-	
+	"WO-81": {
+		"id": "WO-81",
+		"unlockedBy": { "scenario": "014" }
+	}
 }

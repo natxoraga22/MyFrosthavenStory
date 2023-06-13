@@ -18,15 +18,16 @@
 		"26.3": {
 			"id": "26.3",
 			"trigger": "All revealed enemies are dead",
-			"specialRules": "Border hex [a] is a stairway to below deck and can now be entered.",
 			"text": "You drive the Lurkers, chittering and clawing, from your ship, but there is no peace yet. Below deck, you hear more creaking and crashing, as if your boat is being torn apart from the inside.",
+			"specialRules": "Border hex [a] is a stairway to below deck and can now be entered.",
 			"sectionLinks": "The first time any character enters [a], read [section] <strong>41.2</strong>."
 		},
 		"41.2": {
 			"id": "41.2",
 			"trigger": "A character enters [a]",
-			"specialRules": "<p>[a] and all [b] are linked hexes.</p><p>If any monster would perform an attack ability but lacks a primary target, it instead attacks the closest empty hex or border hex, prioritizing those with the most damage on them. Place damage tokens on the attacked hex equal to the damage dealt. Hexes cannot be damaged in any other way and are immune to all conditions. If a hex accumulates 4+(2xL) damage tokens, remove those tokens and place one 1-hex water tile in the hex.</p><p>If tile 7-G ever has 5+(3xC) water hexes on it, the scenario is lost.</p>",
-			"text": "Below deck is madness. Saltwater has filled the hold up to your ankles and loose boards float freely about. Lurkers clack in the darkness and they’ve brought with them several glistening black fish: lightning eels. Together the creatures are blasting holes in the ship. You must bring them down before they drop you to the sea floor."
+			"text": "Below deck is madness. Saltwater has filled the hold up to your ankles and loose boards float freely about. Lurkers clack in the darkness and they’ve brought with them several glistening black fish: lightning eels. Together the creatures are blasting holes in the ship. You must bring them down before they drop you to the sea floor.",
+			"specialRules": "<p>[a] and all [b] are linked hexes.</p><p>If any monster would perform an attack ability but lacks a primary target, it instead attacks the closest empty hex or border hex, prioritizing those with the most damage on them. Place damage tokens on the attacked hex equal to the damage dealt. Hexes cannot be damaged in any other way and are immune to all conditions. If a hex accumulates 4+(2xL) damage tokens, remove those tokens and place one 1-hex water tile in the hex.</p><p>If tile 7-G ever has 5+(3xC) water hexes on it, the scenario is lost.</p>"
+
 		},
 		"96.4": {
 			"id": "96.4",

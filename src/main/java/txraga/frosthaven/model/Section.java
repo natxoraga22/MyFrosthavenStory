@@ -20,9 +20,9 @@ public class Section {
 	private String title;
 	private StoryItem unlockedBy;
 
-	private String specialRules;
 	private String introduction;
 	private String text;
+	private String specialRules;
 	private String conclusion;
 	private String rewards;
 	private String sectionLinks;

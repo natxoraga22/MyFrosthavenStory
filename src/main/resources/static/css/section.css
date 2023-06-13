@@ -10,6 +10,21 @@
 }
 
 
+/* ------- */
+/* TRIGGER */
+/* ------- */
+
+.section .trigger {
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}
+
+.section .trigger .icon {
+	height: 14pt;
+}
+
+
 /* ----- */
 /* TITLE */
 /* ----- */
@@ -22,24 +37,6 @@
 
 .section .title .number {
 	font-size: var(--title-size-smaller);
-}
-
-
-/* ------------- */
-/* SPECIAL RULES */
-/* ------------- */
-
-.section .specialRules {
-	--bs-card-cap-bg: #422071;
-	--bs-card-bg: #d5c7df;
-}
-
-.section .specialRules .card-header {
-	border-bottom-color: #732c8c;
-}
-
-.section .specialRules .card-body {
-	border-color: #412168;
 }
 
 
@@ -63,18 +60,53 @@
 }
 
 
-/* ------- */
-/* TRIGGER */
-/* ------- */
+/* ------------- */
+/* SPECIAL RULES */
+/* ------------- */
 
-.section .trigger {
-	font-family: var(--font-germania-one);
-	font-size: 14pt;
-	line-height: 14pt;
+.section .specialRules {
+	--bs-card-cap-bg: #422071;
+	--bs-card-bg: #d5c7df;
 }
 
-.section .trigger .icon {
-	height: 14pt;
+.section .specialRules .card-header {
+	border-bottom-color: #732c8c;
+}
+
+.section .specialRules .card-body {
+	border-color: #412168;
+}
+
+.section .specialRules .table {
+	width: calc(100% + 2*var(--bs-card-spacer-x));
+	margin-left: calc(var(--bs-card-spacer-x)*-1);
+	margin-right: calc(var(--bs-card-spacer-x)*-1);
+	margin-bottom: calc(var(--bs-card-spacer-y)*-1);
+}
+
+.section .specialRules .table th {
+	border-right: 3px solid transparent;
+	border-bottom: none;
+	background-color: #a090b0;
+	background-clip: padding-box;
+	text-align: center;
+}
+
+.section .specialRules .table th:last-child {
+	border-right: none;
+}
+
+.section .specialRules .table thead th {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.section .specialRules .table tbody th {
+	font-weight: normal;
+}
+
+.section .specialRules .table td {
+	border-bottom: none;
 }
 
 

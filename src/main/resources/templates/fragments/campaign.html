@@ -79,7 +79,8 @@
 						<th:block th:unless="*{level}">[(#{outpostPhase.construction.build.textWithoutLevel(*{name})})]</th:block>
 					</div>
 					<div class="fhCard">
-						<img th:with="imgName = *{nameId} + *{level != 0 ? level : ''}" th:src="@{img/buildings/__${imgName}__.png}">
+						<img th:with="imgName = *{nameId} + *{level != 0 ? level : ''}"
+						     th:class="${imgName}" th:src="@{img/buildings/__${imgName}__.png}">
 					</div>
 				</div>
 			</div>

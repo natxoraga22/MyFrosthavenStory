@@ -64,6 +64,14 @@
 			}
 		}
 	},
+	"SO-36": {
+		"id": "SO-36",
+		"unlockedBy": { "event": "SO-19" }
+	},
+	"SO-42": {
+		"id": "SO-42",
+		"unlockedBy": { "event": "SR-02" }
+	},
 	"SO-52": {
 		"id": "SO-52",
 		"unlockedBy": { "event": "B-04" },

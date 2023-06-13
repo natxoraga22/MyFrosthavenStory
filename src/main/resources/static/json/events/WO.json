@@ -1,4 +1,8 @@
 {
+	"WO-61": {
+		"id": "WO-61",
+		"unlockedBy": { "event": "SO-19" }
+	},
 	"WO-81": {
 		"id": "WO-81",
 		"unlockedBy": { "scenario": "014" }

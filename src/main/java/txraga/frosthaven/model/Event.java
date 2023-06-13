@@ -48,6 +48,11 @@ public class Event extends StoryObject {
 		private String requirement;
 		private String text;
 		private String rewards;
+
+		public void replaceIcons() {
+			this.requirement = ModelUtils.replaceIcons(this.requirement);
+			this.rewards = ModelUtils.replaceIcons(this.rewards);
+		}
 	}
 
 	private String id;
@@ -62,6 +67,12 @@ public class Event extends StoryObject {
 	@Override
 	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.EVENT;
+	}
+
+	public void replaceIcons() {
+		if (options != null) {
+			for (Option option : options.values()) option.replaceIcons();
+		}
 	}
 
 }

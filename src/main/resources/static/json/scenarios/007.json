@@ -2,19 +2,22 @@
 	"id": 7,
 	"coordinates": "K3",
 	"name": "Edge of the World",
+	"unlockedBy": { "scenario": "004" },
 	"complexity": 1,
 	"goals": "The scenario is complete when the Coral Corpse is dead. At the end of that round, read [section] <strong>3.3</strong>.",
-	"effects": "Each character adds one [-1] card to their attack modifier deck.",
+	"effects": "Each character adds one [minus1] card to their attack modifier deck.",
 
 	"sections": {
 		"main": {
 			"id": "main",
-			"introduction": "<p>Following up on Satha’s “crab problem,” you find yourself standing at the edge of the Biting Sea, an ice-choked gauntlet whose frigid waters have granted a swift death to many an overconfident mariner. You hike west, hugging the coast while hunting for signs of the enormous crustaceans. Frosthaven is visible in the southern distance, little more than a vague outline. Seeing it, you feel isolated, like someone looking back from the very edge of the world.</p><p>Another half hour of diligent tracking later, you happen upon your first clue: a pattern of pockmarks have been hammered into the ground near the foot of a hill, indents in the snow and dirt where the creatures have scuttled by. You follow the trail to a cave on the western side of the cliff, where you find a clutch of giant crablike figures chittering restlessly.</p><p>They’re as large as you’ve heard from stories: tall, hard-shelled beings with long, craggy limbs, and as soon as you appear, they rise to their full height, some of them larger than an Algox. They shriek and move quickly toward you, their pincers snapping.</p>"
+			"introduction": "<p>Following up on Satha’s “crab problem,” you find yourself standing at the edge of the Biting Sea, an ice-choked gauntlet whose frigid waters have granted a swift death to many an overconfident mariner. You hike west, hugging the coast while hunting for signs of the enormous crustaceans. Frosthaven is visible in the southern distance, little more than a vague outline. Seeing it, you feel isolated, like someone looking back from the very edge of the world.</p><p>Another half hour of diligent tracking later, you happen upon your first clue: a pattern of pockmarks have been hammered into the ground near the foot of a hill, indents in the snow and dirt where the creatures have scuttled by. You follow the trail to a cave on the western side of the cliff, where you find a clutch of giant crablike figures chittering restlessly.</p><p>They’re as large as you’ve heard from stories: tall, hard-shelled beings with long, craggy limbs, and as soon as you appear, they rise to their full height, some of them larger than an Algox. They shriek and move quickly toward you, their pincers snapping.</p>",
+			"sectionLinks": "When door [1] is opened, read [section] <strong>42.1</strong>."
 		},
 		"42.1": {
 			"id": "42.1",
 			"trigger": "Door [1] is opened",
-			"text": "Having dispatched the Lurkers out front, you make your way inside the tunnel, a dank burrow riddled with pits of frigid water and stretches of black ice. What’s worse than the cold, however, is the smell—an intense putridness emanates from deep within the tunnel, equal parts rot and corrupted flesh. What it could be, you’d honestly rather not know."
+			"text": "Having dispatched the Lurkers out front, you make your way inside the tunnel, a dank burrow riddled with pits of frigid water and stretches of black ice. What’s worse than the cold, however, is the smell—an intense putridness emanates from deep within the tunnel, equal parts rot and corrupted flesh. What it could be, you’d honestly rather not know.",
+			"sectionLinks": "When door [2] is opened, read [section] <strong>48.4</strong>."
 		},
 		"48.4": {
 			"id": "48.4",
@@ -24,6 +27,7 @@
 		},
 		"3.3": {
 			"id": "3.3",
+			"trigger": "Coral Corpse is dead",
 			"conclusion": "<p>Ripping the shard from the corpse’s eye, you find the thing to be strangely beautiful. It’s slim and hollow, more like a piece of coral than a stone, and yet, there is a certain weight to it that seems uncanny for something only the size of a dagger handle. You bring it closer, admiring its crags and hollows, but as you do, you feel its weight grow. It presses down on your hand and then into your mind, sinking into you and pulling. The coral shard speaks to each of you, not with words, but with desires. It wants to move north, far out to sea, away from the cliffs and the frozen safety of Frosthaven. And it wants you to take it there.</p><p>This must have been what the Lurkers were after: a strange goal for what you thought were beasts no more sophisticated than wolves or spiders. Yet as the chunk of coral speaks to you, you know it to be true. They sought this object, and in order to understand why, you’ll have to follow the pull of the shard north across the water. But Frosthaven’s tiny fishing vessels aren’t fit for the journey, and you’re not about to swim. This leaves you with a choice: You can either keep your feet on dry land, following the shard along the northern coast <span class=\"scenarioNumber\">(13)</span>; or you can build a proper ship and head out into the ice-choked sea <span class=\"scenarioNumber\">(14)</span>.</p>",
 			"rewards": "<p><strong>Gain 10 [xp] each. Gain “Coral Shard” campaign sticker.</strong></p><p>New Scenarios:<br/><strong>Frozen Fjord</strong> <span class=\"scenarioNumber\">(13)</span>,<br/><strong>Jagged Shoals</strong> <span class=\"scenarioNumber\">(14)</span></p>"
 		}

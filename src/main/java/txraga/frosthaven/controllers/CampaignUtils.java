@@ -22,7 +22,7 @@ import txraga.frosthaven.model.StoryItem;
 
 
 @XSlf4j
-public class CampaignUtils {
+public final class CampaignUtils {
 	
 	private final static String MY_STORY_FILE_PATH = "static/json/myStory.json";
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
@@ -100,6 +100,7 @@ public class CampaignUtils {
 							if (optionEntry.getValue().getId() == null) optionEntry.getValue().setId(optionEntry.getKey());
 						}
 					}
+					event.replaceIcons();
 				}
 				events.put(seasonAndType, seasonAndTypeEvents);
 			}

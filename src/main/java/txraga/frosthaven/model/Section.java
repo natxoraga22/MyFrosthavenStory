@@ -34,9 +34,9 @@ public class Section {
 	}
 
 	public void replaceIcons() {
-		this.trigger = Scenario.replaceIcons(this.trigger);
-		this.specialRules = Scenario.replaceIcons(this.specialRules);
-		this.rewards = Scenario.replaceIcons(this.rewards);
-		this.sectionLinks = Scenario.replaceIcons(this.sectionLinks);
+		this.trigger = ModelUtils.replaceIcons(this.trigger);
+		this.specialRules = ModelUtils.replaceIcons(this.specialRules);
+		this.rewards = ModelUtils.replaceIcons(this.rewards);
+		this.sectionLinks = ModelUtils.replaceIcons(this.sectionLinks);
 	}
 }

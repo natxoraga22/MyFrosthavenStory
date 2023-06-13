@@ -13,8 +13,8 @@
 			"A2": {
 				"id": "A",
 				"trigger": "Accept the challenge to race.",
-				"requirement": "[trait] NIMBLE",
-				"text": "You do your best to keep pace, but the Lurker is designed for the ocean, and you Ye fumbling with ropes on deck. It handily beats you.",
+				"requirement": "[not] [trait] NIMBLE",
+				"text": "You do your best to keep pace, but the Lurker is designed for the ocean, and you're fumbling with ropes on deck. It handily beats you.",
 				"rewards": "All characters start the next scenario discarding two cards."
 			},
 			"B": {

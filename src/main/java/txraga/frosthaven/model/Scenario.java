@@ -38,14 +38,11 @@ public class Scenario extends StoryObject {
 	}
 
 	public void replaceIcons() {
-		this.goals = Scenario.replaceIcons(this.goals);
-		this.effects = Scenario.replaceIcons(this.effects);
-		for (Section section : sections.values()) section.replaceIcons();
-	}
-
-	public static String replaceIcons(String original) {
-		if (original == null) return original;
-		return original.replaceAll("\\[(.*?)\\]", "<img class=\"icon\" src=\"/img/icons/$1.png\">");
+		this.goals = ModelUtils.replaceIcons(this.goals);
+		this.effects = ModelUtils.replaceIcons(this.effects);
+		if (sections != null) {
+			for (Section section : sections.values()) section.replaceIcons();
+		}
 	}
 
 }

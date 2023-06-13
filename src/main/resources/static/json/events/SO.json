@@ -37,7 +37,8 @@
 		"options": {
 			"A": {
 				"trigger": "Offer to cover the cost of upgrading the barracks yourself.",
-				"text": "<p>LOSE 10 COLLECTIVE GOLD: You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead's eyes widen.</p><p>\"You mercenaries are not nearly the scum Satha thinks you are. I'm going to tell her right now!\"",
+				"requirement": "LOSE 10 COLLECTIVE GOLD",
+				"text": "<p>You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead's eyes widen.</p><p>\"You mercenaries are not nearly the scum Satha thinks you are. I'm going to tell her right now!\"",
 				"rewards": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
 			},
 			"B": {

@@ -21,7 +21,7 @@
 			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}">
 				<!-- Scenario -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
-					[[*{id}]] · [[*{name}]]
+					<strong>[[*{id}]] · [[*{name}]]</strong>
 				</a>
 				<!-- Outpost phase -->
 				<th:block th:if="*{objectType.name() == 'OUTPOST_PHASE'}">

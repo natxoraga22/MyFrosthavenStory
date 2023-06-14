@@ -1,6 +1,8 @@
 
 .event .fhCard {
 	float: left;
+	width: 287px;
+	height: 400px;
 	margin-right: var(--img-margin);
 	margin-bottom: var(--img-margin);
 }

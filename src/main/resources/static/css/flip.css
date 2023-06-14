@@ -1,0 +1,22 @@
+
+.flip {
+	perspective: 1000px;
+}
+
+.flip .flipInner {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.flip:hover .flipInner {
+	transform: rotateY(-180deg);
+}
+
+.flip .front, .flip .back {
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.flip .back {
+	transform: rotateY(-180deg);
+}

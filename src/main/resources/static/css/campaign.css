@@ -87,7 +87,10 @@
 }
 
 .party .character .mat {
-	text-align: center;
+	width: 604px;
+	height: 396px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .party .character .mat img:not(:first-of-type) {
@@ -99,8 +102,11 @@
 }
 
 .party .character .personalQuest {
+	width: 287px;
+	height: 400px;
 	margin-top: 1.5rem;
-	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -123,13 +129,13 @@
 	text-align: center;
 }
 
-.building .fhCard .boat {
+.building .fhCard img.boat {
 	max-width: 350px;
 	max-height: 350px;
 	border: 0;
 }
 
-.building .fhCard .climbinggear {
+.building .fhCard img.climbinggear {
 	max-width: 250px;
 	max-height: 250px;
 	border: 0;

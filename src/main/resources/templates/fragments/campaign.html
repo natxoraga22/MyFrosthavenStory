@@ -22,18 +22,36 @@
 		<h1 class="title">[[#{party.title}]]</h1>
 		<!-- Characters -->
 		<div th:each="character : ${party.characters}" th:object="${character}" class="character" th:id="|character_*{nameId}|">
+			<!-- Title -->
 			<h2 class="title">[[*{name}]]</h2>
-			<!-- Mat & background -->
-			<div class="mat">
-				<img th:src="@{img/characters/__*{nameId}__.png}">
-				<img th:src="@{img/characters/__*{nameId}___back.png}">
+
+			<!-- Mat -->
+			<div class="mat flip">
+				<div class="flipInner">
+					<div class="front">
+						<img th:src="@{img/characters/__*{nameId}__.png}">
+					</div>
+					<div class="back">
+						<img th:src="@{img/characters/__*{nameId}___back.png}">
+					</div>
+				</div>
 			</div>
+
+			<!-- Background -->
 			<div th:if="*{background}" class="background">
 				[(*{background})]
 			</div>
+
 			<!-- Personal quest -->
-			<div th:if="*{personalQuest}" class="personalQuest fhCard">
-				<img th:src="@{img/personalQuests/__*{personalQuest}__.png}">
+			<div th:if="*{personalQuest}" class="personalQuest fhCard flip">
+				<div class="flipInner">
+					<div class="front">
+						<img th:src="@{img/personalQuests/back.png}">
+					</div>
+					<div class="back">
+						<img th:src="@{img/personalQuests/__*{personalQuest}__.png}">
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

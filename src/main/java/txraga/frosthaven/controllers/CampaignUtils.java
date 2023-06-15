@@ -29,6 +29,7 @@ public final class CampaignUtils {
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
 	private final static String PARTY_FILE_PATH = "static/json/myParty.json";
 	private final static String CHARACTERS_FILE_PATH = "static/json/characters.json";
+	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios/";
 	private final static String SECTIONS_FILE_PATH = "static/json/sections.json";
 	private final static String EVENTS_FOLDER_PATH = "static/json/events/";
 
@@ -96,21 +97,21 @@ public final class CampaignUtils {
 	}
 
 	/** Gets a Scenario from its file based on scenario id */
-	/*public static Scenario getScenario(String scenarioId) {
+	public static Scenario getScenario(String scenarioId, List<String> path) {
 		log.entry(scenarioId, path);
-		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			File scenarioFile = new ClassPathResource("static/json/scenarios/" + storyItem.getScenario() + ".json").getFile();
+			ObjectMapper objectMapper = new ObjectMapper();
+			File scenarioFile = new ClassPathResource(SCENARIOS_FOLDER_PATH + scenarioId + ".json").getFile();
 			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
-			if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
+			if (path != null && path.size() > 0) scenario.setPath(path);
 			scenario.replaceIcons();
 			return log.exit(scenario);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing JSON file for scenario " + storyItem.getScenario(), e);
+			log.warn("Error reading and parsing JSON file '" + SCENARIOS_FOLDER_PATH + scenarioId + ".json'", e);
 			return log.exit(null);
 		}
-	}*/
+	}
 
 	/** Gets all sections not related to scenarios (from the Section Book) from "sections.json" file */
 	public static Map<String,Section> getSections() {

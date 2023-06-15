@@ -1,19 +1,15 @@
 package txraga.frosthaven.controllers;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Event;
@@ -44,7 +40,7 @@ public class CampaignController {
 		for (StoryItem storyItem : myStory) {
 			// Scenario
 			if (storyItem.getScenario() != null) {
-				Scenario scenario = getScenario(storyItem);
+				Scenario scenario = CampaignUtils.getScenario(storyItem.getScenario(), storyItem.getPath());
 				if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario());
 				else storyObjects.add(scenario);
 			}
@@ -67,22 +63,6 @@ public class CampaignController {
 		model.addAttribute("party", CampaignUtils.getParty());
 		model.addAttribute("storyObjectsList", storyObjects);
 		return log.exit(new ModelAndView("campaign"));
-	}
-
-	private Scenario getScenario(StoryItem storyItem) {
-		log.entry(storyItem);
-		ObjectMapper objectMapper = new ObjectMapper();
-		try {
-			File scenarioFile = new ClassPathResource("static/json/scenarios/" + storyItem.getScenario() + ".json").getFile();
-			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
-			if (storyItem.getPath() != null && storyItem.getPath().size() > 0) scenario.setPath(storyItem.getPath());
-			scenario.replaceIcons();
-			return log.exit(scenario);
-		}
-		catch (IOException e) {
-			log.warn("Error reading and parsing JSON file for scenario " + storyItem.getScenario(), e);
-			return log.exit(null);
-		}
 	}
 
 	private OutpostPhase getOutpostPhase(StoryItem storyItem, int id, Map<String,Section> sections, Map<String,Map<String,Event>> events) {

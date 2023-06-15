@@ -22,10 +22,10 @@
 		<div class="fhCard flip" th:with="typeFolder = *{#strings.toLowerCase(type.toString())}">
 			<div class="flipInner">
 				<div class="front">
-					<img th:src="@{img/events/__${typeFolder}__/__*{id}__.png}">
+					<img th:src="@{/img/events/__${typeFolder}__/__*{id}__.png}">
 				</div>
 				<div class="back">
-					<img th:src="@{img/events/__${typeFolder}__/__*{id}___back.png}">
+					<img th:src="@{/img/events/__${typeFolder}__/__*{id}___back.png}">
 				</div>
 			</div>
 		</div>

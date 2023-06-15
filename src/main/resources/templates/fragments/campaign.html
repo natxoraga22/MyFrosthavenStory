@@ -29,10 +29,10 @@
 			<div class="mat flip">
 				<div class="flipInner">
 					<div class="front">
-						<img th:src="@{img/characters/__*{nameId}__.png}">
+						<img th:src="@{/img/characters/__*{nameId}__.png}">
 					</div>
 					<div class="back">
-						<img th:src="@{img/characters/__*{nameId}___back.png}">
+						<img th:src="@{/img/characters/__*{nameId}___back.png}">
 					</div>
 				</div>
 			</div>
@@ -46,10 +46,10 @@
 			<div th:if="*{personalQuest}" class="personalQuest fhCard flip">
 				<div class="flipInner">
 					<div class="front">
-						<img th:src="@{img/personalQuests/back.png}">
+						<img th:src="@{/img/personalQuests/back.png}">
 					</div>
 					<div class="back">
-						<img th:src="@{img/personalQuests/__*{personalQuest}__.png}">
+						<img th:src="@{/img/personalQuests/__*{personalQuest}__.png}">
 					</div>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 					</div>
 					<div class="fhCard">
 						<img th:with="imgName = *{nameId} + *{level != 0 ? '_' + level : ''}"
-						     th:class="${imgName}" th:src="@{img/buildings/__${imgName}__.png}">
+						     th:class="${imgName}" th:src="@{/img/buildings/__${imgName}__.png}">
 					</div>
 				</div>
 			</div>
@@ -109,9 +109,9 @@
 						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]
 					</div>
 					<div class="fhCard">
-						<img th:with="imgName = *{nameId} + '_' + *{level - 1}" th:src="@{img/buildings/__${imgName}__.png}">
+						<img th:with="imgName = *{nameId} + '_' + *{level - 1}" th:src="@{/img/buildings/__${imgName}__.png}">
 						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
-						<img th:with="imgName = *{nameId} + '_' + *{level}" th:src="@{img/buildings/__${imgName}__.png}">
+						<img th:with="imgName = *{nameId} + '_' + *{level}" th:src="@{/img/buildings/__${imgName}__.png}">
 					</div>
 				</div>
 			</div>

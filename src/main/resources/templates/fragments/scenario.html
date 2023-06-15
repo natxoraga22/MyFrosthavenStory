@@ -12,7 +12,7 @@
 		<div class="title">
 			<h1 class="mb-0">
 				<span class="number">[[*{#numbers.formatInteger(id,1)}]] ·</span> [[*{name}]]
-				<img th:if="*{requirement}" class="requirement" th:src="@{img/icons/__*{#strings.toLowerCase(requirement)}__.png}">
+				<img th:if="*{requirement}" class="requirement" th:src="@{/img/icons/__*{#strings.toLowerCase(requirement)}__.png}">
 			</h1>
 			<th:block th:if="*{unlockedBy}">
 				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>
@@ -23,7 +23,7 @@
 		</div>
 
 		<!-- Scenario goals -->
-		<div class="card goals">
+		<div th:if="*{goals}" class="card goals">
 			<div class="card-header">[[#{scenario.goals}]]</div>
 			<div class="card-body">
 				[(*{goals})]

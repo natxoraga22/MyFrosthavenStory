@@ -18,6 +18,7 @@ public class ScenarioController {
 	@GetMapping("")
 	public ModelAndView campaign(Model model, @PathVariable String scenarioId) {
 		log.entry();
+		model.addAttribute("scenario", CampaignUtils.getScenario(scenarioId, null));
 		return log.exit(new ModelAndView("scenario"));
 	}
 

@@ -45,5 +45,21 @@
 			</th:block>
 		</div>
 	</div>
+
+
+	<!-- ------------- -->
+	<!-- SCENARIO FORM -->
+	<!-- ------------- -->
+	<form th:fragment="scenarioForm" th:action="@{/scenario}" method="post" class="scenarioForm">
+		<div class="mb-3">
+			<label for="inputScenarioId" class="form-label">Scenario ID</label>
+			<input type="text" class="form-control" id="inputScenarioId" name="scenarioId">
+		</div>
+		<div class="mb-3">
+			<label for="inputScenarioPath" class="form-label">Path</label>
+			<input type="text" class="form-control" id="inputScenarioPath" name="scenarioPath">
+		</div>
+		<button type="submit" class="btn btn-primary">Go to scenario</button>
+	</form>
 </body>
 </html>

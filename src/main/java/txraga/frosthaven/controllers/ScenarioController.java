@@ -1,5 +1,7 @@
 package txraga.frosthaven.controllers;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,16 +20,17 @@ import lombok.extern.slf4j.XSlf4j;
 public class ScenarioController {
 
 	@GetMapping({"", "/{scenarioId}"})
-	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId) {
+	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId, @RequestParam(required = false) String path) {
 		log.entry();
-		model.addAttribute("scenario", CampaignUtils.getScenario(scenarioId, null));
+		List<String> scenarioPath = (path != null && !path.isBlank()) ? List.of(path.split(",")) : null;
+		model.addAttribute("scenario", CampaignUtils.getScenario(scenarioId, scenarioPath));
 		return log.exit(new ModelAndView("scenario"));
 	}
 
 	@PostMapping("")
-	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId) {
+	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId, @RequestParam String scenarioPath) {
 		log.entry();
-		return log.exit(new ModelAndView("redirect:/scenario/" + scenarioId));
+		return log.exit(new ModelAndView("redirect:/scenario/" + scenarioId + "?path=" + scenarioPath));
 	}
 
 }

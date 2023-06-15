@@ -40,8 +40,10 @@
 
 		<!-- Sections -->
 		<div class="sections">
-			<th:block th:each="pathItem : *{path}">
-				<div th:replace="~{fragments/section :: section(*{sections['__${pathItem}__']})}"></div>
+			<th:block th:each="pathItem : *{path}" th:with="section = *{sections['__${pathItem}__']}">
+				<th:block th:if="${section}">
+					<div th:replace="~{fragments/section :: section(${section})}"></div>
+				</th:block>
 			</th:block>
 		</div>
 	</div>

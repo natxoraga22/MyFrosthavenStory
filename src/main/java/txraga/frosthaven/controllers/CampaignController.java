@@ -30,51 +30,46 @@ import txraga.frosthaven.model.StoryObject;
 public class CampaignController {
 	
 	@GetMapping("")
-	public ModelAndView campaign(Model model) {
+	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
-		try {
-			List<StoryItem> myStory = CampaignUtils.getMyStory();
-			
-			// Get all sections and events
-			Map<String,Section> sections = CampaignUtils.getSections();
-			Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
+		List<StoryItem> myStory = CampaignUtils.getMyStory();
+		
+		// Get all sections and events
+		Map<String,Section> sections = CampaignUtils.getSections();
+		Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
 
-			// Fill storyObjects list with the elements from myStory list
-			int outpostPhaseId = 1;
-			List<StoryObject> storyObjects = new ArrayList<>();
-			for (StoryItem storyItem : myStory) {
-				// Scenario
-				if (storyItem.getScenario() != null) {
-					Scenario scenario = getScenario(storyItem);
-					if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario());
-					else storyObjects.add(scenario);
-				}
-				// Outpost phase
-				else if (storyItem.isOutpostPhase()) {
-					OutpostPhase outpostPhase = getOutpostPhase(storyItem, outpostPhaseId, sections, events);
-					if (outpostPhase == null) log.warn("Outpost phase #{} not found", outpostPhaseId);
-					else storyObjects.add(outpostPhase);
-					outpostPhaseId++;
-				}
-				// Event
-				else if (storyItem.getEvent() != null) {
-					Event event = getEvent(storyItem, events);
-					if (event == null) log.warn("Event {} not found", storyItem.getEvent());
-					else storyObjects.add(event);
-				}
+		// Fill storyObjects list with the elements from myStory list
+		int outpostPhaseId = 1;
+		List<StoryObject> storyObjects = new ArrayList<>();
+		for (StoryItem storyItem : myStory) {
+			// Scenario
+			if (storyItem.getScenario() != null) {
+				Scenario scenario = getScenario(storyItem);
+				if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario());
+				else storyObjects.add(scenario);
 			}
+			// Outpost phase
+			else if (storyItem.isOutpostPhase()) {
+				OutpostPhase outpostPhase = getOutpostPhase(storyItem, outpostPhaseId, sections, events);
+				if (outpostPhase == null) log.warn("Outpost phase #{} not found", outpostPhaseId);
+				else storyObjects.add(outpostPhase);
+				outpostPhaseId++;
+			}
+			// Event
+			else if (storyItem.getEvent() != null) {
+				Event event = getEvent(storyItem, events);
+				if (event == null) log.warn("Event {} not found", storyItem.getEvent());
+				else storyObjects.add(event);
+			}
+		}
 
-			model.addAttribute("welcome", CampaignUtils.getWelcome());
-			model.addAttribute("party", CampaignUtils.getParty());
-			model.addAttribute("storyObjectsList", storyObjects);
-		}
-		catch (IOException e) {
-			log.catching(e);
-		}
+		model.addAttribute("welcome", CampaignUtils.getWelcome());
+		model.addAttribute("party", CampaignUtils.getParty());
+		model.addAttribute("storyObjectsList", storyObjects);
 		return log.exit(new ModelAndView("campaign"));
 	}
 
-	private Scenario getScenario(StoryItem storyItem) throws IOException {
+	private Scenario getScenario(StoryItem storyItem) {
 		log.entry(storyItem);
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {

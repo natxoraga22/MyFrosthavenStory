@@ -14,16 +14,20 @@
 <body>
 	<!-- Content -->
 	<th:block layout:fragment="content">
-		<div class="row campaign">
+		<div class="row gx-5 campaign">
 			<div class="col-3">
 				<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
 			</div>
 			<div class="col-9">
 				<div class="myStory">
 					<!-- Welcome -->
-					<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
+					<th:block th:if="${welcome}">
+						<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
+					</th:block>
 					<!-- The party -->
-					<th:block th:replace="~{fragments/campaign :: party}"></th:block>
+					<th:block th:if="${party}">
+						<th:block th:replace="~{fragments/campaign :: party}"></th:block>
+					</th:block>
 					
 					<div th:each="storyObject : ${storyObjectsList}" class="storyObject">
 						<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">

@@ -13,7 +13,7 @@ import lombok.ToString;
 @ToString
 public class Scenario extends StoryObject {
 	
-	private int id;
+	private String id;
 	private String coordinates;
 	private String name;
 	private String requirement;
@@ -31,10 +31,6 @@ public class Scenario extends StoryObject {
 	@Override
 	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.SCENARIO;
-	}
-
-	public String getIdString() {
-		return String.format("%03d", id);
 	}
 
 	public void replaceIcons() {

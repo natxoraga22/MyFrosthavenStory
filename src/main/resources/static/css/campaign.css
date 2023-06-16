@@ -1,65 +1,13 @@
 
-/* ------ */
-/* COMMON */
-/* ------ */
-
-.campaign {
-	padding-top: var(--campaign-padding-y);
-	padding-bottom: var(--campaign-padding-y);
-	font-family: var(--font-tinos);
-	color: #2c2e35;
-}
-
-/* TITLE */
-
-.campaign .title {
-	margin-bottom: var(--title-margin-bottom);
-	font-family: var(--font-pirata-one);
-	font-size: var(--title-size);
-}
-
-.campaign .title .number {
-	font-family: var(--font-germania-one);
-	font-size: var(--title-size-small);
-}
-
-.campaign .title .unlockedBy {
-	font-family: var(--font-tinos);
-	font-size: 12pt;
-	line-height: 1.5;
-}
-
-/* UTILITY */
-
-.campaign p:last-child {
-	margin-bottom: 0;
-}
-
-.campaign .icon {
-	max-width: 24px;
-	max-height: 16px;
-	vertical-align: text-top;
-}
-
-.campaign img:not(.icon) {
-	border: var(--img-border);
-}
-
-.campaign .fhCard img {
-	max-width: var(--img-card-max-size);
-	max-height: var(--img-card-max-size);
-}
-
-.scenarioNumber {
-	font-family: var(--font-germania-one);
-}
-
+/* -------- */
 /* MY STORY */
+/* -------- */
 
 .myStory {
 	display: flex;
 	flex-direction: column;
 	gap: var(--story-objects-gap);
+	font-family: var(--font-tinos);
 }
 
 

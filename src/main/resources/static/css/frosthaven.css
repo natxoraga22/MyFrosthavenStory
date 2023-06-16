@@ -1,0 +1,60 @@
+
+/* --------- */
+/* CONTAINER */
+/* --------- */
+
+.frosthaven {
+	padding-top: var(--frosthaven-padding-y);
+	padding-bottom: var(--frosthaven-padding-y);
+	color: var(--frosthaven-color);
+}
+
+
+/* ------ */
+/* TITLES */
+/* ------ */
+
+.frosthaven .title {
+	margin-bottom: var(--title-margin-bottom);
+	font-family: var(--font-pirata-one);
+	font-size: var(--title-size);
+}
+
+.frosthaven .title .number {
+	font-family: var(--font-germania-one);
+	font-size: var(--title-size-small);
+}
+
+.frosthaven .title .unlockedBy {
+	font-family: var(--font-tinos);
+	font-size: 12pt;
+	line-height: 1.5;
+}
+
+
+/* ------- */
+/* UTILITY */
+/* ------- */
+
+.frosthaven p:last-child {
+	margin-bottom: 0;
+}
+
+.frosthaven .icon {
+	max-width: 24px;
+	max-height: 16px;
+	vertical-align: text-top;
+}
+
+.frosthaven img:not(.icon) {
+	border: var(--img-border);
+}
+
+.frosthaven .fhCard img {
+	max-width: var(--img-card-max-size);
+	max-height: var(--img-card-max-size);
+}
+
+.frosthaven .scenarioNumber {
+	font-family: var(--font-germania-one);
+}

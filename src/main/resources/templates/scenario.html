@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" th:href="@{/css/campaign.css}">
 	<link rel="stylesheet" th:href="@{/css/variables.css}">
+	<link rel="stylesheet" th:href="@{/css/frosthaven.css}">
 	<link rel="stylesheet" th:href="@{/css/scenario.css}">
 	<link rel="stylesheet" th:href="@{/css/section.css}">
 </head>
@@ -11,7 +11,7 @@
 <body>
 	<!-- Content -->
 	<th:block layout:fragment="content">
-		<div class="row gx-5 campaign">
+		<div class="row gx-5">
 			<div class="col-3">
 				<th:block th:replace="~{fragments/scenario :: scenarioForm}"></th:block>
 			</div>

@@ -1,9 +1,9 @@
 
 .tableOfContents {
 	/* Make the table of contents always visible and scrollable by itself */
-	max-height: calc(100vh - var(--campaign-padding-y));
+	max-height: calc(100vh - var(--frosthaven-padding-y));
 	position: sticky;
-	top: var(--campaign-padding-y);
+	top: var(--frosthaven-padding-y);
 	bottom: 0;
 	overflow-y: scroll;
 	scrollbar-width: thin;

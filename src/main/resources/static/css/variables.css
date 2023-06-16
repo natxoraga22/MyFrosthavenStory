@@ -1,6 +1,7 @@
 
 :root {
-	--campaign-padding-y: 2rem;         /* Padding top and bottom for the campaign page content */
+	--frosthaven-padding-y: 2rem;       /* Padding top and bottom for the page content */
+	--frosthaven-color: #2c2e35;      /* Default color for all the text (extracted from Frosthaven PDFs) */
 
 	--title-margin-bottom: 1rem;        /* Margin bottom for all titles */
 	--title-size: 28pt;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------------- -->
+	<!-- OUTPOST PHASE -->
+	<!-- ------------- -->
+	<div th:fragment="outpostPhase(outpostPhase)" th:object="${outpostPhase}" th:id="|outpostPhase_*{id}|" class="outpostPhase">
+		<!-- Title -->
+		<h1 class="title">
+			[[#{outpostPhase.title}]] <span class="number">#[[*{id}]]</span>
+		</h1>
+
+		<!-- Sections -->
+		<th:block th:each="section : *{sections}">
+			<th:block th:replace="~{fragments/section :: section(${section})}"></th:block>
+		</th:block>
+
+		<!-- Event -->
+		<th:block th:if="*{event}">
+			<th:block th:replace="~{fragments/event :: event(*{event})}"></th:block>
+		</th:block>
+
+		<!-- Downtime -->
+		<div th:if="*{levelUp}" class="downtime">
+			<h2 class="title">[[#{outpostPhase.downtime.title}]]</h2>
+			<div class="levelUp">
+				<div th:each="character : *{levelUp}" th:object="${character}">
+					[(#{outpostPhase.downtime.levelUp.text(*{name},*{level})})]
+				</div>
+			</div>
+		</div>
+		
+		<!-- Construction -->
+		<div class="construction">
+			<h2 class="title">[[#{outpostPhase.construction.title}]]</h2>
+			<!-- Build -->
+			<div class="build">
+				<div th:each="building : *{build}" th:object="${building}" class="building">
+					<div class="text">
+						<th:block th:if="*{level}">[(#{outpostPhase.construction.build.textWithLevel(*{name},*{level})})]</th:block>
+						<th:block th:unless="*{level}">[(#{outpostPhase.construction.build.textWithoutLevel(*{name})})]</th:block>
+					</div>
+					<div class="fhCard">
+						<img th:with="imgName = *{nameId} + *{level != 0 ? '_' + level : ''}"
+						     th:class="${imgName}" th:src="@{/img/buildings/__${imgName}__.png}">
+					</div>
+				</div>
+			</div>
+			<!-- Upgrade -->
+			<div class="upgrade">
+				<div th:each="building : *{upgrade}" th:object="${building}" class="building">
+					<div class="text">
+						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]
+					</div>
+					<div class="fhCard">
+						<img th:with="imgName = *{nameId} + '_' + *{level - 1}" th:src="@{/img/buildings/__${imgName}__.png}">
+						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
+						<img th:with="imgName = *{nameId} + '_' + *{level}" th:src="@{/img/buildings/__${imgName}__.png}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

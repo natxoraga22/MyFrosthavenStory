@@ -17,30 +17,40 @@
 	<th:block layout:fragment="content">
 		<div class="row gx-5">
 			<div class="col-3">
+				<!-- Table of contents -->
 				<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
 			</div>
-			<div class="col-9">
+			<div class="col-9 position-relative">
+				<!-- Import/Export button -->
+				<button type="button" class="btn btn-primary importExportButton" data-bs-toggle="modal" data-bs-target="#importExportModal">
+					<i class="fa-solid fa-upload me-1"></i>
+					<i class="fa-solid fa-download"></i>
+				</button>
+
 				<div class="myStory">
 					<!-- Welcome -->
 					<th:block th:if="${welcome}">
 						<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
 					</th:block>
+
 					<!-- The party -->
 					<th:block th:if="${party}">
 						<th:block th:replace="~{fragments/campaign :: party}"></th:block>
 					</th:block>
 					
 					<div th:each="storyObject : ${storyObjectsList}" class="storyObject">
+						<!-- Scenario -->
 						<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
-							<!-- Scenario -->
 							<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
 						</th:block>
+
+						<!-- Outpost phase -->
 						<th:block th:if="${storyObject.objectType.name() == 'OUTPOST_PHASE'}">
-							<!-- Outpost phase -->
-							<th:block th:replace="~{fragments/campaign :: outpostPhase(${storyObject})}"></th:block>
+							<th:block th:replace="~{fragments/outpostPhase :: outpostPhase(${storyObject})}"></th:block>
 						</th:block>
+
+						<!-- Event -->
 						<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
-							<!-- Event -->
 							<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
 						</th:block>
 					</div>
@@ -48,5 +58,10 @@
 			</div>
 		</div>
 	</th:block>
+
+	<!-- Modals -->
+    <th:block layout:fragment="modals">
+		<th:block th:replace="fragments/campaign :: importExportModal"></div>
+    </th:block>
 </body>
 </html>

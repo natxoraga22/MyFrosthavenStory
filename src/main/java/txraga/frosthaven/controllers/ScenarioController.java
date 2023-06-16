@@ -1,5 +1,6 @@
 package txraga.frosthaven.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -22,8 +23,19 @@ public class ScenarioController {
 	@GetMapping({"", "/{scenarioId}"})
 	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId, @RequestParam(required = false) String path) {
 		log.entry();
-		List<String> scenarioPath = (path != null && !path.isBlank()) ? List.of(path.split(",")) : null;
+		// Scenario
+		List<String> scenarioPath = new ArrayList<>();
+		if (path != null && !path.isBlank()) {
+			String[] pathSplit = path.split(",");
+			for (String pathItem : pathSplit) scenarioPath.add(pathItem.trim());
+		}
 		model.addAttribute("scenario", CampaignUtils.getScenario(scenarioId, scenarioPath));
+
+		// Previous and Next
+		if (scenarioId != null) {
+			model.addAttribute("prevScenario", String.format("%03d", Integer.parseInt(scenarioId) - 1));
+			model.addAttribute("nextScenario", String.format("%03d", Integer.parseInt(scenarioId) + 1));
+		}
 		return log.exit(new ModelAndView("scenario"));
 	}
 

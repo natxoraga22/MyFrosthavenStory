@@ -10,13 +10,20 @@ import lombok.ToString;
 @ToString
 public class FhCharacter {
 	
+	private String id;
 	private String name;
+	private String race;
 	private String background;
-	private int level;
+	private String retirement;
+
+	//private int level;
 	private String personalQuest;
 
-	public String getNameId() {
-		return name.toLowerCase().replace(" ", "");
+	
+	public void fillData(FhCharacter character) {
+		this.name = character.name;
+		this.race = character.race;
+		this.background = character.background;
 	}
 
 }

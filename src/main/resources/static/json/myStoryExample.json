@@ -1,0 +1,10 @@
+{
+	"party": [
+		{ "id": "blinkblade", "personalQuest": "04" }, 
+		{ "id": "deathwalker" }
+	],
+	"story": [
+		{ "scenario": { "id": "000" }},
+		{ "scenario": { "id": "001" }}
+	]
+}

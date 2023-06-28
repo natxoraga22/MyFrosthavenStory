@@ -12,22 +12,36 @@ import lombok.ToString;
 @ToString
 public class StoryItem {
 
-	/* Scenario */
+	private StoryItem.Scenario scenario;
+
+	@Getter
+	@Setter
+	@ToString
+	public static class Scenario {
+		private String id;
+		private List<String> path;
+	}
+
+
+	/** OLD WAY */
+	/*
+	/* Scenario /
 	private String scenario;
 	private List<String> path;
 
-	/* Event */
+	/* Event /
 	private String event;
 	private String option;
 
-	/* Outpost phase */
+	/* Outpost phase /
 	private boolean outpostPhase;
 	private List<String> passageOfTime;
 	private List<FhCharacter> levelUp;
 	private List<Building> build;
 	private List<Building> upgrade;
 
-	/* Section */
+	/* Section /
 	private String section;
+	*/
 
 }

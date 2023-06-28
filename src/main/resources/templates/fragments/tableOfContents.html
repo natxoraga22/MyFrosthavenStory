@@ -17,12 +17,12 @@
 			<!-- Party -->
 			<th:block th:if="${party}">
 				<a class="list-group-item list-group-item-action" href="#party">[[#{party.title}]]</a>
-				<th:block th:each="character : ${party.characters}">
+				<th:block th:each="character : ${party}">
 					<a class="list-group-item list-group-item-action ps-5" th:href="|#character_*{nameId}|">[[${character.name}]]</a>
 				</th:block>
 			</th:block>
 
-			<th:block th:each="storyObject : ${storyObjectsList}" th:object="${storyObject}">
+			<th:block th:each="storyObject : ${story}" th:object="${storyObject}">
 				<!-- Scenario -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 					<strong>[[*{#numbers.formatInteger(id,1)}]] · [[*{name}]]</strong>

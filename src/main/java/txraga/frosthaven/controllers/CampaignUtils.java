@@ -16,18 +16,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
-import txraga.frosthaven.model.Party;
 import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.Section;
-import txraga.frosthaven.model.StoryItem;
 
 
 @XSlf4j
 public final class CampaignUtils {
 	
-	private final static String MY_STORY_FILE_PATH = "static/json/myStory.json";
+	//private final static String MY_STORY_FILE_PATH = "static/json/myStory.json";
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
-	private final static String PARTY_FILE_PATH = "static/json/myParty.json";
+	//private final static String PARTY_FILE_PATH = "static/json/myParty.json";
 	private final static String CHARACTERS_FILE_PATH = "static/json/characters.json";
 	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios/";
 	private final static String SECTIONS_FILE_PATH = "static/json/sections.json";
@@ -35,6 +33,7 @@ public final class CampaignUtils {
 
 
 	/** Gets all StoryItem from "myParty.json" file */
+	/*
 	public static List<StoryItem> getMyStory() {
 		log.entry();
 		try {
@@ -47,6 +46,7 @@ public final class CampaignUtils {
 			return log.exit(List.of());
 		}
 	}
+	*/
 
 	/** Gets chapter "Welcome to Frosthaven" content from "welcome.txt" file */
 	public static String getWelcome() {
@@ -63,6 +63,7 @@ public final class CampaignUtils {
 	}
 
 	/** Gets chapter "The party" content from "myParty.json" file */
+	/*
 	public static Party getParty() {
 		log.entry();
 		try {
@@ -81,8 +82,9 @@ public final class CampaignUtils {
 			return log.exit(null);
 		}
 	}
+	*/
 
-	/** Gets all Frosthaven characters info (background, etc.) from "characters.json" file */
+	/** Gets all Frosthaven characters info (name, race, background, etc.) from "characters.json" file */
 	public static Map<String,FhCharacter> getCharacters() {
 		log.entry();
 		try {

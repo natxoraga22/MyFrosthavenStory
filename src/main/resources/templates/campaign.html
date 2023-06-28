@@ -13,55 +13,61 @@
 </head>
 
 <body>
-	<!-- Content -->
+	<!-- CONTENT -->
 	<th:block layout:fragment="content">
-		<div class="row gx-5">
-			<div class="col-3">
-				<!-- Table of contents -->
-				<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
-			</div>
-			<div class="col-9 position-relative">
-				<!-- Import/Export button -->
-				<button type="button" class="btn btn-primary importExportButton" data-bs-toggle="modal" data-bs-target="#importExportModal">
-					<i class="fa-solid fa-upload me-1"></i>
-					<i class="fa-solid fa-download"></i>
-				</button>
+		<div th:fragment="campaign" id="campaign">
+			<div class="row gx-5">
+				<div class="col-3">
+					<!-- Table of contents -->
+					<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
+				</div>
+				<div class="col-9 position-relative">
+					<!-- Edit story button -->
+					<button type="button" class="btn btn-primary editStoryButton" data-bs-toggle="modal" data-bs-target="#editStoryModal">
+						<i class="fa-solid fa-pen-to-square"></i>
+					</button>
 
-				<div class="myStory">
-					<!-- Welcome -->
-					<th:block th:if="${welcome}">
-						<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
-					</th:block>
-
-					<!-- The party -->
-					<th:block th:if="${party}">
-						<th:block th:replace="~{fragments/campaign :: party}"></th:block>
-					</th:block>
-					
-					<div th:each="storyObject : ${storyObjectsList}" class="storyObject">
-						<!-- Scenario -->
-						<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
-							<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
+					<div id="personalStory">
+						<!-- Welcome -->
+						<th:block th:if="${welcome}">
+							<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
 						</th:block>
 
-						<!-- Outpost phase -->
-						<th:block th:if="${storyObject.objectType.name() == 'OUTPOST_PHASE'}">
-							<th:block th:replace="~{fragments/outpostPhase :: outpostPhase(${storyObject})}"></th:block>
+						<!-- The party -->
+						<th:block th:if="${party}">
+							<th:block th:replace="~{fragments/party :: party}"></th:block>
 						</th:block>
+						
+						<div th:each="storyObject : ${story}" class="storyObject">
+							<!-- Scenario -->
+							<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
+								<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
+							</th:block>
 
-						<!-- Event -->
-						<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
-							<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
-						</th:block>
+							<!-- Outpost phase -->
+							<th:block th:if="${storyObject.objectType.name() == 'OUTPOST_PHASE'}">
+								<th:block th:replace="~{fragments/outpostPhase :: outpostPhase(${storyObject})}"></th:block>
+							</th:block>
+
+							<!-- Event -->
+							<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
+								<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
+							</th:block>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</th:block>
 
-	<!-- Modals -->
+	<!-- MODALS -->
     <th:block layout:fragment="modals">
-		<th:block th:replace="fragments/campaign :: importExportModal"></div>
+		<th:block th:replace="~{fragments/campaign :: editStoryModal}"></div>
     </th:block>
+
+	<!-- JAVASCRIPT -->
+	<th:block layout:fragment="javascript">
+		<th:block th:replace="~{fragments/campaign :: campaignJs}"></th:block>
+	</th:block>
 </body>
 </html>

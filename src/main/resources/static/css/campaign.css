@@ -3,14 +3,14 @@
 /* LOAD CONTENT */
 /* ------------ */
 
-.importExportButton {
+.editStoryButton {
 	position: absolute;
 	right: 0;
 	margin-right: 24px;
 	z-index: 1;
 }
 
-#importExportModal textarea {
+#editStoryModal textarea {
 	min-height: 75vh;
 }
 
@@ -19,7 +19,7 @@
 /* MY STORY */
 /* -------- */
 
-.myStory {
+#personalStory {
 	display: flex;
 	flex-direction: column;
 	gap: var(--story-objects-gap);

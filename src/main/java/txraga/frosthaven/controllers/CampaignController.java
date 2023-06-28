@@ -8,14 +8,15 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
-import txraga.frosthaven.model.Event;
-import txraga.frosthaven.model.OutpostPhase;
+import txraga.frosthaven.model.FhCharacter;
+import txraga.frosthaven.model.PersonalStory;
 import txraga.frosthaven.model.Scenario;
-import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
 import txraga.frosthaven.model.StoryObject;
 
@@ -28,23 +29,36 @@ public class CampaignController {
 	@GetMapping("")
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
-		List<StoryItem> myStory = CampaignUtils.getMyStory();
-		
+		model.addAttribute("welcome", CampaignUtils.getWelcome());
+		return log.exit(new ModelAndView("campaign"));
+	}
+
+	@PostMapping("/personalStory")
+	public ModelAndView personalStory(Model model, @RequestBody PersonalStory personalStory) throws IOException {
+		log.entry(personalStory);		
 		// Get all sections and events
-		Map<String,Section> sections = CampaignUtils.getSections();
-		Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
+		//Map<String,Section> sections = CampaignUtils.getSections();
+		//Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
+
+		// Fill party data
+		Map<String,FhCharacter> characters = CampaignUtils.getCharacters();
+		List<FhCharacter> party = personalStory.getParty();
+		for (FhCharacter character : party) {
+			character.fillData(characters.get(character.getId()));
+		}
 
 		// Fill storyObjects list with the elements from myStory list
-		int outpostPhaseId = 1;
+		//int outpostPhaseId = 1;
 		List<StoryObject> storyObjects = new ArrayList<>();
-		for (StoryItem storyItem : myStory) {
+		for (StoryItem storyItem : personalStory.getStory()) {
 			// Scenario
 			if (storyItem.getScenario() != null) {
-				Scenario scenario = CampaignUtils.getScenario(storyItem.getScenario(), storyItem.getPath());
-				if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario());
+				Scenario scenario = CampaignUtils.getScenario(storyItem.getScenario().getId(), storyItem.getScenario().getPath());
+				if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario().getId());
 				else storyObjects.add(scenario);
 			}
 			// Outpost phase
+			/*
 			else if (storyItem.isOutpostPhase()) {
 				OutpostPhase outpostPhase = getOutpostPhase(storyItem, outpostPhaseId, sections, events);
 				if (outpostPhase == null) log.warn("Outpost phase #{} not found", outpostPhaseId);
@@ -57,14 +71,16 @@ public class CampaignController {
 				if (event == null) log.warn("Event {} not found", storyItem.getEvent());
 				else storyObjects.add(event);
 			}
+			*/
 		}
 
 		model.addAttribute("welcome", CampaignUtils.getWelcome());
-		model.addAttribute("party", CampaignUtils.getParty());
-		model.addAttribute("storyObjectsList", storyObjects);
-		return log.exit(new ModelAndView("campaign"));
+		model.addAttribute("party", party);
+		model.addAttribute("story", storyObjects);
+		return log.exit(new ModelAndView("campaign :: campaign"));
 	}
 
+	/*
 	private OutpostPhase getOutpostPhase(StoryItem storyItem, int id, Map<String,Section> sections, Map<String,Map<String,Event>> events) {
 		log.entry(storyItem);
 		OutpostPhase outpostPhase = new OutpostPhase();
@@ -87,5 +103,6 @@ public class CampaignController {
 		if (event != null) event.setChosenOption(storyItem.getOption());
 		return log.exit(event);
 	}
+	*/
 
 }

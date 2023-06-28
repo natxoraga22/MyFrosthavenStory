@@ -22,8 +22,9 @@
 					<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
 				</div>
 				<div class="col-9 position-relative">
-					<!-- Edit story button -->
-					<button type="button" class="btn btn-primary editStoryButton" data-bs-toggle="modal" data-bs-target="#editStoryModal">
+					<!-- Edit personal story button -->
+					<button type="button" id="editPersonalStoryButton" class="btn btn-primary"
+					        data-bs-toggle="modal" data-bs-target="#editPersonalStoryModal">
 						<i class="fa-solid fa-pen-to-square"></i>
 					</button>
 
@@ -62,7 +63,7 @@
 
 	<!-- MODALS -->
     <th:block layout:fragment="modals">
-		<th:block th:replace="~{fragments/campaign :: editStoryModal}"></div>
+		<th:block th:replace="~{fragments/campaign :: editPersonalStoryModal}"></div>
     </th:block>
 
 	<!-- JAVASCRIPT -->

@@ -33,18 +33,18 @@
 	<!-- ---------------- -->
 	<!-- EDIT STORY MODAL -->
 	<!-- ---------------- -->
-	<div th:fragment="editStoryModal" id="editStoryModal" class="modal fade" tabindex="-1">
+	<div th:fragment="editPersonalStoryModal" id="editPersonalStoryModal" class="modal fade" tabindex="-1">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5">[[#{editStory.title}]]</h1>
+					<h1 class="modal-title fs-5">[[#{editPersonalStory.title}]]</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>			
 				</div>
 				<div class="modal-body">
-					<textarea class="form-control" id="editStoryInput"></textarea>
+					<textarea class="form-control" id="editPersonalStoryInput"></textarea>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-primary" onclick="savePersonalStory()">Save</button>
 				</div>
 			</div>
 		</div>
@@ -55,8 +55,9 @@
 	<!-- CAMPAIGN JS -->
 	<!-- ----------- -->
 	<script th:fragment="campaignJs" id="campaignJs" th:inline="javascript">
+		/* Fetch personalStory on page load and reload all campaign content */
 		window.onload = function() {
-			let personalStory = JSON.parse(localStorage.getItem("personalStory"));
+			const personalStory = JSON.parse(localStorage.getItem("personalStory"));
 
 			fetch("/personalStory", {
 				method: "POST",
@@ -75,6 +76,24 @@
 				currentCampaignDiv.innerHTML = newCampaignDiv.innerHTML;
 			});
 		};
+
+
+		/* -------------------- */
+		/* Personal story modal */
+		/* -------------------- */
+		const editPersonalStoryModal = document.getElementById("editPersonalStoryModal");
+		editPersonalStoryModal.addEventListener("show.bs.modal", event => {
+			const personalStory = JSON.parse(localStorage.getItem("personalStory"));
+			document.getElementById("editPersonalStoryInput").value = JSON.stringify(personalStory);
+		});
+
+		function savePersonalStory() {
+			const newPersonalStory = document.getElementById("editPersonalStoryInput").value;
+			localStorage.setItem("personalStory", newPersonalStory);
+
+			// TODO: close modal and reload campaign content
+			// ...
+		}
 	</script>
 </body>
 </html>

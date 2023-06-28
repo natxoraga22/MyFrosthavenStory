@@ -49,13 +49,13 @@ public class CampaignController {
 
 		// Fill storyObjects list with the elements from myStory list
 		//int outpostPhaseId = 1;
-		List<StoryObject> storyObjects = new ArrayList<>();
+		List<StoryObject> story = new ArrayList<>();
 		for (StoryItem storyItem : personalStory.getStory()) {
 			// Scenario
 			if (storyItem.getScenario() != null) {
 				Scenario scenario = CampaignUtils.getScenario(storyItem.getScenario().getId(), storyItem.getScenario().getPath());
 				if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario().getId());
-				else storyObjects.add(scenario);
+				else story.add(scenario);
 			}
 			// Outpost phase
 			/*
@@ -76,7 +76,7 @@ public class CampaignController {
 
 		model.addAttribute("welcome", CampaignUtils.getWelcome());
 		model.addAttribute("party", party);
-		model.addAttribute("story", storyObjects);
+		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("campaign :: campaign"));
 	}
 

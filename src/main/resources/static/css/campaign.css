@@ -3,14 +3,14 @@
 /* LOAD CONTENT */
 /* ------------ */
 
-.editStoryButton {
+#editPersonalStoryButton {
 	position: absolute;
 	right: 0;
 	margin-right: 24px;
 	z-index: 1;
 }
 
-#editStoryModal textarea {
+#editPersonalStoryModal textarea {
 	min-height: 75vh;
 }
 

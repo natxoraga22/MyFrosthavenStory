@@ -40,6 +40,11 @@
 						</th:block>
 						
 						<div th:each="storyObject : ${story}" class="storyObject">
+							<!-- Event -->
+							<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
+								<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
+							</th:block>
+
 							<!-- Scenario -->
 							<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
 								<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
@@ -48,11 +53,6 @@
 							<!-- Outpost phase -->
 							<th:block th:if="${storyObject.objectType.name() == 'OUTPOST_PHASE'}">
 								<th:block th:replace="~{fragments/outpostPhase :: outpostPhase(${storyObject})}"></th:block>
-							</th:block>
-
-							<!-- Event -->
-							<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
-								<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
 							</th:block>
 						</div>
 					</div>

@@ -37,6 +37,6 @@
 	},
 	"SR-33": {
 		"id": "SR-33",
-		"unlockedBy": { "event": "SR-03" }
+		"unlockedBy": { "event": { "id": "SR-03" }}
 	}
 }

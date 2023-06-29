@@ -3,7 +3,7 @@
 	"coordinates": "L2",
 	"name": "Jagged Shoals",
 	"requirement": "Boat",
-	"unlockedBy": { "scenario": "007" },
+	"unlockedBy": { "scenario": { "id": "007" }},
 	"complexity": 2,
 	"location": "Biting Sea",
 	"goals": "The scenario is complete when seven damage tokens are on snow rock [a]. At the end of that round, read [section] <strong>4.1</strong>.",

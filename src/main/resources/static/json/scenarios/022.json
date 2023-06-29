@@ -3,7 +3,7 @@
 	"coordinates": "I2",
 	"name": "Ice Floes",
 	"requirement": "Boat",
-	"unlockedBy": { "scenario": "014" },
+	"unlockedBy": { "scenario": { "id": "014" }},
 	"complexity": 2,
 	"location": "Biting Sea",
 	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>96.4</strong>.",

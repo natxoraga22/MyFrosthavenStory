@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.PersonalStory;
 import txraga.frosthaven.model.Scenario;
@@ -38,14 +39,20 @@ public class CampaignController {
 		log.entry(personalStory);		
 		// Get all sections and events
 		//Map<String,Section> sections = CampaignUtils.getSections();
-		//Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
+		Map<String,Event> events = CampaignUtils.getEvents();
 
 		// Fill storyObjects list with the elements from myStory list
 		//int outpostPhaseId = 1;
 		List<StoryObject> story = new ArrayList<>();
 		for (StoryItem storyItem : personalStory.getStory()) {
+			// Event
+			if (storyItem.getEvent() != null) {
+				Event event = getEvent(storyItem.getEvent(), events);
+				if (event == null) log.warn("Event {} not found", storyItem.getEvent().getId());
+				else story.add(event);
+			}
 			// Scenario
-			if (storyItem.getScenario() != null) {
+			else if (storyItem.getScenario() != null) {
 				Scenario scenario = CampaignUtils.getScenario(storyItem.getScenario().getId(), storyItem.getScenario().getPath());
 				if (scenario == null) log.warn("Scenario {} not found", storyItem.getScenario().getId());
 				else story.add(scenario);
@@ -57,14 +64,7 @@ public class CampaignController {
 				if (outpostPhase == null) log.warn("Outpost phase #{} not found", outpostPhaseId);
 				else storyObjects.add(outpostPhase);
 				outpostPhaseId++;
-			}
-			// Event
-			else if (storyItem.getEvent() != null) {
-				Event event = getEvent(storyItem, events);
-				if (event == null) log.warn("Event {} not found", storyItem.getEvent());
-				else storyObjects.add(event);
-			}
-			*/
+			}*/
 		}
 
 		model.addAttribute("welcome", CampaignUtils.getWelcome());
@@ -87,6 +87,13 @@ public class CampaignController {
 		return log.exit(party);
 	}
 
+	private Event getEvent(Event storyItemEvent, Map<String,Event> events) {
+		log.entry(storyItemEvent);
+		Event event = events.get(storyItemEvent.getId());
+		if (event != null) event.setChosenOption(storyItemEvent.getChosenOption());
+		return log.exit(event);
+	}
+
 	/*
 	private OutpostPhase getOutpostPhase(StoryItem storyItem, int id, Map<String,Section> sections, Map<String,Map<String,Event>> events) {
 		log.entry(storyItem);
@@ -102,14 +109,7 @@ public class CampaignController {
 		return log.exit(outpostPhase);
 	}
 
-	private Event getEvent(StoryItem storyItem, Map<String,Map<String,Event>> events) {
-		log.entry(storyItem);
-		String eventId = storyItem.getEvent();
-		String eventSeasonAndType = eventId.substring(0, eventId.indexOf("-"));
-		Event event = events.get(eventSeasonAndType).get(eventId);
-		if (event != null) event.setChosenOption(storyItem.getOption());
-		return log.exit(event);
-	}
+	
 	*/
 
 }

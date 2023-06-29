@@ -23,6 +23,10 @@
 			</th:block>
 
 			<th:block th:each="storyObject : ${story}" th:object="${storyObject}">
+				<!-- Event -->
+				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
+					[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
+				</a>
 				<!-- Scenario -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 					<strong>[[*{#numbers.formatInteger(id,1)}]] · [[*{name}]]</strong>
@@ -39,10 +43,6 @@
 						[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
 					</a>
 				</th:block>
-				<!-- Event -->
-				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
-					[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
-				</a>
 			</th:block>
 		</div>
 	</div>

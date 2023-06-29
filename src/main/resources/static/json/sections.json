@@ -7,12 +7,12 @@
 	},
 	"62.2": {
 		"id": "62.2",
-		"unlockedBy": { "scenario": "022" }
+		"unlockedBy": { "scenario": { "id": "022" }}
 	},
 	"156.1": {
 		"id": "156.1",
 		"title": "Opening the Pass",
-		"unlockedBy": { "scenario": "004" },
+		"unlockedBy": { "scenario": { "id": "004" }},
 		"text": "<p>“Fascinating, yes... a fascinating challenge... Oh, and an opportunity for the outpost, of course!”</p><p>A Quatryl wrapped in a thick green cloak paces the floor of Satha’s cabin, lost in thought as the mayor looks on from her seat by a map-strewn table.</p><p>Satha raises a hand in greeting as you open the door, and the Quatryl whirls toward you, startled. “OH! Yes, perfect, perfect, you must be the ones Satha mentioned. Pinter Droman, tinkerer extraordinaire, at your service.” He bows with a flourish.</p><p>Satha clears her throat, cutting Pinter’s introduction short. “A recent landslide changed the landscape of the Frozen Pass,” the mayor explains, “Between the rocks that fell out of the way and the valleys they filled up, we think we can create a shortcut through the Coppernecks that could save days for supply teams and merchants coming across the mountains.”</p><p>You recall your own recent journey over the pass, and agree you’d have appreciated a shortcut.</p><p>“That’s the spirit!” Satha continues, “A shortcut means more merchants bringing goods, and more goods means more outposters survive the winter. Pinter here is in charge of the engineering.”</p><p>“Yes!” Pinter jumps back in, unable to contain his excitement. “The place we’re looking to build,” he points to a map on the table, “is a landslide area that’s almost clear of rocks. I’ve created explosive devices to help remove the rest, but the fauna of the area are quite aggressive, and I can’t get a team close enough to plant the charges.”</p><p>“That’s where you come in,” Satha explains. “I told Pinter you’re the only ones I trust to get those bombs where they need to be and handle yourself against the local animals. We’ll have the charges packed and ready to go at dawn.”</p><p>You nod and turn to go prepare your own supplies, but Pinter interjects. “And not to worry, the charges are completely safe!” he says, unprompted. “I’ve learned so much since my, er, unfortunate incident in Gloomhaven.” Somehow his assurance does not increase your confidence.</p>",
 		"rewards": "New Scenario:<br/><strong>Work Freeze</strong> <span class=\"scenarioNumber\">(114)</span>"
 	}

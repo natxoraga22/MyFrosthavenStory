@@ -2,7 +2,7 @@
 	"id": "007",
 	"coordinates": "K3",
 	"name": "Edge of the World",
-	"unlockedBy": { "scenario": "004" },
+	"unlockedBy": { "scenario": { "id": "004" }},
 	"complexity": 1,
 	"goals": "The scenario is complete when the Coral Corpse is dead. At the end of that round, read [section] <strong>3.3</strong>.",
 	"effects": "Each character adds one [minus1] card to their attack modifier deck.",

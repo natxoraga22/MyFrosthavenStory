@@ -12,33 +12,6 @@ import lombok.ToString;
 @ToString
 public class Event extends StoryObject {
 	
-	public enum Season { 
-		S, W;
-
-		@Override
-		public String toString() {
-			switch(this) {
-				case S: return "Summer";
-				case W: return "Winter";
-				default: throw new IllegalArgumentException();
-			}
-		}
-	}
-
-	public enum Type { 
-		O, R, B;
-	
-		@Override
-		public String toString() {
-			switch(this) {
-				case O: return "Outpost";
-				case R: return "Road";
-				case B: return "Boat";
-				default: throw new IllegalArgumentException();
-			}
-		}
-	}
-
 	@Getter
 	@Setter
 	@ToString
@@ -72,6 +45,38 @@ public class Event extends StoryObject {
 	public void replaceIcons() {
 		if (options != null) {
 			for (Option option : options.values()) option.replaceIcons();
+		}
+	}
+
+
+	/* --------------- */
+	/* TYPE AND SEASON */
+	/* --------------- */
+
+	public enum Type { 
+		O, R, B;
+	
+		@Override
+		public String toString() {
+			switch(this) {
+				case O: return "Outpost";
+				case R: return "Road";
+				case B: return "Boat";
+				default: throw new IllegalArgumentException();
+			}
+		}
+	}
+
+	public enum Season { 
+		S, W;
+
+		@Override
+		public String toString() {
+			switch(this) {
+				case S: return "Summer";
+				case W: return "Winter";
+				default: throw new IllegalArgumentException();
+			}
 		}
 	}
 

@@ -1,5 +1,5 @@
 {
 	"id": "013",
 	"name": "Frozen Fjord",
-	"unlockedBy": { "scenario": "007" }
+	"unlockedBy": { "scenario": { "id": "007" }}
 }

@@ -10,9 +10,9 @@ import lombok.ToString;
 @ToString
 public class StoryItem {
 
+	private Event event;
 	private Scenario scenario;
 	//private OutpostPhase outpostPhase;
-	//private Event roadEvent;
 
 
 	/** OLD WAY */

@@ -23,30 +23,12 @@ import txraga.frosthaven.model.Section;
 @XSlf4j
 public final class CampaignUtils {
 	
-	//private final static String MY_STORY_FILE_PATH = "static/json/myStory.json";
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
-	//private final static String PARTY_FILE_PATH = "static/json/myParty.json";
 	private final static String CHARACTERS_FILE_PATH = "static/json/characters.json";
-	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios/";
+	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios";
 	private final static String SECTIONS_FILE_PATH = "static/json/sections.json";
-	private final static String EVENTS_FOLDER_PATH = "static/json/events/";
+	private final static String EVENTS_FOLDER_PATH = "static/json/events";
 
-
-	/** Gets all StoryItem from "myParty.json" file */
-	/*
-	public static List<StoryItem> getMyStory() {
-		log.entry();
-		try {
-			ObjectMapper objectMapper = new ObjectMapper();
-			File myStoryFile = new ClassPathResource(MY_STORY_FILE_PATH).getFile();
-			return log.exit(objectMapper.readValue(myStoryFile, new TypeReference<List<StoryItem>>(){}));
-		} 
-		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + MY_STORY_FILE_PATH + "'", e);
-			return log.exit(List.of());
-		}
-	}
-	*/
 
 	/** Gets chapter "Welcome to Frosthaven" content from "welcome.txt" file */
 	public static String getWelcome() {
@@ -61,28 +43,6 @@ public final class CampaignUtils {
 			return log.exit(null);
 		}
 	}
-
-	/** Gets chapter "The party" content from "myParty.json" file */
-	/*
-	public static Party getParty() {
-		log.entry();
-		try {
-			ObjectMapper objectMapper = new ObjectMapper();
-			File partyFile = new ClassPathResource(PARTY_FILE_PATH).getFile();
-			Party party = objectMapper.readValue(partyFile, Party.class);
-
-			Map<String,FhCharacter> charactersBackgrounds = CampaignUtils.getCharacters();
-			for (FhCharacter character : party.getCharacters()) {
-				character.setBackground(charactersBackgrounds.get(character.getNameId()).getBackground());
-			}
-			return log.exit(party);
-		}
-		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + PARTY_FILE_PATH + "'", e);
-			return log.exit(null);
-		}
-	}
-	*/
 
 	/** Gets all Frosthaven characters info (name, race, background, etc.) from "characters.json" file */
 	public static Map<String,FhCharacter> getCharacters() {
@@ -103,14 +63,14 @@ public final class CampaignUtils {
 		log.entry(scenarioId, path);
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File scenarioFile = new ClassPathResource(SCENARIOS_FOLDER_PATH + scenarioId + ".json").getFile();
+			File scenarioFile = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getFile();
 			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
 			if (path != null && path.size() > 0) scenario.setPath(path);
 			scenario.replaceIcons();
 			return log.exit(scenario);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing JSON file '" + SCENARIOS_FOLDER_PATH + scenarioId + ".json'", e);
+			log.warn("Error reading and parsing file '" + SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json'", e);
 			return log.exit(null);
 		}
 	}
@@ -132,35 +92,42 @@ public final class CampaignUtils {
 	}
 
 	/** Gets all Frosthaven events (road, outpost, etc.) from all files inside "events" folder (there is a file by each type of event) */
-	public static Map<String,Map<String,Event>> getEvents() {
+	public static Map<String,Event> getEvents() {
 		log.entry();
+		Map<String,Event> events = new HashMap<>();
+		for (Event.Type type : Event.Type.values()) {
+			if (type == Event.Type.B) events.putAll(getEvents(type, null));
+			else {
+				for (Event.Season season : Event.Season.values()) {
+					events.putAll(getEvents(type, season));
+				}
+			}
+		}
+		return log.exit(events);
+	}
+
+	/** Gets Frosthaven events from its file based on event type and season */
+	public static Map<String,Event> getEvents(Event.Type type, Event.Season season) {
+		log.entry(type, season);
+		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			Map<String,Map<String,Event>> events = new HashMap<>();
-
-			for (Event.Season season : Event.Season.values()) {
-				for (Event.Type type : Event.Type.values()) {
-					String seasonAndType = type == Event.Type.B ? type.name() : season.name() + type.name();
-
-					File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + seasonAndType + ".json").getFile();
-					Map<String,Event> seasonAndTypeEvents = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
-					for (Event event : seasonAndTypeEvents.values()) {
-						event.setSeason(type == Event.Type.B ? null : season);
-						event.setType(type);
-						if (event.getOptions() != null) {
-							for (Entry<String,Event.Option> optionEntry : event.getOptions().entrySet()) {
-								if (optionEntry.getValue().getId() == null) optionEntry.getValue().setId(optionEntry.getKey());
-							}
-						}
-						event.replaceIcons();
+			File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getFile();
+			Map<String,Event> events = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
+			for (Event event : events.values()) {
+				event.setType(type);
+				event.setSeason(type == Event.Type.B ? null : season);
+				if (event.getOptions() != null) {
+					for (Entry<String,Event.Option> optionEntry : event.getOptions().entrySet()) {
+						if (optionEntry.getValue().getId() == null) optionEntry.getValue().setId(optionEntry.getKey());
 					}
-					events.put(seasonAndType, seasonAndTypeEvents);
 				}
+				event.replaceIcons();
 			}
 			return log.exit(events);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing files inside '" + EVENTS_FOLDER_PATH + "'", e);
+			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json'", e);
 			return log.exit(Map.of());
 		}
 	}

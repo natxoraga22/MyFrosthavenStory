@@ -66,15 +66,15 @@
 	},
 	"SO-36": {
 		"id": "SO-36",
-		"unlockedBy": { "event": "SO-19" }
+		"unlockedBy": { "event": { "id": "SO-19" }}
 	},
 	"SO-42": {
 		"id": "SO-42",
-		"unlockedBy": { "event": "SR-02" }
+		"unlockedBy": { "event": { "id": "SR-02" }}
 	},
 	"SO-52": {
 		"id": "SO-52",
-		"unlockedBy": { "event": "B-04" },
+		"unlockedBy": { "event": { "id": "B-04" }},
 		"text": "<p>You rush to the docks in response to the alarm bells and find a massive shell washed up on the icy shore. Slowly... slowly, a head wider than the guard tower emerges. It is a giant sea turtle, beached on the land. It opens its mouth and addresses Frosthaven with a slow drawl:</p><p>\"Hello, City. I apologize for intruding, when I last came through here it looked very different. I knew you when you were just Ice. Or perhaps time has not been kind on my eyes.\" The turtle's eyes are nearly glazed over in a white film. It looks blind, or close to it.</p><p>Children playing on the docks laugh at the silliness of the creature. A young girl shouts, \"Did you get stuck, Mr. Turtle?\"</p><p>\"Oh, how youthful you sound, City! You must be quite new to this world. I do appear stuck. Any chance for a push?\"</p>",
 		"options": {
 			"A": {

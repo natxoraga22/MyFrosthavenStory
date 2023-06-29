@@ -1,5 +1,5 @@
 {
 	"id": "008",
 	"name": "Crystal Trench",
-	"unlockedBy": { "scenario": "004" }
+	"unlockedBy": { "scenario": { "id": "004" }}
 }

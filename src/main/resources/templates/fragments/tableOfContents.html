@@ -17,8 +17,8 @@
 			<!-- Party -->
 			<th:block th:if="${party}">
 				<a class="list-group-item list-group-item-action" href="#party">[[#{party.title}]]</a>
-				<th:block th:each="character : ${party}">
-					<a class="list-group-item list-group-item-action ps-5" th:href="|#character_*{nameId}|">[[${character.name}]]</a>
+				<th:block th:each="character : ${party}" th:object="${character}">
+					<a class="list-group-item list-group-item-action ps-5" th:href="|#character_*{id}|">[[*{race}]] [[*{name}]]</a>
 				</th:block>
 			</th:block>
 

@@ -1,7 +1,5 @@
 package txraga.frosthaven.model;
 
-import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,15 +10,9 @@ import lombok.ToString;
 @ToString
 public class StoryItem {
 
-	private StoryItem.Scenario scenario;
-
-	@Getter
-	@Setter
-	@ToString
-	public static class Scenario {
-		private String id;
-		private List<String> path;
-	}
+	private Scenario scenario;
+	//private OutpostPhase outpostPhase;
+	//private Event roadEvent;
 
 
 	/** OLD WAY */

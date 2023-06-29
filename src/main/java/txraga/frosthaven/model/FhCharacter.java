@@ -16,14 +16,7 @@ public class FhCharacter {
 	private String background;
 	private String retirement;
 
-	//private int level;
 	private String personalQuest;
-
-	
-	public void fillData(FhCharacter character) {
-		this.name = character.name;
-		this.race = character.race;
-		this.background = character.background;
-	}
+	private int level;
 
 }

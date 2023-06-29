@@ -40,13 +40,6 @@ public class CampaignController {
 		//Map<String,Section> sections = CampaignUtils.getSections();
 		//Map<String,Map<String,Event>> events = CampaignUtils.getEvents();
 
-		// Fill party data
-		Map<String,FhCharacter> characters = CampaignUtils.getCharacters();
-		List<FhCharacter> party = personalStory.getParty();
-		for (FhCharacter character : party) {
-			character.fillData(characters.get(character.getId()));
-		}
-
 		// Fill storyObjects list with the elements from myStory list
 		//int outpostPhaseId = 1;
 		List<StoryObject> story = new ArrayList<>();
@@ -75,9 +68,23 @@ public class CampaignController {
 		}
 
 		model.addAttribute("welcome", CampaignUtils.getWelcome());
-		model.addAttribute("party", party);
+		model.addAttribute("party", getParty(personalStory.getParty()));
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("campaign :: campaign"));
+	}
+
+	private List<FhCharacter> getParty(List<FhCharacter> personalStoryParty) {
+		log.entry(personalStoryParty);
+		Map<String,FhCharacter> characters = CampaignUtils.getCharacters();
+		List<FhCharacter> party = new ArrayList<>();
+		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
+			// Get party member (static info) from characters map
+			FhCharacter partyMember = characters.get(personalStoryPartyMember.getId());
+			// Set personal quest from personal story
+			partyMember.setPersonalQuest(personalStoryPartyMember.getPersonalQuest());
+			party.add(partyMember);
+		}
+		return log.exit(party);
 	}
 
 	/*

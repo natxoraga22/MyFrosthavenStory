@@ -12,7 +12,7 @@
 				"upgrade": [{ "name": "Craftsman", "level": 2 }]
 			}
 		},
-		{ "roadEvent": { "id": "SR-02", "chosenOption": "B" }},
+		{ "event": { "id": "SR-02", "chosenOption": "B" }},
 		{ "scenario": { "id": "002" }},
 		{ "scenario": { "id": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] }}
 	]

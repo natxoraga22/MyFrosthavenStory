@@ -67,6 +67,7 @@
 			/* Fill editPersonalStoryModal with personalStory contents on show */
 			const editPersonalStoryModalElement = document.getElementById("editPersonalStoryModal");
 			editPersonalStoryModalElement.addEventListener("show.bs.modal", event => {
+				document.getElementById("personalStoryBeautifiedFormat").checked = true;
 				const personalStory = JSON.parse(localStorage.getItem("personalStory"));
 				document.getElementById("personalStoryInput").value = JSON.stringify(personalStory, null, 4);
 			});

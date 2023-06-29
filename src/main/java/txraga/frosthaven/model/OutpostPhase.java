@@ -13,8 +13,8 @@ import lombok.ToString;
 public class OutpostPhase extends StoryObject {
 
 	private int id;
-	private List<Section> sections;
-	private Event event;
+	private List<Section> passageOfTime;
+	private Event outpostEvent;
 	private List<FhCharacter> levelUp;
 	private List<Building> build;
 	private List<Building> upgrade;

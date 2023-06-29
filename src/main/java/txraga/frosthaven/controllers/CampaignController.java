@@ -16,8 +16,10 @@ import org.springframework.web.servlet.ModelAndView;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
+import txraga.frosthaven.model.OutpostPhase;
 import txraga.frosthaven.model.PersonalStory;
 import txraga.frosthaven.model.Scenario;
+import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
 import txraga.frosthaven.model.StoryObject;
 
@@ -38,11 +40,11 @@ public class CampaignController {
 	public ModelAndView personalStory(Model model, @RequestBody PersonalStory personalStory) throws IOException {
 		log.entry(personalStory);		
 		// Get all sections and events
-		//Map<String,Section> sections = CampaignUtils.getSections();
+		Map<String,Section> sections = CampaignUtils.getSections();
 		Map<String,Event> events = CampaignUtils.getEvents();
 
 		// Fill storyObjects list with the elements from myStory list
-		//int outpostPhaseId = 1;
+		int outpostPhaseId = 1;
 		List<StoryObject> story = new ArrayList<>();
 		for (StoryItem storyItem : personalStory.getStory()) {
 			// Event
@@ -58,13 +60,12 @@ public class CampaignController {
 				else story.add(scenario);
 			}
 			// Outpost phase
-			/*
-			else if (storyItem.isOutpostPhase()) {
-				OutpostPhase outpostPhase = getOutpostPhase(storyItem, outpostPhaseId, sections, events);
-				if (outpostPhase == null) log.warn("Outpost phase #{} not found", outpostPhaseId);
-				else storyObjects.add(outpostPhase);
+			else if (storyItem.getOutpostPhase() != null) {
+				OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId, sections, events);
+				if (outpostPhase == null) log.warn("Outpost phase {} not found", outpostPhaseId);
+				else story.add(outpostPhase);
 				outpostPhaseId++;
-			}*/
+			}
 		}
 
 		model.addAttribute("welcome", CampaignUtils.getWelcome());
@@ -80,9 +81,12 @@ public class CampaignController {
 		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
 			// Get party member (static info) from characters map
 			FhCharacter partyMember = characters.get(personalStoryPartyMember.getId());
-			// Set personal quest from personal story
-			partyMember.setPersonalQuest(personalStoryPartyMember.getPersonalQuest());
-			party.add(partyMember);
+			if (partyMember == null) log.warn("Character {} not found", personalStoryPartyMember.getId());
+			else {
+				// Set personal quest from personal story
+				partyMember.setPersonalQuest(personalStoryPartyMember.getPersonalQuest());
+				party.add(partyMember);
+			}
 		}
 		return log.exit(party);
 	}
@@ -94,22 +98,22 @@ public class CampaignController {
 		return log.exit(event);
 	}
 
-	/*
-	private OutpostPhase getOutpostPhase(StoryItem storyItem, int id, Map<String,Section> sections, Map<String,Map<String,Event>> events) {
-		log.entry(storyItem);
-		OutpostPhase outpostPhase = new OutpostPhase();
+	private OutpostPhase getOutpostPhase(OutpostPhase outpostPhase, int id, Map<String,Section> sections, Map<String,Event> events) {
+		log.entry(outpostPhase);
 		outpostPhase.setId(id);
-		if (storyItem.getPassageOfTime() != null) {
-			outpostPhase.setSections(storyItem.getPassageOfTime().stream().map(section -> sections.get(section)).toList());
+		// Get sections content for passage of time
+		if (outpostPhase.getPassageOfTime() != null) {
+			List<Section> passageOfTime = new ArrayList<>();
+			for (Section storyItemSection : outpostPhase.getPassageOfTime()) {
+				Section section = sections.get(storyItemSection.getId());
+				if (section == null) log.warn("Section {} not found", storyItemSection.getId());
+				else passageOfTime.add(section);
+			}
+			outpostPhase.setPassageOfTime(passageOfTime);
 		}
-		outpostPhase.setEvent(getEvent(storyItem, events));
-		outpostPhase.setLevelUp(storyItem.getLevelUp());
-		outpostPhase.setBuild(storyItem.getBuild());
-		outpostPhase.setUpgrade(storyItem.getUpgrade());
+		// Get outpost event content
+		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent(), events));
 		return log.exit(outpostPhase);
 	}
-
-	
-	*/
 
 }

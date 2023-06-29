@@ -14,13 +14,13 @@
 		</h1>
 
 		<!-- Sections -->
-		<th:block th:each="section : *{sections}">
+		<th:block th:each="section : *{passageOfTime}">
 			<th:block th:replace="~{fragments/section :: section(${section})}"></th:block>
 		</th:block>
 
 		<!-- Event -->
-		<th:block th:if="*{event}">
-			<th:block th:replace="~{fragments/event :: event(*{event})}"></th:block>
+		<th:block th:if="*{outpostEvent}">
+			<th:block th:replace="~{fragments/event :: event(*{outpostEvent})}"></th:block>
 		</th:block>
 
 		<!-- Downtime -->

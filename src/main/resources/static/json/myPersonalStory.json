@@ -1,0 +1,54 @@
+{
+	"party": [
+		{ "id": "blinkblade", "personalQuest": "04" }, 
+		{ "id": "deathwalker" }
+	],
+	"story": [
+		{ "scenario": { "id": "000" }},
+		{ "scenario": { "id": "001" }},
+		{ 
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-19", "chosenOption": "A" },
+				"upgrade": [{ "name": "Craftsman", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "SR-02", "chosenOption": "B" }},
+		{ "scenario": { "id": "002" }},
+		{ "scenario": { "id": "004", "path": ["mainB", "75.1B", "22.1", "63.1"] }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-11", "chosenOption": "B" },
+				"levelUp": [{ "id": "deathwalker", "level": 2 }],
+				"build": [{ "name": "Logging Camp", "level": 1 }]
+			}
+		},
+		{ "event": { "id": "SR-03", "chosenOption": "A1" }},
+		{ "scenario": { "id": "007" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-01", "chosenOption": "B" },
+				"levelUp": [{ "id": "blinkblade", "level": 2 }],
+				"build": [{ "name": "Boat" }]
+			}
+		},
+		{ "event": { "id": "B-03", "chosenOption": "A1" }},
+		{ "scenario": { "id": "014" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-15", "chosenOption": "A" },
+				"levelUp": [{ "id": "deathwalker", "level": 3 }],
+				"build": [{ "name": "Climbing Gear" }]
+			}
+		},
+		{ "event": { "id": "B-04", "chosenOption": "A" }},
+		{ "scenario": { "id": "022" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "32.3" }, { "id": "156.1" }],
+				"outpostEvent": { "id": "SO-52", "chosenOption": "A" },
+				"levelUp": [{ "id": "blinkblade", "level": 3 }],
+				"upgrade": [{ "name": "Craftsman", "level": 3 }]
+			}
+		}
+	]
+}

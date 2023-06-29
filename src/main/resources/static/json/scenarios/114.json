@@ -1,5 +1,5 @@
 {
 	"id": "114",
 	"name": "Work Freeze",
-	"unlockedBy": { "section": "156.1" }
+	"unlockedBy": { "section": { "id": "156.1" }}
 }

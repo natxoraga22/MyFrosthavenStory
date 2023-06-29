@@ -39,7 +39,8 @@ public class CampaignController {
 	@PostMapping("/personalStory")
 	public ModelAndView personalStory(Model model, @RequestBody PersonalStory personalStory) throws IOException {
 		log.entry(personalStory);		
-		// Get all sections and events
+		// Get all characters, sections and events
+		Map<String,FhCharacter> characters = CampaignUtils.getCharacters();
 		Map<String,Section> sections = CampaignUtils.getSections();
 		Map<String,Event> events = CampaignUtils.getEvents();
 
@@ -61,7 +62,7 @@ public class CampaignController {
 			}
 			// Outpost phase
 			else if (storyItem.getOutpostPhase() != null) {
-				OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId, sections, events);
+				OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId, characters, sections, events);
 				if (outpostPhase == null) log.warn("Outpost phase {} not found", outpostPhaseId);
 				else story.add(outpostPhase);
 				outpostPhaseId++;
@@ -69,14 +70,13 @@ public class CampaignController {
 		}
 
 		model.addAttribute("welcome", CampaignUtils.getWelcome());
-		model.addAttribute("party", getParty(personalStory.getParty()));
+		model.addAttribute("party", getParty(personalStory.getParty(), characters));
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("campaign :: campaign"));
 	}
 
-	private List<FhCharacter> getParty(List<FhCharacter> personalStoryParty) {
+	private List<FhCharacter> getParty(List<FhCharacter> personalStoryParty, Map<String,FhCharacter> characters) {
 		log.entry(personalStoryParty);
-		Map<String,FhCharacter> characters = CampaignUtils.getCharacters();
 		List<FhCharacter> party = new ArrayList<>();
 		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
 			// Get party member (static info) from characters map
@@ -98,7 +98,7 @@ public class CampaignController {
 		return log.exit(event);
 	}
 
-	private OutpostPhase getOutpostPhase(OutpostPhase outpostPhase, int id, Map<String,Section> sections, Map<String,Event> events) {
+	private OutpostPhase getOutpostPhase(OutpostPhase outpostPhase, int id, Map<String,FhCharacter> characters, Map<String,Section> sections, Map<String,Event> events) {
 		log.entry(outpostPhase);
 		outpostPhase.setId(id);
 		// Get sections content for passage of time
@@ -113,6 +113,19 @@ public class CampaignController {
 		}
 		// Get outpost event content
 		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent(), events));
+		// Get characters content
+		if (outpostPhase.getLevelUp() != null) {
+			List<FhCharacter> levelUp = new ArrayList<>();
+			for (FhCharacter characterLevelingUp : outpostPhase.getLevelUp()) {
+				FhCharacter character = characters.get(characterLevelingUp.getId());
+				if (character == null) log.warn("Character {} not found", characterLevelingUp.getId());
+				else {
+					character.setLevel(characterLevelingUp.getLevel());
+					levelUp.add(character);
+				}
+			}
+			outpostPhase.setLevelUp(levelUp);
+		}
 		return log.exit(outpostPhase);
 	}
 

@@ -68,6 +68,10 @@
 		"id": "SO-36",
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},
+	"SO-40": {
+		"id": "SO-40",
+		"unlockedBy": { "event": { "id": "SO-01" }}
+	},
 	"SO-42": {
 		"id": "SO-42",
 		"unlockedBy": { "event": { "id": "SR-02" }}

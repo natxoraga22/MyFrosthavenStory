@@ -14,4 +14,6 @@ public class StoryItem {
 	private Scenario scenario;
 	private OutpostPhase outpostPhase;
 
+	private Section section;
+
 }

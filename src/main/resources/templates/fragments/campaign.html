@@ -38,10 +38,16 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5">[[#{editPersonalStory.title}]]</h1>
+					<div class="btn-group btn-group-sm ms-4" role="group">
+						<input type="radio" class="btn-check" name="personalStoryFormat" id="personalStoryRawFormat" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="personalStoryRawFormat">Raw</label>
+						<input type="radio" class="btn-check" name="personalStoryFormat" id="personalStoryBeautifiedFormat" autocomplete="off" checked>
+						<label class="btn btn-outline-secondary" for="personalStoryBeautifiedFormat">Beautified</label>
+					</div>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>			
 				</div>
 				<div class="modal-body">
-					<textarea class="form-control" id="editPersonalStoryInput"></textarea>
+					<textarea class="form-control" id="personalStoryInput"></textarea>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary" onclick="savePersonalStory()">Save</button>
@@ -55,8 +61,36 @@
 	<!-- CAMPAIGN JS -->
 	<!-- ----------- -->
 	<script th:fragment="campaignJs" id="campaignJs" th:inline="javascript">
-		/* Fetch personalStory on page load and reload all campaign content */
 		window.onload = function() {
+			/* Fetch personalStory on page load and reload all campaign content */
+			reloadCampaign();
+
+			/* Fill editPersonalStoryModal with personalStory contents on show */
+			const editPersonalStoryModalElement = document.getElementById("editPersonalStoryModal");
+			editPersonalStoryModalElement.addEventListener("show.bs.modal", event => {
+				const personalStory = JSON.parse(localStorage.getItem("personalStory"));
+				document.getElementById("personalStoryInput").value = JSON.stringify(personalStory, null, 4);
+			});
+
+			/* Change personalStory format between raw and beautified */
+			const personalStoryRawFormatInput = document.getElementById("personalStoryRawFormat");
+			personalStoryRawFormatInput.addEventListener("change", event => {
+				const personalStoryInput = document.getElementById("personalStoryInput");
+				personalStoryInput.value = JSON.stringify(JSON.parse(personalStoryInput.value));
+			});
+			const personalStoryBeautifiedFormatInput = document.getElementById("personalStoryBeautifiedFormat");
+			personalStoryBeautifiedFormatInput.addEventListener("change", event => {
+				const personalStoryInput = document.getElementById("personalStoryInput");
+				personalStoryInput.value = JSON.stringify(JSON.parse(personalStoryInput.value), null, 4);
+			});
+		};
+
+		/**
+		 * Reloads all campaign content by fetching the personalStory from localStorage.
+		 * This has to be done when the page loads (localStorage must be accessed from the client side)
+		 * and when the user edits the personalStory through the editPersonalStoryModal.
+		 */
+		function reloadCampaign() {
 			const personalStory = JSON.parse(localStorage.getItem("personalStory"));
 
 			fetch("/personalStory", {
@@ -75,24 +109,20 @@
 				const currentCampaignDiv = document.getElementById("campaign");
 				currentCampaignDiv.innerHTML = newCampaignDiv.innerHTML;
 			});
-		};
+		}
 
-
-		/* -------------------- */
-		/* Personal story modal */
-		/* -------------------- */
-		const editPersonalStoryModal = document.getElementById("editPersonalStoryModal");
-		editPersonalStoryModal.addEventListener("show.bs.modal", event => {
-			const personalStory = JSON.parse(localStorage.getItem("personalStory"));
-			document.getElementById("editPersonalStoryInput").value = JSON.stringify(personalStory);
-		});
-
+		/**
+		 * Saves the personalStory to localStorage and reloads the campaign content.
+		 * This function is called when the user clicks the "Save" button in the editPersonalStoryModal.
+		 */
 		function savePersonalStory() {
-			const newPersonalStory = document.getElementById("editPersonalStoryInput").value;
-			localStorage.setItem("personalStory", newPersonalStory);
+			const newPersonalStory = document.getElementById("personalStoryInput").value;
+			// Store the JSON in raw format (not beaufitied)
+			localStorage.setItem("personalStory", JSON.stringify(JSON.parse(newPersonalStory)));
 
-			// TODO: close modal and reload campaign content
-			// ...
+			const editPersonalStoryModal = bootstrap.Modal.getInstance("#editPersonalStoryModal");
+			editPersonalStoryModal.hide();
+			reloadCampaign();
 		}
 	</script>
 </body>

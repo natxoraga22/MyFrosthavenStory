@@ -33,6 +33,30 @@
 			}
 		}
 	},
+	"SR-04": {
+		"text": "Just outside Frosthaven, right where the road begins to become less traveled, you find a man in dusty white vestments. A few burnt-down candles are on the ground next to him, dripping wax onto the rocks.</p><p>\"Would you like to make a donation?\" The young priest holds out a bowl for offerings. \"I would be happy to extend the blessings of the Great Oak to you as protection on your journeys.\"</p><p>He sees your trepidation in turning over hard-earned gold. \"The Sanctuary sent me here to set up a shrine, but I was unfortunately set upon by robbers. I just need a bit of time to earn back the funds. And my blessings are nearly as good as the ones you'd find elsewhere!\"",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Make an offering at the improvised shrine.",
+				"requirement": "LOSE 5 GOLD",
+				"text": "You drop a few coins in the wooden offering plate, which gets you a sincere nod of thanks. He sends you on your way, but you feel a bit lighter in your step.",
+				"rewards": "All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity."
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Make an offering at the improvised shrine.",
+				"requirement": "[not] LOSE 5 GOLD",
+				"text": "You're not willing to support the roadside shrine.",
+				"rewards": "No effect."
+			},
+			"B": {
+				"trigger": "It's clear this is an easy mark. Steal from the offering plate.",
+				"text": "This sap expects us to believe he represents the Great Oak? you're putting a stop to this right now. A few swings of the arm take care of the makeshift shrine, and you don't expect to see this charlatan harassing travelers in the future.",
+				"rewards": "Gain 10 collective gold.<br/>All characters start the next scenario with [curse]."
+			}
+		}
+	},
 	"SR-07": {
 		"text": "<p>\"Heeey. Heeeeey.\" You stop under a moss-covered tree, unsure if you heard what you think you heard: a tiny-sounding voice calling out—</p><p>\"Heeeeelllp.\" That one you're sure of. You search around the base of the tree and spot it: a beetle nearly the size of a fist. It rubs its limbs together in a practiced way, and the friction sounds nearly like human speech: \"Hellllp me.\" Against your better judgement you pick it up. Despite its unusual size it looks somehow fragile, lost.</p><p>\"Harrower. Hellllp. Saaaave.\" Is this bug claiming to be... part of a Harrower? A Harrower is a sentient collection of bugs, but it's unusual to have one maintain that intelligence when detached from the greater whole.</p>",
 		"options": {

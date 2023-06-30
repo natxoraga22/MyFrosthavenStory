@@ -58,6 +58,8 @@
 				"outpostEvent": { "id": "SO-14", "chosenOption": "B", "section": { "id": "146.4" }},
 				"build": [{ "name": "Sled" }]
 			}
-		}
+		},
+		{ "event": { "id": "SR-04", "chosenOption": "A1" }},
+		{ "scenario": { "id": "021" }}
 	]
 }

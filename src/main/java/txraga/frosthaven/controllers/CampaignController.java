@@ -105,8 +105,7 @@ public class CampaignController {
 		Event event = events.get(storyItemEvent.getId());
 		if (event != null) {
 			event.setChosenOption(storyItemEvent.getChosenOption());
-
-			// Section
+			// Set section from section book
 			if (storyItemEvent.getSection() != null) {
 				Section section = sectionBook.get(storyItemEvent.getSection().getId());
 				if (section != null) event.setSection(section);
@@ -124,6 +123,7 @@ public class CampaignController {
 		log.entry(storyItemScenario);
 		Scenario scenario = CampaignUtils.getScenario(storyItemScenario.getId());
 		if (scenario != null) {
+			// Set path from personal story
 			if (storyItemScenario.getPath() != null) scenario.setPath(storyItemScenario.getPath());
 		}
 		return log.exit(scenario);

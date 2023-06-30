@@ -23,3 +23,7 @@
 	margin-top: var(--element-margin);
 	font-weight: bold;
 }
+
+.event .section {
+	margin-top: var(--part-margin);
+}

@@ -11,6 +11,9 @@
 		"rewards": "New Scenario:<br/><strong>Thawed Wood</strong> <span class=\"scenarioNumber\">(33)</span>"
 	},
 	"146.4": {
+		"title": "Random Scenario",
+		"text": "As you look down, you hear a tiny squeak. Well, isn’t this wolf cub just a little treasure? Its tail thumps happily as you reach down to pick it up, and it lunges to lick your face. The tiny, adorable pup is too young to survive on its own, and you decide to take it back to Frosthaven with you.",
+		"rewards": "New Scenario:<br/><strong>Raised by Wolves</strong> <span class=\"scenarioNumber\">(112)</span>"
 	},
 	"156.1": {
 		"title": "Opening the Pass",

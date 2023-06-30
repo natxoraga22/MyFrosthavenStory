@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.frosthaven.model.utils.ModelUtils;
 
 
 @Getter
@@ -24,7 +25,7 @@ public class Scenario extends StoryObject {
 
 	private String goals;
 	private String effects;
-	private Map<String,Section> sections;
+	private Map<String,Section> sections = Map.of();
 
 	private List<String> path;
 
@@ -34,14 +35,11 @@ public class Scenario extends StoryObject {
 		return StoryObject.Type.SCENARIO;
 	}
 
-	public void populate(List<String> path) {
-		// Set scenario path
-		if (path != null) this.path = path;
-
-		// Set sections ids
+	public void populate() {
+		// Populate sections
 		for (Entry<String,Section> sectionEntry : sections.entrySet()) {
 			Section section = sectionEntry.getValue();
-			if (section.getId() == null) section.setId(sectionEntry.getKey());
+			section.populate(sectionEntry.getKey(), true);
 		}
 		replaceIcons();
 	}
@@ -49,9 +47,6 @@ public class Scenario extends StoryObject {
 	public void replaceIcons() {
 		this.goals = ModelUtils.replaceIcons(this.goals);
 		this.effects = ModelUtils.replaceIcons(this.effects);
-		if (sections != null) {
-			for (Section section : sections.values()) section.replaceIcons();
-		}
 	}
 
 }

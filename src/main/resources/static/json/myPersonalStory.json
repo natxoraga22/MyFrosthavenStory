@@ -51,6 +51,13 @@
 			}
 		},
 		{ "event": { "id": "SR-07", "chosenOption": "B" }},
-		{ "scenario": { "id": "013" }}
+		{ "scenario": { "id": "013" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "62.2" }],
+				"outpostEvent": { "id": "SO-14", "chosenOption": "B", "section": { "id": "146.4" }},
+				"build": [{ "name": "Sled" }]
+			}
+		}
 	]
 }

@@ -99,7 +99,7 @@
 	border: 0;
 }
 
-.building .fhCard img.climbinggear {
+.building .fhCard img.climbinggear, .building .fhCard img.sled {
 	max-width: 250px;
 	max-height: 250px;
 	border: 0;

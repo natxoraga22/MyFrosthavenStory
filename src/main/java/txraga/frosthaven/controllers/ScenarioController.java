@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.model.Scenario;
 
 
 @XSlf4j
@@ -29,7 +30,7 @@ public class ScenarioController {
 			String[] pathSplit = path.split(",");
 			for (String pathItem : pathSplit) scenarioPath.add(pathItem.trim());
 		}
-		model.addAttribute("scenario", CampaignUtils.getScenario(scenarioId, scenarioPath));
+		model.addAttribute("scenario", getScenario(scenarioId, scenarioPath));
 
 		// Previous and Next
 		if (scenarioId != null) {
@@ -43,6 +44,14 @@ public class ScenarioController {
 	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId, @RequestParam String scenarioPath) {
 		log.entry();
 		return log.exit(new ModelAndView("redirect:/scenario/" + scenarioId + "?path=" + scenarioPath));
+	}
+
+
+	private Scenario getScenario(String id, List<String> path) {
+		log.entry(id, path);
+		Scenario scenario = CampaignUtils.getScenario(id);
+		if (scenario != null && path != null) scenario.setPath(path);
+		return log.exit(scenario);
 	}
 
 }

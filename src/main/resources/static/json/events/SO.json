@@ -29,6 +29,22 @@
 			}
 		}
 	},
+	"SO-14": {
+		"text": "<p>A group of mercenaries are strapping supplies onto a donkey-drawn wagon. A woman in gleaming armor stows a warhammer, ignoring the agitated old man nattering at her.</p><p>\"Bah, go on then and rush to your deaths. There's nothing up that mountain but an unmarked grave with your name on it.\" He scrunches his face, struggling. \"Or I should say without your name on it! Because it'll be unmarked, and no one will find you!\"</p><p>He turns to you. \"These mercenaries are abandoning Frosthaven to venture into the hills for adventure. Waste of good manpower, I say!\" The mercenaries certainly look to be on the younger side, still excited for a march outside the walls.</p><p>A plucky Quatryl gathers a crowd with notes from her lute, hopping onto the back of the donkey. \"How about it, then? Who will fund our journey to treasure?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Mercenaries should be supported. Help them purchase supplies in return for a cut of what they find.",
+				"requirement": "LOSE 10 COLLECTIVE GOLD AND ANY 2 COLLECTIVE HERB RESOURCES",
+				"text": "You see them safely on their way and hope for the best as they make their way out of Frosthaven's gate and into the unknown. The backing of someone like you is enough for the town to also throw in their support, and an Orchid with a longbow strapped to his back nods in thanks as they pass.",
+				"rewards": "Gain 1 morale.<br/>Add events SO-37 and SO-38 to the summer outpost deck."
+			},
+			"B": {
+				"trigger": "The old man's right. They're walking to their doom. Try to stop them.",
+				"text": "<p>You stop an Orchid mercenary as he loads the last of the meager supplies onto the wagon. He clearly hasn't seen much combat—you describe just how dangerous this could be.</p><p>\"I... uh, I didn't think of it that way. He walks off to talk with his companions who start looking more concerned. Eventually, he returns. \"Thanks for the dose of reality. I'm probably better off just joining the town guard. I guess we won't be needing this.\" He hands you the object that inspired their adventure.</p>",
+				"rewards": "Gain one random side scenario.<br/>Gain 1 soldier."
+			}
+		}
+	},
 	"SO-15": {
 		"text": "<p>\"Damn White Oak! They give us half a budget and still expect us to stay alive!\"</p><p> Captain Olmstead is stomping around angrily. He punctuates his frustration by knocking a weapon rack to the floor.</p><p>\"Upgrades to the barracks could mean the difference of lives in this town, and we're stuck filing requests that take months to get through the pass and back—just to have their stupid red 'rejected' stamps!\" He grabs a training sword and stabs it into the straw belly of a practice dummy. \"ARRGH!\"</p><p>This seems like a bad time to ask if there are any new jobs posted.</p>",
 		"options": {
@@ -62,6 +78,12 @@
 	},
 	"SO-36": {
 		"unlockedBy": { "event": { "id": "SO-19" }}
+	},
+	"SO-37": {
+		"unlockedBy": { "event": { "id": "SO-14" }}
+	},
+	"SO-38": {
+		"unlockedBy": { "event": { "id": "SO-14" }}
 	},
 	"SO-40": {
 		"unlockedBy": { "event": { "id": "SO-01" }}

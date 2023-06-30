@@ -59,13 +59,13 @@ public final class CampaignUtils {
 	}
 
 	/** Gets a Scenario from its file based on scenario id */
-	public static Scenario getScenario(String scenarioId, List<String> path) {
-		log.entry(scenarioId, path);
+	public static Scenario getScenario(String scenarioId) {
+		log.entry(scenarioId);
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
 			File scenarioFile = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getFile();
 			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
-			scenario.populate(path);
+			scenario.populate();
 			return log.exit(scenario);
 		}
 		catch (IOException e) {
@@ -81,7 +81,12 @@ public final class CampaignUtils {
 			ObjectMapper objectMapper = new ObjectMapper();
 			File sectionsFile = new ClassPathResource(SECTIONS_FILE_PATH).getFile();
 			Map<String,Section> sections = objectMapper.readValue(sectionsFile, new TypeReference<Map<String,Section>>(){});
-			sections.values().forEach(section -> section.setScenario(false));
+
+			// Populate sections with additional info
+			for (Entry<String,Section> sectionEntry : sections.entrySet()) {
+				Section section = sectionEntry.getValue();
+				section.populate(sectionEntry.getKey(), false);
+			}
 			return log.exit(sections);
 		}
 		catch (IOException e) {
@@ -110,7 +115,6 @@ public final class CampaignUtils {
 		log.entry(type, season);
 		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
 		try {
-			// Get events from file
 			ObjectMapper objectMapper = new ObjectMapper();
 			File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getFile();
 			Map<String,Event> events = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});

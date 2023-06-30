@@ -52,6 +52,11 @@
 				[(*{rewards})]
 			</div>
 		</div>
+
+		<!-- Section -->
+		<th:block th:if="*{section}">
+			<th:block th:replace="~{fragments/section :: section(*{section})}"></th:block>
+		</th:block>
 	</div>
 </body>
 </html>

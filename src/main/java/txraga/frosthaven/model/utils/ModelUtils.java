@@ -1,4 +1,4 @@
-package txraga.frosthaven.model;
+package txraga.frosthaven.model.utils;
 
 
 public final class ModelUtils {

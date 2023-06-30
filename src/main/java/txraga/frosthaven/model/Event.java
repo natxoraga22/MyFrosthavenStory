@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.frosthaven.model.utils.ModelUtils;
 
 
 @Getter
@@ -13,22 +14,6 @@ import lombok.ToString;
 @ToString
 public class Event extends StoryObject {
 	
-	@Getter
-	@Setter
-	@ToString
-	public static class Option {
-		private String id;
-		private String trigger;
-		private String requirement;
-		private String text;
-		private String rewards;
-
-		public void replaceIcons() {
-			this.requirement = ModelUtils.replaceIcons(this.requirement);
-			this.rewards = ModelUtils.replaceIcons(this.rewards);
-		}
-	}
-
 	private String id;
 	private Type type;
 	private Season season;
@@ -36,6 +21,9 @@ public class Event extends StoryObject {
 	private String text;
 	private Map<String,Option> options = Map.of();
 	private String chosenOption;
+
+	// Some events unlock a random side scenario (meaning a section is read)
+	private Section section;
 	
 	
 	@Override
@@ -60,6 +48,27 @@ public class Event extends StoryObject {
 	public void replaceIcons() {
 		if (options != null) {
 			for (Option option : options.values()) option.replaceIcons();
+		}
+	}
+
+
+	/* ------ */
+	/* OPTION */
+	/* ------ */
+
+	@Getter
+	@Setter
+	@ToString
+	public static class Option {
+		private String id;
+		private String trigger;
+		private String requirement;
+		private String text;
+		private String rewards;
+
+		public void replaceIcons() {
+			this.requirement = ModelUtils.replaceIcons(this.requirement);
+			this.rewards = ModelUtils.replaceIcons(this.rewards);
 		}
 	}
 

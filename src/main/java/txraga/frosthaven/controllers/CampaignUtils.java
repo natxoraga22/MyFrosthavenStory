@@ -65,8 +65,7 @@ public final class CampaignUtils {
 			ObjectMapper objectMapper = new ObjectMapper();
 			File scenarioFile = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getFile();
 			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
-			if (path != null && path.size() > 0) scenario.setPath(path);
-			scenario.replaceIcons();
+			scenario.populate(path);
 			return log.exit(scenario);
 		}
 		catch (IOException e) {
@@ -111,18 +110,15 @@ public final class CampaignUtils {
 		log.entry(type, season);
 		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
 		try {
+			// Get events from file
 			ObjectMapper objectMapper = new ObjectMapper();
 			File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getFile();
 			Map<String,Event> events = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
-			for (Event event : events.values()) {
-				event.setType(type);
-				event.setSeason(type == Event.Type.B ? null : season);
-				if (event.getOptions() != null) {
-					for (Entry<String,Event.Option> optionEntry : event.getOptions().entrySet()) {
-						if (optionEntry.getValue().getId() == null) optionEntry.getValue().setId(optionEntry.getKey());
-					}
-				}
-				event.replaceIcons();
+
+			// Populate events with additional info
+			for (Entry<String,Event> eventEntry : events.entrySet()) {
+				Event event = eventEntry.getValue();
+				event.populate(eventEntry.getKey(), type, season);
 			}
 			return log.exit(events);
 		}

@@ -1,6 +1,5 @@
 {
 	"SR-02" : {
-		"id": "SR-02",
 		"text": "<p>\"Ho there! A moment of your time?\" from just off the path, a weathered Valrath calls for your attention. He approaches you with surprising speed despite the pack and gear strapped to his back. \"Edwin Merlsgate, Cartographer. You look familiar, have we met?\"</p><p>Before you can respond, he continues. \"I always forget a face, but never forget a trail. I can only cover so much ground, though—could we compare notes?\" He pulls out a scroll and quill, looking up expectantly.</p>",
 		"options": {
 			"A": {
@@ -16,7 +15,6 @@
 		}
 	},
 	"SR-03" : {
-		"id": "SR-03",
 		"text": "<p>Camouflaged into an outcropping of a stone cliff face sits a savvas. You're trying to determine whether it's still alive when it proudly reveals itself with a long, gravely clearing of its throat.</p><p>\"Hello, adventurers.\" It lifts itself from the rock, standing with a creaking stretch. Some Savvas modify their bodies through painful sculpting, shaping their rocky skin like carved marble. This one has chiseled its face into the visage of a lion, and its chest glows with a swirl of black and white.</p><p>\"You look clever... answer me correctly, and I'll give you something worthy of your answer. Fail, and you shall suffer the punishment.\"</p><p>\"Fished from the waters, drawn from the earth.<br/>My presence bears both jealousy, and mirth.<br/>I've corrupted and captivated, I'm sought out and sold.<br/>If you still can't guess me: I'm worth my weight... in gold.\"</p>",
 		"options": {
 			"A1": {
@@ -35,8 +33,25 @@
 			}
 		}
 	},
+	"SR-07": {
+		"text": "<p>\"Heeey. Heeeeey.\" You stop under a moss-covered tree, unsure if you heard what you think you heard: a tiny-sounding voice calling out—</p><p>\"Heeeeelllp.\" That one you're sure of. You search around the base of the tree and spot it: a beetle nearly the size of a fist. It rubs its limbs together in a practiced way, and the friction sounds nearly like human speech: \"Hellllp me.\" Against your better judgement you pick it up. Despite its unusual size it looks somehow fragile, lost.</p><p>\"Harrower. Hellllp. Saaaave.\" Is this bug claiming to be... part of a Harrower? A Harrower is a sentient collection of bugs, but it's unusual to have one maintain that intelligence when detached from the greater whole.</p>",
+		"options": {
+			"A": {
+				"trigger": "There's a mass of fire ants marching over to get a look. Put the two together to see if it can commune with them.",
+				"text": "You find an ants' nest nearby and set the beetle down next to it. There's a definite connection, but there is a power struggle as well: the ant hive has its own hierarchy and is unwilling to support a new member. Eventually, the ants take decisive action and swarm the beetle.",
+				"rewards": "No effect."
+			},
+			"B": {
+				"trigger": "A talking bug? Might as well take it with you and keep it safe.",
+				"text": "You find a suitable container and pocket the beetle. Maybe it will be useful someday.",
+				"rewards": "Gain \"Bug in a Jar\" campaign sticker.<br/>Add event SR-34 to the summer road deck."
+			}
+		}
+	},
 	"SR-33": {
-		"id": "SR-33",
 		"unlockedBy": { "event": { "id": "SR-03" }}
+	},
+	"SR-34": {
+		"unlockedBy": { "event": { "id": "SR-07" }}
 	}
 }

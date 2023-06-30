@@ -1,6 +1,7 @@
 package txraga.frosthaven.model;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -29,17 +30,31 @@ public class Event extends StoryObject {
 	}
 
 	private String id;
-	private Season season;
 	private Type type;
+	private Season season;
 	private StoryItem unlockedBy;
 	private String text;
-	private Map<String,Option> options;
+	private Map<String,Option> options = Map.of();
 	private String chosenOption;
 	
 	
 	@Override
 	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.EVENT;
+	}
+
+	public void populate(String id, Type type, Season season) {
+		// Set event id, type and season
+		if (this.id == null) this.id = id;
+		this.type = type;
+		this.season = type == Type.B ? null : season;
+
+		// Set options ids
+		for (Entry<String,Option> optionEntry : options.entrySet()) {
+			Option option = optionEntry.getValue();
+			if (option.getId() == null) option.setId(optionEntry.getKey());
+		}
+		replaceIcons();
 	}
 
 	public void replaceIcons() {

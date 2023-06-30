@@ -49,6 +49,8 @@
 				"levelUp": [{ "id": "blinkblade", "level": 3 }],
 				"upgrade": [{ "name": "Craftsman", "level": 3 }]
 			}
-		}
+		},
+		{ "event": { "id": "SR-07", "chosenOption": "B" }},
+		{ "scenario": { "id": "013" }}
 	]
 }

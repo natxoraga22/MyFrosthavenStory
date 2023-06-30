@@ -2,6 +2,7 @@ package txraga.frosthaven.model;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +32,18 @@ public class Scenario extends StoryObject {
 	@Override
 	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.SCENARIO;
+	}
+
+	public void populate(List<String> path) {
+		// Set scenario path
+		if (path != null) this.path = path;
+
+		// Set sections ids
+		for (Entry<String,Section> sectionEntry : sections.entrySet()) {
+			Section section = sectionEntry.getValue();
+			if (section.getId() == null) section.setId(sectionEntry.getKey());
+		}
+		replaceIcons();
 	}
 
 	public void replaceIcons() {

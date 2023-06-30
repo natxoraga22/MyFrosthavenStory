@@ -1,5 +1,32 @@
 {
 	"id": "013",
+	"coordinates": "O2",
 	"name": "Frozen Fjord",
-	"unlockedBy": { "scenario": { "id": "007" }}
+	"unlockedBy": { "scenario": { "id": "007" }},
+	"complexity": 2,
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>96.1</strong>.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>Not wishing to brave the harsh, unforgiving waters of the sea, you opt to hike along the coast instead. You trace it for several long hours, eventually arriving at a series of immense fissures that cut deep through the ice cliffs—fjords, blocking the way forward. Looking over the side, you can see the sea thrashing far, far below.</p><p>Staring into the distance, you spot a line of white jutting across the gap—a bridge. You head for it and discover a series of glittering limbs branching over the fjords. At first they look to be made of ice: long, pale shapes that arch over the fissures and connect on the other side, but as you move closer, you realize they are made of bone—the ribs of a gargantuan creature that fell here long ago.</p><p>The sea writhes below as you cross—huge, ice-clogged waves crashing against the cliffs. You spare only a glance, but the sheer distance of the fall makes your knees rubbery. When you look back up, you realize that you are not alone on this bridge.</p><p>Several dozen feet ahead, at the apex of the rib, stands a tall man covered in a cloud of black, thrashing wings.</p><p>“You have left your safety far behind, mortal,” he says, not with a human voice, but with the collective shrieks and caws of his many birds. “This place is not meant for your kind.”</p><p>There is no time to digest the warning. In a flash, the cloud of raptors fly at you, spanning the distance and snatching at you with razor talons. You manage to keep your footing, but a few of the birds have landed on the bridge ahead and are pecking at it feverishly. Their beaks are hard, and surprisingly large chunks of ice and bone break off and fall into the ocean below.</p><p>“Turn back,” they shriek. “Turn back, or your corpses will be carrion for my brood.”</p>",
+			"specialRules": "<p>No more than half the characters (rounded up) can start the scenario in the same room.</p><p>The scenario itself has (2+L)x2xC hit points. Track these next to the map. All monsters find focus and move as normal, but whenever any monster does not have a primary target for one of their attack abilities, it instead attacks the scenario (once per attack ability). If the scenario’s hit point value ever reaches 0, the scenario is lost.</p>",
+			"sectionLinks": "The first time either door [1] is opened, read [section] <strong>44.1</strong>.<br/>When door [2] is opened, read [section] <strong>38.2</strong>.<br/>When door [3] is opened, read [section] <strong>12.6</strong>."
+		},
+		"44.1": {
+			"trigger": "Either door [1] is opened",
+			"text": "Blood and feathers cover the white bone of the bridge. Just beyond them lies the strange humanoid thing, its body folded awkwardly where it fell. The monster appears almost human from this angle, like a malnourished peasant with long, bony legs and waxy skin. But you’re not here to study the fauna, and so you leave the creature where it lies and continue your hike across."
+		},
+		"38.2": {
+			"trigger": "Door [2] is opened"
+		},
+		"12.6": {
+			"trigger": "Door [3] is opened"
+		},
+		"96.1": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>Feather and flesh coat the ivory bridge, but the fiends are gone, their wasted bodies fallen into the crashing waters below. The birds that remain caw furiously and retreat westward toward a far-distant line of trees. The air grows silent except for the steady tide, and you give yourselves a moment to think.</p><p>The northern coast is a madness unique to itself. That such strange things could exist up here at the end of the world stretches your minds to the limits of wonder. What more awaits you beyond these bone bridges, if these are only the outermost ridges of the place?</p><p>You cross the fjords and see that the coast bends to the north. You can continue following it, hoping to reach wherever the shard of coral is leading you <span class=\"scenarioNumber\">(21)</span>. Or—you look back at the western forest—or you could make a small detour and see what oddities lie hidden in the trees <span class=\"scenarioNumber\">(32)</span>.</p>",
+			"rewards": "<p><strong>Gain “Dead Raven” [item].</strong></p><p>New Scenarios:<br/><strong>Realm of Endless Frost</strong> <span class=\"scenarioNumber\">(21)</span><br/><strong>Ravens’ Roost</strong> <span class=\"scenarioNumber\">(32)</span></p>"
+		}
+	},
+	"path": ["main", "44.1", "38.2", "12.6", "96.1"]
 }

@@ -7,18 +7,15 @@
 
 	"sections": {
 		"main": {
-			"id": "main",
 			"introduction": "<p>You were warned the journey would not be easy. That the weather would sap your strength and beat you into submission. That terrible creatures lurked in the mountains, waiting to fall upon unsuspecting travelers in a bloody frenzy. You wouldn’t have expected, however, that the most mundane of threats may end up being the most dangerous.</p><p>Wolves.</p><p>The howling started last night – signals to the pack that prey was near. And now they have gathered, stalking you as you move through the mountains, looking for weaknesses.</p><p>This is no time to be passive. You know it’s only a matter of time before they strike, going after the slowest, oldest members of your caravan. If you want everyone to survive, you’ll need to show these animals that you are not to be messed with. That you are not prey.</p>",
 			"specialRules": "<p>Do not set up the Hound monster ability deck. Instead, each round on initiative 26, all Hounds perform [move] 2; [attack] 2.</p><p>Each character reduces their hand until it contains only the following cards:</p><p><strong>Drifter:</strong> <em>Unbreakable, Crushing Weight, Vile Assault, Deadly Shot, Violent Inheritance, Precision Aim, Bloodletting, Sustained Momentum</em></p><p><strong>Boneshaper:</strong> <em>Eternal Torment, Transfer of Essence, Command the Wretched, Flow of the Black River, Decaying Will, Fell Remedy, Malicious Conversion, Life in Death, Returne Servant</em></p><p><strong>Deathwalker:</strong> <em>Shadow Step, Fluid Night, Strength of the Abyss, Call of Doom, Call to the Abyss, Black Barrage, Eclipse, Dark Fog</em></p><p><strong>Banner Spear:</strong> <em>At All Costs, Tip of the Spear, Unbreakable Wall, Combined Effort, Javelin, Deflecting Maneuver, Regroup</em></p><p><strong>Blinkblade:</strong> <em>Blurry Jab, Twin Strike, Sap Speed, Power Leak, Drive Recharge, Hit and Run, Temporal Displacement</em></p><p><strong>Geminate:</strong> <em>Icebound Quills, Draining Pincers, Hornet Stingers, Changling’s Boon, Drag Down, Selfless Offering, Into My Embrace, Firefly Swarm, Mind Spike, Harvest the Essence</em></p>",
 			"sectionLinks": "<p>For a more in-depth guide on how to play each class, read [section] <strong>197.1</strong>.</p><p>When door [1] is opened, read [section] <strong>2.1</strong>.</p>"
 		},
 		"2.1": {
-			"id": "2.1",
 			"trigger": "Door [1] is opened",
 			"text": "You’ve gotten through the more aggressive members of the pack, but that doesn’t seem to have discouraged the others at all. These wolves must be hungry, having endured through the entire long winter, but you refuse to be their food. You have greater ambitions than to be a frozen skeleton on the side of the road, picked clean of its meat."
 		},
 		"2.2": {
-			"id": "2.2",
 			"trigger": "All enemies are dead",
 			"conclusion": "<p>With enough of the pack slain, the rest slink off back into the white wasteland. But there is no time for celebration. No cheers to mark your victory. You still need to get over the next ridge before nightfall, and all you’ve done is tire yourself out.</p><p>The caravan trudges forward. Some of its members nod solemnly to you as they pass—a thanks for keeping them alive just a little longer. This brutal place has not won today, but there is always tomorrow.</p>",
 			"rewards": "<strong>You should now be ready to take on scenario 1 on the following page in the Scenario Book. Do not perform an Outpost Phase until you have completed scenario 1.</strong>"

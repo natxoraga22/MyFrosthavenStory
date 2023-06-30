@@ -1,10 +1,8 @@
 {
 	"WO-61": {
-		"id": "WO-61",
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},
 	"WO-81": {
-		"id": "WO-81",
 		"unlockedBy": { "scenario": { "id": "014" }}
 	}
 }

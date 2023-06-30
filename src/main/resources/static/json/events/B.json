@@ -1,6 +1,5 @@
 {
 	"B-03": {
-		"id": "B-03",
 		"text": "<p>It's a cold but gorgeous day for sailing. You're making excellent time, the wind is at your back, and with any luck, you'll arrive to your destination before sunset. Your gaze drifts off the side of the boat, then you spot it: a Lurker keeping perfect pace with your ship.</p><p>It breaches the surface of the water, flipping in the air before splashing back down. It locks eyes with you and you can almost feel its thoughts... it wants to race. Can that be right? Yes—yes, you're sure of it, it wants to race your boat.</p>",
 		"options": {
 			"A1": {
@@ -25,7 +24,6 @@
 		}
 	},
 	"B-04": {
-		"id": "B-04",
 		"text": "<p>An enormous sea turtle easily twice the size of your ship pulls up alongside, making steady strokes to keep pace. The crew mans the harpoons, drawing down their sights. But then, against all odds, the sea turtle looks up and poses a question in a slow drawl:</p><p>\"Why, hello, Boat. Don't suppose you could point me to the nearest land. I'm quite tired and my eyesight isn't what it used to be.\"</p><p>The crew stammer incredulously, and finally the captain hollers back the question on everyone's mind: \"Are you a talking sea turtle?\"</p><p>The sea turtle looks stunned. \"Oh my, are you a talking boat?\"</p>",
 		"options": {
 			"A": {

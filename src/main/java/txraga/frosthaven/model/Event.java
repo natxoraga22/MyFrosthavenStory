@@ -20,6 +20,7 @@ public class Event extends StoryObject {
 	private StoryItem unlockedBy;
 	private String text;
 	private Map<String,Option> options = Map.of();
+	
 	private String chosenOption;
 
 	// Some events unlock a random side scenario (meaning a section is read)

@@ -9,7 +9,7 @@
 		{ 
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-19", "chosenOption": "A" },
-				"upgrade": [{ "name": "Craftsman", "level": 2 }]
+				"upgrade": [{ "id": "craftsman", "level": 2 }]
 			}
 		},
 		{ "event": { "id": "SR-02", "chosenOption": "B" }},
@@ -19,7 +19,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-11", "chosenOption": "B" },
 				"levelUp": [{ "id": "deathwalker", "level": 2 }],
-				"build": [{ "name": "Logging Camp", "level": 1 }]
+				"build": [{ "id": "loggingcamp", "level": 1 }]
 			}
 		},
 		{ "event": { "id": "SR-03", "chosenOption": "A1" }},
@@ -28,7 +28,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-01", "chosenOption": "B" },
 				"levelUp": [{ "id": "blinkblade", "level": 2 }],
-				"build": [{ "name": "Boat" }]
+				"build": [{ "id": "boat" }]
 			}
 		},
 		{ "event": { "id": "B-03", "chosenOption": "A1" }},
@@ -37,7 +37,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-15", "chosenOption": "A" },
 				"levelUp": [{ "id": "deathwalker", "level": 3 }],
-				"build": [{ "name": "Climbing Gear" }]
+				"build": [{ "id": "climbinggear" }]
 			}
 		},
 		{ "event": { "id": "B-04", "chosenOption": "A" }},
@@ -47,7 +47,7 @@
 				"passageOfTime": [{ "id": "32.3" }, { "id": "156.1" }],
 				"outpostEvent": { "id": "SO-52", "chosenOption": "A" },
 				"levelUp": [{ "id": "blinkblade", "level": 3 }],
-				"upgrade": [{ "name": "Craftsman", "level": 3 }]
+				"upgrade": [{ "id": "craftsman", "level": 3 }]
 			}
 		},
 		{ "event": { "id": "SR-07", "chosenOption": "B" }},
@@ -56,7 +56,7 @@
 			"outpostPhase": {
 				"passageOfTime": [{ "id": "62.2" }],
 				"outpostEvent": { "id": "SO-14", "chosenOption": "B", "section": { "id": "146.4" }},
-				"build": [{ "name": "Sled" }]
+				"build": [{ "id": "sled" }]
 			}
 		},
 		{ "event": { "id": "SR-04", "chosenOption": "A1" }},

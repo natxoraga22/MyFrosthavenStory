@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.OutpostPhase;
@@ -22,6 +23,7 @@ import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
 import txraga.frosthaven.model.StoryObject;
+import txraga.frosthaven.model.utils.Buildings;
 import txraga.frosthaven.model.utils.Characters;
 import txraga.frosthaven.model.utils.Events;
 import txraga.frosthaven.model.utils.SectionBook;
@@ -33,8 +35,9 @@ import txraga.frosthaven.model.utils.SectionBook;
 public class CampaignController {
 	
 	@Autowired private Characters characters;
-	@Autowired private SectionBook sectionBook;
 	@Autowired private Events events;
+	@Autowired private SectionBook sectionBook;
+	@Autowired private Buildings buildings;
 
 
 	@GetMapping("")
@@ -163,6 +166,31 @@ public class CampaignController {
 				}
 			}
 			outpostPhase.setLevelUp(levelUp);
+		}
+
+		// BUILD
+		if (outpostPhase.getBuild() != null) {
+			List<Building> build = new ArrayList<>();
+			for (Building buildingBuilt : outpostPhase.getBuild()) {
+				Building building = buildings.get(buildingBuilt.getId());
+				if (building != null) {
+					building.setLevel(buildingBuilt.getLevel());
+					build.add(building);
+				}
+			}
+			outpostPhase.setBuild(build);
+		}
+		// UPGRADE
+		if (outpostPhase.getUpgrade() != null) {
+			List<Building> upgrade = new ArrayList<>();
+			for (Building buildingUpgraded : outpostPhase.getUpgrade()) {
+				Building building = buildings.get(buildingUpgraded.getId());
+				if (building != null) {
+					building.setLevel(buildingUpgraded.getLevel());
+					upgrade.add(building);
+				}
+			}
+			outpostPhase.setUpgrade(upgrade);
 		}
 		return log.exit(outpostPhase);
 	}

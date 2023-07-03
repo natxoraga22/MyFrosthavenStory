@@ -14,6 +14,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.Scenario;
@@ -25,9 +26,10 @@ public final class CampaignUtils {
 	
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
 	private final static String CHARACTERS_FILE_PATH = "static/json/characters.json";
+	private final static String EVENTS_FOLDER_PATH = "static/json/events";
 	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios";
 	private final static String SECTIONS_FILE_PATH = "static/json/sections.json";
-	private final static String EVENTS_FOLDER_PATH = "static/json/events";
+	private final static String BUILDINGS_FILE_PATH = "static/json/buildings.json";
 
 
 	/** Gets chapter "Welcome to Frosthaven" content from "welcome.txt" file */
@@ -55,6 +57,43 @@ public final class CampaignUtils {
 		catch (IOException e) {
 			log.warn("Error reading and parsing file '" + CHARACTERS_FILE_PATH + "'", e);
 			return log.exit(null);
+		}
+	}
+
+	/** Gets all Frosthaven events (road, outpost, etc.) from all files inside "events" folder (there is a file by each type of event) */
+	public static Map<String,Event> getEvents() {
+		log.entry();
+		Map<String,Event> events = new HashMap<>();
+		for (Event.Type type : Event.Type.values()) {
+			if (type == Event.Type.B) events.putAll(getEvents(type, null));
+			else {
+				for (Event.Season season : Event.Season.values()) {
+					events.putAll(getEvents(type, season));
+				}
+			}
+		}
+		return log.exit(events);
+	}
+
+	/** Gets Frosthaven events from its file based on event type and season */
+	public static Map<String,Event> getEvents(Event.Type type, Event.Season season) {
+		log.entry(type, season);
+		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
+		try {
+			ObjectMapper objectMapper = new ObjectMapper();
+			File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getFile();
+			Map<String,Event> events = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
+
+			// Populate events with additional info
+			for (Entry<String,Event> eventEntry : events.entrySet()) {
+				Event event = eventEntry.getValue();
+				event.populate(eventEntry.getKey(), type, season);
+			}
+			return log.exit(events);
+		}
+		catch (IOException e) {
+			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json'", e);
+			return log.exit(Map.of());
 		}
 	}
 
@@ -95,40 +134,23 @@ public final class CampaignUtils {
 		}
 	}
 
-	/** Gets all Frosthaven events (road, outpost, etc.) from all files inside "events" folder (there is a file by each type of event) */
-	public static Map<String,Event> getEvents() {
+	public static Map<String,Building> getBuildings() {
 		log.entry();
-		Map<String,Event> events = new HashMap<>();
-		for (Event.Type type : Event.Type.values()) {
-			if (type == Event.Type.B) events.putAll(getEvents(type, null));
-			else {
-				for (Event.Season season : Event.Season.values()) {
-					events.putAll(getEvents(type, season));
-				}
-			}
-		}
-		return log.exit(events);
-	}
-
-	/** Gets Frosthaven events from its file based on event type and season */
-	public static Map<String,Event> getEvents(Event.Type type, Event.Season season) {
-		log.entry(type, season);
-		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getFile();
-			Map<String,Event> events = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
+			File buildingsFile = new ClassPathResource(BUILDINGS_FILE_PATH).getFile();
+			Map<String,Building> buildings = objectMapper.readValue(buildingsFile, new TypeReference<Map<String,Building>>(){});
 
-			// Populate events with additional info
-			for (Entry<String,Event> eventEntry : events.entrySet()) {
-				Event event = eventEntry.getValue();
-				event.populate(eventEntry.getKey(), type, season);
+			// Populate buildings with additional info
+			for (Entry<String,Building> buildingEntry : buildings.entrySet()) {
+				Building building = buildingEntry.getValue();
+				building.populate(buildingEntry.getKey());
 			}
-			return log.exit(events);
+			return log.exit(buildings);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json'", e);
-			return log.exit(Map.of());
+			log.warn("Error reading and parsing file '" + BUILDINGS_FILE_PATH + "'", e);
+			return log.exit(null);
 		}
 	}
 

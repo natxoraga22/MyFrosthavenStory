@@ -1,5 +1,19 @@
 {
 	"id": "021",
+	"coordinates": "N1",
 	"name": "Realm of Endless Frost",
-	"unlockedBy": { "scenario": { "id": "013" }}
+	"requirement": "Sled",
+	"unlockedBy": { "scenario": { "id": "013" }},
+	"complexity": 3,
+	"goals": "The scenario is complete when the Prince of Frost is dead. At the end of that round, read [section] <strong>136.3</strong>.",
+	"effects": "Each character discards two cards and gain [muddle].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>You’ve been hiking for what seems an eternity. The wind screams in your ears and your body is growing stiff. Your hands and feet numbed long ago, and now your mind is beginning to fog.</p><p>When you left the fjords you did so in good spirits. With the exception of a few demonic bird-men, your exploration of the coast was going fine... until the storm arrived.</p><p>At first it was a thin flurry of snow, wisps of white flakes playing at your ears. Within minutes, though, it had turned vicious, the wind and ice whipping up so fiercely that at times you could see nothing but white as you marched.</p><p>Now you stumble on with your heads down, looking out for anything that can give you shelter.</p><p>Suddenly, the snow and ice give out beneath you, and just like that you are falling, plummeting. Your minds scramble. The ground appears. Then blackness.</p><p>When you awake, there is pain. Blood trickles from various wounds and gloops onto the icy ground.</p><p>A voice calls out, scratchy and high pitched.</p><p>“Oh dear, oh my, I hope you poor wretches are still alive,” it says. “I get so few visitors, I should hate to miss an opportunity to host.”</p><p>You blink away the fog and see a small humanoid creature made entirely of ice scampering toward you.</p><p>“Yes, movement! Wonderful!” It shrieks. “Oh please, won’t you follow me onto the terrace.”</p><p>The creature leads the way to the entrance of its home: a conical structure with walls of stone and crystalline ice. You are somewhere foreign, though, surrounded by unforgiving ice that seems to creep closer when you look away. You glance back to see the path behind you frozen over, and when you look ahead, your host is conveniently absent. Several piles of snow rise and then snap into solid forms—spindly demons that glitter in the pale light. They each take a shrill breath and stretch their long, wicked-looking tails. So much for hospitality.</p>",
+			"specialRules": "",
+			"sectionLinks": ""
+		}
+	},
+	"path": []
 }

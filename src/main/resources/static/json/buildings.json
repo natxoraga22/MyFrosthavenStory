@@ -1,0 +1,58 @@
+{
+	"loggingcamp": {
+		"number": "17",
+		"name": "Logging Camp",
+		"levels": {
+			"1": {},
+			"2": {},
+			"3": {},
+			"4": {}
+		}
+	},
+	"craftsman": {
+		"number": "34",
+		"name": "Craftsman",
+		"levels": {
+			"1": {},
+			"2": {},
+			"3": {},
+			"4": {},
+			"5": {},
+			"6": {},
+			"7": {},
+			"8": {},
+			"9": {}
+		}
+	},
+	"workshop": {
+		"number": "84",
+		"name": "Workshop",
+		"levels": {
+			"1": {}
+		}
+	},
+	"boat": {
+		"name": "Boat",
+		"levels": {
+			"1": {
+				"buildSection": "139.2"
+			}
+		}
+	},
+	"sled": {
+		"name": "Sled",
+		"levels": {
+			"1": {
+				"buildSection": "169.2"
+			}
+		}
+	},
+	"climbinggear": {
+		"name": "Climbing Gear",
+		"levels": {
+			"1": {
+				"buildSection": "161.1"
+			}
+		}
+	}
+}

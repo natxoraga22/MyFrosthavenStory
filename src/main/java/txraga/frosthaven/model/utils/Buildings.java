@@ -7,31 +7,31 @@ import org.springframework.stereotype.Component;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.controllers.CampaignUtils;
-import txraga.frosthaven.model.FhCharacter;
+import txraga.frosthaven.model.Building;
 
 
 @XSlf4j
 @Component
-public class Characters {
+public class Buildings {
 	
-	private Map<String,FhCharacter> characters;
+	private Map<String,Building> buildings;
 
 
 	@PostConstruct
 	private void init() {
 		log.entry();
-		characters = CampaignUtils.getCharacters();
+		buildings = CampaignUtils.getBuildings();
 		log.exit();
 	}
 
-	public FhCharacter get(String id) {
+	public Building get(String id) {
 		log.entry(id);
-		FhCharacter character = characters.get(id);
-		if (character == null) {
-			log.warn("Character '{}' not found", id);
+		Building building = buildings.get(id);
+		if (building == null) {
+			log.warn("Building '{}' not found", id);
 			return log.exit(null);
 		}
-		else return log.exit(new FhCharacter(character));
+		else return log.exit(new Building(building));
 	}
-
+	
 }

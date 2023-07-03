@@ -32,7 +32,7 @@ public class Building {
 		this.level = other.level;
 	}
 
-	public void populate(String id, Map<String,Section> sections) {
+	public void populate(String id) {
 		// Set building id
 		if (this.id == null) this.id = id;
 
@@ -40,11 +40,8 @@ public class Building {
 			Level level = levelEntry.getValue();
 			// Set level number
 			if (level.getNumber() == 0) level.setNumber(Integer.parseInt(levelEntry.getKey()));
-			// Set level built section
-			if (level.getBuiltSection() != null) {
-				Section builtSection = sections.get(level.getBuiltSection().getId());
-				if (builtSection != null) level.setBuiltSection(builtSection);
-			}
+			// Populate builtSection
+			if (level.getBuiltSection() != null) level.getBuiltSection().populate(null, false);
 		}
 	}
 

@@ -14,7 +14,7 @@ import lombok.ToString;
 public class Section {
 	
 	private String id;
-	private boolean partOfScenario = true;
+	private boolean partOfScenario;
 
 	private String trigger;
 	private String title;

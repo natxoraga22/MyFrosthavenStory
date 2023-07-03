@@ -104,3 +104,7 @@
 	max-height: 250px;
 	border: 0;
 }
+
+.building .section {
+	margin-top: var(--part-margin);
+}

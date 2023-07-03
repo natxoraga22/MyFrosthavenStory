@@ -1,7 +1,5 @@
 package txraga.frosthaven.model;
 
-import java.util.Map;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -34,12 +32,9 @@ public class FhCharacter {
 		this.level = other.level;
 	}
 
-	public void populate(Map<String,Section> sections) {
-		// Set retirement section
-		if (retirement != null) {
-			Section retirementSection = sections.get(retirement.getId());
-			if (retirementSection != null) retirement = retirementSection;
-		}
+	public void populate() {
+		// Populate retirement section
+		if (retirement != null) retirement.populate(null, false);
 	}
 
 }

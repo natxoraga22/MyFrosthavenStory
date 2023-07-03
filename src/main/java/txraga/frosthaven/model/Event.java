@@ -37,7 +37,7 @@ public class Event extends StoryObject {
 		this.type = type;
 		this.season = type == Type.B ? null : season;
 
-		// Set options ids
+		// Set option ids
 		for (Entry<String,Option> optionEntry : options.entrySet()) {
 			Option option = optionEntry.getValue();
 			if (option.getId() == null) option.setId(optionEntry.getKey());

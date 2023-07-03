@@ -26,9 +26,9 @@ public class Frosthaven {
 	private void init() {
 		log.entry();
 		sections = FrosthavenFiles.getSections();
-		characters = FrosthavenFiles.getCharacters(sections);
+		characters = FrosthavenFiles.getCharacters();
 		events = FrosthavenFiles.getEvents();
-		buildings = FrosthavenFiles.getBuildings(sections);
+		buildings = FrosthavenFiles.getBuildings();
 		log.exit();
 	}
 

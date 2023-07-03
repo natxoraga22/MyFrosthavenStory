@@ -51,7 +51,7 @@ public final class FrosthavenFiles {
 	/**
 	 * Gets all characters from "characters.json" file.
 	 */
-	public static Map<String,FhCharacter> getCharacters(Map<String,Section> sections) {
+	public static Map<String,FhCharacter> getCharacters() {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
@@ -61,7 +61,7 @@ public final class FrosthavenFiles {
 			// Populate characters with additional info
 			for (Entry<String,FhCharacter> characterEntry : characters.entrySet()) {
 				FhCharacter character = characterEntry.getValue();
-				character.populate(sections);
+				character.populate();
 			}
 			return log.exit(characters);
 		}
@@ -156,7 +156,7 @@ public final class FrosthavenFiles {
 	/**
 	 * Gets all buildings from "buildings.json" file
 	 */
-	public static Map<String,Building> getBuildings(Map<String,Section> sections) {
+	public static Map<String,Building> getBuildings() {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
@@ -166,7 +166,7 @@ public final class FrosthavenFiles {
 			// Populate buildings with additional info
 			for (Entry<String,Building> buildingEntry : buildings.entrySet()) {
 				Building building = buildingEntry.getValue();
-				building.populate(buildingEntry.getKey(), sections);
+				building.populate(buildingEntry.getKey());
 			}
 			return log.exit(buildings);
 		}

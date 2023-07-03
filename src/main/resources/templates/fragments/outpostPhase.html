@@ -38,7 +38,7 @@
 			<h2 class="title">[[#{outpostPhase.construction.title}]]</h2>
 			<!-- Build -->
 			<div class="build">
-				<div th:each="building : *{build}" th:object="${building}" class="building">
+				<div th:each="building : *{build}" th:object="${building}" th:with="level = *{levels['__*{level}__']}" class="building">
 					<div class="text">
 						<th:block th:if="*{level}">[(#{outpostPhase.construction.build.textWithLevel(*{name},*{level})})]</th:block>
 						<th:block th:unless="*{level}">[(#{outpostPhase.construction.build.textWithoutLevel(*{name})})]</th:block>
@@ -47,11 +47,16 @@
 						<img th:with="imgName = *{id} + *{level != 0 ? '_' + level : ''}"
 						     th:class="${imgName}" th:src="@{/img/buildings/__${imgName}__.png}">
 					</div>
+
+					<!-- Section -->
+					<th:block th:if="${level?.buildSection}">
+						<th:block th:replace="~{fragments/section :: section(${level.buildSection})}"></th:block>
+					</th:block>
 				</div>
 			</div>
 			<!-- Upgrade -->
 			<div class="upgrade">
-				<div th:each="building : *{upgrade}" th:object="${building}" class="building">
+				<div th:each="building : *{upgrade}" th:object="${building}" th:with="level = *{levels['__*{level}__']}" class="building">
 					<div class="text">
 						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]
 					</div>
@@ -60,6 +65,11 @@
 						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
 						<img th:with="imgName = *{id} + '_' + *{level}" th:src="@{/img/buildings/__${imgName}__.png}">
 					</div>
+
+					<!-- Section -->
+					<th:block th:if="${level?.buildSection}">
+						<th:block th:replace="~{fragments/section :: section(${level.buildSection})}"></th:block>
+					</th:block>
 				</div>
 			</div>
 		</div>

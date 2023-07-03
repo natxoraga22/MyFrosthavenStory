@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.FrosthavenFiles;
+import txraga.frosthaven.Frosthaven;
 import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
@@ -23,10 +25,6 @@ import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryItem;
 import txraga.frosthaven.model.StoryObject;
-import txraga.frosthaven.model.utils.Buildings;
-import txraga.frosthaven.model.utils.Characters;
-import txraga.frosthaven.model.utils.Events;
-import txraga.frosthaven.model.utils.SectionBook;
 
 
 @XSlf4j
@@ -34,16 +32,13 @@ import txraga.frosthaven.model.utils.SectionBook;
 @RequestMapping("/")
 public class CampaignController {
 	
-	@Autowired private Characters characters;
-	@Autowired private Events events;
-	@Autowired private SectionBook sectionBook;
-	@Autowired private Buildings buildings;
+	@Autowired private Frosthaven frosthaven;
 
 
 	@GetMapping("")
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
-		model.addAttribute("welcome", CampaignUtils.getWelcome());
+		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
 		return log.exit(new ModelAndView("campaign"));
 	}
 
@@ -73,7 +68,7 @@ public class CampaignController {
 			}
 		}
 
-		model.addAttribute("welcome", CampaignUtils.getWelcome());
+		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
 		model.addAttribute("party", getParty(personalStory.getParty()));
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("campaign :: campaign"));
@@ -88,7 +83,7 @@ public class CampaignController {
 		log.entry(personalStoryParty);
 		List<FhCharacter> party = new ArrayList<>();
 		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
-			FhCharacter partyMember = characters.get(personalStoryPartyMember.getId());
+			FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
 			if (partyMember != null) {
 				// Set personal quest from personal story
 				partyMember.setPersonalQuest(personalStoryPartyMember.getPersonalQuest());
@@ -105,12 +100,12 @@ public class CampaignController {
 
 	private Event getEvent(Event storyItemEvent) {
 		log.entry(storyItemEvent);
-		Event event = events.get(storyItemEvent.getId());
+		Event event = frosthaven.getEvent(storyItemEvent.getId());
 		if (event != null) {
 			event.setChosenOption(storyItemEvent.getChosenOption());
 			// Set section from section book
 			if (storyItemEvent.getSection() != null) {
-				Section section = sectionBook.get(storyItemEvent.getSection().getId());
+				Section section = frosthaven.getSection(storyItemEvent.getSection().getId());
 				if (section != null) event.setSection(section);
 			}
 		}
@@ -124,7 +119,7 @@ public class CampaignController {
 
 	private Scenario getScenario(Scenario storyItemScenario) {
 		log.entry(storyItemScenario);
-		Scenario scenario = CampaignUtils.getScenario(storyItemScenario.getId());
+		Scenario scenario = FrosthavenFiles.getScenario(storyItemScenario.getId());
 		if (scenario != null) {
 			// Set path from personal story
 			if (storyItemScenario.getPath() != null) scenario.setPath(storyItemScenario.getPath());
@@ -146,7 +141,7 @@ public class CampaignController {
 		if (outpostPhase.getPassageOfTime() != null) {
 			List<Section> passageOfTime = new ArrayList<>();
 			for (Section storyItemSection : outpostPhase.getPassageOfTime()) {
-				Section section = sectionBook.get(storyItemSection.getId());
+				Section section = frosthaven.getSection(storyItemSection.getId());
 				if (section != null) passageOfTime.add(section);
 			}
 			outpostPhase.setPassageOfTime(passageOfTime);
@@ -159,7 +154,7 @@ public class CampaignController {
 		if (outpostPhase.getLevelUp() != null) {
 			List<FhCharacter> levelUp = new ArrayList<>();
 			for (FhCharacter characterLevelingUp : outpostPhase.getLevelUp()) {
-				FhCharacter character = characters.get(characterLevelingUp.getId());
+				FhCharacter character = frosthaven.getCharacter(characterLevelingUp.getId());
 				if (character != null) {
 					character.setLevel(characterLevelingUp.getLevel());
 					levelUp.add(character);
@@ -172,7 +167,7 @@ public class CampaignController {
 		if (outpostPhase.getBuild() != null) {
 			List<Building> build = new ArrayList<>();
 			for (Building buildingBuilt : outpostPhase.getBuild()) {
-				Building building = buildings.get(buildingBuilt.getId());
+				Building building = frosthaven.getBuilding(buildingBuilt.getId());
 				if (building != null) {
 					building.setLevel(buildingBuilt.getLevel());
 					build.add(building);
@@ -184,7 +179,7 @@ public class CampaignController {
 		if (outpostPhase.getUpgrade() != null) {
 			List<Building> upgrade = new ArrayList<>();
 			for (Building buildingUpgraded : outpostPhase.getUpgrade()) {
-				Building building = buildings.get(buildingUpgraded.getId());
+				Building building = frosthaven.getBuilding(buildingUpgraded.getId());
 				if (building != null) {
 					building.setLevel(buildingUpgraded.getLevel());
 					upgrade.add(building);

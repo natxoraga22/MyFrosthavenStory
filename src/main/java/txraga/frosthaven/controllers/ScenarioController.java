@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
+import txraga.frosthaven.FrosthavenFiles;
 import txraga.frosthaven.model.Scenario;
 
 
@@ -49,7 +50,7 @@ public class ScenarioController {
 
 	private Scenario getScenario(String id, List<String> path) {
 		log.entry(id, path);
-		Scenario scenario = CampaignUtils.getScenario(id);
+		Scenario scenario = FrosthavenFiles.getScenario(id);
 		if (scenario != null && path != null) scenario.setPath(path);
 		return log.exit(scenario);
 	}

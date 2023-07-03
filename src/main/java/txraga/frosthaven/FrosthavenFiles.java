@@ -1,4 +1,4 @@
-package txraga.frosthaven.controllers;
+package txraga.frosthaven;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ import txraga.frosthaven.model.Section;
 
 
 @XSlf4j
-public final class CampaignUtils {
+public final class FrosthavenFiles {
 	
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
 	private final static String CHARACTERS_FILE_PATH = "static/json/characters.json";
@@ -32,7 +32,9 @@ public final class CampaignUtils {
 	private final static String BUILDINGS_FILE_PATH = "static/json/buildings.json";
 
 
-	/** Gets chapter "Welcome to Frosthaven" content from "welcome.txt" file */
+	/**
+	 * Gets chapter "Welcome to Frosthaven" content from "welcome.txt" file.
+	 */
 	public static String getWelcome() {
 		log.entry();
 		try {
@@ -46,13 +48,22 @@ public final class CampaignUtils {
 		}
 	}
 
-	/** Gets all Frosthaven characters info (name, race, background, etc.) from "characters.json" file */
-	public static Map<String,FhCharacter> getCharacters() {
+	/**
+	 * Gets all characters from "characters.json" file.
+	 */
+	public static Map<String,FhCharacter> getCharacters(Map<String,Section> sections) {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
 			File charactersFile = new ClassPathResource(CHARACTERS_FILE_PATH).getFile();
-			return log.exit(objectMapper.readValue(charactersFile, new TypeReference<Map<String,FhCharacter>>(){}));
+			Map<String,FhCharacter> characters = objectMapper.readValue(charactersFile, new TypeReference<Map<String,FhCharacter>>(){});
+
+			// Populate characters with additional info
+			for (Entry<String,FhCharacter> characterEntry : characters.entrySet()) {
+				FhCharacter character = characterEntry.getValue();
+				character.populate(sections);
+			}
+			return log.exit(characters);
 		}
 		catch (IOException e) {
 			log.warn("Error reading and parsing file '" + CHARACTERS_FILE_PATH + "'", e);
@@ -60,7 +71,9 @@ public final class CampaignUtils {
 		}
 	}
 
-	/** Gets all Frosthaven events (road, outpost, etc.) from all files inside "events" folder (there is a file by each type of event) */
+	/**
+	 * Gets all events (road, outpost, etc.) from all files inside "events" folder (there is a file by each type/season)
+	 */
 	public static Map<String,Event> getEvents() {
 		log.entry();
 		Map<String,Event> events = new HashMap<>();
@@ -75,7 +88,9 @@ public final class CampaignUtils {
 		return log.exit(events);
 	}
 
-	/** Gets Frosthaven events from its file based on event type and season */
+	/**
+	 * Gets events from its file based on event type and season
+	 */
 	public static Map<String,Event> getEvents(Event.Type type, Event.Season season) {
 		log.entry(type, season);
 		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
@@ -97,7 +112,9 @@ public final class CampaignUtils {
 		}
 	}
 
-	/** Gets a Scenario from its file based on scenario id */
+	/**
+	 * Gets a scenario from its file based on scenario id
+	 */
 	public static Scenario getScenario(String scenarioId) {
 		log.entry(scenarioId);
 		try {
@@ -113,7 +130,9 @@ public final class CampaignUtils {
 		}
 	}
 
-	/** Gets all sections not related to scenarios (from the Section Book) from "sections.json" file */
+	/**
+	 * Gets all sections not related to scenarios (from the Section Book) from "sections.json" file
+	 */
 	public static Map<String,Section> getSections() {
 		log.entry();
 		try {
@@ -134,7 +153,10 @@ public final class CampaignUtils {
 		}
 	}
 
-	public static Map<String,Building> getBuildings() {
+	/**
+	 * Gets all buildings from "buildings.json" file
+	 */
+	public static Map<String,Building> getBuildings(Map<String,Section> sections) {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
@@ -144,7 +166,7 @@ public final class CampaignUtils {
 			// Populate buildings with additional info
 			for (Entry<String,Building> buildingEntry : buildings.entrySet()) {
 				Building building = buildingEntry.getValue();
-				building.populate(buildingEntry.getKey());
+				building.populate(buildingEntry.getKey(), sections);
 			}
 			return log.exit(buildings);
 		}

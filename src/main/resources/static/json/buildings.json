@@ -34,24 +34,24 @@
 	"boat": {
 		"name": "Boat",
 		"levels": {
-			"1": {
-				"buildSection": "139.2"
+			"0": {
+				"builtSection": { "id": "139.2" }
 			}
 		}
 	},
 	"sled": {
 		"name": "Sled",
 		"levels": {
-			"1": {
-				"buildSection": "169.2"
+			"0": {
+				"builtSection": { "id": "169.2" }
 			}
 		}
 	},
 	"climbinggear": {
 		"name": "Climbing Gear",
 		"levels": {
-			"1": {
-				"buildSection": "161.1"
+			"0": {
+				"builtSection": { "id": "161.1" }
 			}
 		}
 	}

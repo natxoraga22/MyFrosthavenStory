@@ -10,17 +10,17 @@
 		"main": {
 			"introduction": "<p>Not wishing to brave the harsh, unforgiving waters of the sea, you opt to hike along the coast instead. You trace it for several long hours, eventually arriving at a series of immense fissures that cut deep through the ice cliffs—fjords, blocking the way forward. Looking over the side, you can see the sea thrashing far, far below.</p><p>Staring into the distance, you spot a line of white jutting across the gap—a bridge. You head for it and discover a series of glittering limbs branching over the fjords. At first they look to be made of ice: long, pale shapes that arch over the fissures and connect on the other side, but as you move closer, you realize they are made of bone—the ribs of a gargantuan creature that fell here long ago.</p><p>The sea writhes below as you cross—huge, ice-clogged waves crashing against the cliffs. You spare only a glance, but the sheer distance of the fall makes your knees rubbery. When you look back up, you realize that you are not alone on this bridge.</p><p>Several dozen feet ahead, at the apex of the rib, stands a tall man covered in a cloud of black, thrashing wings.</p><p>“You have left your safety far behind, mortal,” he says, not with a human voice, but with the collective shrieks and caws of his many birds. “This place is not meant for your kind.”</p><p>There is no time to digest the warning. In a flash, the cloud of raptors fly at you, spanning the distance and snatching at you with razor talons. You manage to keep your footing, but a few of the birds have landed on the bridge ahead and are pecking at it feverishly. Their beaks are hard, and surprisingly large chunks of ice and bone break off and fall into the ocean below.</p><p>“Turn back,” they shriek. “Turn back, or your corpses will be carrion for my brood.”</p>",
 			"specialRules": "<p>No more than half the characters (rounded up) can start the scenario in the same room.</p><p>The scenario itself has (2+L)x2xC hit points. Track these next to the map. All monsters find focus and move as normal, but whenever any monster does not have a primary target for one of their attack abilities, it instead attacks the scenario (once per attack ability). If the scenario’s hit point value ever reaches 0, the scenario is lost.</p>",
-			"sectionLinks": "The first time either door [1] is opened, read [section] <strong>44.1</strong>.<br/>When door [2] is opened, read [section] <strong>38.2</strong>.<br/>When door [3] is opened, read [section] <strong>12.6</strong>."
+			"sectionLinks": "The first time either door [one] is opened, read [section] <strong>44.1</strong>.<br/>When door [two] is opened, read [section] <strong>38.2</strong>.<br/>When door [three] is opened, read [section] <strong>12.6</strong>."
 		},
 		"44.1": {
-			"trigger": "Either door [1] is opened",
+			"trigger": "Either door [one] is opened",
 			"text": "Blood and feathers cover the white bone of the bridge. Just beyond them lies the strange humanoid thing, its body folded awkwardly where it fell. The monster appears almost human from this angle, like a malnourished peasant with long, bony legs and waxy skin. But you’re not here to study the fauna, and so you leave the creature where it lies and continue your hike across."
 		},
 		"38.2": {
-			"trigger": "Door [2] is opened"
+			"trigger": "Door [two] is opened"
 		},
 		"12.6": {
-			"trigger": "Door [3] is opened"
+			"trigger": "Door [three] is opened"
 		},
 		"96.1": {
 			"trigger": "All enemies are dead",

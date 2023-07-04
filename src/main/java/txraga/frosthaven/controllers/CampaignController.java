@@ -20,11 +20,11 @@ import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.OutpostPhase;
-import txraga.frosthaven.model.PersonalStory;
 import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.Section;
-import txraga.frosthaven.model.StoryItem;
 import txraga.frosthaven.model.StoryObject;
+import txraga.frosthaven.model.personal.PersonalStory;
+import txraga.frosthaven.model.personal.StoryItem;
 
 
 @XSlf4j

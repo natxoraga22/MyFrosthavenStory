@@ -40,12 +40,6 @@
 	margin-bottom: 0;
 }
 
-.frosthaven .icon {
-	max-width: 24px;
-	max-height: 16px;
-	vertical-align: text-top;
-}
-
 .frosthaven img:not(.icon) {
 	border: var(--img-border);
 }
@@ -58,3 +52,27 @@
 .frosthaven .scenarioNumber {
 	font-family: var(--font-germania-one);
 }
+
+
+/* ----- */
+/* ICONS */
+/* ----- */
+
+.frosthaven .icon {
+	max-height: 16px;
+	margin-top: -3px;
+}
+
+.frosthaven .icon.one,
+.frosthaven .icon.two,
+.frosthaven .icon.three,
+.frosthaven .icon.a,
+.frosthaven .icon.b,
+.frosthaven .icon.c,
+.frosthaven .icon.d,
+.frosthaven .icon.e {
+	max-height: 20px;
+}
+
+.frosthaven .icon.heal { max-height: 18px; }
+.frosthaven .icon.range { max-height: 15px; }

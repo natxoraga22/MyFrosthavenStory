@@ -1,11 +1,15 @@
 package txraga.frosthaven.model;
 
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.frosthaven.model.personal.StoryItem;
 
 
 @Getter
@@ -23,6 +27,7 @@ public class Section {
 	private String introduction;
 	private String text;
 	private String specialRules;
+	private Map<String,String> bossSpecials = Map.of();
 	private String conclusion;
 	private String rewards;
 	private String sectionLinks;
@@ -43,6 +48,9 @@ public class Section {
 	public void replaceIcons() {
 		this.trigger = ModelUtils.replaceIcons(this.trigger);
 		this.specialRules = ModelUtils.replaceIcons(this.specialRules);
+		for (Entry<String,String> bossSpecial : bossSpecials.entrySet()) {
+			bossSpecials.put(bossSpecial.getKey(), ModelUtils.replaceIcons(bossSpecial.getValue()));
+		}
 		this.rewards = ModelUtils.replaceIcons(this.rewards);
 		this.sectionLinks = ModelUtils.replaceIcons(this.sectionLinks);
 	}

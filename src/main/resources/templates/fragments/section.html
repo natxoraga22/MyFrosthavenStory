@@ -44,6 +44,14 @@
 			</div>
 		</div>
 
+		<!-- Boss specials -->
+		<div th:each="bossSpecial : *{bossSpecials.entrySet()}" class="card bossSpecial">
+			<div class="card-header">[[#{section.bossSpecial}]] [[${bossSpecial.key}]]</div>
+			<div class="card-body">
+				[(${bossSpecial.value})]
+			</div>
+		</div>
+
 		<!-- Map -->
 		<div th:if="${section.partOfScenario && section.hasMap(scenario.id)}" class="map">
 			<img th:with="imgName = ${scenario.id} + '_' + *{id}" th:src="@{/img/scenarios/__${imgName}__.png}" onload="this.width*=0.66;">

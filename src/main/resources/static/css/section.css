@@ -3,7 +3,7 @@
 /* COMMON */
 /* ------ */
 
-.section {
+div.section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--section-inner-gap);
@@ -15,14 +15,12 @@
 /* ------- */
 
 .section .trigger {
+	/* Negative margin-bottom to compensate for the (too large) section's inner gap */
 	margin-bottom: calc(var(--section-inner-gap)*-1/2);
+
 	font-family: var(--font-germania-one);
 	font-size: 14pt;
 	line-height: 14pt;
-}
-
-.section .trigger .icon {
-	height: 14pt;
 }
 
 
@@ -108,6 +106,24 @@
 
 .section .specialRules .table td {
 	border-bottom: none;
+}
+
+
+/* ------------ */
+/* BOSS SPECIAL */
+/* ------------ */
+
+.section .bossSpecial {
+	--bs-card-cap-bg: #422071;
+	--bs-card-bg: #d5c7df;
+}
+
+.section .bossSpecial .card-header {
+	border-bottom-color: #732c8c;
+}
+
+.section .bossSpecial .card-body {
+	border-color: #412168;
 }
 
 

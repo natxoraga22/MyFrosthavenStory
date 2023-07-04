@@ -10,15 +10,15 @@
 	"sections": {
 		"main": {
 			"introduction": "<p>Following up on Satha’s “crab problem,” you find yourself standing at the edge of the Biting Sea, an ice-choked gauntlet whose frigid waters have granted a swift death to many an overconfident mariner. You hike west, hugging the coast while hunting for signs of the enormous crustaceans. Frosthaven is visible in the southern distance, little more than a vague outline. Seeing it, you feel isolated, like someone looking back from the very edge of the world.</p><p>Another half hour of diligent tracking later, you happen upon your first clue: a pattern of pockmarks have been hammered into the ground near the foot of a hill, indents in the snow and dirt where the creatures have scuttled by. You follow the trail to a cave on the western side of the cliff, where you find a clutch of giant crablike figures chittering restlessly.</p><p>They’re as large as you’ve heard from stories: tall, hard-shelled beings with long, craggy limbs, and as soon as you appear, they rise to their full height, some of them larger than an Algox. They shriek and move quickly toward you, their pincers snapping.</p>",
-			"sectionLinks": "When door [1] is opened, read [section] <strong>42.1</strong>."
+			"sectionLinks": "When door [one] is opened, read [section] <strong>42.1</strong>."
 		},
 		"42.1": {
-			"trigger": "Door [1] is opened",
+			"trigger": "Door [one] is opened",
 			"text": "Having dispatched the Lurkers out front, you make your way inside the tunnel, a dank burrow riddled with pits of frigid water and stretches of black ice. What’s worse than the cold, however, is the smell—an intense putridness emanates from deep within the tunnel, equal parts rot and corrupted flesh. What it could be, you’d honestly rather not know.",
-			"sectionLinks": "When door [2] is opened, read [section] <strong>48.4</strong>."
+			"sectionLinks": "When door [two] is opened, read [section] <strong>48.4</strong>."
 		},
 		"48.4": {
-			"trigger": "Door [2] is opened",
+			"trigger": "Door [two] is opened",
 			"text": "The earthen tunnel eventually gives way to a natural cavern, where you find a half-rotted humanoid corpse shuffling aimlessly around like a lost drunk. The smell is incredible, burning your eyes and your throat. Looking closer, you see a large, pink stone lodged in the creature’s right eye socket. Another wave of reeking air overwhelms you, and you retch involuntarily. At this sound, the corpse turns and snarls.",
 			"specialRules": "The Frozen Corpse is the Coral Corpse. It has HxC hit points, is immune to [immobilize], [disarm], and [stun], and adds [brittle] to all its attacks."
 		},

@@ -52,6 +52,16 @@ public class Frosthaven {
 		else return log.exit(new FhCharacter(character));
 	}
 
+	public PersonalQuest getPersonalQuest(String id) {
+		log.entry(id);
+		PersonalQuest personalQuest = personalQuests.get(id);
+		if (personalQuest == null) {
+			log.warn("Personal quest '{}' not found", id);
+			return log.exit(null);
+		}
+		else return log.exit(personalQuest);
+	}
+
 	public Event getEvent(String id) {
 		log.entry(id);
 		Event event = events.get(id);

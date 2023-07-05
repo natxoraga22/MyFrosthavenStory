@@ -18,7 +18,8 @@ public class FhCharacter {
 	private String background;
 	private Section retirement;
 
-	private String personalQuest;
+	private PersonalQuest personalQuest;
+	private PersonalQuest additionalPersonalQuest;
 	private int level;
 
 
@@ -28,7 +29,9 @@ public class FhCharacter {
 		this.race = other.race;
 		this.background = other.background;
 		this.retirement = other.retirement;
+		
 		this.personalQuest = other.personalQuest;
+		this.additionalPersonalQuest = other.additionalPersonalQuest;
 		this.level = other.level;
 	}
 

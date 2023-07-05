@@ -1,6 +1,6 @@
 {
 	"party": [
-		{ "id": "blinkblade", "personalQuest": "04" }, 
+		{ "id": "blinkblade", "personalQuest": { "id": "04" }}, 
 		{ "id": "deathwalker" }
 	],
 	"story": [
@@ -65,7 +65,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-09", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 4 }],
-				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": "06" }]
+				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": { "id": "06" }}]
 			}
 		}
 	]

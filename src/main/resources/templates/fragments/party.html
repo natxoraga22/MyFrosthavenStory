@@ -32,16 +32,18 @@
 			</div>
 
 			<!-- Personal quest -->
+			<!--
 			<div th:if="*{personalQuest}" class="personalQuest fhCard flip">
 				<div class="flipInner">
 					<div class="front">
 						<img th:src="@{/img/personalQuests/back.png}">
 					</div>
 					<div class="back">
-						<img th:src="@{/img/personalQuests/__*{personalQuest}__.png}">
+						<img th:src="@{/img/personalQuests/__*{personalQuest.id}__.png}">
 					</div>
 				</div>
 			</div>
+			-->
 		</div>
 	</div>
 </body>

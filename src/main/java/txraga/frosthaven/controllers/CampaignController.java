@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
-import txraga.frosthaven.FrosthavenFiles;
 import txraga.frosthaven.Frosthaven;
+import txraga.frosthaven.FrosthavenFiles;
 import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
 import txraga.frosthaven.model.OutpostPhase;
+import txraga.frosthaven.model.PersonalQuest;
 import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.Section;
 import txraga.frosthaven.model.StoryObject;
@@ -85,8 +86,11 @@ public class CampaignController {
 		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
 			FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
 			if (partyMember != null) {
-				// Set personal quest from personal story
-				partyMember.setPersonalQuest(personalStoryPartyMember.getPersonalQuest());
+				if (personalStoryPartyMember.getPersonalQuest() != null) {
+					// Set personal quest from personal story
+					PersonalQuest personalQuest = frosthaven.getPersonalQuest(personalStoryPartyMember.getPersonalQuest().getId());
+					if (personalQuest != null) partyMember.setPersonalQuest(personalQuest);
+				}
 				party.add(partyMember);
 			}
 		}
@@ -150,17 +154,35 @@ public class CampaignController {
 		// OUTPOST EVENT
 		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent()));
 
-		// LEVEL UP
+		// LEVEL UPS
 		if (outpostPhase.getLevelUps() != null) {
 			List<FhCharacter> levelUps = new ArrayList<>();
 			for (FhCharacter characterLevelingUp : outpostPhase.getLevelUps()) {
 				FhCharacter character = frosthaven.getCharacter(characterLevelingUp.getId());
 				if (character != null) {
+					// Set level
 					character.setLevel(characterLevelingUp.getLevel());
 					levelUps.add(character);
 				}
 			}
 			outpostPhase.setLevelUps(levelUps);
+		}
+
+		// RETIREMENTS
+		if (outpostPhase.getRetirements() != null) {
+			List<FhCharacter> retirements = new ArrayList<>();
+			for (FhCharacter characterRetiring : outpostPhase.getRetirements()) {
+				FhCharacter character = frosthaven.getCharacter(characterRetiring.getId());
+				if (character != null) {
+					// Set additional personal quest
+					if (characterRetiring.getAdditionalPersonalQuest() != null) {
+						PersonalQuest additionalPersonalQuest = frosthaven.getPersonalQuest(characterRetiring.getAdditionalPersonalQuest().getId());
+						if (additionalPersonalQuest != null) character.setAdditionalPersonalQuest(additionalPersonalQuest);
+					}
+					retirements.add(character);
+				}
+			}
+			outpostPhase.setRetirements(retirements);
 		}
 
 		// BUILD

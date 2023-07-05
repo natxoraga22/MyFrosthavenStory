@@ -18,7 +18,7 @@
 		{
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-11", "chosenOption": "B" },
-				"levelUp": [{ "id": "deathwalker", "level": 2 }],
+				"levelUps": [{ "id": "deathwalker", "level": 2 }],
 				"build": [{ "id": "loggingcamp", "level": 1 }]
 			}
 		},
@@ -27,7 +27,7 @@
 		{
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-01", "chosenOption": "B" },
-				"levelUp": [{ "id": "blinkblade", "level": 2 }],
+				"levelUps": [{ "id": "blinkblade", "level": 2 }],
 				"build": [{ "id": "boat" }]
 			}
 		},
@@ -36,7 +36,7 @@
 		{
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-15", "chosenOption": "A" },
-				"levelUp": [{ "id": "deathwalker", "level": 3 }],
+				"levelUps": [{ "id": "deathwalker", "level": 3 }],
 				"build": [{ "id": "climbinggear" }]
 			}
 		},
@@ -46,7 +46,7 @@
 			"outpostPhase": {
 				"passageOfTime": [{ "id": "32.3" }, { "id": "156.1" }],
 				"outpostEvent": { "id": "SO-52", "chosenOption": "A" },
-				"levelUp": [{ "id": "blinkblade", "level": 3 }],
+				"levelUps": [{ "id": "blinkblade", "level": 3 }],
 				"upgrade": [{ "id": "craftsman", "level": 3 }]
 			}
 		},
@@ -60,6 +60,13 @@
 			}
 		},
 		{ "event": { "id": "SR-04", "chosenOption": "A1" }},
-		{ "scenario": { "id": "021" }}
+		{ "scenario": { "id": "021" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-09", "chosenOption": "A" },
+				"levelUps": [{ "id": "deathwalker", "level": 4 }],
+				"retirements": [{ "id": "blinkblade" }]
+			}
+		}
 	]
 }

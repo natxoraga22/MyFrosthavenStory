@@ -17,6 +17,7 @@ import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
+import txraga.frosthaven.model.PersonalQuest;
 import txraga.frosthaven.model.Scenario;
 import txraga.frosthaven.model.Section;
 
@@ -26,6 +27,7 @@ public final class FrosthavenFiles {
 	
 	private final static String WELCOME_FILE_PATH = "static/json/welcome.txt";
 	private final static String CHARACTERS_FILE_PATH = "static/json/characters.json";
+	private final static String PERSONAL_QUESTS_FILE_PATH = "static/json/personalQuests.json";
 	private final static String EVENTS_FOLDER_PATH = "static/json/events";
 	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios";
 	private final static String SECTIONS_FILE_PATH = "static/json/sections.json";
@@ -67,6 +69,29 @@ public final class FrosthavenFiles {
 		}
 		catch (IOException e) {
 			log.warn("Error reading and parsing file '" + CHARACTERS_FILE_PATH + "'", e);
+			return log.exit(null);
+		}
+	}
+
+	/**
+	 * Gets all personal quests from "personalQuests.json" file.
+	 */
+	public static Map<String,PersonalQuest> getPersonalQuests() {
+		log.entry();
+		try {
+			ObjectMapper objectMapper = new ObjectMapper();
+			File personalQuestsFile = new ClassPathResource(PERSONAL_QUESTS_FILE_PATH).getFile();
+			Map<String,PersonalQuest> personalQuests = objectMapper.readValue(personalQuestsFile, new TypeReference<Map<String,PersonalQuest>>(){});
+
+			// Populate personal quests with additional info
+			for (Entry<String,PersonalQuest> personalQuestEntry : personalQuests.entrySet()) {
+				PersonalQuest personalQuest = personalQuestEntry.getValue();
+				personalQuest.populate(personalQuestEntry.getKey());
+			}
+			return log.exit(personalQuests);
+		}
+		catch (IOException e) {
+			log.warn("Error reading and parsing file '" + PERSONAL_QUESTS_FILE_PATH + "'", e);
 			return log.exit(null);
 		}
 	}

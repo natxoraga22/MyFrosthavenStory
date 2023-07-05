@@ -26,15 +26,15 @@
 		<!-- Downtime -->
 		<div th:if="*{levelUp}" class="downtime">
 			<h2 class="title">[[#{outpostPhase.downtime.title}]]</h2>
-			<div class="levelUp">
-				<div th:each="character : *{levelUp}" th:object="${character}">
+			<div class="levelUps">
+				<div th:each="character : *{levelUps}" th:object="${character}">
 					[(#{outpostPhase.downtime.levelUp.text(*{name},*{level})})]
 				</div>
 			</div>
 		</div>
 		
 		<!-- Construction -->
-		<div class="construction">
+		<div th:if="*{!#lists.isEmpty(build) || !#lists.isEmpty(upgrade)}" class="construction">
 			<h2 class="title">[[#{outpostPhase.construction.title}]]</h2>
 			<!-- Build -->
 			<div class="build">

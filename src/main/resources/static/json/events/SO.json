@@ -14,6 +14,21 @@
 			}
 		}
 	},
+	"SO-09": {
+		"text": "<p>\"I'm trying to explain, that's the very root cause of all of this! They're not aggressive by nature!\" Violet, the local Lurker researcher, is pleading on the street with Mayor Satha.</p><p>\"Right. And they have terrifying claws and razor-sharp protrusions because they're peaceful. \"Satha is having none of it. Violet is nervously balling up her purple scarf, clearly on the verge of a breakdown.</p><p>\"Please, you have to understand. My research suggests—\" Satha cuts the Valrath off.</p><p>\"Your research suggests the capital is willing to waste resources. Resources that could be put to use protecting the people of this outpost from those same Lurkers you so desperately want to repaint as benevolent! I'll be confiscating your supplies for the defense effort.\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Come to Violet's aid—there's more to the Lurkers.",
+				"text": "<p>You intervene in the heated discussion and provide some reports from the field. Yes, the Lurkers can be an impressive adversary, but there are indications there's more to their actions. Violet is visibly relieved at your help.</p><p>Satha grunts. \"Fine, if you think there's value here, introduce her to the guard. But if her crackpot ideas don't pan out, I'm holding it against you lot.\"</p>",
+				"rewards": "Add event WO-62 to the winter outpost deck."
+			},
+			"B": {
+				"trigger": "Back up Satha's assessment—Lurker research is a waste of resources.",
+				"text": "<p>You can't help but side with Satha under the circumstances: the Lurkers have proven, time and again, to be vicious killing machines with physiology to match. You don't doubt that Violet means well, but if there are resources that could be used to protect the town, it's better for Satha to use them on defense rather than research projects.</p><p>Violet lowers her gaze, then walks off without another word, dejected.</p>",
+				"rewards": "Add event SO-39 to the summer outpost deck."
+			}
+		}
+	},
 	"SO-11": {
 		"text": "<p>Pinter Droman, Frosthaven's resident Quatryl tinkerer, is unwrapping a package wrapped in brocade in his workshop.</p><p>\"Come take a look. Can't believe it. One of the guards just dropped this off. Says he found it on the hillside.\" Out from the cloth comes what looks like a long metallic-purple blade. \"Remarkable! Believe it or not, this is an antler from a Brummix. Quatryl settlers brought them here over a century ago, but they all died out. Or so I thought.\"</p><p>\"Watch this!\" He swings a heavy wrench at the antler, snapping it in two pieces.</p><p>\"Alright, let's see if the myths are true...\" He grabs the two halves of the antler and gently touches them together. Like magic, the two pieces fuse back together, looking as perfect as when he first unwrapped the antler. Pinter is grinning from ear to ear.\"</p><p>\"A marvel of nature! Now what should we use it for?\"</p>",
 		"options": {
@@ -84,6 +99,9 @@
 	},
 	"SO-38": {
 		"unlockedBy": { "event": { "id": "SO-14" }}
+	},
+	"SO-39": {
+		"unlockedBy": { "event": { "id": "SO-09" }}
 	},
 	"SO-40": {
 		"unlockedBy": { "event": { "id": "SO-01" }}

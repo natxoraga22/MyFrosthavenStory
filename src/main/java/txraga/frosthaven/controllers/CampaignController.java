@@ -151,16 +151,16 @@ public class CampaignController {
 		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent()));
 
 		// LEVEL UP
-		if (outpostPhase.getLevelUp() != null) {
-			List<FhCharacter> levelUp = new ArrayList<>();
-			for (FhCharacter characterLevelingUp : outpostPhase.getLevelUp()) {
+		if (outpostPhase.getLevelUps() != null) {
+			List<FhCharacter> levelUps = new ArrayList<>();
+			for (FhCharacter characterLevelingUp : outpostPhase.getLevelUps()) {
 				FhCharacter character = frosthaven.getCharacter(characterLevelingUp.getId());
 				if (character != null) {
 					character.setLevel(characterLevelingUp.getLevel());
-					levelUp.add(character);
+					levelUps.add(character);
 				}
 			}
-			outpostPhase.setLevelUp(levelUp);
+			outpostPhase.setLevelUps(levelUps);
 		}
 
 		// BUILD

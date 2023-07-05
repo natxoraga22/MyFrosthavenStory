@@ -9,6 +9,7 @@ import lombok.extern.slf4j.XSlf4j;
 import txraga.frosthaven.model.Building;
 import txraga.frosthaven.model.Event;
 import txraga.frosthaven.model.FhCharacter;
+import txraga.frosthaven.model.PersonalQuest;
 import txraga.frosthaven.model.Section;
 
 
@@ -18,6 +19,7 @@ public class Frosthaven {
 	
 	private Map<String,Section> sections;
 	private Map<String,FhCharacter> characters;
+	private Map<String,PersonalQuest> personalQuests;
 	private Map<String,Event> events;
 	private Map<String,Building> buildings;
 
@@ -27,6 +29,7 @@ public class Frosthaven {
 		log.entry();
 		sections = FrosthavenFiles.getSections();
 		characters = FrosthavenFiles.getCharacters();
+		personalQuests = FrosthavenFiles.getPersonalQuests();
 		events = FrosthavenFiles.getEvents();
 		buildings = FrosthavenFiles.getBuildings();
 		log.exit();

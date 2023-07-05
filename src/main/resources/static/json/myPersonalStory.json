@@ -65,7 +65,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-09", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 4 }],
-				"retirements": [{ "id": "blinkblade" }]
+				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": "06" }]
 			}
 		}
 	]

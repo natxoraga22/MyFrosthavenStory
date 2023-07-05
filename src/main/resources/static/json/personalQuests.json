@@ -1,0 +1,16 @@
+{
+	"04": {
+		"title": "Greed is Good",
+		"description": "There are many high and lofty goals in life—sick grandmas and epic love. Ridiculous. Only one thing matters and that's money—getting the most of it and keeping it safe. The weight of gold in your purse is a greater feeling than anything else imaginable, grandmas be damned.",
+		"requirements": "Have 80+20xL gold in your possession, where L is the prosperity level.",
+		"rewards": "Open [envelope] 37",
+		"alternateRewards": "Open [envelope] 74",
+	},
+	"06": {
+		"title": "Team Building",
+		"description": "You are a people person. Sure, you've got a job to do, but would it hurt to make a few friends? Of course not. Nothing would make you happier than sitting around the hearth with some fast friends, drinking, talking, and playing games.",
+		"requirements": "During eigth different outpost phases, read a person's name in an event or section.",
+		"rewards": "Open [envelope] 85",
+		"alternateRewards": "Open [envelope] 21",
+	}
+}

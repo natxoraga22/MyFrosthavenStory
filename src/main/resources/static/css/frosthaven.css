@@ -74,5 +74,27 @@
 	max-height: 20px;
 }
 
+.frosthaven .icon.bane,
+.frosthaven .icon.bless,
+.frosthaven .icon.brittle,
+.frosthaven .icon.curse,
+.frosthaven .icon.disarm,
+.frosthaven .icon.immobilize,
+.frosthaven .icon.impair,
+.frosthaven .icon.invisible,
+.frosthaven .icon.muddle,
+.frosthaven .icon.pierce,
+.frosthaven .icon.poison,
+.frosthaven .icon.pull,
+.frosthaven .icon.push,
+.frosthaven .icon.regenerate,
+.frosthaven .icon.strengthen,
+.frosthaven .icon.stun,
+.frosthaven .icon.ward,
+.frosthaven .icon.wound {
+	max-height: 20px;
+}
+
+.frosthaven .icon.damage { max-height: 18px; }
 .frosthaven .icon.heal { max-height: 18px; }
 .frosthaven .icon.range { max-height: 15px; }

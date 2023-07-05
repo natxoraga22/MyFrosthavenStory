@@ -46,7 +46,9 @@
 
 		<!-- Boss specials -->
 		<div th:each="bossSpecial : *{bossSpecials.entrySet()}" class="card bossSpecial">
-			<div class="card-header">[[#{section.bossSpecial}]] [[${bossSpecial.key}]]</div>
+			<div class="card-header">
+				<i class="fa-solid fa-skull fa-xs"></i> [[#{section.bossSpecial}]] [[${bossSpecial.key}]]
+			</div>
 			<div class="card-body">
 				[(${bossSpecial.value})]
 			</div>

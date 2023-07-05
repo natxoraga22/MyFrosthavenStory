@@ -40,4 +40,8 @@ public class FhCharacter {
 		if (retirement != null) retirement.populate(null, false);
 	}
 
+	public String getFullName() {
+		return race + " " + name;
+	}
+
 }

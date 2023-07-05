@@ -15,8 +15,13 @@ public class OutpostPhase extends StoryObject {
 	private int id;
 	private List<Section> passageOfTime;
 	private Event outpostEvent;
+
+	// Downtime
 	private List<FhCharacter> levelUps;
 	private List<FhCharacter> retirements;
+	private List<FhCharacter> newMembers;
+
+	// Construction
 	private List<Building> build;
 	private List<Building> upgrade;
 

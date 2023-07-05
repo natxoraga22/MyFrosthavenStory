@@ -15,6 +15,17 @@
 	</div>
 
 
+	<!-- ----- -->
+	<!-- PARTY -->
+	<!-- ----- -->
+	<div th:fragment="party" id="party" class="party">
+		<h1 class="title">[[#{party.title}]]</h1>
+		<th:block th:each="character : ${party}">
+			<th:block th:replace="fragments/character :: character(${character},true)"></th:block>
+		</th:block>
+	</div>
+
+
 	<!-- ----------- -->
 	<!-- UNLOCKED BY -->
 	<!-- ----------- -->

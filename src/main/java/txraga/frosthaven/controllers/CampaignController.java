@@ -2,7 +2,9 @@ package txraga.frosthaven.controllers;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,6 +48,7 @@ public class CampaignController {
 	@PostMapping("/personalStory")
 	public ModelAndView personalStory(Model model, @RequestBody PersonalStory personalStory) throws IOException {
 		log.entry(personalStory);
+		Map<String,FhCharacter> party = getParty(personalStory.getParty());
 
 		// Fill storyObjects list with the elements from myStory list
 		int outpostPhaseId = 1;
@@ -63,14 +66,14 @@ public class CampaignController {
 			}
 			// Outpost phase
 			else if (storyItem.getOutpostPhase() != null) {
-				OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId);
+				OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId, party);
 				if (outpostPhase != null) story.add(outpostPhase);
 				outpostPhaseId++;
 			}
 		}
 
 		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
-		model.addAttribute("party", getParty(personalStory.getParty()));
+		model.addAttribute("party", party.values());
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("campaign :: campaign"));
 	}
@@ -80,9 +83,9 @@ public class CampaignController {
 	/* PARTY */
 	/* ----- */
 
-	private List<FhCharacter> getParty(List<FhCharacter> personalStoryParty) {
+	private Map<String,FhCharacter> getParty(List<FhCharacter> personalStoryParty) {
 		log.entry(personalStoryParty);
-		List<FhCharacter> party = new ArrayList<>();
+		Map<String,FhCharacter> party = new LinkedHashMap<>();
 		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
 			FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
 			if (partyMember != null) {
@@ -91,7 +94,7 @@ public class CampaignController {
 					PersonalQuest personalQuest = frosthaven.getPersonalQuest(personalStoryPartyMember.getPersonalQuest().getId());
 					if (personalQuest != null) partyMember.setPersonalQuest(personalQuest);
 				}
-				party.add(partyMember);
+				party.put(partyMember.getId(), partyMember);
 			}
 		}
 		return log.exit(party);
@@ -136,7 +139,7 @@ public class CampaignController {
 	/* OUTPOST PHASE */
 	/* ------------- */
 
-	private OutpostPhase getOutpostPhase(OutpostPhase outpostPhase, int id) {
+	private OutpostPhase getOutpostPhase(OutpostPhase outpostPhase, int id, Map<String,FhCharacter> party) {
 		log.entry(outpostPhase);
 		// ID
 		outpostPhase.setId(id);
@@ -158,7 +161,7 @@ public class CampaignController {
 		if (outpostPhase.getLevelUps() != null) {
 			List<FhCharacter> levelUps = new ArrayList<>();
 			for (FhCharacter characterLevelingUp : outpostPhase.getLevelUps()) {
-				FhCharacter character = frosthaven.getCharacter(characterLevelingUp.getId());
+				FhCharacter character = party.get(characterLevelingUp.getId());
 				if (character != null) {
 					// Set level
 					character.setLevel(characterLevelingUp.getLevel());
@@ -172,7 +175,7 @@ public class CampaignController {
 		if (outpostPhase.getRetirements() != null) {
 			List<FhCharacter> retirements = new ArrayList<>();
 			for (FhCharacter characterRetiring : outpostPhase.getRetirements()) {
-				FhCharacter character = frosthaven.getCharacter(characterRetiring.getId());
+				FhCharacter character = party.get(characterRetiring.getId());
 				if (character != null) {
 					// Set additional personal quest
 					if (characterRetiring.getAdditionalPersonalQuest() != null) {
@@ -183,6 +186,23 @@ public class CampaignController {
 				}
 			}
 			outpostPhase.setRetirements(retirements);
+		}
+
+		// NEW MEMBERS
+		if (outpostPhase.getNewMembers() != null) {
+			List<FhCharacter> newMembers = new ArrayList<>();
+			for (FhCharacter characterJoining : outpostPhase.getNewMembers()) {
+				FhCharacter character = frosthaven.getCharacter(characterJoining.getId());
+				if (character != null) {
+					// Set personal quest from personal story
+					if (characterJoining.getPersonalQuest() != null) {
+						PersonalQuest personalQuest = frosthaven.getPersonalQuest(characterJoining.getPersonalQuest().getId());
+						if (personalQuest != null) character.setPersonalQuest(personalQuest);
+					}
+					newMembers.add(character);
+				}
+			}
+			outpostPhase.setNewMembers(newMembers);
 		}
 
 		// BUILD
@@ -197,6 +217,7 @@ public class CampaignController {
 			}
 			outpostPhase.setBuild(build);
 		}
+		
 		// UPGRADE
 		if (outpostPhase.getUpgrade() != null) {
 			List<Building> upgrade = new ArrayList<>();

@@ -124,5 +124,8 @@
 				"rewards": "Gain 5 collective [hide].<br/>Gain 3 soldiers."
 			}
 		}
+	},
+	"SO-64": {
+		"unlockedBy": { "section": { "id": "60.2" }}
 	}
 }

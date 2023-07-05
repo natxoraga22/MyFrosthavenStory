@@ -45,34 +45,6 @@
 	margin-top: var(--part-margin);
 }
 
-.party .character .title {
-	font-family: var(--font-germania-one);
-	font-size: var(--title-size-small);
-}
-
-.party .character .mat {
-	width: 604px;
-	height: 396px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.party .character .mat img:not(:first-of-type) {
-	margin-top: var(--img-margin);
-}
-
-.party .character .background {
-	margin-top: var(--element-margin);
-}
-
-.party .character .personalQuest {
-	width: 287px;
-	height: 400px;
-	margin-top: 1.5rem;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 
 /* ------------- */
 /* OUTPOST PHASE */

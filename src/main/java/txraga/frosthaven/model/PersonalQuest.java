@@ -14,8 +14,8 @@ public class PersonalQuest {
 	private String title;
 	private String description;
 	private String requirements;
-	private String rewards;
-	private String alternateRewards;
+	private Rewards rewards;
+	private Rewards alternateRewards;
 
 
 	public void populate(String id) {
@@ -25,8 +25,25 @@ public class PersonalQuest {
 	}
 
 	public void replaceIcons() {
-		this.rewards = ModelUtils.replaceIcons(this.rewards);
-		this.alternateRewards = ModelUtils.replaceIcons(this.alternateRewards);
+		this.rewards.replaceIcons();
+		this.alternateRewards.replaceIcons();
+	}
+
+
+	/* ------ */
+	/* REWARD */
+	/* ------ */
+
+	@Getter
+	@Setter
+	@ToString
+	public static class Rewards {
+		private String envelope;
+		private String building;
+
+		public void replaceIcons() {
+			this.envelope = ModelUtils.replaceIcons(this.envelope);
+		}
 	}
 
 }

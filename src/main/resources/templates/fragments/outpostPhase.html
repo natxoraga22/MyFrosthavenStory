@@ -34,8 +34,14 @@
 			</div>
 			<!-- Retirements -->
 			<div class="retirements">
-				<div th:each="character : *{retirements}" th:object="${character}">
-					[[*{name}]] retires.
+				<th:block th:each="character : *{retirements}">
+					<th:block th:replace="~{fragments/character :: retirement(${character})}"></th:block>
+				</div>
+			</div>
+			<!-- New members -->
+			<div class="newMembers">
+				<th:block th:each="character : *{newMembers}">
+					<th:block th:replace="~{fragments/character :: character(${character},false)}"></th:block>
 				</div>
 			</div>
 		</div>

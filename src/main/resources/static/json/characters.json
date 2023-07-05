@@ -4,7 +4,11 @@
 		"name": "Blinkblade",
 		"race": "Quatryl",
 		"background": "<p>Quatryls typically don't like being underestimated. They are smaller than the other peoples they encounter, yes, but that doesn't mean they are worth any less. If anything, they will go out of their way to show they are worth more. Their scientific institutions on the eastern continent have developed a myriad of technological advancements-bionics and prosthetics used to enhance their own capabilities. There are even vague records that long ago, the Quatryl's scientific research led them to the north to hunt for its secrets, but these facilities have long since fallen to ruin.</p><p>The fact of the matter is that the cold is not a forgiving climate for one so small. If a Blinkblade were to travel north, it may be because they have nowhere else to go, or because there is some quarry to be found. Blinkblades are assassins, after all. Equipped with experimental temporal drives, they can alter the flow of time, moving faster than the eye can see and striking harder than a creature ten times their size. Such actions can only be performed in short bursts however, and there is always a cost to such great power.</p>",
-		"retirement": { "id": "60.2" }
+		"retirement": { 
+			"id": "60.2",
+			"text": "<p>The Blinkblade finishes reading a long letter delivered by the mail carrier, and then folds it up and tucks it in their pack.</p><p>“Well, looks like I’m needed elsewhere.” You stare at them, somewhat stunned.</p><p>“I’ve been offered a job by the Merchant’s Guild in White Oak,” the Blinkblade says. “Apparently activity of the Sin-Ra syndicate has increased recently, and they need skilled operatives to fight them back in the shadows of the capital. These Sin- Ra are insidious jerks, and if you don’t nip their machinations in the bud, well...” The Blinkblade shrugs their shoulders. “There goes your whole city.”</p><p>They slowly finish packing up their belongings and then move to leave.</p><p>“I can’t say I’ll miss this cold, but, well, I may just miss you lot.” The Blinkblade lingers at the door for a second. “Just a bit, though.” And then—ZIP—they’re gone.</p>",
+			"rewards": "<strong>Add event SO-64 to the summer outpost deck.</strong>"
+		}
 	},
 	"deathwalker": {
 		"id": "deathwalker",

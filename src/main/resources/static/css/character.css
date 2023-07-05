@@ -1,0 +1,81 @@
+
+/* --------- */
+/* CHARACTER */
+/* --------- */
+
+.character {
+	display: flex;
+	flex-direction: column;
+	gap: var(--character-inner-gap);
+}
+
+.character .title {
+	margin-bottom: 0;
+	font-family: var(--font-germania-one);
+	font-size: var(--title-size-small);
+}
+
+.character .mat {
+	width: 604px;
+	height: 396px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* ---------- */
+/* RETIREMENT */
+/* ---------- */
+
+.retirement {
+	display: flex;
+	flex-direction: column;
+}
+
+.retirement .title {
+	font-family: var(--font-germania-one);
+	font-size: var(--title-size-small);
+}
+
+
+/* -------------- */
+/* PERSONAL QUEST */
+/* -------------- */
+
+.personalQuest .fhCard {
+	float: left;
+	width: 287px;
+	height: 400px;
+	margin-right: var(--img-margin);
+	margin-bottom: var(--img-margin);
+}
+
+.personalQuest .title {
+	font-family: var(--font-germania-one);
+	font-size: var(--title-size-small);
+}
+
+.personalQuest .description {
+	font-family: var(--font-texturina);
+}
+
+.personalQuest .rewards {
+	margin-top: var(--element-margin);
+
+	--bs-card-spacer-x: 8px;
+	--bs-card-spacer-y: 8px;
+	--bs-card-cap-padding-y: 4px;
+	--bs-card-cap-padding-x: 8px;
+
+	--bs-card-border-width: 2px;
+	--bs-card-border-radius: 0;
+	--bs-card-border-color: #030302;
+
+	--bs-card-bg: #e7cc8b;
+}
+
+.personalQuest .rewards .card-header {
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}

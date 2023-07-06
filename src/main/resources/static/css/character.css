@@ -4,8 +4,10 @@
 /* --------- */
 
 .character {
-	--character-inner-gap: 1rem;    /* Gap between character elements */
+	/* Gap between character elements */
+	--character-inner-gap: 1rem;
 
+	/* Character mat size */
 	--character-mat-width: 604px;
 	--character-mat-height: 396px;
 }

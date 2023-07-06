@@ -4,7 +4,13 @@
 /* --------- */
 
 .outpostPhase {
-	--outpost-inner-gap: 3rem;    /* Gap between outpost phase elements */
+	/* Gap between outpost phase elements */
+	--outpost-inner-gap: 3rem;
+
+	/* Special buildings sizes */
+	--boat-max-size: 350px;
+	--climbinggear-max-size: 250px;
+	--sled-max-size: 250px;
 }
 
 
@@ -19,7 +25,7 @@
 }
 
 .outpostPhase > .title {
-	margin-bottom: -2rem;
+	margin-bottom: calc((var(--outpost-inner-gap) - 1rem)*-1);
 }
 
 
@@ -32,16 +38,23 @@
 	text-align: center;
 }
 
-.building .fhCard img.boat {
-	max-width: 350px;
-	max-height: 350px;
+.building img.boat, .building img.climbinggear, .building img.sled {
 	border: 0;
 }
 
-.building .fhCard img.climbinggear, .building .fhCard img.sled {
-	max-width: 250px;
-	max-height: 250px;
-	border: 0;
+.building img.boat{
+	max-width: var(--boat-max-size);
+	max-height: var(--boat-max-size);
+}
+
+.building img.climbinggear{
+	max-width: var(--climbinggear-max-size);
+	max-height: var(--climbinggear-max-size);
+}
+
+.building img.sled{
+	max-width: var(--sled-max-size);
+	max-height: var(--sled-max-size);
 }
 
 .building .section {

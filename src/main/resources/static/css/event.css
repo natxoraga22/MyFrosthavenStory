@@ -1,4 +1,21 @@
 
+/* --------- */
+/* VARIABLES */
+/* --------- */
+
+.event {
+	/* Gap between event elements */
+	--event-inner-gap: 2rem;
+
+	/* Gap between option elements */
+	--option-inner-gap: 1rem;
+}
+
+
+/* ----- */
+/* EVENT */
+/* ----- */
+
 .event .fhCard {
 	float: left;
 	width: 287px;
@@ -11,19 +28,29 @@
 	font-style: italic;
 }
 
+
+/* ------ */
+/* OPTION */
+/* ------ */
+
 .event .option {
-	margin-top: var(--part-margin);
+	margin-top: var(--event-inner-gap);
 }
 
 .event .option .text {
-	margin-top: var(--element-margin);
+	margin-top: var(--option-inner-gap);
 }
 
 .event .option .rewards {
-	margin-top: var(--element-margin);
+	margin-top: var(--option-inner-gap);
 	font-weight: bold;
 }
 
+
+/* ------- */
+/* SECTION */
+/* ------- */
+
 .event .section {
-	margin-top: var(--part-margin);
+	margin-top: var(--event-inner-gap);
 }

@@ -9,7 +9,7 @@
 	<!-- --------- -->
 	<div th:fragment="character(character,initialParty)" th:object="${character}" th:id="|character_*{id}|" class="character">
 		<!-- Title -->
-		<h2 class="title characterTitle">
+		<h2 class="title">
 			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
 			[[*{fullName}]]
 			<th:block th:if="${!initialParty}"> [[#{character.joining}]]</th:block>
@@ -37,9 +37,9 @@
 	<!-- ---------- -->
 	<!-- RETIREMENT -->
 	<!-- ---------- -->
-	<div th:fragment="retirement(character)" th:object="${character}" th:id="|retirement_*{id}|" class="retirement">
+	<div th:fragment="retirement(character)" th:object="${character}" th:id="|retirement_*{id}|" class="character retirement">
 		<!-- Title -->
-		<h2 class="title characterTitle">
+		<h2 class="title">
 			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
 			[[*{fullName}]] [[#{character.retirement}]]
 		</h2>

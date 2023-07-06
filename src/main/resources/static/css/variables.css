@@ -12,12 +12,10 @@
 	--img-border: 2px solid;            /* Image border for all big images (excluding icons) */
 	--img-card-max-size: 400px;         /* Max size for images representing standard sized cards (personal quests, events, buildings, etc.) */
 
-	--story-objects-gap: 5rem;          /* Gap between story objects */
+	--story-objects-gap: 6rem;          /* Gap between story objects */
 	--scenario-inner-gap: 1rem;         /* Gap between scenario elements */
 	--scenario-sections-gap: 1.5rem;    /* Gap between scenario sections */
 	--section-inner-gap: 1rem;          /* Gap between section elements */
-	--outpost-inner-gap: 2rem;          /* Gap between outpost phase elements */
-	--character-inner-gap: 1rem;		/* Gap between character elements */
 
 	--part-margin: 2rem;                /* Margin for parts of same story object (characters inside party, outpost phase parts, etc.) */
 	--element-margin: 1rem;             /* Margin for elements inside same section */

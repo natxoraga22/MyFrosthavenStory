@@ -23,28 +23,23 @@
 			<th:block th:replace="~{fragments/event :: event(*{outpostEvent})}"></th:block>
 		</th:block>
 
-		<!-- DOWNTIME (LEVEL UPS & RETIREMENTS) -->
-		<div th:if="*{!#lists.isEmpty(levelUps) || !#lists.isEmpty(retirements)}" class="downtime">
-			<h2 class="title">[[#{outpostPhase.downtime.title}]]</h2>
-			<!-- Level ups -->
-			<div class="levelUps">
-				<div th:each="character : *{levelUps}" th:object="${character}">
-					[(#{outpostPhase.downtime.levelUp.text(*{name},*{level})})]
-				</div>
-			</div>
-			<!-- Retirements -->
-			<div class="retirements">
-				<th:block th:each="character : *{retirements}">
-					<th:block th:replace="~{fragments/character :: retirement(${character})}"></th:block>
-				</div>
-			</div>
-			<!-- New members -->
-			<div class="newMembers">
-				<th:block th:each="character : *{newMembers}">
-					<th:block th:replace="~{fragments/character :: character(${character},false)}"></th:block>
-				</div>
+		<!-- LEVEL UPS -->
+		<div th:if="*{levelUps}" class="levelUps">
+			<h2 class="title">[[#{outpostPhase.levelUps.title}]]</h2>
+			<div th:each="character : *{levelUps}" th:object="${character}">
+				[(#{outpostPhase.levelUps.text(*{name},*{level})})]
 			</div>
 		</div>
+
+		<!-- RETIREMENTS -->
+		<th:block th:each="character : *{retirements}">
+			<th:block th:replace="~{fragments/character :: retirement(${character})}"></th:block>
+		</th:block>
+
+		<!-- NEW MEMBERS -->
+		<th:block th:each="character : *{newMembers}">
+			<th:block th:replace="~{fragments/character :: character(${character},false)}"></th:block>
+		</th:block>
 		
 		<!-- CONSTRUCTION (BUILD & UPGRADE) -->
 		<div th:if="*{!#lists.isEmpty(build) || !#lists.isEmpty(upgrade)}" class="construction">
@@ -67,6 +62,7 @@
 					</th:block>
 				</div>
 			</div>
+			
 			<!-- Upgrade -->
 			<div class="upgrade">
 				<div th:each="building : *{upgrade}" th:object="${building}" th:with="level = *{levels['__*{level}__']}" class="building">

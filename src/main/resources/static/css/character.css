@@ -1,5 +1,17 @@
 
 /* --------- */
+/* VARIABLES */
+/* --------- */
+
+.character {
+	--character-inner-gap: 1rem;    /* Gap between character elements */
+
+	--character-mat-width: 604px;
+	--character-mat-height: 396px;
+}
+
+
+/* --------- */
 /* CHARACTER */
 /* --------- */
 
@@ -16,25 +28,10 @@
 }
 
 .character .mat {
-	width: 604px;
-	height: 396px;
+	width: var(--character-mat-width);
+	height: var(--character-mat-height);
 	margin-left: auto;
 	margin-right: auto;
-}
-
-
-/* ---------- */
-/* RETIREMENT */
-/* ---------- */
-
-.retirement {
-	display: flex;
-	flex-direction: column;
-}
-
-.retirement .title {
-	font-family: var(--font-germania-one);
-	font-size: var(--title-size-small);
 }
 
 
@@ -44,13 +41,12 @@
 
 .personalQuest .fhCard {
 	float: left;
-	width: 287px;
-	height: 400px;
 	margin-right: var(--img-margin);
 	margin-bottom: var(--img-margin);
 }
 
 .personalQuest .title {
+	margin-bottom: 0.5rem;
 	font-family: var(--font-germania-one);
 	font-size: var(--title-size-small);
 }
@@ -85,10 +81,10 @@
 /* ICONS */
 /* ----- */
 
-.characterTitle .icon {
+.character .icon {
 	margin-right: 0.25rem;
 }
 
-.characterTitle .icon.blinkblade { max-height: 28px; }
-.characterTitle .icon.crashingtide { max-height: 30px; }
-.characterTitle .icon.deathwalker { max-height: 32px; }
+.character .icon.blinkblade { max-height: 28px; }
+.character .icon.crashingtide { max-height: 30px; }
+.character .icon.deathwalker { max-height: 32px; }

@@ -44,39 +44,3 @@
 .party .character:not(:first-of-type) {
 	margin-top: var(--part-margin);
 }
-
-
-/* ------------- */
-/* OUTPOST PHASE */
-/* ------------- */
-
-.outpostPhase {
-	display: flex;
-	flex-direction: column;
-	gap: var(--outpost-inner-gap);
-}
-
-.outpostPhase > .title {
-	margin-bottom: -1rem;
-}
-
-.outpostPhase .construction .building .fhCard {
-	margin-top: var(--img-margin);
-	text-align: center;
-}
-
-.building .fhCard img.boat {
-	max-width: 350px;
-	max-height: 350px;
-	border: 0;
-}
-
-.building .fhCard img.climbinggear, .building .fhCard img.sled {
-	max-width: 250px;
-	max-height: 250px;
-	border: 0;
-}
-
-.building .section {
-	margin-top: var(--part-margin);
-}

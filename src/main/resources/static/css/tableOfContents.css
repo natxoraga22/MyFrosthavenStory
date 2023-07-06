@@ -1,5 +1,5 @@
 
-.tableOfContents {
+#tableOfContents {
 	/* Make the table of contents always visible and scrollable by itself */
 	max-height: calc(100vh - var(--frosthaven-padding-y));
 	position: sticky;
@@ -7,4 +7,14 @@
 	bottom: 0;
 	overflow-y: scroll;
 	scrollbar-width: thin;
+}
+
+#tableOfContents .iconWrapper {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+#tableOfContents .child {
+	padding-left: 3rem;
 }

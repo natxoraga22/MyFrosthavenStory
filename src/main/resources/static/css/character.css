@@ -79,3 +79,16 @@
 	font-size: 14pt;
 	line-height: 14pt;
 }
+
+
+/* ----- */
+/* ICONS */
+/* ----- */
+
+.characterTitle .icon {
+	margin-right: 0.25rem;
+}
+
+.characterTitle .icon.blinkblade { max-height: 28px; }
+.characterTitle .icon.crashingtide { max-height: 30px; }
+.characterTitle .icon.deathwalker { max-height: 32px; }

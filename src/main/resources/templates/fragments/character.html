@@ -9,7 +9,11 @@
 	<!-- --------- -->
 	<div th:fragment="character(character,initialParty)" th:object="${character}" th:id="|character_*{id}|" class="character">
 		<!-- Title -->
-		<h2 class="title">[[*{fullName}]]<th:block th:if="${!initialParty}"> [[#{character.joining.title}]]</th:block></h2>
+		<h2 class="title characterTitle">
+			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
+			[[*{fullName}]]
+			<th:block th:if="${!initialParty}"> [[#{character.joining}]]</th:block>
+		</h2>
 
 		<!-- Mat -->
 		<div class="mat flip">
@@ -35,12 +39,15 @@
 	<!-- ---------- -->
 	<div th:fragment="retirement(character)" th:object="${character}" th:id="|retirement_*{id}|" class="retirement">
 		<!-- Title -->
-		<h2 class="title">[[*{fullName}]] [[#{character.retirement.title}]]</h2>
+		<h2 class="title characterTitle">
+			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
+			[[*{fullName}]] [[#{character.retirement}]]
+		</h2>
 
 		<!-- Personal quests -->
-		<th:block th:replace="~{fragments/character :: personalQuest(*{personalQuest})}"></th:block>
+		<th:block th:replace="~{:: personalQuest(*{personalQuest})}"></th:block>
 		<th:block th:if="*{additionalPersonalQuest}">
-			<th:block th:replace="~{fragments/character :: personalQuest(*{additionalPersonalQuest})}"></th:block>
+			<th:block th:replace="~{:: personalQuest(*{additionalPersonalQuest})}"></th:block>
 		</th:block>
 
 		<!-- Retirement section -->

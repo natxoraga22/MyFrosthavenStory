@@ -7,44 +7,73 @@
 	<!-- ----------------- -->
 	<!-- TABLE OF CONTENTS -->
 	<!-- ----------------- -->
-	<div th:fragment="tableOfContents" class="tableOfContents">
+	<div th:fragment="tableOfContents" id="tableOfContents">
 		<div class="list-group list-group-flush">
-			<!-- Welcome -->
+			<!-- WELCOME -->
 			<a th:if="${welcome}" class="list-group-item list-group-item-action" href="#welcome">
 				[[#{welcome.title}]]
 			</a>
 
-			<!-- Party -->
+			<!-- PARTY -->
 			<th:block th:if="${party}">
 				<a class="list-group-item list-group-item-action" href="#party">[[#{party.title}]]</a>
 				<th:block th:each="character : ${party}" th:object="${character}">
-					<a class="list-group-item list-group-item-action ps-5" th:href="|#character_*{id}|">[[*{fullName}]]</a>
+					<a class="list-group-item list-group-item-action child" th:href="|#character_*{id}|"
+					   th:insert="~{:: character(${character},'')}">
+					</a>
 				</th:block>
 			</th:block>
 
 			<th:block th:each="storyObject : ${story}" th:object="${storyObject}">
-				<!-- Event -->
+				<!-- EVENT -->
 				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
 					[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
 				</a>
-				<!-- Scenario -->
+
+				<!-- SCENARIO -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
 					<strong>[[*{#numbers.formatInteger(id,1)}]] · [[*{name}]]</strong>
 				</a>
-				<!-- Outpost phase -->
+
+				<!-- OUTPOST PHASE -->
 				<th:block th:if="*{objectType.name() == 'OUTPOST_PHASE'}">
 					<a class="list-group-item list-group-item-action" th:href="|#outpostPhase_*{id}|">
 						[[#{outpostPhase.title}]] #[[*{id}]]
 					</a>
-					<a th:each="section : *{passageOfTime}" class="list-group-item list-group-item-action ps-5" th:object="${section}" th:href="|#section_*{id}|">
+					<!-- Passage of time -->
+					<a th:each="section : *{passageOfTime}" th:object="${section}" class="list-group-item list-group-item-action child" th:href="|#section_*{id}|">
 						[[*{id}]] · [[*{title}]]
 					</a>
-					<a th:if="*{outpostEvent}" class="list-group-item list-group-item-action ps-5" th:object="${storyObject.outpostEvent}" th:href="|#event_*{id}|">
+					<!-- Outpost event -->
+					<a th:if="*{outpostEvent}" th:object="${storyObject.outpostEvent}" class="list-group-item list-group-item-action child" th:href="|#event_*{id}|">
 						[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
 					</a>
+					<!-- Retirements -->
+					<th:block th:each="character : *{retirements}" th:object="${character}">
+						<a class="list-group-item list-group-item-action child"  th:href="|#retirement_*{id}|"
+						   th:insert="~{:: character(${character},#{character.retirement})}">
+						</a>
+					</th:block>
+					<!-- New members -->
+					<th:block th:each="character : *{newMembers}" th:object="${character}">
+						<a class="list-group-item list-group-item-action child"  th:href="|#character_*{id}|"
+						   th:insert="~{:: character(${character},#{character.joining})}">
+						</a>
+					</th:block>
 				</th:block>
 			</th:block>
 		</div>
+	</div>
+
+
+	<!-- --------- -->
+	<!-- CHARACTER -->
+	<!-- --------- -->
+	<div th:fragment="character(character,titleSuffix)" th:object="${character}">
+		<div class="iconWrapper">
+			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
+		</div>
+		[[*{fullName}]]<th:block th:if="${titleSuffix}"> [[${titleSuffix}]]</th:block>
 	</div>
 </body>
 </html>

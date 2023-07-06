@@ -95,6 +95,9 @@
 	max-height: 20px;
 }
 
+.frosthaven .icon.crashingtide { max-height: 18px; }
+.frosthaven .icon.deathwalker { max-height: 20px; }
+
 .frosthaven .icon.damage { max-height: 18px; }
 .frosthaven .icon.heal { max-height: 18px; }
 .frosthaven .icon.range { max-height: 15px; }

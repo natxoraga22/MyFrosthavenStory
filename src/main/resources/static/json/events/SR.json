@@ -72,6 +72,30 @@
 			}
 		}
 	},
+	"SR-13": {
+		"text": "<p>As you pause for a rest along your journey, you spot a handful of bright orange produce sticking out from the meltwater mud. It looks not dissimilar to an elongated flamefruit, though the color is different. You pick one off and smell it, noting its rich, lively herb aroma. As you prepare to take a bite, you hear a voice shouting.</p><p>\"I wouldn't do that.\" An elderly Quatryl steps out of the bushes and points at you with her walking stick. \"That's a firepepper, the strongest spice on this side of the continent!\" As you look puzzled, she continues. \"It's been said a firepepper stew can reheat even the soul of the dead. I've heard the tale of a Hungry Maw living beneath the Copperneck Mountains that only spared a village from destruction when they served it a plate of their hottest sweet-and-fiery stew.\" She chuckles to herself.</p><p>\"I'm certain it would be too much for you. I grew up eating these, but it would probably take you a week to recover!\"</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Try the firepepper.",
+				"requirement": "[trait] QUATRYL, SAVVAS, STRONG or UNFETTERED",
+				"text": "A challenge must be met. You pop the firepepper into your mouth, and after a second, it's clear why she warned you: this thing is HOT! After an hour, most of the burning has subsided, and the woman nods, impressed. \"Alright, perhaps you could handle a challenge of a different sort...\"",
+				"rewards": "Gain 10 experience each.<br/>Gain \"Firepepper\" campaign sticker.<br/>New Scenario: The Eternal Crave (122)."
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Try the firepepper.",
+				"requirement": "[not] [trait] QUATRYL, SAVVAS, STRONG or UNFETTERED",
+				"text": "You pop the firepepper into your mouth, and the juices explode like lava. The old Quatryl was right. She chuckles, pouring cool milk from a canteen at her hip into your mouth. \"I told you, it was strong enough to satisfy the Hungry Maw! Now that I don't have to worry about backtalk, I'll tell you a story...\"",
+				"rewards": "All characters start the next scenario with [damage] 2 and [brittle].<br/>Gain \"Firepepper\" campaign sticker.<br/>New Scenario: The Eternal Crave (122)."
+			},
+			"B": {
+				"trigger": "Ask her to demonstrate just how easily she could eat it.",
+				"text": "She pops the firepepper into her mouth with a shrug, washing it down with something from her canteen. \"See? Easy for someone like me. That's the way it goes... some things are just easier depending on who you are. Now, some battle-hardened warriors like yourselves? Well, you'd probably be best at a task I need some help with...\"",
+				"rewards": "Gain \"Firepepper\" campaign sticker.<br/>New Scenario: The Eternal Crave (122)."
+			}
+		}
+	},
 	"SR-33": {
 		"unlockedBy": { "event": { "id": "SR-03" }}
 	},

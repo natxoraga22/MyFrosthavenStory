@@ -1,5 +1,29 @@
 {
 	"id": "032",
+	"coordinates": "Q3",
 	"name": "Ravens’ Roost",
-	"unlockedBy": { "scenario": { "id": "013" }}
+	"unlockedBy": { "scenario": { "id": "013" }},
+	"complexity": 2,
+	"location": "Radiant Forest",
+	"goals": "The scenario is complete when the raven nest [a] is destroyed. At the end of that round, read [section] <strong>59.1</strong>.",
+	"effects": "Each character gains [wound].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>The fiendish birds that assailed you on the bone bridge retreated to a forest after your fight. You’re curious about what other strange creatures might be inhabiting the place—and if you get to crush some of the birds that escaped your wrath, all the better. You run over the blowing tundra, sprinting over mounds of hardened dirt and frozen shrub. You follow the birds’ path and head into the woods.</p><p>The Radiant Forest: a place suffused with divergent energy. You feel it as soon as you enter—a peculiar thinness to the air. Even the ground is odd, uneven, so it feels like you’re walking atop a wide, wobbling table. By its name, you had assumed these woods were simply trees that somehow gained a footing in this barren place, but now that you’re here, you can see they are born of the same madness as everything else.</p><p>Beyond the wind and the trees, strange lights flicker here as well, dancing in and out of the shadows. At first you take them for torchflies, except the tiny orbs follow you, curious almost, their multi-colored glows peppering the trees with iridescent hues. And yet, the strangest thing by far is the air—it’s warm. The trees, though situated only a short hike away from the frozen coast, are completely free of snow, and the deeper you hike, the warmer it gets, the air becoming muggy and sulphurous, as if you’ve just been transported to some hunting ground far across the mountains to the south. It’s distracting, so much so that you almost don’t notice the voice calling to you.</p><p>“Oh, great warriors,” it says, whispery thin, “come to find us they have. Sneakers sneaking through our trees. So brave, so brave they are.” The voice echoes off the woods, barely louder than the breeze itself.</p><p>“Oh, yes. Keep on, sweet things, sweet breathers come to see.”</p>",
+			"specialRules": "At the start of each round, place one numbered token on each Frozen Corpse. If a Frozen Corpse suffers damage, remove its numbered token. At the end of each round, each Frozen Corpse with a numbered token is replaced by an elite Shrike Fiend with no damage or conditions. These Shrike Fiends do not act until the following round.",
+			"sectionLinks": "When door [one] is opened, read [section] <strong>66.1</strong>."
+		},
+		"66.1": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>Before long, you emerge into a clearing. Here only one giant tree stands, but it is an old, barren thing, picked free of leaves and covered instead in flapping black wings. It’s a nest—a writhing, fidgeting nest—and the birds call to you with a single voice.</p><p>“Oh, here you are, slow walkers. Warm bodies. We’ve waited long for you.”</p><p>You watch as shapes drop from the nest like overripe fruit: humanoid bodies swarmed with wings and razor beaks— more of the fiendish humanoids from the fjords. They rise from the ground, gray bipedal creatures with clawed hands and grotesque feet, and fill the air with their screams. Well, you found your bird friends. Now to cleanse this place of the foul things.</p>",
+			"specialRules": "<p>The raven nest [a] has 3xCx(L+2) hit points and [retaliate] X, [range] 10, where X is (L+1)/3 (rounded up). It is an enemy to you and an ally to all monsters.</p><p>At the start of next round and each second round after that, spawn one Shrike Fiend at the raven nest. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.</p>"
+		},
+		"59.1": {
+			"trigger": "The raven nest [a] is destroyed",
+			"conclusion": "<p>The creatures are done. Their humanoid hosts lie slain. Their tree has been felled, and finally, the forest is quiet.</p><p>You take some time to check the area for any explanation as to what these creatures were or why they inhabited this place, but like so many other things in this part of the world, its mysteries remain unspoiled.</p><p>One thing is certain, however: this clearing is the warmest part of the forest you’ve encountered so far. It is practically balmy, and you can feel even more heat radiating from the west. Looking to the edge of the clearing, you see a great swarm of glowing orbs have gathered there. They seem to be waiting, wondering perhaps whether it’s safe to venture inward toward the heat.</p><p>But that is a mystery for the scientists and researchers. Your business is the blade, and your business here is done. Satisfied with your handiwork, you turn and begin the long hike back to Frosthaven, wondering how exactly you’ll make a report of this to Satha.</p>",
+			"rewards": "<strong>Gain “Feathered Cloak” [item] blueprint.<br/>Gain “Into the Forest” campaign sticker.</strong>"
+		}
+	},
+	"path": ["main", "66.1", "59.1"]
 }

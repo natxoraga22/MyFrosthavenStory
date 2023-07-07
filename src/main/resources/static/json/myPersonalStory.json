@@ -68,6 +68,8 @@
 				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": { "id": "06" }}],
 				"newMembers": [{ "id": "crashingtide" }]
 			}
-		}
+		},
+		{ "event": { "id": "SR-13", "chosenOption": "A1" }},
+		{ "scenario": { "id": "032" }}
 	]
 }

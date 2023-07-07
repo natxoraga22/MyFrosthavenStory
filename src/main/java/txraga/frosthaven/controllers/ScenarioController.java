@@ -24,16 +24,11 @@ public class ScenarioController {
 
 	@GetMapping({"", "/{scenarioId}"})
 	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId, @RequestParam(required = false) String path) {
-		log.entry();
-		// Scenario
-		List<String> scenarioPath = new ArrayList<>();
-		if (path != null && !path.isBlank()) {
-			String[] pathSplit = path.split(",");
-			for (String pathItem : pathSplit) scenarioPath.add(pathItem.trim());
-		}
-		model.addAttribute("scenario", getScenario(scenarioId, scenarioPath));
+		log.entry(scenarioId, path);
+		model.addAttribute("scenarioId", scenarioId);
+		model.addAttribute("scenario", getScenario(scenarioId, path));
 
-		// Previous and Next
+		// Previous and next scenarios
 		if (scenarioId != null) {
 			model.addAttribute("prevScenario", String.format("%03d", Integer.parseInt(scenarioId) - 1));
 			model.addAttribute("nextScenario", String.format("%03d", Integer.parseInt(scenarioId) + 1));
@@ -43,15 +38,27 @@ public class ScenarioController {
 
 	@PostMapping("")
 	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId, @RequestParam String scenarioPath) {
-		log.entry();
+		log.entry(scenarioId, scenarioPath);
 		return log.exit(new ModelAndView("redirect:/scenario/" + scenarioId + "?path=" + scenarioPath));
 	}
 
 
-	private Scenario getScenario(String id, List<String> path) {
+	/* -------- */
+	/* SCENARIO */
+	/* -------- */
+
+	private Scenario getScenario(String id, String path) {
 		log.entry(id, path);
 		Scenario scenario = FrosthavenFiles.getScenario(id);
-		if (scenario != null && path != null) scenario.setPath(path);
+		if (scenario != null) {
+			// Path
+			if (path != null && !path.isBlank()) {
+				List<String> scenarioPath = new ArrayList<>();
+				String[] pathSplit = path.split(",");
+				for (String pathItem : pathSplit) scenarioPath.add(pathItem.trim());
+				scenario.setPath(scenarioPath);
+			}
+		}
 		return log.exit(scenario);
 	}
 

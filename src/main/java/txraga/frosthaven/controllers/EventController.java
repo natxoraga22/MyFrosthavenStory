@@ -28,7 +28,7 @@ public class EventController {
 	public ModelAndView event(Model model, @PathVariable(required = false) String eventId, 
 	                                       @RequestParam(required = false) String chosenOption,
 	                                       @RequestParam(required = false) String sectionId) {
-		log.entry();
+		log.entry(eventId, chosenOption, sectionId);
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOption", chosenOption);
 		model.addAttribute("sectionId", sectionId);
@@ -40,7 +40,7 @@ public class EventController {
 	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
 	                                           @RequestParam String chosenOption,
 	                                           @RequestParam String sectionId) {
-		log.entry();
+		log.entry(eventId, chosenOption, sectionId);
 		String redirectUrl = "/event/" + eventId + "?chosenOption=" + chosenOption + "&sectionId=" + sectionId;
 		return log.exit(new ModelAndView("redirect:" + redirectUrl));
 	}
@@ -51,7 +51,7 @@ public class EventController {
 	/* ----- */
 
 	private Event getEvent(String id, String chosenOption, String sectionId) {
-		log.entry(id, chosenOption);
+		log.entry(id, chosenOption, sectionId);
 		Event event = frosthaven.getEvent(id);
 		if (event != null) {
 			// Chosen option

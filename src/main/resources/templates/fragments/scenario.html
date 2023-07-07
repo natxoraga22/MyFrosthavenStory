@@ -53,6 +53,7 @@
 	<!-- SCENARIO FORM -->
 	<!-- ------------- -->
 	<form th:fragment="scenarioForm" th:action="@{/scenario}" method="post" class="scenarioForm">
+		<!-- Previous and next scenarios -->
 		<div th:if="${scenarioId}" class="d-flex justify-content-between mb-4">
 			<a class="btn btn-secondary" th:href="@{/scenario/{id}(id=${prevScenario})}">
 				<i class="fa-solid fa-angle-left me-1"></i> [[#{scenario.previous}]]
@@ -67,13 +68,13 @@
 				<div class="mb-3">
 					<label for="inputScenarioId" class="form-label">[[#{scenario.id}]]</label>
 					<input type="text" class="form-control" id="inputScenarioId" name="scenarioId"
-					       th:value="${scenario?.id}" required>
+					       th:value="${scenarioId}" required>
 				</div>
 				<div class="mb-3">
 					<label for="inputScenarioPath" class="form-label">[[#{scenario.path}]]</label>
 					<input type="text" class="form-control" id="inputScenarioPath" name="scenarioPath"
 					       th:value="${#strings.listJoin(scenario?.path, ',')}">
-					<div th:if="${scenario}" class="form-text">[[#{scenario.availableSections}]]: [[${scenario?.sections?.keySet()}]]</div>
+					<div th:if="${scenario}" class="form-text">[[#{scenario.availableSections}]]: [[${scenario.sections?.keySet()}]]</div>
 				</div>
 				<div class="d-grid">
 					<button type="submit" class="btn btn-primary">[[#{scenario.goTo}]]</button>

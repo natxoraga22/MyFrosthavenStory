@@ -1,5 +1,9 @@
 {
 	"id": "033",
+	"coordinates": "R2",
 	"name": "Thawed Wood",
-	"unlockedBy": { "section": { "id": "62.2" }}
+	"requirement": { "status": "Into the Forest" },
+	"unlockedBy": { "section": { "id": "62.2" }},
+	"complexity": 3,
+	"location": "Radiant Forest"
 }

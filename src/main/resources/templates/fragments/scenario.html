@@ -12,11 +12,16 @@
 		<div class="title">
 			<h1>
 				<span class="titleSecondary">[[*{#numbers.formatInteger(id,1)}]] ·</span> [[*{name}]]
-				<img th:if="*{requirement}" class="requirement" th:src="@{/img/icons/__*{#strings.toLowerCase(requirement)}__.png}">
+				<!-- Requirements -->
+				<th:block th:if="*{requirement}">
+					<th:block th:replace="~{:: requirement(*{requirement})}"></th:block>
+				</th:block>
 			</h1>
+			<!-- Unlocked by -->
 			<th:block th:if="*{unlockedBy}">
-				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>
+				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
 			</th:block>
+			<!-- Location -->
 			<div th:if="*{location}" class="subtitle">
 				<i class="fa-solid fa-map-location me-1"></i> [[*{location}]]
 			</div>
@@ -45,6 +50,21 @@
 					<div th:replace="~{fragments/section :: section(${section})}"></div>
 				</th:block>
 			</th:block>
+		</div>
+	</div>
+
+
+	<!-- ----------- -->
+	<!-- REQUIREMENT -->
+	<!-- ----------- -->
+	<div th:fragment="requirement(requirement)" th:object="${requirement}" class="requirement">
+		<!-- Transport -->
+		<div class="transport">
+			<img th:if="*{transport}" th:src="@{/img/icons/__*{transport}__.png}">
+		</div>
+		<!-- Status -->
+		<div th:if="*{status}" class="status">
+			[[*{status}]]
 		</div>
 	</div>
 

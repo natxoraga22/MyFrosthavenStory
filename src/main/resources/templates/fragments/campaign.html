@@ -26,20 +26,6 @@
 	</div>
 
 
-	<!-- ----------- -->
-	<!-- UNLOCKED BY -->
-	<!-- ----------- -->
-	<div th:fragment="unlockedBy(unlockedBy)" th:object="${unlockedBy}" class="subtitle">
-		<i class="fa-solid fa-unlock me-1"></i> Unlocked by:
-		<a th:if="*{scenario}" class="link-secondary" th:href="|#scenario_*{scenario.id}|">
-			Scenario [[*{scenario.id}]]
-		</a>
-		<a th:if="*{event}" class="link-secondary" th:href="|#event_*{event.id}|">
-			Event [[*{event.id}]]
-		</a>
-	</div>
-
-
 	<!-- ------------------------- -->
 	<!-- EDIT PERSONAL STORY MODAL -->
 	<!-- ------------------------- -->

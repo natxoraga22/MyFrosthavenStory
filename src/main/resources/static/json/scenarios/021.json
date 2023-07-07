@@ -2,7 +2,7 @@
 	"id": "021",
 	"coordinates": "N1",
 	"name": "Realm of Endless Frost",
-	"requirement": "Sled",
+	"requirement": { "transport": "sled" },
 	"unlockedBy": { "scenario": { "id": "013" }},
 	"complexity": 3,
 	"goals": "The scenario is complete when the Prince of Frost is dead. At the end of that round, read [section] <strong>136.3</strong>.",

@@ -18,7 +18,7 @@ public class Scenario extends StoryObject {
 	private String id;
 	private String coordinates;
 	private String name;
-	private String requirement;
+	private Requirement requirement;
 	private StoryItem unlockedBy;
 	private int complexity;
 	private String location;
@@ -47,6 +47,19 @@ public class Scenario extends StoryObject {
 	public void replaceIcons() {
 		this.goals = ModelUtils.replaceIcons(this.goals);
 		this.effects = ModelUtils.replaceIcons(this.effects);
+	}
+
+	
+	/* ----------- */
+	/* REQUIREMENT */
+	/* ----------- */
+
+	@Getter
+	@Setter
+	@ToString
+	public static class Requirement {
+		private String transport;
+		private String status;
 	}
 
 }

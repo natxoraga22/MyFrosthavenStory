@@ -2,7 +2,7 @@
 	"id": "022",
 	"coordinates": "I2",
 	"name": "Ice Floes",
-	"requirement": "Boat",
+	"requirement": { "transport": "boat" },
 	"unlockedBy": { "scenario": { "id": "014" }},
 	"complexity": 2,
 	"location": "Biting Sea",

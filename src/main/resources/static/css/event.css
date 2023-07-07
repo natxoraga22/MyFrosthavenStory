@@ -3,18 +3,25 @@
 /* VARIABLES */
 /* --------- */
 
-.event {
+:root {
 	/* Gap between event elements */
 	--event-inner-gap: 2rem;
 
 	/* Gap between option elements */
-	--option-inner-gap: 1rem;
+	--event-option-inner-gap: 1rem;
+
+	/* Gap between event form inputs */
+	--event-form-inner-gap: 1rem;
 }
 
 
 /* ----- */
 /* EVENT */
 /* ----- */
+
+.event {
+	font-family: var(--font-tinos);
+}
 
 .event .fhCard {
 	float: left;
@@ -38,11 +45,11 @@
 }
 
 .event .option .text {
-	margin-top: var(--option-inner-gap);
+	margin-top: var(--event-option-inner-gap);
 }
 
 .event .option .rewards {
-	margin-top: var(--option-inner-gap);
+	margin-top: var(--event-option-inner-gap);
 	font-weight: bold;
 }
 
@@ -53,4 +60,15 @@
 
 .event .section {
 	margin-top: var(--event-inner-gap);
+}
+
+
+/* ---------- */
+/* EVENT FORM */
+/* ---------- */
+
+#eventForm .card-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--event-form-inner-gap);
 }

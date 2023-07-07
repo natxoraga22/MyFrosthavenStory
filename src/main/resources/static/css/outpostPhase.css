@@ -3,7 +3,7 @@
 /* VARIABLES */
 /* --------- */
 
-.outpostPhase {
+:root {
 	/* Gap between outpost phase elements */
 	--outpost-inner-gap: 3rem;
 

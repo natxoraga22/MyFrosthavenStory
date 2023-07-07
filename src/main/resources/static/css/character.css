@@ -3,7 +3,7 @@
 /* VARIABLES */
 /* --------- */
 
-.character {
+:root {
 	/* Gap between character elements */
 	--character-inner-gap: 1rem;
 

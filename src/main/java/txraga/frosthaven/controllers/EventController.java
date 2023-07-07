@@ -29,6 +29,9 @@ public class EventController {
 	                                       @RequestParam(required = false) String chosenOption,
 	                                       @RequestParam(required = false) String sectionId) {
 		log.entry();
+		model.addAttribute("eventId", eventId);
+		model.addAttribute("chosenOption", chosenOption);
+		model.addAttribute("sectionId", sectionId);
 		model.addAttribute("event", getEvent(eventId, chosenOption, sectionId));
 		return log.exit(new ModelAndView("event"));
 	}

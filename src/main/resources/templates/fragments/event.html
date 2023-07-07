@@ -36,8 +36,10 @@
 		</div>
 
 		<!-- Option -->
-		<th:block th:if="*{chosenOption}">
-			<th:block th:replace="~{:: option(${event.options['__${event.chosenOption}__']})}"></th:block>
+		<th:block th:if="*{chosenOption}" th:with="chosenOption = *{options['__*{chosenOption}__']}">
+			<th:block th:if="${chosenOption}">
+				<th:block th:replace="~{:: option(${chosenOption})}"></th:block>
+			</th:block>
 		</th:block>
 
 		<!-- Section -->
@@ -68,5 +70,35 @@
 			[(*{rewards})]
 		</div>
 	</div>
+
+
+	<!-- ---------- -->
+	<!-- EVENT FORM -->
+	<!-- ---------- -->
+	<form th:fragment="eventForm" th:action="@{/event}" method="post" class="eventForm"> 
+		<div class="card">
+			<div class="card-body">
+				<div class="mb-3">
+					<label for="inputEventId" class="form-label">[[#{event.id}]]</label>
+					<input type="text" class="form-control" id="inputEventId" name="eventId"
+					       th:value="${event?.id}" required>
+				</div>
+				<div class="mb-3">
+					<label for="inputChosenOption" class="form-label">[[#{event.chosenOption}]]</label>
+					<input type="text" class="form-control" id="inputChosenOption" name="chosenOption"
+					       th:value="${event?.chosenOption}">
+					<div th:if="${event}" class="form-text">[[#{event.availableOptions}]]: [[${event.options.keySet()}]]</div>
+				</div>
+				<div class="mb-3">
+					<label for="inputSectionId" class="form-label">[[#{event.sectionId}]]</label>
+					<input type="text" class="form-control" id="inputSectionId" name="sectionId"
+					       th:value="${event?.section?.id}">
+				</div>
+				<div class="d-grid">
+					<button type="submit" class="btn btn-primary">[[#{event.goTo}]]</button>
+				</div>
+			</div>
+		</div>
+	</form>
 </body>
 </html>

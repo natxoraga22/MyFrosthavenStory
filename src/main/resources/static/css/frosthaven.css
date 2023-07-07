@@ -4,8 +4,20 @@
 /* --------- */
 
 :root {
+	/* Padding top and bottom for the page content */
+	--frosthaven-padding-y: 2rem;
+
+	/* Default color for all text (extracted from Frosthaven PDFs) */
+	--frosthaven-color: #2c2e35;      
+
 	/* Margin bottom for all titles */
 	--title-margin-bottom: 1rem;
+
+	/* Title sizes */
+	--title-size: 28pt;
+	--title-size-small: 25pt;
+	--title-size-smaller: 22pt;
+	--subtitle-size: 12pt;
 }
 
 
@@ -30,15 +42,23 @@
 	font-size: var(--title-size);
 }
 
-.frosthaven .title .number {
+.frosthaven .title h1, .frosthaven .title h2, .frosthaven .title h3 {
+	margin-bottom: 0;
+}
+
+.frosthaven .titleSecondary {
 	font-family: var(--font-germania-one);
 	font-size: var(--title-size-small);
 }
 
-.frosthaven .title .unlockedBy {
+.frosthaven .titleTertiary {
+	font-family: var(--font-germania-one);
+	font-size: var(--title-size-smaller);
+}
+
+.frosthaven .subtitle {
 	font-family: var(--font-tinos);
-	font-size: 12pt;
-	line-height: 1.5;
+	font-size: var(--subtitle-size);
 }
 
 

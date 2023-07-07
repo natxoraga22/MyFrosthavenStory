@@ -28,11 +28,6 @@ div.section {
 /* TITLE */
 /* ----- */
 
-.section .title {
-	font-family: var(--font-germania-one);
-	font-size: var(--title-size-small);
-}
-
 .section .title .number {
 	font-size: var(--title-size-smaller);
 }

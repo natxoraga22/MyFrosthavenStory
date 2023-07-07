@@ -49,12 +49,6 @@
 /* TITLE */
 /* ----- */
 
-.scenario .title .location {
-	font-family: var(--font-tinos);
-	font-size: 12pt;
-	line-height: 1.5;
-}
-
 .scenario .title .requirement {
 	max-width: 40px;
 	margin-left: 0.5rem;

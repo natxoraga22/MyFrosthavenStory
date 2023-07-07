@@ -23,6 +23,10 @@
 	font-family: var(--font-tinos);
 }
 
+.event .title {
+	margin-bottom: var(--title-margin-bottom);
+}
+
 .event .fhCard {
 	float: left;
 	width: 287px;

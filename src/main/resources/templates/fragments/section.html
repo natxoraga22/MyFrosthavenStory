@@ -14,9 +14,9 @@
 		</div>
 
 		<!-- Title -->
-		<div th:if="*{title}" class="title">
-			<h2 class="mb-0">
-				<span class="number">[[*{id}]] ·</span> [[*{title}]]
+		<div th:if="*{title}" class="title titleSecondary">
+			<h2>
+				<span class="titleTertiary">[[*{id}]] ·</span> [[*{title}]]
 			</h2>
 			<th:block th:if="*{unlockedBy}">
 				<th:block th:replace="~{fragments/campaign :: unlockedBy(*{unlockedBy})}"></th:block>

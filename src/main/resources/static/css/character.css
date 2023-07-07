@@ -25,11 +25,6 @@
 	font-family: var(--font-tinos);
 }
 
-.character .title {
-	font-family: var(--font-germania-one);
-	font-size: var(--title-size-small);
-}
-
 .character .mat {
 	width: var(--character-mat-width);
 	height: var(--character-mat-height);
@@ -50,8 +45,6 @@
 
 .personalQuest .title {
 	margin-bottom: 0.5rem;
-	font-family: var(--font-germania-one);
-	font-size: var(--title-size-small);
 }
 
 .personalQuest .description {

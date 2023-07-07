@@ -49,10 +49,6 @@
 /* TITLE */
 /* ----- */
 
-.scenario .title {
-	margin-bottom: 0;
-}
-
 .scenario .title .location {
 	font-family: var(--font-tinos);
 	font-size: 12pt;

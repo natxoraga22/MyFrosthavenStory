@@ -1,5 +1,15 @@
 
 /* --------- */
+/* VARIABLES */
+/* --------- */
+
+:root {
+	/* Margin bottom for all titles */
+	--title-margin-bottom: 1rem;
+}
+
+
+/* --------- */
 /* CONTAINER */
 /* --------- */
 
@@ -15,7 +25,7 @@
 /* ------ */
 
 .frosthaven .title {
-	margin-bottom: var(--title-margin-bottom);
+	margin-bottom: 0;
 	font-family: var(--font-pirata-one);
 	font-size: var(--title-size);
 }

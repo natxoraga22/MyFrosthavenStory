@@ -7,7 +7,7 @@
 	<!-- ------- -->
 	<!-- WELCOME -->
 	<!-- ------- -->
-	<div th:fragment="welcome" id="welcome" class="welcome">
+	<div th:fragment="welcome" id="welcome">
 		<h1 class="title">[[#{welcome.title}]]</h1>
 		<div class="text">
 			[(${welcome})]
@@ -18,7 +18,7 @@
 	<!-- ----- -->
 	<!-- PARTY -->
 	<!-- ----- -->
-	<div th:fragment="party" id="party" class="party">
+	<div th:fragment="party" id="party">
 		<h1 class="title">[[#{party.title}]]</h1>
 		<th:block th:each="character : ${party}">
 			<th:block th:replace="fragments/character :: character(${character},true)"></th:block>

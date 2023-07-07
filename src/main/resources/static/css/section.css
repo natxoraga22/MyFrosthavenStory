@@ -29,7 +29,6 @@ div.section {
 /* ----- */
 
 .section .title {
-	margin-bottom: 0;
 	font-family: var(--font-germania-one);
 	font-size: var(--title-size-small);
 }

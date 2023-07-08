@@ -1,0 +1,50 @@
+
+/* ------ */
+/* FhCard */
+/* ------ */
+
+.card.fhCard {
+	/* Card header padding */
+	--bs-card-cap-padding-x: 8px;
+	--bs-card-cap-padding-y: 4px;
+
+	/* Card body padding */
+	--bs-card-spacer-x: 8px;
+	--bs-card-spacer-y: 8px;
+
+	/* Border */
+	--bs-card-border-width: 0;
+	--bs-card-border-radius: 0;
+	--bs-card-inner-border-radius: 0;
+
+	/* Text colors */
+	--bs-card-cap-color: white;
+	--bs-card-color: var(--frosthaven-color);
+}
+
+.card.fhCard .card-header {
+	border-bottom-width: 3px;
+
+	font-family: var(--font-germania-one);
+	font-size: 14pt;
+	line-height: 14pt;
+}
+
+.card.fhCard .card-body {
+	border-width: 0px 2px 2px 2px;
+	border-style: solid;
+}
+
+
+/* -------------- */
+/* FhCard (flush) */
+/* -------------- */
+
+.card.fhCard.fhCardFlush {
+	--bs-card-spacer-x: 0;
+}
+
+.card.fhCard.fhCardFlush .card-body {
+	padding-bottom: 0;
+	border-width: 0;
+}

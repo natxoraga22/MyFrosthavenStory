@@ -10,7 +10,7 @@
 	/* Default color for all text (extracted from Frosthaven PDFs) */
 	--frosthaven-color: #2c2e35;      
 
-	/* Margin bottom for all titles */
+	/* Margin bottom for some titles */
 	--title-margin-bottom: 1rem;
 
 	/* Title sizes */
@@ -18,6 +18,18 @@
 	--title-size-small: 25pt;
 	--title-size-smaller: 22pt;
 	--subtitle-size: 12pt;
+
+	/* Image border for some images */
+	--img-border: 2px solid;
+}
+
+
+/* ------ */
+/* NAVBAR */
+/* ------ */
+
+.navbar .navbar-brand {
+	line-height: 0;
 }
 
 
@@ -70,61 +82,13 @@
 	margin-bottom: 0;
 }
 
+/*
 .frosthaven .fhCard img {
 	max-width: var(--img-card-max-size);
 	max-height: var(--img-card-max-size);
 }
+*/
 
 .frosthaven .scenarioNumber {
 	font-family: var(--font-germania-one);
 }
-
-
-/* ----- */
-/* ICONS */
-/* ----- */
-
-.frosthaven .icon {
-	max-height: 16px;
-	margin-top: -3px;
-}
-
-.frosthaven .icon.one,
-.frosthaven .icon.two,
-.frosthaven .icon.three,
-.frosthaven .icon.a,
-.frosthaven .icon.b,
-.frosthaven .icon.c,
-.frosthaven .icon.d,
-.frosthaven .icon.e {
-	max-height: 20px;
-}
-
-.frosthaven .icon.bane,
-.frosthaven .icon.bless,
-.frosthaven .icon.brittle,
-.frosthaven .icon.curse,
-.frosthaven .icon.disarm,
-.frosthaven .icon.immobilize,
-.frosthaven .icon.impair,
-.frosthaven .icon.invisible,
-.frosthaven .icon.muddle,
-.frosthaven .icon.pierce,
-.frosthaven .icon.poison,
-.frosthaven .icon.pull,
-.frosthaven .icon.push,
-.frosthaven .icon.regenerate,
-.frosthaven .icon.strengthen,
-.frosthaven .icon.stun,
-.frosthaven .icon.ward,
-.frosthaven .icon.wound {
-	max-height: 20px;
-}
-
-.frosthaven .icon.crashingtide { max-height: 18px; }
-.frosthaven .icon.deathwalker { max-height: 20px; }
-
-.frosthaven .icon.damage { max-height: 18px; }
-.frosthaven .icon.heal { max-height: 18px; }
-.frosthaven .icon.range { max-height: 15px; }
-.frosthaven .icon.retaliate { max-height: 17px; }

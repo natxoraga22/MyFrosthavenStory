@@ -35,34 +35,6 @@
 	gap: var(--scenario-sections-gap);
 }
 
-.scenario .card, .section .card {
-	--bs-card-spacer-x: 8px;
-	--bs-card-spacer-y: 8px;
-
-	--bs-card-border-width: 0;
-	--bs-card-inner-border-radius: 0;
-
-	--bs-card-cap-padding-y: 4px;
-	--bs-card-cap-padding-x: 8px;
-
-	--bs-card-cap-color: white;
-
-	--bs-card-color: #2c2e35;
-}
-
-.scenario .card-header, .section .card-header {
-	border-bottom-width: 3px;
-
-	font-family: var(--font-germania-one);
-	font-size: 14pt;
-	line-height: 14pt;
-}
-
-.scenario .card-body, .section .card-body {
-	border-width: 0px 2px 2px 2px;
-	border-style: solid;
-}
-
 
 /* ----- */
 /* TITLE */

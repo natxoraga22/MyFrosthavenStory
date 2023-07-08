@@ -1,4 +1,14 @@
 
+/* --------- */
+/* VARIABLES */
+/* --------- */
+
+:root {
+	/* Gap between section elements */
+	--section-inner-gap: 1rem;
+}
+
+
 /* ------ */
 /* COMMON */
 /* ------ */
@@ -38,18 +48,12 @@ div.section {
 /* ------------ */
 
 .section .introduction {
-	--bs-card-spacer-x: 0;
 	--bs-card-cap-bg: #226526;
 	--bs-card-bg: white;
 }
 
 .section .introduction .card-header {
 	border-bottom-color: #73c34b;
-}
-
-.section .introduction .card-body {
-	padding-bottom: 0;
-	border-width: 0;
 }
 
 
@@ -129,24 +133,22 @@ div.section {
 	text-align: center;
 }
 
+.section .map img {
+	border: var(--img-border);
+}
+
 
 /* ---------- */
 /* CONCLUSION */
 /* ---------- */
 
 .section .conclusion {
-	--bs-card-spacer-x: 0;
 	--bs-card-cap-bg: #6d0c07;
 	--bs-card-bg: white;
 }
 
 .section .conclusion .card-header {
 	border-bottom-color: #c92918;
-}
-
-.section .conclusion .card-body {
-	padding-bottom: 0;
-	border-width: 0;
 }
 
 

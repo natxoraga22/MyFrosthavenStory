@@ -42,17 +42,17 @@
 	border: 0;
 }
 
-.building img.boat{
+.building img.boat {
 	max-width: var(--boat-max-size);
 	max-height: var(--boat-max-size);
 }
 
-.building img.climbinggear{
+.building img.climbinggear {
 	max-width: var(--climbinggear-max-size);
 	max-height: var(--climbinggear-max-size);
 }
 
-.building img.sled{
+.building img.sled {
 	max-width: var(--sled-max-size);
 	max-height: var(--sled-max-size);
 }

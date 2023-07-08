@@ -24,7 +24,7 @@
 		</div>
 
 		<!-- Introduction -->
-		<div th:if="*{introduction}" class="card introduction">
+		<div th:if="*{introduction}" class="card fhCard fhCardFlush introduction">
 			<div class="card-header">[[#{section.introduction}]]</div>
 			<div class="card-body">
 				[(*{introduction})]
@@ -37,7 +37,7 @@
 		</div>
 
 		<!-- Special rules -->
-		<div th:if="*{specialRules}" class="card specialRules">
+		<div th:if="*{specialRules}" class="card fhCard specialRules">
 			<div class="card-header">[[#{section.specialRules}]]</div>
 			<div class="card-body">
 				[(*{specialRules})]
@@ -45,7 +45,7 @@
 		</div>
 
 		<!-- Boss specials -->
-		<div th:each="bossSpecial : *{bossSpecials.entrySet()}" class="card bossSpecial">
+		<div th:each="bossSpecial : *{bossSpecials.entrySet()}" class="card fhCard bossSpecial">
 			<div class="card-header">
 				<i class="fa-solid fa-skull fa-xs"></i> [[#{section.bossSpecial}]] [[${bossSpecial.key}]]
 			</div>
@@ -60,7 +60,7 @@
 		</div>
 
 		<!-- Conclusion -->
-		<div th:if="*{conclusion}" class="card conclusion">
+		<div th:if="*{conclusion}" class="card fhCard fhCardFlush conclusion">
 			<div class="card-header">[[#{section.conclusion}]]</div>
 			<div class="card-body">
 				[(*{conclusion})]
@@ -68,7 +68,7 @@
 		</div>
 
 		<!-- Rewards -->
-		<div th:if="*{rewards}" class="card rewards">
+		<div th:if="*{rewards}" class="card fhCard rewards">
 			<div class="card-header">[[#{section.rewards}]]</div>
 			<div class="card-body">
 				[(*{rewards})]
@@ -76,7 +76,7 @@
 		</div>
 
 		<!-- Section Links -->
-		<div th:if="*{conclusion != null && sectionLinks != null}" class="card sectionLinks">
+		<div th:if="*{conclusion != null && sectionLinks != null}" class="card fhCard sectionLinks">
 			<div class="card-header">[[#{section.sectionLinks}]]</div>
 			<div class="card-body">
 				[(*{sectionLinks})]

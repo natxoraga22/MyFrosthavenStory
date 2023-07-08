@@ -1,0 +1,49 @@
+
+/* ----- */
+/* ICONS */
+/* ----- */
+
+.icon {
+	max-height: 16px;
+	margin-top: -3px;
+}
+
+.icon.one,
+.icon.two,
+.icon.three,
+.icon.a,
+.icon.b,
+.icon.c,
+.icon.d,
+.icon.e {
+	max-height: 20px;
+}
+
+.icon.bane,
+.icon.bless,
+.icon.brittle,
+.icon.curse,
+.icon.disarm,
+.icon.immobilize,
+.icon.impair,
+.icon.invisible,
+.icon.muddle,
+.icon.pierce,
+.icon.poison,
+.icon.pull,
+.icon.push,
+.icon.regenerate,
+.icon.strengthen,
+.icon.stun,
+.icon.ward,
+.icon.wound {
+	max-height: 20px;
+}
+
+.icon.crashingtide { max-height: 18px; }
+.icon.deathwalker { max-height: 20px; }
+
+.icon.damage { max-height: 18px; }
+.icon.heal { max-height: 18px; }
+.icon.range { max-height: 15px; }
+.icon.retaliate { max-height: 17px; }

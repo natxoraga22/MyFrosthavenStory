@@ -70,10 +70,6 @@
 	margin-bottom: 0;
 }
 
-.frosthaven img:not(.icon) {
-	border: var(--img-border);
-}
-
 .frosthaven .fhCard img {
 	max-width: var(--img-card-max-size);
 	max-height: var(--img-card-max-size);

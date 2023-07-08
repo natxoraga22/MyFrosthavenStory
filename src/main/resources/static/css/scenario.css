@@ -1,4 +1,22 @@
 
+/* --------- */
+/* VARIABLES */
+/* --------- */
+
+:root {
+	/* Gap between scenario elements */
+	--scenario-inner-gap: 1rem;
+
+	/* Gap between scenario sections */
+	--scenario-sections-gap: 1.5rem;
+
+	/* Requirement */
+	--scenario-requirement-transport-size: 50px;
+	--scenario-requirement-transport-padding: 11px;
+	--scenario-requirement-status-padding: 10px;
+}
+
+
 /* ------ */
 /* COMMON */
 /* ------ */
@@ -50,13 +68,36 @@
 /* TITLE */
 /* ----- */
 
-.scenario .title .requirement {
-	max-width: 40px;
-	margin-left: 0.5rem;
-	padding: 5px;
+.scenario .requirement {
+	display: inline-block;
+	margin-left: 1rem;
+	vertical-align: middle;
+}
+
+.scenario .requirement .transport, .scenario .requirement .status {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	border: 4px solid #e9cdad;
-	border-radius: 30px;
 	background-color: #d6a465;
+}
+
+.scenario .requirement .transport {
+	width: var(--scenario-requirement-transport-size);
+	height: var(--scenario-requirement-transport-size);
+	border-radius: var(--scenario-requirement-transport-size);
+}
+
+.scenario .requirement .transport img {
+	max-width: calc(var(--scenario-requirement-transport-size) - var(--scenario-requirement-transport-padding)*2);
+	max-height: calc(var(--scenario-requirement-transport-size) - var(--scenario-requirement-transport-padding)*2);
+}
+
+.scenario .requirement .status {
+	padding: calc(var(--scenario-requirement-status-padding)/2) var(--scenario-requirement-status-padding);
+	border-radius: var(--scenario-requirement-status-padding);
+	font-size: 14pt;
 }
 
 

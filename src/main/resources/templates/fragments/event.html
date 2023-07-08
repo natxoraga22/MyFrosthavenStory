@@ -20,8 +20,8 @@
 		</div>
 
 		<!-- Card -->
-		<div class="fhCard flip" th:with="typeFolder = *{#strings.toLowerCase(type.toString())}">
-			<div class="flipInner">
+		<div class="playingCard flippable" th:with="typeFolder = *{#strings.toLowerCase(type.toString())}">
+			<div class="flippableInner">
 				<div class="front">
 					<img th:src="@{/img/events/__${typeFolder}__/__*{id}__.png}">
 				</div>
@@ -91,7 +91,7 @@
 				<div>
 					<label for="inputSectionId" class="form-label">[[#{event.sectionId}]]</label>
 					<input type="text" class="form-control" id="inputSectionId" name="sectionId" th:value="${sectionId}">
-					<div th:if="${event}" class="form-text">[[#{event.sectionId.help}]]</div>
+					<div class="form-text">[[#{event.sectionId.help}]]</div>
 				</div>
 				<div class="d-grid">
 					<button type="submit" class="btn btn-primary">[[#{event.goTo}]]</button>

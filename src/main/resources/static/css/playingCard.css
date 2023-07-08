@@ -1,0 +1,53 @@
+
+/* --------- */
+/* VARIABLES */
+/* --------- */
+
+:root {
+	/* Playing card size */
+	--playing-card-width: 287px;
+	--playing-card-height: 400px;
+}
+
+
+/* ------------ */
+/* PLAYING CARD */
+/* ------------ */
+
+.playingCard {
+	width: var(--playing-card-width);
+	height: var(--playing-card-height);
+}
+
+.playingCard img {
+	max-width: var(--playing-card-width);
+	max-height: var(--playing-card-height);
+	border: var(--img-border);
+}
+
+
+/* --------- */
+/* FLIPPABLE */
+/* --------- */
+
+.flippable {
+	perspective: 1000px;
+}
+
+.flippable .flippableInner {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.flippable:hover .flippableInner {
+	transform: rotateY(-180deg);
+}
+
+.flippable .front, .flippable .back{
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.flippable .back {
+	transform: rotateY(-180deg);
+}

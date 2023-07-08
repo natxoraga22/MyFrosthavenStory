@@ -27,10 +27,8 @@
 	margin-bottom: var(--title-margin-bottom);
 }
 
-.event .fhCard {
+.event .playingCard {
 	float: left;
-	width: 287px;
-	height: 400px;
 	margin-right: var(--img-margin);
 	margin-bottom: var(--img-margin);
 }

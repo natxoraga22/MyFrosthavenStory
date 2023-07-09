@@ -7,6 +7,9 @@
 	/* Playing card size */
 	--playing-card-width: 287px;
 	--playing-card-height: 400px;
+
+	/* Playing card margin */
+	--playing-card-margin: 1rem;
 }
 
 
@@ -23,6 +26,12 @@
 	max-width: var(--playing-card-width);
 	max-height: var(--playing-card-height);
 	border: var(--img-border);
+}
+
+.playingCard.integrated {
+	float: left;
+	margin-right: var(--playing-card-margin);
+	margin-bottom: var(--playing-card-margin);
 }
 
 

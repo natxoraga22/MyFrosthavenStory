@@ -34,7 +34,7 @@
 /* ------------ */
 
 .outpostPhase .construction .building .fhCard {
-	margin-top: var(--img-margin);
+	margin-top: 1rem;
 	text-align: center;
 }
 
@@ -58,5 +58,5 @@
 }
 
 .building .section {
-	margin-top: var(--part-margin);
+	margin-top: 2rem;
 }

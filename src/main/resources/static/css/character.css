@@ -52,7 +52,7 @@
 }
 
 .personalQuest .rewards {
-	margin-top: var(--element-margin);
+	margin-top: 1rem;
 
 	--bs-card-spacer-x: 8px;
 	--bs-card-spacer-y: 8px;

@@ -27,12 +27,6 @@
 	margin-bottom: var(--title-margin-bottom);
 }
 
-.event .playingCard {
-	float: left;
-	margin-right: var(--img-margin);
-	margin-bottom: var(--img-margin);
-}
-
 .event .text {
 	font-style: italic;
 }

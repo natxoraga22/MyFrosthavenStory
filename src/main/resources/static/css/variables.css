@@ -1,9 +1,0 @@
-
-:root {
-	--img-margin: 1rem;
-	--img-card-max-size: 400px;         /* Max size for images representing standard sized cards (personal quests, events, buildings, etc.) */
-
-
-	--part-margin: 2rem;                /* Margin for parts of same story object (characters inside party, outpost phase parts, etc.) */
-	--element-margin: 1rem;             /* Margin for elements inside same section */
-}

@@ -57,7 +57,7 @@
 	<!-- CAMPAIGN JS -->
 	<!-- ----------- -->
 	<script th:fragment="campaignJs" id="campaignJs" th:inline="javascript">
-		window.onload = function() {
+		window.addEventListener("load", function() {
 			/* Fetch personalStory on page load and reload all campaign content */
 			reloadCampaign();
 
@@ -80,7 +80,7 @@
 				const personalStoryInput = document.getElementById("personalStoryInput");
 				personalStoryInput.value = JSON.stringify(JSON.parse(personalStoryInput.value), null, 4);
 			});
-		};
+		});
 
 		/**
 		 * Reloads all campaign content by fetching the personalStory from localStorage.
@@ -88,6 +88,7 @@
 		 * and when the user edits the personalStory through the editPersonalStoryModal.
 		 */
 		function reloadCampaign() {
+			console.log("reloadCampaign()");
 			const personalStory = JSON.parse(localStorage.getItem("personalStory"));
 
 			fetch("/personalStory", {
@@ -113,6 +114,7 @@
 		 * This function is called when the user clicks the "Save" button in the editPersonalStoryModal.
 		 */
 		function savePersonalStory() {
+			console.log("savePersonalStory()");
 			const newPersonalStory = document.getElementById("personalStoryInput").value;
 			// Store the JSON in raw format (not beaufitied)
 			localStorage.setItem("personalStory", JSON.stringify(JSON.parse(newPersonalStory)));

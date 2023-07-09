@@ -16,8 +16,8 @@
 		</h2>
 
 		<!-- Mat -->
-		<div class="mat flip">
-			<div class="flipInner">
+		<div class="mat flippable" onclick="flip(event)">
+			<div class="flippableInner">
 				<div class="front">
 					<img th:src="@{/img/characters/__*{id}__.png}">
 				</div>
@@ -62,7 +62,7 @@
 	<!-- -------------- -->
 	<div th:fragment="personalQuest(personalQuest)" th:object="${personalQuest}" th:id="|personalQuest_*{id}|" class="personalQuest">
 		<!-- Card -->
-		<div class="fhCard">
+		<div class="playingCard integrated">
 			<img th:src="@{/img/personalQuests/__*{id}__.png}">
 		</div>
 
@@ -77,7 +77,7 @@
 		<div class="requirements">[[*{requirements}]]</div>
 
 		<!-- Rewards -->
-		<div class="card rewards">
+		<div class="card fhCard rewards">
 			<div class="card-header">[[#{section.rewards}]]</div>
 			<div class="card-body">
 				[(*{rewards.envelope})] <i class="fa-solid fa-right-long mx-1"></i> [(*{rewards.building})]

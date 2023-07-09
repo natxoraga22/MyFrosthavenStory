@@ -32,16 +32,14 @@
 	margin-right: auto;
 }
 
+.character .mat img {
+	border: var(--img-border);
+}
+
 
 /* -------------- */
 /* PERSONAL QUEST */
 /* -------------- */
-
-.personalQuest .fhCard {
-	float: left;
-	margin-right: var(--img-margin);
-	margin-bottom: var(--img-margin);
-}
 
 .personalQuest .title {
 	margin-bottom: 0.5rem;
@@ -54,22 +52,18 @@
 .personalQuest .rewards {
 	margin-top: 1rem;
 
-	--bs-card-spacer-x: 8px;
-	--bs-card-spacer-y: 8px;
-	--bs-card-cap-padding-y: 4px;
-	--bs-card-cap-padding-x: 8px;
-
 	--bs-card-border-width: 2px;
-	--bs-card-border-radius: 0;
 	--bs-card-border-color: #030302;
-
+	--bs-card-cap-color: var(--frosthaven-color);
 	--bs-card-bg: #e7cc8b;
 }
 
 .personalQuest .rewards .card-header {
-	font-family: var(--font-germania-one);
-	font-size: 14pt;
-	line-height: 14pt;
+	border-bottom-width: 2px;
+}
+
+.personalQuest .rewards .card-body {
+	border-width: 0;
 }
 
 
@@ -77,7 +71,7 @@
 /* ICONS */
 /* ----- */
 
-.character .icon {
+.character .title .icon {
 	margin-right: 0.25rem;
 }
 

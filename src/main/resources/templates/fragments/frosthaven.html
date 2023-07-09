@@ -24,7 +24,8 @@
 	<!-- ------------ -->
 	<!-- PLAYING CARD -->
 	<!-- ------------ -->
-	<div th:fragment="playingCard(integrated,frontSrc,backSrc)" class="playingCard flippable" th:classappend="${integrated} ? integrated">
+	<div th:fragment="playingCard(integrated,frontSrc,backSrc)" onclick="flip(event)"
+	     class="playingCard flippable" th:classappend="${integrated} ? integrated">
 		<div class="flippableInner">
 			<div th:if="${frontSrc}" class="front">
 				<img th:src="${frontSrc}">
@@ -40,14 +41,10 @@
 	<!-- PLAYING CARD JS -->
 	<!-- --------------- -->
 	<script th:fragment="playingCardJs" id="playingCardJs" th:inline="javascript">
-		window.onload = function() {
-			const flippableElements = document.querySelectorAll(".flippable");
-			flippableElements.forEach(function(flippableElement) {
-				flippableElement.addEventListener("click", function() {
-					this.classList.toggle("flipped");
-				});
-			});
-		};
+		function flip(event) {
+			const flippableElement = event.currentTarget;
+			flippableElement.classList.toggle("flipped");
+		}
 	</script>
 </body>
 </html>

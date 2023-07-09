@@ -39,7 +39,7 @@
 	transform-style: preserve-3d;
 }
 
-.flippable:hover .flippableInner {
+.flippable.flipped .flippableInner {
 	transform: rotateY(-180deg);
 }
 

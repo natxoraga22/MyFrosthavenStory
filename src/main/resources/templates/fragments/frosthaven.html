@@ -19,5 +19,35 @@
 			Section [[*{section.id}]]
 		</a>
 	</div>
+
+
+	<!-- ------------ -->
+	<!-- PLAYING CARD -->
+	<!-- ------------ -->
+	<div th:fragment="playingCard(frontSrc,backSrc)" class="playingCard flippable">
+		<div class="flippableInner">
+			<div th:if="${frontSrc}" class="front">
+				<img th:src="${frontSrc}">
+			</div>
+			<div class="back">
+				<img th:src="${backSrc}">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- --------------- -->
+	<!-- PLAYING CARD JS -->
+	<!-- --------------- -->
+	<script th:fragment="playingCardJs" id="playingCardJs" th:inline="javascript">
+		window.onload = function() {
+			const flippableElements = document.querySelectorAll(".flippable");
+			flippableElements.forEach(function(flippableElement) {
+				flippableElement.addEventListener("click", function() {
+					this.classList.toggle("flipped");
+				});
+			});
+		};
+	</script>
 </body>
 </html>

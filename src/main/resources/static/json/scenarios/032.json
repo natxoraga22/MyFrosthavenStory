@@ -1,7 +1,8 @@
 {
 	"id": "032",
-	"coordinates": "Q3",
 	"name": "Ravens’ Roost",
+	"questLine": "Lurker",
+	"coordinates": "Q3",
 	"unlockedBy": { "scenario": { "id": "013" }},
 	"complexity": 2,
 	"location": "Radiant Forest",

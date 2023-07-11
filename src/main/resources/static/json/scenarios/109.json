@@ -1,5 +1,6 @@
 {
 	"id": "109",
 	"name": "Furious Factory",
+	"questLine": "RandomScenario",
 	"unlockedBy": { "section": { "id": "119.3" }}
 }

@@ -1,7 +1,8 @@
 {
 	"id": "003",
-	"coordinates": "L7",
 	"name": "Algox Offensive",
+	"questLine": "Introduction",
+	"coordinates": "L7",
 	"unlockedBy": { "scenario": { "id": "001" }},
 	"complexity": 2,
 	"location": "Copperneck Mountains",

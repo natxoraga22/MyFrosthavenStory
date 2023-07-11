@@ -1,5 +1,6 @@
 {
 	"id": "006",
 	"name": "Avalanche",
+	"questLine": "AlgoxIcespeaker",
 	"unlockedBy": { "scenario": { "id": "004" }}
 }

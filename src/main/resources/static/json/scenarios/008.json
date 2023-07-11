@@ -1,5 +1,6 @@
 {
 	"id": "008",
 	"name": "Crystal Trench",
+	"questLine": "Unfettered",
 	"unlockedBy": { "scenario": { "id": "004" }}
 }

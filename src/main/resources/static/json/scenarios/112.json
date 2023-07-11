@@ -1,5 +1,6 @@
 {
 	"id": "112",
 	"name": "Raised by Wolves",
+	"questLine": "RandomScenario",
 	"unlockedBy": { "section": { "id": "146.4" }}
 }

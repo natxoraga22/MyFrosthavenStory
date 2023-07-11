@@ -1,5 +1,6 @@
 {
 	"id": "005",
 	"name": "Frozen Crypt",
+	"questLine": "AlgoxSnowspeaker",
 	"unlockedBy": { "scenario": { "id": "004" }}
 }

@@ -1,5 +1,6 @@
 {
 	"id": "122",
 	"name": "The Eternal Crave",
+	"questLine": "Other",
 	"unlockedBy": { "event": { "id": "SR-13" }}
 }

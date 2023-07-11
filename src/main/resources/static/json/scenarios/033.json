@@ -1,7 +1,8 @@
 {
 	"id": "033",
-	"coordinates": "R2",
 	"name": "Thawed Wood",
+	"questLine": "Lurker",
+	"coordinates": "R2",
 	"requirement": { "status": "Into the Forest" },
 	"unlockedBy": { "section": { "id": "62.2" }},
 	"complexity": 3,

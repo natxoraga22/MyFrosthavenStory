@@ -1,7 +1,8 @@
 {
 	"id": "002",
-	"coordinates": "K8",
 	"name": "Algox Scouting",
+	"questLine": "Introduction",
+	"coordinates": "K8",
 	"unlockedBy": { "scenario": { "id": "001" }},
 	"complexity": 1,
 	"location": "Copperneck Mountains",

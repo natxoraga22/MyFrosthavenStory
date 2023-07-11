@@ -1,7 +1,8 @@
 {
 	"id": "000",
-	"coordinates": "N6",
 	"name": "Howling in the Snow",
+	"questLine": "Introduction",
+	"coordinates": "N6",
 	"complexity": 1,
 	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>2.2</strong>.",
 

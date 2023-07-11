@@ -1,7 +1,8 @@
 {
 	"id": "004",
-	"coordinates": "M8",
 	"name": "Heart of Ice",
+	"questLine": "Introduction",
+	"coordinates": "M8",
 	"unlockedBy": { "scenario": { "id": "002" }},
 	"complexity": 2,
 	"location": "Copperneck Mountains",

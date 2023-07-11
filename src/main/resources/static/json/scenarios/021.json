@@ -1,7 +1,8 @@
 {
 	"id": "021",
-	"coordinates": "N1",
 	"name": "Realm of Endless Frost",
+	"questLine": "Lurker",
+	"coordinates": "N1",
 	"requirement": { "transport": "sled" },
 	"unlockedBy": { "scenario": { "id": "013" }},
 	"complexity": 3,

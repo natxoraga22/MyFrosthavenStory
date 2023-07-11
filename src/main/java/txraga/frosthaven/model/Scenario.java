@@ -16,8 +16,9 @@ import txraga.frosthaven.model.personal.StoryItem;
 public class Scenario extends StoryObject {
 	
 	private String id;
-	private String coordinates;
 	private String name;
+	private QuestLine questLine;
+	private String coordinates;
 	private Requirement requirement;
 	private StoryItem unlockedBy;
 	private int complexity;
@@ -50,6 +51,38 @@ public class Scenario extends StoryObject {
 	public void replaceIcons() {
 		this.goals = ModelUtils.replaceIcons(this.goals);
 		this.effects = ModelUtils.replaceIcons(this.effects);
+	}
+
+
+	/* --------- */
+	/* QUESTLINE */
+	/* --------- */
+
+	public enum QuestLine { 
+		Introduction,
+		AlgoxSnowspeaker,
+		AlgoxIcespeaker,
+		Algox,
+		Unfettered,
+		Lurker,
+		PuzzleBook,
+		PersonalQuest,
+		JobPosting,
+		RandomScenario,
+		Other;
+
+		@Override
+		public String toString() {
+			switch(this) {
+				case AlgoxSnowspeaker: return "Algox Snowspeaker";
+				case AlgoxIcespeaker: return "Algox Icespeaker";
+				case PuzzleBook: return "Puzzle Book";
+				case PersonalQuest: return "Personal Quest";
+				case JobPosting: return "Job Posting";
+				case RandomScenario: return "Random Scenario";
+				default: return this.name();
+			}
+		}
 	}
 
 	

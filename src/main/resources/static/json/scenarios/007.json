@@ -1,7 +1,8 @@
 {
 	"id": "007",
-	"coordinates": "K3",
 	"name": "Edge of the World",
+	"questLine": "Lurker",
+	"coordinates": "K3",
 	"unlockedBy": { "scenario": { "id": "004" }},
 	"complexity": 1,
 	"goals": "The scenario is complete when the Coral Corpse is dead. At the end of that round, read [section] <strong>3.3</strong>.",

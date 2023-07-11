@@ -1,7 +1,8 @@
 {
 	"id": "022",
-	"coordinates": "I2",
 	"name": "Ice Floes",
+	"questLine": "Lurker",
+	"coordinates": "I2",
 	"requirement": { "transport": "boat" },
 	"unlockedBy": { "scenario": { "id": "014" }},
 	"complexity": 2,

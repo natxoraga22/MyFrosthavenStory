@@ -1,7 +1,8 @@
 {
 	"id": "001",
-	"coordinates": "FR",
 	"name": "A Town in Flames",
+	"questLine": "Introduction",
+	"coordinates": "FR",
 	"complexity": 1,
 	"location": "Frosthaven",
 	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>9.1</strong>.",

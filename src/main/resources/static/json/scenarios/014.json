@@ -1,7 +1,8 @@
 {
 	"id": "014",
-	"coordinates": "L2",
 	"name": "Jagged Shoals",
+	"questLine": "Lurker",
+	"coordinates": "L2",
 	"requirement": { "transport": "boat" },
 	"unlockedBy": { "scenario": { "id": "007" }},
 	"complexity": 2,

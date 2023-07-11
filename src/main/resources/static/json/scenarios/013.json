@@ -1,7 +1,8 @@
 {
 	"id": "013",
-	"coordinates": "O2",
 	"name": "Frozen Fjord",
+	"questLine": "Lurker",
+	"coordinates": "O2",
 	"unlockedBy": { "scenario": { "id": "007" }},
 	"complexity": 2,
 	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>96.1</strong>.",

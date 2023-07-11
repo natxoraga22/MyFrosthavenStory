@@ -8,12 +8,15 @@
 	--scenario-inner-gap: 1rem;
 
 	/* Gap between scenario sections */
-	--scenario-sections-gap: 1.5rem;
+	--scenario-sections-gap: 2rem;
 
 	/* Requirement */
 	--scenario-requirement-transport-size: 50px;
 	--scenario-requirement-transport-padding: 11px;
 	--scenario-requirement-status-padding: 10px;
+
+	/* Gap between scenario and randomScenarioSection */
+	--scenario-randomScenarioSection-gap: 3rem;
 }
 
 
@@ -106,4 +109,13 @@
 
 .scenario .effects .card-body {
 	border-color: #009a8b;
+}
+
+
+/* ----------------------- */
+/* RANDOM SCENARIO SECTION */
+/* ----------------------- */
+
+.scenario > .section {
+	margin-top: calc(var(--scenario-randomScenarioSection-gap) - var(--scenario-inner-gap));
 }

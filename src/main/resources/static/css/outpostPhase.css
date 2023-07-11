@@ -7,6 +7,9 @@
 	/* Gap between outpost phase elements */
 	--outpost-inner-gap: 3rem;
 
+	/* Gap between building elements */
+	--outpost-building-inner-gap: 1rem;
+
 	/* Special buildings sizes */
 	--boat-max-size: 350px;
 	--climbinggear-max-size: 250px;
@@ -25,7 +28,11 @@
 }
 
 .outpostPhase > .title {
-	margin-bottom: calc((var(--outpost-inner-gap) - 1rem)*-1);
+	margin-bottom: calc((var(--outpost-inner-gap) - var(--title-margin-bottom))*-1);
+}
+
+.levelUps > .title {
+	margin-bottom: var(--title-margin-bottom);
 }
 
 
@@ -33,14 +40,30 @@
 /* CONSTRUCTION */
 /* ------------ */
 
-.outpostPhase .construction .building .fhCard {
-	margin-top: 1rem;
-	text-align: center;
+.construction > .title {
+	margin-bottom: var(--title-margin-bottom);
 }
 
-.building img.boat, .building img.climbinggear, .building img.sled {
-	border: 0;
+.building {
+	display: flex;
+	flex-direction: column;
+	gap: var(--outpost-building-inner-gap);
 }
+
+.building .playingCards {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.building .section {
+	margin-top: 1rem;
+}
+
+
+/* ----------------- */
+/* SPECIAL BUILDINGS */
+/* ----------------- */
 
 .building img.boat {
 	max-width: var(--boat-max-size);
@@ -55,8 +78,4 @@
 .building img.sled {
 	max-width: var(--sled-max-size);
 	max-height: var(--sled-max-size);
-}
-
-.building .section {
-	margin-top: 2rem;
 }

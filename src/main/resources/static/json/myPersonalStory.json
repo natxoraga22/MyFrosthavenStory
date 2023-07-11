@@ -70,6 +70,6 @@
 			}
 		},
 		{ "event": { "id": "SR-13", "chosenOption": "A1" }},
-		{ "scenario": { "id": "032" }}
+		{ "scenario": { "id": "032", "randomScenarioSection": { "id": "119.3" }}}
 	]
 }

@@ -91,7 +91,7 @@ public class CampaignController {
 			FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
 			if (partyMember != null) {
 				if (personalStoryPartyMember.getPersonalQuest() != null) {
-					// Set personal quest from personal story
+					// Set personal quest
 					PersonalQuest personalQuest = frosthaven.getPersonalQuest(personalStoryPartyMember.getPersonalQuest().getId());
 					if (personalQuest != null) partyMember.setPersonalQuest(personalQuest);
 				}
@@ -110,8 +110,9 @@ public class CampaignController {
 		log.entry(storyItemEvent);
 		Event event = frosthaven.getEvent(storyItemEvent.getId());
 		if (event != null) {
+			// Set chosen option
 			event.setChosenOption(storyItemEvent.getChosenOption());
-			// Set section from section book
+			// Set section
 			if (storyItemEvent.getSection() != null) {
 				Section section = frosthaven.getSection(storyItemEvent.getSection().getId());
 				if (section != null) event.setSection(section);
@@ -129,8 +130,13 @@ public class CampaignController {
 		log.entry(storyItemScenario);
 		Scenario scenario = FrosthavenFiles.getScenario(storyItemScenario.getId());
 		if (scenario != null) {
-			// Set path from personal story
+			// Set path
 			if (storyItemScenario.getPath() != null) scenario.setPath(storyItemScenario.getPath());
+			// Set randomScenarioSection
+			if (storyItemScenario.getRandomScenarioSection() != null) {
+				Section section = frosthaven.getSection(storyItemScenario.getRandomScenarioSection().getId());
+				if (section != null) scenario.setRandomScenarioSection(section);
+			}
 		}
 		return log.exit(scenario);
 	}
@@ -195,7 +201,7 @@ public class CampaignController {
 			for (FhCharacter characterJoining : outpostPhase.getNewMembers()) {
 				FhCharacter character = frosthaven.getCharacter(characterJoining.getId());
 				if (character != null) {
-					// Set personal quest from personal story
+					// Set personal quest
 					if (characterJoining.getPersonalQuest() != null) {
 						PersonalQuest personalQuest = frosthaven.getPersonalQuest(characterJoining.getPersonalQuest().getId());
 						if (personalQuest != null) character.setPersonalQuest(personalQuest);

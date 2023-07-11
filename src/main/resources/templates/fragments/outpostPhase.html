@@ -51,9 +51,11 @@
 						<th:block th:if="*{level}">[(#{outpostPhase.construction.build.textWithLevel(*{name},*{level})})]</th:block>
 						<th:block th:unless="*{level}">[(#{outpostPhase.construction.build.textWithoutLevel(*{name})})]</th:block>
 					</div>
-					<div class="fhCard">
-						<img th:with="imgName = *{id} + *{level != 0 ? '_' + level : ''}"
-						     th:class="${imgName}" th:src="@{/img/buildings/__${imgName}__.png}">
+					<div class="playingCards">
+						<div class="playingCard">
+							<img th:with="imgName = *{id} + *{level != 0 ? '_' + level : ''}"
+								th:class="${imgName}" th:src="@{/img/buildings/__${imgName}__.png}">
+						</div>
 					</div>
 
 					<!-- Section -->
@@ -69,10 +71,14 @@
 					<div class="text">
 						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]
 					</div>
-					<div class="fhCard">
-						<img th:with="imgName = *{id} + '_' + *{level - 1}" th:src="@{/img/buildings/__${imgName}__.png}">
+					<div class="playingCards">
+						<div class="playingCard">
+							<img th:with="imgName = *{id} + '_' + *{level - 1}" th:src="@{/img/buildings/__${imgName}__.png}">
+						</div>
 						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
-						<img th:with="imgName = *{id} + '_' + *{level}" th:src="@{/img/buildings/__${imgName}__.png}">
+						<div class="playingCard">
+							<img th:with="imgName = *{id} + '_' + *{level}" th:src="@{/img/buildings/__${imgName}__.png}">
+						</div>
 					</div>
 
 					<!-- Section -->

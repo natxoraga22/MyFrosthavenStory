@@ -51,6 +51,11 @@
 				</th:block>
 			</th:block>
 		</div>
+
+		<!-- Random scenario section -->
+		<th:block th:if="*{randomScenarioSection}">
+			<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"></th:block>
+		</th:block>
 	</div>
 
 

@@ -41,7 +41,7 @@
 /* PERSONAL QUEST */
 /* -------------- */
 
-.personalQuest .title {
+.personalQuest > .title {
 	margin-bottom: 0.5rem;
 }
 
@@ -71,7 +71,7 @@
 /* ICONS */
 /* ----- */
 
-.character .title .icon {
+.character > .title .icon {
 	margin-right: 0.25rem;
 }
 

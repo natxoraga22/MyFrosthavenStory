@@ -25,9 +25,12 @@ public class Scenario extends StoryObject {
 
 	private String goals;
 	private String effects;
-	private Map<String,Section> sections = Map.of();
 
+	private Map<String,Section> sections = Map.of();
 	private List<String> path;
+
+	// Some chests unlock a random side scenario (meaning a section is read)
+	private Section randomScenarioSection;
 
 
 	@Override

@@ -29,7 +29,7 @@
 /* WELCOME */
 /* ------- */
 
-#welcome .title {
+#welcome > .title {
 	margin-bottom: var(--title-margin-bottom);
 }
 

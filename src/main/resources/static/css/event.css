@@ -23,7 +23,7 @@
 	font-family: var(--font-tinos);
 }
 
-.event .title {
+.event > .title {
 	margin-bottom: var(--title-margin-bottom);
 }
 

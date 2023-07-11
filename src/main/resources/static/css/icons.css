@@ -16,7 +16,7 @@
 .icon.c,
 .icon.d,
 .icon.e {
-	max-height: 20px;
+	max-height: 22px;
 }
 
 .icon.bane,
@@ -43,7 +43,11 @@
 .icon.crashingtide { max-height: 18px; }
 .icon.deathwalker { max-height: 20px; }
 
+.icon.ally { max-height: 15px; }
+.icon.checkmark { max-height: 14px; }
 .icon.damage { max-height: 18px; }
 .icon.heal { max-height: 18px; }
+.icon.item { max-height: 15px; }
+.icon.linkForced { max-height: 12px; }
 .icon.range { max-height: 15px; }
 .icon.retaliate { max-height: 17px; }

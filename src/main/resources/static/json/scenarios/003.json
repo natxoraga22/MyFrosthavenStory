@@ -1,5 +1,33 @@
 {
 	"id": "003",
+	"coordinates": "L7",
 	"name": "Algox Offensive",
-	"unlockedBy": { "scenario": { "id": "001" }}
+	"unlockedBy": { "scenario": { "id": "001" }},
+	"complexity": 2,
+	"location": "Copperneck Mountains",
+	"goals": "The scenario is complete when all characters have escaped. At the end of that round, read [section] <strong>8.3</strong>.",
+
+	"sections": {
+		"main":  {
+			"introduction": "<p>“They’ll be tired from the raid, so this is your moment.” Satha had explained, pointing you toward the foothills of the Copperneck Mountains where her scout tracked the Algox attackers. “I doubt you’ll be able to fight them all on your own, but maybe you can find another way to subdue them if you get close. On the other hand, they’ll be worn out after this little battle, so feel free to test your luck. Just remember, even a tired Algox is strong enough to rip someone in two.”</p><p>After hours of tracking, you find yourself before a cave, a wide black stain on an otherwise pristine mountainside, a crowd of Algox moving around in front of it. Getting a bit closer, you realize there are two different groups of Algox gathered at the cave mouth, and they seem to be fighting.</p><p>The defenders look like the Algox who attacked Frosthaven: huge figures with fur-covered muscle and vicious strength. They’re throwing punches that could flatten a longhouse (you’ve seen it happen), but you can tell their strength is flagging against their assailants.</p><p>The attackers, on the other hand, wear leather robes and move their clawed hands in intricate patterns. Covered in the same white fur as the defenders, they stand their ground outside the cave, guarded by wild beasts as they hurl magical storms of snow.</p><p>You creep in close and the battle begins to shift. A flank has thinned out on one side and you can see a path into the cave ahead. It won’t be easy to break through the fighting, but if you want to see what the defenders are guarding without getting your hands dirty, this is the best chance you’re going to get.</p>",
+			"specialRules": "<p>All Algox Priests and Hounds are allies to each other and enemies to all other figures. Likewise, all Algox Guards and Algox Archers are allies to each other and enemies to all other figures. Use the [ally] attack modifier deck for the Algox Priests and Hounds, though they are still considered enemies to you.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
+			"sectionLinks": "When door [one] is opened, read [section] <strong>30.2</strong>."
+		},
+		"30.2": {
+			"trigger": "Door [one] is opened",
+			"text": "You duck and weave, winding your way through the battle, dodging arcane blasts and enormous Algox fists, but you manage to sneak through without losing your head. Unfortunately, there are many more Algox standing in your way.",
+			"sectionLinks": "When door [two] is opened, read [section] <strong>28.2</strong>."
+		},
+		"28.2": {
+			"trigger": "Door [two] is opened",
+			"text": "Their numbers are thinning. If you can just get past this line, you should be able to push through into the heart of this place.",
+			"specialRules": "Each [a] is an escape hex."
+		},
+		"8.3": {
+			"trigger": "All characters have escaped",
+			"conclusion": "<p>Once inside the cave, the sounds of battle soften, the thick ice-covered walls dampening the roars. As you look back, however, a single large figure stumbles back from the fray and calls to you.</p><p>“Warm-bloods,” the Algox says. It’s one of the brawler Algox—a fighter as tall as a horse—but one of its arms is hanging loose by its side, and the fur on its stomach is matted with blood. “All our enemies come to fall upon our head at once, eh?”</p><p>Your look of confusion prompts the creature to speak further.</p><p>“The Snowspeakers,” he growls and gestures outside, “invaded our home. They have killed many.” He looms over you even from a distance. “But perhaps you can help us fight back?”</p><p>Until a second ago you didn’t even realize Algox could speak your language. And yet here one stands, asking for your help. He moves his massive bulk to the side and waves a hand toward his dead comrades.</p><p>“They kill us... because we are... Icespeakers,” he taps himself on the chest as he says this, wincing slightly. The creature, despite his great size, is made somehow smaller by the gesture. “You can help us.”</p><p>The offer is bizarre, certainly, but there’s an advantage to be had here. Satha charged you to find a way to help stop the attacks, and it would seem one has presented itself: if you help this group defend their home from these “Snowspeakers,” you may be able to make peace with the victors.</p><p>It’s slow going at first. The Algox explains its situation further through labored breath. It seems this place, Snowscorn Mountain, holds religious significance to the Algox clans. Both factions want control of it, but because of the animosity, only one can occupy it. Apparently, when the resident Icespeakers returned battleweary from their attack on Frosthaven, the Snowspeakers seized the opportunity and launched an invasion to take back the mountain.</p><p>You’re not sure which side you should take in this whole thing, but you know this information is valuable. So you follow this creature farther into the cave, wondering whether this is what Satha had in mind.</p>",
+			"rewards": "<p><strong>Gain 1 [checkmark] each.<br/>Place map overlay sticker W on the map in location W (M7).</strong></p><p>New Scenario:<br/><strong>Heart of Ice</strong> <span class=\"scenarioNumber\">(4)</span> [linkForced]</p><p>Locked Out Scenario:<br/><strong>Algox Scouting</strong> <span class=\"scenarioNumber\">(2)</span></p>"
+		}
+	},
+	"path": ["main", "30.2", "28.2", "8.3"]
 }

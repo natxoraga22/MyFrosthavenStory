@@ -25,6 +25,7 @@ public class ScenarioController {
 	@GetMapping({"", "/{scenarioId}"})
 	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId, @RequestParam(required = false) String path) {
 		log.entry(scenarioId, path);
+		model.addAttribute("page", Page.SCENARIO);
 		model.addAttribute("scenarioId", scenarioId);
 		model.addAttribute("scenario", getScenario(scenarioId, path));
 

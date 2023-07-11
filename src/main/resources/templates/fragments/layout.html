@@ -36,9 +36,9 @@
 			</a>
 			<div class="collapse navbar-collapse">
 				<div class="navbar-nav">
-					<a class="nav-link" th:href="@{/}">Campaign</a>
-					<a class="nav-link" th:href="@{/scenario}">Scenarios</a>
-					<a class="nav-link" th:href="@{/event}">Events</a>
+					<a class="nav-link" th:classappend="${page?.name() == 'CAMPAIGN'} ? active" th:href="@{/}">[[#{navbar.campaign}]]</a>
+					<a class="nav-link" th:classappend="${page?.name() == 'SCENARIO'} ? active" th:href="@{/scenario}">[[#{navbar.scenario}]]</a>
+					<a class="nav-link" th:classappend="${page?.name() == 'EVENT'} ? active" th:href="@{/event}">[[#{navbar.event}]]</a>
 				</div>
 			</div>
 		</div>

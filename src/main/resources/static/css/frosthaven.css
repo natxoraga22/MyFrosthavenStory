@@ -32,6 +32,10 @@
 	line-height: 0;
 }
 
+.navbar .navbar-nav {
+	text-transform: uppercase;
+}
+
 
 /* --------- */
 /* CONTAINER */

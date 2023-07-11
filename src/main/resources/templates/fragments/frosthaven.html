@@ -9,15 +9,30 @@
 	<!-- ----------- -->
 	<div th:fragment="unlockedBy(unlockedBy)" th:object="${unlockedBy}" class="subtitle">
 		<i class="fa-solid fa-unlock me-1"></i> Unlocked by:
-		<a th:if="*{event}" class="link-secondary" th:href="|#event_*{event.id}|">
-			Event [[*{event.id}]]
-		</a>
-		<a th:if="*{scenario}" class="link-secondary" th:href="|#scenario_*{scenario.id}|">
-			Scenario [[*{scenario.id}]]
-		</a>
-		<a th:if="*{section}" class="link-secondary" th:href="|#section_*{section.id}|">
-			Section [[*{section.id}]]
-		</a>
+		<!-- Same page links (campaign page) -->
+		<th:block th:if="${page?.name() == 'CAMPAIGN'}">
+			<a th:if="*{event}" class="link-secondary" th:href="|#event_*{event.id}|">
+				Event [[*{event.id}]]
+			</a>
+			<a th:if="*{scenario}" class="link-secondary" th:href="|#scenario_*{scenario.id}|">
+				Scenario [[*{scenario.id}]]
+			</a>
+			<a th:if="*{section}" class="link-secondary" th:href="|#section_*{section.id}|">
+				Section [[*{section.id}]]
+			</a>
+		</th:block>
+		<!-- Other page links -->
+		<th:block th:if="${page?.name() != 'CAMPAIGN'}">
+			<a th:if="*{event}" class="link-secondary" th:href="@{/event/{id}(id=*{event.id})}">
+				Event [[*{event.id}]]
+			</a>
+			<a th:if="*{scenario}" class="link-secondary" th:href="@{/scenario/{id}(id=*{scenario.id})}">
+				Scenario [[*{scenario.id}]]
+			</a>
+			<a th:if="*{section}" class="link-secondary" th:href="@{/section/{id}(id=*{section.id})}">
+				Section [[*{section.id}]]
+			</a>
+		</th:block>
 	</div>
 
 

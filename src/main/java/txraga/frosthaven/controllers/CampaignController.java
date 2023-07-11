@@ -41,6 +41,7 @@ public class CampaignController {
 	@GetMapping("")
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
+		model.addAttribute("page", Page.CAMPAIGN);
 		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
 		return log.exit(new ModelAndView("campaign"));
 	}

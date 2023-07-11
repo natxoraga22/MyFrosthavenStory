@@ -8,6 +8,7 @@
 	margin-top: -3px;
 }
 
+/* Scenario helpers */
 .icon.one,
 .icon.two,
 .icon.three,
@@ -19,6 +20,7 @@
 	max-height: 22px;
 }
 
+/* Conditions  */
 .icon.bane,
 .icon.bless,
 .icon.brittle,
@@ -40,17 +42,21 @@
 	max-height: 20px;
 }
 
+/* Characters */
 .icon.crashingtide { max-height: 18px; }
-.icon.deathwalker { max-height: 20px; }
-.icon.frozenfist { max-height: 18px; }
-.icon.snowdancer { max-height: 19px; }
+.icon.deathwalker  { max-height: 20px; }
+.icon.deepwraith   { max-height: 19px; }
+.icon.frozenfist   { max-height: 18px; }
+.icon.snowdancer   { max-height: 19px; }
 
-.icon.ally { max-height: 15px; }
-.icon.checkmark { max-height: 14px; }
-.icon.damage { max-height: 18px; }
-.icon.heal { max-height: 18px; }
-.icon.item { max-height: 15px; }
+/* Others */
+.icon.ally       { max-height: 15px; }
+.icon.checkmark  { max-height: 14px; }
+.icon.damage     { max-height: 18px; }
+.icon.heal       { max-height: 18px; }
+.icon.item       { max-height: 15px; }
 .icon.linkForced { max-height: 12px; }
-.icon.range { max-height: 15px; }
-.icon.retaliate { max-height: 17px; }
-.icon.xp { max-height: 18px; }
+.icon.lumber     { max-height: 14px; }
+.icon.range      { max-height: 15px; }
+.icon.retaliate  { max-height: 17px; }
+.icon.xp         { max-height: 18px; }

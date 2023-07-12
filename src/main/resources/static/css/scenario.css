@@ -10,10 +10,14 @@
 	/* Gap between scenario sections */
 	--scenario-sections-gap: 2rem;
 
+	/* Questline */
+	--scenario-questline-padding: 3px 9px;
+	--scenario-questline-border-radius: 12px;
+
 	/* Requirement */
-	--scenario-requirement-transport-size: 50px;
-	--scenario-requirement-transport-padding: 11px;
-	--scenario-requirement-status-padding: 10px;
+	--scenario-requirement-transport-size: 48px;
+	--scenario-requirement-transport-padding: 10px;
+	--scenario-requirement-status-padding: 6px;
 
 	/* Gap between scenario and randomScenarioSection */
 	--scenario-randomScenarioSection-gap: 3rem;
@@ -43,13 +47,35 @@
 /* TITLE */
 /* ----- */
 
-.scenario .requirement {
-	display: inline-block;
-	margin-left: 1rem;
-	vertical-align: middle;
+.scenario > .title {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 }
 
-.scenario .requirement .transport, .scenario .requirement .status {
+.scenario > .title h1 {
+	display: flex;
+	align-items: center;
+}
+
+.scenario > .title .titleSecondary {
+	margin-right: 0.5rem;
+}
+
+.scenario > .title .questLine {
+	padding: var(--scenario-questline-padding);
+	border-radius: var(--scenario-questline-border-radius);
+	
+	font-family: var(--font-germania-one);
+	font-size: 12pt;
+	line-height: 1;
+}
+
+.scenario > .title .requirement {
+	margin-left: 1rem;
+}
+
+.scenario > .title .requirement .transport, .scenario > .title .requirement .status {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -58,20 +84,20 @@
 	background-color: #d6a465;
 }
 
-.scenario .requirement .transport {
+.scenario > .title .requirement .transport {
 	width: var(--scenario-requirement-transport-size);
 	height: var(--scenario-requirement-transport-size);
 	border-radius: var(--scenario-requirement-transport-size);
 }
 
-.scenario .requirement .transport img {
+.scenario > .title .requirement .transport img {
 	max-width: calc(var(--scenario-requirement-transport-size) - var(--scenario-requirement-transport-padding)*2);
 	max-height: calc(var(--scenario-requirement-transport-size) - var(--scenario-requirement-transport-padding)*2);
 }
 
-.scenario .requirement .status {
+.scenario > .title .requirement .status {
 	padding: calc(var(--scenario-requirement-status-padding)/2) var(--scenario-requirement-status-padding);
-	border-radius: var(--scenario-requirement-status-padding);
+	border-radius: calc(var(--scenario-requirement-status-padding)*2);
 	font-size: 14pt;
 }
 

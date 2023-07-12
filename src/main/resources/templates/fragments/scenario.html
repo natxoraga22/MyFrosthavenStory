@@ -10,7 +10,12 @@
 	<div th:fragment="scenario(scenario)" th:object="${scenario}" th:id="|scenario_*{id}|" class="scenario">
 		<!-- Title -->
 		<div class="title">
+			<!-- Questline -->
+			<div th:if="*{questLine}" class="questLine" th:classappend="*{#strings.unCapitalize(questLine)}">
+				[[*{questLine}]]
+			</div>
 			<h1>
+				<!-- Id and name -->
 				<span class="titleSecondary">[[*{#numbers.formatInteger(id,1)}]] ·</span> [[*{name}]]
 				<!-- Requirements -->
 				<th:block th:if="*{requirement}">

@@ -9,6 +9,21 @@
 	scrollbar-width: thin;
 }
 
+#tableOfContents .list-group-item {
+	display: flex;
+	align-items: baseline;
+}
+
+#tableOfContents .scenarioNumber {
+	display: flex;
+	justify-content: center;
+
+	width: 25px;
+	height: 25px;
+	margin-right: 0.4rem;
+	border-radius: 25px;
+}
+
 #tableOfContents .iconWrapper {
 	display: inline-block;
 	width: 20px;

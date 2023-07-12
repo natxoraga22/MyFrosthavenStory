@@ -27,6 +27,15 @@
 	margin-bottom: var(--title-margin-bottom);
 }
 
+.event > .title h1 {
+	display: flex;
+	align-items: center;
+}
+
+.event > .title .titleSecondary {
+	margin-right: 0.5rem;
+}
+
 .event .text {
 	font-style: italic;
 }

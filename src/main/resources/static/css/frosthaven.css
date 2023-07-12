@@ -78,6 +78,22 @@
 }
 
 
+/* ---------------- */
+/* QUESTLINE COLORS */
+/* ---------------- */
+
+.questLine.introduction { background-color: #e4dede; }
+.questLine.algoxSnowspeaker { background-color: #87d0df; }
+.questLine.algoxIcespeaker { background-color: #3d6d97; color: #fcfcfc; }
+.questLine.unfettered { background-color: #37913c; color: #fcfcfc; }
+.questLine.lurker { background-color: #7c4583; color: #fcfcfc; }
+.questLine.puzzleBook { background-color: #c1a043; }
+.questLine.personalQuest { background-color: #bb212a; color: #fcfcfc; }
+.questLine.jobPosting { background-color: #c95f26; }
+.questLine.randomScenario { background-color: #6f5337; color: #fcfcfc; }
+.questLine.other { background-color: transparent; }
+
+
 /* ------- */
 /* UTILITY */
 /* ------- */

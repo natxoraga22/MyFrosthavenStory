@@ -63,7 +63,7 @@
 /* SECTION */
 /* ------- */
 
-.event .section {
+.event div.section {
 	margin-top: var(--event-inner-gap);
 }
 

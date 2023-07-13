@@ -17,6 +17,7 @@
 	--boat-max-size: 350px;
 	--climbinggear-max-size: 250px;
 	--sled-max-size: 250px;
+	--wallJ-max-size: 350px;
 }
 
 
@@ -81,4 +82,9 @@
 .building img:not(.icon).sled {
 	max-width: var(--sled-max-size);
 	max-height: var(--sled-max-size);
+}
+
+.building img:not(.icon).wallJ {
+	max-width: var(--wallJ-max-size);
+	max-height: var(--wallJ-max-size);
 }

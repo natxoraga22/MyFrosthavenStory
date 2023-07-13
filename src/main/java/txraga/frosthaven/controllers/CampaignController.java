@@ -47,30 +47,32 @@ public class CampaignController {
 	}
 
 	@PostMapping("/personalStory")
-	public ModelAndView personalStory(Model model, @RequestBody PersonalStory personalStory) throws IOException {
+	public ModelAndView personalStory(Model model, @RequestBody(required = false) PersonalStory personalStory) throws IOException {
 		log.entry(personalStory);
-		Map<String,FhCharacter> party = getParty(personalStory.getParty());
+		Map<String,FhCharacter> party = getParty(personalStory != null ? personalStory.getParty() : new ArrayList<>());
 		Map<String,FhCharacter> originalParty = new LinkedHashMap<>(party);
 
 		// Fill storyObjects list with the elements from myStory list
 		int outpostPhaseId = 1;
 		List<StoryObject> story = new ArrayList<>();
-		for (StoryItem storyItem : personalStory.getStory()) {
-			// Event
-			if (storyItem.getEvent() != null) {
-				Event event = getEvent(storyItem.getEvent());
-				if (event != null) story.add(event);
-			}
-			// Scenario
-			else if (storyItem.getScenario() != null) {
-				Scenario scenario = getScenario(storyItem.getScenario());
-				if (scenario != null) story.add(scenario);
-			}
-			// Outpost phase
-			else if (storyItem.getOutpostPhase() != null) {
-				OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId, party);
-				if (outpostPhase != null) story.add(outpostPhase);
-				outpostPhaseId++;
+		if (personalStory != null) {
+			for (StoryItem storyItem : personalStory.getStory()) {
+				// Event
+				if (storyItem.getEvent() != null) {
+					Event event = getEvent(storyItem.getEvent());
+					if (event != null) story.add(event);
+				}
+				// Scenario
+				else if (storyItem.getScenario() != null) {
+					Scenario scenario = getScenario(storyItem.getScenario());
+					if (scenario != null) story.add(scenario);
+				}
+				// Outpost phase
+				else if (storyItem.getOutpostPhase() != null) {
+					OutpostPhase outpostPhase = getOutpostPhase(storyItem.getOutpostPhase(), outpostPhaseId, party);
+					if (outpostPhase != null) story.add(outpostPhase);
+					outpostPhaseId++;
+				}
 			}
 		}
 

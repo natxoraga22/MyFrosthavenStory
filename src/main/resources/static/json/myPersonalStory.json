@@ -79,6 +79,12 @@
 			}
 		},
 		{ "event": { "id": "SR-16", "chosenOption": "A1" }},
-		{ "scenario": { "id": "033" }}
+		{ "scenario": { "id": "033" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-03", "chosenOption": "B" },
+				"build": [{ "id": "wallJ" }]
+			}
+		}
 	]
 }

@@ -27,7 +27,7 @@
 		<div th:if="*{levelUps}" class="levelUps">
 			<h2 class="title">[[#{outpostPhase.levelUps.title}]]</h2>
 			<div th:each="character : *{levelUps}" th:object="${character}">
-				[(#{outpostPhase.levelUps.text(*{name},*{level})})]
+				[(#{outpostPhase.levelUps.text(*{fullName},*{level})})]
 			</div>
 		</div>
 

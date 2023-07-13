@@ -49,6 +49,9 @@
 .icon.frozenfist   { max-height: 18px; }
 .icon.snowdancer   { max-height: 19px; }
 
+/* Resources */
+.icon.snowthistle { max-height: 18px; }
+
 /* Others */
 .icon.ally       { max-height: 15px; }
 .icon.boat       { max-height: 18px; }
@@ -61,4 +64,5 @@
 .icon.range      { max-height: 15px; }
 .icon.retaliate  { max-height: 17px; }
 .icon.sled       { max-height: 14px; }
+.icon.trait      { max-height: 18px; }
 .icon.xp         { max-height: 18px; }

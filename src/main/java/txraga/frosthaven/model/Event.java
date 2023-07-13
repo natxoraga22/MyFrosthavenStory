@@ -68,6 +68,7 @@ public class Event extends StoryObject {
 		private String rewards;
 
 		public void replaceIcons() {
+			this.trigger = ModelUtils.replaceIcons(this.trigger);
 			this.requirement = ModelUtils.replaceIcons(this.requirement);
 			this.rewards = ModelUtils.replaceIcons(this.rewards);
 		}

@@ -88,17 +88,24 @@ public class CampaignController {
 		log.entry(personalStoryParty);
 		Map<String,FhCharacter> party = new LinkedHashMap<>();
 		for (FhCharacter personalStoryPartyMember : personalStoryParty) {
-			FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
-			if (partyMember != null) {
-				if (personalStoryPartyMember.getPersonalQuest() != null) {
-					// Set personal quest
-					PersonalQuest personalQuest = frosthaven.getPersonalQuest(personalStoryPartyMember.getPersonalQuest().getId());
-					if (personalQuest != null) partyMember.setPersonalQuest(personalQuest);
-				}
-				party.put(partyMember.getId(), partyMember);
-			}
+			FhCharacter partyMember = getPartyMember(personalStoryPartyMember);
+			if (partyMember != null) party.put(partyMember.getId(), partyMember);
 		}
 		return log.exit(party);
+	}
+
+	private FhCharacter getPartyMember(FhCharacter personalStoryPartyMember) {
+		log.entry(personalStoryPartyMember);
+		FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
+		if (partyMember != null) {
+			if (personalStoryPartyMember.getPersonalQuest() != null) {
+				// Set personal quest
+				PersonalQuest personalQuest = frosthaven.getPersonalQuest(personalStoryPartyMember.getPersonalQuest().getId());
+				if (personalQuest != null) partyMember.setPersonalQuest(personalQuest);
+			}
+			return log.exit(partyMember);
+		}
+		return log.exit(null);
 	}
 
 
@@ -199,14 +206,11 @@ public class CampaignController {
 		if (outpostPhase.getNewMembers() != null) {
 			List<FhCharacter> newMembers = new ArrayList<>();
 			for (FhCharacter characterJoining : outpostPhase.getNewMembers()) {
-				FhCharacter character = frosthaven.getCharacter(characterJoining.getId());
+				FhCharacter character = getPartyMember(characterJoining);
 				if (character != null) {
-					// Set personal quest
-					if (characterJoining.getPersonalQuest() != null) {
-						PersonalQuest personalQuest = frosthaven.getPersonalQuest(characterJoining.getPersonalQuest().getId());
-						if (personalQuest != null) character.setPersonalQuest(personalQuest);
-					}
 					newMembers.add(character);
+					// Add new member to party map for future outpost phases
+					party.put(character.getId(), character);
 				}
 			}
 			outpostPhase.setNewMembers(newMembers);

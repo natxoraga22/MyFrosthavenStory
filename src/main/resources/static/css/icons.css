@@ -51,6 +51,7 @@
 
 /* Others */
 .icon.ally       { max-height: 15px; }
+.icon.boat       { max-height: 18px; }
 .icon.checkmark  { max-height: 14px; }
 .icon.damage     { max-height: 18px; }
 .icon.heal       { max-height: 18px; }
@@ -59,4 +60,5 @@
 .icon.lumber     { max-height: 14px; }
 .icon.range      { max-height: 15px; }
 .icon.retaliate  { max-height: 17px; }
+.icon.sled       { max-height: 14px; }
 .icon.xp         { max-height: 18px; }

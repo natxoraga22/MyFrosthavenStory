@@ -10,6 +10,9 @@
 	/* Gap between building elements */
 	--outpost-building-inner-gap: 1rem;
 
+	/* Gap between building and section */
+	--outpost-building-section-gap: 2rem;
+
 	/* Special buildings sizes */
 	--boat-max-size: 350px;
 	--climbinggear-max-size: 250px;
@@ -57,7 +60,7 @@
 }
 
 .building .section {
-	margin-top: 1rem;
+	margin-top: calc(var(--outpost-building-section-gap) - var(--outpost-building-inner-gap));
 }
 
 
@@ -65,17 +68,17 @@
 /* SPECIAL BUILDINGS */
 /* ----------------- */
 
-.building img.boat {
+.building img:not(.icon).boat {
 	max-width: var(--boat-max-size);
 	max-height: var(--boat-max-size);
 }
 
-.building img.climbinggear {
+.building img:not(.icon).climbinggear {
 	max-width: var(--climbinggear-max-size);
 	max-height: var(--climbinggear-max-size);
 }
 
-.building img.sled {
+.building img:not(.icon).sled {
 	max-width: var(--sled-max-size);
 	max-height: var(--sled-max-size);
 }

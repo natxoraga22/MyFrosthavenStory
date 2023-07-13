@@ -69,5 +69,20 @@
 				}
 			}
 		}
+	},
+	"carpenter": {
+		"number": "85",
+		"name": "Carpenter",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "7.3",
+					"title": "Carpenter Built",
+					"text": "<p>A wood-carving contest inaugurates the opening of the carpenter’s shop. You wander among booths displaying inlaid trinket boxes and cooking utensils alongside life-size replicas of Lurkers and polar bears. The pavilion is filled with the sounds of hacking and sawing.</p><p>One carpenter is a Harrower, whose undulating insect form obscures a large chunk of wood, chipping away with their collective mandibles. Once they recollect themselves into a vaguely humanoid shape, they reveal their project: a to-scale model of Frosthaven. “We will keep adding to it,” they hum at you, “as long as you keep doing so.” With the carpenters, they note, constructing buildings will now be less costly.</p><p>A few of their insects pick up small cylinders of wood, which they carve instantly into a miniature version of you. They place your model in the center of the Frosthaven replica. After all, the Harrower says, it wouldn’t have come to fruition without you.</p>",
+					"rewards": "<strong>Add events SO-53 and SO-60 to the summer outpost deck.</strong>"
+				}
+			},
+			"2": {}
+		}
 	}
 }

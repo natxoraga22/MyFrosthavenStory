@@ -70,6 +70,13 @@
 			}
 		},
 		{ "event": { "id": "SR-13", "chosenOption": "A1" }},
-		{ "scenario": { "id": "032", "randomScenarioSection": { "id": "119.3" }}}
+		{ "scenario": { "id": "032", "randomScenarioSection": { "id": "119.3" }}},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-13", "chosenOption": "A1" },
+				"levelUps": [{ "id": "crashingtide", "level": 2 }],
+				"build": [{ "id": "carpenter", "level": 1 }]
+			}
+		}
 	]
 }

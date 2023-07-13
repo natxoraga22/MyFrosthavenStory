@@ -96,6 +96,35 @@
 			}
 		}
 	},
+	"SR-16": {
+		"text": "<p>The treacherous road ahead of you is blocked by a tattered blue blanket stretched across the path. Your approach disturbs the Inox under it, who jumps up in surprise.</p><p>\"Oh, eh. Wasn't expecting to see others out here. you from Frosthaven? I used to be from there, but haven't been back in uh... a while.\" He rubs the grey fur on his chin thoughtfully, which irritates one of the long scratches running down his face. A bit of blood oozes out, and he sees your concern.</p><p>\"That? It's nothing. Was cold last night, bedded down with an Algox—what they call 'sharing a horn.' Turned on me in the morning. Buyer's remorse, eh?\" He smiles in a way that suggests he hasn't smiled around people for some time.</p><p>\"Y'know... I used to work in Frosthaven's lumber yard. I've got some skill with a saw. Would be willing to teach you, if you've got something edible to trade. Or maybe you've got something warm to wear?\"</p>",
+		"options": {
+			"A1": {
+				"trigger": "Offer him herbs for wood-cutting skills.",
+				"requirement": "<p>LOSE 2 COLLECTIVE HERB RESOURCES",
+				"text": "\"I built up a bit of skill with the saw. It's part technique and part sharpening the blade right. Watch this.\"</p><p> What he lacks in decorum he certainly makes up in skill. You learn a thing or two before heading on your way.</p>",
+				"rewards": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+			},
+			"A2": {
+				"trigger": "Offer him herbs for wood-cutting skills.",
+				"requirement": "[not] LOSE 2 COLLECTIVE HERB RESOURCES",
+				"text": "\"Come back when you've got something worth swappin' for.\"",
+				"rewards": "No effect."
+			},
+			"B1": {
+				"trigger": "Offer him hides for wood-cutting skills.",
+				"requirement": "<p>LOSE 2 COLLECTIVE [hide]",
+				"text": "\"Nice pelt. Is this Valrath?\" It is not Valrath.</p><p> True to his word, the Inox shows you how to sharpen a saw with a technique new to you. You thank him and head on your way.</p>",
+				"rewards": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+			},
+			"B2": {
+				"trigger": "Offer him hides for wood-cutting skills.",
+				"requirement": "[not] LOSE 2 COLLECTIVE [hide]",
+				"text": "\"No offense, but I think you've overstayed your welcome. See you when you've got something worth swappin' for.\"",
+				"rewards": "No effect."
+			}
+		}
+	},
 	"SR-33": {
 		"unlockedBy": { "event": { "id": "SR-03" }}
 	},

@@ -50,6 +50,8 @@
 .icon.snowdancer   { max-height: 19px; }
 
 /* Resources */
+.icon.hide        { max-height: 18px; }
+.icon.lumber      { max-height: 14px; }
 .icon.snowthistle { max-height: 18px; }
 
 /* Others */
@@ -60,7 +62,8 @@
 .icon.heal       { max-height: 18px; }
 .icon.item       { max-height: 15px; }
 .icon.linkForced { max-height: 12px; }
-.icon.lumber     { max-height: 14px; }
+.icon.not        { max-height: 18px; }
+.icon.plus1      { max-height: 18px; }
 .icon.range      { max-height: 15px; }
 .icon.retaliate  { max-height: 17px; }
 .icon.sled       { max-height: 14px; }

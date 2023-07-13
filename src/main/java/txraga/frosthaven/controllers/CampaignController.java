@@ -50,6 +50,7 @@ public class CampaignController {
 	public ModelAndView personalStory(Model model, @RequestBody PersonalStory personalStory) throws IOException {
 		log.entry(personalStory);
 		Map<String,FhCharacter> party = getParty(personalStory.getParty());
+		Map<String,FhCharacter> originalParty = new LinkedHashMap<>(party);
 
 		// Fill storyObjects list with the elements from myStory list
 		int outpostPhaseId = 1;
@@ -74,7 +75,7 @@ public class CampaignController {
 		}
 
 		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
-		model.addAttribute("party", party.values());
+		model.addAttribute("party", originalParty.values());
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("campaign :: campaign"));
 	}

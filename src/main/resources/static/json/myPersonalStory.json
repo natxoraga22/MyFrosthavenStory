@@ -77,6 +77,8 @@
 				"levelUps": [{ "id": "crashingtide", "level": 2 }],
 				"build": [{ "id": "carpenter", "level": 1 }]
 			}
-		}
+		},
+		{ "event": { "id": "SR-16", "chosenOption": "A1" }},
+		{ "scenario": { "id": "033" }}
 	]
 }

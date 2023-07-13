@@ -1,12 +1,14 @@
 package txraga.frosthaven;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import org.springframework.core.io.ClassPathResource;
 
@@ -40,8 +42,9 @@ public final class FrosthavenFiles {
 	public static String getWelcome() {
 		log.entry();
 		try {
-			File welcomeFile = new ClassPathResource(WELCOME_FILE_PATH).getFile();
-			List<String> welcomeLines = Files.readAllLines(welcomeFile.toPath());
+			InputStream welcomeInputStream = new ClassPathResource(WELCOME_FILE_PATH).getInputStream();
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(welcomeInputStream));
+			List<String> welcomeLines = bufferedReader.lines().collect(Collectors.toList());
 			return log.exit(String.join("<br/>", welcomeLines));
 		}
 		catch (IOException e) {
@@ -57,8 +60,8 @@ public final class FrosthavenFiles {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File charactersFile = new ClassPathResource(CHARACTERS_FILE_PATH).getFile();
-			Map<String,FhCharacter> characters = objectMapper.readValue(charactersFile, new TypeReference<Map<String,FhCharacter>>(){});
+			InputStream charactersInputStream = new ClassPathResource(CHARACTERS_FILE_PATH).getInputStream();
+			Map<String,FhCharacter> characters = objectMapper.readValue(charactersInputStream, new TypeReference<Map<String,FhCharacter>>(){});
 
 			// Populate characters with additional info
 			for (Entry<String,FhCharacter> characterEntry : characters.entrySet()) {
@@ -80,8 +83,8 @@ public final class FrosthavenFiles {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File personalQuestsFile = new ClassPathResource(PERSONAL_QUESTS_FILE_PATH).getFile();
-			Map<String,PersonalQuest> personalQuests = objectMapper.readValue(personalQuestsFile, new TypeReference<Map<String,PersonalQuest>>(){});
+			InputStream personalQuestsInputStream = new ClassPathResource(PERSONAL_QUESTS_FILE_PATH).getInputStream();
+			Map<String,PersonalQuest> personalQuests = objectMapper.readValue(personalQuestsInputStream, new TypeReference<Map<String,PersonalQuest>>(){});
 
 			// Populate personal quests with additional info
 			for (Entry<String,PersonalQuest> personalQuestEntry : personalQuests.entrySet()) {
@@ -121,8 +124,8 @@ public final class FrosthavenFiles {
 		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File eventsFile = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getFile();
-			Map<String,Event> events = objectMapper.readValue(eventsFile, new TypeReference<Map<String,Event>>(){});
+			InputStream eventsInputStream = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getInputStream();
+			Map<String,Event> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,Event>>(){});
 
 			// Populate events with additional info
 			for (Entry<String,Event> eventEntry : events.entrySet()) {
@@ -144,8 +147,8 @@ public final class FrosthavenFiles {
 		log.entry(scenarioId);
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File scenarioFile = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getFile();
-			Scenario scenario = objectMapper.readValue(scenarioFile, Scenario.class);
+			InputStream scenarioInputStream = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getInputStream();
+			Scenario scenario = objectMapper.readValue(scenarioInputStream, Scenario.class);
 			scenario.populate();
 			return log.exit(scenario);
 		}
@@ -162,8 +165,8 @@ public final class FrosthavenFiles {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File sectionsFile = new ClassPathResource(SECTIONS_FILE_PATH).getFile();
-			Map<String,Section> sections = objectMapper.readValue(sectionsFile, new TypeReference<Map<String,Section>>(){});
+			InputStream sectionsInputStream = new ClassPathResource(SECTIONS_FILE_PATH).getInputStream();
+			Map<String,Section> sections = objectMapper.readValue(sectionsInputStream, new TypeReference<Map<String,Section>>(){});
 
 			// Populate sections with additional info
 			for (Entry<String,Section> sectionEntry : sections.entrySet()) {
@@ -185,8 +188,8 @@ public final class FrosthavenFiles {
 		log.entry();
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			File buildingsFile = new ClassPathResource(BUILDINGS_FILE_PATH).getFile();
-			Map<String,Building> buildings = objectMapper.readValue(buildingsFile, new TypeReference<Map<String,Building>>(){});
+			InputStream buildingsInputStream = new ClassPathResource(BUILDINGS_FILE_PATH).getInputStream();
+			Map<String,Building> buildings = objectMapper.readValue(buildingsInputStream, new TypeReference<Map<String,Building>>(){});
 
 			// Populate buildings with additional info
 			for (Entry<String,Building> buildingEntry : buildings.entrySet()) {

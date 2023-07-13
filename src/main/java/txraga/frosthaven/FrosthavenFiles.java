@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public final class FrosthavenFiles {
 		log.entry();
 		try {
 			InputStream welcomeInputStream = new ClassPathResource(WELCOME_FILE_PATH).getInputStream();
-			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(welcomeInputStream));
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(welcomeInputStream, StandardCharsets.UTF_8));
 			List<String> welcomeLines = bufferedReader.lines().collect(Collectors.toList());
 			return log.exit(String.join("<br/>", welcomeLines));
 		}

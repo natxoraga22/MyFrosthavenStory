@@ -1,0 +1,1 @@
+web: java -jar target/my-frosthaven-story-1.0.0-SNAPSHOT.jar

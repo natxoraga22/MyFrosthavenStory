@@ -15,7 +15,7 @@
 	<groupId>txraga</groupId>
 	<artifactId>my-frosthaven-story</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>My Frosthaven Story</name>
 	<description>My story in the north outpost of Frosthaven</description>
 

@@ -14,50 +14,11 @@
 <body>
 	<!-- CONTENT -->
 	<th:block layout:fragment="content">
-		<div th:fragment="campaign" id="campaign">
-			<div class="row gx-5">
-				<div class="col-3">
-					<!-- Table of contents -->
-					<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
-				</div>
-				<div class="col-9 position-relative">
-					<!-- Edit personal story button -->
-					<button type="button" id="editPersonalStoryButton" class="btn btn-primary"
-					        data-bs-toggle="modal" data-bs-target="#editPersonalStoryModal">
-						<i class="fa-solid fa-pen-to-square"></i>
-					</button>
+		<!-- Loading -->
+		<th:block th:replace="~{fragments/campaign :: loading}"></th:block>
 
-					<div id="personalStory">
-						<!-- Welcome -->
-						<th:block th:if="${welcome}">
-							<th:block th:replace="~{fragments/campaign :: welcome}"></th:block>
-						</th:block>
-
-						<!-- The party -->
-						<th:block th:if="${party}">
-							<th:block th:replace="~{fragments/campaign :: party}"></th:block>
-						</th:block>
-						
-						<div th:each="storyObject : ${story}" class="storyObject">
-							<!-- Event -->
-							<th:block th:if="${storyObject.objectType.name() == 'EVENT'}">
-								<th:block th:replace="~{fragments/event :: event(${storyObject})}"></th:block>
-							</th:block>
-
-							<!-- Scenario -->
-							<th:block th:if="${storyObject.objectType.name() == 'SCENARIO'}">
-								<th:block th:replace="~{fragments/scenario :: scenario(${storyObject})}"></th:block>
-							</th:block>
-
-							<!-- Outpost phase -->
-							<th:block th:if="${storyObject.objectType.name() == 'OUTPOST_PHASE'}">
-								<th:block th:replace="~{fragments/outpostPhase :: outpostPhase(${storyObject})}"></th:block>
-							</th:block>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!-- Empty campaign, ready to be replaced -->
+		<div id="campaign"></div>
 	</th:block>
 
 	<!-- MODALS -->

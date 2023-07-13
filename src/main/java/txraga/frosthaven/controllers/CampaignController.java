@@ -77,7 +77,7 @@ public class CampaignController {
 		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
 		model.addAttribute("party", originalParty.values());
 		model.addAttribute("story", story);
-		return log.exit(new ModelAndView("campaign :: campaign"));
+		return log.exit(new ModelAndView("fragments/campaign :: campaign"));
 	}
 
 

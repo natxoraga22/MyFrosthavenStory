@@ -10,6 +10,9 @@
 	/* Gap between party characters */
 	--party-inner-gap: 2rem;
 
+	/* Loading padding */
+	--loading-padding: 5rem;
+
 	/* Back to top button size */
 	--back-to-top-button-size: 45px;
 }
@@ -24,8 +27,8 @@
 	justify-content: center;
 	gap: 1rem;
 
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-top: var(--loading-padding);
+	padding-bottom: var(--loading-padding);
 }
 
 
@@ -77,8 +80,7 @@
 #editPersonalStoryButton {
 	position: absolute;
 	right: 0;
-	margin-right: 24px;
-	z-index: 1;
+	margin-right: calc(var(--bs-gutter-x)/2);
 }
 
 #editPersonalStoryModal textarea {

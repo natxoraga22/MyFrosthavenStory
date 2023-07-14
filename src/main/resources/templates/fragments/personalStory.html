@@ -88,6 +88,9 @@
 				// Replace #campaign div content with new content
 				const currentCampaignDiv = document.getElementById("campaign");
 				currentCampaignDiv.innerHTML = newCampaignDiv.innerHTML;
+
+				// Reload scrollspy
+				bootstrap.ScrollSpy.getInstance(document.body).refresh();
 			});
 		}
 

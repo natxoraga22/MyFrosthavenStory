@@ -7,7 +7,7 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section(section)" th:object="${section}" th:id="|section_*{id}|" class="section">
+	<div th:fragment="section(section)" th:object="${section}" th:id="|section_*{htmlSafeId}|" class="section">
 		<!-- Trigger -->
 		<div th:if="*{trigger}" class="trigger">
 			<i class="fa-solid fa-angles-right fa-sm"></i> [(*{trigger})]:

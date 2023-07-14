@@ -33,6 +33,10 @@ public class Section {
 	private String sectionLinks;
 
 
+	public String getHtmlSafeId() {
+		return id.replace(".", "_");
+	}
+
 	public boolean hasMap(String scenarioId) {
 		Resource resource = new ClassPathResource("static/img/scenarios/" + scenarioId + "_" + id + ".png");
 		return resource.exists();

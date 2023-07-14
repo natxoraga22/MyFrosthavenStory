@@ -42,7 +42,7 @@
 						[[#{outpostPhase.title}]] #[[*{id}]]
 					</a>
 					<!-- Passage of time -->
-					<a th:each="section : *{passageOfTime}" th:object="${section}" class="list-group-item list-group-item-action child" th:href="|#section_*{id}|">
+					<a th:each="section : *{passageOfTime}" th:object="${section}" class="list-group-item list-group-item-action child" th:href="|#section_*{htmlSafeId}|">
 						[[*{id}]] · [[*{title}]]
 					</a>
 					<!-- Outpost event -->

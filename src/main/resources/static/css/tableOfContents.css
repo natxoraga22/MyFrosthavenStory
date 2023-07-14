@@ -12,6 +12,11 @@
 #tableOfContents .list-group-item {
 	display: flex;
 	align-items: baseline;
+
+	/* Active colors */
+	--bs-list-group-active-color: var(--frosthaven-color);
+	--bs-list-group-active-bg: var(--bs-secondary-bg);
+	--bs-list-group-active-border-color: var(--bs-secondary-border-subtle);
 }
 
 #tableOfContents .scenarioNumber {

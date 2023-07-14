@@ -18,12 +18,12 @@
 		"text": "<p>\"Hear ye, hear ye! I am the crier of the Great Dallum, the most powerful seer the world has ever known!\" An ostentatiously dressed man is shouting in the middle of town, drawing a crowd. \"It is my great honor to advise you that the Great Dallum has selected this outpost for his next visitation!\"</p><p>There are audible gasps from the crowd. \"He will arrive in a fortnight! Prepare yourselves and be merry!\"</p><p>As the crier packs up, Frosthaven's citizenry come alive: \"The Great Dallum? Here?\" and \"We'll need to prepare a feast!\" and \"We'll need an offering—I've heard he grants the wishes of those who please him with lavish donations!\"</p><p>Even Mayor Satha looks to be hiding excitement under a façade of civility... this should be an event to remember.</p>",
 		"options": {
 			"A": {
-				"trigger": "Help clean the streets to make a good impression",
+				"trigger": "Help clean the streets to make a good impression.",
 				"text": "<p>You put in the work to clean up the dirt-and-snow-covered streets of Frosthaven. Many of the residents come out to join you, excited. A young lady chats your ear off while sweeping, her face beaming.</p><p>\"I heard from a friend his watery-blue eyes see straight into your soul. He speaks quietly, but he knows your name without asking. He's the most incredible seer the world has ever known!\"</p>",
 				"rewards": "Gain 1 morale and 1 inspiration.<br/>Add [section] 180.1 to the calendar in two weeks."
 			},
 			"B": {
-				"trigger": "Assist in the preparation of a feast",
+				"trigger": "Assist in the preparation of a feast.",
 				"text": "<p>You join a hunting party gathering wild meats and harvesting vegetables outside Frosthaven. An older man has more spring in his step as he picks snowthistle to use as a tangy garnish.</p><p>\"He's got rough hands from working the fields before he got the gift of sight. Long, beautiful hair, not bald like me. Never met him, but heard he talks slow—not like me—he wants to make sure you get the attention you deserve. Great man, that Dallum.\"</p>",
 				"rewards": "Gain 1 morale.<br/>Gain 1 collective [snowthistle].<br/>Add [section] 180.1 to the calendar in two weeks."
 			}

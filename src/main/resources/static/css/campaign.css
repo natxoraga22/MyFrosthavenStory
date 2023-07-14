@@ -9,6 +9,9 @@
 
 	/* Gap between party characters */
 	--party-inner-gap: 2rem;
+
+	/* Back to top button size */
+	--back-to-top-button-size: 45px;
 }
 
 
@@ -80,4 +83,19 @@
 
 #editPersonalStoryModal textarea {
 	min-height: 75vh;
+}
+
+
+/* ----------- */
+/* BACK TO TOP */
+/* ----------- */
+
+#backToTopButton {
+	position: sticky;
+	bottom: var(--frosthaven-padding-y);
+	float: right;
+
+	width: var(--back-to-top-button-size);
+	height: var(--back-to-top-button-size);
+	--bs-btn-border-radius: var(--back-to-top-button-size);
 }

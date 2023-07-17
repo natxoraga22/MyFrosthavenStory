@@ -32,7 +32,9 @@
 
 				<!-- SCENARIO -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
-					<div class="scenarioNumber questLine" th:classappend="*{#strings.unCapitalize(questLine)}">[[*{#numbers.formatInteger(id,1)}]]</div>
+					<div class="scenarioNumber questLine" th:classappend="*{#strings.unCapitalize(questLine)}">
+						[[*{#numbers.formatInteger(id,1)}]]
+					</div>
 					<strong>[[*{name}]]</strong>
 				</a>
 
@@ -42,11 +44,13 @@
 						[[#{outpostPhase.title}]] #[[*{id}]]
 					</a>
 					<!-- Passage of time -->
-					<a th:each="section : *{passageOfTime}" th:object="${section}" class="list-group-item list-group-item-action child" th:href="|#section_*{htmlSafeId}|">
+					<a th:each="section : *{passageOfTime}" th:object="${section}"
+					   class="list-group-item list-group-item-action child" th:href="|#section_*{htmlSafeId}|">
 						[[*{id}]] · [[*{title}]]
 					</a>
 					<!-- Outpost event -->
-					<a th:if="*{outpostEvent}" th:object="${storyObject.outpostEvent}" class="list-group-item list-group-item-action child" th:href="|#event_*{id}|">
+					<a th:if="*{outpostEvent}" th:object="${storyObject.outpostEvent}"
+					   class="list-group-item list-group-item-action child" th:href="|#event_*{id}|">
 						[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
 					</a>
 					<!-- Retirements -->
@@ -76,5 +80,31 @@
 		</div>
 		[[*{fullName}]]<th:block th:if="${titleSuffix}"> [[${titleSuffix}]]</th:block>
 	</div>
+
+
+	<!-- -------------------- -->
+	<!-- TABLE OF CONTENTS JS -->
+	<!-- -------------------- -->
+	<script th:fragment="tableOfContentsJs" id="tableOfContentsJs" th:inline="javascript">
+		window.addEventListener("load", function() {
+			/* Always keep table of contents active element in view */
+			document.body.addEventListener("activate.bs.scrollspy", () => {
+				const scrollSpy = bootstrap.ScrollSpy.getInstance(document.body);
+				const tableOfContents = document.getElementById("tableOfContents");
+				const activeListGroupItem = tableOfContents.querySelector(".list-group-item.active"); 
+
+				// Calculate position of activeListGroupItem relative to tableOfContents
+				const activeListGroupItemPosition = activeListGroupItem.getBoundingClientRect().top - tableOfContents.getBoundingClientRect().top;
+
+				if (activeListGroupItemPosition < 0) {
+					tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition;
+				}
+				else if (activeListGroupItemPosition + activeListGroupItem.offsetHeight > tableOfContents.offsetHeight) {
+					const heightDiff = tableOfContents.offsetHeight - activeListGroupItem.offsetHeight;
+					tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition - heightDiff;
+				}
+			});
+		});
+	</script>
 </body>
 </html>

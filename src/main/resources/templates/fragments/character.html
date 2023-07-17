@@ -10,7 +10,7 @@
 	<div th:fragment="character(character,initialParty)" th:object="${character}" th:id="|character_*{id}|" class="character">
 		<!-- Title -->
 		<h2 class="title titleSecondary">
-			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
+			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/{id}.png(id=*{id})}">
 			[[*{fullName}]]
 			<th:block th:if="${!initialParty}"> [[#{character.joining}]]</th:block>
 		</h2>
@@ -19,10 +19,10 @@
 		<div class="mat flippable" onclick="flip(event)">
 			<div class="flippableInner">
 				<div class="front">
-					<img th:src="@{/img/characters/__*{id}__.png}">
+					<img th:src="@{/img/characters/{id}.png(id=*{id})}">
 				</div>
 				<div class="back">
-					<img th:src="@{/img/characters/__*{id}___back.png}">
+					<img th:src="@{/img/characters/{id}_back.png(id=*{id})}">
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 	<div th:fragment="retirement(character)" th:object="${character}" th:id="|retirement_*{id}|" class="character retirement">
 		<!-- Title -->
 		<h2 class="title titleSecondary">
-			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/__*{id}__.png}">
+			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/{id}.png(id=*{id})}">
 			[[*{fullName}]] [[#{character.retirement}]]
 		</h2>
 
@@ -63,7 +63,7 @@
 	<div th:fragment="personalQuest(personalQuest)" th:object="${personalQuest}" th:id="|personalQuest_*{id}|" class="personalQuest">
 		<!-- Card -->
 		<div class="playingCard integrated">
-			<img th:src="@{/img/personalQuests/__*{id}__.png}">
+			<img th:src="@{/img/personalQuests/{id}.png(id=*{id})}">
 		</div>
 
 		<!-- Title -->

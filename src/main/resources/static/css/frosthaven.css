@@ -91,7 +91,7 @@
 .questLine.personalQuest { background-color: #bb212a; color: #fcfcfc; }
 .questLine.jobPosting { background-color: #c95f26; }
 .questLine.randomScenario { background-color: #6f5337; color: #fcfcfc; }
-.questLine.other { background-color: transparent; }
+.questLine.other { background-color: #fde2bb; }
 
 
 /* ------- */

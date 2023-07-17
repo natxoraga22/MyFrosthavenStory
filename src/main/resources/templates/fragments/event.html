@@ -20,10 +20,12 @@
 		</div>
 
 		<!-- Card -->
-		<th:block th:with="typeFolder = *{#strings.toLowerCase(type.toString())}">
-			<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
-				@{/img/events/__${typeFolder}__/__*{id}__.png},
-				@{/img/events/__${typeFolder}__/__*{id}___back.png})}">
+		<th:block>
+			<th:block>
+				<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
+					@{/img/events/{type}/{season}/{id}.png(type=*{type.toLowerCase()},season=*{season?.toLowerCase()},id=*{id})},
+					@{/img/events/{type}/{season}/{id}_back.png(type=*{type.toLowerCase()},season=*{season?.toLowerCase()},id=*{id})})}">
+				</th:block>
 			</th:block>
 		</th:block>
 

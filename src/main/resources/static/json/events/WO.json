@@ -1,4 +1,19 @@
 {
+	"WO-19": {
+		"text": "text",
+		"options": {
+			"A": {
+				"trigger": "trigger",
+				"text": "text",
+				"rewards": "rewards"
+			},
+			"B": {
+				"trigger": "trigger",
+				"text": "text",
+				"rewards": "rewards"
+			}
+		}
+	},
 	"WO-61": {
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},

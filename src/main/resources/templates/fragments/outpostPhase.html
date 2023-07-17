@@ -54,7 +54,7 @@
 					<div class="playingCards">
 						<div th:class="*{level != 0} ? playingCard">
 							<img th:with="imgName = *{id} + *{level != 0 ? '_' + level : ''}"
-								th:class="${imgName}" th:src="@{/img/buildings/__${imgName}__.png}">
+							     th:class="${imgName}" th:src="@{/img/buildings/{imgName}.png(imgName=${imgName})}">
 						</div>
 					</div>
 
@@ -73,11 +73,11 @@
 					</div>
 					<div class="playingCards">
 						<div class="playingCard">
-							<img th:with="imgName = *{id} + '_' + *{level - 1}" th:src="@{/img/buildings/__${imgName}__.png}">
+							<img th:src="@{/img/buildings/{imgName}.png(imgName=*{id} + '_' + *{level - 1})}">
 						</div>
 						<i class="fa-solid fa-right-long fa-2xl mx-4"></i>
 						<div class="playingCard">
-							<img th:with="imgName = *{id} + '_' + *{level}" th:src="@{/img/buildings/__${imgName}__.png}">
+							<img th:src="@{/img/buildings/{imgName}.png(imgName=*{id} + '_' + *{level})}">
 						</div>
 					</div>
 

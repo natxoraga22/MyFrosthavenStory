@@ -82,6 +82,10 @@ public class Event extends StoryObject {
 	public enum Type { 
 		O, R, B;
 	
+		public String toLowerCase() {
+			return this.toString().toLowerCase();
+		}
+
 		@Override
 		public String toString() {
 			switch(this) {
@@ -95,6 +99,10 @@ public class Event extends StoryObject {
 
 	public enum Season { 
 		S, W;
+
+		public String toLowerCase() {
+			return this.toString().toLowerCase();
+		}
 
 		@Override
 		public String toString() {

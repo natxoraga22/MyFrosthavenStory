@@ -1,4 +1,9 @@
 {
+	"21.4": {
+		"title": "Winter Arrives",
+		"text": "<p>It’s been a summer of adversity, but your decision is made: this outpost at the corner of civilization won’t make it through another winter without your assistance. Of course, it’s possible they won’t make it with you, either—but at least you’ll find out together.</p><p>The Quatryl mail carrier cinches her bag and plods through the main gate. In her satchel is your final reconnaissance report to the guild at White Oak, detailing the condition of the town, the support it will need to continue, and your decision to stay.</p><p>With a sober final thump, the gates of Frosthaven seal shut. The populace barely acknowledge it, but for you it means you’ve linked your fate with that of this town.</p>",
+		"rewards": "<strong>Gain 1 prosperity.</strong>"
+	},
 	"32.3": {
 		"title": "Visiting Trader",
 		"text": "<p>A carriage piled high with blankets and carpets is tucked between a snowbank and a building near the edge of town. Its old owner sees you wandering by and looks both ways before beckoning you over.</p><p>“Nice place, nice place this Frosthaven. Cold though, eh? Heh. Maybe you’re the sort of people who would like some hot items.” He chuckles a bit to himself as he pins back a blanket on his carriage, revealing assorted items in like-new condition.</p><p>“I just need a few motivated buyers. Shouldn’t be trouble up here, no... but I wouldn’t wear these out in, let’s say, uh, Gloomhaven for a while. Heh.”</p><p>You’re not planning on heading south to that decrepit city any time soon. Might as well pick up a few items at a steal of a price.</p>",
@@ -34,5 +39,10 @@
 	},
 	"180.1": {
 		"unlockedBy": { "event": { "id": "SO-03" }}
+	},
+	"183.3": {
+		"title": "Visiting Trader",
+		"text": "“Ah, my best customers! Heh.” It’s the old traveling merchant and his carriage full of items of suspicious origins. He invites you to poke through his inventory. “Same price as before, but even better value. No one’s going to come looking for these. Heh.” He doesn’t elaborate, and you think better than to press the issue.",
+		"rewards": "<strong>Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold.</strong>"
 	}
 }

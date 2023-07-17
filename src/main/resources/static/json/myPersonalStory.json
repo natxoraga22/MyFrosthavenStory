@@ -85,6 +85,16 @@
 				"outpostEvent": { "id": "SO-03", "chosenOption": "B" },
 				"build": [{ "id": "wallJ" }]
 			}
+		},
+		{ "event": { "id": "SR-10", "chosenOption": "B" }},
+		{ "scenario": { "id": "114" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "183.3" }, { "id": "21.4" }],
+				"outpostEvent": { "id": "WO-19", "chosenOption": "A" },
+				"levelUps": [{ "id": "deathwalker", "level": 5 }],
+				"build": [{ "id": "wallK" }]
+			}
 		}
 	]
 }

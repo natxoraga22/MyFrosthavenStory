@@ -76,6 +76,7 @@ public class CampaignController {
 			}
 		}
 
+		model.addAttribute("page", Page.CAMPAIGN);
 		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
 		model.addAttribute("party", originalParty.values());
 		model.addAttribute("story", story);

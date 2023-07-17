@@ -72,6 +72,21 @@
 			}
 		}
 	},
+	"SR-10": {
+		"text": "<p>You round a rocky outcropping and find a lavishly-dressed Savvas staring you down, anger in its eyes.</p><p>\"You're late!\" You stammer a non-committal half-response, but it's quickly cut off. \"Useless! Don't touch the food with those greasy hands of yours. It's worth more than all those pelts you're wearing. Grab a tray and get to work serving your betters—and be advised your tardiness is coming out of your tip!\"</p><p>A dozen Savvas are seated on stone benches around an outdoor table meticulously carved from a single slab of granite. Each Savvas is wearing elaborate clothing studded with metals and fine silks that really do put your own clothes to shame. The scene is set for a magnificent feast, and a nearby serving area has gorgeous platters heaped high with the most perfect cuts of... rocks?</p><p>\"Get on with it! We 're hungry!\"</p>",
+		"options": {
+			"A": {
+				"trigger": "You heard the Savvas. Let's make some coin.",
+				"text": "You shuttle heavy platters of fine rocks from the serving area to the assembled Savvas, refilling drinks and generally staying out of their way. The Savvas consume the geologic sampler with a deliberate slowness, savoring the crunch and grinding each bite to sand before swallowing. When the gathered group is satiated, one calls you over and hands you a small pouch full of gold with an idle nod of thanks.",
+				"rewards": "Gain 15 collective gold."
+			},
+			"B": {
+				"trigger": "Oh sure, you'll serve them—but these haughty Savvas need to be taught a lesson. Rations from your packs it is.",
+				"text": "<p>You dig out some of the hardened rations that have ridden around in your pack for weeks now—they're as good as rocks and equally hard. You slip a few onto the platters as you serve the uptight Savvas, and they relish them the same as any of their fancy rocks. They finish their meal happily and hand over a small pouch of gold, but cant help but remind you they're withholding some of the payment for your tardiness.</p><p>You make a quick exit and are nearly out of earshot before the retching starts.</p>",
+				"rewards": "Gain 1 morale.<br/>Gain 10 collective gold."
+			}
+		}
+	},
 	"SR-13": {
 		"text": "<p>As you pause for a rest along your journey, you spot a handful of bright orange produce sticking out from the meltwater mud. It looks not dissimilar to an elongated flamefruit, though the color is different. You pick one off and smell it, noting its rich, lively herb aroma. As you prepare to take a bite, you hear a voice shouting.</p><p>\"I wouldn't do that.\" An elderly Quatryl steps out of the bushes and points at you with her walking stick. \"That's a firepepper, the strongest spice on this side of the continent!\" As you look puzzled, she continues. \"It's been said a firepepper stew can reheat even the soul of the dead. I've heard the tale of a Hungry Maw living beneath the Copperneck Mountains that only spared a village from destruction when they served it a plate of their hottest sweet-and-fiery stew.\" She chuckles to herself.</p><p>\"I'm certain it would be too much for you. I grew up eating these, but it would probably take you a week to recover!\"</p>",
 		"options": {

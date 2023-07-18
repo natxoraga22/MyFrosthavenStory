@@ -2,5 +2,63 @@
 	"id": "122",
 	"name": "The Eternal Crave",
 	"questLine": "Other",
-	"unlockedBy": { "event": { "id": "SR-13" }}
+	"coordinates": "H10",
+	"unlockedBy": { "event": { "id": "SR-13" }},
+	"complexity": 2,
+	"goals": "<p>The scenario is complete when the Hungry Maw is dead. At the end of that round, read [section] <strong>11.2</strong>.</p><p>Alternately, the scenario is complete when the mammoth bark, axenut, and firepepper are combined and stirred in the pot. (Warning: this route requires solving a challenging puzzle.)</p>",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>The Hungry Maw... The old Quatryl you met along the road has intrigued you with a tale of firepeppers and dangerous beasts, and now you find yourself following her toward an ancient cave.</p><p>“As far as I know, nobody has been to the cave of the Hungry Maw in almost a hundred years!” The Quatryl, named Noore, says. “Ever since it last woke up and demanded another plate of firepepper stew, we’ve been dreading this day.</p><p>“You’ve got the firepepper, and I’ve brought along an axenut, but the third ingredient—the dried mammoth bark—can only be found within the Maw’s cave, but the place has been overrun by deadly bears and strange, flying imps! And with the Maw about to wake up, we have been put in a dire situation. If the Hungry Maw is not fed and leaves its cave, it could mean destruction for the entire north!”</p><p>Noore stops just outside the mouth of a foreboding cave entrance. Stalactites hang from the ceiling like vicious teeth. “My great-grandmother was the last one to successfully cook a batch of the stew,” she says, passing you a scrap of paper. “This is the recipe passed down in my family. Hope you can figure it out and complete the stew.”</p><p>With determination, you head into the cave with Noore and find a black cauldron hanging above a pile of sticks. “I’ll start the fire and get the water boiling,” she says. “Just go and bring back the bark.” Noore points toward the left passage.</p><p>“Or, if you want to try putting the Maw to rest with steel,” she says, pointing to an ornate door to the right, “Go that way, but I can’t imagine it ending well.”</p>",
+			"sectionLinks": "When door [one] is opened (fighting the Hungry Maw), read [section] <strong>98.1</strong>.<br/>When door [two] is opened (solving the puzzle), read [section] <strong>152.1</strong>."
+		},
+		"98.1": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>You kick the doorway leading to the inner chamber open and you see the Maw pacing up and down the center of the place. It looks upon you, and roars with an otherworldly sound.</p><p>“Feed me! Fill my craving! I am awakened with hunger and my soul is cold!” Its eyes pierce through you, as if searching for something. “You come emptyhanded. You cannot sate my damned eternal craving. I will eat you to stave off the empty pit of starvation a little while longer.” This does not look like a situation you can talk yourself out of.</p>",
+			"specialRules": "<p>Door [two] is now locked.</p><p>The Frozen Corpse is the Hungry Maw. It has HxC hit points and is immune to [wound], [poison], [immobilize], [disarm], [stun], and [curse]. In addition, it uses the Boss monster ability deck instead of its own.</p>",
+			"bossSpecials": {
+				"1": "The Hungry Maw performs:<br/>[move] +1<br/>[attack] +1, [target] 2<br/>[push] 2, [target] all, [range] 1<br/>[ice]",
+				"2": "The Hungry Maw performs:<br/>[shield] 1<br/>[move] +0, ([consumeFire]: +2 [move] and suffer [damage] 1)<br/>[attack] +0<br/>[consumeIce]: [push] 2, [target] all, [range] 1, [brittle]"
+			},
+			"sectionLinks": "The first time the Hungry Maw is reduced to at most HxC/2 (rounded down) hit points, read [section] <strong>151.1</strong>."
+		},
+		"151.1": {
+			"trigger": "The Hungry Maw is reduced to at most HxC/2 (rounded down) hit points",
+			"text": "Just when you think you’re winning the fight, the Maw shakes itself off, thumps the ground with its feet to knock you back, and then raises its head, letting out a resounding, echoing howl. You can hear distant answers from far behind you. More monsters are coming to join the fight.",
+			"specialRules": "<p>Open door [two].</p><p>The Hungry Maw performs [heal] LxC, self and loses all negative conditions. It is immune to damage until all revealed Snow Imps are dead.</p>",
+			"sectionLinks": "Return to [section] <strong>98.1</strong> to reference its special rules, if necessary."
+		},
+		"11.2": {
+			"trigger": "The Hungry Maw is dead",
+			"conclusion": "<p>The beast is wounded, probably mortally, and looks at you, knowing it’s defeated. Its eyes are full of desperation, as its eternal craving slowly brings it down to despair – the realization that its hunger shall never be sated again. “So hungry...” It groans one last time as life leaves its pitiful hulk.</p><p>“Well, I must admit, I didn’t think that would work,” Noore marvels. “You all are tougher than I thought, even if you can’t hold down a firepepper.”</p>",
+			"rewards": "<strong>Gain 10 gold each.</strong>"
+		},
+		"152.1": {
+			"trigger": "Door [two] is opened",
+			"text": "You leave behind the dryness of the Maw’s dwelling, searching for the mammoth bark. You descend into a dark and icy cave below the hall above. At the edge of your torches, you can see two paths: a long and treacherous path through a patch of ice frozen so clear, it could be a mirror; or a shortcut through a darker part of the cave, where the only things you can make out in the shadows are silhouettes of giant polar bears.",
+			"specialRules": "Door [one] is now locked.",
+			"sectionLinks": "When door [three] is opened, read [section] <strong>179.2</strong>.<br/>When door [four] is opened, read [section] <strong>172.1</strong>."
+		},
+		"179.2": {
+			"trigger": "Door [three] is opened",
+			"text": "You thought you could sneak past the sleeping polar bears, but a Snow Imp has other plans, flying toward you and shrieking. You’re so close to the main chamber of the cavern system now, but there are so many creatures between you and the other side–and they’re all excited at the prospect of dinner.",
+			"specialRules": "Door [four] is now locked.",
+			"sectionLinks": "When door [five] is opened, read [section] <strong>145.1</strong>."
+		},
+		"172.1": {
+			"trigger": "Door [four] is opened",
+			"text": "You take another step along the path, thinking you’re through the icy danger, when the new cavern opens up to you, and you see a bridge of ice extending over some rather dangerous pits. There is no turning back now. The main chamber is on the other side of this path.",
+			"specialRules":"Door [three] is now locked.",
+			"sectionLinks": "When door [six] is opened, read [section] <strong>8.4</strong>."
+		},
+		"145.1": {
+			"trigger": "Door [five] is opened",
+			"text": "This is it! You see a growth of mammoth bark on the other side of the cavern. You are bound to find a few dried out pieces of it to collect.",
+			"specialRules": "",
+			"sectionLinks": ""
+		},
+		"8.4": {
+			"trigger": "Door [six] is opened"
+		}
+	}
 }

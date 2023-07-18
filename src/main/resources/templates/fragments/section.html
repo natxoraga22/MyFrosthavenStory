@@ -54,11 +54,6 @@
 			</div>
 		</div>
 
-		<!-- Map -->
-		<div th:if="${section.partOfScenario && section.hasMap(scenario.id)}" class="map">
-			<img th:src="@{/img/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
-		</div>
-
 		<!-- Conclusion -->
 		<div th:if="*{conclusion}" class="card fhCard fhCardFlush conclusion">
 			<div class="card-header">[[#{section.conclusion}]]</div>
@@ -76,11 +71,18 @@
 		</div>
 
 		<!-- Section Links -->
-		<div th:if="*{conclusion != null && sectionLinks != null}" class="card fhCard sectionLinks">
-			<div class="card-header">[[#{section.sectionLinks}]]</div>
-			<div class="card-body">
-				[(*{sectionLinks})]
+		<th:block th:if="${section.conclusion != null || page?.name() == 'SCENARIO'}">
+			<div th:if="*{sectionLinks}" class="card fhCard sectionLinks">
+				<div class="card-header">[[#{section.sectionLinks}]]</div>
+				<div class="card-body">
+					[(*{sectionLinks})]
+				</div>
 			</div>
+		</th:block>
+
+		<!-- Map -->
+		<div th:if="${section.partOfScenario && section.hasMap(scenario.id)}" class="map">
+			<img th:src="@{/img/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
 		</div>
 	</div>
 </body>

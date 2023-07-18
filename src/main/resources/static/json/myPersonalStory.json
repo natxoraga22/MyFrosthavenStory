@@ -97,6 +97,6 @@
 			}
 		},
 		{ "event": { "id": "WR-11", "chosenOption": "B1" }},
-		{ "scenario": { "id": "122" }}
+		{ "scenario": { "id": "122", "path": ["main", "152.1"] }}
 	]
 }

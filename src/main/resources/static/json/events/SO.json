@@ -63,24 +63,28 @@
 		"text": "<p>A Valrath man comes up to you in the street. \"Say... you spend some time outside the walls, right? Happened to come across any snowthistle?\" He speaks in a low voice, and his hood makes it difficult to make out his face.</p><p>Before you have a chance to respond, a portly woman rushes up with a broom, smacking the Valrath on the back. \"You again?! Leave these people alone!\" The valrath scurries off into an alley without another word. The woman turns to you, her hands on her hips.</p><p>\"Valraths and snowthistle, am I right? For most people it's a garnish, or medicinal. For them—well, they can't get enough of the stuff. Addicts!\" She mumbles to herself as she heads back into her home.</p><p>You continue your walk, but hear the Valrath's voice down the alley. \"So? Have any? I've got coin.\"</p>",
 		"options": {
 			"A1": {
+				"id": "A",
 				"trigger": "Sell the Valrath some snowthistle (requires [snowthistle]).",
 				"requirement": "[trait] VALRATH",
 				"text": "The Valrath energetically prepares some of your snowthistle for sharing. Surely, a little bit couldn't hurt—oh, it's evening now. Well, just a bit more for the road—is that the morning sun? The buyer smiles. \"Let me know if you get more. Happy to share.\"",
 				"rewards": "Gain 1 morale and 15 collective gold.<br/>Lose all collective [snowthistle]."
 			},
 			"A2": {
+				"id": "A",
 				"trigger": "Sell the Valrath some snowthistle (requires [snowthistle]).",
 				"requirement": "[not] [trait] VALRATH",
 				"text": "You hand the Valrath some snowthistle, and he licks his lips. \"Good, nice quality. Happy to put any excess to you have to better use...\"",
 				"rewards": "Lose any number of collective [snowthistle].<br/>Gain 5 collective gold for each [snowthistle] lost."
 			},
 			"B1": {
+				"id": "B",
 				"trigger": "Admonish the Valrath for this pursuits.",
 				"requirement": "[trait] PERSUASIVE",
 				"text": "You offer encouraging words, reminding the Valrath that his pursuits don't need to define who he is. He grumbles as he slinks down the alley. \"I'll, uh, consider what you said.\"",
 				"rewards": "No effect."
 			},
 			"B2": {
+				"id": "B",
 				"trigger": "Admonish the Valrath for this pursuits.",
 				"requirement": "[not] [trait] PERSUASIVE",
 				"text": "You tell the Valrath just how troubling his actions are for society. He waves you off. \"Keep your opinions to yourself! And, uh, let me know if you come across some snowthistle, obviously.\"",

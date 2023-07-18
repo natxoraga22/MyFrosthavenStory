@@ -12,6 +12,9 @@
 .icon.one,
 .icon.two,
 .icon.three,
+.icon.four,
+.icon.five,
+.icon.six,
 .icon.a,
 .icon.b,
 .icon.c,
@@ -21,7 +24,7 @@
 	max-height: 22px;
 }
 
-/* Conditions  */
+/* Conditions */
 .icon.bane,
 .icon.bless,
 .icon.brittle,
@@ -40,6 +43,22 @@
 .icon.stun,
 .icon.ward,
 .icon.wound {
+	max-height: 22px;
+}
+
+/* Elements */
+.icon.fire,
+.icon.consumeFire,
+.icon.ice,
+.icon.consumeIce,
+.icon.air,
+.icon.consumeAir,
+.icon.earth,
+.icon.consumeEarth,
+.icon.light,
+.icon.consumeLight,
+.icon.dark,
+.icon.consumeDark {
 	max-height: 20px;
 }
 
@@ -57,16 +76,19 @@
 
 /* Others */
 .icon.ally       { max-height: 15px; }
+.icon.attack     { max-height: 18px; }
 .icon.boat       { max-height: 18px; }
 .icon.checkmark  { max-height: 14px; }
 .icon.damage     { max-height: 18px; }
 .icon.heal       { max-height: 18px; }
 .icon.item       { max-height: 15px; }
 .icon.linkForced { max-height: 12px; }
+.icon.move       { max-height: 18px; }
 .icon.not        { max-height: 18px; }
 .icon.plus1      { max-height: 18px; }
 .icon.range      { max-height: 15px; }
 .icon.retaliate  { max-height: 17px; }
+.icon.shield     { max-height: 18px; }
 .icon.sled       { max-height: 14px; }
 .icon.trait      { max-height: 18px; }
 .icon.xp         { max-height: 18px; }

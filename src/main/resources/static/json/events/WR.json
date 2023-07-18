@@ -1,3 +1,26 @@
 {
-	
+	"WR-11": {
+		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They'll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It's a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers... they's a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans're just gray worms swimming around in a skull driving a skeleton around. This here's a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand 'em, but I can't say I understand 'em.\" The Kivak waits, unblinkingly.</p>",
+		"options": {
+			"A": {
+				"trigger": "Kill the Kivak",
+				"text": "You cut the doomed Kivak down. It doesn't move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: \"Most Kivak just want to eat dirt and grass. O'course I get the weird ones.\"",
+				"rewards": "No effect."
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Refuse and force your way through the sea of animals",
+				"requirement": "[trait] OUTCAST",
+				"text": "You don't know what this solitary Kivak did to wrong the others, but you understand rejection by your peers. You grab the Kivak and push through the herd. Once on the other side, the reject snorts in thanks before wandering off.",
+				"rewards": "Gain 1 [checkmark] each."
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Refuse and force your way through the sea of animals",
+				"requirement": "[not] [trait] OUTCAST",
+				"text": "You ignore the lone Kivak and the crazy shepherd, instead pushing through the herd. They stand strong, and their stone skin makes passage akin to squeezing through a tight cave. Finally, you emerge exhausted on the other side of the herd.",
+				"rewards": "All characters start the next scenario with [impair] and [damage] 2."
+			}
+		}
+	}
 }

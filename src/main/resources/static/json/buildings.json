@@ -87,5 +87,8 @@
 	},
 	"wallJ": {
 		"name": "Wall"
+	},
+	"wallK": {
+		"name": "Wall"
 	}
 }

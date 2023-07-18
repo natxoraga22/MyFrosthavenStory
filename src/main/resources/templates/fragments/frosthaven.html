@@ -17,7 +17,7 @@
 			<a th:if="*{scenario}" class="link-secondary" th:href="|#scenario_*{scenario.id}|">
 				Scenario [[*{scenario.id}]]
 			</a>
-			<a th:if="*{section}" class="link-secondary" th:href="|#section_*{section.id}|">
+			<a th:if="*{section}" class="link-secondary" th:href="|#section_*{section.htmlSafeId}|">
 				Section [[*{section.id}]]
 			</a>
 		</th:block>

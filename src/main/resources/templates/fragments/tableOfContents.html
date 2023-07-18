@@ -93,15 +93,17 @@
 				const tableOfContents = document.getElementById("tableOfContents");
 				const activeListGroupItem = tableOfContents.querySelector(".list-group-item.active"); 
 
-				// Calculate position of activeListGroupItem relative to tableOfContents
-				const activeListGroupItemPosition = activeListGroupItem.getBoundingClientRect().top - tableOfContents.getBoundingClientRect().top;
+				if (activeListGroupItem != null) {
+					// Calculate position of activeListGroupItem relative to tableOfContents
+					const activeListGroupItemPosition = activeListGroupItem.getBoundingClientRect().top - tableOfContents.getBoundingClientRect().top;
 
-				if (activeListGroupItemPosition < 0) {
-					tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition;
-				}
-				else if (activeListGroupItemPosition + activeListGroupItem.offsetHeight > tableOfContents.offsetHeight) {
-					const heightDiff = tableOfContents.offsetHeight - activeListGroupItem.offsetHeight;
-					tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition - heightDiff;
+					if (activeListGroupItemPosition < 0) {
+						tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition;
+					}
+					else if (activeListGroupItemPosition + activeListGroupItem.offsetHeight > tableOfContents.offsetHeight) {
+						const heightDiff = tableOfContents.offsetHeight - activeListGroupItem.offsetHeight;
+						tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition - heightDiff;
+					}
 				}
 			});
 		});

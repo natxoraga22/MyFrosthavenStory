@@ -1,16 +1,16 @@
 {
 	"WO-19": {
-		"text": "text",
+		"text": "<p>\"Mercenaries! I require you! In the name of art!\"</p><p>A Savvas stands at your front door, a long black scarf wrapped around its neck.</p><p>\"I am Eros, purveyor of culture and director of theater. I am putting on a play, tentatively titled The Depths of Anguish, reenacting the most noble of sacrifices on our shores at the hands of the Lurkers. It will be my magnum opus.\" It pauses, dramatically.</p><p>You try to explain that while your services are for hire, those services don't include play-acting. It's more the \"smashing\" type of services, really.</p><p>\"What? No, never—\" It looks a bit stunned that you'd even consider yourselves actors. \"No, I need you to stand guard in the ocean. This will be set on location at the shore, and I can't have an encore of the subject matter. I'll want you staged in the water, out of sight, just in case Lurkers try to write a sequel.\"</p>",
 		"options": {
 			"A": {
-				"trigger": "trigger",
-				"text": "text",
-				"rewards": "rewards"
+				"trigger": "Agree to defend the show from within the icy water.",
+				"text": "<p>The night of the show, you wade into the icy water, ready for Lurker attacks. What you weren't ready for was the assault on your ears as second-rate actors stumble through the unrealistic dialogue.</p><p>\"I'm going fast!\" shouts one. Ugh. Who would say that in combat?</p><p>The Lurkers you're there to protect against must have heard the reviews, because they weren't anywhere to be found. You retire at the end of the night a few coins richer, many of which need to be spent on hot tea to warm up.</p>",
+				"rewards": "Gain 5 gold each.<br/>All characters start the next scenario with [brittle]."
 			},
 			"B": {
-				"trigger": "trigger",
-				"text": "text",
-				"rewards": "rewards"
+				"trigger": "Try to convince Eros to let you defend the show from the guard tower.",
+				"text": "<p>You explain to Eros that being in the water won't do much good in the event of an attack, and that you'd have a much better vantage point from the guard towers... given that's what they're literally there for.</p><p>\"I see that this is a creative difference we will be unable to overcome. I bid you good day.\" The Savvas flips its scarf defiantly and moves on.</p><p>Later in the week, you're walking by a poorly-attended show on the docks and spot some other mercenaries keeping watch, weapons drawn, in the frigid ocean.</p><p>The show gets lukewarm reviews.</p>",
+				"rewards": "No effect."
 			}
 		}
 	},

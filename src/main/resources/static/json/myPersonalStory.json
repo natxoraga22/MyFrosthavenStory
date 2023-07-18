@@ -95,6 +95,8 @@
 				"levelUps": [{ "id": "deathwalker", "level": 5 }],
 				"build": [{ "id": "wallK" }]
 			}
-		}
+		},
+		{ "event": { "id": "WR-11", "chosenOption": "B1" }},
+		{ "scenario": { "id": "122" }}
 	]
 }

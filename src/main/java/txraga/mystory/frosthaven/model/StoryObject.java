@@ -1,4 +1,4 @@
-package txraga.frosthaven.model;
+package txraga.mystory.frosthaven.model;
 
 
 public abstract class StoryObject {

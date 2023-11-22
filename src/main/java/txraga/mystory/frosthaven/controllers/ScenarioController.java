@@ -1,4 +1,4 @@
-package txraga.frosthaven.controllers;
+package txraga.mystory.frosthaven.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.slf4j.XSlf4j;
-import txraga.frosthaven.FrosthavenFiles;
-import txraga.frosthaven.model.Scenario;
+import txraga.mystory.frosthaven.FrosthavenFiles;
+import txraga.mystory.frosthaven.model.Scenario;
 
 
 @XSlf4j

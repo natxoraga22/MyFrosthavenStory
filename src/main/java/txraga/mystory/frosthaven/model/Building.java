@@ -1,4 +1,4 @@
-package txraga.frosthaven.model;
+package txraga.mystory.frosthaven.model;
 
 import java.util.HashMap;
 import java.util.Map;

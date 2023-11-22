@@ -1,4 +1,4 @@
-package txraga.frosthaven;
+package txraga.mystory.frosthaven;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

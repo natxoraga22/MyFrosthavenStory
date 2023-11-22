@@ -1,4 +1,4 @@
-package txraga.frosthaven.controllers;
+package txraga.mystory.frosthaven.controllers;
 
 
 public enum Page {

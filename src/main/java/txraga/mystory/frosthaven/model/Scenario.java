@@ -1,4 +1,4 @@
-package txraga.frosthaven.model;
+package txraga.mystory.frosthaven.model;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import txraga.frosthaven.model.personal.StoryItem;
+import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 
 @Getter

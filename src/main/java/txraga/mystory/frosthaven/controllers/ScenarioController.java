@@ -12,15 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.FrosthavenFiles;
+import txraga.mystory.frosthaven.Frosthaven;
 import txraga.mystory.frosthaven.model.Scenario;
 
 
 @XSlf4j
+@RequiredArgsConstructor
 @Controller
 @RequestMapping("/scenario")
 public class ScenarioController {
+
+	private final Frosthaven frosthaven;
+
 
 	@GetMapping({"", "/{scenarioId}"})
 	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId, @RequestParam(required = false) String path) {
@@ -50,7 +55,7 @@ public class ScenarioController {
 
 	private Scenario getScenario(String id, String path) {
 		log.entry(id, path);
-		Scenario scenario = FrosthavenFiles.getScenario(id);
+		Scenario scenario = frosthaven.getScenario(id);
 		if (scenario != null) {
 			// Path
 			if (path != null && !path.isBlank()) {

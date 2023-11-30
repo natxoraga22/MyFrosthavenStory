@@ -6,7 +6,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.Frosthaven;
-import txraga.mystory.frosthaven.FrosthavenFiles;
 import txraga.mystory.frosthaven.model.Building;
 import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
@@ -28,21 +27,25 @@ import txraga.mystory.frosthaven.model.Section;
 import txraga.mystory.frosthaven.model.StoryObject;
 import txraga.mystory.frosthaven.model.personal.PersonalStory;
 import txraga.mystory.frosthaven.model.personal.StoryItem;
+import txraga.mystory.frosthaven.services.FrosthavenService;
 
 
 @XSlf4j
+@RequiredArgsConstructor
 @Controller
 @RequestMapping("/")
 public class CampaignController {
 	
-	@Autowired private Frosthaven frosthaven;
+	private final Frosthaven frosthaven;
+
+	private final FrosthavenService fhService;
 
 
 	@GetMapping("")
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
 		model.addAttribute("page", Page.CAMPAIGN);
-		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
+		model.addAttribute("welcome", fhService.getWelcome());
 		return log.exit(new ModelAndView("campaign"));
 	}
 
@@ -77,7 +80,7 @@ public class CampaignController {
 		}
 
 		model.addAttribute("page", Page.CAMPAIGN);
-		model.addAttribute("welcome", FrosthavenFiles.getWelcome());
+		model.addAttribute("welcome", fhService.getWelcome());
 		model.addAttribute("party", originalParty.values());
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("fragments/campaign :: campaign"));
@@ -119,6 +122,7 @@ public class CampaignController {
 
 	private Event getEvent(Event storyItemEvent) {
 		log.entry(storyItemEvent);
+		if (storyItemEvent == null) return log.exit(null);
 		Event event = frosthaven.getEvent(storyItemEvent.getId());
 		if (event != null) {
 			// Set chosen option
@@ -139,7 +143,7 @@ public class CampaignController {
 
 	private Scenario getScenario(Scenario storyItemScenario) {
 		log.entry(storyItemScenario);
-		Scenario scenario = FrosthavenFiles.getScenario(storyItemScenario.getId());
+		Scenario scenario = frosthaven.getScenario(storyItemScenario.getId());
 		if (scenario != null) {
 			// Set path
 			if (storyItemScenario.getPath() != null) scenario.setPath(storyItemScenario.getPath());

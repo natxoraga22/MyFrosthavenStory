@@ -18,11 +18,11 @@
 	<!-- -------- -->
 	<div th:fragment="campaign" id="campaign">
 		<div class="row gx-5">
-			<div class="col-3">
+			<div class="col-3 d-none d-sm-block">
 				<!-- Table of contents -->
 				<th:block th:replace="~{fragments/tableOfContents :: tableOfContents}"></th:block>
 			</div>
-			<div class="col-9 position-relative">
+			<div class="col-12 col-sm-9 position-relative">
 				<!-- Edit personal story button -->
 				<button type="button" id="editPersonalStoryButton" class="btn btn-primary"
 						data-bs-toggle="modal" data-bs-target="#editPersonalStoryModal">
@@ -95,7 +95,6 @@
 	<script th:fragment="campaignJs" id="campaignJs" th:inline="javascript">
 		// Only show back to top button if the user has scrolled down
 		window.onscroll = function() {
-			console.log("onscroll()");
 			const backToTopButton = document.getElementById("backToTopButton");
 			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 				backToTopButton.classList.remove("d-none");

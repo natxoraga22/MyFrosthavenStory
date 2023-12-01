@@ -12,7 +12,6 @@ import lombok.ToString;
 @ToString
 public class Reward {
 
-	private String scenarioId;
-	private String eventId;
+	private Scenario scenario;
 
 }

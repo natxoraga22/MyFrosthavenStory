@@ -27,7 +27,8 @@
 		"unlockedBy": { "scenario": { "id": "033" }},
 		"title": "Bathysphere Ready",
 		"text": "<p>Pinter Droman, the premiere tinkerer of Frosthaven, leads you to the large storehouse situated just behind his workshop. He collects himself for a moment, then throws open the doors with a flourish, announcing: “A bathysphere, my friends!”</p><p>What you see looks like a tiny, spherical prison. A glass-and-metal orb lies on a pallet in front of you, equipped with two crude propellers and a pair of clockwork arms. Inside it sit a number of rubber suits with glass fishbowl helmets. These suits are connected to the complicated machinery of the orb through tubes in their head and are meant to be deployed from the main bathysphere, “when more maneuverability is required,” Droman explains.</p><p>You’re not sure what to make of it all, but Pinter’s enthusiasm more than makes up for your reaction. He runs you through the machine’s functions, explaining how to adjust the internal environment, how to draw in air through a small outboard port and store it inside. All in all, it looks sturdy, but that does little to calm your nerves.</p><p>You pay the Tinkerer the rest of his fee, and shortly after, the bathysphere is mounted onto the ship. It’s time to set sail once again.</p>",
-		"rewards": "New Scenario:<br/><strong>Sunless Trench</strong> <span class=\"scenarioNumber\">(42)</span>"
+		"rewards": "New Scenario:<br/><strong>Sunless Trench</strong> <span class=\"scenarioNumber\">(42)</span>",
+		"newRewards": [{ "scenario": { "id": "042" }}]
 	},
 	"146.4": {
 		"title": "Random Scenario",

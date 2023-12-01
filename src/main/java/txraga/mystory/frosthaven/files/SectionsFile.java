@@ -37,7 +37,7 @@ public class SectionsFile {
 			return log.exit(sections);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + SECTIONS_FILE_PATH + "'", e);
+			log.warn("Error reading and parsing file '" + SECTIONS_FILE_PATH + "'");
 			return log.exit(Map.of());
 		}
 	}

@@ -70,6 +70,16 @@
 			</div>
 		</div>
 
+		<!-- Rewards -->
+		<bs:card th:if="*{!#lists.isEmpty(newRewards)}" class="fhCard rewards">
+			<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
+			<bs:cardBody>
+				<div th:each="reward : *{newRewards}" th:object="${reward}" class="reward">
+					<th:block th:if="*{scenario}">New Scenario: [[*{scenario.name}]] ([[*{scenario.id}]])</th:block>
+				</div>
+			</bs:cardBody>
+		</bs:card>
+
 		<!-- Section Links -->
 		<th:block th:if="${section.conclusion != null || page?.name() == 'SCENARIO'}">
 			<div th:if="*{sectionLinks}" class="card fhCard sectionLinks">

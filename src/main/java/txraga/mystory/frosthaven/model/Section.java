@@ -1,5 +1,6 @@
 package txraga.mystory.frosthaven.model;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -30,6 +31,7 @@ public class Section {
 	private Map<String,String> bossSpecials = Map.of();
 	private String conclusion;
 	private String rewards;
+	private List<Reward> newRewards;
 	private String sectionLinks;
 
 

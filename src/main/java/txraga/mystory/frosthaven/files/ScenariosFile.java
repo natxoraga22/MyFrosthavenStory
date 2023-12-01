@@ -43,7 +43,7 @@ public class ScenariosFile {
 			return log.exit(scenario);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json'", e);
+			log.warn("Error reading and parsing file '" + SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json'");
 			return log.exit(null);
 		}
 	}

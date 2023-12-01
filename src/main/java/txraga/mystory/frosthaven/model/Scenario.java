@@ -12,11 +12,11 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 @Getter
 @Setter
-@ToString
+@ToString(onlyExplicitlyIncluded = true)
 public class Scenario extends StoryObject {
 	
-	private String id;
-	private String name;
+	@ToString.Include private String id;
+	@ToString.Include private String name;
 	private QuestLine questLine;
 	private String coordinates;
 	private Requirement requirement;

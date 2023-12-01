@@ -1,5 +1,7 @@
 package txraga.mystory.frosthaven.model;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,8 +12,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Reward {
+public class Rewards {
 
-	private Scenario scenario;
+	private List<Scenario> scenarios;
+	private String text;
 
 }

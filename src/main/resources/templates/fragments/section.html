@@ -71,17 +71,12 @@
 		</div>
 
 		<!-- Rewards -->
-		<bs:card th:if="*{!#lists.isEmpty(newRewards)}" class="fhCard rewards">
-			<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
-			<bs:cardBody>
-				<div th:each="reward : *{newRewards}" th:object="${reward}" class="reward">
-					<th:block th:if="*{scenario}">New Scenario: [[*{scenario.name}]] ([[*{scenario.id}]])</th:block>
-				</div>
-			</bs:cardBody>
-		</bs:card>
+		<th:block th:if="*{newRewards}">
+			<th:block th:replace="~{:: rewards(*{newRewards})}"></th:block>
+		</th:block>
 
 		<!-- Section Links -->
-		<th:block th:if="${section.conclusion != null || page?.name() == 'SCENARIO'}">
+		<th:block th:if="${section.conclusion != null || !section.partOfScenario || page?.name() == 'SCENARIO' || page?.name() == 'SECTION'}">
 			<div th:if="*{sectionLinks}" class="card fhCard sectionLinks">
 				<div class="card-header">[[#{section.sectionLinks}]]</div>
 				<div class="card-body">
@@ -95,5 +90,29 @@
 			<img th:src="@{/img/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
 		</div>
 	</div>
+
+
+	<!-- ------- -->
+	<!-- REWARDS -->
+	<!-- ------- -->
+	<bs:card th:fragment="rewards(rewards)" th:object="${rewards}" class="fhCard rewards">
+		<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
+		<bs:cardBody>
+			<!-- Text -->
+			<div th:if="*{text}" class="rewardsText fw-bold">
+				[(*{text})]
+			</div>
+
+			<!-- New scenarios -->
+			<div th:if="*{!#lists.isEmpty(scenarios)}" class="rewardsScenarios">
+				[[#{section.rewards.newScenarios}]]:
+				<br/>
+				<th:block th:each="scenario : *{scenarios}">
+					<strong>[[${scenario.name}]]</strong>
+					<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
+				</th:block>
+			</div>
+		</bs:cardBody>
+	</bs:card>
 </body>
 </html>

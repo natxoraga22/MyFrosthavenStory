@@ -1,6 +1,5 @@
 package txraga.mystory.frosthaven.model;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -15,14 +14,14 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 @Getter
 @Setter
-@ToString
+@ToString(onlyExplicitlyIncluded = true)
 public class Section {
 	
-	private String id;
+	@ToString.Include private String id;
 	private boolean partOfScenario;
 
 	private String trigger;
-	private String title;
+	@ToString.Include private String title;
 	private StoryItem unlockedBy;
 
 	private String introduction;
@@ -31,7 +30,7 @@ public class Section {
 	private Map<String,String> bossSpecials = Map.of();
 	private String conclusion;
 	private String rewards;
-	private List<Reward> newRewards;
+	private Rewards newRewards;
 	private String sectionLinks;
 
 

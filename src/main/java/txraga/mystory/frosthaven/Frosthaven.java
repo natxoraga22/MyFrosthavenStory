@@ -39,7 +39,7 @@ public class Frosthaven {
 		events = fhService.findAllEvents();
 		scenarios = fhService.findAllScenarios();
 		buildings = fhService.findAllBuildings();
-		sections = fhService.findAllSections();
+		sections = fhService.findAllSections(scenarios);
 		log.exit();
 	}
 

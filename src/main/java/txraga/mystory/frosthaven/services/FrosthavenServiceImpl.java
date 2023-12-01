@@ -1,5 +1,6 @@
 package txraga.mystory.frosthaven.services;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
@@ -72,9 +73,23 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	}
 
 	@Override
-	public Map<String,Section> findAllSections() {
+	public Map<String,Section> findAllSections(Map<String,Scenario> scenarios) {
 		log.entry();
-		return log.exit(sectionsFile.findAllSectionsAsMap());
+		Map<String,Section> sections = sectionsFile.findAllSectionsAsMap();
+
+		// Populate rewards
+		for (Section section : sections.values()) {
+			if (section.getNewRewards() != null) {
+				List<Scenario> rewardScenarios = section.getNewRewards().getScenarios();
+				if (rewardScenarios != null) {
+					for (int i = 0; i < rewardScenarios.size(); i++) {
+						Scenario scenario = scenarios.get(rewardScenarios.get(i).getId());
+						if (scenario != null) rewardScenarios.set(i, scenario);
+					}
+				}
+			}
+		}
+		return log.exit(sections);
 	}
 	
 }

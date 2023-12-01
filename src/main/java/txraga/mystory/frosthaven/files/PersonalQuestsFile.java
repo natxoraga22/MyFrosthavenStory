@@ -38,7 +38,7 @@ public class PersonalQuestsFile {
 		}
 		catch (IOException e) {
 			log.warn("Error reading and parsing file '" + PERSONAL_QUESTS_FILE_PATH + "'");
-			return log.exit(null);
+			return log.exit(Map.of());
 		}
 	}
 

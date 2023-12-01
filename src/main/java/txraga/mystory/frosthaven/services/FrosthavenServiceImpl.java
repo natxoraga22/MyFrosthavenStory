@@ -79,8 +79,8 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 
 		// Populate rewards
 		for (Section section : sections.values()) {
-			if (section.getNewRewards() != null) {
-				List<Scenario> rewardScenarios = section.getNewRewards().getScenarios();
+			if (section.getRewards() != null) {
+				List<Scenario> rewardScenarios = section.getRewards().getScenarios();
 				if (rewardScenarios != null) {
 					for (int i = 0; i < rewardScenarios.size(); i++) {
 						Scenario scenario = scenarios.get(rewardScenarios.get(i).getId());

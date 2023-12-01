@@ -29,8 +29,7 @@ public class Section {
 	private String specialRules;
 	private Map<String,String> bossSpecials = Map.of();
 	private String conclusion;
-	private String rewards;
-	private Rewards newRewards;
+	private Rewards rewards;
 	private String sectionLinks;
 
 
@@ -56,7 +55,7 @@ public class Section {
 		for (Entry<String,String> bossSpecial : bossSpecials.entrySet()) {
 			bossSpecials.put(bossSpecial.getKey(), ModelUtils.replaceIcons(bossSpecial.getValue()));
 		}
-		this.rewards = ModelUtils.replaceIcons(this.rewards);
+		if (this.rewards != null) this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
 		this.sectionLinks = ModelUtils.replaceIcons(this.sectionLinks);
 	}
 

@@ -19,7 +19,7 @@
 		"2.2": {
 			"trigger": "All enemies are dead",
 			"conclusion": "<p>With enough of the pack slain, the rest slink off back into the white wasteland. But there is no time for celebration. No cheers to mark your victory. You still need to get over the next ridge before nightfall, and all you’ve done is tire yourself out.</p><p>The caravan trudges forward. Some of its members nod solemnly to you as they pass—a thanks for keeping them alive just a little longer. This brutal place has not won today, but there is always tomorrow.</p>",
-			"rewards": "<strong>You should now be ready to take on scenario 1 on the following page in the Scenario Book. Do not perform an Outpost Phase until you have completed scenario 1.</strong>"
+			"rewards": { "text": "You should now be ready to take on scenario 1 on the following page in the Scenario Book. Do not perform an Outpost Phase until you have completed scenario 1." }
 		}
 	},
 	"path": ["main", "2.1", "2.2"]

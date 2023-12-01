@@ -63,16 +63,8 @@
 		</div>
 
 		<!-- Rewards -->
-		<div th:if="*{rewards}" class="card fhCard rewards">
-			<div class="card-header">[[#{section.rewards}]]</div>
-			<div class="card-body">
-				[(*{rewards})]
-			</div>
-		</div>
-
-		<!-- Rewards -->
-		<th:block th:if="*{newRewards}">
-			<th:block th:replace="~{:: rewards(*{newRewards})}"></th:block>
+		<th:block th:if="*{rewards}">
+			<th:block th:replace="~{:: rewards(*{rewards})}"></th:block>
 		</th:block>
 
 		<!-- Section Links -->

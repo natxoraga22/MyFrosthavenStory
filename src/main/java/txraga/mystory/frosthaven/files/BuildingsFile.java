@@ -38,7 +38,7 @@ public class BuildingsFile {
 		}
 		catch (IOException e) {
 			log.warn("Error reading and parsing file '" + BUILDINGS_FILE_PATH + "'");
-			return log.exit(null);
+			return log.exit(Map.of());
 		}
 	}
 

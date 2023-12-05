@@ -37,7 +37,7 @@ public class CharactersFile {
 			return log.exit(characters);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + CHARACTERS_FILE_PATH + "'");
+			log.warn("Error reading and parsing file '" + CHARACTERS_FILE_PATH + "'", e);
 			return log.exit(Map.of());
 		}
 	}

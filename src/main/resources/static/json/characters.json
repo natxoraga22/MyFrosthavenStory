@@ -7,7 +7,11 @@
 		"retirement": { 
 			"id": "60.2",
 			"text": "<p>The Blinkblade finishes reading a long letter delivered by the mail carrier, and then folds it up and tucks it in their pack.</p><p>“Well, looks like I’m needed elsewhere.” You stare at them, somewhat stunned.</p><p>“I’ve been offered a job by the Merchant’s Guild in White Oak,” the Blinkblade says. “Apparently activity of the Sin-Ra syndicate has increased recently, and they need skilled operatives to fight them back in the shadows of the capital. These Sin- Ra are insidious jerks, and if you don’t nip their machinations in the bud, well...” The Blinkblade shrugs their shoulders. “There goes your whole city.”</p><p>They slowly finish packing up their belongings and then move to leave.</p><p>“I can’t say I’ll miss this cold, but, well, I may just miss you lot.” The Blinkblade lingers at the door for a second. “Just a bit, though.” And then—ZIP—they’re gone.</p>",
-			"rewards": "<strong>Add event SO-64 to the summer outpost deck.</strong>"
+			"rewards": { 
+				"events": { 
+					"SO": [{ "id": "SO-64" }]
+				}
+			}
 		}
 	},
 	"deathwalker": {

@@ -53,7 +53,7 @@ public class EventsFile {
 			return log.exit(events);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json'");
+			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json'", e);
 			return log.exit(Map.of());
 		}
 	}

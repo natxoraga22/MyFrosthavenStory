@@ -102,9 +102,35 @@
 				<th:block th:each="scenario : *{scenarios}">
 					<strong>[[${scenario.name}]]</strong>
 					<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
+					<br/>
 				</th:block>
+			</div>
+
+			<!-- New events -->
+			<div th:if="*{!#maps.isEmpty(events)}" class="rewardsEvents">
+				[[#{section.rewards.newEvents}]]:
+				<br/>
+				<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.newEvents.SO})}"></th:block>
+				<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.newEvents.SR})}"></th:block>
+				<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.newEvents.WO})}"></th:block>
+				<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.newEvents.WR})}"></th:block>
+				<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.newEvents.B})}"></th:block>
 			</div>
 		</bs:cardBody>
 	</bs:card>
+
+
+	<!-- -------------- -->
+	<!-- REWARDS EVENTS -->
+	<!-- -------------- -->
+	<th:block th:fragment="rewardsEvents(eventsList,seasonAndTypeString)">
+		<th:block th:if="${!#lists.isEmpty(eventsList)}">
+			<strong th:each="event,iterStat : ${eventsList}">
+				[[${event.id}]]<th:block th:if="${!iterStat.last}">, </th:block>
+			</strong>
+			([[${seasonAndTypeString}]])
+			<br/>
+		</th:block>
+	</th:block>
 </body>
 </html>

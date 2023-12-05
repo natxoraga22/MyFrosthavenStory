@@ -30,7 +30,7 @@ public class WelcomeFile {
 			return log.exit(String.join("<br/>", welcomeLines));
 		}
 		catch (IOException e) {
-			log.warn("Error reading file '" + WELCOME_FILE_PATH + "'");
+			log.warn("Error reading file '" + WELCOME_FILE_PATH + "'", e);
 			return log.exit(null);
 		}
 	}

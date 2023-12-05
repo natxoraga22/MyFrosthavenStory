@@ -2,18 +2,24 @@
 	"21.4": {
 		"title": "Winter Arrives",
 		"text": "<p>It’s been a summer of adversity, but your decision is made: this outpost at the corner of civilization won’t make it through another winter without your assistance. Of course, it’s possible they won’t make it with you, either—but at least you’ll find out together.</p><p>The Quatryl mail carrier cinches her bag and plods through the main gate. In her satchel is your final reconnaissance report to the guild at White Oak, detailing the condition of the town, the support it will need to continue, and your decision to stay.</p><p>With a sober final thump, the gates of Frosthaven seal shut. The populace barely acknowledge it, but for you it means you’ve linked your fate with that of this town.</p>",
-		"rewards": { "text": "Gain 1 prosperity." }
+		"rewards": { 
+			"text": "Gain 1 prosperity." 
+		}
 	},
 	"32.3": {
 		"title": "Visiting Trader",
 		"text": "<p>A carriage piled high with blankets and carpets is tucked between a snowbank and a building near the edge of town. Its old owner sees you wandering by and looks both ways before beckoning you over.</p><p>“Nice place, nice place this Frosthaven. Cold though, eh? Heh. Maybe you’re the sort of people who would like some hot items.” He chuckles a bit to himself as he pins back a blanket on his carriage, revealing assorted items in like-new condition.</p><p>“I just need a few motivated buyers. Shouldn’t be trouble up here, no... but I wouldn’t wear these out in, let’s say, uh, Gloomhaven for a while. Heh.”</p><p>You’re not planning on heading south to that decrepit city any time soon. Might as well pick up a few items at a steal of a price.</p>",
-		"rewards": { "text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." }
+		"rewards": { 
+			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
+		}
 	},
 	"62.2": {
 		"title": "Bathysphere Plans",
 		"unlockedBy": { "scenario": { "id": "022" }},
 		"text": "<p>A high, nasal voice reaches you at the back of The Crater, Frosthaven’s recently rebuilt canteen.</p><p>“I have it, ach, I have it!” This is Pinter Droman, the outpost’s best and only tinkerer, and he’s pushing his way through the smoky gloom to find your group at your usual table. When he arrives, you see that Pinter’s eyes are raw and his skin has a waxy shine, which means he hasn’t been sleeping again.</p><p>“The seawater, I have a way around it! Or, rather…” Pinter unrolls a scroll of parchment on your table, pushing aside your drink. The parchment shows a diagram of some sort of armored ball. “Through it! In a bathysphere!”</p><p>The tinkerer goes on to explain that with this “bathysphere” you could safely descend deep into the Biting Sea for short periods of time. But that only solves the problem of the pressure; you still need to avoid freezing. “I have a plan for that too!” Pinter exclaims, his bleary eye twitching. “All I need is a very, very powerful heat source.” As luck would have it, Pinter believes you might be able to find such a thing somewhere in the middle of the Radiant Forest.</p><p>“The whole forest is unfrozen, even in the winter, so something must be heating it!” Pinter says. “I can’t be certain what it will look like, but I’m certain it’s there, yes. Ah, and with your particular skills, finding it should be no problem.”",
-		"rewards": { "scenarios": [{ "id": "033" }]}
+		"rewards": { 
+			"scenarios": [{ "id": "033" }]
+		}
 	},
 	"86.1": {
 		"unlockedBy": { "scenario": { "id": "114" }}
@@ -21,36 +27,48 @@
 	"119.3": {
 		"title": "Random Scenario",
 		"text": "<p>You hold the curiously fragile bit of machinery in your hand, and it suddenly comes to life, projecting some sort of illusory, three-dimensional map in the empty space above it. You try to touch this projection with your other hand, but it just passes right through the light, blanking out anything above it. Very strange indeed.</p><p>The map itself appears to be of some sort of ancient building that constructs machines, you wonder whether it is still operational and whether it may be beneficial to visit. After a considerable amount of tinkering, you discover a way to make the map zoom out, and there it is: a blinking dot on a very recognizable landscape. Shouldn’t be too hard to find.</p>",
-		"rewards": { "scenarios": [{ "id": "109" }]}
+		"rewards": { 
+			"scenarios": [{ "id": "109" }]
+		}
 	},
 	"120.5": {
 		"unlockedBy": { "section": { "id": "180.1" }},
 		"title": "Great Dallum",
 		"text": "Something is off here. This description of the Great Dallum, even accounting for mistaken observations, isn’t even close. This is an impostor! You raise the alarm and soon others in the crowd take notice. The impostor’s handlers start exchanging nervous glances, and it doesn’t take long before the crowd turns into a mob, grabbing back the offerings and driving the charlatans out of town.",
-		"rewards": { "text": "<p>Gain 2 morale.</p><p>Do not resolve an outpost event this week.</p>" }
+		"rewards": { 
+			"text": "<p>Gain 2 morale.</p><p>Do not resolve an outpost event this week.</p>" 
+		}
 	},
 	"122.4": {
 		"unlockedBy": { "section": { "id": "180.1" }},
 		"title": "Great Dallum",
 		"text": "The Great Dallum accepts your generous gift, whispering words of kindness into your ear. It’s not perfectly applicable, but as a metaphor there really is something to what he says. Yes, you get it now... this has some very practical applications, really. This changes everything.",
-		"rewards": { "text": "<p>Lose any 3 collective resources.</p><p>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" }
+		"rewards": { 
+			"text": "<p>Lose any 3 collective resources.</p><p>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
+		}
 	},
 	"135.1": {
 		"unlockedBy": { "scenario": { "id": "033" }},
 		"title": "Bathysphere Ready",
 		"text": "<p>Pinter Droman, the premiere tinkerer of Frosthaven, leads you to the large storehouse situated just behind his workshop. He collects himself for a moment, then throws open the doors with a flourish, announcing: “A bathysphere, my friends!”</p><p>What you see looks like a tiny, spherical prison. A glass-and-metal orb lies on a pallet in front of you, equipped with two crude propellers and a pair of clockwork arms. Inside it sit a number of rubber suits with glass fishbowl helmets. These suits are connected to the complicated machinery of the orb through tubes in their head and are meant to be deployed from the main bathysphere, “when more maneuverability is required,” Droman explains.</p><p>You’re not sure what to make of it all, but Pinter’s enthusiasm more than makes up for your reaction. He runs you through the machine’s functions, explaining how to adjust the internal environment, how to draw in air through a small outboard port and store it inside. All in all, it looks sturdy, but that does little to calm your nerves.</p><p>You pay the Tinkerer the rest of his fee, and shortly after, the bathysphere is mounted onto the ship. It’s time to set sail once again.</p>",
-		"rewards": { "scenarios": [{ "id": "042" }]}
+		"rewards": { 
+			"scenarios": [{ "id": "042" }]
+		}
 	},
 	"146.4": {
 		"title": "Random Scenario",
 		"text": "As you look down, you hear a tiny squeak. Well, isn’t this wolf cub just a little treasure? Its tail thumps happily as you reach down to pick it up, and it lunges to lick your face. The tiny, adorable pup is too young to survive on its own, and you decide to take it back to Frosthaven with you.",
-		"rewards": { "scenarios": [{ "id": "112" }]}
+		"rewards": { 
+			"scenarios": [{ "id": "112" }]
+		}
 	},
 	"156.1": {
 		"title": "Opening the Pass",
 		"unlockedBy": { "scenario": { "id": "004" }},
 		"text": "<p>“Fascinating, yes... a fascinating challenge... Oh, and an opportunity for the outpost, of course!”</p><p>A Quatryl wrapped in a thick green cloak paces the floor of Satha’s cabin, lost in thought as the mayor looks on from her seat by a map-strewn table.</p><p>Satha raises a hand in greeting as you open the door, and the Quatryl whirls toward you, startled. “OH! Yes, perfect, perfect, you must be the ones Satha mentioned. Pinter Droman, tinkerer extraordinaire, at your service.” He bows with a flourish.</p><p>Satha clears her throat, cutting Pinter’s introduction short. “A recent landslide changed the landscape of the Frozen Pass,” the mayor explains, “Between the rocks that fell out of the way and the valleys they filled up, we think we can create a shortcut through the Coppernecks that could save days for supply teams and merchants coming across the mountains.”</p><p>You recall your own recent journey over the pass, and agree you’d have appreciated a shortcut.</p><p>“That’s the spirit!” Satha continues, “A shortcut means more merchants bringing goods, and more goods means more outposters survive the winter. Pinter here is in charge of the engineering.”</p><p>“Yes!” Pinter jumps back in, unable to contain his excitement. “The place we’re looking to build,” he points to a map on the table, “is a landslide area that’s almost clear of rocks. I’ve created explosive devices to help remove the rest, but the fauna of the area are quite aggressive, and I can’t get a team close enough to plant the charges.”</p><p>“That’s where you come in,” Satha explains. “I told Pinter you’re the only ones I trust to get those bombs where they need to be and handle yourself against the local animals. We’ll have the charges packed and ready to go at dawn.”</p><p>You nod and turn to go prepare your own supplies, but Pinter interjects. “And not to worry, the charges are completely safe!” he says, unprompted. “I’ve learned so much since my, er, unfortunate incident in Gloomhaven.” Somehow his assurance does not increase your confidence.</p>",
-		"rewards": { "scenarios": [{ "id": "114" }]}
+		"rewards": { 
+			"scenarios": [{ "id": "114" }]
+		}
 
 	},
 	"180.1": {
@@ -62,6 +80,8 @@
 	"183.3": {
 		"title": "Visiting Trader",
 		"text": "“Ah, my best customers! Heh.” It’s the old traveling merchant and his carriage full of items of suspicious origins. He invites you to poke through his inventory. “Same price as before, but even better value. No one’s going to come looking for these. Heh.” He doesn’t elaborate, and you think better than to press the issue.",
-		"rewards": { "text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." }
+		"rewards": { 
+			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
+		}
 	}
 }

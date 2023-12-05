@@ -11,10 +11,10 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 @Getter
 @Setter
-@ToString
+@ToString(onlyExplicitlyIncluded = true)
 public class Event extends StoryObject {
 	
-	private String id;
+	@ToString.Include private String id;
 	private Type type;
 	private Season season;
 	private StoryItem unlockedBy;

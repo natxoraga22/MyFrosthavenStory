@@ -44,7 +44,7 @@
 		"title": "Great Dallum",
 		"text": "The Great Dallum accepts your generous gift, whispering words of kindness into your ear. It’s not perfectly applicable, but as a metaphor there really is something to what he says. Yes, you get it now... this has some very practical applications, really. This changes everything.",
 		"rewards": { 
-			"text": "<p>Lose any 3 collective resources.</p><p>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
+			"text": "<p>Lose any 3 collective resources.<br/>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
 		}
 	},
 	"135.1": {

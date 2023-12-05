@@ -6,6 +6,9 @@
 :root {
 	/* Gap between section elements */
 	--section-inner-gap: 1rem;
+
+	/* Gap between rewards */
+	--rewards-inner-gap: 1rem;
 }
 
 
@@ -169,6 +172,10 @@ div.section {
 
 .section .rewards .card-body {
 	border-color: #a77b2a;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--rewards-inner-gap);
 }
 
 

@@ -63,7 +63,13 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	@Override
 	public Map<String,Scenario> findAllScenarios() {
 		log.entry();
-		return log.exit(scenariosFile.findAllScenariosAsMap());
+		Map<String,Scenario> scenarios = scenariosFile.findAllScenariosAsMap();
+		for (Scenario scenario : scenarios.values()) {
+			for (Section section : scenario.getSections().values()) {
+				populateRewards(section, scenarios);
+			}
+		}
+		return log.exit(scenarios);
 	}
 
 	@Override
@@ -76,20 +82,34 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	public Map<String,Section> findAllSections(Map<String,Scenario> scenarios) {
 		log.entry();
 		Map<String,Section> sections = sectionsFile.findAllSectionsAsMap();
+		for (Section section : sections.values()) populateRewards(section, scenarios);
+		return log.exit(sections);
+	}
 
-		// Populate rewards
-		for (Section section : sections.values()) {
-			if (section.getRewards() != null) {
-				List<Scenario> rewardScenarios = section.getRewards().getScenarios();
-				if (rewardScenarios != null) {
-					for (int i = 0; i < rewardScenarios.size(); i++) {
-						Scenario scenario = scenarios.get(rewardScenarios.get(i).getId());
-						if (scenario != null) rewardScenarios.set(i, scenario);
-					}
-				}
+
+	/* --------------- */
+	/* PRIVATE METHODS */
+	/* --------------- */
+
+	private void populateRewards(Section section, Map<String,Scenario> scenarios) {
+		if (section.getRewards() != null) {
+			List<Scenario> rewardScenarios = section.getRewards().getScenarios();
+			if (rewardScenarios != null) populateRewardsScenarios(rewardScenarios, scenarios);
+
+			List<Scenario> rewardLockedOutScenarios = section.getRewards().getLockedOutScenarios();
+			if (rewardLockedOutScenarios != null) populateRewardsScenarios(rewardLockedOutScenarios, scenarios);
+		}
+	}
+
+	private void populateRewardsScenarios(List<Scenario> rewardScenarios, Map<String,Scenario> scenarios) {
+		for (int i = 0; i < rewardScenarios.size(); i++) {
+			Scenario scenario = scenarios.get(rewardScenarios.get(i).getId());
+			if (scenario != null) {
+				scenario.setLinked(rewardScenarios.get(i).isLinked());
+				scenario.setForceLinked(rewardScenarios.get(i).isForceLinked());
+				rewardScenarios.set(i, scenario);
 			}
 		}
-		return log.exit(sections);
 	}
 	
 }

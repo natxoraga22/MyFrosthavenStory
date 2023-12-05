@@ -67,7 +67,7 @@
 			<th:block th:replace="~{:: rewards(*{rewards})}"></th:block>
 		</th:block>
 
-		<!-- Section Links -->
+		<!-- Section links -->
 		<th:block th:if="${section.conclusion != null || !section.partOfScenario || page?.name() == 'SCENARIO' || page?.name() == 'SECTION'}">
 			<div th:if="*{sectionLinks}" class="card fhCard sectionLinks">
 				<div class="card-header">[[#{section.sectionLinks}]]</div>
@@ -91,23 +91,26 @@
 		<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
 		<bs:cardBody>
 			<!-- Text -->
-			<div th:if="*{text}" class="rewardsText fw-bold">
+			<div th:if="*{text}" class="fw-bold">
 				[(*{text})]
 			</div>
 
 			<!-- New scenarios -->
-			<div th:if="*{!#lists.isEmpty(scenarios)}" class="rewardsScenarios">
+			<div th:if="*{!#lists.isEmpty(scenarios)}">
 				[[#{section.rewards.newScenarios}]]:
 				<br/>
-				<th:block th:each="scenario : *{scenarios}">
-					<strong>[[${scenario.name}]]</strong>
-					<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
-					<br/>
-				</th:block>
+				<th:block th:replace="~{:: rewardsScenarios(*{scenarios})}"></th:block>
+			</div>
+
+			<!-- Locked out scenarios -->
+			<div th:if="*{!#lists.isEmpty(lockedOutScenarios)}">
+				[[#{section.rewards.lockedOutScenarios}]]:
+				<br/>
+				<th:block th:replace="~{:: rewardsScenarios(*{lockedOutScenarios})}"></th:block>
 			</div>
 
 			<!-- New events -->
-			<div th:if="*{!#maps.isEmpty(events)}" class="rewardsEvents">
+			<div th:if="*{!#maps.isEmpty(events)}">
 				[[#{section.rewards.newEvents}]]:
 				<br/>
 				<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.newEvents.SO})}"></th:block>
@@ -119,6 +122,19 @@
 		</bs:cardBody>
 	</bs:card>
 
+
+	<!-- ----------------- -->
+	<!-- REWARDS SCENARIOS -->
+	<!-- ----------------- -->
+	<th:block th:fragment="rewardsScenarios(scenariosList)">
+		<th:block th:each="scenario : ${scenariosList}">
+			<strong>[[${scenario.name}]]</strong>
+			<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
+			<img th:if="${scenario.linked}" class="icon linked" th:src="@{/img/icons/linked.png}">
+			<img th:if="${scenario.forceLinked}" class="icon forceLinked" th:src="@{/img/icons/forceLinked.png}">
+			<br/>
+		</th:block>
+	</th:block>
 
 	<!-- -------------- -->
 	<!-- REWARDS EVENTS -->

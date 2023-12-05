@@ -75,20 +75,20 @@
 .icon.snowthistle { max-height: 18px; }
 
 /* Others */
-.icon.ally       { max-height: 15px; }
-.icon.attack     { max-height: 18px; }
-.icon.boat       { max-height: 18px; }
-.icon.checkmark  { max-height: 14px; }
-.icon.damage     { max-height: 18px; }
-.icon.heal       { max-height: 18px; }
-.icon.item       { max-height: 15px; }
-.icon.linkForced { max-height: 12px; }
-.icon.move       { max-height: 18px; }
-.icon.not        { max-height: 18px; }
-.icon.plus1      { max-height: 18px; }
-.icon.range      { max-height: 15px; }
-.icon.retaliate  { max-height: 17px; }
-.icon.shield     { max-height: 18px; }
-.icon.sled       { max-height: 14px; }
-.icon.trait      { max-height: 18px; }
-.icon.xp         { max-height: 18px; }
+.icon.ally        { max-height: 15px; }
+.icon.attack      { max-height: 18px; }
+.icon.boat        { max-height: 18px; }
+.icon.checkmark   { max-height: 14px; }
+.icon.damage      { max-height: 18px; }
+.icon.forceLinked { max-height: 12px; }
+.icon.heal        { max-height: 18px; }
+.icon.item        { max-height: 15px; }
+.icon.move        { max-height: 18px; }
+.icon.not         { max-height: 18px; }
+.icon.plus1       { max-height: 18px; }
+.icon.range       { max-height: 15px; }
+.icon.retaliate   { max-height: 17px; }
+.icon.shield      { max-height: 18px; }
+.icon.sled        { max-height: 14px; }
+.icon.trait       { max-height: 18px; }
+.icon.xp          { max-height: 18px; }

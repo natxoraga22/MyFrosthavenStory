@@ -14,9 +14,10 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Rewards {
-
-	private List<Scenario> scenarios;
-	private Map<String,List<Event>> events;
+	
 	private String text;
+	private List<Scenario> scenarios;
+	private List<Scenario> lockedOutScenarios;
+	private Map<String,List<Event>> events;
 
 }

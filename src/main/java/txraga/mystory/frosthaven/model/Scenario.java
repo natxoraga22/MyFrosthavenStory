@@ -24,9 +24,12 @@ public class Scenario extends StoryObject {
 	private int complexity;
 	private String location;
 
+	private boolean linked = false;
+	private boolean forceLinked = false;
+
+	// Sections
 	private String goals;
 	private String effects;
-
 	private Map<String,Section> sections = Map.of();
 	private List<String> path;
 

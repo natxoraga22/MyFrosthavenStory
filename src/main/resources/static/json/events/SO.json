@@ -5,12 +5,18 @@
 			"A": {
 				"trigger": "Open the package.",
 				"text": "<p>You tear open the edge of the package, just to get a peek. The closer you look, the less there is to see... it's empty. Sometime later a pair of Aesthers dressed in drab yellow arrive at your door.</p><p>\"Hello mercenaries. We are Leonidas—\"<br/>\"—and Maximus. We have come for our package.\"</p><p>You feign confusion and they return the sentiment.</p><p>\"Oh. Perhaps we have come too early—\"<br/>\"—or too late. We will return.\"</p>",
-				"rewards": "Add event SO-40 to the summer outpost deck."
+				"rewards": {
+					"events": {
+						"SO": [{ "id": "SO-40" }]
+					}
+				}
 			},
 			"B": {
 				"trigger": "Respect the request.",
 				"text": "<p>Against all the curiosity in your being, you refrain from opening the lumpy package. A short while later two Aesthers dressed in drab yellow arrive at your door.</p><p>\"Hello mercenaries. We are Leonidas—\"<br/>\"—and Maximus. We have come for our package.\"</p><p>You hand it over, and they tear open the top, reaching much too deep inside to be obeying the laws of the universe. Out comes a large black diamond.</p><p>\"The Shadow Gem. We have—\"<br/>\"—your payment, as agreed.\"</p><p>They hand you a sack of coins and then turn and leave, passing the diamond back and forth between them.</p>",
-				"rewards": "Gain 30 collective gold."
+				"rewards": {
+					"text": "Gain 30 collective gold."
+				}
 			}
 		}
 	},
@@ -20,12 +26,16 @@
 			"A": {
 				"trigger": "Help clean the streets to make a good impression.",
 				"text": "<p>You put in the work to clean up the dirt-and-snow-covered streets of Frosthaven. Many of the residents come out to join you, excited. A young lady chats your ear off while sweeping, her face beaming.</p><p>\"I heard from a friend his watery-blue eyes see straight into your soul. He speaks quietly, but he knows your name without asking. He's the most incredible seer the world has ever known!\"</p>",
-				"rewards": "Gain 1 morale and 1 inspiration.<br/>Add [section] 180.1 to the calendar in two weeks."
+				"rewards": {
+					"text": "Gain 1 morale and 1 inspiration.<br/>Add [section] 180.1 to the calendar in two weeks."
+				}
 			},
 			"B": {
 				"trigger": "Assist in the preparation of a feast.",
 				"text": "<p>You join a hunting party gathering wild meats and harvesting vegetables outside Frosthaven. An older man has more spring in his step as he picks snowthistle to use as a tangy garnish.</p><p>\"He's got rough hands from working the fields before he got the gift of sight. Long, beautiful hair, not bald like me. Never met him, but heard he talks slow—not like me—he wants to make sure you get the attention you deserve. Great man, that Dallum.\"</p>",
-				"rewards": "Gain 1 morale.<br/>Gain 1 collective [snowthistle].<br/>Add [section] 180.1 to the calendar in two weeks."
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Gain 1 collective [snowthistle].<br/>Add [section] 180.1 to the calendar in two weeks."
+				}
 			}
 		}
 	},
@@ -35,12 +45,20 @@
 			"A": {
 				"trigger": "Come to Violet's aid—there's more to the Lurkers.",
 				"text": "<p>You intervene in the heated discussion and provide some reports from the field. Yes, the Lurkers can be an impressive adversary, but there are indications there's more to their actions. Violet is visibly relieved at your help.</p><p>Satha grunts. \"Fine, if you think there's value here, introduce her to the guard. But if her crackpot ideas don't pan out, I'm holding it against you lot.\"</p>",
-				"rewards": "Add event WO-62 to the winter outpost deck."
+				"rewards": {
+					"events": {
+						"WO": [{ "id": "WO-62" }]
+					}
+				}
 			},
 			"B": {
 				"trigger": "Back up Satha's assessment—Lurker research is a waste of resources.",
 				"text": "<p>You can't help but side with Satha under the circumstances: the Lurkers have proven, time and again, to be vicious killing machines with physiology to match. You don't doubt that Violet means well, but if there are resources that could be used to protect the town, it's better for Satha to use them on defense rather than research projects.</p><p>Violet lowers her gaze, then walks off without another word, dejected.</p>",
-				"rewards": "Add event SO-39 to the summer outpost deck."
+				"rewards": {
+					"events": {
+						"SO": [{ "id": "SO-39" }]
+					}
+				}
 			}
 		}
 	},
@@ -50,12 +68,16 @@
 			"A": {
 				"trigger": "Use it as a mutable material for crafting.",
 				"text": "<p>Pinter fires up the furnace. \"We'll need to get it nice and toasty to melt this beauty!\" Pinter lobs the Brummix antler in. Soon, a purple liquid pours out the side and drains into the mold for three shiny purple bars.</p><p>\"Should be good for just about anything. Take it—just promise me if you ever find that beautiful Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
-				"rewards": "Gain 1 morale.<br/>Gain 3 collective material resources of any kind.<br/>Gain \"Brummix\" campaign sticker."
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Gain 3 collective material resources of any kind.<br/>Gain \"Brummix\" campaign sticker."
+				}
 			},
 			"B": {
 				"trigger": "Weave it into an art piece.",
 				"text": "<p>You return several hours later to find Pinter filing the last edges off a stunning purple necklace. He wipes it with the edge of his shirt sleeve and hands it to you.</p><p>\"You take it. Just promise me, if you ever find that enchanting Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
-				"rewards": "Gain 1 morale.<br/>Gain \"Deathproof Charm\" [item].<br/>Gain \"Brummix\" campaign sticker."
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Gain \"Deathproof Charm\" [item].<br/>Gain \"Brummix\" campaign sticker."
+				}
 			}
 		}
 	},
@@ -67,28 +89,36 @@
 				"trigger": "Sell the Valrath some snowthistle (requires [snowthistle]).",
 				"requirement": "[trait] VALRATH",
 				"text": "The Valrath energetically prepares some of your snowthistle for sharing. Surely, a little bit couldn't hurt—oh, it's evening now. Well, just a bit more for the road—is that the morning sun? The buyer smiles. \"Let me know if you get more. Happy to share.\"",
-				"rewards": "Gain 1 morale and 15 collective gold.<br/>Lose all collective [snowthistle]."
+				"rewards": {
+					"text": "Gain 1 morale and 15 collective gold.<br/>Lose all collective [snowthistle]."
+				}
 			},
 			"A2": {
 				"id": "A",
 				"trigger": "Sell the Valrath some snowthistle (requires [snowthistle]).",
 				"requirement": "[not] [trait] VALRATH",
 				"text": "You hand the Valrath some snowthistle, and he licks his lips. \"Good, nice quality. Happy to put any excess to you have to better use...\"",
-				"rewards": "Lose any number of collective [snowthistle].<br/>Gain 5 collective gold for each [snowthistle] lost."
+				"rewards": {
+					"text": "Lose any number of collective [snowthistle].<br/>Gain 5 collective gold for each [snowthistle] lost."
+				}
 			},
 			"B1": {
 				"id": "B",
 				"trigger": "Admonish the Valrath for this pursuits.",
 				"requirement": "[trait] PERSUASIVE",
 				"text": "You offer encouraging words, reminding the Valrath that his pursuits don't need to define who he is. He grumbles as he slinks down the alley. \"I'll, uh, consider what you said.\"",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			},
 			"B2": {
 				"id": "B",
 				"trigger": "Admonish the Valrath for this pursuits.",
 				"requirement": "[not] [trait] PERSUASIVE",
 				"text": "You tell the Valrath just how troubling his actions are for society. He waves you off. \"Keep your opinions to yourself! And, uh, let me know if you come across some snowthistle, obviously.\"",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			}
 		}
 	},
@@ -99,12 +129,19 @@
 				"trigger": "Mercenaries should be supported. Help them purchase supplies in return for a cut of what they find.",
 				"requirement": "LOSE 10 COLLECTIVE GOLD AND ANY 2 COLLECTIVE HERB RESOURCES",
 				"text": "You see them safely on their way and hope for the best as they make their way out of Frosthaven's gate and into the unknown. The backing of someone like you is enough for the town to also throw in their support, and an Orchid with a longbow strapped to his back nods in thanks as they pass.",
-				"rewards": "Gain 1 morale.<br/>Add events SO-37 and SO-38 to the summer outpost deck."
+				"rewards": {
+					"text": "Gain 1 morale.",
+					"events": {
+						"SO": [{ "id": "SO-37" }, { "id": "SO-38" }]
+					}
+				}
 			},
 			"B": {
 				"trigger": "The old man's right. They're walking to their doom. Try to stop them.",
 				"text": "<p>You stop an Orchid mercenary as he loads the last of the meager supplies onto the wagon. He clearly hasn't seen much combat—you describe just how dangerous this could be.</p><p>\"I... uh, I didn't think of it that way. He walks off to talk with his companions who start looking more concerned. Eventually, he returns. \"Thanks for the dose of reality. I'm probably better off just joining the town guard. I guess we won't be needing this.\" He hands you the object that inspired their adventure.</p>",
-				"rewards": "Gain one random side scenario.<br/>Gain 1 soldier."
+				"rewards": {
+					"text": "Gain one random side scenario.<br/>Gain 1 soldier."
+				}
 			}
 		}
 	},
@@ -115,12 +152,16 @@
 				"trigger": "Offer to cover the cost of upgrading the barracks yourself.",
 				"requirement": "LOSE 10 COLLECTIVE GOLD",
 				"text": "<p>You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead's eyes widen.</p><p>\"You mercenaries are not nearly the scum Satha thinks you are. I'm going to tell her right now!\"",
-				"rewards": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
+				"rewards": {
+					"text": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
+				}
 			},
 			"B": {
 				"trigger": "Leave and come back later.",
 				"text": "<p>Captain Olmstead grabs a decorative shield off the wall and begins bashing it against the straw face of the practice dummy. He soon abandons the dented shield and starts furiously clawing the dummy, pulling out big tufts of straw with his bare hands.</p><p>You take that as a cue to return at a more convenient time.</p>",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			}
 		}
 	},
@@ -130,12 +171,20 @@
 			"A": {
 				"trigger": "Encourage her to declare a summertime holiday to celebrate the success of the season.",
 				"text": "<p>You explain the virtues of a summertime holiday, highlighting the freshness of the fruit and how the town could dance into the night with the later summer sunsets. Satha is readily swayed.</p><p>\"It's settled, then! we'll have a Summer Harvest Festival!\"</p>",
-				"rewards": "Add event SO-36 to the summer outpost deck."
+				"rewards": {
+					"events": {
+						"SO": [{ "id": "SO-36" }]
+					}
+				}
 			},
 			"B": {
 				"trigger": "Encourage her to store the resources for a winter holiday, when the town may need to lift its spirits.",
 				"text": "<p>You explain the virtues of a wintertime holiday, highlighting that hot drinks and bonfires could warm the hearts of the townsfolk, providing much needed merriment during the dark winter days. Satha is readily swayed.</p><p>\"It's settled, then! We'll have a Winter Festival!\"</p>",
-				"rewards": "Add event WO-61 to the winter outpost deck."
+				"rewards": {
+					"events": {
+						"WO": [{ "id": "WO-61" }]
+					}
+				}
 			}
 		}
 	},
@@ -164,12 +213,16 @@
 			"A": {
 				"trigger": "Rally the guard and give a push.",
 				"text": "<p>The town guard puts their backs into it and heaves the massive turtle back into the water.</p><p>\"Oh my, thank you, City! Such a polite young city. I will be sure to tell my friends.</p>",
-				"rewards": "Gain 2 morale."
+				"rewards": {
+					"text": "Gain 2 morale."
+				}
 			},
 			"B": {
 				"trigger": "This creature is on its last legs. It could be put to better use supplying the town with meat and armor.",
 				"text": "<p>You pull the children back from the creature—Frosthaven has enough horrors without needing to see the circle of life so clearly.</p><p>The guards finish their dark task and you thank the turtle for helping this town survive.</p>",
-				"rewards": "Gain 5 collective [hide].<br/>Gain 3 soldiers."
+				"rewards": {
+					"text": "Gain 5 collective [hide].<br/>Gain 3 soldiers."
+				}
 			}
 		}
 	},

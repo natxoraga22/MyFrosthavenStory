@@ -23,7 +23,9 @@
 		"59.1": {
 			"trigger": "The raven nest [a] is destroyed",
 			"conclusion": "<p>The creatures are done. Their humanoid hosts lie slain. Their tree has been felled, and finally, the forest is quiet.</p><p>You take some time to check the area for any explanation as to what these creatures were or why they inhabited this place, but like so many other things in this part of the world, its mysteries remain unspoiled.</p><p>One thing is certain, however: this clearing is the warmest part of the forest you’ve encountered so far. It is practically balmy, and you can feel even more heat radiating from the west. Looking to the edge of the clearing, you see a great swarm of glowing orbs have gathered there. They seem to be waiting, wondering perhaps whether it’s safe to venture inward toward the heat.</p><p>But that is a mystery for the scientists and researchers. Your business is the blade, and your business here is done. Satisfied with your handiwork, you turn and begin the long hike back to Frosthaven, wondering how exactly you’ll make a report of this to Satha.</p>",
-			"rewards": "<strong>Gain “Feathered Cloak” [item] blueprint.<br/>Gain “Into the Forest” campaign sticker.</strong>"
+			"rewards": {
+				"text": "Gain “Feathered Cloak” [item] blueprint.<br/>Gain “Into the Forest” campaign sticker."
+			}
 		}
 	},
 	"path": ["main", "66.1", "59.1"]

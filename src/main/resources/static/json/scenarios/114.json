@@ -21,7 +21,9 @@
 		"125.3": {
 			"trigger": "C+4 ice pillars have been destroyed",
 			"conclusion": "<p>“Marvelous! Outstanding! Oh, it’s beautiful!” Pinter Droman stands at the site with a work crew behind him. “I couldn’t have hoped for a better result!”</p><p>The tinkerer gushes like this for a while, racing around gleefully to inspect the stability of various parts of the site, which is now a mostly clear slab of flat rock connecting the two sides of the valley. “We’ll need to dig quite a bit to make it ready, of course, but no need to concern yourselves there. I’ll be certain to send for you when we reach the next phase!”</p>",
-			"rewards": "Gain 5 collective [hide].",
+			"rewards": {
+				"text": "Gain 5 collective [hide]."
+			},
 			"sectionLinks": "Add [section] <strong>86.1</strong> to the calendar in four weeks."
 		}
 	},

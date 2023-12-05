@@ -31,7 +31,9 @@
 		"11.2": {
 			"trigger": "The Hungry Maw is dead",
 			"conclusion": "<p>The beast is wounded, probably mortally, and looks at you, knowing it’s defeated. Its eyes are full of desperation, as its eternal craving slowly brings it down to despair – the realization that its hunger shall never be sated again. “So hungry...” It groans one last time as life leaves its pitiful hulk.</p><p>“Well, I must admit, I didn’t think that would work,” Noore marvels. “You all are tougher than I thought, even if you can’t hold down a firepepper.”</p>",
-			"rewards": "<strong>Gain 10 gold each.</strong>"
+			"rewards": {
+				"text": "Gain 10 gold each."
+			}
 		},
 		"152.1": {
 			"trigger": "Door [two] is opened",
@@ -81,7 +83,9 @@
 		"17.4": {
 			"trigger": "The mammoth bark, axenut, and firepepper are combined and stirred in the pot with correct proportions",
 			"conclusion": "<p>You throw the ingredients in what you surmise are the proper proportions and Noore stirs the cauldron. She produces a tasting spoon, dips it in the stew, and then holds it out to you.</p><p>“Sample your work?” She asks. When you hesitate, she tries it herself and smiles. “Perfect!”</p><p>You lift the heavy cauldron full of stew and carefully carry it through the ornate door and into the inner chamber of the Hungry Maw’s dwelling. You see it pacing up and down the center of the room. It looks upon you and roars with an otherworldly sound.</p><p>“Feed me! Fill my craving! I am awakened with hunger, and my soul is cold!”</p><p>You set the cauldron down and back away. It sees the hot stew and descends upon it with surprising quickness, lifting the cauldron and pouring its contents into its unnaturally huge mouth. It groans with satisfaction and then lays down to rest in peace.</p><p>You carefully exit the cave, and Noore congratulates you. “Well, that should keep the monstrosity happy for another hundred years. I’ll try to pass down a less cryptic recipe to my ancestors this time.”</p>",
-			"rewards": "<strong>Gain 15 [xp] each and 1 [checkmark] each.</strong>"
+			"rewards": {
+				"text": "Gain 15 [xp] each and 1 [checkmark] each."
+			}
 		}
 	}
 }

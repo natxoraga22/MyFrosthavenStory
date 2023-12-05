@@ -64,7 +64,7 @@
 
 		<!-- Rewards -->
 		<th:block th:if="*{rewards}">
-			<th:block th:replace="~{:: rewards(*{rewards})}"></th:block>
+			<th:block th:replace="~{fragments/rewards :: rewards(*{rewards})}"></th:block>
 		</th:block>
 
 		<!-- Section links -->
@@ -82,71 +82,5 @@
 			<img th:src="@{/img/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
 		</div>
 	</div>
-
-
-	<!-- ------- -->
-	<!-- REWARDS -->
-	<!-- ------- -->
-	<bs:card th:fragment="rewards(rewards)" th:object="${rewards}" class="fhCard rewards">
-		<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
-		<bs:cardBody>
-			<!-- Text -->
-			<div th:if="*{text}" class="fw-bold">
-				[(*{text})]
-			</div>
-
-			<!-- New scenarios -->
-			<div th:if="*{!#lists.isEmpty(scenarios)}">
-				[[#{section.rewards.newScenarios}]]:
-				<br/>
-				<th:block th:replace="~{:: rewardsScenarios(*{scenarios})}"></th:block>
-			</div>
-
-			<!-- Locked out scenarios -->
-			<div th:if="*{!#lists.isEmpty(lockedOutScenarios)}">
-				[[#{section.rewards.lockedOutScenarios}]]:
-				<br/>
-				<th:block th:replace="~{:: rewardsScenarios(*{lockedOutScenarios})}"></th:block>
-			</div>
-
-			<!-- New events -->
-			<div th:if="*{!#maps.isEmpty(events)}">
-				[[#{section.rewards.newEvents}]]:
-				<br/>
-				<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.newEvents.SO})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.newEvents.SR})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.newEvents.WO})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.newEvents.WR})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.newEvents.B})}"></th:block>
-			</div>
-		</bs:cardBody>
-	</bs:card>
-
-
-	<!-- ----------------- -->
-	<!-- REWARDS SCENARIOS -->
-	<!-- ----------------- -->
-	<th:block th:fragment="rewardsScenarios(scenariosList)">
-		<th:block th:each="scenario : ${scenariosList}">
-			<strong>[[${scenario.name}]]</strong>
-			<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
-			<img th:if="${scenario.linked}" class="icon linked" th:src="@{/img/icons/linked.png}">
-			<img th:if="${scenario.forceLinked}" class="icon forceLinked" th:src="@{/img/icons/forceLinked.png}">
-			<br/>
-		</th:block>
-	</th:block>
-
-	<!-- -------------- -->
-	<!-- REWARDS EVENTS -->
-	<!-- -------------- -->
-	<th:block th:fragment="rewardsEvents(eventsList,seasonAndTypeString)">
-		<th:block th:if="${!#lists.isEmpty(eventsList)}">
-			<strong th:each="event,iterStat : ${eventsList}">
-				[[${event.id}]]<th:block th:if="${!iterStat.last}">, </th:block>
-			</strong>
-			([[${seasonAndTypeString}]])
-			<br/>
-		</th:block>
-	</th:block>
 </body>
 </html>

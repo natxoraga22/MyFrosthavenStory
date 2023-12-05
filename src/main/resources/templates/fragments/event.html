@@ -66,7 +66,8 @@
 
 		<!-- Rewards -->
 		<div class="rewards">
-			[(*{rewards})]
+			<hr>
+			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"></th:block>
 		</div>
 	</div>
 

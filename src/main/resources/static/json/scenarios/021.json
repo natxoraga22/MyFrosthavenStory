@@ -38,7 +38,9 @@
 		"136.3": {
 			"trigger": "The Prince of Frost is dead",
 			"conclusion": "<p>Of all the parties you’ve been to, this is certainly one of the worst. The creature dies without any humor or grace. It simply shrieks and, like a vase dropped from a high shelf, shatters into a thousand pieces.</p><p>When it’s done, the house begins to shudder. The doors snap open with surprising force. An exit appears at the back of this room, a new door leading to a flat plain of white snow. Chunks of ceiling crash into the floor. You run and dive through the door, skidding to a stop in the fresh powder. You look back and there hangs the door: hovering above the ground, a portal cut out of thin air. Through it you watch the ice realm crumble and collapse and then vanish into nothingness.</p><p>With the bizarre magic gone, you quickly realize where you are: back near the northern edge of Frosthaven. You hike up a familiar hill, and see its palisade wall and small lines of smoke rising from its chimneys. This seems as good a sign as any: time to head back and get some rest.</p>",
-			"rewards": "<strong>Gain 2 prosperity.</strong>"
+			"rewards": {
+				"text": "Gain 2 prosperity."
+			}
 		}
 	},
 	"path": ["main", "51.1", "48.1", "53.1", "136.3"]

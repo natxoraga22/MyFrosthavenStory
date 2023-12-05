@@ -26,7 +26,10 @@
 		"3.3": {
 			"trigger": "Coral Corpse is dead",
 			"conclusion": "<p>Ripping the shard from the corpse’s eye, you find the thing to be strangely beautiful. It’s slim and hollow, more like a piece of coral than a stone, and yet, there is a certain weight to it that seems uncanny for something only the size of a dagger handle. You bring it closer, admiring its crags and hollows, but as you do, you feel its weight grow. It presses down on your hand and then into your mind, sinking into you and pulling. The coral shard speaks to each of you, not with words, but with desires. It wants to move north, far out to sea, away from the cliffs and the frozen safety of Frosthaven. And it wants you to take it there.</p><p>This must have been what the Lurkers were after: a strange goal for what you thought were beasts no more sophisticated than wolves or spiders. Yet as the chunk of coral speaks to you, you know it to be true. They sought this object, and in order to understand why, you’ll have to follow the pull of the shard north across the water. But Frosthaven’s tiny fishing vessels aren’t fit for the journey, and you’re not about to swim. This leaves you with a choice: You can either keep your feet on dry land, following the shard along the northern coast <span class=\"scenarioNumber\">(13)</span>; or you can build a proper ship and head out into the ice-choked sea <span class=\"scenarioNumber\">(14)</span>.</p>",
-			"rewards": "<p><strong>Gain 10 [xp] each.<br/>Gain “Coral Shard” campaign sticker.</strong></p><p>New Scenarios:<br/><strong>Frozen Fjord</strong> <span class=\"scenarioNumber\">(13)</span><br/><strong>Jagged Shoals</strong> <span class=\"scenarioNumber\">(14)</span></p>"
+			"rewards": {
+				"text": "Gain 10 [xp] each.<br/>Gain “Coral Shard” campaign sticker.",
+				"scenarios": [{ "id": "013" }, { "id": "014" }]
+			}
 		}
 	},
 	"path": ["main", "42.1", "48.4", "3.3"]

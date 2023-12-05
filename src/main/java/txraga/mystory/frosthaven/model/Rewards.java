@@ -16,8 +16,8 @@ import lombok.ToString;
 public class Rewards {
 	
 	private String text;
+	private Map<String,List<Event>> events;
 	private List<Scenario> scenarios;
 	private List<Scenario> lockedOutScenarios;
-	private Map<String,List<Event>> events;
 
 }

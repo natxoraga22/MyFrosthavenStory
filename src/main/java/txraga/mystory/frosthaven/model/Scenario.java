@@ -61,7 +61,7 @@ public class Scenario extends StoryObject {
 	/* QUESTLINE */
 	/* --------- */
 
-	public enum QuestLine { 
+	public enum QuestLine {
 		Introduction,
 		AlgoxSnowspeaker,
 		AlgoxIcespeaker,

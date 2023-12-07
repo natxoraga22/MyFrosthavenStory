@@ -104,6 +104,19 @@
 				"levelUps": [{ "id": "crashingtide", "level": 3 }],
 				"upgrade": [{ "id": "craftsman", "level": 4 }]
 			}
-		}
+		},
+		{ "event": { "id": "B-11", "chosenOption": "A" }},
+		{ "scenario": { "id": "042" }},
+		{ "scenario": { "id": "112" }},
+		{ "scenario": { "id": "115" }},
+		{ "scenario": { "id": "049" }},
+		{ "scenario": { "id": "053" }},
+		{ "scenario": { "id": "008" }},
+		{ "scenario": { "id": "015" }},
+		{ "scenario": { "id": "023" }},
+		{ "scenario": { "id": "024" }},
+		{ "scenario": { "id": "034" }},
+		{ "scenario": { "id": "099" }},
+		{ "scenario": { "id": "100" }}
 	]
 }

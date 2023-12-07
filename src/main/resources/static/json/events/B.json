@@ -49,5 +49,27 @@
 				}
 			}
 		}
+	},
+	"B-11": {
+		"text": "<p>POP. POP! BOOOOOOOOM! An explosion rocks the ship from the port side, swinging the mast and throwing the crew into a frenzy of action. You rush to the side of the ship to find the cause: ominous barrels floating on the ocean's surface. Each has been painted blue in camouflage, but they're not hard to spot if you know what you're looking for.</p><p>A deckhand delivers a status report: \"Not too much damage to the ship... we're getting it patched up, and we'll be underway again soon. But there's a few dozen of these we can spot from the crow's nest. It's like an ocean minefield... wouldn't be surprised if someone set it for Lurkers.\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Send out a rowboat to retrieve one of the devices.",
+				"text": "A few crewmembers carefully pilot a rowboat out to the nearest barrel and hoist it back onto the ship. It's clearly made to blend in from below. It has an exceptionally sensitive ignition charge designed to detonate on impact—the whole setup would probably mean death to an unsuspecting Lurker. You deactivate it and stow it in the ship's hold for the time being.",
+				"rewards": {
+					"text": "Gain \"Boom Barrel\" [item]."
+				}
+			},
+			"B": {
+				"trigger": "An ocean full of explosives in your path? Sounds like target practice.",
+				"text": "\"Aim. FIRE!\" The prospect of destroying a minefield would be slow work were it not for the sheer fun of watching barrel after barrel detonate on the water. After a half dozen test explosions, the crew expertly uses the wake of the ship to knock barrels together, resulting in chain reactions of even more epic proportions. You don't know who put so much work into laying this trap, but there couldn't have been better entertainment on the way to your destination.",
+				"rewards": {
+					"text": "Gain 2 morale."
+				}
+			}
+		}
+	},
+	"B-16": {
+		"unlockedBy": { "scenario": { "id": "042" }}
 	}
 }

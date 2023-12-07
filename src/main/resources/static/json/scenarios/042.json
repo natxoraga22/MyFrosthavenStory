@@ -2,5 +2,40 @@
 	"id": "042",
 	"name": "Sunless Trench",
 	"questLine": "Lurker",
-	"unlockedBy": { "section": { "id": "135.1" }}
+	"coordinates": "J1",
+	"requirement": { "transport": "boat" },
+	"unlockedBy": { "section": { "id": "135.1" }},
+	"complexity": 1,
+	"location": "Biting Sea",
+	"goals": "The scenario is complete when all five goal treasure tiles have been looted. At the end of that round, read [section] <strong>95.5</strong>.",
+	"effects": "Each character adds three [minus1] cards to their attack modifier deck.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>Somehow you’ve managed to avoid thinking about this: what it will be like to dive deep underwater inside a giant metal ball, hurled overboard in an iron prison into the frozen depths where no one has ever ventured before. But now that you’re here, crammed into the bathysphere with the lid screwed down tight, the reality of what you’re about to do has become uncomfortably clear. You’re going to sink, intentionally, down into the Biting Sea, locked inside an orb powered by a small glowing rock, all to find a shard of coral about the size of a Quatryl’s hand. It seems a bit rash.</p><p>But the time for thinking is over.</p><p>Someone outside gives two quick knocks against the hull of the bathysphere, followed by a loud thunk as the docking mechanism is disengaged, and you are released from the ship, dropped unceremoniously into the water.</p><p>For a few moments, there’s nothing to see but the fading light from the surface and the darkness rising to consume it. The metal ball pings loudly as it contracts in the frigid abyss. The propellers whir behind you. Slowly your eyes adjust to the dim orange glow being put off by the forest crystal.</p><p>The shard compels you onward. Several minutes pass before you see anything at all, and then suddenly, the ocean floor appears below you, with a great scar gashed into it. The trench opens up like the very jaws of the ocean. The shard is insistent: this is where you must go.</p><p>You maneuver carefully and descend into the cavern, watching to make sure you don’t scrape the walls as you fall. One would think that a place hidden at such a depth would be empty of life—that this would be a quiet, albeit ominous, journey. But no.</p><p>Flickers of scale move in the trench. You peer into the shadow, squinting, and there a giant eye opens. Claws flash in your outboard light and a dozen wriggling bodies stir beneath you. Pale ivory fangs, transparent scale, long wriggling limbs; this cavern is teeming. Time to move.</p><p>You level out and open the throttle, the propellers launching you down the canyon. Rocky walls blur past. You dip and turn, barely avoiding stony ledges as you shoot by. But the canyon forks ahead. You must choose between several routes, and the shard is giving you no clear direction. The creatures of the trench aren’t far behind you; you’ll just have to disembark in your diving suit and explore.</p>",
+			"specialRules": "Each non-Lurker character gains [curse] twice (this is not a scenario effect).",
+			"sectionLinks": "When door [one] is opened, read [section] <strong>63.3</strong>.<br/>When door [two] is opened, read [section] <strong>103.3</strong>.<br/>When door [three] is opened, read [section] <strong>135.2</strong>."
+		},
+		"63.3": {
+			"trigger": "Door [one] is opened"
+		},
+		"103.3": {
+			"trigger": "Door [two] is opened"
+		},
+		"135.2": {
+			"trigger": "Door [three] is opened"
+		},
+		"95.5": {
+			"trigger": "All five goal treasure tiles have been looted",
+			"conclusion": "<p>Clearly your intuition needs some finetuning. After running into a number of dead ends, you’ve only now managed to pick the right path to your treasure. The shard lies on a small stone ledge, buried under a thick layer of rubble. The bathysphere arms aren’t the best for excavation work, but you manage to pull the piece free and get it into the hold before the inhabitants of this place overwhelm you.</p><p>With that done, you turn skyward and launch yourselves back out of the void. You drop the throttle once you’re clear of the trench, rising at a slower pace to avoid something Pinter excitedly referred to as “explosive decompression.” The surface light blooms gradually. It’s a peaceful contrast to the blackness below, and when you finally break into open air, the dim sunlight radiates through the cabin, melting away everything else. You engage the leather flotation bladders and take a long, well-earned breath.<p>",
+			"rewards": {
+				"text": "Gain 2 [checkmark] each.<br/>Gain “Coral Shard” campaign sticker.",
+				"events": {
+					"B": [{ "id": "B-16" }]
+				}
+			},
+			"sectionLinks": "Add [section] <strong>114.2</strong> to the calendar in three weeks."
+		}
+	},
+	"path": ["main", "63.3", "103.3", "135.2", "95.5"]
 }

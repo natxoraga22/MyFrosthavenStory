@@ -11,7 +11,7 @@
 		<!-- Title -->
 		<div class="title">
 			<!-- Questline -->
-			<div th:if="*{questLine}" class="questLine" th:classappend="*{#strings.unCapitalize(questLine)}">
+			<div th:if="*{questLine}" class="questLine" th:classappend="*{#strings.unCapitalize(questLine.name())}">
 				[[*{questLine}]]
 			</div>
 			<h1>

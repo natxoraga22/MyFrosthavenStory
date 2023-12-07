@@ -32,7 +32,7 @@
 
 				<!-- SCENARIO -->
 				<a th:if="*{objectType.name() == 'SCENARIO'}" class="list-group-item list-group-item-action" th:href="|#scenario_*{id}|">
-					<div class="scenarioNumber questLine" th:classappend="*{#strings.unCapitalize(questLine)}">
+					<div class="scenarioNumber questLine" th:classappend="*{#strings.unCapitalize(questLine.name())}">
 						[[*{#numbers.formatInteger(id,1)}]]
 					</div>
 					<strong>[[*{name}]]</strong>

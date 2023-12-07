@@ -49,7 +49,7 @@
 	font-family: var(--font-texturina);
 }
 
-.personalQuest .rewards {
+.personalQuest .pqRewards {
 	margin-top: 1rem;
 
 	--bs-card-border-width: 2px;
@@ -58,11 +58,11 @@
 	--bs-card-bg: #e7cc8b;
 }
 
-.personalQuest .rewards .card-header {
+.personalQuest .pqRewards .card-header {
 	border-bottom-width: 2px;
 }
 
-.personalQuest .rewards .card-body {
+.personalQuest .pqRewards .card-body {
 	border-width: 0;
 }
 

@@ -157,28 +157,6 @@ div.section {
 }
 
 
-/* ------- */
-/* REWARDS */
-/* ------- */
-
-.section .rewards {
-	--bs-card-cap-bg: #eba128;
-	--bs-card-bg: #ebd3a0;
-}
-
-.section .rewards .card-header {
-	border-bottom-color: #ffcb34;
-}
-
-.section .rewards .card-body {
-	border-color: #a77b2a;
-
-	display: flex;
-	flex-direction: column;
-	gap: var(--rewards-inner-gap);
-}
-
-
 /* ------------- */
 /* SECTION LINKS */
 /* ------------- */

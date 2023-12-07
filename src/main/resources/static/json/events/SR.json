@@ -5,12 +5,19 @@
 			"A": {
 				"trigger": "Share notes of your travels.",
 				"text": "<p>Edwin is overjoyed to hear of your travels.<br/><strong class=\"fst-normal\">Mark a box next to each location in which you've completed at least one scenario:</strong></p><p><i class=\"fa-regular fa-square\"></i> Radiant Forest<br/><i class=\"fa-regular fa-square\"></i> Copperneck Mountains<br/><i class=\"fa-regular fa-square\"></i> Whitefire Wood<br/><i class=\"fa-regular fa-square\"></i> Crystal Fields<br/><i class=\"fa-regular fa-square\"></i> The Biting Sea</p><p>\"Thank you tremendously, that helps confirm several of the first-hand accounts I've collected. Nearly identical!\"</p>",
-				"rewards": "<p>Gain 3 collective gold for each checked box above.</p><p>When all boxes are checked, remove this card from the deck and add event SO-42 to the summer outpost deck.</p>"
+				"rewards": {
+					"text": "<p>Gain 3 collective gold for each checked box above.</p><p>When all boxes are checked:</p>",
+					"events": {
+						"SO": [{ "id": "SO-42" }]
+					}
+				}
 			},
 			"B": {
 				"trigger": "Ask him about his more notable travels.",
 				"text": "<p>You note that you're not as well-traveled as he is, and ask if there's any locales he'd recommend.</p><p>\"I'm not a huge fan of the tourist-y places, but I can tell you about some exciting regions I've noted from afar...\"</p>",
-				"rewards": "Gain 1 inspiration."
+				"rewards": {
+					"text": "Gain 1 inspiration."
+				}
 			}
 		}
 	},
@@ -21,15 +28,22 @@
 				"id": "",
 				"trigger": "Solve the riddle and say your answer aloud now.",
 				"requirement": "IF YOU SAID \"GOLD\"",
-				"text": "\"Clever, good.\" It scratches its stony fingers along its face in thought. \"Perhaps you are the ones. Return someday, we'll see.\" It curls back into the cliff face, then remembers your deal. \"Ah, and as promised, something worth its weight, right?\"",
-				"rewards": "Gain 1 inspiration.<br/>Gain 20 collective gold.<br/>Add event SR-33 to the summer road deck."
+				"text": "<p>\"Clever, good.\" It scratches its stony fingers along its face in thought. \"Perhaps you are the ones. Return someday, we'll see.\" It curls back into the cliff face, then remembers your deal. \"Ah, and as promised, something worth its weight, right?\"</p>",
+				"rewards": {
+					"text": "Gain 1 inspiration.<br/>Gain 20 collective gold.",
+					"events": {
+						"SR": [{ "id": "SR-33" }]
+					}
+				}
 			},
 			"A2": {
 				"id": "",
 				"trigger": "Solve the riddle and say your answer aloud now.",
 				"requirement": "IF YOU DIDN\"T SAY \"GOLD\"",
-				"text": "\"Foolish. Only one thing is worth its weight in gold: gold itself. Not the ones I was looking for. Begone.\" The Savvas curls back into the cliff face, turning its lion head away. It ignores you as you move on, but you hear it mutter something under its breath.",
-				"rewards": "All characters start the next scenario with [muddle].<br/>During battle goal selection in the next scenario, all characters draw one fewer card."
+				"text": "<p>\"Foolish. Only one thing is worth its weight in gold: gold itself. Not the ones I was looking for. Begone.\" The Savvas curls back into the cliff face, turning its lion head away. It ignores you as you move on, but you hear it mutter something under its breath.</p>",
+				"rewards": {
+					"text": "All characters start the next scenario with [muddle].<br/>During battle goal selection in the next scenario, all characters draw one fewer card."
+				}
 			}
 		}
 	},
@@ -41,19 +55,25 @@
 				"trigger": "Make an offering at the improvised shrine.",
 				"requirement": "LOSE 5 GOLD",
 				"text": "You drop a few coins in the wooden offering plate, which gets you a sincere nod of thanks. He sends you on your way, but you feel a bit lighter in your step.",
-				"rewards": "All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity."
+				"rewards": {
+					"text": "All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity."
+				}
 			},
 			"A2": {
 				"id": "A",
 				"trigger": "Make an offering at the improvised shrine.",
 				"requirement": "[not] LOSE 5 GOLD",
 				"text": "You're not willing to support the roadside shrine.",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			},
 			"B": {
 				"trigger": "It's clear this is an easy mark. Steal from the offering plate.",
 				"text": "This sap expects us to believe he represents the Great Oak? you're putting a stop to this right now. A few swings of the arm take care of the makeshift shrine, and you don't expect to see this charlatan harassing travelers in the future.",
-				"rewards": "Gain 10 collective gold.<br/>All characters start the next scenario with [curse]."
+				"rewards": {
+					"text": "Gain 10 collective gold.<br/>All characters start the next scenario with [curse]."
+				}
 			}
 		}
 	},
@@ -63,12 +83,19 @@
 			"A": {
 				"trigger": "There's a mass of fire ants marching over to get a look. Put the two together to see if it can commune with them.",
 				"text": "You find an ants' nest nearby and set the beetle down next to it. There's a definite connection, but there is a power struggle as well: the ant hive has its own hierarchy and is unwilling to support a new member. Eventually, the ants take decisive action and swarm the beetle.",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			},
 			"B": {
 				"trigger": "A talking bug? Might as well take it with you and keep it safe.",
 				"text": "You find a suitable container and pocket the beetle. Maybe it will be useful someday.",
-				"rewards": "Gain \"Bug in a Jar\" campaign sticker.<br/>Add event SR-34 to the summer road deck."
+				"rewards": {
+					"text": "Gain \"Bug in a Jar\" campaign sticker.",
+					"events": {
+						"SR": [{ "id": "SR-34" }]
+					}
+				}
 			}
 		}
 	},
@@ -78,12 +105,16 @@
 			"A": {
 				"trigger": "You heard the Savvas. Let's make some coin.",
 				"text": "You shuttle heavy platters of fine rocks from the serving area to the assembled Savvas, refilling drinks and generally staying out of their way. The Savvas consume the geologic sampler with a deliberate slowness, savoring the crunch and grinding each bite to sand before swallowing. When the gathered group is satiated, one calls you over and hands you a small pouch full of gold with an idle nod of thanks.",
-				"rewards": "Gain 15 collective gold."
+				"rewards": {
+					"text": "Gain 15 collective gold."
+				}
 			},
 			"B": {
 				"trigger": "Oh sure, you'll serve them—but these haughty Savvas need to be taught a lesson. Rations from your packs it is.",
 				"text": "<p>You dig out some of the hardened rations that have ridden around in your pack for weeks now—they're as good as rocks and equally hard. You slip a few onto the platters as you serve the uptight Savvas, and they relish them the same as any of their fancy rocks. They finish their meal happily and hand over a small pouch of gold, but cant help but remind you they're withholding some of the payment for your tardiness.</p><p>You make a quick exit and are nearly out of earshot before the retching starts.</p>",
-				"rewards": "Gain 1 morale.<br/>Gain 10 collective gold."
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Gain 10 collective gold."
+				}
 			}
 		}
 	},
@@ -95,19 +126,28 @@
 				"trigger": "Try the firepepper.",
 				"requirement": "[trait] QUATRYL, SAVVAS, STRONG or UNFETTERED",
 				"text": "A challenge must be met. You pop the firepepper into your mouth, and after a second, it's clear why she warned you: this thing is HOT! After an hour, most of the burning has subsided, and the woman nods, impressed. \"Alright, perhaps you could handle a challenge of a different sort...\"",
-				"rewards": "Gain 10 experience each.<br/>Gain \"Firepepper\" campaign sticker.<br/>New Scenario: The Eternal Crave (122)."
+				"rewards": {
+					"text": "Gain 10 experience each.<br/>Gain \"Firepepper\" campaign sticker.",
+					"scenarios": [{ "id": "122" }]
+				}
 			},
 			"A2": {
 				"id": "A",
 				"trigger": "Try the firepepper.",
 				"requirement": "[not] [trait] QUATRYL, SAVVAS, STRONG or UNFETTERED",
 				"text": "You pop the firepepper into your mouth, and the juices explode like lava. The old Quatryl was right. She chuckles, pouring cool milk from a canteen at her hip into your mouth. \"I told you, it was strong enough to satisfy the Hungry Maw! Now that I don't have to worry about backtalk, I'll tell you a story...\"",
-				"rewards": "All characters start the next scenario with [damage] 2 and [brittle].<br/>Gain \"Firepepper\" campaign sticker.<br/>New Scenario: The Eternal Crave (122)."
+				"rewards": {
+					"text": "All characters start the next scenario with [damage] 2 and [brittle].<br/>Gain \"Firepepper\" campaign sticker.",
+					"scenarios": [{ "id": "122" }]
+				}
 			},
 			"B": {
 				"trigger": "Ask her to demonstrate just how easily she could eat it.",
 				"text": "She pops the firepepper into her mouth with a shrug, washing it down with something from her canteen. \"See? Easy for someone like me. That's the way it goes... some things are just easier depending on who you are. Now, some battle-hardened warriors like yourselves? Well, you'd probably be best at a task I need some help with...\"",
-				"rewards": "Gain \"Firepepper\" campaign sticker.<br/>New Scenario: The Eternal Crave (122)."
+				"rewards": {
+					"text": "Gain \"Firepepper\" campaign sticker.",
+					"scenarios": [{ "id": "122" }]
+				}
 			}
 		}
 	},
@@ -119,28 +159,36 @@
 				"trigger": "Offer him herbs for wood-cutting skills.",
 				"requirement": "<p>LOSE 2 COLLECTIVE HERB RESOURCES",
 				"text": "\"I built up a bit of skill with the saw. It's part technique and part sharpening the blade right. Watch this.\"</p><p> What he lacks in decorum he certainly makes up in skill. You learn a thing or two before heading on your way.</p>",
-				"rewards": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+				"rewards": {
+					"text": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+				}
 			},
 			"A2": {
 				"id": "A",
 				"trigger": "Offer him herbs for wood-cutting skills.",
 				"requirement": "[not] LOSE 2 COLLECTIVE HERB RESOURCES",
 				"text": "\"Come back when you've got something worth swappin' for.\"",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			},
 			"B1": {
 				"id": "B",
 				"trigger": "Offer him hides for wood-cutting skills.",
 				"requirement": "<p>LOSE 2 COLLECTIVE [hide]",
 				"text": "\"Nice pelt. Is this Valrath?\" It is not Valrath.</p><p> True to his word, the Inox shows you how to sharpen a saw with a technique new to you. You thank him and head on your way.</p>",
-				"rewards": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+				"rewards": {
+					"text": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+				}
 			},
 			"B2": {
 				"id": "B",
 				"trigger": "Offer him hides for wood-cutting skills.",
 				"requirement": "[not] LOSE 2 COLLECTIVE [hide]",
 				"text": "\"No offense, but I think you've overstayed your welcome. See you when you've got something worth swappin' for.\"",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			}
 		}
 	},

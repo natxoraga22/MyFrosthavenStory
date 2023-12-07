@@ -1,0 +1,23 @@
+
+/* ------- */
+/* REWARDS */
+/* ------- */
+
+.rewards {
+	--bs-card-cap-bg: #eba128;
+	--bs-card-bg: #ebd3a0;
+}
+
+.rewards .card-header {
+	border-bottom-color: #ffcb34;
+}
+
+.rewards .card-body {
+	border-color: #a77b2a;
+}
+
+.rewards .rewardsBody {
+	display: flex;
+	flex-direction: column;
+	gap: var(--rewards-inner-gap);
+}

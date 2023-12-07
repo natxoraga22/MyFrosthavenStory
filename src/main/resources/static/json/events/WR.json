@@ -5,21 +5,27 @@
 			"A": {
 				"trigger": "Kill the Kivak",
 				"text": "You cut the doomed Kivak down. It doesn't move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: \"Most Kivak just want to eat dirt and grass. O'course I get the weird ones.\"",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			},
 			"B1": {
 				"id": "B",
 				"trigger": "Refuse and force your way through the sea of animals",
 				"requirement": "[trait] OUTCAST",
 				"text": "You don't know what this solitary Kivak did to wrong the others, but you understand rejection by your peers. You grab the Kivak and push through the herd. Once on the other side, the reject snorts in thanks before wandering off.",
-				"rewards": "Gain 1 [checkmark] each."
+				"rewards": {
+					"text": "Gain 1 [checkmark] each."
+				}
 			},
 			"B2": {
 				"id": "B",
 				"trigger": "Refuse and force your way through the sea of animals",
 				"requirement": "[not] [trait] OUTCAST",
 				"text": "You ignore the lone Kivak and the crazy shepherd, instead pushing through the herd. They stand strong, and their stone skin makes passage akin to squeezing through a tight cave. Finally, you emerge exhausted on the other side of the herd.",
-				"rewards": "All characters start the next scenario with [impair] and [damage] 2."
+				"rewards": {
+					"text": "All characters start the next scenario with [impair] and [damage] 2."
+				}
 			}
 		}
 	}

@@ -7,19 +7,25 @@
 				"trigger": "Accept the challenge to race.",
 				"requirement": "[trait] NIMBLE",
 				"text": "You rush about the deck, hoisting sails, changing tack, and expertly maneuvering the rudder. The Lurker speeds up in multiple bursts but finally breaks off, defeated. You raise the sails and allow it to catch up, where it bows its head in concession. Before it departs, it throws something on deck—a small satchel from the ocean floor.",
-				"rewards": "Gain 15 collective gold."
+				"rewards": {
+					"text": "Gain 15 collective gold."
+				}
 			},
 			"A2": {
 				"id": "A",
 				"trigger": "Accept the challenge to race.",
 				"requirement": "[not] [trait] NIMBLE",
 				"text": "You do your best to keep pace, but the Lurker is designed for the ocean, and you're fumbling with ropes on deck. It handily beats you.",
-				"rewards": "All characters start the next scenario discarding two cards."
+				"rewards": {
+					"text": "All characters start the next scenario discarding two cards."
+				}
 			},
 			"B": {
 				"trigger": "This is undoubtedly a trap. Attack before it ambushes you.",
 				"text": "You agree to the race as a pretense, but meanwhile prepare to attack. Halfway through the race you open fire on the Lurker. It disappears under the water, and after some rumblings under the ship, reappears off to the side of your vessel. You spin the ship's wheel to turn toward it, but notice your rudder is floating in your wake. It wins this round, and you'll have to make repairs before challenging a Lurker again.",
-				"rewards": "Lose 1 collective [lumber]."
+				"rewards": {
+					"text": "Lose 1 collective [lumber]."
+				}
 			}
 		}
 	},
@@ -29,12 +35,18 @@
 			"A": {
 				"trigger": "Direct the turtle to Frosthaven.",
 				"text": "\"Thank you, Boat! You are a credit to your species.\" With that, the sea turtle begins the arduous process of turning its enormous body, setting off for Frosthaven.",
-				"rewards": "Add event SO-52 to the summer outpost deck."
+				"rewards": {
+					"events": {
+						"SO": [{ "id": "SO-52" }]
+					}
+				}
 			},
 			"B": {
 				"trigger": "The meat from this turtle could feed Frosthaven for months, and the shell undoubtedly has defensive applications... fire the harpoons.",
 				"text": "In silent conspiracy you nod to the captain, who gives the order to fire the harpoons. It's not much of a fight, but when it's over your ship is dragging a sturdy shell, and her decks are piled high with meat.",
-				"rewards": "Gain 4 collective [hide].<br/>Lose 2 morale."
+				"rewards": {
+					"text": "Gain 4 collective [hide].<br/>Lose 2 morale."
+				}
 			}
 		}
 	}

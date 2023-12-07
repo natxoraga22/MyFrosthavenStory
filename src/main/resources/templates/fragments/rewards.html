@@ -9,35 +9,37 @@
 	<!-- ------- -->
 	<bs:card th:fragment="rewards(rewards)" class="fhCard rewards">
 		<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
-		<bs:cardBody th:fragment="rewardsBody(rewards)" th:object="${rewards}">
-			<!-- Text -->
-			<div th:if="*{text}" class="fw-bold">
-				[(*{text})]
-			</div>
+		<bs:cardBody>
+			<div th:fragment="rewardsBody(rewards)" th:object="${rewards}" class="rewardsBody">
+				<!-- Text -->
+				<div th:if="*{text}" class="fw-bold">
+					[(*{text})]
+				</div>
 
-			<!-- New events -->
-			<div th:if="*{!#maps.isEmpty(events)}">
-				[[#{section.rewards.newEvents}]]:
-				<br/>
-				<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.newEvents.SO})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.newEvents.SR})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.newEvents.WO})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.newEvents.WR})}"></th:block>
-				<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.newEvents.B})}"></th:block>
-			</div>
+				<!-- New events -->
+				<div th:if="*{!#maps.isEmpty(events)}">
+					[[#{section.rewards.newEvents}]]:
+					<br/>
+					<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.newEvents.SO})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.newEvents.SR})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.newEvents.WO})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.newEvents.WR})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.newEvents.B})}"></th:block>
+				</div>
 
-			<!-- New scenarios -->
-			<div th:if="*{!#lists.isEmpty(scenarios)}">
-				[[#{section.rewards.newScenarios}]]:
-				<br/>
-				<th:block th:replace="~{:: rewardsScenarios(*{scenarios})}"></th:block>
-			</div>
+				<!-- New scenarios -->
+				<div th:if="*{!#lists.isEmpty(scenarios)}">
+					[[#{section.rewards.newScenarios}]]:
+					<br/>
+					<th:block th:replace="~{:: rewardsScenarios(*{scenarios})}"></th:block>
+				</div>
 
-			<!-- Locked out scenarios -->
-			<div th:if="*{!#lists.isEmpty(lockedOutScenarios)}">
-				[[#{section.rewards.lockedOutScenarios}]]:
-				<br/>
-				<th:block th:replace="~{:: rewardsScenarios(*{lockedOutScenarios})}"></th:block>
+				<!-- Locked out scenarios -->
+				<div th:if="*{!#lists.isEmpty(lockedOutScenarios)}">
+					[[#{section.rewards.lockedOutScenarios}]]:
+					<br/>
+					<th:block th:replace="~{:: rewardsScenarios(*{lockedOutScenarios})}"></th:block>
+				</div>
 			</div>
 		</bs:cardBody>
 	</bs:card>

@@ -18,6 +18,7 @@ import txraga.mystory.frosthaven.model.Building;
 import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.PersonalQuest;
+import txraga.mystory.frosthaven.model.Rewards;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
 
@@ -55,9 +56,15 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	}
 
 	@Override
-	public Map<String,Event> findAllEvents() {
+	public Map<String,Event> findAllEvents(Map<String,Scenario> scenarios) {
 		log.entry();
-		return log.exit(eventsFile.findAllEventsAsMap());
+		Map<String,Event> events = eventsFile.findAllEventsAsMap();
+		for (Event event : events.values()) {
+			for (Event.Option option : event.getOptions().values()) {
+				populateRewards(option.getRewards(), scenarios);
+			}
+		}
+		return log.exit(events);
 	}
 
 	@Override
@@ -66,7 +73,7 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 		Map<String,Scenario> scenarios = scenariosFile.findAllScenariosAsMap();
 		for (Scenario scenario : scenarios.values()) {
 			for (Section section : scenario.getSections().values()) {
-				populateRewards(section, scenarios);
+				populateRewards(section.getRewards(), scenarios);
 			}
 		}
 		return log.exit(scenarios);
@@ -82,7 +89,7 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	public Map<String,Section> findAllSections(Map<String,Scenario> scenarios) {
 		log.entry();
 		Map<String,Section> sections = sectionsFile.findAllSectionsAsMap();
-		for (Section section : sections.values()) populateRewards(section, scenarios);
+		for (Section section : sections.values()) populateRewards(section.getRewards(), scenarios);
 		return log.exit(sections);
 	}
 
@@ -91,12 +98,12 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	/* PRIVATE METHODS */
 	/* --------------- */
 
-	private void populateRewards(Section section, Map<String,Scenario> scenarios) {
-		if (section.getRewards() != null) {
-			List<Scenario> rewardScenarios = section.getRewards().getScenarios();
+	private void populateRewards(Rewards rewards, Map<String,Scenario> scenarios) {
+		if (rewards != null) {
+			List<Scenario> rewardScenarios = rewards.getScenarios();
 			if (rewardScenarios != null) populateRewardsScenarios(rewardScenarios, scenarios);
 
-			List<Scenario> rewardLockedOutScenarios = section.getRewards().getLockedOutScenarios();
+			List<Scenario> rewardLockedOutScenarios = rewards.getLockedOutScenarios();
 			if (rewardLockedOutScenarios != null) populateRewardsScenarios(rewardLockedOutScenarios, scenarios);
 		}
 	}

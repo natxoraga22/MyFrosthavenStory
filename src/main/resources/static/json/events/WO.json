@@ -5,12 +5,16 @@
 			"A": {
 				"trigger": "Agree to defend the show from within the icy water.",
 				"text": "<p>The night of the show, you wade into the icy water, ready for Lurker attacks. What you weren't ready for was the assault on your ears as second-rate actors stumble through the unrealistic dialogue.</p><p>\"I'm going fast!\" shouts one. Ugh. Who would say that in combat?</p><p>The Lurkers you're there to protect against must have heard the reviews, because they weren't anywhere to be found. You retire at the end of the night a few coins richer, many of which need to be spent on hot tea to warm up.</p>",
-				"rewards": "Gain 5 gold each.<br/>All characters start the next scenario with [brittle]."
+				"rewards": {
+					"text": "Gain 5 gold each.<br/>All characters start the next scenario with [brittle]."
+				}
 			},
 			"B": {
 				"trigger": "Try to convince Eros to let you defend the show from the guard tower.",
 				"text": "<p>You explain to Eros that being in the water won't do much good in the event of an attack, and that you'd have a much better vantage point from the guard towers... given that's what they're literally there for.</p><p>\"I see that this is a creative difference we will be unable to overcome. I bid you good day.\" The Savvas flips its scarf defiantly and moves on.</p><p>Later in the week, you're walking by a poorly-attended show on the docks and spot some other mercenaries keeping watch, weapons drawn, in the frigid ocean.</p><p>The show gets lukewarm reviews.</p>",
-				"rewards": "No effect."
+				"rewards": {
+					"text": "No effect."
+				}
 			}
 		}
 	},

@@ -22,7 +22,7 @@ public interface FrosthavenService {
 	public Map<String,PersonalQuest> findAllPersonalQuests();
 
 	/** Gets all events (road, outpost, etc.) from all files inside "events" folder (there is a file for each type/season) */
-	public Map<String,Event> findAllEvents();
+	public Map<String,Event> findAllEvents(Map<String,Scenario> scenarios);
 
 	/** Gets all scenarios from all files inside "scenarios" folder (there is a file for each scenario) */
 	public Map<String,Scenario> findAllScenarios();

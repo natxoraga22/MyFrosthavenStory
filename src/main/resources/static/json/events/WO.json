@@ -1,4 +1,23 @@
 {
+	"WO-04": {
+		"text": "<p>Frosthaven's no stranger to snow, but as dawn breaks, even the long-time veterans of the north utter cries of surprise. An overnight storm has covered the town in a blanket of snow that rises halfway up most of the doors in town. You grumble at first as you dig to clear the longhouse door and get on with your day, but the snow muffles every sound in a way you find soothing, and it isn't long before you and the other inhabitants are free. You breathe a sigh of relief.</p><p>And then the attack bells sound.</p><p>An Algox warband approaches the town at speed, using their natural abilities to bound across the deep snow without slowing. The guards on duty scramble to assume battle positions, but when you glance toward the barracks your spirits sink; the gates are still half-buried. You see the massive doors bulge as the guards within push desperately, trying to swing them open against the piled snow. They're making progress, but you can tell they won't make it to the gate towers in time.</p>",
+		"options": {
+			"A": {
+				"trigger": "Join the fight at the outpost's main gate. You might be the only reinforcments those defenders get today.",
+				"text": "You wade through the snow and up to the gatehouse just in time to join the fight. There aren't many of you to hold the town against a faster enemy, but the guards in the tower perk up to see they're not alone.",
+				"rewards": {
+					"text": "Gain 2 morale."
+				}
+			},
+			"B": {
+				"trigger": "Dig out the barracks gates and get the other guards into the action.",
+				"text": "You make your way to the barracks and dig furiously as you hear the sounds of battle behind you. With one last cry of \"SHOVE!\" the guards burst forth and form up. You see flames as you approach the action, but your larger force makes a tighter perimeter around the places that matter most.",
+				"rewards": {
+					"text": "-3 [target]<br/>Wreck 1 odd-numbered building of your choice."
+				}
+			}
+		}
+	},
 	"WO-19": {
 		"text": "<p>\"Mercenaries! I require you! In the name of art!\"</p><p>A Savvas stands at your front door, a long black scarf wrapped around its neck.</p><p>\"I am Eros, purveyor of culture and director of theater. I am putting on a play, tentatively titled The Depths of Anguish, reenacting the most noble of sacrifices on our shores at the hands of the Lurkers. It will be my magnum opus.\" It pauses, dramatically.</p><p>You try to explain that while your services are for hire, those services don't include play-acting. It's more the \"smashing\" type of services, really.</p><p>\"What? No, never—\" It looks a bit stunned that you'd even consider yourselves actors. \"No, I need you to stand guard in the ocean. This will be set on location at the shore, and I can't have an encore of the subject matter. I'll want you staged in the water, out of sight, just in case Lurkers try to write a sequel.\"</p>",
 		"options": {
@@ -15,6 +34,15 @@
 				"rewards": {
 					"text": "No effect."
 				}
+			}
+		},
+		"outpostAttack": {
+			"attack": 15,
+			"target": 7,
+			"targetPriority": "Target odd-numbered buildings in order of closest to farthest from the main gate.",
+			"text": "Exhausted, you finish gathering the injured. Satha is already working with the guards on more routine snow-clearing schedules.",
+			"rewards": {
+				"text": "Gain 3 collective [hide]."
 			}
 		}
 	},

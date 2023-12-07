@@ -20,6 +20,7 @@ public class Event extends StoryObject {
 	private StoryItem unlockedBy;
 	private String text;
 	private Map<String,Option> options = Map.of();
+	private OutpostAttack outpostAttack;
 	
 	private String chosenOption;
 
@@ -50,6 +51,7 @@ public class Event extends StoryObject {
 		if (options != null) {
 			for (Option option : options.values()) option.replaceIcons();
 		}
+		if (outpostAttack != null) outpostAttack.replaceIcons();
 	}
 
 
@@ -70,6 +72,26 @@ public class Event extends StoryObject {
 		public void replaceIcons() {
 			this.trigger = ModelUtils.replaceIcons(this.trigger);
 			this.requirement = ModelUtils.replaceIcons(this.requirement);
+			this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
+		}
+	}
+
+
+	/* -------------- */
+	/* OUTPOST ATTACK */
+	/* -------------- */
+
+	@Getter
+	@Setter
+	@ToString
+	public static class OutpostAttack {
+		private int attack;
+		private int target;
+		private String targetPriority;
+		private String text;
+		private Rewards rewards;
+
+		public void replaceIcons() {
 			this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
 		}
 	}

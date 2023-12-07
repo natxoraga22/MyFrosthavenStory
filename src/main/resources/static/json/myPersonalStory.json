@@ -107,7 +107,22 @@
 		},
 		{ "event": { "id": "B-11", "chosenOption": "A" }},
 		{ "scenario": { "id": "042" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-04", "chosenOption": "A" },
+				"build": [{ "id": "miningcamp" }]
+			}
+		},
+		{ "event": { "id": "WR-16", "chosenOption": "A" }},
 		{ "scenario": { "id": "112" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "86.1" }],
+				"outpostEvent": { "id": "WO-20", "chosenOption": "A" },
+				"levelUps": [{ "id": "deathwalker", "level": 6 }, { "id": "crashingtide", "level": 4 }],
+				"build": [{ "id": "huntinglodge" }]
+			}
+		},
 		{ "scenario": { "id": "115" }},
 		{ "scenario": { "id": "049" }},
 		{ "scenario": { "id": "053" }},

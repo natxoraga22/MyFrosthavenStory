@@ -150,6 +150,16 @@
 			"2": {}
 		}
 	},
+	"barracks": {
+		"number": "98",
+		"name": "Barracks",
+		"levels": {
+			"1": {},
+			"2": {},
+			"3": {},
+			"4": {}
+		}
+	},
 	"wallJ": {
 		"name": "Wall"
 	},

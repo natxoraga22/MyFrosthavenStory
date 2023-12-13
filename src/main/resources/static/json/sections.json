@@ -22,7 +22,12 @@
 		}
 	},
 	"86.1": {
-		"unlockedBy": { "scenario": { "id": "114" }}
+		"title": "Protect the Pass",
+		"unlockedBy": { "scenario": { "id": "114" }},
+		"text": "<p>The Crater is as lively as you’ve seen it all season. You signal for a drink as you push through the customers and make your way to a table at the back, where the Quatryl tinkerer Pinter Droman fiddles with a small spherical gadget, deep in thought. You sit down, interrupting his trance.</p><p>“OH! Hello again, thank you for coming! VERY exciting news to share!” The boisterous Quatryl tears his focus from the trinket. “We are on the next phase of our little shortcut through the mountains. A big portion of the path needs to pass under a dangerous overhanging cliff. The work crew is already installing pylons to support the cliff and hold back the rock wall, but...” he hesitates. “It seems our path inadvertently cuts too close to Algox territory, and they’re not taking kindly to our construction project.”</p><p>He raises his hand, cutting off the expected suggestion. “Diplomacy isn’t an option, I’m afraid,” the tinkerer sighs, “The Algox who are attacking belong to a group of bandits—the Horns of Ruin, they call themselves—and they are exclusively interested in destroying and looting our hard work.”</p><p>“There’s a big attack coming, and the project is in a very vulnerable state. I need you to go protect the pylons we’ve installed. If you can stop them, it might buy us enough time to get the whole structure pieced together. Once that happens, it will be nearly impossible to destroy!</p>",
+		"rewards": {
+			"scenarios": [{ "id": "115" }]
+		}
 	},
 	"114.2": {
 		"unlockedBy": { "scenario": { "id": "042" }}

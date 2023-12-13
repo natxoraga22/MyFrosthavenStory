@@ -120,7 +120,8 @@
 				"passageOfTime": [{ "id": "86.1" }],
 				"outpostEvent": { "id": "WO-20", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 6 }, { "id": "crashingtide", "level": 4 }],
-				"build": [{ "id": "huntinglodge", "level": 1 }]
+				"build": [{ "id": "huntinglodge", "level": 1 }],
+				"upgrade": [{ "id": "barracks", "level": 2 }]
 			}
 		},
 		{ "scenario": { "id": "115" }},

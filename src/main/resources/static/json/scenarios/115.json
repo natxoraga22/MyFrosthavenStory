@@ -1,5 +1,6 @@
 {
 	"id": "115",
 	"name": "Pylon Problems",
-	"questLine": "Other"
+	"questLine": "Other",
+	"unlockedBy": { "section": { "id": "86.1" }}
 }

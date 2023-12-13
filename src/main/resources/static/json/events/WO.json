@@ -46,6 +46,26 @@
 			}
 		}
 	},
+	"WO-20": {
+		"text": "<p>\"You know that I support this outpost's guard, but I've done everything I can.\" Mayor Satha stands firm in front of Captain Olmstead, who is speaking at a volume better suited for the battlements than the mayor's cabin home.</p><p>\"You can't be serious. We are this close to being able to support more troops, and you're telling me we can't stretch that little bit?\" The Captain looks on the verge of popping a blood vessel.</p><p>\"I've done everything I can. With any luck we've seen the last of the attacks. We haven 't seen one in...\" Satha looks over to a calendar with thick black X's denoting each attack. \"Well, that may have been the last one.\"</p><p>\"Can't you cut from the... the... I mean, there must be something!\" He grabs a decorative mug with Frosthaven's crest off Satha's desk, gesturing to it.</p><p>Satha takes the mug delicately out of his hands. \"The answer is no.\"</p>", 
+		"options": {
+			"A": {
+				"trigger": "You wouldn't want to make a habit of it, but you could kick in a bit from your personal coffers to assist in the upgrades to the barracks.",
+				"requirement": "LOSE 10 COLLECTIVE GOLD",
+				"text": "<p>You step forward and offer to cover the remaining expenses for the barracks renovation. Satha smiles and thanks you, and Captain Olmstead beams. She turns to Olmstead:</p><p>\"See, I told you those mercenaries could do some good around here.\"</p>",
+				"rewards": {
+					"text": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
+				}
+			},
+			"B": {
+				"trigger": "This is internal town business. They'll come up with the funds eventually.",
+				"text": "You think better of interrupting the two most powerful people in Frosthaven and decide to come back later. Surely they can work this out between themselves.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"WO-61": {
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},

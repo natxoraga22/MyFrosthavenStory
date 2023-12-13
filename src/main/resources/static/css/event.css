@@ -10,6 +10,9 @@
 	/* Gap between option elements */
 	--event-option-inner-gap: 1rem;
 
+	/* Gap between outpost attack elements */
+	--event-outpost-attack-inner-gap: 0.5rem;
+
 	/* Gap between event form inputs */
 	--event-form-inner-gap: 1rem;
 }
@@ -53,10 +56,44 @@
 	margin-top: var(--event-option-inner-gap);
 }
 
-/*.event .option .rewards {
+.event .option .rewards {
 	margin-top: var(--event-option-inner-gap);
+}
+
+
+/* -------------- */
+/* OUTPOST ATTACK */
+/* -------------- */
+
+.event .outpostAttack {
+	display: flex;
+	flex-direction: column;
+	gap: var(--event-outpost-attack-inner-gap);
+}
+
+.event .outpostAttack .attack {
+	font-size: 14pt;
 	font-weight: bold;
-}*/
+}
+
+.event .outpostAttack .attack img {
+	max-height: 27px;
+}
+
+.event .outpostAttack .target {
+	margin-left: 0.5rem;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.event .outpostAttack .target img {
+	max-height: 24px;
+}
+
+.event .outpostAttack .targetPriority {
+	margin-left: 1rem;
+	font-weight: bold;
+}
 
 
 /* ------- */

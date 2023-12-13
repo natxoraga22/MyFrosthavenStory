@@ -16,6 +16,15 @@
 					"text": "-3 [target]<br/>Wreck 1 odd-numbered building of your choice."
 				}
 			}
+		},
+		"outpostAttack": {
+			"attack": 15,
+			"target": 7,
+			"targetPriority": "Target odd-numbered buildings in order of closest to farthest from the main gate.",
+			"text": "Exhausted, you finish gathering the injured. Satha is already working with the guards on more routine snow-clearing schedules.",
+			"rewards": {
+				"text": "Gain 3 collective [hide]."
+			}
 		}
 	},
 	"WO-19": {
@@ -34,15 +43,6 @@
 				"rewards": {
 					"text": "No effect."
 				}
-			}
-		},
-		"outpostAttack": {
-			"attack": 15,
-			"target": 7,
-			"targetPriority": "Target odd-numbered buildings in order of closest to farthest from the main gate.",
-			"text": "Exhausted, you finish gathering the injured. Satha is already working with the guards on more routine snow-clearing schedules.",
-			"rewards": {
-				"text": "Gain 3 collective [hide]."
 			}
 		}
 	},

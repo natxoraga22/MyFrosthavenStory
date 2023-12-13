@@ -1,9 +1,51 @@
 {
+	"miningcamp": {
+		"number": "05",
+		"name": "Mining Camp",
+		"levels": {
+			"1": {},
+			"2": {
+				"builtSection": {
+					"id": "49.2"
+				}
+			},
+			"3": {},
+			"4": {}
+		}
+	},
+	"huntinglodge": {
+		"number": "12",
+		"name": "Hunting Lodge",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "172.3"
+				}
+			},
+			"2": {},
+			"3": {},
+			"4": {}
+		}
+	},
 	"loggingcamp": {
 		"number": "17",
 		"name": "Logging Camp",
 		"levels": {
 			"1": {},
+			"2": {},
+			"3": {},
+			"4": {}
+		}
+	},
+	"garden": {
+		"number": "24",
+		"name": "Garden",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "78.4"
+				}
+			},
 			"2": {},
 			"3": {},
 			"4": {}
@@ -22,6 +64,19 @@
 			"7": {},
 			"8": {},
 			"9": {}
+		}
+	},
+	"alchemist": {
+		"number": "35",
+		"name": "Alchemist",
+		"levels": {
+			"1": {},
+			"2": {},
+			"3": {
+				"builtSection": {
+					"id": "183.5"
+				}
+			}
 		}
 	},
 	"workshop": {

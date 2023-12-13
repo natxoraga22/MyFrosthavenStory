@@ -41,6 +41,12 @@
 			</th:block>
 		</th:block>
 
+		<!-- Outpost attack -->
+		<th:block th:if="*{outpostAttack}">
+			<hr>
+			<th:block th:replace="~{:: outpostAttack(*{outpostAttack})}"></th:block>
+		</th:block>
+
 		<!-- Section -->
 		<th:block th:if="*{section}">
 			<th:block th:replace="~{fragments/section :: section(*{section})}"></th:block>
@@ -66,7 +72,37 @@
 
 		<!-- Rewards -->
 		<div class="rewards">
-			<hr>
+			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"></th:block>
+		</div>
+	</div>
+
+
+	<!-- -------------- -->
+	<!-- OUTPOST ATTACK -->
+	<!-- -------------- -->
+	<div th:fragment="outpostAttack(outpostAttack)" th:object="${outpostAttack}" class="outpostAttack">
+		<!-- Attack -->
+		<div bs:flex bs:flexAlign="center">
+			<div class="attack">
+				<img class="icon" th:src="@{/img/icons/attack.png}">
+				[[*{attack}]]
+			</div>
+			<div class="target">
+				<img class="icon" th:src="@{/img/icons/target.png}">
+				[[*{target}]]
+			</div>
+			<div class="targetPriority">
+				[[*{targetPriority}]]
+			</div>
+		</div>
+		
+		<!-- Text -->
+		<div class="text">
+			[[*{text}]]
+		</div>
+
+		<!-- Rewards -->
+		<div class="rewards">
 			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"></th:block>
 		</div>
 	</div>

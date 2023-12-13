@@ -125,6 +125,12 @@
 			}
 		},
 		{ "scenario": { "id": "115" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "114.2" }, { "id": "94.4" }],
+				"upgrade": [{ "id": "loggingcamp", "level": 2 }]
+			}
+		},
 		{ "scenario": { "id": "049" }},
 		{ "scenario": { "id": "053" }},
 		{ "scenario": { "id": "008" }},

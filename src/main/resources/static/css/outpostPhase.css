@@ -7,6 +7,9 @@
 	/* Gap between outpost phase elements */
 	--outpost-inner-gap: 3rem;
 
+	/* Gap between buildings */
+	--outpost-building-gap: 2rem;
+
 	/* Gap between building elements */
 	--outpost-building-inner-gap: 1rem;
 
@@ -47,6 +50,10 @@
 
 .construction > .title {
 	margin-bottom: var(--title-margin-bottom);
+}
+
+.construction .build:not(:last-child) {
+	margin-bottom: var(--outpost-building-gap);
 }
 
 .building {

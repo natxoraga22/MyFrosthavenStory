@@ -21,6 +21,9 @@
 			"scenarios": [{ "id": "033" }]
 		}
 	},
+	"66.2": {
+		"unlockedBy": { "scenario": { "id": "115" }}
+	},
 	"86.1": {
 		"title": "Protect the Pass",
 		"unlockedBy": { "scenario": { "id": "114" }},

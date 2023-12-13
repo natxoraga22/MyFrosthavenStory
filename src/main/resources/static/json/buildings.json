@@ -19,7 +19,12 @@
 		"levels": {
 			"1": {
 				"builtSection": {
-					"id": "172.3"
+					"id": "172.3",
+					"title": "Hunting Lodge Upgraded",
+					"text": "<p>With a fire roaring in the background, the finished hunting lodge is the perfect location to exchange tales of narrow escapes from polar bears, as well as provide hides for Frosthaven. You encounter all sorts of patrons whose rugged appearances often belie a certain gruff kindness.</p><p>One of those patrons is a Vermling Trapper, who sits nearest the fire and away from the crowd, a square hat shadowing their eyes. Sitting beside their wares of lustrous, exotic furs, they are currently absorbed in constructing an intricate snare.</p><p>When you ask them to explain their process, they warm up to you. “Much of my time is spent not in action, but in observation. It’s a matter of understanding the animals, their habits. If you’re truly interested, perhaps I can show you sometime?”</p><p>You readily agree, happy for the company.</p>",
+					"rewards": {
+						"text": "Unlock [trapper] class box."
+					}
 				}
 			},
 			"2": {},

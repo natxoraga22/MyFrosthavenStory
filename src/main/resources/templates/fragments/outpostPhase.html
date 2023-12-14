@@ -45,7 +45,7 @@
 		<div th:if="*{!#lists.isEmpty(build) || !#lists.isEmpty(upgrade)}" class="construction">
 			<h2 class="title">[[#{outpostPhase.construction.title}]]</h2>
 			<!-- Build -->
-			<div class="build">
+			<div th:if="*{!#lists.isEmpty(build)}" class="build">
 				<div th:each="building : *{build}" th:object="${building}" th:with="level = *{levels['__*{level}__']}" class="building">
 					<div class="text">
 						<th:block th:if="*{level}">[(#{outpostPhase.construction.build.textWithLevel(*{name},*{level})})]</th:block>
@@ -66,7 +66,7 @@
 			</div>
 			
 			<!-- Upgrade -->
-			<div class="upgrade">
+			<div th:if="*{!#lists.isEmpty(upgrade)}" class="upgrade">
 				<div th:each="building : *{upgrade}" th:object="${building}" th:with="level = *{levels['__*{level}__']}" class="building">
 					<div class="text">
 						[(#{outpostPhase.construction.upgrade.text(*{name},*{level})})]

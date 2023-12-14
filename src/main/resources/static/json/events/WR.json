@@ -28,5 +28,24 @@
 				}
 			}
 		}
+	},
+	"WR-18": {
+		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle... and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs...\" Hurdle pauses, scrunching up his nose. \"On second thought, don't dig up eggs.\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Help Hurdle dig up Jeremy's hidden food.",
+				"text": "<p>You sigh and heft your shovel. You suppose this is what they mean when they say \"No job is too small.\"</p>",
+				"rewards": {
+					"text": "<p>All characters each take one turn drawing as many cards as they want from the monster attack modifier deck, one at a time, until they choose to stop. If a character draws a null card, they've unearthed an old egg, and their number of drawn cards is considered O. Shuffle the entire monster attack modifier deck between each turn.</p><p>Characters are then awarded the following, based on who drew the most cards (tied characters gain the full rewards of their shared rank):</p><p>1st: Gain 12 experience.<br/>2nd: Gain 6 gold.<br/>3rd: Gain 2 [lumber].<br/>4th: Gain 1 [hide].</p><p>If you collectively drew at least Cx3 cards, Hurdle is overjoyed: add a [plus1] sticker to one [axenut] loot card (the card gives one extra [axenut] when resolved).</p>"
+				}
+			},
+			"B": {
+				"trigger": "Offer to share your own rations instead.",
+				"text": "You're a sell-sword, not a sell-shovel. Still, you're happy to bail Jeremy out of an embarrassing situation, so you volunteer some of your own supplies. Hurdle snatches up your offering and scurries off in a huff, muttering that next time will be \"Jeremy soup.\"",
+				"rewards": {
+					"text": "All characters start the next scenario discarding one card."
+				}
+			}
+		}
 	}
 }

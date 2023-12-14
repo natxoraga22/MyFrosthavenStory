@@ -124,6 +124,7 @@
 				"upgrade": [{ "id": "barracks", "level": 2 }]
 			}
 		},
+		{ "event": { "id": "WR-18", "chosenOption": "A" }},
 		{ "scenario": { "id": "115" }},
 		{
 			"outpostPhase": {

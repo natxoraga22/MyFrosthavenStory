@@ -1,5 +1,6 @@
 {
 	"id": "049",
 	"name": "Beneath Sea and Stone",
-	"questLine": "Lurker"
+	"questLine": "Lurker",
+	"unlockedBy": { "section": { "id": "94.4" }}
 }

@@ -32,8 +32,20 @@
 			"scenarios": [{ "id": "115" }]
 		}
 	},
+	"94.4": {
+		"title": "Sneak Past the Lurkers",
+		"unlockedBy": { "section": { "id": "114.2" }},
+		"text": "No matter how dangerous this army, you share Sun in Shallows’ feelings of despair at this outcome. You tell Droman to hold off. Maybe you can find another way through the army.",
+		"rewards": {
+			"text": "<p>Place map overlay sticker Z on the map in location Z (F2).</p><p>Do not resolve an outpost event this week.</p>",
+			"scenarios": [{ "id": "049" }]
+		}
+	},
 	"114.2": {
-		"unlockedBy": { "scenario": { "id": "042" }}
+		"title": "Attacking the Lurkers",
+		"unlockedBy": { "scenario": { "id": "042" }},
+		"text": "<p>You sit at your regular table in The Crater, trying to enjoy your mugs of ale as the inexhaustible tinkerer Pinter Droman chatters ceaselessly. He has been at your side constantly since the bathysphere mission, peppering you with questions… which is exactly why you decided you needed a drink.</p><p>“Now, on a scale of one to ten, how many fires occurred onboard during your dive? I theorized only a small probability that the air tanks would explode, and—”</p><p>Pinter’s questions are cut short as an Orchid guard runs breathlessly up to your table. “You have a, uh… a visitor... at the dock gate…” she pants. “It’s a… Lurker. And it, uh, wants to see you, I think?”</p><p>You put your drinks down and head toward the docks, where you see a lone Lurker sitting patiently. You recognize Sun in Shallows, the Lurker who first told you about the shards and the fate of its people. Archers line the walls, plucking nervously at their bowstrings as you wave for the gate to open and go out to meet your caller.</p><p>It’s clear that Sun in Shallows has seen combat since you last met; new cracks run like spiderwebs over her shell and the Lurker leans to one side as she sits, favoring a few injured legs. The giant crustacean perks up as you approach, her psychic singsong greeting echoing in your minds. You wonder what could compel this creature to risk the wrath of the Frosthaven guards, but you realize you already know—the shards. They, and the crown they form, compel Sun in Shallows and her awakened brethren as much as they compel you.</p><p>Your suspicions are confirmed as Sun in Shallows delivers her message, a stream of images and emotions running like a tapestry through your minds:</p><p>Huge coral structures reach upward like claws from the edges of a crater in the ocean floor, creating the impression of an enormous flower in mid-bloom. You feel the presence of a shard there, but the vision is obscured by an inky swirl of fear and darkness. The swirl expands as you watch, an unnatural aura attaching to the shard, guarding it, and drawing the Lurkers in the area under its influence, turning their already clouded minds to its purpose. They swarm around the shard hundreds strong: a horde, gathering to protect and spread the ever-growing corruption.</p><p>You see Sun in Shallows leading a group of Lurkers on an ill-fated attack to unseat the source of the corruption and retake the shard. From the intense sorrow accompanying the vision, you don’t need to see the fight to know that Sun in Shallows was the only one to escape alive.</p><p>The Lurker’s vision fades from your mind, but you see the stakes quite clearly: the crown can never be reunited until you get that shard, but more than that, this source of evil is gathering more beneath the waves, and it will continue to attack you—to attack Frosthaven—to corrupt as many shards as it can. But what can you do against such might?</p><p>“A psychic blast.” A voice from behind startles you. You hadn’t realized Pinter Droman had followed you from The Crater, much less that he’d been privy to the Lurker’s bleak vision. The tinkerer continues, almost to himself. “Too many to fight, even with a hundred bathyspheres. Yes, yes, but with their psychic attunement... it’s possible we could take advantage of that...stun them, perhaps…” He starts pacing, speaking more and more quickly as he gets excited about his idea. “I’d need to study this Lurker, of course; run some tests. Maybe even get a better look at one of those shards and find a way to harness its psychic energy... It’ll take some time, but I’m sure I could come up with a device to do the trick!”</p><p>Your response is cut short by a wave of sorrow washing over you. You don’t think Sun in Shallows can understand the words, but the Lurker can clearly sense the tinkerer’s intent, and her distress is palpable. The prospect of using the coral shards—her symbols of hope—to do harm to her confused brethren fills her with despair. The intensity fades quickly, though, as you feel Sun in Shallows accept that this may be the only way to reunite the crown and save her people from whatever foul thing is taking them. You feel a release, a resignation, and now a vision of the crown floats in front of you, coming to rest in your hands. Sun in Shallows leaves the decision to you.</p><p>“Just to be clear,” Pinter warns, “we’ll detonate this device right on top of where the shard is located. If I do my job right, it should knock out all the Lurkers in the area, but I can’t guarantee there won’t be some collateral damage at the epicenter.” You nod in understanding.</p>",
+		"sectionLinks": "If you give Droman the order to prepare a psychic bomb, read [section] <strong>168.2</strong> now. Otherwise, read [section] <strong>94.4</strong> now."
 	},
 	"119.3": {
 		"title": "Random Scenario",
@@ -43,24 +55,24 @@
 		}
 	},
 	"120.5": {
-		"unlockedBy": { "section": { "id": "180.1" }},
 		"title": "Great Dallum",
+		"unlockedBy": { "section": { "id": "180.1" }},
 		"text": "Something is off here. This description of the Great Dallum, even accounting for mistaken observations, isn’t even close. This is an impostor! You raise the alarm and soon others in the crowd take notice. The impostor’s handlers start exchanging nervous glances, and it doesn’t take long before the crowd turns into a mob, grabbing back the offerings and driving the charlatans out of town.",
 		"rewards": { 
 			"text": "<p>Gain 2 morale.</p><p>Do not resolve an outpost event this week.</p>" 
 		}
 	},
 	"122.4": {
-		"unlockedBy": { "section": { "id": "180.1" }},
 		"title": "Great Dallum",
+		"unlockedBy": { "section": { "id": "180.1" }},
 		"text": "The Great Dallum accepts your generous gift, whispering words of kindness into your ear. It’s not perfectly applicable, but as a metaphor there really is something to what he says. Yes, you get it now... this has some very practical applications, really. This changes everything.",
 		"rewards": { 
 			"text": "<p>Lose any 3 collective resources.<br/>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
 		}
 	},
 	"135.1": {
-		"unlockedBy": { "scenario": { "id": "033" }},
 		"title": "Bathysphere Ready",
+		"unlockedBy": { "scenario": { "id": "033" }},
 		"text": "<p>Pinter Droman, the premiere tinkerer of Frosthaven, leads you to the large storehouse situated just behind his workshop. He collects himself for a moment, then throws open the doors with a flourish, announcing: “A bathysphere, my friends!”</p><p>What you see looks like a tiny, spherical prison. A glass-and-metal orb lies on a pallet in front of you, equipped with two crude propellers and a pair of clockwork arms. Inside it sit a number of rubber suits with glass fishbowl helmets. These suits are connected to the complicated machinery of the orb through tubes in their head and are meant to be deployed from the main bathysphere, “when more maneuverability is required,” Droman explains.</p><p>You’re not sure what to make of it all, but Pinter’s enthusiasm more than makes up for your reaction. He runs you through the machine’s functions, explaining how to adjust the internal environment, how to draw in air through a small outboard port and store it inside. All in all, it looks sturdy, but that does little to calm your nerves.</p><p>You pay the Tinkerer the rest of his fee, and shortly after, the bathysphere is mounted onto the ship. It’s time to set sail once again.</p>",
 		"rewards": { 
 			"scenarios": [{ "id": "042" }]
@@ -82,9 +94,18 @@
 		}
 
 	},
+	"168.2": {
+		"title": "Blast the Lurkers",
+		"unlockedBy": { "section": { "id": "114.2" }},
+		"text": "The Quatryl seems confident, and you trust his evaluation. You give him the go ahead to prepare the device as Sun in Shallows returns to the sea.",
+		"rewards": {
+			"text": "<p>Place map overlay sticker Z on the map in location Z (F2).</p><p>Do not resolve an outpost event this week.</p>",
+			"scenarios": [{ "id": "050" }]
+		}
+	},
 	"180.1": {
-		"unlockedBy": { "event": { "id": "SO-03" }},
 		"title": "Great Dallum",
+		"unlockedBy": { "event": { "id": "SO-03" }},
 		"text": "<p>Frosthaven is bubbling over with excitement. The streets are cleared, the feast prepared, and the citizenry has shown up in their best clothes to meet the Great Dallum, the most powerful seer the world has ever known.</p><p>He arrives right on time, stepping through the gate with a small entourage at his side, to cheering, music, and fanfare. The crowd bunches up around him and it’s some time before you can even get a look at anything more than his bald head. People offer numerous gifts: painted hides, fine woods, and, of course, gold. Each is graciously accepted then spirited away by the Great Dallum’s handlers into a wagon for transport.</p><p>When it’s finally your turn he sets a soft hand on your shoulder and looks at you with piercing green eyes. “What’s your name, mercenary?” His booming voice carries and he speaks at a quick clip, as though he’s rushing to get through his duties. Before you have a chance to answer, he asks if there’s a donation you’d like to make for his blessing of sight.</p>",
 		"sectionLinks": "If you make a donation to the Great Dallum, read [section] <strong>122.4</strong> now. Otherwise, read [section] <strong>120.5</strong> now."
 	},

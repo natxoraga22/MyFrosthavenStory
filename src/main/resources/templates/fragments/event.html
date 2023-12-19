@@ -34,12 +34,14 @@
 			[(*{text})]
 		</div>
 
-		<!-- Option -->
-		<th:block th:if="*{chosenOption}" th:with="chosenOption = *{options['__*{chosenOption}__']}">
-			<th:block th:if="${chosenOption}">
-				<th:block th:replace="~{:: option(${chosenOption})}"></th:block>
+		<!-- Options -->
+		<div th:if="*{!#lists.isEmpty(chosenOptions)}" class="options">
+			<th:block th:each="chosenOptionId,iterStat : *{chosenOptions}" th:with="chosenOption = *{options['__${chosenOptionId}__']}">
+				<th:block th:if="${chosenOption}">
+					<th:block th:replace="~{:: option(${chosenOption},${iterStat.first})}"></th:block>
+				</th:block>
 			</th:block>
-		</th:block>
+		</div>
 
 		<!-- Outpost attack -->
 		<th:block th:if="*{outpostAttack}">
@@ -57,9 +59,9 @@
 	<!-- ------ -->
 	<!-- OPTION -->
 	<!-- ------ -->
-	<div th:fragment="option(option)" th:object="${option}" class="option">
+	<div th:fragment="option(option,showTrigger)" th:object="${option}" class="option">
 		<!-- Trigger -->
-		<div class="trigger">
+		<div th:if="${showTrigger}" class="trigger">
 			<i class="fa-solid fa-angles-right fa-sm"></i>
 			<strong>[[#{event.option}]]<span th:if="*{!#strings.isEmpty(id)}"> [[*{id}]]</span>:</strong>
 			[(*{trigger})]

@@ -1,4 +1,48 @@
 {
+	"B-02": {
+		"text": "<p>\"Cap'n? We've spotted her, upwind. \"A deckhand delivers the report to Captain Doghogger. You watch a flash of ambition flicker across the captain's eyes, and he turns to a shipmate in the crow's nest.</p><p>\"Keep your eyes on that starfish! We won't let her get away this time! Ready the cannons! Every available hand to an oar!\" He turns and nearly bumps into you, a bit taken aback. \"No time to explain—there's a starfish I've been hunting for two decades. She's as big as a freighter, and today's the day she feels my harpoon! Finally, the revenge of the _____________________!\" He kisses a locket on a gold chain around his neck. \"Agatha, it's time.\"</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "There's nothing to shoot at unless you catch it: grab an oar.",
+				"requirement": "[trait] STRONG",
+				"text": "You pull with concerted effort in time with the rest of the crew. The Wind mercilessly pushes you back, but as you feel the fatigue settling into your arms, a voice calls out from the crow's nest: \"She's there! we're pulling up on her!\"",
+				"rewards": {
+					"text": "Read outcome B and add +2 [attack]."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "There's nothing to shoot at unless you catch it: grab an oar.",
+				"requirement": "[not] [trait] STRONG",
+				"text": "You pull with concerted effort in time with the rest of the crew. The Wind mercilessly pushes you back, but as you feel the fatigue settling into your arms, a voice calls out from the crow's nest: \"She's there! we're pulling up on her!\"",
+				"rewards": {
+					"text": "Read outcome B and add +1 [attack]."
+				}
+			},
+			"B": {
+				"trigger": "Combat is your specialty: ready the cannons.",
+				"text": "Looming ahead is a starfish bigger than any you've ever seen. Its arms drift in and out of the water, propelling it forward. It pays you no mind, but the Captain grits his teeth and looks to you. \"Fire!\"",
+				"rewards": {
+					"text": "Select one character to perform [attack] 5, including a draw from their attack modifier deck. Ignore any effects that don't modify the value of the attack."
+				}
+			},
+			"B1": {
+				"requirement": "RESULT > 6",
+				"text": "You sink the harpoon dead center in the beast, who howls a haunting scream, then sinks below the waves. The Captain lets a tear run openly down his face. \"Thank you. Finally, peace for my love.\"",
+				"rewards": {
+					"text": "All characters start the next scenario with [bless] x2."
+				}
+			},
+			"B2": {
+				"requirement": "RESULT <= 6",
+				"text": "The harpoon falls short of the massive starfish, and it continues on its way. The Captain dejectedly retires to his cabin, and you don't see him again for the remainder of the journey.",
+				"rewards": {
+					"text": "Lose 2 morale."
+				}
+			}
+		}
+	},
 	"B-03": {
 		"text": "<p>It's a cold but gorgeous day for sailing. You're making excellent time, the wind is at your back, and with any luck, you'll arrive to your destination before sunset. Your gaze drifts off the side of the boat, then you spot it: a Lurker keeping perfect pace with your ship.</p><p>It breaches the surface of the water, flipping in the air before splashing back down. It locks eyes with you and you can almost feel its thoughts... it wants to race. Can that be right? Yes—yes, you're sure of it, it wants to race your boat.</p>",
 		"options": {

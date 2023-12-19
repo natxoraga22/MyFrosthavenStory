@@ -126,7 +126,7 @@ public class CampaignController {
 		Event event = frosthaven.getEvent(storyItemEvent.getId());
 		if (event != null) {
 			// Set chosen option
-			event.setChosenOption(storyItemEvent.getChosenOption());
+			event.setChosenOptions(storyItemEvent.getChosenOptions());
 			// Set section
 			if (storyItemEvent.getSection() != null) {
 				Section section = frosthaven.getSection(storyItemEvent.getSection().getId());

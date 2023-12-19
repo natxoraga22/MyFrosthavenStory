@@ -27,5 +27,12 @@
 		"race": "Lurker",
 		"background": "<p>Lurkers, as they are called by those who dwell on the land, once reigned over a vast, underwater empire, but it fell to ruin when the source of their power—a coral crown—was destroyed and the shards scattered by the currents of the Misty Sea. The Lurkers search endlessly for the pieces of this crown, haunted by an overwhelming sense of loss. They are driven to reassemble the crown, even if they no longer understand why. The currents have brought these shards to the north, and, close to their source of power, the Lurkers have begun to grow in strength once again.</p><p>Like the ebb and flow of the Lurkers' power throughout history, so too do the tides shift. There is a cycle to all things, and this is particularly exemplified in the Crashing Tides, guardians and protectors of their society and the natural order of things. They build their power over time, and then use it to crash against their foes in a wave of destruction. The waves must recede, of course, but then power will grow once again.</p>",
 		"retirement": { "id": "54.2" }
+	},
+	"trapper": {
+		"id": "trapper",
+		"name": "Trapper",
+		"race": "Vermling",
+		"background": "<p>A Vermling's small stature makes the cold climate of the north particularly inhospitable. But when forced to choose between the harsh elements and the constant harassment of human settlers in the south, some clans have decided to risk the snow and ice. Many have found homes near Frosthaven, mostly in the Radiant Forest, which is always unseasonably warm. Malevolent forces, however, have begun to push the Vermlings out of this forest as well, once again leaving them scrambling for survival.</p><p>A major part of survival is hunting for food and hides to keep warm, and Trappers have always been good at that, giving them a strong edge in the unforgiving wilds. They have grown quite adept at not only laying a variety of snares, but also luring their prey into the deadly traps. Quick on their feet and with jaws of metal never in short supply, Trappers are prepared to bring down any quarry.</p>",
+		"retirement": { "id": "56.5" }
 	}
 }

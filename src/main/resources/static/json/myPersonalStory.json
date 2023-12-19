@@ -1,7 +1,7 @@
 {
 	"party": [
 		{ "id": "blinkblade", "personalQuest": { "id": "04" }}, 
-		{ "id": "deathwalker" }
+		{ "id": "deathwalker", "personalQuest": { "id": "10" } }
 	],
 	"story": [
 		{ "scenario": { "id": "000" }},
@@ -132,8 +132,18 @@
 				"upgrade": [{ "id": "loggingcamp", "level": 2 }]
 			}
 		},
+		{ "event": { "id": "B-02", "chosenOptions": [ "A1", "B", "B1" ]}},
 		{ "scenario": { "id": "049" }},
 		{ "scenario": { "id": "053" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-17", "chosenOption": "B" },
+				"levelUps": [{ "id": "crashingtide", "level": 5 }],
+				"retirements": [{ "id": "deathwalker", "additionalPersonalQuest": { "id": "20" }}],
+				"newMembers": [{ "id": "trapper" }],
+				"build": [{ "id": "townhall", "level": 1 }]
+			}
+		},
 		{ "scenario": { "id": "008" }},
 		{ "scenario": { "id": "015" }},
 		{ "scenario": { "id": "023" }},

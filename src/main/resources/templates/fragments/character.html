@@ -45,7 +45,9 @@
 		</h2>
 
 		<!-- Personal quests -->
-		<th:block th:replace="~{:: personalQuest(*{personalQuest})}"></th:block>
+		<th:block th:if="*{personalQuest}">
+			<th:block th:replace="~{:: personalQuest(*{personalQuest})}"></th:block>
+		</th:block>
 		<th:block th:if="*{additionalPersonalQuest}">
 			<th:block th:replace="~{:: personalQuest(*{additionalPersonalQuest})}"></th:block>
 		</th:block>

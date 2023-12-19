@@ -1,5 +1,7 @@
 package txraga.mystory.frosthaven.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,23 +28,23 @@ public class EventController {
 
 	@GetMapping({"", "/{eventId}"})
 	public ModelAndView event(Model model, @PathVariable(required = false) String eventId, 
-	                                       @RequestParam(required = false) String chosenOption,
+	                                       @RequestParam(required = false) List<String> chosenOptions,
 	                                       @RequestParam(required = false) String sectionId) {
-		log.entry(eventId, chosenOption, sectionId);
+		log.entry(eventId, chosenOptions, sectionId);
 		model.addAttribute("page", Page.EVENT);
 		model.addAttribute("eventId", eventId);
-		model.addAttribute("chosenOption", chosenOption);
+		model.addAttribute("chosenOptions", chosenOptions);
 		model.addAttribute("sectionId", sectionId);
-		model.addAttribute("event", getEvent(eventId, chosenOption, sectionId));
+		model.addAttribute("event", getEvent(eventId, chosenOptions, sectionId));
 		return log.exit(new ModelAndView("event"));
 	}
 
 	@PostMapping("")
 	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
-	                                           @RequestParam String chosenOption,
+	                                           @RequestParam List<String> chosenOptions,
 	                                           @RequestParam String sectionId) {
-		log.entry(eventId, chosenOption, sectionId);
-		String redirectUrl = "/event/" + eventId + "?chosenOption=" + chosenOption + "&sectionId=" + sectionId;
+		log.entry(eventId, chosenOptions, sectionId);
+		String redirectUrl = "/event/" + eventId + "?chosenOptions=" + chosenOptions + "&sectionId=" + sectionId;
 		return log.exit(new ModelAndView("redirect:" + redirectUrl));
 	}
 
@@ -51,12 +53,12 @@ public class EventController {
 	/* EVENT */
 	/* ----- */
 
-	private Event getEvent(String id, String chosenOption, String sectionId) {
-		log.entry(id, chosenOption, sectionId);
+	private Event getEvent(String id, List<String> chosenOptions, String sectionId) {
+		log.entry(id, chosenOptions, sectionId);
 		Event event = frosthaven.getEvent(id);
 		if (event != null) {
 			// Chosen option
-			if (chosenOption != null && !chosenOption.isBlank()) event.setChosenOption(chosenOption);
+			if (chosenOptions != null && !chosenOptions.isEmpty()) event.setChosenOptions(chosenOptions);
 			// Section
 			if (sectionId != null && !sectionId.isBlank()) {
 				Section section = frosthaven.getSection(sectionId);

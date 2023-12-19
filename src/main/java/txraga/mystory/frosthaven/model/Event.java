@@ -1,7 +1,11 @@
 package txraga.mystory.frosthaven.model;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +26,9 @@ public class Event extends StoryObject {
 	private Map<String,Option> options = Map.of();
 	private OutpostAttack outpostAttack;
 	
-	private String chosenOption;
+	@JsonAlias("chosenOption")
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+	@ToString.Include private List<String> chosenOptions;
 
 	// Some events unlock a random side scenario (meaning a section is read)
 	private Section section;

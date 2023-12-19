@@ -12,5 +12,11 @@
 		"requirements": "During eigth different outpost phases, read a person's name in an event or section.",
 		"rewards": { "envelope": "Open [envelope] 85", "building": "Unlock <strong>Carpenter</strong>" },
 		"alternateRewards": { "envelope": "Open [envelope] 21", "building": "Unlock <strong>Inn</strong>" }
+	},
+	"10": {
+		"title": ""
+	},
+	"20": {
+		"title": ""
 	}
 }

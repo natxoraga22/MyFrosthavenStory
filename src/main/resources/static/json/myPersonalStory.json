@@ -144,8 +144,25 @@
 				"build": [{ "id": "townhall", "level": 1 }]
 			}
 		},
+		{ "event": { "id": "WR-08", "chosenOption": "A" }},
 		{ "scenario": { "id": "008" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-10", "chosenOption": "B", "section": { "id": "158.3" }},
+				"build": [{ "id": "garden", "level": 1 }]
+			}
+		},
+		{ "event": { "id": "WR-06", "chosenOption": "A" }},
 		{ "scenario": { "id": "015" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "158.3" }],
+				"outpostEvent": { "id": "WO-15", "chosenOption": "B" },
+				"levelUps": [{ "id": "crashingtide", "level": 6 }],
+				"upgrade": [{ "id": "miningcamp", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "WR-19", "chosenOption": "A" }},
 		{ "scenario": { "id": "023" }},
 		{ "scenario": { "id": "024" }},
 		{ "scenario": { "id": "034" }},

@@ -1,5 +1,32 @@
 {
 	"id": "053",
 	"name": "Underwater Throne",
-	"questLine": "Lurker"
+	"questLine": "Lurker",
+	"coordinates": "E2",
+	"requirement": { "transport": "boat" },
+	"unlockedBy": { "scenario": { "id": "049" }},
+	"complexity": 2,
+	"location": "Biting Sea",
+	"goals": "The scenario is complete when the Seeker of the Abyss is dead. At the end of that round, read [section] <strong>107.4</strong>.",
+	"effects": "Each character adds three [minus1] cards to their attack modifier deck.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>You pray for stealth, that somehow no one will notice your vessel as it drifts toward the Lurker base. Down here though, so deep beneath the surface of the Biting Sea, you doubt any god is listening. So you move slowly. You ease the thrust down and propel yourself at a crawl, inching toward the large shard waiting just a short distance away.</p><p>The underwater structure is odd. It’s built in the center of a mammoth crater and surrounded on all sides by towering coral teeth, but it’s what’s just past those teeth that has you so unnerved. Even more Lurkers have shown up to hunt for you. If this goes wrong, there will be no escape.</p><p>You manage to make it inside the base without being detected, and now the shard is so close you can almost touch it. It’s set in a place of reverence on an open pedestal, and for a moment, you think you might just be able to take the shard without having to fight for it. But you should know better than that.</p><p>A huge, barnacle-encrusted Lurker emerges suddenly from a copse of nearby shadows. The colors of his shell shift from camouflage to intimidation, and he releases a shrill psychic cry. The closest Lurkers turn, answering the call of this clearly dominant presence. They skitter closer with mad speed, driven only by a desire to crush and kill.</p><p>These creatures have been unmoored. Far from the restrained crustaceans you encountered on the rocky shoals, these Lurkers have been taken by a baser, animal madness. Their claws snap at the empty water and their eyes are empty of higher reason. They have been reduced, detached from their former selves, and the one in charge seems to be driving this fever. He stands astride the plinths: a monstrous crab like something out of paranoid dream. His shell glows with an eerie bioluminescence and his eyes are empty like bottomless wells.</p><p>They are coming now, and more will arrive soon. You need to cut through these creatures, subdue the leader, and escape with the shard before the horde can mobilize and overwhelm you.</p>",
+			"specialRules": "<p>Each non-Lurker character gains [curse] twice (this is not a scenario effect).</p><p>At the start of each even round, spawn one Lurker Soldier at [a] and one Lurker Mindsnipper at [b]. These are normal for two characters, Lurker Mindsnippers are elite for three characters, or both are elite for four characters.</p>",
+			"bossSpecials": {
+				"1": "The Seeker of the Abyss performs:<br/>[move] +0<br/>[attack] -2, [target] 2, all targets must lose one card from their hand or discard pile (if able).",
+				"2": "The Seeker of the Abyss creates one [immobilize] trap in any adjacent empty hex closest to an enemy. Then all allies add +1 [attack] to all their attacks this round."
+			}
+		},
+		"107.4": {
+			"trigger": "The Seeker of the Abyss is dead",
+			"conclusion": "<p>What lured these creatures away from their former life, from the glory that you saw in your first vision, is a confounding mystery. But you hope that when this is all over, they will at least have peace.</p><p>The head Lurker, its shell cracked and its claws hanging lifeless by its side, looks up at you. The inky madness has departed and a new clarity flickers in its eyes. Its breath is erratic, but it speaks to you psychically, images and feelings echoing gently in your mind. The corpse of a giant lies on the ocean floor, life blooming all around it as thousands of creatures thrive on the bounty. An oasis of paradise in the endless abyss... it is the Lurker’s “name”—Fallen Whale.</p><p>The image-name fades in an instant and you see the shattered crown, its shards orbiting each other freely, drawing ever closer together. The vision comes with a rush of hope, then sorrow. You see the crown as it was, complete and dazzling, a flash of glory and warmth… but then the vision fades as the Lurker known as Fallen Whale grows still. All is silent for a brief moment, then you grab the shard and flee, one step closer to reuniting the shards into the crown that was lost so long ago.</p>",
+			"rewards": {
+				"text": "Gain 2 [checkmark] each.<br/>Gain “Coral Shard” campaign sticker.",
+				"scenarios": [{ "id": "060" }]
+			}
+		}
+	},
+	"path": ["main", "107.4"]
 }

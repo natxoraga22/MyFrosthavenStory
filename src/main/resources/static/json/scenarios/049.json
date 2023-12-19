@@ -23,7 +23,7 @@
 		},
 		"16.3": {
 			"trigger": "Any door [two] is opened",
-			"specialRules": "<p>Open all doors [2].</p><p>When ice pillar [b] is destroyed, the hex it occupied becomes an escape hex. When any character escapes while adjacent to the bathysphere, the bathysphere also escapes, removing it from the map.</p>"
+			"specialRules": "<p>Open all doors [two].</p><p>When ice pillar [b] is destroyed, the hex it occupied becomes an escape hex. When any character escapes while adjacent to the bathysphere, the bathysphere also escapes, removing it from the map.</p>"
 		},
 		"97.2": {
 			"trigger": "All characters and the bathysphere have escaped",

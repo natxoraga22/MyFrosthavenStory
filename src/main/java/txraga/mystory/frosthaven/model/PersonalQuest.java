@@ -25,8 +25,8 @@ public class PersonalQuest {
 	}
 
 	public void replaceIcons() {
-		this.rewards.replaceIcons();
-		this.alternateRewards.replaceIcons();
+		if (this.rewards != null) this.rewards.replaceIcons();
+		if (this.alternateRewards != null) this.alternateRewards.replaceIcons();
 	}
 
 

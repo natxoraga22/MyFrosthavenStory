@@ -17,7 +17,7 @@ import lombok.ToString;
 public class Building {
 	
 	private String id;
-	private int number;
+	private String number;
 	private String name;
 	private Map<String,Level> levels = Map.of();
 

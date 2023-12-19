@@ -203,6 +203,9 @@
 	"SO-40": {
 		"unlockedBy": { "event": { "id": "SO-01" }}
 	},
+	"SO-41": {
+		"unlockedBy": { "event": { "id": "WO-17" }}
+	},
 	"SO-42": {
 		"unlockedBy": { "event": { "id": "SR-02" }}
 	},

@@ -84,6 +84,32 @@
 			}
 		}
 	},
+	"tradingpost": {
+		"number": "37",
+		"name": "Trading Post",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "25.2"
+				}
+			},
+			"2": {
+				"builtSection": {
+					"id": "12.4"
+				}
+			},
+			"3": {
+				"builtSection": {
+					"id": "38.3"
+				}
+			},
+			"4": {
+				"builtSection": {
+					"id": "196.2"
+				}
+			}
+		}
+	},
 	"workshop": {
 		"number": "84",
 		"name": "Workshop",
@@ -153,6 +179,19 @@
 				}
 			},
 			"2": {}
+		}
+	},
+	"townhall": {
+		"number": "90",
+		"name": "Town Hall",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "189.1"
+				}
+			},
+			"2": {},
+			"3": {}
 		}
 	},
 	"barracks": {

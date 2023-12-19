@@ -35,10 +35,10 @@ public class Frosthaven {
 	private void init() {
 		log.entry();
 		characters = fhService.findAllCharacters();
-		personalQuests = fhService.findAllPersonalQuests();
 		scenarios = fhService.findAllScenarios();
 		events = fhService.findAllEvents(scenarios);
 		buildings = fhService.findAllBuildings();
+		personalQuests = fhService.findAllPersonalQuests(buildings);
 		sections = fhService.findAllSections(scenarios);
 		log.exit();
 	}

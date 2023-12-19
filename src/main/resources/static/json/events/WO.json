@@ -27,6 +27,28 @@
 			}
 		}
 	},
+	"WO-17": {
+		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won't board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it's up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain's log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship's entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
+		"options": {
+			"A": {
+				"trigger": "Open the crate.",
+				"text": "Against the warnings of the superstitious dock workers, you carefully pry open the crate. The interior is lacquered and totally clean, as though someone had soaped and scrubbed the inside with a fine brush. A small, cracked egg sits at the center. You're not sure what it would have hatched into, but it's clear this one didn't survive.",
+				"rewards": {
+					"text": "Add [section] 115.1 to the calendar in one week."
+				}
+			},
+			"B": {
+				"trigger": "Set fire to the ship.",
+				"text": "<p>You do not know what occurred here, but it is clear what needs to be done. You toss a burning rag onto the deck from the safety of the dock and push the ship back out to sea. It burns as the winds carry it into the bay, eventually disintegrating below the waves.</p><p>The dockworkers thank you for handling the matter, and there's a general air of relief.</p>",
+				"rewards": {
+					"text": "Gain 2 morale.",
+					"events": {
+						"SO": [{ "id": "SO-41" }]
+					}
+				}
+			}
+		}
+	},
 	"WO-19": {
 		"text": "<p>\"Mercenaries! I require you! In the name of art!\"</p><p>A Savvas stands at your front door, a long black scarf wrapped around its neck.</p><p>\"I am Eros, purveyor of culture and director of theater. I am putting on a play, tentatively titled The Depths of Anguish, reenacting the most noble of sacrifices on our shores at the hands of the Lurkers. It will be my magnum opus.\" It pauses, dramatically.</p><p>You try to explain that while your services are for hire, those services don't include play-acting. It's more the \"smashing\" type of services, really.</p><p>\"What? No, never—\" It looks a bit stunned that you'd even consider yourselves actors. \"No, I need you to stand guard in the ocean. This will be set on location at the shore, and I can't have an encore of the subject matter. I'll want you staged in the water, out of sight, just in case Lurkers try to write a sequel.\"</p>",
 		"options": {

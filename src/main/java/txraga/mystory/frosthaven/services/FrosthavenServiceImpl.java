@@ -50,9 +50,16 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	}
 
 	@Override
-	public Map<String,PersonalQuest> findAllPersonalQuests() {
+	public Map<String,PersonalQuest> findAllPersonalQuests(Map<String,Building> buildings) {
 		log.entry();
-		return log.exit(personalQuestsFile.findAllPersonalQuestsAsMap());
+		Map<String,PersonalQuest> personalQuests = personalQuestsFile.findAllPersonalQuestsAsMap();
+		for (PersonalQuest personalQuest : personalQuests.values()) {
+			Building unlockedBuilding = buildings.get(personalQuest.getUnlockedBuilding().getId());
+			if (unlockedBuilding != null) personalQuest.setUnlockedBuilding(unlockedBuilding);
+			Building altUnlockedBuilding = buildings.get(personalQuest.getAltUnlockedBuilding().getId());
+			if (altUnlockedBuilding != null) personalQuest.setAltUnlockedBuilding(altUnlockedBuilding);
+		}
+		return log.exit(personalQuests);
 	}
 
 	@Override

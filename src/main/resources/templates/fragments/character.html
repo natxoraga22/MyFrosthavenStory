@@ -76,13 +76,15 @@
 		<hr>
 
 		<!-- Requirements -->
-		<div class="requirements">[[*{requirements}]]</div>
+		<div class="requirements">[(*{requirements})]</div>
 
 		<!-- Rewards -->
-		<div th:if="*{rewards}" class="card fhCard pqRewards">
+		<div class="card fhCard pqRewards">
 			<div class="card-header">[[#{section.rewards}]]</div>
 			<div class="card-body">
-				[(*{rewards.envelope})] <i class="fa-solid fa-right-long mx-1"></i> [(*{rewards.building})]
+				[[#{personalQuest.openEnvelope}]] <img class="icon envelope" th:src="@{/img/icons/envelope.png}"> [[*{unlockedBuilding.number}]]
+				<i class="fa-solid fa-right-long mx-1"></i>
+				[[#{personalQuest.unlockBuilding}]] <strong>[[*{unlockedBuilding.name}]]</strong>
 			</div>
 		</div>
 	</div>

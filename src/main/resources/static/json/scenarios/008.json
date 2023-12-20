@@ -17,11 +17,22 @@
 		},
 		"21.1": {
 			"trigger": "Door [one] is opened",
-			"text": ""
+			"text": "Just when you think you’ve outrun them, the howling starts again. You glance behind you to see the hounds emerging from the shadows of the forest – shaggy silhouettes coalescing into fur and fang. There are too many to fight, so your only choice is to keep running.",
+			"specialRules": "At the start of each round, spawn one Hound at any empty starting hex. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.",
+			"sectionLinks": "When door [two] is opened, read [section] <strong>12.1</strong>."
+		},
+		"12.1": {
+			"trigger": "Door [two] is opened",
+			"specialRules": "<p>Each [a] is an escape hex.</p><p>Continue spawning Hounds as described in [section] <strong>21.1</strong>.</p>"
 		},
 		"54.4": {
-
+			"trigger": "All characters have escaped",
+			"conclusion": "<p>The pack is far behind you now, their snarls and barks fading far into the distance, and so, finally, you let yourselves slow to a march. The cold, for once, comes as a reprieve. You let it wash over and steal away the heat of battle, evaporating your sweat and taking the sting from your wounds.</p><p>For a long time after that, you march. The valley extends onward into the icy expanse of the north, finally opening into a vast field crowded with towering icy spikes. It looks almost like another forest, huge frozen pillars all gathered together, but these are no kind of tree you’ve seen. They are raw, frozen obelisks: enormous ice spears shot forth from the ground like huge monuments to some forgotten god.</p><p>You doubt this is what Satha was imagining when she sent you this way, but these things can’t be ignored. You scan the horizon and notice that deep in the expanse, one structure stands apart. Larger and darker in color than the others, it’s less a spike than a spire, and it reigns over the landscape like a lord’s keep.</p><p>You have the choice: you can either march to the massive spire <span class=\"scenarioNumber\">(15)</span> or opt for a closer target <span class=\"scenarioNumber\">(16)</span>. You do notice one not too distant spike that does look a little curious. It is shorter than the rest, but also wider. It might be worth a cursory investigation before venturing too deep into this unknown field.</p>",
+			"rewards": {
+				"text": "Gain 1 collective [lumber] and 2 collective [hide].<br/>Place map overlay sticker X on the map in location X (C7).",
+				"scenarios": [{ "id": "015" }, { "id": "016" }]
+			}
 		}
 	},
-	"path": ["main", "21.1", "54.4"]
+	"path": ["main", "21.1", "12.1", "54.4"]
 }

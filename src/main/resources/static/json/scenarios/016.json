@@ -1,6 +1,6 @@
 {
-	"id": "015",
-	"name": "Ancient Spire",
+	"id": "016",
+	"name": "Derelict Elevator",
 	"questLine": "Unfettered",
 	"unlockedBy": { "scenario": { "id": "008" }}
 }

@@ -148,7 +148,7 @@
 		{ "scenario": { "id": "008" }},
 		{
 			"outpostPhase": {
-				"outpostEvent": { "id": "WO-10", "chosenOption": "B", "section": { "id": "158.3" }},
+				"outpostEvent": { "id": "WO-10", "chosenOption": "B1" },
 				"build": [{ "id": "garden", "level": 1 }]
 			}
 		},

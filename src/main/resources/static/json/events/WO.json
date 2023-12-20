@@ -27,6 +27,55 @@
 			}
 		}
 	},
+	"WO-10": {
+		"text": "<p>You step down into The Crater, Frosthaven's burned-out drinking spot, for an evening's relaxation. Hopes of a quiet evening are ruined by Xain, a local who is always \"temporarily\" down on his luck, walking off dejected from one of the tables. As soon as he spots you he brightens up and straightens himself out.</p><p>\"Hey! Friends! Just the folks I was looking to see. This is perfect timing—incredible timing—I've got something you're going to want to hear.\" You doubt it, but Xain nods emphatically.</p><p>\"I've got a new business opportunity. I've worked it out with a friend of mine—and this is real hush-hush—but Lurkers are apparently crazy about polar bear meat. I've got a supply chain lined up like you wouldn't believe: cash goes to the Algox, they get me the bear-meat, then I sell those juicy steaks to the Lurkers for valuable trinkets from the ocean floor.\" He pauses to let the brilliance sink in.</p><p>\"So, the problem is I need to front-load a bit of the funding here. The more money, the more steaks. I'm guaranteeing massive returns on your investment. Whaddaya say?\"</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Support Xain and invest in the scheme.",
+				"requirement": "LOSE 25 COLLECTIVE GOLD",
+				"text": "Xain's eyes widen, but he quickly gets it under control. \"Perfect, that's exactly how much I need to float the first shipment. I'll find you next week to give you your share of the proceeds!\"",
+				"rewards": {
+					"text": "Add [section_68.1] OR [section_131.1] to the calendar in one week."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Support Xain and invest in the scheme.",
+				"requirement": "LOSE 15 COLLECTIVE GOLD",
+				"text": "\"That is precisely how much I need to float the first shipment! I'll find you next week to give you your share of the proceeds, you won't regret this!\"",
+				"rewards": {
+					"text": "Add [section_155.2] OR [section_158.3] to the calendar in one week."
+				}
+			},
+			"A3": {
+				"id": "A",
+				"trigger": "Support Xain and invest in the scheme.",
+				"requirement": "[not] LOSE 15 COLLECTIVE GOLD",
+				"rewards": {
+					"text": "Read outcome B."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Try to convince Xain to make you a partner without a monetary investment.",
+				"requirement": "[trait] PERSUASIVE or RESOURCEFUL",
+				"text": "You talk up your business acumen and note how your hands-on understanding of both the Algox and the Lurkers make you uniquely suited to being a business partner. Xain looks doubtful, but eventually you bring him around by reminding him that you've got a good enough reputation around Frosthaven to convince some other people to invest—so long as he gives you a cut.",
+				"rewards": {
+					"text": "Add [section_155.2] OR [section_158.3] to the calendar in one week."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Try to convince Xain to make you a partner without a monetary investment.",
+				"requirement": "[not] [trait] PERSUASIVE and [not] [trait] RESOURCEFUL",
+				"text": "Xain shakes his head, \"There are plenty of other people who are willing to be a patron of genius.\" He spots another group coming through the door. \"Hey! Friends! Just the folks I was looking to see!\"</p>",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"WO-17": {
 		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won't board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it's up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain's log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship's entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
 		"options": {

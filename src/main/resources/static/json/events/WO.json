@@ -76,6 +76,25 @@
 			}
 		}
 	},
+	"WO-15": {
+		"text": "<p>Harrower Geminates are borne from a schism in the Harrower. That internal conflict manifests itself outwardly as two forms competing for control. Sitting across the table from you is a Harrower who became a Geminate just moments ago under interrogation for murder—half of the being rejected the other half for the crime they committed. A Geminate can be confused for weeks—or even permanently—following a split, and Mayor Satha has requested your assistance in getting a confession. Problem is, they've already confessed... sort of.</p><p>The left portion of the Harrower says: \"I am the murderer.\" The right portion of the Harrower says: \"I did not kill him.\"</p><p>You're about to lock them both up when you hear a cough from the corner of the room. An Aesther, translucent except for an odd hunting cap, speaks up.</p><p>\"Oh, don't mind me. Just observing today. Answer's quite simple. One of them and only one is definitely the murderer. Would it help if I told you at least one of these two are lying?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Arrest the left portion of the Harrower.",
+				"text": "<p>You summon the guards to arrest the left portion of the Harrower. The Aesther shakes his head. \"No no, if either of them are lying, they both must be lying—otherwise they've both confessed, and we know only one side is at fault. That means the portion that claims they didn't kill him actually did do the dirty deed, and the left portion that claims to be the murderer is actually just confused.\"</p><p>The odd Aesther in the hunting cap disappears a moment later. The guards discuss it among themselves and agree they should actually arrest the right portion of the Harrower. They thank you for your time, even if you didn't crack the case yourself.</p>",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B": {
+				"trigger": "Arrest the right portion of the Harrower.",
+				"text": "<p>You realize that if one of them is lying, they both must be lying. That means the right portion of the Harrower is the half being rejected for their murderous drives. You summon the guards accordingly.</p><p>The Aesther tips his hunting cap approvingly. \"Another mystery solved with the help of Detective Elsewhere! I'm sure they'll be more complex in the future. Of course, the real trick will be separating the two, but I'll leave you to it.\" With that, he steps into a rift and is gone.</p>",
+				"rewards": {
+					"text": "Gain 2 morale."
+				}
+			}
+		}
+	},
 	"WO-17": {
 		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won't board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it's up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain's log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship's entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
 		"options": {

@@ -1,5 +1,6 @@
 {
 	"id": "024",
 	"name": "Upper Spire",
-	"questLine": "Unfettered"
+	"questLine": "Unfettered",
+	"unlockedBy": { "scenario": { "id": "015" }}
 }

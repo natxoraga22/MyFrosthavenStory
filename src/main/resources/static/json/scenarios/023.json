@@ -1,5 +1,6 @@
 {
 	"id": "023",
 	"name": "Spire Basement",
-	"questLine": "Unfettered"
+	"questLine": "Unfettered",
+	"unlockedBy": { "scenario": { "id": "015" }}
 }

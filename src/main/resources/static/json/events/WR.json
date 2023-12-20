@@ -90,5 +90,35 @@
 				}
 			}
 		}
+	},
+	"WR-19": {
+		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>\"Thank you!\" A stocky Quatryl woman crawls out of the hatch. \"My aeronautical hit some rough clouds, and I couldn't blow my emergency hatch. Been a while... I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!\" She looks around. \"Was worried I was being rescued by a bunch of Lurkers. I'm strictly opposed to being a snack.\"</p><p>She pulls a device from her pocket and scans the horizon. \"It's actually a decent hour to get back into the sky... could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?\" She gestures into the confined space of the aeronautical.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Help her dig out the remainder and set the aeronautical back into the air without you.",
+				"requirement": "[trait] STRONG",
+				"text": "<p>The Quatryl waves her thanks and seals the hatch as you dig out the last of the aeronautical. A burst of flame erupts from the top of the craft, inflating the red canvas balloon. Flapping metal wings unfurl and it vanishes majestically into the distance.</p><p>A few minutes later you think you hear a phantom ringing of a bell. Probably nothing.</p>",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Help her dig out the remainder and set the aeronautical back into the air without you.",
+				"requirement": "[not] [trait] STRONG",
+				"text": "You eventually pry the aeronautical free, but the effort takes its toll. By the time the Quatryl seals the hatch for takeoff the sun is setting.",
+				"rewards": {
+					"text": "All characters start the next scenario discarding one card."
+				}
+			},
+			"B": {
+				"trigger": "Take her up on the lift—what's the worst that could happen?",
+				"text": "You dig out the aeronautical and cram into the restricted interior. The Quatryl just barely seals the hatch with you all inside and struggles to start up the machine with the extra weight. It's claustrophobic, but after it gets airborne much of the terror subsides. The descent is violent but you arrive in one piece closer to your destination.",
+				"rewards": {
+					"text": "All characters without [trait] QUATRYL or VERMLING start the next scenario with [impair]."
+				}
+			}
+		}
 	}
 }

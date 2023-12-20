@@ -107,7 +107,12 @@
 
 	},
 	"158.3": {
-		"unlockedBy": { "event": { "id": "WO-10" }}
+		"title": "Xain's Gambit",
+		"unlockedBy": { "event": { "id": "WO-10" }},
+		"text": "<p>Sure enough, Lurkers show extreme interest in polar bear meat. The proposition spreads by word of claw and Xain finds you on the street to deliver your gains, minus his fee.</p><p>“What did I tell you? Lurkers can’t get enough of that fatty polar bear steak!” A realization crosses the Orchid’s face. “I wonder if I can get the Algox interested in bottled seawater somehow...”</p>",
+		"rewards": {
+			"text": "Gain 30 collective gold."
+		}
 	},
 	"168.2": {
 		"title": "Blast the Lurkers",

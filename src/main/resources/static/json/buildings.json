@@ -6,7 +6,12 @@
 			"1": {},
 			"2": {
 				"builtSection": {
-					"id": "49.2"
+					"id": "49.2",
+					"title": "Mining Camp Upgraded",
+					"text": "<p>With the mining camp expanded, more ore and minerals will be available to Frosthaven. You admire the refinery and then venture into the tunnels themselves, using a handcart to make your way deep underground, hoping to discover some veins of copper.</p><p>Chipping away at a rock, your pickaxe strikes against something as strong as Valrath steel. Your hand is suddenly seized by another, the lithic digits encasing your wrist as the rest of the Savvas emerges from the crumbling wall. As a being of the elements, its face twists between expressions like boiling lava, its body flows and then ceases flowing all at once, growing rigid with barely contained power. “Who dares disturb my slumber?” It rumbles.</p><p>Then the Savvas laughs, a crackling fire sound. “I am in jest. I sensed your presence the instant these tunnels were blasted open. I have been waiting for you to prove your fortitude since. “Now that we have met, you will allow me to join your party. To prove my mastery over the element of magma, I must put my abilities to a true test in the field.”</p><p>That doesn’t sound like much of a choice, but having a powerful ally could never be a bad thing.</p>",
+					"rewards": {
+						"text": "Unlock [pyroclast] class box."
+					}
 				}
 			},
 			"3": {},

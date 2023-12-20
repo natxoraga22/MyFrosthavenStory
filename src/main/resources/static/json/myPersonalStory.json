@@ -162,7 +162,7 @@
 				"upgrade": [{ "id": "miningcamp", "level": 2 }]
 			}
 		},
-		{ "event": { "id": "WR-19", "chosenOption": "A" }},
+		{ "event": { "id": "WR-19", "chosenOption": "A1" }},
 		{ "scenario": { "id": "023" }},
 		{ "scenario": { "id": "024" }},
 		{ "scenario": { "id": "034" }},

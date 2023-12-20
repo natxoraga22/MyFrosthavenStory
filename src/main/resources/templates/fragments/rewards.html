@@ -20,11 +20,22 @@
 				<div th:if="*{!#maps.isEmpty(events)}">
 					[[#{section.rewards.newEvents}]]:
 					<br/>
-					<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.newEvents.SO})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.newEvents.SR})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.newEvents.WO})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.newEvents.WR})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.newEvents.B})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.events.SO})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.events.SR})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.events.WO})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.events.WR})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.events.B})}"></th:block>
+				</div>
+
+				<!-- Removed events -->
+				<div th:if="*{!#maps.isEmpty(removedEvents)}">
+					[[#{section.rewards.removedEvents}]]:
+					<br/>
+					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['SO']}, #{section.rewards.events.SO})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['SR']}, #{section.rewards.events.SR})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['WO']}, #{section.rewards.events.WO})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['WR']}, #{section.rewards.events.WR})}"></th:block>
+					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['B']}, #{section.rewards.events.B})}"></th:block>
 				</div>
 
 				<!-- New scenarios -->

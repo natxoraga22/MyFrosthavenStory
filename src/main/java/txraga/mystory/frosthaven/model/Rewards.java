@@ -17,6 +17,7 @@ public class Rewards {
 	
 	private String text;
 	private Map<String,List<Event>> events;
+	private Map<String,List<Event>> removedEvents;
 	private List<Scenario> scenarios;
 	private List<Scenario> lockedOutScenarios;
 

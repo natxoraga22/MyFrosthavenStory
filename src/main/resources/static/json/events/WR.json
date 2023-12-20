@@ -1,4 +1,28 @@
 {
+	"WR-06": {
+		"text": "<p>A translucent Aesther wearing hunter's garb is studying some tracks on the path, and turns to catch your attention as you approach. \"You there! A moment of your time!\" He flags you down. \"I've been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?\"</p><p>When you don't immediately respond, he thumbs a wicked-looking blade and continues: \"You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.\" The Aesther's eyes flash a dark longing.</p>",
+		"options": {
+			"A": {
+				"trigger": "Agree to keep an eye out for him.",
+				"text": "<p>You assure the Aesther hunter that you'll keep an eye out for the Vermling killer. He smiles.</p><p>\"My thanks. I am Malak. If you do locate him I ask only that you call for me so I can finish my task at last.\"</p>",
+				"rewards": {
+					"events": {
+						"SR": [{ "id": "SR-36" }]
+					},
+					"removedEvents": {
+						"SR": [{ "id": "SR-08" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "No, you haven't seen him.",
+				"text": "You tell the Aesther you haven't seen Dramm. His eyes linger on you a bit too long, trying to determine whether you're lying, but ultimately he shrugs and accepts your statement with a disconcerting smile. You hurry on to your destination.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"WR-08": {
 		"text": "<p>The giant boughs of the willowburn tree hang low, heavy with the ice of the season. This picturesque grotto features an iced-over pond. During the warmer season, it would be fed by a waterfall, which is now frozen and anchored to th cliff face overlooking the area.</p><p>The ice over the pond is sturdy and supports your weight easily. The frozen waterfall beckons you closer with an unnatural blue light, and as you approach you can see glowing shapes moving behind the ice—it's a cave of some sort, now sealed off. The ice is much too thick to get a decent look, but you can feel a supernatural chill that turns your stomach.</p><p>The waterfall likely hasn't run since summer and has a rough surface that would be perfect for climbing. The top would put you right underneath the willowburn branches.</p>",
 		"options": {

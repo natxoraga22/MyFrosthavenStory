@@ -20,7 +20,7 @@
 			"1": {
 				"builtSection": {
 					"id": "172.3",
-					"title": "Hunting Lodge Upgraded",
+					"title": "Hunting Lodge Built",
 					"text": "<p>With a fire roaring in the background, the finished hunting lodge is the perfect location to exchange tales of narrow escapes from polar bears, as well as provide hides for Frosthaven. You encounter all sorts of patrons whose rugged appearances often belie a certain gruff kindness.</p><p>One of those patrons is a Vermling Trapper, who sits nearest the fire and away from the crowd, a square hat shadowing their eyes. Sitting beside their wares of lustrous, exotic furs, they are currently absorbed in constructing an intricate snare.</p><p>When you ask them to explain their process, they warm up to you. “Much of my time is spent not in action, but in observation. It’s a matter of understanding the animals, their habits. If you’re truly interested, perhaps I can show you sometime?”</p><p>You readily agree, happy for the company.</p>",
 					"rewards": {
 						"text": "Unlock [trapper] class box."
@@ -48,7 +48,15 @@
 		"levels": {
 			"1": {
 				"builtSection": {
-					"id": "78.4"
+					"id": "78.4",
+					"title": "Garden Built",
+					"text": "<p>Once complete, the garden draws young and old alike to contribute to its maintenance. In the summer, it will grow arctic flowers and edible green tin-berries; in the winter months, root vegetables and squash.</p><p>Among the rows, you greet Listeritus, a Savvas who is busy tending to tea plants. Guiding you around, its rocky face tranquil, Listeritus queries you about your collection excursions outside of Frosthaven. “If you’d like to plant a sample of what you find here, you will be able to propagate more of them for your use.” Listeritus is patient with your many gardening questions and ends the day brewing you a cup of tea. As a Savvas,</p><p>Listeritus only consumes rocks, but it enjoys the scent just the same. “It is transporting,” Listeritus says, closing its eyes and leaning over the waft of steam, evidently glad for a break in a busy day.</p>",
+					"rewards": {
+						"events": {
+							"SO": [{ "id": "SO-57" }],
+							"SR": [{ "id": "SR-46" }]
+						}
+					}
 				}
 			},
 			"2": {},
@@ -187,7 +195,15 @@
 		"levels": {
 			"1": {
 				"builtSection": {
-					"id": "189.1"
+					"id": "189.1",
+					"title": "Town Hall Built",
+					"text": "<p>“Bureaucrats! Nothing but forms and stamps and a waste of my time!” An old man trudges out of the new town hall into the snow, leaving the wooden door wide open. You step inside to get a look around.</p><p>The interior is nicely appointed with the trappings of rural government: broad antlers are mounted high up the walls, and a tall countertop divides the room between visitor waiting area and employees. Behind the counter stands an Inox with a monocle on a chain, reviewing paperwork. “Close the door. Got enough cold outside, don’t need it in here,” he says, without looking up.</p><p>Eventually he sighs. “Alright, got business or just ogling? I’m Glint, the recordskeeper for Frosthaven. You must be... the janitors?” You let him know you’re mercenaries interested in work. “Eh. Slim pickin’s in the North, huh?” You’re not sure if he’s referring to the work or your group. He sorts through some paperwork on the countertop.</p><p>“Ah, here we go. Captain Olmstead told me to find someone to test out a few things next time they’re outside the walls. If you want that, you’re welcome to try until something better comes in.”</p>",
+					"rewards": {
+						"events": {
+							"SO": [{ "id": "SO-59" }, { "id": "SO-62" }],
+							"SR": [{ "id": "SR-38" }]
+						}
+					}
 				}
 			},
 			"2": {},

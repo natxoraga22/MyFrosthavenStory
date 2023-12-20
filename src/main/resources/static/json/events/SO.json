@@ -232,8 +232,17 @@
 	"SO-53": {
 		"unlockedBy": { "section": { "id": "7.3" }}
 	},
+	"SO-57": {
+		"unlockedBy": { "section": { "id": "78.4" }}
+	},
+	"SO-59": {
+		"unlockedBy": { "section": { "id": "189.1" }}
+	},
 	"SO-60": {
 		"unlockedBy": { "section": { "id": "7.3" }}
+	},
+	"SO-62": {
+		"unlockedBy": { "section": { "id": "189.1" }}
 	},
 	"SO-64": {
 		"unlockedBy": { "section": { "id": "60.2" }}

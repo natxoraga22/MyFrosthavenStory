@@ -197,5 +197,14 @@
 	},
 	"SR-34": {
 		"unlockedBy": { "event": { "id": "SR-07" }}
+	},
+	"SR-36": {
+		"unlockedBy": { "event": { "id": "WR-06" }}
+	},
+	"SR-38": {
+		"unlockedBy": { "section": { "id": "189.1" }}
+	},
+	"SR-46": {
+		"unlockedBy": { "section": { "id": "78.4" }}
 	}
 }

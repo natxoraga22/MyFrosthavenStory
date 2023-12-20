@@ -7,7 +7,7 @@
 	"unlockedBy": { "scenario": { "id": "007" }},
 	"complexity": 2,
 	"location": "Biting Sea",
-	"goals": "The scenario is complete when seven damage tokens are on snow rock [a]. At the end of that round, read [section] <strong>4.1</strong>.",
+	"goals": "The scenario is complete when seven damage tokens are on snow rock [a]. At the end of that round, read [section_4.1].",
 
 	"sections": {
 		"main": {

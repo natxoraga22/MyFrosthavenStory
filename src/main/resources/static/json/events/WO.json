@@ -83,7 +83,7 @@
 				"trigger": "Open the crate.",
 				"text": "Against the warnings of the superstitious dock workers, you carefully pry open the crate. The interior is lacquered and totally clean, as though someone had soaped and scrubbed the inside with a fine brush. A small, cracked egg sits at the center. You're not sure what it would have hatched into, but it's clear this one didn't survive.",
 				"rewards": {
-					"text": "Add [section] 115.1 to the calendar in one week."
+					"text": "Add [section_115.1] to the calendar in one week."
 				}
 			},
 			"B": {

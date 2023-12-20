@@ -7,19 +7,19 @@
 	"unlockedBy": { "scenario": { "id": "014" }},
 	"complexity": 2,
 	"location": "Biting Sea",
-	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section] <strong>96.4</strong>.",
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section_96.4].",
 	"effects": "Each character adds two [minus1] cards to their attack modifier deck.",
 
 	"sections": {
 		"main": {
 			"introduction": "<p>You’ve followed the shards’ pull on your quest to restore the Lurkers’ crown. It’s been several days of hard sailing, dodging icebergs and huddling against the wind, you’ve arrived at your destination. You float at the exact spot where the shards want you to be, but strangely, there is nothing here.</p><p>Your ship sits in open water, sails secured, while you look for any sign of another shard: a spit of land, a wayward berg, another shoal perhaps, but there is nothing here except the frigid, steady chop of the sea. Frustrated, you retire below deck, but as you descend you notice the shards’ renewed excitement. Only then do you realize where you must go: down into the water.</p><p>Just then the ship heaves upward. For a moment you feel like you’re floating, your body tossed weightless into the air. But then that feeling ends, and you slam back down onto the cabin floor with cracking force. Something has struck the hull.</p><p>You heave yourselves back up to the main deck and see jets of saltwater spraying all around the ship. Lurkers have boarded your vessel, and their huge bodies are rocking it back and forth like a toy. You draw your weapon, ready to charge, but someone shouts up from the hold—the crab-people have made it inside and they’re beginning to smash holes in the ship. The Lurkers know you have the shards, and they will sink you to get them.</p>",
-			"sectionLinks": "When all revealed enemies are dead, read [section] <strong>26.3</strong>."
+			"sectionLinks": "When all revealed enemies are dead, read [section_26.3]."
 		},
 		"26.3": {
 			"trigger": "All revealed enemies are dead",
 			"text": "You drive the Lurkers, chittering and clawing, from your ship, but there is no peace yet. Below deck, you hear more creaking and crashing, as if your boat is being torn apart from the inside.",
 			"specialRules": "Border hex [a] is a stairway to below deck and can now be entered.",
-			"sectionLinks": "The first time any character enters [a], read [section] <strong>41.2</strong>."
+			"sectionLinks": "The first time any character enters [a], read [section_41.2]."
 		},
 		"41.2": {
 			"trigger": "A character enters [a]",
@@ -33,7 +33,7 @@
 			"rewards": {
 				"text": "Lose 1 collective [lumber] for each set of five hexes with water tiles on tile 7-G.<br/>Gain 15 [xp] each."
 			},
-			"sectionLinks": "Add [section] <strong>62.2</strong> to the calendar in two weeks."
+			"sectionLinks": "Add [section_62.2] to the calendar in two weeks."
 		}
 	},
 	"path": ["main", "26.3", "41.2", "96.4"]

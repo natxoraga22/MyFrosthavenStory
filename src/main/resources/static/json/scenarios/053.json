@@ -7,7 +7,7 @@
 	"unlockedBy": { "scenario": { "id": "049" }},
 	"complexity": 2,
 	"location": "Biting Sea",
-	"goals": "The scenario is complete when the Seeker of the Abyss is dead. At the end of that round, read [section] <strong>107.4</strong>.",
+	"goals": "The scenario is complete when the Seeker of the Abyss is dead. At the end of that round, read [section_107.4].",
 	"effects": "Each character adds three [minus1] cards to their attack modifier deck.",
 
 	"sections": {

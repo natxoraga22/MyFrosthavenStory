@@ -6,14 +6,14 @@
 	"unlockedBy": { "scenario": { "id": "013" }},
 	"complexity": 2,
 	"location": "Radiant Forest",
-	"goals": "The scenario is complete when the raven nest [a] is destroyed. At the end of that round, read [section] <strong>59.1</strong>.",
+	"goals": "The scenario is complete when the raven nest [a] is destroyed. At the end of that round, read [section_59.1].",
 	"effects": "Each character gains [wound].",
 
 	"sections": {
 		"main": {
 			"introduction": "<p>The fiendish birds that assailed you on the bone bridge retreated to a forest after your fight. You’re curious about what other strange creatures might be inhabiting the place—and if you get to crush some of the birds that escaped your wrath, all the better. You run over the blowing tundra, sprinting over mounds of hardened dirt and frozen shrub. You follow the birds’ path and head into the woods.</p><p>The Radiant Forest: a place suffused with divergent energy. You feel it as soon as you enter—a peculiar thinness to the air. Even the ground is odd, uneven, so it feels like you’re walking atop a wide, wobbling table. By its name, you had assumed these woods were simply trees that somehow gained a footing in this barren place, but now that you’re here, you can see they are born of the same madness as everything else.</p><p>Beyond the wind and the trees, strange lights flicker here as well, dancing in and out of the shadows. At first you take them for torchflies, except the tiny orbs follow you, curious almost, their multi-colored glows peppering the trees with iridescent hues. And yet, the strangest thing by far is the air—it’s warm. The trees, though situated only a short hike away from the frozen coast, are completely free of snow, and the deeper you hike, the warmer it gets, the air becoming muggy and sulphurous, as if you’ve just been transported to some hunting ground far across the mountains to the south. It’s distracting, so much so that you almost don’t notice the voice calling to you.</p><p>“Oh, great warriors,” it says, whispery thin, “come to find us they have. Sneakers sneaking through our trees. So brave, so brave they are.” The voice echoes off the woods, barely louder than the breeze itself.</p><p>“Oh, yes. Keep on, sweet things, sweet breathers come to see.”</p>",
 			"specialRules": "At the start of each round, place one numbered token on each Frozen Corpse. If a Frozen Corpse suffers damage, remove its numbered token. At the end of each round, each Frozen Corpse with a numbered token is replaced by an elite Shrike Fiend with no damage or conditions. These Shrike Fiends do not act until the following round.",
-			"sectionLinks": "When door [one] is opened, read [section] <strong>66.1</strong>."
+			"sectionLinks": "When door [one] is opened, read [section_66.1]."
 		},
 		"66.1": {
 			"trigger": "Door [one] is opened",

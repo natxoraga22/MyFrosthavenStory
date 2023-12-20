@@ -5,7 +5,7 @@
 	"coordinates": "O8",
 	"unlockedBy": { "section": { "id": "86.1" }},
 	"complexity": 2,
-	"goals": "The scenario is complete at the end of the tenth round. At the end of that round, read [section] <strong>33.4</strong>",
+	"goals": "The scenario is complete at the end of the tenth round. At the end of that round, read [section_33.4]",
 
 	"sections": {
 		"main": {
@@ -17,7 +17,7 @@
 			"rewards": {
 				"text": "Gain 15 [xp] each."
 			},
-			"sectionLinks": "Add [section] <strong>66.2</strong> to the calendar in X+1 weeks, where X is the number of pylons destroyed."
+			"sectionLinks": "Add [section_66.2] to the calendar in X+1 weeks, where X is the number of pylons destroyed."
 		}
 	},
 	"path": ["main", "33.4"]

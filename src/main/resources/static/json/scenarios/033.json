@@ -7,12 +7,12 @@
 	"unlockedBy": { "section": { "id": "62.2" }},
 	"complexity": 3,
 	"location": "Radiant Forest",
-	"goals": "The scenario is complete when three radiant stones have been found. At the end of that round, read [section] <strong>112.4</strong>.",
+	"goals": "The scenario is complete when three radiant stones have been found. At the end of that round, read [section_112.4].",
 
 	"sections": {
 		"main": {
 			"introduction": "<p>The Radiant Forest: proof that map makers have a dark sense of humor. The forest, you find, is quite the opposite of radiant. Instead, it is an overgrown tangle of ancient trees and dense, knotted ivy. Each step you take is hard earned, requiring you to climb over slanted logs and higharching roots. What’s more, there is a particular weirdness suffusing this place. The creatures and insects chirp in foreign ways and even the ground feels somehow deranged, tilting at times, almost as if it’s bothered by your presence. And yet the strangest thing about this place is the air— it’s warm.</p><p>Not long after you enter, the snow gives way to lush green underbrush and you find yourself removing your furs to avoid overheating. It’s an oasis, a balmy island in an otherwise frozen wasteland, and so it should come as no surprise that the Radiant Forest is home to many creatures.</p><p>A dark blur whips toward you, razorsharp talons raking through the air. You dodge, more speeding shapes diving at you as you draw your weapons. You dive, and the attack pauses long enough for the aggressor to reveal itself. A lanky humanoid creature emerges from behind a tree. Its sinewy legs and arms are wrapped in dark-gray skin, and its upper body is covered in dozens of flapping black wings.</p><p>“Loud walkers, walking in my woods,” it says in a thin voice. “A meal for sharing and new skin to wear.”</p><p>Then the many birds perched on the creature’s waxy torso spread their wings and come at you.</p>",
-			"sectionLinks": "When door [one] is opened, read [section] <strong>20.1</strong>."
+			"sectionLinks": "When door [one] is opened, read [section_20.1]."
 		},
 		"20.1": {
 			"trigger": "Door [one] is opened",
@@ -25,7 +25,7 @@
 			"rewards": {
 				"text": "Gain 5 [xp] each for each unrevealed dowsing rune.<br/>Gain “Ember Energy Source” [item]."
 			},
-			"sectionLinks": "Add [section] <strong>135.1</strong> to the calendar in three weeks."
+			"sectionLinks": "Add [section_135.1] to the calendar in three weeks."
 		}
 	},
 	"path": ["main", "20.1", "112.4"]

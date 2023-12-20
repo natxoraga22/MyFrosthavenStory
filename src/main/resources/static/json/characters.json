@@ -22,7 +22,7 @@
 		"retirement": { 
 			"id": "53.3",
 			"text": "<p>Ever since the Deathwalker decided to stop heading out on missions, they’ve been wandering the streets of Frosthaven, muttering to themselves about “lost souls”. You finally stop them and ask what the meaning of it all is.</p><p>“There are just so many dead who still linger,” the Deathwalker laments. “Those who have fallen in battle. Those who were taken by the cold. They must be properly put to rest, but I don’t know how.”</p><p>You mention the makeshift graveyard outside of town, and the Deathwalker shakes their head. “It is insufficient—woeful. The dead placed there don’t get the proper respect. Piled into holes like garbage. Unless...”</p><p>The Deathwalker’s expression changes. “Yes, I must go talk to Satha immediately. We must improve the graveyard! Give the dead their due respect. Oh my, there is so much work to do!” They move in the direction of Satha’s cabin faster than you’ve ever seen them move. Hopefully, something good comes from it.</p>",
-			"sectionLinks": "Add [section] <strong>176.4</strong> to the calendar in the second week of next summer."
+			"sectionLinks": "Add [section_176.4] to the calendar in the second week of next summer."
 		}
 	},
 	"crashingtide": {

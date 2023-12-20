@@ -27,14 +27,14 @@
 				"trigger": "Help clean the streets to make a good impression.",
 				"text": "<p>You put in the work to clean up the dirt-and-snow-covered streets of Frosthaven. Many of the residents come out to join you, excited. A young lady chats your ear off while sweeping, her face beaming.</p><p>\"I heard from a friend his watery-blue eyes see straight into your soul. He speaks quietly, but he knows your name without asking. He's the most incredible seer the world has ever known!\"</p>",
 				"rewards": {
-					"text": "Gain 1 morale and 1 inspiration.<br/>Add [section] 180.1 to the calendar in two weeks."
+					"text": "Gain 1 morale and 1 inspiration.<br/>Add [section_180.1] to the calendar in two weeks."
 				}
 			},
 			"B": {
 				"trigger": "Assist in the preparation of a feast.",
 				"text": "<p>You join a hunting party gathering wild meats and harvesting vegetables outside Frosthaven. An older man has more spring in his step as he picks snowthistle to use as a tangy garnish.</p><p>\"He's got rough hands from working the fields before he got the gift of sight. Long, beautiful hair, not bald like me. Never met him, but heard he talks slow—not like me—he wants to make sure you get the attention you deserve. Great man, that Dallum.\"</p>",
 				"rewards": {
-					"text": "Gain 1 morale.<br/>Gain 1 collective [snowthistle].<br/>Add [section] 180.1 to the calendar in two weeks."
+					"text": "Gain 1 morale.<br/>Gain 1 collective [snowthistle].<br/>Add [section_180.1] to the calendar in two weeks."
 				}
 			}
 		}

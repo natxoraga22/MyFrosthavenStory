@@ -74,6 +74,7 @@
 .icon.axenut      { max-height: 18px; }
 .icon.hide        { max-height: 18px; }
 .icon.lumber      { max-height: 14px; }
+.icon.metal       { max-height: 12px; }
 .icon.snowthistle { max-height: 18px; }
 
 /* Others */
@@ -82,9 +83,10 @@
 .icon.boat        { max-height: 18px; }
 .icon.checkmark   { max-height: 14px; }
 .icon.damage      { max-height: 18px; }
-.icon.forceLinked { max-height: 12px; }
+.icon.forceLinked { max-height: 11px; }
 .icon.heal        { max-height: 18px; }
 .icon.item        { max-height: 15px; }
+.icon.linked      { max-height: 9px; }
 .icon.move        { max-height: 18px; }
 .icon.not         { max-height: 18px; }
 .icon.plus1       { max-height: 18px; }

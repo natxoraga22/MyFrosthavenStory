@@ -176,6 +176,16 @@ public class CampaignController {
 			outpostPhase.setPassageOfTime(passageOfTime);
 		}
 
+		// TOWN GUARD PERKS
+		if (outpostPhase.getTownGuardPerks() != null) {
+			List<Section> townGuardPerks = new ArrayList<>();
+			for (Section storyItemSection : outpostPhase.getTownGuardPerks()) {
+				Section section = frosthaven.getSection(storyItemSection.getId());
+				if (section != null) townGuardPerks.add(section);
+			}
+			outpostPhase.setTownGuardPerks(townGuardPerks);
+		}
+
 		// OUTPOST EVENT
 		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent()));
 

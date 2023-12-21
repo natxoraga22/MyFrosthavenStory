@@ -48,6 +48,11 @@
 					   class="list-group-item list-group-item-action child" th:href="|#section_*{htmlSafeId}|">
 						[[*{id}]] · [[*{title}]]
 					</a>
+					<!-- Town guard perks -->
+					<a th:each="section : *{townGuardPerks}" th:object="${section}"
+					   class="list-group-item list-group-item-action child" th:href="|#section_*{htmlSafeId}|">
+						[[*{id}]] · [[*{title}]]
+					</a>
 					<!-- Outpost event -->
 					<a th:if="*{outpostEvent}" th:object="${storyObject.outpostEvent}"
 					   class="list-group-item list-group-item-action child" th:href="|#event_*{id}|">

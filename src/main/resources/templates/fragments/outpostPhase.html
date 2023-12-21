@@ -18,6 +18,11 @@
 			<th:block th:replace="~{fragments/section :: section(${section})}"></th:block>
 		</th:block>
 
+		<!-- TOWN GUARD PERKS -->
+		<th:block th:each="section : *{townGuardPerks}">
+			<th:block th:replace="~{fragments/section :: section(${section})}"></th:block>
+		</th:block>
+
 		<!-- OUTPOST EVENT -->
 		<th:block th:if="*{outpostEvent}">
 			<th:block th:replace="~{fragments/event :: event(*{outpostEvent})}"></th:block>

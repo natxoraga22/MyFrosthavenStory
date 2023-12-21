@@ -20,4 +20,6 @@ public class StoryItem {
 
 	private Section section;
 
+	private String other;
+
 }

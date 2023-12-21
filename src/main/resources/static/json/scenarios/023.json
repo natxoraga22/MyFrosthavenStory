@@ -2,5 +2,35 @@
 	"id": "023",
 	"name": "Spire Basement",
 	"questLine": "Unfettered",
-	"unlockedBy": { "scenario": { "id": "015" }}
+	"coordinates": "B8",
+	"unlockedBy": { "scenario": { "id": "015" }},
+	"complexity": 1,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section_105.2].",
+	"effects": "Each character gains [poison].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>Down the rear stairwell—a corkscrew of stone and iron—you go to see what lies beneath the spire. Tunnels are what you find: black, sooty tunnels. From what you can tell, they are purely functional, the stone passages scraped and marred by years of clumsy automatons passing through, but there is a smell on the air that stands out. It’s a mix between funeral pyre and an alchemist’s shop: burnt fat, charred metal, and smoke. You can’t see the beam’s light from here, but you can hear its telltale hum.</p><p>You wind through the tunnels, keeping alert for any sign of movement, but you soon discover that the workers down here have been disabled and now lie lifeless on the ground. It appears that they fell in the middle of their work, dropping where they stood and spilling whatever they’d been carrying. Their grisly cargo is strewn over the floor: legs with feet still attached, Algox paws, vulpine torsos, all of it splayed out like a macabre trail of breadcrumbs.</p><p>It isn’t until you turn the final corner that you see where all this butchery was headed—a hallway, heaped on both sides with discarded bodies and limbs. The humming noise is louder here, and the red glow reflects off the tunnel walls— the beam of energy is close. You move forward but only manage a few steps before the ground stirs around you.</p><p>Deathless bodies, ruined and hacked, rise up from the piles. Maimed and half-charred Algox and humans, many of them lacking limbs and other essential parts, climb to their feet nonetheless and release weak, throaty groans.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_38.4]."
+		},
+		"38.4": {
+			"trigger": "Door [one] is opened",
+			"sectionLinks": "When door [two] is opened, read [section_55.3]."
+		},
+		"55.3": {
+			"trigger": "Door [two] is opened",
+			"text": "<p>After reducing the undead to their baser parts, you move quickly on and arrive at a wide circular chamber. This new room is made mostly of iron and stone, like the chamber upstairs; however, here the walls are lined with a number of cylindrical metal furnaces, and in the middle of the room is the beam of pulsing red light. This chamber must be the source of the beam’s power, but the room’s other occupants don’t allow you time to investigate.</p><p>They materialize shortly after you arrive: the air around the chamber wrinkles and compresses until several black forms appear out of nothingness. Spirits, clusters of them, wrench themselves into existence. They face you, raising spectral claws. But there is something else. Hanging in the center of these spirits is a hulking mass of folded black smoke—a churning shadow whose eyes boil with malevolence. The massive wraith looms before you and releases a low, hateful moan that shakes the metal on which you stand.</p>",
+			"specialRules": "The Living Doom is the Hateful Corpse. It has HxC/2 hit points (rounded down), is immune to [disarm] and [stun], and adds +2 [attack] to all its attacks."
+		},
+		"105.2": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>You do not know where spirits go after you dispatch them, but you hope it’s far away. You extinguish the malevolence, releasing its grip on this chamber.</p><p>What’s left is this empty room—a place made for grisly work. Without the mechanical creatures running up and down the halls, you have to guess at how the furnaces function, but it seems pretty clear: The machines feed bodies to the stoves, which in turn fuel the beam of energy through some nefarious magic. You cannot fathom who could be responsible for such an operation, but you do know where to look for them.</p><p>In the rear of the chamber there is an elevator: a metal platform set into the floor, strung up to a system of pulleys and chains leading upward. The controls are clear enough; you just have to get on and push the button.</p>",
+			"rewards": {
+				"text": "Gain one random item blueprint.",
+				"scenarios": [{ "id": "034", "linked": true }]
+			}
+		}
+	},
+	"path": ["main", "38.4", "55.3", "105.2"]
 }

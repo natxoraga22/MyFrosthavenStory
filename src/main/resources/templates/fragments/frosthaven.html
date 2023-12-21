@@ -20,6 +20,7 @@
 			<a th:if="*{section}" class="link-secondary" th:href="|#section_*{section.htmlSafeId}|">
 				Section [[*{section.id}]]
 			</a>
+			<span th:if="*{other}">[[*{other}]]</span>
 		</th:block>
 		<!-- Other page links -->
 		<th:block th:if="${page?.name() != 'CAMPAIGN'}">
@@ -32,6 +33,7 @@
 			<a th:if="*{section}" class="link-secondary" th:href="@{/section/{id}(id=*{section.id})}">
 				Section [[*{section.id}]]
 			</a>
+			<span th:if="*{other}">[[*{other}]]</span>
 		</th:block>
 	</div>
 

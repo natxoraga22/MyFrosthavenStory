@@ -94,6 +94,14 @@
 			"scenarios": [{ "id": "112" }]
 		}
 	},
+	"151.3": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>You’re polishing off a round of ale before bed when the door opens with a light creak. With near-imperceptible slowness enters the oldest orchid you’ve ever seen; were it not for the lumbering walk you’d take her too-large crystals to be a fallen chandelier, not a sentient being.</p><p>By the time she’s made her way over to your table your party is in the midst of exchanging goodnight wishes. She settles into an open chair with a rattling thump.</p><p>“My, what fortuitous provenance! Just the merry band I was hoping to see.” She speaks slowly and deliberately, a light hint of an accent you can’t place dotting her speech. “I’ve been told you are the choice for matters outside the typical. And my, this matter is far from typical.”</p><p>She pauses for dramatic effect, but her timetable is skewed much too far. By the time she resumes speaking your party is exchanging concerned glances: did she die at the table?</p><p>“The matter, of course, touches the very core of a group like you.” The ponderous crystals obscuring her mouth twist and rattle against each other. Is she… smiling?</p><p>“But we will get to that, I understand the protocol. I may be old, but I imagine my gold is still good?” She shifts and her slow hand drops a sack of gold on the table. It’s clear these are not typical coinage: despite their excellent condition they’re of an antiquated design. Gold is gold, though.</p><p>She takes the look on your faces as sufficient. “Wonderful! I look forward to our adventure!”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "099" }]
+		}
+	},
 	"155.2": {
 		"unlockedBy": { "event": { "id": "WO-10" }}
 	},

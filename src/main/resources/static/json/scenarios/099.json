@@ -1,5 +1,6 @@
 {
 	"id": "099",
 	"name": "Prison Break",
-	"questLine": "JobPosting"
+	"questLine": "JobPosting",
+	"unlockedBy": { "section": { "id": "151.3" }}
 }

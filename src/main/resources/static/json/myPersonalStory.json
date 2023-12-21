@@ -37,7 +37,8 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-15", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 3 }],
-				"build": [{ "id": "climbinggear" }]
+				"build": [{ "id": "climbinggear" }],
+				"upgrade": [{ "id": "barracks", "level": 2 }]
 			}
 		},
 		{ "event": { "id": "B-04", "chosenOption": "A" }},
@@ -121,7 +122,7 @@
 				"outpostEvent": { "id": "WO-20", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 6 }, { "id": "crashingtide", "level": 4 }],
 				"build": [{ "id": "huntinglodge", "level": 1 }],
-				"upgrade": [{ "id": "barracks", "level": 2 }]
+				"upgrade": [{ "id": "barracks", "level": 3 }]
 			}
 		},
 		{ "event": { "id": "WR-18", "chosenOption": "A" }},
@@ -164,8 +165,32 @@
 		},
 		{ "event": { "id": "WR-19", "chosenOption": "A1" }},
 		{ "scenario": { "id": "023" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "151.3" }],
+				"outpostEvent": { "id": "WO-13", "chosenOption": "B" },
+				"levelUps": [{ "id": "trapper", "level": 3 }],
+				"upgrade": [{ "id": "garden", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "WR-20", "chosenOption": "A2" }},
 		{ "scenario": { "id": "024" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-08", "chosenOption": "B" },
+				"upgrade": [{ "id": "townhall", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "WR-01", "chosenOption": "B1" }},
 		{ "scenario": { "id": "034" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "129.3" }, { "id": "68.2" }],
+				"outpostEvent": { "id": "SO-35", "chosenOption": "A" },
+				"levelUps": [{ "id": "trapper", "level": 4 }],
+				"upgrade": [{ "id": "barracks", "level": 4 }, { "id": "alchemist", "level": 2 }]
+			}
+		},
 		{ "scenario": { "id": "099" }},
 		{ "scenario": { "id": "100" }}
 	]

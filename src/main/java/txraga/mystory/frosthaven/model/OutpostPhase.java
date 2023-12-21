@@ -14,6 +14,7 @@ public class OutpostPhase extends StoryObject {
 
 	private int id;
 	private List<Section> passageOfTime;
+	private List<Section> townGuardPerks;
 	private Event outpostEvent;
 
 	// Downtime

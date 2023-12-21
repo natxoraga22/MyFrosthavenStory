@@ -99,6 +99,25 @@
 			}
 		}
 	},
+	"SR-08": {
+		"text": "<p>Out of the corner of your eye you catch a glimpse of a floating tuft of fur by the side of the road. As soon as you're certain of it, it's gone. You pause a moment, then call out asking if anyone is there.</p><p>A shimmering cloak of invisibility is pulled down off an old Vermling's shoulders. \"Cloak's getting a bit dusty... wearing out.\" He sits down, pulling a set of glass beads looped on a string from his pocket. \"Name's Dramm. Don't suppose you've been looking for me.\"</p><p>You can't say that you have, and tell him as much. He flips the beads around in his hand, lost in thought.</p><p>\"Good, good. Do me a favor, will you? There's an Aesther that's been hunting me for almost as long as I've been alive. If you run into him, would you point him the other way?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Agree to cover for the Vermling.",
+				"text": "<p>Dramm explains that a persistent hunter, Malak, selected him from the infinite beings in the multiverse as his next kill. Most would roll over and accept the inevitable, but as Dramm puts it, \"I've been dodging him for years. He may catch me eventually, but I have no interest in making it easy on him.\"</p><p>He expresses his thanks. \"Say, I might as well pass off some of these clothes. I have a hunch he's been tracking me by the scent.\"</p>",
+				"rewards": {
+					"text": "Gain 2 collective [hide]."
+				}
+			},
+			"B": {
+				"trigger": "Ask for payment for services. You are a mercenary, after all.",
+				"text": "<p>Dramm smiles. \"Not much to offer, never had much myself.\" He explains that a persistent hunter, Malak, selected him from the infinite beings in the multiverse as his next kill. Most would roll over and accept the inevitable, but as Dramm puts it, \"I've been dodging him for years. He may catch me eventually, but I have no interest in making it easy on him.\"</p><p>\"Alright... payment for a service. But if you see him, you've never met me.\"</p>",
+				"rewards": {
+					"text": "Gain 15 collective gold."
+				}
+			}
+		}
+	},
 	"SR-10": {
 		"text": "<p>You round a rocky outcropping and find a lavishly-dressed Savvas staring you down, anger in its eyes.</p><p>\"You're late!\" You stammer a non-committal half-response, but it's quickly cut off. \"Useless! Don't touch the food with those greasy hands of yours. It's worth more than all those pelts you're wearing. Grab a tray and get to work serving your betters—and be advised your tardiness is coming out of your tip!\"</p><p>A dozen Savvas are seated on stone benches around an outdoor table meticulously carved from a single slab of granite. Each Savvas is wearing elaborate clothing studded with metals and fine silks that really do put your own clothes to shame. The scene is set for a magnificent feast, and a nearby serving area has gorgeous platters heaped high with the most perfect cuts of... rocks?</p><p>\"Get on with it! We 're hungry!\"</p>",
 		"options": {

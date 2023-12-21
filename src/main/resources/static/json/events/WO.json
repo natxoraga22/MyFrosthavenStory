@@ -76,6 +76,56 @@
 			}
 		}
 	},
+	"WO-13": {
+		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it's a whole cavern. A miner said it's been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don't have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
+		"options": {
+			"A": {
+				"trigger": "Demand a healthy but not excessive flat fee up-front.",
+				"text": "<p>You've taken enough jobs to know that pricing before knowing the full story means you may leave some money on the table, but at least you never go home hungry. The job turns out to be pretty straightforward: a Night Demon, banished from the plane of eternal night, got trapped underground and clawed itself to the surface, then took refuge in the mine as it drew power from an evil pillar and has been biding its time before unleashing darkness on the town. Standard stuff.</p><p>A few minutes later, you've cleared out the problem and have some spending money.</p>",
+				"rewards": {
+					"text": "Gain 20 collective gold and 3 collective [metal].",
+					"removedEvents": {
+						"WO": [{ "id": "WO-14" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Demand that you're paid based on whatever it is you wind up having to clear out of that room.",
+				"text": "<p>You get the foreman to agree to a rate proportional to whatever horrors you discover in the room. A Night Demon has taken up residence, drawing power from a natural focus point in the mine. It's been harvesting the essence of evil and is pretty upset with your sudden interest in killing it.</p><p>The whole ordeal takes just a few minutes, but you'll be digging broken claws out of your skin for days. At least the foreman was happy to turn over some extra coin when he saw the trouble you went to.</p>",
+				"rewards": {
+					"text": "Gain 30 collective gold and 3 collective [metal].",
+					"removedEvents": {
+						"WO": [{ "id": "WO-14" }]
+					}
+				}
+			}
+		}
+	},
+	"WO-14": {
+		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it's a whole cavern. A miner said it's been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don't have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
+		"options": {
+			"A": {
+				"trigger": "Demand a healthy but not excessive flat fee up-front.",
+				"text": "<p>You've taken enough jobs to know that pricing before knowing the full story means you may leave some money on the table, but at least you never go home hungry. Looks like your conservative outlook paid off: it turns out some teenagers have been sneaking in to the mines each night as a sort of prank on the workers. By the time you're done knocking on doors it seems like every teenager in town was in on it, and several hoped it was scary enough to become a permanent hangout free from adult oversight.</p><p>You give some admonishment to their parents, and after a few hours you have the thanks of the foreman and some spending money.</p>",
+				"rewards": {
+					"text": "Gain 20 collective gold and 3 collective [metal].",
+					"removedEvents": {
+						"WO": [{ "id": "WO-13" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Demand that you're paid based on whatever it is you wind up having to clear out of that room.",
+				"text": "<p>You get the foreman to agree to a rate proportional to whatever horrors you discover in the room. Frustratingly, it turns out some teenagers have been sneaking in after dark, looking for an alcove to call their own, away from their parents. There isn't a single skull to bash in... at least, not without upsetting some parents.</p><p>The foreman happily pays you for tracking down the source of the problem, but not a penny for your fighting skills.</p>",
+				"rewards": {
+					"text": "Gain 5 collective gold and 1 collective [metal].",
+					"removedEvents": {
+						"WO": [{ "id": "WO-13" }]
+					}
+				}
+			}
+		}
+	},
 	"WO-15": {
 		"text": "<p>Harrower Geminates are borne from a schism in the Harrower. That internal conflict manifests itself outwardly as two forms competing for control. Sitting across the table from you is a Harrower who became a Geminate just moments ago under interrogation for murder—half of the being rejected the other half for the crime they committed. A Geminate can be confused for weeks—or even permanently—following a split, and Mayor Satha has requested your assistance in getting a confession. Problem is, they've already confessed... sort of.</p><p>The left portion of the Harrower says: \"I am the murderer.\" The right portion of the Harrower says: \"I did not kill him.\"</p><p>You're about to lock them both up when you hear a cough from the corner of the room. An Aesther, translucent except for an odd hunting cap, speaks up.</p><p>\"Oh, don't mind me. Just observing today. Answer's quite simple. One of them and only one is definitely the murderer. Would it help if I told you at least one of these two are lying?\"</p>",
 		"options": {

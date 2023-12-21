@@ -21,7 +21,10 @@ public class Event extends StoryObject {
 	@ToString.Include private String id;
 	private Type type;
 	private Season season;
-	private StoryItem unlockedBy;
+
+	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+	private List<StoryItem> unlockedBy;
+
 	private String text;
 	private Map<String,Option> options = Map.of();
 	private OutpostAttack outpostAttack;

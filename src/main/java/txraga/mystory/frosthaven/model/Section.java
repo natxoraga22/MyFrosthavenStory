@@ -1,10 +1,13 @@
 package txraga.mystory.frosthaven.model;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +25,9 @@ public class Section {
 
 	private String trigger;
 	@ToString.Include private String title;
-	private StoryItem unlockedBy;
+
+	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+	private List<StoryItem> unlockedBy;
 
 	private String introduction;
 	private String text;

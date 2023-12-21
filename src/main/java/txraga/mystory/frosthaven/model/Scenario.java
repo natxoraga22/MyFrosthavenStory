@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -20,7 +22,10 @@ public class Scenario extends StoryObject {
 	private QuestLine questLine;
 	private String coordinates;
 	private Requirement requirement;
-	private StoryItem unlockedBy;
+
+	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+	private List<StoryItem> unlockedBy;
+
 	private int complexity;
 	private String location;
 

@@ -120,5 +120,45 @@
 				}
 			}
 		}
+	},
+	"WR-20": {
+		"text": "<p>The sky has turned a perfect, uniform gray as the snowfall of a blizzard blots out any vision more than an arms-length ahead. The flurries hide his presence until you're right on top of him, but seated in deep meditation is an Orchid. While they have a frail humanoid appearance, they gain the majority of their sustenance from direct contact with the ground as a plant would, growing beautiful crystalline structures across their skin if they remain sedentary. Judging by the length and prominence of the crystals on this Orchid's head and arms, he's been seated here meditating for a very long time—perhaps years.</p><p>Although he shows no signs of noticing, the snow has begun to accumulate on him. Unfortunately the weather has left you turned around and without a bit of help you're as likely to be heading away from your destination as towards it.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Wake the Orchid to ask directions.",
+				"requirement": "[trait] ORCHID",
+				"text": "You begin a low, lilting hum. Orchids use it as something ofa reverse-lullaby, a melody to gently wake someone in deep meditative slumber. The Orchid slowly rouses itself to the tune, opening one eye with a smile. After a long, dramatic stretch he's happy to provide directions to your destination",
+				"rewards": {
+					"text": "Gain 5 experience each."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Wake the Orchid to ask directions.",
+				"requirement": "[not] [trait] ORCHID",
+				"text": "You brush the snow off the Orchid, then tap gently on his crystalline head. That leads to more insistent knocking, and finally a light shake. When he finally jolts awake, he's startled and furious. You do your best to apologize, and he points you in the right direction.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Leave the Orchid to his meditation and find your own way.",
+				"requirement": "[trait] CHAOTIC or RESOURCEFUL",
+				"text": "The sun is gone, and the world is a sea of white, but you are at home in the confusion and know exactly how to handle the situation. You trace your steps back the way you came and reorient yourself based on your rapidly fading footprints. It's a cold trip but you make it to your destination.",
+				"rewards": {
+					"text": "All characters start the next scenario with [brittle]."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Leave the Orchid to his meditation and find your own way.",
+				"text": "It can't be that difficult to find a way through this blizzard. You head back the way you came for a few steps, then strike out toward what you're sure is the right direction. It is not, and by the time you've determined where you are, you're numb with cold.",
+				"rewards": {
+					"text": "All characters start the next scenario with [brittle] and [damage] 2."
+				}
+			}
+		}
 	}
 }

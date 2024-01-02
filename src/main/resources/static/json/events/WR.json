@@ -1,4 +1,34 @@
 {
+	"WR-01": {
+		"text": "<p>\"YOU! Strong mer-canaries! You help Hurdle, yes!\"</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he's been on his own in the wilderness for a long, long time.</p><p>\"Help kill evil Clovis! Ruined Hurdle's home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!\" The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. \"Cloooovis,\" he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam...</p><p>It's a beaver. Clovis is a beaver. And not a very large one at that.</p><p>\"Clovis dam stream,\" the hermit spits, \"Stream flood Hurdle's home. Clovis must SUFFER, yes!\"</p><p>He turns back to you and repeats his demand. \"You kill evil Clovis! I reward greedy mer-canaries. Kill kill!\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Kill Clovis.",
+				"text": "Clovis sounds like a pretty bad guy. You decide to do this Vermling—no, the world—a favor and rid it of this nefarious beast. A single arrow is all it takes to lay Clovis to rest. Hurdle is overjoyed. \"YES! Take that, Clovis!\" Regarding your reward, the hermit touches you. \"You lucky now,\" he says cryptically. \"You find what you seek.\"",
+				"rewards": {
+					"text": "Gain 1 collective [hide].<br/>All characters start the next scenario with [muddle].<br/>The first time any character would draw a loot card next scenario, they instead draw two cards, choose one to keep, and place the other on the bottom of the deck."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Try to talk the raving hermit down.",
+				"requirement": "[trait] OUTCAST",
+				"text": "You know there's no use trying to convince the stubborn hermit of the beaver's innocence. Instead you appeal to Hurdle's better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. \"Wise mer-canary... You help Hurdle see truth, yes. Hurdle return gift.\"",
+				"rewards": {
+					"text": "Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved)."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Try to talk the raving hermit down.",
+				"requirement": "[not] [trait] OUTCAST",
+				"text": "You've been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. \"Stupid mer-canaries!\" The hermit rages as he scurries off. \"You regret!\" As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you... but when you look back, Clovis is gone.",
+				"rewards": {
+					"text": "All characters start the next scenario with [curse]."
+				}
+			}
+		}
+	},
 	"WR-06": {
 		"text": "<p>A translucent Aesther wearing hunter's garb is studying some tracks on the path, and turns to catch your attention as you approach. \"You there! A moment of your time!\" He flags you down. \"I've been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?\"</p><p>When you don't immediately respond, he thumbs a wicked-looking blade and continues: \"You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.\" The Aesther's eyes flash a dark longing.</p>",
 		"options": {
@@ -46,7 +76,7 @@
 		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They'll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It's a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers... they's a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans're just gray worms swimming around in a skull driving a skeleton around. This here's a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand 'em, but I can't say I understand 'em.\" The Kivak waits, unblinkingly.</p>",
 		"options": {
 			"A": {
-				"trigger": "Kill the Kivak",
+				"trigger": "Kill the Kivak.",
 				"text": "You cut the doomed Kivak down. It doesn't move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: \"Most Kivak just want to eat dirt and grass. O'course I get the weird ones.\"",
 				"rewards": {
 					"text": "No effect."
@@ -54,7 +84,7 @@
 			},
 			"B1": {
 				"id": "B",
-				"trigger": "Refuse and force your way through the sea of animals",
+				"trigger": "Refuse and force your way through the sea of animals.",
 				"requirement": "[trait] OUTCAST",
 				"text": "You don't know what this solitary Kivak did to wrong the others, but you understand rejection by your peers. You grab the Kivak and push through the herd. Once on the other side, the reject snorts in thanks before wandering off.",
 				"rewards": {
@@ -63,7 +93,7 @@
 			},
 			"B2": {
 				"id": "B",
-				"trigger": "Refuse and force your way through the sea of animals",
+				"trigger": "Refuse and force your way through the sea of animals.",
 				"requirement": "[not] [trait] OUTCAST",
 				"text": "You ignore the lone Kivak and the crazy shepherd, instead pushing through the herd. They stand strong, and their stone skin makes passage akin to squeezing through a tight cave. Finally, you emerge exhausted on the other side of the herd.",
 				"rewards": {

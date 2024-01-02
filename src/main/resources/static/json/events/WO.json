@@ -27,6 +27,32 @@
 			}
 		}
 	},
+	"WO-08": {
+		"text": "<p>You're halfway through your polar bear burger when the alarm bell tolls. \"Algox to the west!\" a guard shouts. With a wistful look at the rest of your lunch, you grab your gear and rush toward the wall.</p><p>You don't make it twenty steps when the alarm bell tolls again. Strange—they're only supposed to ring it once per attack. A call of \"Algox to the east!\" rings over the outpost.</p><p>Wait a minute. Weren't they coming from the west? They couldn't have circled around that fast. The guards are clearly as confused as you are, but a frantic shout from the guard tower clears it up: \"Algox to the east—and the west!\"</p><p>Oh. Oh no.</p>",
+		"options": {
+			"A": {
+				"trigger": "Stay together and fend off one of the two attacks.",
+				"text": "You stay together and head to repel one of the two attacks. With your whole party as a single force you fend off the Algox raiders without much trouble. Those defending against the other side of the outpost, however, were not so effective. That side of the outpost takes heavy damage.",
+				"rewards": {
+					"text": "-4 [target]<br/>During the below threat, choose one side of Frosthaven and target buildings closest to the wall on that side (players break ties). This threat wrecks all damaged buildings."
+				}
+			},
+			"B": {
+				"trigger": "Split up and support defensive efforts on both sides of the town.",
+				"text": "The Algox raiders split their attack, and, as much as you don't like to admit it, the only way through this appears to be to split up your defenses.",
+				"rewards": {
+					"text": "During the below threat, target buildings closest to the wall (players break ties). For each target, alternate which side of Frosthaven is attacked."
+				}
+			}
+		},
+		"outpostAttack": {
+			"attack": 20,
+			"target": 8,
+			"rewards": {
+				"text": "Gain 2 collective [hide]."
+			}
+		}
+	},
 	"WO-10": {
 		"text": "<p>You step down into The Crater, Frosthaven's burned-out drinking spot, for an evening's relaxation. Hopes of a quiet evening are ruined by Xain, a local who is always \"temporarily\" down on his luck, walking off dejected from one of the tables. As soon as he spots you he brightens up and straightens himself out.</p><p>\"Hey! Friends! Just the folks I was looking to see. This is perfect timing—incredible timing—I've got something you're going to want to hear.\" You doubt it, but Xain nods emphatically.</p><p>\"I've got a new business opportunity. I've worked it out with a friend of mine—and this is real hush-hush—but Lurkers are apparently crazy about polar bear meat. I've got a supply chain lined up like you wouldn't believe: cash goes to the Algox, they get me the bear-meat, then I sell those juicy steaks to the Lurkers for valuable trinkets from the ocean floor.\" He pauses to let the brilliance sink in.</p><p>\"So, the problem is I need to front-load a bit of the funding here. The more money, the more steaks. I'm guaranteeing massive returns on your investment. Whaddaya say?\"</p>",
 		"options": {

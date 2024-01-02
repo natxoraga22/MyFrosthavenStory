@@ -218,7 +218,26 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SR-23": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>It is much too early to have started drinking for the day, and much too late to still be tipsy from the night before, which makes it all the more surprising when you come upon two disheveled men fist-fighting on the path before you. They're fighting not only one another but also seemingly with the snow, and if you had to place a bet, you'd say the snow is winning. You intervene between the two drunks.</p><p>After a couple sloppy swings somewhere in your direction, they drop all animosity. \"Thank the—hic—Oak! We were out here gathering snowthistle when we were set upon by those terrible—hic—monsters! I'm Nits and this is my brother Narb.\"</p><p>Narb tries to step forward at the introduction, but winds up tripping back into the snow. It doesn't faze him in the slightest, and he rolls over onto his back to continue singing your praises, \"If you hadn't stopped those monsters, we'd be digested by now!\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Bask in this newfound adoration.",
+				"text": "The reverence seems fine at first, but Narb's words eventually trail off as he falls asleep in the snow. Nits starts weeping in appreciation, noting emphatically that he loves you, his praise sporadically interrupted by hiccups. It becomes almost an adventure in itself just to get back on your way. You make sure both brothers are safely on their way back to Frosthaven and then head off at the first opportunity.",
+				"rewards": {
+					"text": "Lose 5 gold.",
+					"scenarios": [{ "id": "128" }]
+				}
+			},
+			"B": {
+				"trigger": "Deny there were ever any monsters.",
+				"text": "<p>\"Monsters?!\" Narb starts pummeling you, or attempts as much, and Nits takes to stomping the snow. \"Take that!\"</p><p>Eventually, you calm them both, but it's to no avail. A moment later, the cycle repeats itself, leaving them to fight whatever is in arms' reach. You make an exit in the chaos. At least all that activity should keep them from freezing to death in the snow.</p>",
+				"rewards": {
+					"text": "All characters start the next scenario with [damage] 1.",
+					"scenarios": [{ "id": "128" }]
+				}
+			}
+		}
 	},
 	"SR-24": {
 		"unlockedBy": { "section": { "id": "129.3" }}

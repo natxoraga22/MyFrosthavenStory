@@ -188,6 +188,69 @@
 			}
 		}
 	},
+	"SO-21": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-22": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-23": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-24": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-25": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-26": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-27": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-28": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-29": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-30": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-31": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-32": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-33": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-34": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SO-35": {
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>As you enter the barracks, you find Captain Olmstead staring down Eros, the local Savvas playwright. Eros taunts the Captain with a smirk, gathering the pot into a pocket in its scarf after a game of cards.</p><p>\"Don't worry, Captain. This money will be put towards building Unfettered costumes for my latest work: 'The Fettered Life: A Musical.' I'll be sure to list these barracks and especially you as a sponsor.\" Eros scoops up the last of the winnings and makes an exit.</p><p>Captain Olmstead looks to be on the verge of steam pouring out of his ears. He grabs a chair, snapping it in half with his bare hands. \"That was supposed to be for upgrading the barracks! ARRgh!\" He picks up the table, struggling to tear it apart.</p>",
+		"options": {
+			"A": {
+				"trigger": "Offer to pay to upgrade the barracks; it's worth it for town defense.",
+				"requirement": "LOSE 10 COLLECTIVE GOLD",
+				"text": "Captain Olmstead looks relieved, calming his breathing. \"It's not that I don't like art. I like art. I love music. I even love musicals. I just hate that Savvas.\" He centers himself. \"In any case, thank you.\"",
+				"rewards": {
+					"text": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
+				}
+			},
+			"B": {
+				"trigger": "This seems like the perfect time to be somewhere else.",
+				"text": "You make a hasty exit—no need to disturb the Captain when it's clear he needs some alone time. There will be other opportunities.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"SO-36": {
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},

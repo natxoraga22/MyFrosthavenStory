@@ -211,6 +211,42 @@
 			}
 		}
 	},
+	"SR-21": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-22": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-23": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-24": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-25": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-26": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-27": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-28": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-29": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-30": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-31": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"SR-32": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
 	"SR-33": {
 		"unlockedBy": { "event": { "id": "SR-03" }}
 	},

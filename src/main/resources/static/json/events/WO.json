@@ -232,6 +232,87 @@
 			}
 		}
 	},
+	"WO-21": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-22": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-23": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-24": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-25": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-26": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-27": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-28": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-29": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-30": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-31": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-32": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-33": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-34": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-35": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-36": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-37": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-38": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-39": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-40": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-41": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-42": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-43": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-44": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-45": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-46": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WO-47": {
+		"unlockedBy": { "section": { "id": "129.3" }}
+	},
 	"WO-61": {
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},

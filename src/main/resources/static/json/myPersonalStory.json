@@ -185,13 +185,22 @@
 		{ "scenario": { "id": "034" }},
 		{
 			"outpostPhase": {
-				"passageOfTime": [{ "id": "129.3" }, { "id": "68.2" }],
+				"passageOfTime": [{ "id": "129.3" }, { "id": "66.2" }],
 				"outpostEvent": { "id": "SO-35", "chosenOption": "A" },
 				"levelUps": [{ "id": "trapper", "level": 4 }],
 				"upgrade": [{ "id": "barracks", "level": 4 }, { "id": "alchemist", "level": 2 }]
 			}
 		},
+		{ "event": { "id": "SR-23", "chosenOption": "A" }},
 		{ "scenario": { "id": "099" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-16", "chosenOption": "B" },
+				"levelUps": [{ "id": "crashingtide", "level": 7 }],
+				"build": [{ "id": "tradingpost", "level": 1 }]
+			}
+		},
+		{ "event": { "id": "SR-15", "chosenOption": "A" }},
 		{ "scenario": { "id": "100" }}
 	]
 }

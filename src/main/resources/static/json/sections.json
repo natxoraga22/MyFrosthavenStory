@@ -22,7 +22,12 @@
 		}
 	},
 	"66.2": {
-		"unlockedBy": { "scenario": { "id": "115" }}
+		"title": "The Pass is Ready",
+		"unlockedBy": { "scenario": { "id": "115" }},
+		"text": "<p>“It’s ready!” Pinter Droman shouts as he bursts into Satha’s cabin, interrupting your meeting on the latest building projects. The excitable tinkerer opens his mouth as if to continue speaking, but only gasps for breath.</p><p>Satha leans back in her chair and winks at you. “What’s wrong, Pinter, did you run all the way here from the Frozen Pass?” she asks with a smirk.</p><p>“No,” Pinter wheezes, “I had to stop a couple times. But it’s ready! The shortcut through the Frozen Pass is complete! I call it... Droman’s Path!”</p><p>You helped Droman with this project on a couple of occasions, but you hadn’t expected it to be done so soon. Thanks to a lucky landslide, Pinter’s ingenuity, and weeks of backbreaking work, this shortcut could shave days off the dangerous trek through the Frozen Pass. Satha explained why this was so important: A shorter trip means more traveling merchants coming to Frosthaven, which in turn means more life-saving supplies for the beleaguered outpost.</p><p>Satha laughs in delight, clapping the breathless Quatryl on the back. “Great work, Droman! We’ll send for some of the braver merchants to give this a test run as soon as we’re able.” She turns to you with a smile. “You helped build this path as much as anyone; you should be there to celebrate when the first caravan rolls through!”</p><p>The mayor’s grin doesn’t falter, but you’re pretty certain you detect an edge in her voice, and you understand the unspoken end to her sentence: “—in case anything goes wrong.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "116" }]
+		}
 	},
 	"68.1": {
 		"unlockedBy": { "event": { "id": "WO-10" }}
@@ -74,6 +79,19 @@
 		"text": "The Great Dallum accepts your generous gift, whispering words of kindness into your ear. It’s not perfectly applicable, but as a metaphor there really is something to what he says. Yes, you get it now... this has some very practical applications, really. This changes everything.",
 		"rewards": { 
 			"text": "<p>Lose any 3 collective resources.<br/>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
+		}
+	},
+	"129.3": {
+		"title": "The Second Year",
+		"text": "<p>While life on the tundra is anything but easy, your time in Frosthaven has earned you a pedigree few could ever touch. You’ve survived in the place where life is so hostile to your existence that some battered wooden walls are all that stand between you and an icy death. But today, with the sun cresting over the mountains and the promise of summer stretching before you, you can’t help but feel hopeful.</p><p>You’ve tested your strength against countless enemies, but you’ve made some friends in this pocket of life, too. While you don’t know what the next year holds, you know this place has earned its name: “home.”</p>",
+		"rewards": {
+			"text": "Gain 2 soldiers.",
+			"events": {
+				"SO": [{ "id": "SO-21" }, { "id": "SO-22" }, { "id": "SO-23" }, { "id": "SO-24" }, { "id": "SO-25" }, { "id": "SO-26" }, { "id": "SO-27" }, { "id": "SO-28" }, { "id": "SO-29" }, { "id": "SO-30" }, { "id": "SO-31" }, { "id": "SO-32" }, { "id": "SO-33" }, { "id": "SO-34" }, { "id": "SO-35" }],
+				"SR": [{ "id": "SR-21" }, { "id": "SR-22" }, { "id": "SR-23" }, { "id": "SR-24" }, { "id": "SR-25" }, { "id": "SR-26" }, { "id": "SR-27" }, { "id": "SR-28" }, { "id": "SR-29" }, { "id": "SR-30" }, { "id": "SR-31" }, { "id": "SR-32" }],
+				"WO": [{ "id": "WO-21" }, { "id": "WO-22" }, { "id": "WO-23" }, { "id": "WO-24" }, { "id": "WO-25" }, { "id": "WO-26" }, { "id": "WO-27" }, { "id": "WO-28" }, { "id": "WO-29" }, { "id": "WO-30" }, { "id": "WO-31" }, { "id": "WO-32" }, { "id": "WO-33" }, { "id": "WO-34" }, { "id": "WO-35" }, { "id": "WO-36" }, { "id": "WO-37" }, { "id": "WO-38" }, { "id": "WO-39" }, { "id": "WO-40" }, { "id": "WO-41" }, { "id": "WO-42" }, { "id": "WO-43" }, { "id": "WO-44" }, { "id": "WO-45" }, { "id": "WO-46" }, { "id": "WO-47" }],
+				"WR": [{ "id": "WR-21" }, { "id": "WR-22" }, { "id": "WR-23" }, { "id": "WR-24" }, { "id": "WR-25" }, { "id": "WR-26" }, { "id": "WR-27" }, { "id": "WR-28" }, { "id": "WR-29" }, { "id": "WR-30" }]
+			}
 		}
 	},
 	"131.3": {

@@ -2,5 +2,28 @@
 	"id": "034",
 	"name": "Top of the Spire",
 	"questLine": "Unfettered",
-	"unlockedBy": [{ "scenario": { "id": "023" }}, { "scenario": { "id": "024" }}]
+	"coordinates": "C6",
+	"unlockedBy": [{ "scenario": { "id": "023" }}, { "scenario": { "id": "024" }}],
+	"complexity": 2,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when the Lord of Chaos is dead. At the end of that round, read [section_86.4].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>The highest level of the spire allows an unparalleled view of the region. Hundreds of ice spikes as tall as pine trees spread out in all directions, making the plain beneath this metal tower appear like a great spiny beast with its hackles raised. You would take time to admire the sight had you not just witnessed the horrors at work in this demonic spire. And now the architect of those horrors, the driving force of this vile factory, stands before you.</p><p>It’s a demon, a creature like those you fought below, but its form is far more twisted. An elder fiend, the creature you face is a furious, intertwined mass of whipping tendrils and hard, slick shell. Its head nods steadily: an alien skull wrapped in tight, prismatic skin and bursting with errant, uncoordinated horns. It is a creature born of madness, and calls to you in a high, breathy voice.</p><p>“Weak, childish things. You waste your last moments piddling here.” It laughs, but the noise is closer to retching. “My power is the only true reality, mortals. The power of pain and fear and chaos.”</p><p>The beam of light, which had until now been humming idly, suddenly flares to life and curves sideways, stretching out to the demon like a violent river. The sound is incredible. Slivers of energy break off and snap against the brick walls, blackening them with fiery scars.</p><p>After a moment the beam settles and the noise is replaced with the demon’s nauseating laughter.</p><p>“This realm is mine now,” it says, “and no being will escape the rebirth.”</p><p>You have known fear, no adventurer survives without it. And yet, despite all of your hard years, you know that fear and madness are not only the forces that hold power here. There are others. There are stronger forces that you can feel even now, forces that drive your hand to your weapon, that steel your nerves and light a new fire in you. They are forces that lift your feet and compel you forward, that raise your weapon high into the air and give you the will to fight. You take hold, gathering every ounce of strength, and charge.</p>",
+			"specialRules": "<p>The Lord of Chaos is immune to forced movement.</p><p>All corridors represent the beam of chaotic energy. Any character or character summon who enters a corridor hex suffers hazardous terrain damage and gains [muddle] and [curse]. In addition, any character entering one must also place one damage token on their character mat.</p><p>Set the numbered tokens next to the map. These will represent chaos sparks, enemies to you and allies to the Lord of Chaos. They have 1+L hit points. On initiative 90 each round, they perform: [move] 2; [attack] (C-2)+(2xT) where T is the number of damage tokens on the target’s character mat. All chaos sparks cannot focus on character summons, and no more than Cx2 sparks can be on the map at any time.</p>",
+			"bossSpecials": {
+				"1": "Spawn one chaos spark at [b] for two or three characters, or one spark at both [a] and [b] for four characters. Then the Lord of Chaos performs:<br/>[attack] -2, [target] C, [range] 5, [immobilize]",
+				"2": "Spawn one chaos spark at [a] for two characters, or one spark at both [a] and [b] for three or four characters. Then each enemy, even those with [immobilize], is forced to move one hex toward the closest unoccupied corridor hex."
+			}
+		},
+		"86.4": {
+			"trigger": "The Lord of Chaos is dead",
+			"conclusion": "<p>The great beam of energy flickers. It flashes yellow—blue—orange—and then goes out.</p><p>The demon lies beneath you. Its tendrils are clenched tight, knotted in pain, but still its eyes watch. Even now the creature burns with scorn. It shakes. A noise breaks from it like glass and metal rubbing together—a howl, a curse on you and this world and the power it nearly grasped.</p><p>Then the demon cracks. Its body, too brittle and ancient to dissolve into liquid, breaks apart and slowly disintegrates into the air, a cloud of sooty, prismatic smoke drifting out into the tundra.</p><p>The energy beam sputters and sinks down, and finally, the spire is quiet. Curiously, in this new calm, you notice a pink piece of material—coral perhaps—lying in the remains of the demon at about the point where the beam met its chest. You feel a strong connection to it and take it with you as you leave.</p><p>It’s impossible to know what cataclysm you prevented today, and you doubt anyone will believe the story when you tell it, but you know that the north, this windblown, spine-backed wilderness—is safer now.</p>",
+			"rewards": {
+				"text": "Gain “Coral Shard” campaign sticker."
+			}
+		}
+	},
+	"path": ["main", "86.4"]
 }

@@ -84,6 +84,7 @@
 .icon.boat        { max-height: 18px; }
 .icon.checkmark   { max-height: 14px; }
 .icon.damage      { max-height: 18px; }
+.icon.dualHand    { max-height: 18px; }
 .icon.forceLinked { max-height: 11px; }
 .icon.heal        { max-height: 18px; }
 .icon.item        { max-height: 15px; }
@@ -94,6 +95,7 @@
 .icon.range       { max-height: 15px; }
 .icon.retaliate   { max-height: 17px; }
 .icon.shield      { max-height: 18px; }
+.icon.singleHand  { max-height: 18px; }
 .icon.sled        { max-height: 14px; }
 .icon.trait       { max-height: 18px; }
 .icon.xp          { max-height: 18px; }

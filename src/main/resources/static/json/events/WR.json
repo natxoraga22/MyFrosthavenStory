@@ -220,5 +220,17 @@
 	},
 	"WR-30": {
 		"unlockedBy": { "section": { "id": "129.3" }}
+	},
+	"WR-37": {
+		"unlockedBy": { "event": { "id": "SR-15" }}
+	},
+	"WR-38": {
+		"unlockedBy": { "event": { "id": "SR-15" }}
+	},
+	"WR-39": {
+		"unlockedBy": { "event": { "id": "SR-15" }}
+	},
+	"WR-41": {
+		"unlockedBy": { "section": { "id": "25.2" }}
 	}
 }

@@ -165,6 +165,25 @@
 			}
 		}
 	},
+	"SO-16": {
+		"text": "<p>You're settling in for the night when a stern knock raps against the front door to your longhouse. It's a squat, sweaty Quatryl mail carrier, intent on making a delivery to your longhouse. You look at the package: the address is right, but the name belongs to a previous resident who met an unfortunate end under an Algox raider's fist.</p><p>You nod noncommittally and accept the package. You're saving the mail carrier a long trip back with the box, really. Now you just have to figure out what to do with it.</p>",
+		"options": {
+			"A": {
+				"trigger": "Keep the contents for yourself.",
+				"text": "Inside you find heartfelt letters, a warm sweater, home-baked bread, and lots of well-wishes from a family in the capital. It feels awful to sift through, knowing the intended recipient's fate.",
+				"rewards": {
+					"text": "Gain 5 collective gold."
+				}
+			},
+			"B": {
+				"trigger": "Pass it along to some of the previous resident's friends.",
+				"text": "You find some of the dead guard's companions at the barracks and hand off the package. Opening it is a somber occasion, but, ultimately, all of the homemade items inside lift the soldiers' spirits, and using them brings back fond memories of their friend.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			}
+		}
+	},
 	"SO-19": {
 		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: \"We've stocked enough away and the harvest is plentiful. It's about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?\"</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
 		"options": {
@@ -303,6 +322,9 @@
 	},
 	"SO-60": {
 		"unlockedBy": { "section": { "id": "7.3" }}
+	},
+	"SO-61": {
+		"unlockedBy": { "section": { "id": "25.2" }}
 	},
 	"SO-62": {
 		"unlockedBy": { "section": { "id": "189.1" }}

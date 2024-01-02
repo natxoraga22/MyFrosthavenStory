@@ -170,6 +170,44 @@
 			}
 		}
 	},
+	"SR-15": {
+		"text": "<p>You encounter a young Algox away from his tribe, looking hungry and weary. He explains his name is Malrog, and that he has been exiled as part of the ritual transition into adulthood. He will need to slay a great beast to prove his value and return to his people. It's clear he doesn't want to interact with you, but he's desperate.</p><p>\"I shattered my greatsword against the rocks two days ago, and now I am defenseless. It is beneath my status to ask, but do you have anything I could use?\"</p><p>Judging by his current condition, it doesn't look like he'll make it very long without your help.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Leave Malrog with a [singleHand] or [dualHand] item (select the item now).",
+				"requirement": "THE SELECTED ITEM IS [dualHand]",
+				"text": "\"Thank you! Your kindness is incredible. I will not forget this day. Our peoples have a history of adversity, but we are friends.\"",
+				"rewards": {
+					"text": "Return the selected item to the available supply.",
+					"events": {
+						"WR": [{ "id": "WR-37" }]
+					}
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Leave Malrog with a [singleHand] or [dualHand] item (select the item now).",
+				"requirement": "THE SELECTED ITEM IS [singleHand]",
+				"text": "\"I am grateful for your kindness. Thank you.\"",
+				"rewards": {
+					"text": "Return the selected item to the available supply.",
+					"events": {
+						"WR": [{ "id": "WR-38" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Refuse to interfere in the ritual and provide him nothing.",
+				"text": "You tell the Algox it would be dishonorable for you to interfere and assist him where others had no help. The Algox nods his understanding and continues on his way into the snow.",
+				"rewards": {
+					"events": {
+						"WR": [{ "id": "WR-39" }]
+					}
+				}
+			}
+		}
+	},
 	"SR-16": {
 		"text": "<p>The treacherous road ahead of you is blocked by a tattered blue blanket stretched across the path. Your approach disturbs the Inox under it, who jumps up in surprise.</p><p>\"Oh, eh. Wasn't expecting to see others out here. you from Frosthaven? I used to be from there, but haven't been back in uh... a while.\" He rubs the grey fur on his chin thoughtfully, which irritates one of the long scratches running down his face. A bit of blood oozes out, and he sees your concern.</p><p>\"That? It's nothing. Was cold last night, bedded down with an Algox—what they call 'sharing a horn.' Turned on me in the morning. Buyer's remorse, eh?\" He smiles in a way that suggests he hasn't smiled around people for some time.</p><p>\"Y'know... I used to work in Frosthaven's lumber yard. I've got some skill with a saw. Would be willing to teach you, if you've got something edible to trade. Or maybe you've got something warm to wear?\"</p>",
 		"options": {

@@ -103,7 +103,16 @@
 		"levels": {
 			"1": {
 				"builtSection": {
-					"id": "25.2"
+					"id": "25.2",
+					"title": "Trading Post Built",
+					"text": "<p>“Guys, guys! This is all a misunderstanding!” Xain, an acquaintance who always seems down on his luck, pleads as two guards push him unceremoniously into the tent of the new trading post. Mayor Satha is waiting inside, arms crossed.</p><p>“Mayor! I was just coming to see you, actually—I’d brokered a deal, a… a fantastic deal! The Abaeli are willing to polish the town guard’s weapons for a price you wouldn’t believe. I’d just finished packing up the armory and was going to surprise everyone tomorrow morning—”</p><p>“And did you think that the Abaeli wouldn’t attack while all of our defenses were off being ‘polished’?”</p><p>“No, they were… I mean, it was really an excellent price…” Xain meekly trails off, realization settling in.</p><p>“I have put up with your harebrained schemes in Frosthaven for long enough. This here?” She gestures around the trading post tent. “This is your penance. You will put that entrepreneurial spirit to work. You will receive shipments. You will sell goods. Honest goods.”</p><p>Xain looks mortified. “But… but for how long?”</p><p>Satha brushes past him on her way out of the tent. “Until I say otherwise. And if you screw this up? I’m marching you out of Frosthaven myself.” She nods at you in passing. “Look, it’s your first customers.”</p><p>“Oh, uhm. Hello.” Xain gives you a sheepish smile. “Welcome to the trading post?”</p>",
+					"rewards": {
+						"events": {
+							"SO": [{ "id": "SO-61" }],
+							"WO": [{ "id": "WO-80" }],
+							"WR": [{ "id": "WR-41" }]
+						}
+					}
 				}
 			},
 			"2": {

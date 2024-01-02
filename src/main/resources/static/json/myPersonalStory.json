@@ -200,7 +200,7 @@
 				"build": [{ "id": "tradingpost", "level": 1 }]
 			}
 		},
-		{ "event": { "id": "SR-15", "chosenOption": "A" }},
+		{ "event": { "id": "SR-15", "chosenOption": "A1" }},
 		{ "scenario": { "id": "100" }}
 	]
 }

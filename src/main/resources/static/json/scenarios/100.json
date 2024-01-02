@@ -1,5 +1,6 @@
 {
 	"id": "100",
 	"name": "Inside the Swarm",
-	"questLine": "JobPosting"
+	"questLine": "JobPosting",
+	"unlockedBy": { "scenario": { "id": "099" }}
 }

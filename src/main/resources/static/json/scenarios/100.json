@@ -2,5 +2,35 @@
 	"id": "100",
 	"name": "Inside the Swarm",
 	"questLine": "JobPosting",
-	"unlockedBy": { "scenario": { "id": "099" }}
+	"coordinates": "A3",
+	"unlockedBy": { "scenario": { "id": "099" }},
+	"complexity": 3,
+	"goals": "The scenario is complete when all enemies in it are dead and the goal treasure tile has been looted. At the end of that round, read [section_147.1].",
+	"effects": "Each character adds two [minus1] cards to their attack modifier deck.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>If your body is here, it is limp. Warm, milky darkness washes over you in waves. You open your eyes, forcing them open with all your willpower. No, they’re still closed. You open them again and again. Never re-closing them, just opening them over and over and... no, you can see. It’s an icepick of clarity that scrapes against your spine. You can see everything, forever. It’s too much. You want to cry—to shed tears at the enormity—but your eyes are still shut.</p><p>“Focus! Concentrate on what you know,” Gem’s voice is a harp: slow, deliberate plucks that center you. “Imagine your strength, what makes you you. The rest will come back with time.” You remember. You’re here to stabilize the swarm. Keep it calm. You have purpose. And the voice... the voice is a friend?</p><p>“You’re reaching too far. Just concentrate on yourself. Focus on your strength. We need to build up your subconscious without waking your conscious mind.” You picture your arms, your legs. Your body, just as you remember it. And as suddenly as you recall, it is here.</p><p>“Good! We’ll need to reach the core of the Harrower’s mind. It is pure; there is no harm here except what you bring with you. Purge your mind and—”</p><p>Harm. You remember harm. You remember your strength, striking down harm. And as soon as you recall it, it too is here. A sigh permeates your consciousness, and you hear her voice again: “Please be careful... I don’t want to have to gather more mercenaries.”</p>",
+			"specialRules": "<p>Place each character’s entire pool of available ability cards (not just their hand size) into a set-aside deck next to their character mat. Each character then selects any two of these cards to form their starting hand.</p><p>Whenever any character rests or would lose a card to negate damage, instead of losing a card, they add any one set-aside card to their hand. In addition, whenever any character plays a lost action, instead of losing the card, they discard it and also add any one set-aside card to their hand. All [nonReturn] actions still place the card in the character’s lost pile as normal. All abilities that recover lost cards instead move cards from a character’s discard pile to their set-aside deck.</p><p>If any character would add another set-aside card to their hand while at their maximum hand size (including cards in their hand, active area, lost pile, and discard pile), they become exhausted.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_141.3]."
+		},
+		"141.3": {
+			"trigger": "Door [one] is opened",
+			"sectionLinks": "When door [two] is opened, read [section_102.1]."
+		},
+		"102.1": {
+			"trigger": "Door [two] is opened",
+			"text": "<p>You creak open the heavy door and peer into a surprisingly hospitable grand foyer. You hear that trilling voice rebounding inside your skull, reverberating off every inch of this place. It's coming back to you now. Gem, the old Orchid, is leading you to calm the mind of the Harrower, Zu. And this is... their mind?</p><p>“Ah! It's our old hideout in the Coppernecks.” Gem’s voice echoes. “Whatever you're doing is working—this is truly the spitting image of it, right down to our manservant!” A butler lumbers forward, flittering in and out of reality, like a figment in the corner of your eye.</p><p>A rumble issues forth from near its throat: “Thank you for stopping by. Brunch will be served shortly in the courtyard. I'll be forced to kill you now. Quite sorry. Any dietary restrictions?”</p><p>Gem's voice comes through less enthusiastically. “A pity, his brunch was really top-notch. Also he wasn't made of swirling ravens. Be a dear and clear that out, would you?”</p>",
+			"specialRules": "All characters return one card from their hand or discard pile to their set‑aside deck."
+		},
+		"147.1": {
+			"trigger": "All enemies are dead and the goal treasure tile has been looted",
+			"conclusion": "<p>With the last figment downed, the walls coalesce into crisp focus. Your mind snaps back to your real body with a crackle that leaves the lingering feeling of ash at the back of your throat. Every breath you inhale reeks of overwhelming citrus, your brain still unsure which senses mean what.</p><p>Gem opens the wooden box and dumps in a satchel of stale-looking ants, which combine with the existing bugs in a swirling mass and pour out onto the floor. The old Orchid looks delighted at the sight. “Zu! My sweet Zu, I could not be happier to see you! Here, I have a cloak for you.”</p><p>The mass of Harrower responds in halted, startled words: “What? No! How could thissss bee? Gemmm… it was a life sentence.”</p><p>“Sure, and it lasted all the guards’ lives and then some,” Gem retorts. “But you and I, we live longer than this lot. Do you want the cloak or not?”</p><p>“We have yet to pay my penanccce.” Zu drags out the last word, a hint of sorrow in their voice. Gem puts her hands on her hips.</p><p>“Enough moping. What we did is done, but I need your help to find Bartlet. You owe that much to the poor Savvas.”</p><p>The Harrower bows their head, defeated. “Give us the cloak.”</p>",
+			"rewards": {
+				"text": "Gain 5 gold each and 10 [xp] each.",
+				"scenarios": [{ "id": "101" }]
+			}
+		}
+	},
+	"path": ["main", "141.3", "102.1", "147.1"]
 }

@@ -1,0 +1,6 @@
+{
+	"id": "101",
+	"name": "Harrower Library",
+	"questLine": "JobPosting",
+	"unlockedBy": { "scenario": { "id": "100" }}
+}

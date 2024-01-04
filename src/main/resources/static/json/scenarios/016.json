@@ -2,5 +2,55 @@
 	"id": "016",
 	"name": "Derelict Elevator",
 	"questLine": "Unfettered",
-	"unlockedBy": { "scenario": { "id": "008" }}
+	"coordinates": "F10",
+	"unlockedBy": { "scenario": { "id": "008" }},
+	"complexity": 3,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when at least twelve rounds have passed and all enemies are dead. At the end of that round, read [section_48.2].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>Tall, evil-looking spires are one thing, but you’re more curious about the squat structure that sits all alone in this forest of icy obelisks. The structure has been coated, like everything else in this part of the world, in a thick, rock-hard layer of ice. Beneath that however, the walls appear to be made of some kind of dark metal, though there’s no way to be certain without breaking through. So, not having any better option, you get to work on the door.</p><p>Your equipment takes a beating, but the door takes one worse, and its icy seal finally pops open, revealing a huge, lightless chamber. Inside, long rows of bizarre, ruined machines stand amid heaps of soot and broken glass. Moving further, you discover a suspended platform hanging in the center of the chamber. It’s an elevator: a circular metal disk, waiting above a deep, not-at-all-ominous shaft, and next to it you find a panel lined with long-unused buttons and levers.</p><p>You press a couple of the buttons, expecting no response, but to your surprise, a string of strange yellow lamps illuminate the shaft below and the platform shudders. You don’t want to miss a free ride, so you jump aboard just as the metal disk starts to descend.</p><p>You feel good, all things considered. You’ve conquered this with your muscle and wit, and you take a moment to bask in your own ingenuity. The strangeness of this place was no match for you, and yet, somehow, it keeps getting stranger. Strange, like how the lights in the shaft seem to all be turning red. And strange too, how an alarm seems to be howling from somewhere below. And far stranger still is the way several panels in the walls around you are opening up to reveal large, rather unpleasant-looking firearms that seem to be pointing directly at you. Very strange indeed.</p>",
+			"specialRules": "<p>Tile 1-B is a fixed platform that tile 15-D is descending past. Place two damage tokens to the right of tile 1-B to indicate it is currently two floors below tile 15-D. At the end of each round, tile 15-D descends one floor, meaning you remove one damage token from the right of tile 1-B, or, if there are none there, place one to its left to indicate the number of floors it is then above tile 15-D. If, at the end of any round, a third damage token would be placed to the left of tile 1-B, the tile is then removed from the map. Any character on it suffers trap damage and is placed in the closest empty hex on tile 15-D. All other figures on it die.</p><p>The walls between the two tiles do not block line-of-sight and can be moved through, though figures cannot end their movement on them.</p>",
+			"sectionLinks": "At the start of the second round, read [section_90.3]."
+		},
+		"90.3": {
+			"trigger": "Start of the second round",
+			"text": "Bullets ricochet off the walls. You do your best to avoid them while trying to disarm the security system, but being on an elevator isn’t making it any easier. The platform continues to descend as you fight, and now a shower of pebbles and dirt has begun to fall from overhead. The rain of debris seems relegated to only one section of the lift, but you don’t know for how long.",
+			"specialRules": "Pebbles rain down at each [a]. This has no effect yet.",
+			"sectionLinks": "At the start of the fourth round, read [section_27.2]."
+		},
+		"27.2": {
+			"trigger": "Start of the fourth round",
+			"text": "What were once pebbles now are stones and cracked brick. Fist-sized hunks of rock have begun to fall from above and then crash loudly onto the metal floor; it seems the shaft is collapsing. You keep clear of the shower, but now more debris is beginning to fall elsewhere.",
+			"specialRules": "<p>Place one debris in each [a]. Any figure occupying [a] suffers trap damage and is placed in the closest empty hex.</p><p>Spawn two Ruined Machines at each [h] and one Ruined Machine at each [g]. These are normal for two characters, elite at [g] for three characters, or all elite for four characters.</p><p>Set up tile 1-D as depicted. This tile follows the same rules as tile 1-B. Place two damage tokens to the right of it (i.e. it is currently two floors lower than tile 15-D).</p><p>Pebbles rain down at [b]. This has no effect yet.</p>",
+			"sectionLinks": "At the start of the seventh round, read [section_44.2]."
+		},
+		"44.2": {
+			"trigger": "Start of the seventh round",
+			"text": "A shadow casts from overhead. You turn to where the first debris began to fall, and watch as a bulky mechanical creature lands, thudding onto the platform next to you. Several blades extend from its body and the creature begins to rotate, spinning faster and faster, filling the air with a high-pitched scream.",
+			"specialRules": "<p>Spawn one Flaming Bladespinner at [b]. It is normal for two characters or elite for three or four characters. Any figure occupying [b] suffers trap damage and is placed in the closest empty hex.</p><p>Spawn one elite Ruined Machine at each [g]. In addition, spawn one normal Ruined Machine at each [h] for three characters or one elite Ruined Machine at each [h] for four characters.</p><p>Set up tile 1-B as depicted. This tile follows the same rules as the previous tile 1-B. Place two damage tokens to the right of it (i.e. it is currently two floors lower than tile 15-D).</p><p>Pebbles rain down at each [c]. This has no effect yet.</p>",
+			"sectionLinks": "At the start of the ninth round, read [section_15.3]."
+		},
+		"15.3": {
+			"trigger": "Start of the ninth round",
+			"text": "You fight and dodge as best you can, but more rocks come, pounding out an uneven beat on the elevator floor.",
+			"specialRules": "<p>Place one debris in each [c]. Any figure occupying [c] suffers trap damage and is placed in the closest empty hex.</p><p>Pebbles rain down at [d], [e], and [f]. This has no effect yet.</p>",
+			"sectionLinks": "At the start of the twelfth round, read [section_39.1]."
+		},
+		"39.1": {
+			"trigger": "Start of the twelfth round",
+			"text": "As if one Bladespinner wasn’t enough, another wave lands to join the fight. Within seconds, they unfold their blades and move forward, adding to the whirring vortex of steel.",
+			"specialRules": "<p>Place one debris in [d]. Any figure occupying [d] suffers trap damage and is placed in the closest empty hex.</p><p>Spawn one Flaming Bladespinner at both [e] and [f]. These are normal for two characters, elite at [f] for three characters, or both elite for four characters. Any figure occupying [e] or [f] suffers trap damage and is placed in the closest empty hex.</p>"
+		},
+		"48.2": {
+			"trigger": "At least twelve rounds have passed and all enemies are dead",
+			"conclusion": "<p>Bent metal and smashed rock lies heaped all around you, and finally, the alarm stops. The elevator continues to drop, and the walls around you vanish completely, the shaft opening up into a vast, yawning blackness. You hang in immeasurable emptiness, the only sound the creaking of the elevator cords as the platform descends.</p><p>After a long, sobering gap of time, the platform finally comes to a stop. You step carefully from the elevator and find even more metal: a walkway built in two directions. There is little to see in any direction on this metal grating, but far to the right you can make out a single light flashing red. It’s a fair distance away but you’re certain it’s the same light as the elevator’s security system, which means there will be more machines waiting in that direction. You can’t go back the way you came, so you have to choose: You can either head straight for the light and fight these defenders head on [scenario_25], or you can head the opposite way, to the left, and see what lies in that direction [scenario_26].</p>",
+			"rewards": {
+				"text": "Gain 5 [xp] each. Gain 1 inspiration.<br/>Place map overlay sticker Y on the map in location Y (C10).",
+				"scenarios": [{ "id": "025" }, { "id": "026" }]
+			}
+		}
+	},
+	"path": ["main", "90.3", "27.2", "44.2", "15.3", "39.1", "48.2"]
 }

@@ -1,0 +1,6 @@
+{
+	"id": "026",
+	"name": "Quatryl Library",
+	"questLine": "Unfettered",
+	"unlockedBy": { "scenario": { "id": "016" }}
+}

@@ -212,11 +212,11 @@
 			}
 		},
 		{ "event": { "id": "SR-17", "chosenOption": "A1" }},
-		{ "scenario": { "id": "16" }},
+		{ "scenario": { "id": "016" }},
 		{
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-08", "chosenOption": "A" },
-				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": { "id": "13" }}],
+				"retirements": [{ "id": "crashingtide", "additionalPersonalQuest": { "id": "13" }}],
 				"newMembers": [{ "id": "snowdancer" }],
 				"build": [{ "id": "library", "level": 1 }],
 				"upgrade": [{ "id": "library", "level": 2 }]

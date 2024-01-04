@@ -184,6 +184,7 @@
 			"B2": {
 				"id": "B",
 				"trigger": "Leave the Orchid to his meditation and find your own way.",
+				"requirement": "[not] [trait] CHAOTIC or RESOURCEFUL",
 				"text": "It can't be that difficult to find a way through this blizzard. You head back the way you came for a few steps, then strike out toward what you're sure is the right direction. It is not, and by the time you've determined where you are, you're numb with cold.",
 				"rewards": {
 					"text": "All characters start the next scenario with [brittle] and [damage] 2."

@@ -4,7 +4,7 @@
 		"options": {
 			"A": {
 				"trigger": "Share notes of your travels.",
-				"text": "<p>Edwin is overjoyed to hear of your travels.<br/><strong class=\"fst-normal\">Mark a box next to each location in which you've completed at least one scenario:</strong></p><p><i class=\"fa-regular fa-square\"></i> Radiant Forest<br/><i class=\"fa-regular fa-square\"></i> Copperneck Mountains<br/><i class=\"fa-regular fa-square\"></i> Whitefire Wood<br/><i class=\"fa-regular fa-square\"></i> Crystal Fields<br/><i class=\"fa-regular fa-square\"></i> The Biting Sea</p><p>\"Thank you tremendously, that helps confirm several of the first-hand accounts I've collected. Nearly identical!\"</p>",
+				"text": "<p>Edwin is overjoyed to hear of your travels.</p><p><strong class=\"fst-normal\">Mark a box next to each location in which you've completed at least one scenario:</strong></p><p><i class=\"fa-regular fa-square\"></i> Radiant Forest<br/><i class=\"fa-regular fa-square\"></i> Copperneck Mountains<br/><i class=\"fa-regular fa-square\"></i> Whitefire Wood<br/><i class=\"fa-regular fa-square\"></i> Crystal Fields<br/><i class=\"fa-regular fa-square\"></i> The Biting Sea</p><p>\"Thank you tremendously, that helps confirm several of the first-hand accounts I've collected. Nearly identical!\"</p>",
 				"rewards": {
 					"text": "<p>Gain 3 collective gold for each checked box above.</p><p>When all boxes are checked:</p>",
 					"events": {

@@ -74,14 +74,6 @@
 					"text": "Add [section_155.2] OR [section_158.3] to the calendar in one week."
 				}
 			},
-			"A3": {
-				"id": "A",
-				"trigger": "Support Xain and invest in the scheme.",
-				"requirement": "[not] LOSE 15 COLLECTIVE GOLD",
-				"rewards": {
-					"text": "Read outcome B."
-				}
-			},
 			"B1": {
 				"id": "B",
 				"trigger": "Try to convince Xain to make you a partner without a monetary investment.",
@@ -94,7 +86,7 @@
 			"B2": {
 				"id": "B",
 				"trigger": "Try to convince Xain to make you a partner without a monetary investment.",
-				"requirement": "[not] [trait] PERSUASIVE and [not] [trait] RESOURCEFUL",
+				"requirement": "[not] [trait] PERSUASIVE or RESOURCEFUL",
 				"text": "Xain shakes his head, \"There are plenty of other people who are willing to be a patron of genius.\" He spots another group coming through the door. \"Hey! Friends! Just the folks I was looking to see!\"</p>",
 				"rewards": {
 					"text": "No effect."

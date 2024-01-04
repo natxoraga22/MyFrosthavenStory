@@ -210,6 +210,17 @@
 				"levelUps": [{ "id": "trapper", "level": 5 }],
 				"upgrade": [{ "id": "alchemist", "level": 3 }, { "id": "craftsman", "level": 5 }]
 			}
+		},
+		{ "event": { "id": "SR-17", "chosenOption": "A1" }},
+		{ "scenario": { "id": "16" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-08", "chosenOption": "A" },
+				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": { "id": "13" }}],
+				"newMembers": [{ "id": "snowdancer" }],
+				"build": [{ "id": "library", "level": 1 }],
+				"upgrade": [{ "id": "library", "level": 2 }]
+			}
 		}
 	]
 }

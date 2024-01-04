@@ -249,6 +249,39 @@
 			}
 		}
 	},
+	"SR-17": {
+		"text": "<p>Pushing through a set of spindly trees, you find a beautiful cloak swarmed over with scarabs and insects. It has ornate gold threading and looks quite expensive, but whenever you try to grab it the insects swarm tighter and ward you off—they're fiercely defensive of it.</p><p>You're always a bit wary of bugs that appear to be on a mission—this could be a Harrower in some state of disorganization. Then again, it could be that someone left candy in a discarded cloak pocket.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Attempt to communicate with the \"Harrower.\"",
+				"requirement": "BUG IN A JAR",
+				"text": "<p>You release the beetle you've been carrying into the swarm, and a few moments later, it forms into a full-sized Harrower.</p><p>\"Thank you, friends. This will not be forgotten.\"</p>",
+				"rewards": {
+					"text": "Place \"Empty Jar\" campaign sticker over \"Bug in a Jar\".",
+					"events": {
+						"SO": [{ "id": "SO-43" }]
+					}
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Attempt to communicate with the \"Harrower.\"",
+				"requirement": "[not] BUG IN A JAR",
+				"text": "If it is a Harrower, it's much too scattered to communicate with you. You try giving it some rations, scooping the bugs closer, and even some old wives' tricks from around the tavern. No luck.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B": {
+				"trigger": "Make a more aggressive attempt at grabbing the cloak.",
+				"text": "It takes a torch and some chasing, but you manage to retrieve the cloak and brush off the last of the bugs. Looks pretty nice!",
+				"rewards": {
+					"text": "Gain \"Cloak of Warding\" [item]."
+				}
+			}
+		}
+	},
 	"SR-21": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},

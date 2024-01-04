@@ -13,12 +13,26 @@
 		"unlockedBuilding": { "id": "carpenter" },
 		"altUnlockedBuilding": { "id": "inn" }
 	},
+	"09": {
+		"title": "Life Lessons",
+		"description": "Life is all about the experience. It is fleeting and really only meaningful on a very small scale—to you and those in your immediate surroundings. The best thing you can do with your life is to just go out and experience as much as possible. Have fun, find adventure, and maybe get a little blood on your face.",
+		"requirements": "Gain 150 experience from ability cards.",
+		"unlockedBuilding": { "id": "townhall" },
+		"altUnlockedBuilding": { "id": "library" }
+	},
 	"10": {
 		"title": "Explore the Reaches",
 		"description": "Who are these people? They come all the way to this glorious wilderness and then huddle together in their drab, little buildings. It's madness. You will climb the tallest peak and go farther out into the snow plains and frozen seas than anyone else has done before. You will see the glorious sights yet unseen.",
 		"requirements": "Complete five different scenarios that require [boat], [climbinggear], or [sled].",
 		"unlockedBuilding": { "id": "townhall" },
 		"altUnlockedBuilding": { "id": "library" }
+	},
+	"13": {
+		"title": "End the Trickery",
+		"description": "Vile little creatures, imps desire nothing more than to sow chaos. They are demons; unnatural abominations that have caused you nothing but pain. They tricked your family out of everything they owned, including their horse, which the imps ate. You loved that horse, and you simply hate imps.",
+		"requirements": "Kill fifteen Imps.",
+		"unlockedBuilding": { "id": "enhancer" },
+		"altUnlockedBuilding": { "id": "tavern" }
 	},
 	"20": {
 		"title": "Return to Simplicity",

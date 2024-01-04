@@ -137,6 +137,49 @@
 			}
 		}
 	},
+	"enhancer": {
+		"number": "44",
+		"name": "Enhancer",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "193.1"
+				}
+			},
+			"2": {
+				"builtSection": {
+					"id": "157.2"
+				}
+			},
+			"3": {},
+			"4": {
+				"builtSection": {
+					"id": "56.3"
+				}
+			}
+		}
+	},
+	"library": {
+		"number": "83",
+		"name": "Library",
+		"levels": {
+			"1": {
+				"builtSection": {
+					"id": "190.3"
+				}
+			},
+			"2": {
+				"builtSection": {
+					"id": "116.3"
+				}
+			},
+			"3": {
+				"builtSection": {
+					"id": "89.2"
+				}
+			}
+		}
+	},
 	"workshop": {
 		"number": "84",
 		"name": "Workshop",

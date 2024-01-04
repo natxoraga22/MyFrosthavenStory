@@ -13,8 +13,8 @@ import lombok.ToString;
 public class OutpostPhase extends StoryObject {
 
 	private int id;
-	private List<Section> passageOfTime;
 	private List<Section> townGuardPerks;
+	private List<Section> passageOfTime;
 	private Event outpostEvent;
 
 	// Downtime

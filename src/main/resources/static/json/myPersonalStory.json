@@ -201,6 +201,15 @@
 			}
 		},
 		{ "event": { "id": "SR-15", "chosenOption": "A1" }},
-		{ "scenario": { "id": "100" }}
+		{ "scenario": { "id": "100" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "194.3" }],
+				"passageOfTime": [{ "id": "176.4" }, { "id": "161.3" }],
+				"outpostEvent": { "id": "SO-12", "chosenOption": "A" },
+				"levelUps": [{ "id": "trapper", "level": 5 }],
+				"upgrade": [{ "id": "alchemist", "level": 3 }, { "id": "craftsman", "level": 5 }]
+			}
+		}
 	]
 }

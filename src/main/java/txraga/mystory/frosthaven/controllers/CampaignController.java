@@ -166,16 +166,6 @@ public class CampaignController {
 		// ID
 		outpostPhase.setId(id);
 
-		// PASSAGE OF TIME
-		if (outpostPhase.getPassageOfTime() != null) {
-			List<Section> passageOfTime = new ArrayList<>();
-			for (Section storyItemSection : outpostPhase.getPassageOfTime()) {
-				Section section = frosthaven.getSection(storyItemSection.getId());
-				if (section != null) passageOfTime.add(section);
-			}
-			outpostPhase.setPassageOfTime(passageOfTime);
-		}
-
 		// TOWN GUARD PERKS
 		if (outpostPhase.getTownGuardPerks() != null) {
 			List<Section> townGuardPerks = new ArrayList<>();
@@ -184,6 +174,16 @@ public class CampaignController {
 				if (section != null) townGuardPerks.add(section);
 			}
 			outpostPhase.setTownGuardPerks(townGuardPerks);
+		}
+
+		// PASSAGE OF TIME
+		if (outpostPhase.getPassageOfTime() != null) {
+			List<Section> passageOfTime = new ArrayList<>();
+			for (Section storyItemSection : outpostPhase.getPassageOfTime()) {
+				Section section = frosthaven.getSection(storyItemSection.getId());
+				if (section != null) passageOfTime.add(section);
+			}
+			outpostPhase.setPassageOfTime(passageOfTime);
 		}
 
 		// OUTPOST EVENT

@@ -140,6 +140,14 @@
 			"text": "Gain 30 collective gold."
 		}
 	},
+	"161.3": {
+		"title": "High Morale",
+		"unlockedBy": { "other": "Morale reaches 20" },
+		"text": "<p>The guard tower is crowded on this clear Frosthaven dawn. Every outposter able to make the climb has braved the snow-slick steps and packed each gate house to get a view of the morning’s events.</p><p>”It’s a waste of resources, I kept telling ’em.” Captain Olmstead grumbles as yet more people pack the overlook, causing the floorboards to groan under the excited chatter. You follow his eye toward the courtyard, where a monolith stands concealed by a tarp of stitched hides.</p><p>For weeks a secretive scaffold has occupied the town square as artisans carted stone, steel, and wood behind a curtain under the supervision of a scarfclad Savvas. Now the scaffold has been disassembled, and only the thin sheet blocks the finished monument from view.</p><p>Satha strides to center of the square and addresses the crowds with a bullhorn. “I’m not much for speeches,” the mayor begins. “And I’m not usually one for, uh, sentiment, either. But this place, these people... you make me proud.”</p><p>Finished, the mayor lowers her bullhorn and nods, and the Savvas signals its crew to pull the hide tarp.</p><p>A giant of stone and steel emerges: a human figure stands mid-stride on its way north, its determined gaze unflinching against the wind whipping in from the bay. Like the town of Frosthaven, the statue isn’t the most beautiful thing in the world. It wouldn’t be on display in any garden on the more civilized side of the Copperneck mountains. But it isn’t south of the mountains; it’s here, like Frosthaven, in a place it shouldn’t be able to exist, defying the cruel landscape that would spell death to anything of weaker stock.</p><p>A thundering cheer rises from the gathered outposters, echoing off the mountains and over the choppy waters of the harbor.</p><p>”Still a waste,” Captain Olmstead repeats, but even the surly guard captain can’t suppress a grin amid the victorious roar.</p>",
+		"rewards": {
+			"text": "<p>Gain 2 prosperity.</p><p>Place “Statue” campaign sticker on the town map at location F.</p>"
+		}
+	},
 	"168.2": {
 		"title": "Blast the Lurkers",
 		"unlockedBy": { "section": { "id": "114.2" }},
@@ -147,6 +155,14 @@
 		"rewards": {
 			"text": "<p>Place map overlay sticker Z on the map in location Z (F2).</p><p>Do not resolve an outpost event this week.</p>",
 			"scenarios": [{ "id": "050" }]
+		}
+	},
+	"176.4": {
+		"title": "Funeral for the Winter Fallen",
+		"unlockedBy": { "section": { "id": "53.3" }},
+		"text": "<p>Ever since the Deathwalker decided to improve the graveyard, they work on it tirelessly, expanding the grounds to make room for each body individually and making headstones to properly commemorate the fallen. The work slowed significantly in the winter as the ground froze solid, and now that the weather is beginning to thaw a bit, there is a lot of time to make up for.</p><p>The Deathwalker organizes a service to inter all of those who fell over the course of the winter, and you decide to attend. You fear that the morose proceedings will just worsen the mood on an otherwise nice and sunny day. But, as the burials commence, the guards begin sharing warming anecdotes about those who passed, and the mood turns almost celebratory.</p><p>“Remember that time Deke tried to light his fire arrow and ended up setting his trousers on fire instead? That boy knew nothing when he got here, but by the time the end came for him, fighting off three Lurkers at once, he had grown into quite the admirable warrior.”</p><p>And then somebody brings out the alcohol, and pretty soon the whole town is singing and crying and laughing together until the sun sets. It is quite the cathartic experience, and when people finally start shuffling home, still telling each other their favorite anecdotes, the Deathwalker still sits among the graves, smiling softly.</p><p>“They’re finally at peace.”</p>",
+		"rewards": {
+			"text": "Gain 2 morale."
 		}
 	},
 	"180.1": {
@@ -160,6 +176,14 @@
 		"text": "“Ah, my best customers! Heh.” It’s the old traveling merchant and his carriage full of items of suspicious origins. He invites you to poke through his inventory. “Same price as before, but even better value. No one’s going to come looking for these. Heh.” He doesn’t elaborate, and you think better than to press the issue.",
 		"rewards": { 
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
+		}
+	},
+	"194.3": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>The Crater is a burned-out pit where the old tavern used to stand. The building and its proprietor met their ends in the attack that happened when your band of mercenaries first arrived in Frosthaven, and despite the resources now being available to rebuild, no one seems to be in much of a hurry. A few tarps have been strung up between the remaining studs of the building and the environment has shifted from an actual business into a gathering spot for the populace. Extra furniture, mis-matched glassware, and an expectation you bring enough drink to share has made it into a friendly place to unwind, for as long as you can stand the wind and cold.</p><p>Tonight’s visit has a few people swapping stories around a metal drum full of coal, a Quatryl unhitching barrels of thick brown liquid off a donkey, and an old man wrapped tightly in a dirty cloak scribbling furiously in a journal. As you walk by, he flips it quickly shut.</p><p>“Trade a drink for a legend?” He taps two withered fingers on the table, encouraging you to join him. Intriguing enough. You pass your canteen over to him and he takes a long pull.</p><p>“The name’s Mulbrynn, but the story is about a group of explorers not unlike yourselves. Found an idol stronger than they were, something dark and powerful.” A wind whips through The Crater, and he pulls his cloak up to protect his neck. “Started talking to them, telling them to go up to the Imperial Mountains, that it would grant them their dreams and then some. Never made it, as best as I can tell.”</p><p>He pauses, getting a far-off look in his eye. “But I miss them. Maybe it’s the drink, or maybe it’s the cold, but it’s about time someone finished what they started.” He tears a page out of his journal and pushes it across the table, dropping your canteen on top of it as a paperweight. “That’s a map. Follow it or not, but I’m done mourning.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "132" }]
 		}
 	}
 }

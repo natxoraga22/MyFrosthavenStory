@@ -13,13 +13,13 @@
 			[[#{outpostPhase.title}]] <span class="titleSecondary">#[[*{id}]]</span>
 		</h1>
 
-		<!-- PASSAGE OF TIME -->
-		<th:block th:each="section : *{passageOfTime}">
+		<!-- TOWN GUARD PERKS -->
+		<th:block th:each="section : *{townGuardPerks}">
 			<th:block th:replace="~{fragments/section :: section(${section})}"></th:block>
 		</th:block>
 
-		<!-- TOWN GUARD PERKS -->
-		<th:block th:each="section : *{townGuardPerks}">
+		<!-- PASSAGE OF TIME -->
+		<th:block th:each="section : *{passageOfTime}">
 			<th:block th:replace="~{fragments/section :: section(${section})}"></th:block>
 		</th:block>
 

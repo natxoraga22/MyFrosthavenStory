@@ -81,6 +81,35 @@
 			}
 		}
 	},
+	"SO-12": {
+		"text": "<p>An incoming merchant ship tipped the town fishermen off to a dense school of large fish, about an hour's row up the bay. Captain Olmstead asked you to accompany and provide protection to the fishing expedition.</p><p>The merchants were right—after an afternoon in the calm water, the boat was full of enough fish to last the town half of winter. Which is why you're so dismayed when an Abael pops his head out of the water.</p><p>\"Per the Treaty of Deep Bay, these are our fish. Fin them over and leave immediately.\" He glares at you with black, unblinking eyes. You try to explain you've never heard of this treaty, but he cuts you off. \"Your disrespect for those already here and ignorance of our ways is no excuse. Give me the fish or face the consequences.\"</p>",
+		"options": {
+			"A": {
+				"trigger": "You have plenty of enemies already, and it's not worth making more. Besides, you have no idea how many Abaeli are in the water below you.",
+				"text": "Even if this treaty is nonsense, it's not worth the risk. You order the fishermen to dump the fish overboard. They grumble, but comply. With a splash, you watch lunch slowly sink into the depths.",
+				"rewards": {
+					"text": "Lose 1 morale."
+				},
+				"skipAttack": true
+			},
+			"B": {
+				"trigger": "There's no treaty. This Abael is full of chum and just wants a free lunch. Keep the fish and row back to Frosthaven.",
+				"text": "\"You'll regret this! The Treaty has very specific penalties for violations!\" He yells after you, just before disappearing under the waves.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		},
+		"outpostAttack": {
+			"attack": 20,
+			"target": 3,
+			"targetPriority": "Target even-numbered buildings in order of closest to farthest from the docks (players break ties).",
+			"text": "With the last of the Abaeli swimming away, you can finally dock. Satha demands to know what happened. At least you brought lunch.",
+			"rewards": {
+				"text": "Gain 1 morale."
+			}
+		}
+	},
 	"SO-13": {
 		"text": "<p>A Valrath man comes up to you in the street. \"Say... you spend some time outside the walls, right? Happened to come across any snowthistle?\" He speaks in a low voice, and his hood makes it difficult to make out his face.</p><p>Before you have a chance to respond, a portly woman rushes up with a broom, smacking the Valrath on the back. \"You again?! Leave these people alone!\" The valrath scurries off into an alley without another word. The woman turns to you, her hands on her hips.</p><p>\"Valraths and snowthistle, am I right? For most people it's a garnish, or medicinal. For them—well, they can't get enough of the stuff. Addicts!\" She mumbles to herself as she heads back into her home.</p><p>You continue your walk, but hear the Valrath's voice down the alley. \"So? Have any? I've got coin.\"</p>",
 		"options": {

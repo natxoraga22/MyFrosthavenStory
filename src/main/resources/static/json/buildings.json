@@ -92,7 +92,12 @@
 			"2": {},
 			"3": {
 				"builtSection": {
-					"id": "183.5"
+					"id": "183.5",
+					"title": "Alchemist Upgraded",
+					"text": "<p>The final stage of the alchemist’s lab is complete. With its expansion, you can now brew more advanced potions. Inside, you encounter bubbling vats and worktables covered in retorts and alembics. Among the glassware toil multiple residents of Frosthaven, including, oddly, the Savvas playwright, Eros.</p><p>You never pegged Eros as an alchemist. Eros flips its long scarf across its stony shoulder and gives you an equally stony look. “I’m researching poisons for a play where two lovers scheme to kill their enemies.” Eros sniffs at your incredulous expression. “It won’t be real poison. I simply need the actors to appear sickly enough to convince the audience.”</p><p>With a grandiose gesture, the Savvas squeezes an dropper into a vial. The potion promptly produces a puff of noxious smoke. Eros reels backward, and you quickly herd everyone out. It’s a good thing you told them to include ventilation in the building.</p>",
+					"rewards": {
+						"text": "Add items [item] 59 to [item] 65 to the random item blueprint deck."
+					}
 				}
 			}
 		}

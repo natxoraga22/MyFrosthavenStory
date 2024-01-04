@@ -42,6 +42,15 @@ public class Event extends StoryObject {
 		return StoryObject.Type.EVENT;
 	}
 
+	public boolean isSkipAttack() {
+		if (outpostAttack == null) return true;
+		for (String chosenOptionId : chosenOptions) {
+			Option chosenOption = options.get(chosenOptionId);
+			if (chosenOption != null && chosenOption.isSkipAttack()) return true;
+		}
+		return false;
+	}
+
 	public void populate(String id, Type type, Season season) {
 		// Set event id, type and season
 		if (this.id == null) this.id = id;
@@ -77,6 +86,7 @@ public class Event extends StoryObject {
 		private String requirement;
 		private String text;
 		private Rewards rewards;
+		private boolean skipAttack;
 
 		public void replaceIcons() {
 			this.trigger = ModelUtils.replaceIcons(this.trigger);

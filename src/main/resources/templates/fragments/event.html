@@ -44,7 +44,7 @@
 		</div>
 
 		<!-- Outpost attack -->
-		<th:block th:if="*{outpostAttack}">
+		<th:block th:if="*{!skipAttack}">
 			<hr>
 			<th:block th:replace="~{:: outpostAttack(*{outpostAttack})}"></th:block>
 		</th:block>

@@ -133,7 +133,7 @@
 				"upgrade": [{ "id": "loggingcamp", "level": 2 }]
 			}
 		},
-		{ "event": { "id": "B-02", "chosenOptions": [ "A1", "B", "B1" ]}},
+		{ "event": { "id": "B-02", "chosenOptions": ["A1", "B", "B1"] }},
 		{ "scenario": { "id": "049" }},
 		{ "scenario": { "id": "053" }},
 		{
@@ -215,7 +215,7 @@
 		{ "scenario": { "id": "016" }},
 		{
 			"outpostPhase": {
-				"outpostEvent": { "id": "SO-08", "chosenOption": "A" },
+				"outpostEvent": { "id": "SO-08", "chosenOptions": ["A2", "B"] },
 				"retirements": [{ "id": "crashingtide", "additionalPersonalQuest": { "id": "13" }}],
 				"newMembers": [{ "id": "snowdancer" }],
 				"build": [{ "id": "library", "level": 1 }],

@@ -60,6 +60,7 @@ public class Section {
 		for (Entry<String,String> bossSpecial : bossSpecials.entrySet()) {
 			bossSpecials.put(bossSpecial.getKey(), ModelUtils.replaceIcons(bossSpecial.getValue()));
 		}
+		this.conclusion = ModelUtils.replaceIcons(this.conclusion);
 		if (this.rewards != null) this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
 		this.sectionLinks = ModelUtils.replaceIcons(this.sectionLinks);
 	}

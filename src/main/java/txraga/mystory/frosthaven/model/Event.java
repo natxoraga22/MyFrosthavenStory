@@ -6,10 +6,12 @@ import java.util.Map.Entry;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
 import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 
@@ -62,14 +64,6 @@ public class Event extends StoryObject {
 			Option option = optionEntry.getValue();
 			if (option.getId() == null) option.setId(optionEntry.getKey());
 		}
-		replaceIcons();
-	}
-
-	public void replaceIcons() {
-		if (options != null) {
-			for (Option option : options.values()) option.replaceIcons();
-		}
-		if (outpostAttack != null) outpostAttack.replaceIcons();
 	}
 
 
@@ -82,17 +76,16 @@ public class Event extends StoryObject {
 	@ToString
 	public static class Option {
 		private String id;
+
+		@JsonDeserialize(using = IconsDeserializer.class)
 		private String trigger;
+
+		@JsonDeserialize(using = IconsDeserializer.class)
 		private String requirement;
+
 		private String text;
 		private Rewards rewards;
 		private boolean skipAttack;
-
-		public void replaceIcons() {
-			this.trigger = ModelUtils.replaceIcons(this.trigger);
-			this.requirement = ModelUtils.replaceIcons(this.requirement);
-			this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
-		}
 	}
 
 
@@ -109,10 +102,6 @@ public class Event extends StoryObject {
 		private String targetPriority;
 		private String text;
 		private Rewards rewards;
-
-		public void replaceIcons() {
-			this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
-		}
 	}
 
 

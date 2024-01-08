@@ -1,8 +1,11 @@
 package txraga.mystory.frosthaven.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
 
 
 @Getter
@@ -13,7 +16,10 @@ public class PersonalQuest {
 	private String id;
 	private String title;
 	private String description;
+
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String requirements;
+	
 	private Building building;
 	private Building altBuilding;
 
@@ -23,11 +29,6 @@ public class PersonalQuest {
 	public void populate(String id) {
 		// Set personal quest id
 		if (this.id == null) this.id = id;
-		replaceIcons();
-	}
-
-	public void replaceIcons() {
-		this.requirements = ModelUtils.replaceIcons(this.requirements);
 	}
 
 

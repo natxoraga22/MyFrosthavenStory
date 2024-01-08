@@ -2,16 +2,18 @@ package txraga.mystory.frosthaven.model;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
+import txraga.mystory.frosthaven.files.utils.IconsMapDeserializer;
 import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 
@@ -21,7 +23,10 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 public class Section {
 	
 	@ToString.Include private String id;
+
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String trigger;
+
 	@ToString.Include private String title;
 
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
@@ -29,10 +34,18 @@ public class Section {
 
 	private String introduction;
 	private String text;
+
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String specialRules;
+
+	@JsonDeserialize(using = IconsMapDeserializer.class)
 	private Map<String,String> bossSpecials = Map.of();
+
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String conclusion;
 	private Rewards rewards;
+
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String sectionLinks;
 
 
@@ -49,18 +62,6 @@ public class Section {
 	public void populate(String id) {
 		// Set section id
 		if (this.id == null) this.id = id;
-		replaceIcons();
-	}
-
-	public void replaceIcons() {
-		this.trigger = ModelUtils.replaceIcons(this.trigger);
-		this.specialRules = ModelUtils.replaceIcons(this.specialRules);
-		for (Entry<String,String> bossSpecial : bossSpecials.entrySet()) {
-			bossSpecials.put(bossSpecial.getKey(), ModelUtils.replaceIcons(bossSpecial.getValue()));
-		}
-		this.conclusion = ModelUtils.replaceIcons(this.conclusion);
-		if (this.rewards != null) this.rewards.setText(ModelUtils.replaceIcons(this.rewards.getText()));
-		this.sectionLinks = ModelUtils.replaceIcons(this.sectionLinks);
 	}
 
 }

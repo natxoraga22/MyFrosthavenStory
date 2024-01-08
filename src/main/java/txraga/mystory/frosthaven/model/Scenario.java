@@ -5,10 +5,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
 import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 
@@ -32,9 +34,12 @@ public class Scenario extends StoryObject {
 	private boolean linked = false;
 	private boolean forceLinked = false;
 
-	// Sections
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String goals;
+
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String effects;
+
 	private Map<String,Section> sections = Map.of();
 	private List<String> path;
 
@@ -53,12 +58,6 @@ public class Scenario extends StoryObject {
 			Section section = sectionEntry.getValue();
 			section.populate(sectionEntry.getKey());
 		}
-		replaceIcons();
-	}
-
-	public void replaceIcons() {
-		this.goals = ModelUtils.replaceIcons(this.goals);
-		this.effects = ModelUtils.replaceIcons(this.effects);
 	}
 
 

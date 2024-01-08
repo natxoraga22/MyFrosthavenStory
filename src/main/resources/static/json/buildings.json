@@ -164,8 +164,34 @@
 		"name": "Library",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "190.3"
+				"builtSections": {
+					"190.3": {
+						"title": "Library Built",
+						"text": "<p>In light of the recent attacks, all available capable labor has been sent to support town infrastructure. You pulled some strings to get a cushy assignment helping out at the new library. Inside you find crates piled high and an elegant, puttogether Valrath stocking the shelves. She adjusts her red-rimmed glasses and eyes you with a touch of scorn.</p><p>“Hmph, this is who they sent me? Very well. I am Eddica, your resident librarian. I’ll be managing the growing collection here, and I trust you will treat these books with the same care you treat…” she looks over your party, then furrows her brow, “whatever it is you choose to treat well.”</p><p>She points to a stack of crates along the wall. “Shelve those. Follow the Damon Decimal System.” She starts walking toward the back room, and without looking back waves a finger in the air, “Except ‘Gemstones’—put that under ‘Orchid’.”</p>",
+						"sectionLinks": "<strong>If [trait] EDUCATED</strong>, read [section_164.2] now. Otherwise, read [section_143.2] now."
+					},
+					"164.2": {
+						"title": "Library Built",
+						"text": "<p>You shelve the books according to the Damon Decimal System with ease, and even make sure to put “Gemstones” under “Orchid” per Eddica’s request. When she returns she makes a thorough review, then gives a small nod.</p><p>“Well done, good to see there are some individuals in this backwater who might benefit from a library. Master Scrim will be delighted to hear it in my next letter.” The edges of her lips barely curl up into a smile, but before it registers she straightens her clothes and continues, “You know, there is a matter I could use your assistance on… it might require some minor… uh, reappropriation of antiquities.” You look at her blankly.</p><p>She rolls her eyes. “What, you expect me to sit around writing the complete history of Frosthaven? Please, this town was a sleepy fishing village until a few years ago. It’d barely fill a napkin.”</p><p>She sits down behind her desk, shuffling a stack of paperwork out of the way. “Listen, there are books out there, four tomes of incredible power. The Tome of Life, the Tome of Conflict, the Tome of the Elements, and the Tome of Time. I want you to collect them for me.” The young Valrath pushes her red-rimmed glasses up the bridge of her nose.</p><p>“My research suggests the Tome of Life is in this region—it’s the whole reason I’m up here at all. No need to go out of your way, but if you do happen upon it and bring it back to me… well, I’ll make sure you’re rewarded.”</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-58" }],
+								"SR": [{ "id": "SR-47" }],
+								"WR": [{ "id": "WR-45" }]
+							}
+						}
+					},
+					"143.2": {
+						"title": "Library Built",
+						"text": "<p>You’re not even halfway through sorting the books when Eddica returns.</p><p>“What are you doing!?” She grabs a book on Vermling Psychology out of your hands. “The spines face out, so you can read them! And this,” she grabs an object off the shelf, brandishing it angrily inches from your face, “This is a block of wood! This could someday be a book, but it certainly isn’t yet! Where did you even find this?!”</p><p>She stops, gathering herself with a deep breath. She straightens her skirt and starts again, more calm: “Alright... Master Scrim would want me to spread knowledge, not animosity. So how about we make a deal?” She smiles mischievously.</p><p>“I teach you about all the library has to offer, and you collect a few, uh, items from the field for me.” She averts her gaze, unsure how to continue. “They’re just a few tomes that I’d like you to retrieve.” You look at her blankly and she rolls her eyes. “Books. Tomes are old books.” You nod.</p><p>“Somewhere out there are books of incredible power: The Tome of Life, the Tome of Conflict, the Tome of the Elements, and the Tome of Time. I want you to collect them for me. “ The young Valrath pushes her red-rimmed glasses up the bridge of her nose.</p><p>“I’m not going to spend my time up here working on some nonsense busywork—as though I should sit around writing the complete history of Frosthaven?! Please, this town was a sleepy fishing village until a few years ago. It’d barely fill a napkin!” It’s clear this is an argument she’s had in the past, and her hands are balled up in the memory of it. After a moment, she remembers you’re standing in front of her. She gives a terse smile, then takes a deep breath before continuing.</p><p>“My research suggests the Tome of Life is in this region—it’s the whole reason I’m up here at all. If you do happen upon it and bring it back to me I’ll make sure you’re rewarded. And just for keeping an eye out, I’ll provide a world-class education as only a resident librarian can offer. Sound fair?”</p>",
+						"rewards": {
+							"events": {
+								"SR": [{ "id": "SR-47" }],
+								"WR": [{ "id": "WR-45" }]
+							}
+						},
+						"sectionLinks": "Add [section_152.3] to the calendar in two weeks"
+					}
 				}
 			},
 			"2": {

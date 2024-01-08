@@ -72,7 +72,7 @@
 	justify-content: center;
 }
 
-.building .section {
+.building div.section {
 	margin-top: calc(var(--outpost-building-section-gap) - var(--outpost-building-inner-gap));
 }
 

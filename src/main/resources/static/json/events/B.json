@@ -113,6 +113,9 @@
 			}
 		}
 	},
+	"B-15": {
+		"unlockedBy": { "section": { "id": "54.2" }}
+	},
 	"B-16": {
 		"unlockedBy": { "scenario": { "id": "042" }}
 	}

@@ -21,8 +21,6 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 public class Section {
 	
 	@ToString.Include private String id;
-	private boolean partOfScenario;
-
 	private String trigger;
 	@ToString.Include private String title;
 
@@ -43,14 +41,14 @@ public class Section {
 	}
 
 	public boolean hasMap(String scenarioId) {
+		if (scenarioId == null) return false;
 		Resource resource = new ClassPathResource("static/img/scenarios/" + scenarioId + "_" + id + ".png");
 		return resource.exists();
 	}
 
-	public void populate(String id, boolean partOfScenario) {
-		// Set section id and partOfScenario
+	public void populate(String id) {
+		// Set section id
 		if (this.id == null) this.id = id;
-		this.partOfScenario = partOfScenario;
 		replaceIcons();
 	}
 

@@ -32,7 +32,7 @@ public class SectionsFile {
 			// Populate sections with additional info
 			for (Entry<String,Section> sectionEntry : sections.entrySet()) {
 				Section section = sectionEntry.getValue();
-				section.populate(sectionEntry.getKey(), false);
+				section.populate(sectionEntry.getKey());
 			}
 			return log.exit(sections);
 		}

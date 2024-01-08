@@ -37,7 +37,7 @@ public class FhCharacter {
 
 	public void populate() {
 		// Populate retirement section
-		if (retirement != null) retirement.populate(null, false);
+		if (retirement != null) retirement.populate(null);
 	}
 
 	public String getFullName() {

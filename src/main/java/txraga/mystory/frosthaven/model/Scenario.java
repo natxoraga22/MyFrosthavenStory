@@ -51,7 +51,7 @@ public class Scenario extends StoryObject {
 		// Populate sections
 		for (Entry<String,Section> sectionEntry : sections.entrySet()) {
 			Section section = sectionEntry.getValue();
-			section.populate(sectionEntry.getKey(), true);
+			section.populate(sectionEntry.getKey());
 		}
 		replaceIcons();
 	}

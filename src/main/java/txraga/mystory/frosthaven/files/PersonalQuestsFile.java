@@ -3,7 +3,6 @@ package txraga.mystory.frosthaven.files;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -29,11 +28,8 @@ public class PersonalQuestsFile {
 			InputStream personalQuestsInputStream = new ClassPathResource(PERSONAL_QUESTS_FILE_PATH).getInputStream();
 			Map<String,PersonalQuest> personalQuests = objectMapper.readValue(personalQuestsInputStream, new TypeReference<Map<String,PersonalQuest>>(){});
 
-			// Populate personal quests with additional info
-			for (Entry<String,PersonalQuest> personalQuestEntry : personalQuests.entrySet()) {
-				PersonalQuest personalQuest = personalQuestEntry.getValue();
-				personalQuest.populate(personalQuestEntry.getKey());
-			}
+			// Set personal quests ids
+			personalQuests.forEach((id, personalQuest) -> personalQuest.setId(id));
 			return log.exit(personalQuests);
 		}
 		catch (IOException e) {

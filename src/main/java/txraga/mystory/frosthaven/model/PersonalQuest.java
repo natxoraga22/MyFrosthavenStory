@@ -26,12 +26,6 @@ public class PersonalQuest {
 	private UnlockedBuildingType unlockedBuilding = UnlockedBuildingType.MAIN;
 
 
-	public void populate(String id) {
-		// Set personal quest id
-		if (this.id == null) this.id = id;
-	}
-
-
 	public enum UnlockedBuildingType {
 		MAIN,
 		ALT,

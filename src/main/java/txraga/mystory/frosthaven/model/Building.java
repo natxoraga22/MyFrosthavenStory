@@ -2,7 +2,6 @@ package txraga.mystory.frosthaven.model;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,17 +29,6 @@ public class Building {
 		this.name = other.name;
 		this.levels = new HashMap<>(other.levels);
 		this.level = other.level;
-	}
-
-	public void populate(String id) {
-		// Set building id
-		if (this.id == null) this.id = id;
-
-		for (Entry<String,Level> levelEntry : levels.entrySet()) {
-			Level level = levelEntry.getValue();
-			// Set level number
-			if (level.getNumber() == 0) level.setNumber(Integer.parseInt(levelEntry.getKey()));
-		}
 	}
 
 

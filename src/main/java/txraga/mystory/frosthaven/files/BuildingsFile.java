@@ -3,7 +3,6 @@ package txraga.mystory.frosthaven.files;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -29,11 +28,12 @@ public class BuildingsFile {
 			InputStream buildingsInputStream = new ClassPathResource(BUILDINGS_FILE_PATH).getInputStream();
 			Map<String,Building> buildings = objectMapper.readValue(buildingsInputStream, new TypeReference<Map<String,Building>>(){});
 
-			// Populate buildings with additional info
-			for (Entry<String,Building> buildingEntry : buildings.entrySet()) {
-				Building building = buildingEntry.getValue();
-				building.populate(buildingEntry.getKey());
-			}
+			buildings.forEach((id, building) -> {
+				// Set building id
+				building.setId(id);
+				// Set levels numbers
+				building.getLevels().forEach((number, level) -> level.setNumber(Integer.parseInt(number)));
+			});
 			return log.exit(buildings);
 		}
 		catch (IOException e) {

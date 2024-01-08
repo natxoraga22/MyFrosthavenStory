@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -45,11 +44,16 @@ public class EventsFile {
 			InputStream eventsInputStream = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getInputStream();
 			Map<String,Event> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,Event>>(){});
 
-			// Populate events with additional info
-			for (Entry<String,Event> eventEntry : events.entrySet()) {
-				Event event = eventEntry.getValue();
-				event.populate(eventEntry.getKey(), type, season);
-			}
+			events.forEach((id, event) -> {
+				// Set event id, type and season
+				event.setId(id);
+				event.setType(type);
+				if (type != Event.Type.B) event.setSeason(season);
+				// Set options ids
+				event.getOptions().forEach((optionId, option) -> {
+					if (option.getId() == null) option.setId(optionId);
+				});
+			});
 			return log.exit(events);
 		}
 		catch (IOException e) {

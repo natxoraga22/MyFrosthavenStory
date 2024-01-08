@@ -1,6 +1,5 @@
 {
 	"blinkblade": {
-		"id": "blinkblade",
 		"name": "Blinkblade",
 		"race": "Quatryl",
 		"background": "<p>Quatryls typically don't like being underestimated. They are smaller than the other peoples they encounter, yes, but that doesn't mean they are worth any less. If anything, they will go out of their way to show they are worth more. Their scientific institutions on the eastern continent have developed a myriad of technological advancements-bionics and prosthetics used to enhance their own capabilities. There are even vague records that long ago, the Quatryl's scientific research led them to the north to hunt for its secrets, but these facilities have long since fallen to ruin.</p><p>The fact of the matter is that the cold is not a forgiving climate for one so small. If a Blinkblade were to travel north, it may be because they have nowhere else to go, or because there is some quarry to be found. Blinkblades are assassins, after all. Equipped with experimental temporal drives, they can alter the flow of time, moving faster than the eye can see and striking harder than a creature ten times their size. Such actions can only be performed in short bursts however, and there is always a cost to such great power.</p>",
@@ -15,7 +14,6 @@
 		}
 	},
 	"deathwalker": {
-		"id": "deathwalker",
 		"name": "Deathwalker",
 		"race": "Valrath",
 		"background": "<p>No group is quite so ill-suited for the icy northern climates as the Valrath, who make their homes far to the south around the Red Desert. There was once a great war in that region between the Valraths and the humans, both equally interested in conquering the Stormbrew Plains for themselves. The two nations have since made peace, and the Valrath government in particular has made concerted efforts to forsake its aggressive past. In more recent times, they have focused on economic strength over the physical.</p><p>There is a saying among the Valrath: \"In order to survive the ice, one must have an icy soul.\" This is apt for a Deathwalker, a nomad bent on atoning for the Valrath nation's past sins by ensuring the souls of the dead find rest. Wherever great tragedy falls, a Deathwalker is usually not far behind, and Frosthaven has seen plenty of tragedy.</p>",
@@ -26,17 +24,33 @@
 		}
 	},
 	"crashingtide": {
-		"id": "crashingtide",
 		"name": "Crashing Tide",
 		"race": "Lurker",
 		"background": "<p>Lurkers, as they are called by those who dwell on the land, once reigned over a vast, underwater empire, but it fell to ruin when the source of their power—a coral crown—was destroyed and the shards scattered by the currents of the Misty Sea. The Lurkers search endlessly for the pieces of this crown, haunted by an overwhelming sense of loss. They are driven to reassemble the crown, even if they no longer understand why. The currents have brought these shards to the north, and, close to their source of power, the Lurkers have begun to grow in strength once again.</p><p>Like the ebb and flow of the Lurkers' power throughout history, so too do the tides shift. There is a cycle to all things, and this is particularly exemplified in the Crashing Tides, guardians and protectors of their society and the natural order of things. They build their power over time, and then use it to crash against their foes in a wave of destruction. The waves must recede, of course, but then power will grow once again.</p>",
-		"retirement": { "id": "54.2" }
+		"retirement": { 
+			"id": "54.2",
+			"text": "<p>You often find the Crashing Tide resting at the shore of Frosthaven, observing the waves lapping against the dock. This time, however, things feel different. When they send images of the ebb and flow of the tides into your mind, you sense the kinship they feel toward the natural cycle. They are the tides. The high water was them rising to the surface, exploring dungeons and fighting with you against that which threatened Frosthaven.</p><p>But now, the waters recede. The Crashing Tide must return to the ocean. You express sadness.</p><p>The Crashing Tide gently lays a giant claw on your shoulder in consolation. You see more images of the low tide once again surging forward, raising the water. Everything is a cycle. The Crashing Tide will return one day. But for now, it disappears beneath the waves.</p>",
+			"rewards": {
+				"events": {
+					"B": [{ "id": "B-15" }]
+				}
+			}
+		}
 	},
 	"trapper": {
-		"id": "trapper",
 		"name": "Trapper",
 		"race": "Vermling",
 		"background": "<p>A Vermling's small stature makes the cold climate of the north particularly inhospitable. But when forced to choose between the harsh elements and the constant harassment of human settlers in the south, some clans have decided to risk the snow and ice. Many have found homes near Frosthaven, mostly in the Radiant Forest, which is always unseasonably warm. Malevolent forces, however, have begun to push the Vermlings out of this forest as well, once again leaving them scrambling for survival.</p><p>A major part of survival is hunting for food and hides to keep warm, and Trappers have always been good at that, giving them a strong edge in the unforgiving wilds. They have grown quite adept at not only laying a variety of snares, but also luring their prey into the deadly traps. Quick on their feet and with jaws of metal never in short supply, Trappers are prepared to bring down any quarry.</p>",
-		"retirement": { "id": "56.5" }
+		"retirement": { 
+			"id": "56.5"
+		}
+	},
+	"snowdancer": {
+		"name": "Snowdancer",
+		"race": "Algox",
+		"background": "<p>Algox are at home in the north. Their thick white fur offers great protection from the elements, and their strength and intelligence put them at the top of the fcx»d chain. They are imposing figures with three spiraling horns atop their head. This feature they share with their distant relatives, the Inox. Like their cousins, the Algox gather in clans, but these are split following one of two rival ideologies: the Snowspeakers, who believe the divine speaks to them through the falling snow; and the Icespeakers, who instead look to the ice growing up from the cold earth.</p><p>The most adept priests of the Snowspeakers are those that move with the winds and snow, using it to make others dance, as well—often against their will. It is a breathtakingly beautiful sight, watching these Snowdancers harness the raw power of their movement to bring forth the elements of the north. Their enemies soon find themselves sapped of all warmth as the wind beats them into a snowy grave.</p>",
+		"retirement": {
+			"id": "107.3"
+		}
 	}
 }

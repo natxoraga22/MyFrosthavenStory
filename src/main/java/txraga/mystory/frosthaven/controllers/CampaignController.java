@@ -108,7 +108,10 @@ public class CampaignController {
 			if (personalStoryPartyMember.getPersonalQuest() != null) {
 				// Set personal quest
 				PersonalQuest personalQuest = frosthaven.getPersonalQuest(personalStoryPartyMember.getPersonalQuest().getId());
-				if (personalQuest != null) partyMember.setPersonalQuest(personalQuest);
+				if (personalQuest != null) {
+					personalQuest.setUnlockedBuilding(personalStoryPartyMember.getPersonalQuest().getUnlockedBuilding());
+					partyMember.setPersonalQuest(personalQuest);
+				}
 			}
 			return log.exit(partyMember);
 		}

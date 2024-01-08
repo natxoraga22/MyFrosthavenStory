@@ -14,8 +14,10 @@ public class PersonalQuest {
 	private String title;
 	private String description;
 	private String requirements;
-	private Building unlockedBuilding;
-	private Building altUnlockedBuilding;
+	private Building building;
+	private Building altBuilding;
+
+	private UnlockedBuildingType unlockedBuilding = UnlockedBuildingType.MAIN;
 
 
 	public void populate(String id) {
@@ -26,6 +28,13 @@ public class PersonalQuest {
 
 	public void replaceIcons() {
 		this.requirements = ModelUtils.replaceIcons(this.requirements);
+	}
+
+
+	public enum UnlockedBuildingType {
+		MAIN,
+		ALT,
+		NONE
 	}
 
 }

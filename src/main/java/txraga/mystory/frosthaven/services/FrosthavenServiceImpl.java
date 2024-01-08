@@ -2,6 +2,7 @@ package txraga.mystory.frosthaven.services;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.springframework.stereotype.Service;
 
@@ -46,7 +47,11 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	@Override
 	public Map<String,FhCharacter> findAllCharacters() {
 		log.entry();
-		return log.exit(charactersFile.findAllCharactersAsMap());
+		Map<String,FhCharacter> characters = charactersFile.findAllCharactersAsMap();
+		for (Entry<String,FhCharacter> character : characters.entrySet()) {
+			character.getValue().setId(character.getKey());
+		}
+		return log.exit(characters);
 	}
 
 	@Override
@@ -54,10 +59,10 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 		log.entry();
 		Map<String,PersonalQuest> personalQuests = personalQuestsFile.findAllPersonalQuestsAsMap();
 		for (PersonalQuest personalQuest : personalQuests.values()) {
-			Building unlockedBuilding = buildings.get(personalQuest.getUnlockedBuilding().getId());
-			if (unlockedBuilding != null) personalQuest.setUnlockedBuilding(unlockedBuilding);
-			Building altUnlockedBuilding = buildings.get(personalQuest.getAltUnlockedBuilding().getId());
-			if (altUnlockedBuilding != null) personalQuest.setAltUnlockedBuilding(altUnlockedBuilding);
+			Building building = buildings.get(personalQuest.getBuilding().getId());
+			if (building != null) personalQuest.setBuilding(building);
+			Building altBuilding = buildings.get(personalQuest.getAltBuilding().getId());
+			if (altBuilding != null) personalQuest.setAltBuilding(altBuilding);
 		}
 		return log.exit(personalQuests);
 	}

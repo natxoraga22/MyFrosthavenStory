@@ -67,7 +67,7 @@
 				"outpostEvent": { "id": "SO-09", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 4 }],
 				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": { "id": "06" }}],
-				"newMembers": [{ "id": "crashingtide", "personalQuest": { "id": "09" } }]
+				"newMembers": [{ "id": "crashingtide", "personalQuest": { "id": "09", "unlockedBuilding": "ALT" } }]
 			}
 		},
 		{ "event": { "id": "SR-13", "chosenOption": "A1" }},

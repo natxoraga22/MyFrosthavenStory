@@ -79,12 +79,12 @@
 		<div class="requirements">[(*{requirements})]</div>
 
 		<!-- Rewards -->
-		<div class="card fhCard pqRewards">
+		<div class="card fhCard pqRewards" th:with="unlockedBuilding=*{unlockedBuilding.name() == 'MAIN'} ? *{building} : *{altBuilding}">
 			<div class="card-header">[[#{section.rewards}]]</div>
 			<div class="card-body">
-				[[#{personalQuest.openEnvelope}]] <img class="icon envelope" th:src="@{/img/icons/envelope.png}"> [[*{unlockedBuilding.number}]]
+				[[#{personalQuest.openEnvelope}]] <img class="icon envelope" th:src="@{/img/icons/envelope.png}"> [[${unlockedBuilding.number}]]
 				<i class="fa-solid fa-right-long mx-1"></i>
-				[[#{personalQuest.unlockBuilding}]] <strong>[[*{unlockedBuilding.name}]]</strong>
+				[[#{personalQuest.unlockBuilding}]] <strong>[[${unlockedBuilding.name}]]</strong>
 			</div>
 		</div>
 	</div>

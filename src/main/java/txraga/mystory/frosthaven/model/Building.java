@@ -40,8 +40,6 @@ public class Building {
 			Level level = levelEntry.getValue();
 			// Set level number
 			if (level.getNumber() == 0) level.setNumber(Integer.parseInt(levelEntry.getKey()));
-			// Populate builtSection
-			if (level.getBuiltSection() != null) level.getBuiltSection().populate(null);
 		}
 	}
 

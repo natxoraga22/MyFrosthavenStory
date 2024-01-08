@@ -22,17 +22,20 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 @ToString(onlyExplicitlyIncluded = true)
 public class Section {
 	
-	@ToString.Include private String id;
+	@ToString.Include
+	private String id;
 
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String trigger;
 
-	@ToString.Include private String title;
+	@ToString.Include
+	private String title;
 
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 	private List<StoryItem> unlockedBy;
 
 	private String introduction;
+
 	private String text;
 
 	@JsonDeserialize(using = IconsDeserializer.class)
@@ -43,6 +46,7 @@ public class Section {
 
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String conclusion;
+
 	private Rewards rewards;
 
 	@JsonDeserialize(using = IconsDeserializer.class)
@@ -57,11 +61,6 @@ public class Section {
 		if (scenarioId == null) return false;
 		Resource resource = new ClassPathResource("static/img/scenarios/" + scenarioId + "_" + id + ".png");
 		return resource.exists();
-	}
-
-	public void populate(String id) {
-		// Set section id
-		if (this.id == null) this.id = id;
 	}
 
 }

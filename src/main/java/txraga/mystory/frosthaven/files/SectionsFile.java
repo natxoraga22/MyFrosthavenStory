@@ -3,7 +3,6 @@ package txraga.mystory.frosthaven.files;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -29,11 +28,8 @@ public class SectionsFile {
 			InputStream sectionsInputStream = new ClassPathResource(SECTIONS_FILE_PATH).getInputStream();
 			Map<String,Section> sections = objectMapper.readValue(sectionsInputStream, new TypeReference<Map<String,Section>>(){});
 
-			// Populate sections with additional info
-			for (Entry<String,Section> sectionEntry : sections.entrySet()) {
-				Section section = sectionEntry.getValue();
-				section.populate(sectionEntry.getKey());
-			}
+			// Set sections ids
+			sections.forEach((id, section) -> section.setId(id));
 			return log.exit(sections);
 		}
 		catch (IOException e) {

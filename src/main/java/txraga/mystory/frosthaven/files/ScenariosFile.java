@@ -39,7 +39,9 @@ public class ScenariosFile {
 			ObjectMapper objectMapper = new ObjectMapper();
 			InputStream scenarioInputStream = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getInputStream();
 			Scenario scenario = objectMapper.readValue(scenarioInputStream, Scenario.class);
-			scenario.populate();
+			
+			// Set sections ids
+			scenario.getSections().forEach((id, section) -> section.setId(id));
 			return log.exit(scenario);
 		}
 		catch (IOException e) {

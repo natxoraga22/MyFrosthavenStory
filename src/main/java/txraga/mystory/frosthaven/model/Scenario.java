@@ -2,7 +2,6 @@ package txraga.mystory.frosthaven.model;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -50,14 +49,6 @@ public class Scenario extends StoryObject {
 	@Override
 	public StoryObject.Type getObjectType() {
 		return StoryObject.Type.SCENARIO;
-	}
-
-	public void populate() {
-		// Populate sections
-		for (Entry<String,Section> sectionEntry : sections.entrySet()) {
-			Section section = sectionEntry.getValue();
-			section.populate(sectionEntry.getKey());
-		}
 	}
 
 

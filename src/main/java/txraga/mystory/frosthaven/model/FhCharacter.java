@@ -35,11 +35,6 @@ public class FhCharacter {
 		this.level = other.level;
 	}
 
-	public void populate() {
-		// Populate retirement section
-		if (retirement != null) retirement.populate(null);
-	}
-
 	public String getFullName() {
 		return race + " " + name;
 	}

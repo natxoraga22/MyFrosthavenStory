@@ -3,7 +3,6 @@ package txraga.mystory.frosthaven.files;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -28,12 +27,6 @@ public class CharactersFile {
 			ObjectMapper objectMapper = new ObjectMapper();
 			InputStream charactersInputStream = new ClassPathResource(CHARACTERS_FILE_PATH).getInputStream();
 			Map<String,FhCharacter> characters = objectMapper.readValue(charactersInputStream, new TypeReference<Map<String,FhCharacter>>(){});
-
-			// Populate characters with additional info
-			for (Entry<String,FhCharacter> characterEntry : characters.entrySet()) {
-				FhCharacter character = characterEntry.getValue();
-				character.populate();
-			}
 			return log.exit(characters);
 		}
 		catch (IOException e) {

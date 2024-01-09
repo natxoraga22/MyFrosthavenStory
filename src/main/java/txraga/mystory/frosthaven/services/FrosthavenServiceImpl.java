@@ -92,9 +92,17 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	}
 
 	@Override
-	public Map<String,Building> findAllBuildings() {
+	public Map<String,Building> findAllBuildings(Map<String,Scenario> scenarios) {
 		log.entry();
-		return log.exit(buildingsFile.findAllBuildingsAsMap());
+		Map<String,Building> buildings = buildingsFile.findAllBuildingsAsMap();
+		for (Building building : buildings.values()) {
+			for (Building.Level level : building.getLevels().values()) {
+				for (Section section : level.getBuiltSections().values()) {
+					populateRewards(section.getRewards(), scenarios);
+				}
+			}
+		}
+		return log.exit(buildings);
 	}
 
 	@Override

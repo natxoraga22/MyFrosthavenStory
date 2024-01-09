@@ -37,7 +37,7 @@ public class Frosthaven {
 		characters = fhService.findAllCharacters();
 		scenarios = fhService.findAllScenarios();
 		events = fhService.findAllEvents(scenarios);
-		buildings = fhService.findAllBuildings();
+		buildings = fhService.findAllBuildings(scenarios);
 		personalQuests = fhService.findAllPersonalQuests(buildings);
 		sections = fhService.findAllSections(scenarios);
 		log.exit();

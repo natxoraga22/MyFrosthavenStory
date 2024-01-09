@@ -201,7 +201,18 @@
 			},
 			"2": {
 				"builtSections": {
-					"116.3": {}
+					"116.3": {
+						"title": "Library Upgraded",
+						"text": "<p>“Looks like my project to bring knowledge to this backwood is finally starting to get some attention!” Eddica, the resident Valrath librarian, gestures to an Orchid as you enter the library. The Orchid is clad in shimmering armor and wields a sword that seems far too massive, even for their muscular frame.</p><p>Eddica continues: “This one is also interested in the ancient lore from around these parts. Could prove useful in our search for the tomes. Speaking of, follow me.” Eddica snaps at you, then turns and steps briskly toward a back room. You give a short greeting to the Orchid and then follow.</p><p>“Alright, exciting news!” Eddica begins immediately as you squeeze into the cramped space full of dusty parchments.</p><p>“I think my research has been paying off. If I’ve done the background research correctly—and I’m certain I have—I think I’ve located two of the Tomes of Power. The first is the Tome of the Elements...” she unfurls a map across the floor, handing you one corner to keep it from rolling back up. “Here.” She points at an area nearby where you were already intended to go on a future adventure. “Be careful, though: accounts of the Tome of the Elements make it sound a bit more volatile than the others. I wouldn’t recommend opening it in the field.”</p><p>She pushes her red-rimmed glasses up the bridge of her nose, kneeling next to the map. “The second is a bit hazier in the written record. The Tome of Conflict, like the other tomes, was penned by the spellcaster Belara—that much is clear. But something happened, and the books were scattered. If I’m reading this correctly, older maps actually reference a tower in the woods.” She points an impeccably manicured fingertip toward the tundra. “But it doesn’t show up on any newer surveys of the region. It’s just a hunch, but I think you’ll find the Tome of Conflict there. If it’s not too far out of your way, could you check it out for me?”</p>",
+						"rewards": {
+							"text": "Unlock [infuser] class box.",
+							"events": {
+								"SR": [{ "id": "SR-48" }],
+								"WR": [{ "id": "WR-46" }]
+							},
+							"scenarios": [{ "id": "134" }]
+						}
+					}
 				}
 			},
 			"3": {

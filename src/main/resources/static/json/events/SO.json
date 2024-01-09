@@ -379,6 +379,9 @@
 	"SO-57": {
 		"unlockedBy": { "section": { "id": "78.4" }}
 	},
+	"SO-58": {
+		"unlockedBy": { "section": { "id": "164.2" }}
+	},
 	"SO-59": {
 		"unlockedBy": { "section": { "id": "189.1" }}
 	},

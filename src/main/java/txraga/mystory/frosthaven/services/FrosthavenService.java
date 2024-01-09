@@ -28,7 +28,7 @@ public interface FrosthavenService {
 	public Map<String,Scenario> findAllScenarios();
 
 	/** Gets all buildings from "buildings.json" file */
-	public Map<String,Building> findAllBuildings();
+	public Map<String,Building> findAllBuildings(Map<String,Scenario> scenarios);
 
 	/** Gets all sections not related to scenarios (from the Section Book) from "sections.json" file */
 	public Map<String,Section> findAllSections(Map<String,Scenario> scenarios);

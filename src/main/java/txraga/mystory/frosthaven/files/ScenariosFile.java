@@ -19,7 +19,7 @@ import txraga.mystory.frosthaven.model.Scenario;
 public class ScenariosFile {
 	
 	private final static String SCENARIOS_FOLDER_PATH = "static/json/scenarios";
-	private final static int SCENARIOS_COUNT = 166;
+	private final static int SCENARIOS_COUNT = 137;
 
 
 	public Map<String,Scenario> findAllScenariosAsMap() {

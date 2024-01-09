@@ -351,5 +351,11 @@
 	},
 	"SR-46": {
 		"unlockedBy": { "section": { "id": "78.4" }}
+	},
+	"SR-47": {
+		"unlockedBy": [{ "section": { "id": "143.2" }}, { "section": { "id": "164.2" }}]
+	},
+	"SR-48": {
+		"unlockedBy": { "section": { "id": "116.3" }}
 	}
 }

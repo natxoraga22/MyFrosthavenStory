@@ -218,7 +218,7 @@
 				"outpostEvent": { "id": "SO-08", "chosenOptions": ["A2", "B"] },
 				"retirements": [{ "id": "crashingtide", "additionalPersonalQuest": { "id": "13" }}],
 				"newMembers": [{ "id": "snowdancer" }],
-				"build": [{ "id": "library", "level": 1 }],
+				"build": [{ "id": "library", "level": 1, "path": ["190.3", "143.2"] }],
 				"upgrade": [{ "id": "library", "level": 2 }]
 			}
 		}

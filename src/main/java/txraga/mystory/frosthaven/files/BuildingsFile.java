@@ -31,8 +31,13 @@ public class BuildingsFile {
 			buildings.forEach((id, building) -> {
 				// Set building id
 				building.setId(id);
-				// Set levels numbers
-				building.getLevels().forEach((number, level) -> level.setNumber(Integer.parseInt(number)));
+
+				building.getLevels().forEach((number, level) -> {
+					// Set level number
+					level.setNumber(Integer.parseInt(number));
+					// Set sections ids
+					level.getBuiltSections().forEach((sectionId, section) -> section.setId(sectionId));
+				});
 			});
 			return log.exit(buildings);
 		}

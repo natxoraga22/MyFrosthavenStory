@@ -5,12 +5,13 @@
 		"levels": {
 			"1": {},
 			"2": {
-				"builtSection": {
-					"id": "49.2",
-					"title": "Mining Camp Upgraded",
-					"text": "<p>With the mining camp expanded, more ore and minerals will be available to Frosthaven. You admire the refinery and then venture into the tunnels themselves, using a handcart to make your way deep underground, hoping to discover some veins of copper.</p><p>Chipping away at a rock, your pickaxe strikes against something as strong as Valrath steel. Your hand is suddenly seized by another, the lithic digits encasing your wrist as the rest of the Savvas emerges from the crumbling wall. As a being of the elements, its face twists between expressions like boiling lava, its body flows and then ceases flowing all at once, growing rigid with barely contained power. “Who dares disturb my slumber?” It rumbles.</p><p>Then the Savvas laughs, a crackling fire sound. “I am in jest. I sensed your presence the instant these tunnels were blasted open. I have been waiting for you to prove your fortitude since. “Now that we have met, you will allow me to join your party. To prove my mastery over the element of magma, I must put my abilities to a true test in the field.”</p><p>That doesn’t sound like much of a choice, but having a powerful ally could never be a bad thing.</p>",
-					"rewards": {
-						"text": "Unlock [pyroclast] class box."
+				"builtSections": {
+					"49.2": {
+						"title": "Mining Camp Upgraded",
+						"text": "<p>With the mining camp expanded, more ore and minerals will be available to Frosthaven. You admire the refinery and then venture into the tunnels themselves, using a handcart to make your way deep underground, hoping to discover some veins of copper.</p><p>Chipping away at a rock, your pickaxe strikes against something as strong as Valrath steel. Your hand is suddenly seized by another, the lithic digits encasing your wrist as the rest of the Savvas emerges from the crumbling wall. As a being of the elements, its face twists between expressions like boiling lava, its body flows and then ceases flowing all at once, growing rigid with barely contained power. “Who dares disturb my slumber?” It rumbles.</p><p>Then the Savvas laughs, a crackling fire sound. “I am in jest. I sensed your presence the instant these tunnels were blasted open. I have been waiting for you to prove your fortitude since. “Now that we have met, you will allow me to join your party. To prove my mastery over the element of magma, I must put my abilities to a true test in the field.”</p><p>That doesn’t sound like much of a choice, but having a powerful ally could never be a bad thing.</p>",
+						"rewards": {
+							"text": "Unlock [pyroclast] class box."
+						}
 					}
 				}
 			},
@@ -23,12 +24,13 @@
 		"name": "Hunting Lodge",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "172.3",
-					"title": "Hunting Lodge Built",
-					"text": "<p>With a fire roaring in the background, the finished hunting lodge is the perfect location to exchange tales of narrow escapes from polar bears, as well as provide hides for Frosthaven. You encounter all sorts of patrons whose rugged appearances often belie a certain gruff kindness.</p><p>One of those patrons is a Vermling Trapper, who sits nearest the fire and away from the crowd, a square hat shadowing their eyes. Sitting beside their wares of lustrous, exotic furs, they are currently absorbed in constructing an intricate snare.</p><p>When you ask them to explain their process, they warm up to you. “Much of my time is spent not in action, but in observation. It’s a matter of understanding the animals, their habits. If you’re truly interested, perhaps I can show you sometime?”</p><p>You readily agree, happy for the company.</p>",
-					"rewards": {
-						"text": "Unlock [trapper] class box."
+				"builtSections": {
+					"172.3": {
+						"title": "Hunting Lodge Built",
+						"text": "<p>With a fire roaring in the background, the finished hunting lodge is the perfect location to exchange tales of narrow escapes from polar bears, as well as provide hides for Frosthaven. You encounter all sorts of patrons whose rugged appearances often belie a certain gruff kindness.</p><p>One of those patrons is a Vermling Trapper, who sits nearest the fire and away from the crowd, a square hat shadowing their eyes. Sitting beside their wares of lustrous, exotic furs, they are currently absorbed in constructing an intricate snare.</p><p>When you ask them to explain their process, they warm up to you. “Much of my time is spent not in action, but in observation. It’s a matter of understanding the animals, their habits. If you’re truly interested, perhaps I can show you sometime?”</p><p>You readily agree, happy for the company.</p>",
+						"rewards": {
+							"text": "Unlock [trapper] class box."
+						}
 					}
 				}
 			},
@@ -52,14 +54,15 @@
 		"name": "Garden",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "78.4",
-					"title": "Garden Built",
-					"text": "<p>Once complete, the garden draws young and old alike to contribute to its maintenance. In the summer, it will grow arctic flowers and edible green tin-berries; in the winter months, root vegetables and squash.</p><p>Among the rows, you greet Listeritus, a Savvas who is busy tending to tea plants. Guiding you around, its rocky face tranquil, Listeritus queries you about your collection excursions outside of Frosthaven. “If you’d like to plant a sample of what you find here, you will be able to propagate more of them for your use.” Listeritus is patient with your many gardening questions and ends the day brewing you a cup of tea. As a Savvas,</p><p>Listeritus only consumes rocks, but it enjoys the scent just the same. “It is transporting,” Listeritus says, closing its eyes and leaning over the waft of steam, evidently glad for a break in a busy day.</p>",
-					"rewards": {
-						"events": {
-							"SO": [{ "id": "SO-57" }],
-							"SR": [{ "id": "SR-46" }]
+				"builtSections": {
+					"78.4": {
+						"title": "Garden Built",
+						"text": "<p>Once complete, the garden draws young and old alike to contribute to its maintenance. In the summer, it will grow arctic flowers and edible green tin-berries; in the winter months, root vegetables and squash.</p><p>Among the rows, you greet Listeritus, a Savvas who is busy tending to tea plants. Guiding you around, its rocky face tranquil, Listeritus queries you about your collection excursions outside of Frosthaven. “If you’d like to plant a sample of what you find here, you will be able to propagate more of them for your use.” Listeritus is patient with your many gardening questions and ends the day brewing you a cup of tea. As a Savvas,</p><p>Listeritus only consumes rocks, but it enjoys the scent just the same. “It is transporting,” Listeritus says, closing its eyes and leaning over the waft of steam, evidently glad for a break in a busy day.</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-57" }],
+								"SR": [{ "id": "SR-46" }]
+							}
 						}
 					}
 				}
@@ -91,12 +94,13 @@
 			"1": {},
 			"2": {},
 			"3": {
-				"builtSection": {
-					"id": "183.5",
-					"title": "Alchemist Upgraded",
-					"text": "<p>The final stage of the alchemist’s lab is complete. With its expansion, you can now brew more advanced potions. Inside, you encounter bubbling vats and worktables covered in retorts and alembics. Among the glassware toil multiple residents of Frosthaven, including, oddly, the Savvas playwright, Eros.</p><p>You never pegged Eros as an alchemist. Eros flips its long scarf across its stony shoulder and gives you an equally stony look. “I’m researching poisons for a play where two lovers scheme to kill their enemies.” Eros sniffs at your incredulous expression. “It won’t be real poison. I simply need the actors to appear sickly enough to convince the audience.”</p><p>With a grandiose gesture, the Savvas squeezes an dropper into a vial. The potion promptly produces a puff of noxious smoke. Eros reels backward, and you quickly herd everyone out. It’s a good thing you told them to include ventilation in the building.</p>",
-					"rewards": {
-						"text": "Add items [item] 59 to [item] 65 to the random item blueprint deck."
+				"builtSections": {
+					"183.5": {
+						"title": "Alchemist Upgraded",
+						"text": "<p>The final stage of the alchemist’s lab is complete. With its expansion, you can now brew more advanced potions. Inside, you encounter bubbling vats and worktables covered in retorts and alembics. Among the glassware toil multiple residents of Frosthaven, including, oddly, the Savvas playwright, Eros.</p><p>You never pegged Eros as an alchemist. Eros flips its long scarf across its stony shoulder and gives you an equally stony look. “I’m researching poisons for a play where two lovers scheme to kill their enemies.” Eros sniffs at your incredulous expression. “It won’t be real poison. I simply need the actors to appear sickly enough to convince the audience.”</p><p>With a grandiose gesture, the Savvas squeezes an dropper into a vial. The potion promptly produces a puff of noxious smoke. Eros reels backward, and you quickly herd everyone out. It’s a good thing you told them to include ventilation in the building.</p>",
+						"rewards": {
+							"text": "Add items [item] 59 to [item] 65 to the random item blueprint deck."
+						}
 					}
 				}
 			}
@@ -107,32 +111,33 @@
 		"name": "Trading Post",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "25.2",
-					"title": "Trading Post Built",
-					"text": "<p>“Guys, guys! This is all a misunderstanding!” Xain, an acquaintance who always seems down on his luck, pleads as two guards push him unceremoniously into the tent of the new trading post. Mayor Satha is waiting inside, arms crossed.</p><p>“Mayor! I was just coming to see you, actually—I’d brokered a deal, a… a fantastic deal! The Abaeli are willing to polish the town guard’s weapons for a price you wouldn’t believe. I’d just finished packing up the armory and was going to surprise everyone tomorrow morning—”</p><p>“And did you think that the Abaeli wouldn’t attack while all of our defenses were off being ‘polished’?”</p><p>“No, they were… I mean, it was really an excellent price…” Xain meekly trails off, realization settling in.</p><p>“I have put up with your harebrained schemes in Frosthaven for long enough. This here?” She gestures around the trading post tent. “This is your penance. You will put that entrepreneurial spirit to work. You will receive shipments. You will sell goods. Honest goods.”</p><p>Xain looks mortified. “But… but for how long?”</p><p>Satha brushes past him on her way out of the tent. “Until I say otherwise. And if you screw this up? I’m marching you out of Frosthaven myself.” She nods at you in passing. “Look, it’s your first customers.”</p><p>“Oh, uhm. Hello.” Xain gives you a sheepish smile. “Welcome to the trading post?”</p>",
-					"rewards": {
-						"events": {
-							"SO": [{ "id": "SO-61" }],
-							"WO": [{ "id": "WO-80" }],
-							"WR": [{ "id": "WR-41" }]
+				"builtSections": {
+					"25.2": {
+						"title": "Trading Post Built",
+						"text": "<p>“Guys, guys! This is all a misunderstanding!” Xain, an acquaintance who always seems down on his luck, pleads as two guards push him unceremoniously into the tent of the new trading post. Mayor Satha is waiting inside, arms crossed.</p><p>“Mayor! I was just coming to see you, actually—I’d brokered a deal, a… a fantastic deal! The Abaeli are willing to polish the town guard’s weapons for a price you wouldn’t believe. I’d just finished packing up the armory and was going to surprise everyone tomorrow morning—”</p><p>“And did you think that the Abaeli wouldn’t attack while all of our defenses were off being ‘polished’?”</p><p>“No, they were… I mean, it was really an excellent price…” Xain meekly trails off, realization settling in.</p><p>“I have put up with your harebrained schemes in Frosthaven for long enough. This here?” She gestures around the trading post tent. “This is your penance. You will put that entrepreneurial spirit to work. You will receive shipments. You will sell goods. Honest goods.”</p><p>Xain looks mortified. “But… but for how long?”</p><p>Satha brushes past him on her way out of the tent. “Until I say otherwise. And if you screw this up? I’m marching you out of Frosthaven myself.” She nods at you in passing. “Look, it’s your first customers.”</p><p>“Oh, uhm. Hello.” Xain gives you a sheepish smile. “Welcome to the trading post?”</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-61" }],
+								"WO": [{ "id": "WO-80" }],
+								"WR": [{ "id": "WR-41" }]
+							}
 						}
 					}
 				}
 			},
 			"2": {
-				"builtSection": {
-					"id": "12.4"
+				"builtSections": {
+					"12.4": {}
 				}
 			},
 			"3": {
-				"builtSection": {
-					"id": "38.3"
+				"builtSections": {
+					"38.3": {}
 				}
 			},
 			"4": {
-				"builtSection": {
-					"id": "196.2"
+				"builtSections": {
+					"196.2": {}
 				}
 			}
 		}
@@ -142,19 +147,19 @@
 		"name": "Enhancer",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "193.1"
+				"builtSections": {
+					"193.1": {}
 				}
 			},
 			"2": {
-				"builtSection": {
-					"id": "157.2"
+				"builtSections": {
+					"157.2": {}
 				}
 			},
 			"3": {},
 			"4": {
-				"builtSection": {
-					"id": "56.3"
+				"builtSections": {
+					"56.3": {}
 				}
 			}
 		}
@@ -195,13 +200,13 @@
 				}
 			},
 			"2": {
-				"builtSection": {
-					"id": "116.3"
+				"builtSections": {
+					"116.3": {}
 				}
 			},
 			"3": {
-				"builtSection": {
-					"id": "89.2"
+				"builtSections": {
+					"89.2": {}
 				}
 			}
 		}
@@ -217,12 +222,13 @@
 		"name": "Boat",
 		"levels": {
 			"0": {
-				"builtSection": { 
-					"id": "139.2",
-					"title": "Boat Built",
-					"text": "<p>The shipyard hums with activity, somewhat literally in the case of the Harrower carpenter, who has been hired to construct your boat. As a swarm of unified insects, the Harrower has spent the last few days slicing planks of wood, then bending the pieces into shape with the help of other workers. It’s a respectable, single-mast ship with enough room for a small crew to make a brief voyage north. Until now, a part of you had hoped the carpenter wouldn’t pull it off and that you’d be saved from venturing into these frigid waters. But seeing the ship here, all properly rigged up and sealed with fresh pitch, your mood brightens. Now, all you need is a crew.</p><p>“Captain Philip Doghogger, at your service!” You turn back toward the gate. The human walking toward you is the height of a child, but the weathered look on his face makes his age clear.</p><p>“Satha mentioned ye needed an old salt,” the man continues cheerily. He seems confident that he’s already been hired. “Delighted to have a ship to captain once again. Been lookin’ fer a new steed since my own ship met an unfortunate end a few months back. I’m sure this one won’t be torn apart by a giant starfish, eh?” He laughs, but there is sadness there.</p><p>“Now, whaddya call this beauty?” The sailor brightens again, offering a bottle of brackish alcohol. “G’head, pick a name. Bad luck to set forth on an unnamed vessel!”</p><p>You smash the bottle on the hull and watch as the carpenter and their assistants launch the ship into the chilly waters. Captain Doghogger takes some time to inspect the rigging and secure a crew, but after only half a day, you’re ready to brave the icy sea and leave Frosthaven behind you.</p>",
-					"rewards": {
-						"text": "<p>Open envelope B.</p><p>Place “Boat” campaign sticker on the town map at location A. You may now play scenarios with the [boat] requirement. Name your boat, then write it on the sticker and the front of B-01 and B-02 in the blanks.</p><p>Shuffle events B-01 to 13 together and use them to create the boat event deck. Store this deck in envelope B when not in use and use the card divider to separate the boat event deck from the other boat event cards.</p><p>Gain 1 prosperity.</p>"
+				"builtSections": { 
+					"139.2": {
+						"title": "Boat Built",
+						"text": "<p>The shipyard hums with activity, somewhat literally in the case of the Harrower carpenter, who has been hired to construct your boat. As a swarm of unified insects, the Harrower has spent the last few days slicing planks of wood, then bending the pieces into shape with the help of other workers. It’s a respectable, single-mast ship with enough room for a small crew to make a brief voyage north. Until now, a part of you had hoped the carpenter wouldn’t pull it off and that you’d be saved from venturing into these frigid waters. But seeing the ship here, all properly rigged up and sealed with fresh pitch, your mood brightens. Now, all you need is a crew.</p><p>“Captain Philip Doghogger, at your service!” You turn back toward the gate. The human walking toward you is the height of a child, but the weathered look on his face makes his age clear.</p><p>“Satha mentioned ye needed an old salt,” the man continues cheerily. He seems confident that he’s already been hired. “Delighted to have a ship to captain once again. Been lookin’ fer a new steed since my own ship met an unfortunate end a few months back. I’m sure this one won’t be torn apart by a giant starfish, eh?” He laughs, but there is sadness there.</p><p>“Now, whaddya call this beauty?” The sailor brightens again, offering a bottle of brackish alcohol. “G’head, pick a name. Bad luck to set forth on an unnamed vessel!”</p><p>You smash the bottle on the hull and watch as the carpenter and their assistants launch the ship into the chilly waters. Captain Doghogger takes some time to inspect the rigging and secure a crew, but after only half a day, you’re ready to brave the icy sea and leave Frosthaven behind you.</p>",
+						"rewards": {
+							"text": "<p>Open envelope B.</p><p>Place “Boat” campaign sticker on the town map at location A. You may now play scenarios with the [boat] requirement. Name your boat, then write it on the sticker and the front of B-01 and B-02 in the blanks.</p><p>Shuffle events B-01 to 13 together and use them to create the boat event deck. Store this deck in envelope B when not in use and use the card divider to separate the boat event deck from the other boat event cards.</p><p>Gain 1 prosperity.</p>"
+						}
 					}
 				}
 			}
@@ -232,12 +238,13 @@
 		"name": "Sled",
 		"levels": {
 			"0": {
-				"builtSection": { 
-					"id": "169.2",
-					"title": "Sled Built",
-					"text": "<p>With the sled complete, you can now safely venture farther out into the tundra. Captain Olmstead joins you for a test run on a borrowed scouting sled from the town guard, and you can’t help but enjoy the taste of the crisp morning air. The Captain eyes the next hill and gives a wry smile.</p><p>“Your new sled might outmatch the design of mine, but there’s no substitute for experience.” He cracks his neck. “Let’s make it interesting… first to that tree line over there buys the next round.” Before you have a chance to agree—or even spot the tree line in question, Olmstead has egged his dogs on down the hill.</p><p>You push off in pursuit, but by the time you make it to the tree line your competition is nowhere to be seen. Then you spot him: seated on a log just inside the shelter of the snowy tree canopy is Captain Olmstead sharing a canteen of water with his panting sled dogs.</p><p>“Hah! Glad we understand there’s still a thing or two you mercenaries can learn from this old-timer.”</p>",
-					"rewards": {
-						"text": "<p>Place “Sled” campaign sticker on the town map at location B. You may now play scenarios with the [sled] requirement.</p><p>Gain 1 prosperity.</p>"
+				"builtSections": { 
+					"169.2": {
+						"title": "Sled Built",
+						"text": "<p>With the sled complete, you can now safely venture farther out into the tundra. Captain Olmstead joins you for a test run on a borrowed scouting sled from the town guard, and you can’t help but enjoy the taste of the crisp morning air. The Captain eyes the next hill and gives a wry smile.</p><p>“Your new sled might outmatch the design of mine, but there’s no substitute for experience.” He cracks his neck. “Let’s make it interesting… first to that tree line over there buys the next round.” Before you have a chance to agree—or even spot the tree line in question, Olmstead has egged his dogs on down the hill.</p><p>You push off in pursuit, but by the time you make it to the tree line your competition is nowhere to be seen. Then you spot him: seated on a log just inside the shelter of the snowy tree canopy is Captain Olmstead sharing a canteen of water with his panting sled dogs.</p><p>“Hah! Glad we understand there’s still a thing or two you mercenaries can learn from this old-timer.”</p>",
+						"rewards": {
+							"text": "<p>Place “Sled” campaign sticker on the town map at location B. You may now play scenarios with the [sled] requirement.</p><p>Gain 1 prosperity.</p>"
+						}
 					}
 				}
 			}
@@ -247,12 +254,13 @@
 		"name": "Climbing Gear",
 		"levels": {
 			"0": {
-				"builtSection": { 
-					"id": "161.1",
-					"title": "Climbing Gear Built",
-					"text": "<p>Despite its apparent hostility, the landscape surrounding Frosthaven calls for exploration. Now that some climbing gear has been constructed, you have the means to access new horizons high up in the mountains.</p><p>Inside the shop, you encounter the Harrower carpenter hard at work. The horde of insects which makes up their shape flits around, braiding together fibers for rope. “When we’re finished,” they say in their chittery voice, “this rope will be able to withstand the weight of one hundred thousand bees.”</p><p>You must look nervous. Their shape flutters with humor. “Don’t worry. That means it will hold you, too.”</p><p>You dearly hope so, because you can’t picture one hundred thousand bees scaling a mountain anytime soon.</p>",
-					"rewards": {
-						"text": "<p>Place “Climbing Gear” campaign sticker on the town map at location C. You may now play scenarios with the [climbinggear] requirement.</p><p>Gain 1 prosperity.</p>"
+				"builtSections": { 
+					"161.1": {
+						"title": "Climbing Gear Built",
+						"text": "<p>Despite its apparent hostility, the landscape surrounding Frosthaven calls for exploration. Now that some climbing gear has been constructed, you have the means to access new horizons high up in the mountains.</p><p>Inside the shop, you encounter the Harrower carpenter hard at work. The horde of insects which makes up their shape flits around, braiding together fibers for rope. “When we’re finished,” they say in their chittery voice, “this rope will be able to withstand the weight of one hundred thousand bees.”</p><p>You must look nervous. Their shape flutters with humor. “Don’t worry. That means it will hold you, too.”</p><p>You dearly hope so, because you can’t picture one hundred thousand bees scaling a mountain anytime soon.</p>",
+						"rewards": {
+							"text": "<p>Place “Climbing Gear” campaign sticker on the town map at location C. You may now play scenarios with the [climbinggear] requirement.</p><p>Gain 1 prosperity.</p>"
+						}
 					}
 				}
 			}
@@ -263,13 +271,14 @@
 		"name": "Carpenter",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "7.3",
-					"title": "Carpenter Built",
-					"text": "<p>A wood-carving contest inaugurates the opening of the carpenter’s shop. You wander among booths displaying inlaid trinket boxes and cooking utensils alongside life-size replicas of Lurkers and polar bears. The pavilion is filled with the sounds of hacking and sawing.</p><p>One carpenter is a Harrower, whose undulating insect form obscures a large chunk of wood, chipping away with their collective mandibles. Once they recollect themselves into a vaguely humanoid shape, they reveal their project: a to-scale model of Frosthaven. “We will keep adding to it,” they hum at you, “as long as you keep doing so.” With the carpenters, they note, constructing buildings will now be less costly.</p><p>A few of their insects pick up small cylinders of wood, which they carve instantly into a miniature version of you. They place your model in the center of the Frosthaven replica. After all, the Harrower says, it wouldn’t have come to fruition without you.</p>",
-					"rewards": {
-						"events": {
-							"SO": [{ "id": "SO-53" }, { "id": "SO-60" }]
+				"builtSections": {
+					"7.3": {
+						"title": "Carpenter Built",
+						"text": "<p>A wood-carving contest inaugurates the opening of the carpenter’s shop. You wander among booths displaying inlaid trinket boxes and cooking utensils alongside life-size replicas of Lurkers and polar bears. The pavilion is filled with the sounds of hacking and sawing.</p><p>One carpenter is a Harrower, whose undulating insect form obscures a large chunk of wood, chipping away with their collective mandibles. Once they recollect themselves into a vaguely humanoid shape, they reveal their project: a to-scale model of Frosthaven. “We will keep adding to it,” they hum at you, “as long as you keep doing so.” With the carpenters, they note, constructing buildings will now be less costly.</p><p>A few of their insects pick up small cylinders of wood, which they carve instantly into a miniature version of you. They place your model in the center of the Frosthaven replica. After all, the Harrower says, it wouldn’t have come to fruition without you.</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-53" }, { "id": "SO-60" }]
+							}
 						}
 					}
 				}
@@ -282,14 +291,15 @@
 		"name": "Town Hall",
 		"levels": {
 			"1": {
-				"builtSection": {
-					"id": "189.1",
-					"title": "Town Hall Built",
-					"text": "<p>“Bureaucrats! Nothing but forms and stamps and a waste of my time!” An old man trudges out of the new town hall into the snow, leaving the wooden door wide open. You step inside to get a look around.</p><p>The interior is nicely appointed with the trappings of rural government: broad antlers are mounted high up the walls, and a tall countertop divides the room between visitor waiting area and employees. Behind the counter stands an Inox with a monocle on a chain, reviewing paperwork. “Close the door. Got enough cold outside, don’t need it in here,” he says, without looking up.</p><p>Eventually he sighs. “Alright, got business or just ogling? I’m Glint, the recordskeeper for Frosthaven. You must be... the janitors?” You let him know you’re mercenaries interested in work. “Eh. Slim pickin’s in the North, huh?” You’re not sure if he’s referring to the work or your group. He sorts through some paperwork on the countertop.</p><p>“Ah, here we go. Captain Olmstead told me to find someone to test out a few things next time they’re outside the walls. If you want that, you’re welcome to try until something better comes in.”</p>",
-					"rewards": {
-						"events": {
-							"SO": [{ "id": "SO-59" }, { "id": "SO-62" }],
-							"SR": [{ "id": "SR-38" }]
+				"builtSections": {
+					"189.1": {
+						"title": "Town Hall Built",
+						"text": "<p>“Bureaucrats! Nothing but forms and stamps and a waste of my time!” An old man trudges out of the new town hall into the snow, leaving the wooden door wide open. You step inside to get a look around.</p><p>The interior is nicely appointed with the trappings of rural government: broad antlers are mounted high up the walls, and a tall countertop divides the room between visitor waiting area and employees. Behind the counter stands an Inox with a monocle on a chain, reviewing paperwork. “Close the door. Got enough cold outside, don’t need it in here,” he says, without looking up.</p><p>Eventually he sighs. “Alright, got business or just ogling? I’m Glint, the recordskeeper for Frosthaven. You must be... the janitors?” You let him know you’re mercenaries interested in work. “Eh. Slim pickin’s in the North, huh?” You’re not sure if he’s referring to the work or your group. He sorts through some paperwork on the countertop.</p><p>“Ah, here we go. Captain Olmstead told me to find someone to test out a few things next time they’re outside the walls. If you want that, you’re welcome to try until something better comes in.”</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-59" }, { "id": "SO-62" }],
+								"SR": [{ "id": "SR-38" }]
+							}
 						}
 					}
 				}

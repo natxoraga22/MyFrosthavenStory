@@ -1,6 +1,8 @@
 package txraga.mystory.frosthaven.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import lombok.Getter;
@@ -21,6 +23,7 @@ public class Building {
 	private Map<String,Level> levels = Map.of();
 
 	private int level;
+	private List<String> path = List.of();
 
 
 	public Building(Building other) {
@@ -29,6 +32,7 @@ public class Building {
 		this.name = other.name;
 		this.levels = new HashMap<>(other.levels);
 		this.level = other.level;
+		this.path = new ArrayList<>(other.path);
 	}
 
 
@@ -41,7 +45,7 @@ public class Building {
 	@ToString
 	public static class Level {
 		private int number;
-		private Section builtSection;
+		private Map<String,Section> builtSections = Map.of();
 	}
 
 }

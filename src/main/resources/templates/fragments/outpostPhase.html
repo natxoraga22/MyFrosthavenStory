@@ -63,9 +63,16 @@
 						</div>
 					</div>
 
-					<!-- Section -->
-					<th:block th:if="${level?.builtSection}">
-						<th:block th:replace="~{fragments/section :: section(${level.builtSection})}"></th:block>
+					<!-- Built sections -->
+					<th:block th:if="${level != null && #maps.size(level.builtSections) == 1}">
+						<th:block th:each="builtSection : ${level.builtSections}">
+							<div th:replace="~{fragments/section :: section(${builtSection.value})}"></div>
+						</th:block>
+					</th:block>
+					<th:block th:each="pathItem : *{path}" th:with="builtSection = ${level.builtSections['__${pathItem}__']}">
+						<th:block th:if="${builtSection}">
+							<div th:replace="~{fragments/section :: section(${builtSection})}"></div>
+						</th:block>
 					</th:block>
 				</div>
 			</div>
@@ -86,9 +93,16 @@
 						</div>
 					</div>
 
-					<!-- Section -->
-					<th:block th:if="${level?.builtSection}">
-						<th:block th:replace="~{fragments/section :: section(${level.builtSection})}"></th:block>
+					<!-- Built sections -->
+					<th:block th:if="${level != null && #maps.size(level.builtSections) == 1}">
+						<th:block th:each="builtSection : ${level.builtSections}">
+							<div th:replace="~{fragments/section :: section(${builtSection.value})}"></div>
+						</th:block>
+					</th:block>
+					<th:block th:each="pathItem : *{path}" th:with="builtSection = ${level.builtSections['__${pathItem}__']}">
+						<th:block th:if="${builtSection}">
+							<div th:replace="~{fragments/section :: section(${builtSection})}"></div>
+						</th:block>
 					</th:block>
 				</div>
 			</div>

@@ -245,6 +245,7 @@ public class CampaignController {
 				Building building = frosthaven.getBuilding(buildingBuilt.getId());
 				if (building != null) {
 					building.setLevel(buildingBuilt.getLevel());
+					building.setPath(buildingBuilt.getPath());
 					build.add(building);
 				}
 			}
@@ -258,6 +259,7 @@ public class CampaignController {
 				Building building = frosthaven.getBuilding(buildingUpgraded.getId());
 				if (building != null) {
 					building.setLevel(buildingUpgraded.getLevel());
+					building.setPath(buildingUpgraded.getPath());
 					upgrade.add(building);
 				}
 			}

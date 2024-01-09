@@ -335,7 +335,24 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SR-32": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>A streak of blazing light hums close along the horizon, putting even the noonday sun to shame. You watch as the arc of brilliant fire makes landfall just over the next ridge with a dull thud, then feel the reverberation wash across the landscape. You hurry over to see.</p><p>There, smoldering in a ring of burned grass, is a hunk of metal the size of mead barrel. The surface of it looks to be boiling over, with intricate striations flexing and churning within it. It gives off a thick gas that smells of brimstone.</p><p>You splash cool water on it, and it gives a satisfying sizzle.</p>",
+		"options": {
+			"A": {
+				"trigger": "Drag it back in one piece to Frosthaven for study.",
+				"text": "You drag the chunk of metal back to Frosthaven for analysis and study. Pinter Droman, the local tinkerer, notes the peculiar composition can be used as a filler for other metalworks, and with careful rationing, the chunk can function as a multiplier for future metal construction.",
+				"rewards": {
+					"text": "<p>Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved).</p><p>Resolve another summer road event.</p>"
+				}
+			},
+			"B": {
+				"trigger": "Chop it into more manageable pieces for collection and go on your way.",
+				"text": "With considerable effort, you break the chunk of metal into pieces you can carry. It looks to be of excellent quality—you'll be sure to put it to good use.",
+				"rewards": {
+					"text": "Gain 4 collective [metal]."
+				}
+			}
+		}
 	},
 	"SR-33": {
 		"unlockedBy": { "event": { "id": "SR-03" }}
@@ -350,7 +367,24 @@
 		"unlockedBy": { "section": { "id": "189.1" }}
 	},
 	"SR-46": {
-		"unlockedBy": { "section": { "id": "78.4" }}
+		"unlockedBy": { "section": { "id": "78.4" }},
+		"text": "<p>Heading toward your destination you see an old woman with a cord of dried vegetables hanging around her neck. She's digging in a stepped garden, carved level-by-level into the mountainside. Many of the plants have eye-catching colors and a ripeness to them begging to be eaten immediately.</p><p>The woman looks tired and watches you with a solemn curiosity as you approach. You try to strike up a conversation but she doesn't seem willing to speak. Ready to move on, you ask if you can take one of the magnificent fruits, but she frowns, pointing at the trowel. It looks like she wants you to work for it.</p>",
+		"options": {
+			"A": {
+				"trigger": "Offer to work for a sampling of the beautiful fruits.",
+				"text": "<p>You toil in the dirt, pumping water from a nearby well and hauling it between each of the levels of the stepped garden. It's a true surprise this woman can do it herself, but after you've exhausted the list of chores she silently gestures at the plants and lets you take your pick.</p><p>The fruits live up to their appearance.</p>",
+				"rewards": {
+					"text": "Gain any 2 collective herb resources.<br/>All characters start the next scenario with [bless]."
+				}
+			},
+			"B": {
+				"trigger": "Offer to work for her secret to growing such a bountiful harvest.",
+				"text": "<p>You spend hours smashing rocks with a sledgehammer to make the rough soil suitable for the next plantings, then it's carefully removing frosted berries from the vineyard to be crushed into icewine. When you've exhausted the list of chores she holds up her end of the bargain. Out from her pocket comes a small satchel of yellow dust, which she silently hands over to you.</p><p>She pantomimes sprinkling it over crops. Seems to be easy enough.</p>",
+				"rewards": {
+					"text": "Resolve the building operation of the Garden immediately (in addition to its normal resolution in the building operation step)."
+				}
+			}
+		}
 	},
 	"SR-47": {
 		"unlockedBy": [{ "section": { "id": "143.2" }}, { "section": { "id": "164.2" }}]

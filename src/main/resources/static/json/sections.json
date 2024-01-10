@@ -13,6 +13,9 @@
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
 		}
 	},
+	"44.4": {
+		"unlockedBy": { "event": { "id": "SR-48" }}
+	},
 	"62.2": {
 		"title": "Bathysphere Plans",
 		"unlockedBy": { "scenario": { "id": "022" }},

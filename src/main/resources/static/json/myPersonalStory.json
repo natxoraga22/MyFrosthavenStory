@@ -232,6 +232,17 @@
 				"newMembers": [{ "id": "infuser" }],
 				"upgrade": [{ "id": "garden", "level": 3 }, { "id": "craftsman", "level": 6 }]
 			}	
+		},
+		{ "event": { "id": "SR-48", "chosenOption": "A1" }},
+		{ "scenario": { "id": "026" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "130.3" }],
+				"passageOfTime": [{ "id": "183.3" }, { "id": "152.3" }, { "id": "44.4" }, { "id": "163.1" }],
+				"levelUps": [{ "id": "snowdancer", "level": 4 }],
+				"build": [{ "id": "inn", "level": 1 }],
+				"upgrade": [{ "id": "inn", "level": 2 }]
+			}
 		}
 	]
 }

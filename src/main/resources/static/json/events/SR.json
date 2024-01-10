@@ -390,6 +390,43 @@
 		"unlockedBy": [{ "section": { "id": "143.2" }}, { "section": { "id": "164.2" }}]
 	},
 	"SR-48": {
-		"unlockedBy": { "section": { "id": "116.3" }}
+		"unlockedBy": { "section": { "id": "116.3" }},
+		"text": "<p>The spot Eddica the Librarian marked out for you was certainly easy to find: you just had to make your way toward the ominous column of smoke and ash billowing out of the top of the hillside. The hike up was treacherous and the snow underfoot frequently crumbled away to dark pits you'd prefer not to explore. Cresting the lip of the caldera reveals a single pillar with a stone dome on top. A pool of lava swirls around the pillar and gives off a brazen heat.</p><p>You approach the dome to lift the heavy covering and the boiling rock recedes to allow you passage. Underneath is a tome covered in a beautifully-sculpted cover—the piece looks like a work of art. Images of the elements are carved into the rough Kivak leather as a ring of familiar circles, and ornate citrine studs bind it together. It is warm, and inviting, and impossibly light. It is breathtaking. This is the Tome of the Elements.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Open the tome to learn its secrets.",
+				"requirement": "[trait] ARCANE",
+				"text": "You unlatch the tome and feel the thrum of power within it. It burns, it trembles, it screams in a conflicting storm of energy. You attune yourself to its contents and feel it swell through you.",
+				"rewards": {
+					"text": "Start the next scenario with all elements in the strong column.<br/>Add [section_44.4] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "WR-46" }]
+					}
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Open the tome to learn its secrets.",
+				"requirement": "[not] [trait] ARCANE",
+				"text": "From the instant you break open the binding, the elemental energy of the tome swells through your being, ripping through your insides indiscriminately. You feel a gust of wind travel under your skin, you feel the searing intensity of the sun. Every nerve, every piece of you fills with the terrifying churn of power. And then—as quickly as it began—it stops, leaving you to catch your breath in short gasps.",
+				"rewards": {
+					"text": "All characters start the next scenario with [brittle] and [damage] 3.<br/>Add [section_44.4] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "WR-46" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Bring the book back to Eddica for her informed review.",
+				"text": "You remember Eddica's warning and quickly stow the book in your satchel without opening it. She'll be in a better position to unlock the power within.",
+				"rewards": {
+					"text": "Add [section_44.4] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "WR-46" }]
+					}
+				}
+			}
+		}
 	}
 }

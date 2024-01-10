@@ -14,7 +14,10 @@
 		}
 	},
 	"44.4": {
-		"unlockedBy": { "event": { "id": "SR-48" }}
+		"title": "Tome of Elements",
+		"unlockedBy": { "event": { "id": "SR-48" }},
+		"text": "<p>“I really enjoyed the, uh, the ending, Miss Eddica. A great twist!” A fresh-faced soldier is finishing up a conversation with the Valrath librarian as you enter. Eddica gives a smile from behind her desk as she checks in the book. Two more dockworkers wait in line for recommendations on additional literature from the young librarian—they’re nearly tripping over themselves for a chance to talk to her. She spots you and politely shoos them out the door, finally settling to a seat on the edge of her desk.</p><p>“I expected running a library to be more like Master Scrim’s… he had so much more uninterrupted time than I seem to have. In any case... do you have what I hope you have?” She purses her lips in anticipation, and when you pull the citrine-studded hide tome you found from your satchel she rushes over to snatch it from your hands, looking over it with wide eyes. “The Tome of the Elements! It’s true!”</p><p>She pushes up her red-rimmed glasses and collects herself. “Now, this is supposed to be the most volatile of the tomes. Let’s see if I can deactivate it...” She traces a sigil in arcane white light on the cover before bracing herself and gingerly cracking it open. No sparks, no explosions.</p><p>“There we go!” The pages splay out and Eddica hums a happy tune as she looks through the tome, punctuated with little “a-ha”s and lots of nodding. After a moment she sets the book down, looking up at you with a wide smile. “They’re actually in here! And I have heard very few accounts of these spells being painful.” She lays out the materials on the desk beside her.</p><p>“So, which will it be?”</p>",
+		"sectionLinks": "<p>If you offer to test the fire spell, read [section_104.3] now.</p><p>If you offer to test the cold spell, read [section_163.1] now.</p>"
 	},
 	"62.2": {
 		"title": "Bathysphere Plans",
@@ -50,6 +53,14 @@
 		"rewards": {
 			"text": "<p>Place map overlay sticker Z on the map in location Z (F2).</p><p>Do not resolve an outpost event this week.</p>",
 			"scenarios": [{ "id": "049" }]
+		}
+	},
+	"104.3": {
+		"title": "Tome of Elements",
+		"unlockedBy": { "section": { "id": "44.4" }},
+		"text": "<p>Eddica runs her finger down the page of the Tome of the Elements. She utters something under her breath, dips her finger at the melted base of a wax candle, and traces something on your foreheads.</p><p>“That should do it—ouch!” She quickly sucks her fingertip into her mouth. She looks back at you with a shrug. “Got hot.”</p>",
+		"rewards": {
+			"text": "<p>During the next scenario, the element [fire] token does not move from the waning column to the inert column at the end of any round.</p><p>Gain “Tome of Elements” [item_216].</p><p>Do not resolve an outpost event this week.</p>"
 		}
 	},
 	"114.2": {
@@ -97,6 +108,14 @@
 			}
 		}
 	},
+	"130.3": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>On the docks, you notice a Vermling peering down into the water. In one hand she carries a travel bag; she probably came to Frosthaven on the Lucky Lady, the ship that just docked. She introduces herself as Rattusca, and gestures down at the water, where a corpse is tangled in a line that hangs down from the ship’s bowsprit. The body looks like it’s been dead for some time; its clothing and armor are rotted through. The only thing intact are the wide gold bracelets around its bony wrists.</p><p>“Help me haul the body out of the water,” she tells you, “and if you’re interested in getting more of those wristbands, I can tell you where to find some, so long as you cut me in on the profits.”</p><p>You haul out the body of an Algox. It looks mummified, and has several chunks torn out of it, as if some hungry creature tried to feed on its leathery flesh.</p><p>Rattusca slips the wristbands off the corpse. “Just before we reached port, the ship struck an iceberg,” she tells you. “Fortunately it was a small one, and it broke apart. That’s where the body came from. I saw several more dark shapes inside the ice that may have been more bodies.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "090" }]
+		}
+	},
 	"131.3": {
 		"unlockedBy": { "event": { "id": "WO-10" }}
 	},
@@ -121,6 +140,16 @@
 		"text": "<p>You’re polishing off a round of ale before bed when the door opens with a light creak. With near-imperceptible slowness enters the oldest orchid you’ve ever seen; were it not for the lumbering walk you’d take her too-large crystals to be a fallen chandelier, not a sentient being.</p><p>By the time she’s made her way over to your table your party is in the midst of exchanging goodnight wishes. She settles into an open chair with a rattling thump.</p><p>“My, what fortuitous provenance! Just the merry band I was hoping to see.” She speaks slowly and deliberately, a light hint of an accent you can’t place dotting her speech. “I’ve been told you are the choice for matters outside the typical. And my, this matter is far from typical.”</p><p>She pauses for dramatic effect, but her timetable is skewed much too far. By the time she resumes speaking your party is exchanging concerned glances: did she die at the table?</p><p>“The matter, of course, touches the very core of a group like you.” The ponderous crystals obscuring her mouth twist and rattle against each other. Is she… smiling?</p><p>“But we will get to that, I understand the protocol. I may be old, but I imagine my gold is still good?” She shifts and her slow hand drops a sack of gold on the table. It’s clear these are not typical coinage: despite their excellent condition they’re of an antiquated design. Gold is gold, though.</p><p>She takes the look on your faces as sufficient. “Wonderful! I look forward to our adventure!”</p>",
 		"rewards": {
 			"scenarios": [{ "id": "099" }]
+		}
+	},
+	"152.3": {
+		"title": "Library Lesson",
+		"unlockedBy": { "section": { "id": "143.2" }},
+		"text": "<p>Eddica, the resident librarian, wraps up the last of her weekly lessons. “And that’s why a week is just ten days long.” She checks off the final item on a long checklist, then sets her red-rimmed glasses down on the table beside her. “Well, that settles my end of the bargain. If there’s more to learn in this world, it certainly won’t be from me.”</p><p>She stands from behind her desk, straightening her skirt. “So that leaves your part. It’s time you find those books of power—” she stops herself, wagging a finger, “—no, those tomes of power, and help me get on with my research.”</p>",
+		"rewards": {
+			"events": {
+				"SO": [{ "id": "SO-58" }]
+			}
 		}
 	},
 	"155.2": {
@@ -149,6 +178,14 @@
 		"text": "<p>The guard tower is crowded on this clear Frosthaven dawn. Every outposter able to make the climb has braved the snow-slick steps and packed each gate house to get a view of the morning’s events.</p><p>”It’s a waste of resources, I kept telling ’em.” Captain Olmstead grumbles as yet more people pack the overlook, causing the floorboards to groan under the excited chatter. You follow his eye toward the courtyard, where a monolith stands concealed by a tarp of stitched hides.</p><p>For weeks a secretive scaffold has occupied the town square as artisans carted stone, steel, and wood behind a curtain under the supervision of a scarfclad Savvas. Now the scaffold has been disassembled, and only the thin sheet blocks the finished monument from view.</p><p>Satha strides to center of the square and addresses the crowds with a bullhorn. “I’m not much for speeches,” the mayor begins. “And I’m not usually one for, uh, sentiment, either. But this place, these people... you make me proud.”</p><p>Finished, the mayor lowers her bullhorn and nods, and the Savvas signals its crew to pull the hide tarp.</p><p>A giant of stone and steel emerges: a human figure stands mid-stride on its way north, its determined gaze unflinching against the wind whipping in from the bay. Like the town of Frosthaven, the statue isn’t the most beautiful thing in the world. It wouldn’t be on display in any garden on the more civilized side of the Copperneck mountains. But it isn’t south of the mountains; it’s here, like Frosthaven, in a place it shouldn’t be able to exist, defying the cruel landscape that would spell death to anything of weaker stock.</p><p>A thundering cheer rises from the gathered outposters, echoing off the mountains and over the choppy waters of the harbor.</p><p>”Still a waste,” Captain Olmstead repeats, but even the surly guard captain can’t suppress a grin amid the victorious roar.</p>",
 		"rewards": {
 			"text": "<p>Gain 2 prosperity.</p><p>Place “Statue” campaign sticker on the town map at location F.</p>"
+		}
+	},
+	"163.1": {
+		"title": "Tome of Elements",
+		"unlockedBy": { "section": { "id": "44.4" }},
+		"text": "<p>Eddica the Librarian runs her finger down the page of the Tome of the Elements. She half-whispers something arcane, then scoops a fistful of ice out of a bowl, tracing a sigil with the melted water on your foreheads.</p><p>“Brr!” She shivers, rubbing her hands up and down her arms. “You feel that?”</p>",
+		"rewards": {
+			"text": "<p>During the next scenario, the element [ice] token does not move from the waning column to the inert column at the end of any round.</p><p>Gain “Tome of Elements” [item_216].</p><p>Do not resolve an outpost event this week.</p>"
 		}
 	},
 	"168.2": {

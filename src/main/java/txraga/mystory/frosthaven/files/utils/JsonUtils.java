@@ -16,6 +16,11 @@ public class JsonUtils {
 		String scenarioIconHtml = "<span class=\"scenarioNumber\">($1)</span>";
 		replaced = replaced.replaceAll(scenarioIconRegex, scenarioIconHtml);
 
+		// Item icon (special case)
+		String itemIconRegex = "\\[item_(.*?)\\]";
+		String itemIconHtml = "<img class=\"icon item\" src=\"/img/icons/item.png\">";
+		replaced = replaced.replaceAll(itemIconRegex, itemIconHtml);
+
 		// Default case
 		return replaced.replaceAll("\\[(.*?)\\]", "<img class=\"icon $1\" src=\"/img/icons/$1.png\">");
 	}

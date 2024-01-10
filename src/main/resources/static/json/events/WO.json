@@ -311,6 +311,9 @@
 	"WO-62": {
 		"unlockedBy": { "event": { "id": "SO-09" }}
 	},
+	"WO-71": {
+		"unlockedBy": { "section": { "id": "151.2" }}
+	},
 	"WO-80": {
 		"unlockedBy": { "section": { "id": "25.2" }}
 	},

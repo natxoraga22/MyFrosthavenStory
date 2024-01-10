@@ -55,7 +55,16 @@
 		"levels": {
 			"1": {
 				"builtSections": {
-					"151.2": {}
+					"151.2": {
+						"title": "Inn Built",
+						"text": "<p>Once the inn is complete, you can’t believe what a difference it makes to Frosthaven. Having a warm location in which to rest and gossip will invite people with diverse backgrounds and abilities. Their presence will bring in much-needed labor, promoting the production of other buildings and spurring the exchange of ideas and invention. Frosthaven no longer feels like such a remote outpost.</p><p>The inn is a sturdy timber longhouse, its evergreen-fresh scent pervading the lobby. The proprietor is a gregarious Quatryl who helped design the building, insisting on the nail-less joints and the carving of the mountain range over the fireplace. “You know you’ll always have a room here,” she greets you warmly, her long fingers handing over a key with a numbered plate. “Especially if you bring in plenty of lively tales to share with my patrons!”</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-55" }],
+								"WO": [{ "id": "WO-71" }]
+							}
+						}
+					}
 				}
 			},
 			"2": {},

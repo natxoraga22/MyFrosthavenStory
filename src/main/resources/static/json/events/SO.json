@@ -393,11 +393,14 @@
 	"SO-53": {
 		"unlockedBy": { "section": { "id": "7.3" }}
 	},
+	"SO-55": {
+		"unlockedBy": { "section": { "id": "151.2" }}
+	},
 	"SO-57": {
 		"unlockedBy": { "section": { "id": "78.4" }}
 	},
 	"SO-58": {
-		"unlockedBy": { "section": { "id": "164.2" }}
+		"unlockedBy": [{ "section": { "id": "152.3" }}, { "section": { "id": "164.2" }}]
 	},
 	"SO-59": {
 		"unlockedBy": { "section": { "id": "189.1" }}

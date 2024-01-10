@@ -1,0 +1,6 @@
+{
+	"id": "090",
+	"name": "Frozen Treasure",
+	"questLine": "JobPosting",
+	"unlockedBy": { "section": { "id": "130.3" }}
+}

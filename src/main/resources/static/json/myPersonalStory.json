@@ -67,7 +67,7 @@
 				"outpostEvent": { "id": "SO-09", "chosenOption": "A" },
 				"levelUps": [{ "id": "deathwalker", "level": 4 }],
 				"retirements": [{ "id": "blinkblade", "additionalPersonalQuest": { "id": "06" }}],
-				"newMembers": [{ "id": "crashingtide", "personalQuest": { "id": "09", "unlockedBuilding": "ALT" } }]
+				"newMembers": [{ "id": "crashingtide", "personalQuest": { "id": "09", "unlockedBuilding": "ALT" }}]
 			}
 		},
 		{ "event": { "id": "SR-13", "chosenOption": "A1" }},
@@ -141,7 +141,7 @@
 				"outpostEvent": { "id": "WO-17", "chosenOption": "B" },
 				"levelUps": [{ "id": "crashingtide", "level": 5 }],
 				"retirements": [{ "id": "deathwalker", "additionalPersonalQuest": { "id": "20" }}],
-				"newMembers": [{ "id": "trapper" }],
+				"newMembers": [{ "id": "trapper", "personalQuest": { "id": "05", "unlockedBuilding": "ALT" }}],
 				"build": [{ "id": "townhall", "level": 1 }]
 			}
 		},

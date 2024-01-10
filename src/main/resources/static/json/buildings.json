@@ -49,6 +49,19 @@
 			"4": {}
 		}
 	},
+	"inn": {
+		"number": "21",
+		"name": "Inn",
+		"levels": {
+			"1": {
+				"builtSections": {
+					"151.2": {}
+				}
+			},
+			"2": {},
+			"3": {}
+		}
+	},
 	"garden": {
 		"number": "24",
 		"name": "Garden",

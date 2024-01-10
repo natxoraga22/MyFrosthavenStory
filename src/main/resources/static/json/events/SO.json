@@ -270,7 +270,24 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SO-22": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>A young boy sits by himself on the edge of the pier, the overhead sun casting a short shadow as his legs dangle over the water. He's dragging a rope attached to a wooden dowel through the water, occasionally stopping to throw chunks of rotting meat. It takes a few minutes, but you finally figure out what he's doing.</p><p>He's fishing. Or trying to, at least.</p><p>You recognize the boy—his father is a fisherman. Well, was, until he was killed in a recent attack. It seems like the kid is trying to do his father's job and help feed the town, but at this rate, he's more likely to scare fish away than catch any.</p>",
+		"options": {
+			"A": {
+				"trigger": "Surreptitiously pay someone a few coins to give the kid some fishing lessons.",
+				"text": "You flag down a respectable looking deckhand, motion toward the kid, and drop a few coins in his hand. You watch as he puts a hand on the boy's shoulder and they start talking, then you go about your duties. A few hours later, you see them still deep in conversation. You smile.",
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Lose 5 collective gold."
+				}
+			},
+			"B": {
+				"trigger": "Spend some time with the boy and teach him yourself.",
+				"text": "You approach the boy and sit down next to him. After a few minutes of silence, he looks at you and introduces himself. You ask if anything is biting today. Next thing you know, it's nightfall. You skipped out on today's assigned duties, but you're pretty sure you spent the day doing the most important work that could be done.",
+				"rewards": {
+					"text": "One character starts the next scenario discarding two cards.<br/>Gain 2 morale."
+				}
+			}
+		}
 	},
 	"SO-23": {
 		"unlockedBy": { "section": { "id": "129.3" }}

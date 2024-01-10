@@ -42,7 +42,9 @@
 		"race": "Vermling",
 		"background": "<p>A Vermling's small stature makes the cold climate of the north particularly inhospitable. But when forced to choose between the harsh elements and the constant harassment of human settlers in the south, some clans have decided to risk the snow and ice. Many have found homes near Frosthaven, mostly in the Radiant Forest, which is always unseasonably warm. Malevolent forces, however, have begun to push the Vermlings out of this forest as well, once again leaving them scrambling for survival.</p><p>A major part of survival is hunting for food and hides to keep warm, and Trappers have always been good at that, giving them a strong edge in the unforgiving wilds. They have grown quite adept at not only laying a variety of snares, but also luring their prey into the deadly traps. Quick on their feet and with jaws of metal never in short supply, Trappers are prepared to bring down any quarry.</p>",
 		"retirement": { 
-			"id": "56.5"
+			"id": "56.5",
+			"text": "<p>“Listen, this has been great, but I still just can’t get used to all... this,” the Trapper gestures to the bustling outpost sheepishly. “I’m happy the hunting lodge convinced me to help out around here, but I just need some time to myself. Time to just be myself out in the wilderness, not worrying about who’s going to spit on me or kick me as I walk by.”</p><p>You frown and express remorse that such terrible things still happen to someone who has done so much good for the outpost.</p><p>“Ha, well, they’re sorry too when they get a footful of bear trap,” the Trapper grumbles. “But it’s not about that. I just long for the open skies and simple life the wilds provide. Don’t worry, though, I’ll still be back occasionally to trade with the hunting lodge.”</p><p>With that, the Trapper packs up their sled of contraptions and marches off into the tundra.</p>",
+			"sectionLinks": "Add [section_169.1] to the calendar in six weeks."
 		}
 	},
 	"snowdancer": {
@@ -51,6 +53,14 @@
 		"background": "<p>Algox are at home in the north. Their thick white fur offers great protection from the elements, and their strength and intelligence put them at the top of the fcx»d chain. They are imposing figures with three spiraling horns atop their head. This feature they share with their distant relatives, the Inox. Like their cousins, the Algox gather in clans, but these are split following one of two rival ideologies: the Snowspeakers, who believe the divine speaks to them through the falling snow; and the Icespeakers, who instead look to the ice growing up from the cold earth.</p><p>The most adept priests of the Snowspeakers are those that move with the winds and snow, using it to make others dance, as well—often against their will. It is a breathtakingly beautiful sight, watching these Snowdancers harness the raw power of their movement to bring forth the elements of the north. Their enemies soon find themselves sapped of all warmth as the wind beats them into a snowy grave.</p>",
 		"retirement": {
 			"id": "107.3"
+		}
+	},
+	"infuser": {
+		"name": "Infuser",
+		"race": "Orchid",
+		"background": "<p>Orchids come from across the Misty Sea and can spend years in a peaceful state, contemplating and planning their next move while crystals grow across their skin. Orchids are largely unaffected by their environment, getting whatever warmth and sustenance they need from their meditations, so it is perfectly natural they would eventually find their way into the inhospitable north. These harsher climates provide them with new, unique perspectives on which to ruminate.</p><p>An Orchid's contemplative nature also gives them a particular prowess over the elemental energies of the world. Some use these energies to attack their foes with raw power; however, others emit these energies into strands of elemental fabric, weaving them into physical armor and weapons. These are the Infusers, martial warriors who use the natural flow of elements to enhance their already formidable fighting skills.</p>",
+		"retirement": {
+			"id": "92.2"
 		}
 	}
 }

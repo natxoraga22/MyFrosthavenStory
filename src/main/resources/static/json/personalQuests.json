@@ -6,6 +6,13 @@
 		"building": { "id": "tradingpost" },
 		"altBuilding": { "id": "hidedepot" }
 	},
+	"05": {
+		"title": "Build, not Destroy",
+		"description": "Sure, you've made a name for yourself as a seasoned fighter. When push comes to shove, you know how to kill a man. Still, it doesn't feel good. You long to find a new way of life. One that doesn't involve tearing something down, but rather building something up. To use your hands for a positive purpose: that would be ideal.",
+		"requirements": "Experience the construction of twelve different buildings or building upgrades.",
+		"building": { "id": "carpenter" },
+		"altBuilding": { "id": "inn" }
+	},
 	"06": {
 		"title": "Team Building",
 		"description": "You are a people person. Sure, you've got a job to do, but would it hurt to make a few friends? Of course not. Nothing would make you happier than sitting around the hearth with some fast friends, drinking, talking, and playing games.",

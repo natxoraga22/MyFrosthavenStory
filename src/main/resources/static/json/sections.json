@@ -160,6 +160,9 @@
 			"scenarios": [{ "id": "050" }]
 		}
 	},
+	"169.3": {
+		"unlockedBy": { "scenario": { "id": "026" }}
+	},
 	"176.4": {
 		"title": "Funeral for the Winter Fallen",
 		"unlockedBy": { "section": { "id": "53.3" }},

@@ -393,6 +393,9 @@
 	"SO-53": {
 		"unlockedBy": { "section": { "id": "7.3" }}
 	},
+	"SO-54": {
+		"unlockedBy": { "event": { "id": "SR-38" }}
+	},
 	"SO-55": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},

@@ -243,6 +243,17 @@
 				"build": [{ "id": "inn", "level": 1 }],
 				"upgrade": [{ "id": "inn", "level": 2 }]
 			}
+		},
+		{ "event": { "id": "SR-38", "chosenOption": "B" }},
+		{ "event": { "id": "SR-24", "chosenOption": "B" }},
+		{ "scenario": { "id": "134" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-04", "chosenOption": "C" },
+				"levelUps": [{ "id": "infuser", "level": 4 }],
+				"build": [{ "id": "enhancer", "level": 1 }],
+				"upgrade": [{ "id": "enhancer", "level": 2 }]
+			}
 		}
 	]
 }

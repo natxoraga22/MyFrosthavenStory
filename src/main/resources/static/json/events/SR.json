@@ -311,7 +311,24 @@
 		}
 	},
 	"SR-24": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>The aurora shimmers in the night sky as you set up camp in a copse of trees after a long day's hike toward your destination. You're hammering a tent stake and dreaming of the stew simmering on the cookfire when movement from the edge of the firelight catches your eye.</p><p>You approach cautiously, wondering if you're paranoid for feeling as though you're being watched. Suddenly, a Vermling leaps from her hiding spot up a tree and takes off running.</p><p>You have questions and take off after her. The lone Vermling is nimble, bounding across the snow and scampering over tree limbs, but you have the numbers advantage, and your group corners and captures her.</p><p>An investigation of her belongings yields a spyglass and a sketchy map detailing weaknesses in Frosthaven's defenses. She's clearly an advance scout for an attack; you caught her on her way back to deliver her report.</p><p>\"You think Vermlings are uncoordinated. You think we're stupid! We're not stupid, you'll see!\"</p>",
+		"options": {
+			"A": {
+				"trigger": "You can't let her report on Frosthaven's defenses. Kill her.",
+				"text": "Letting her leave would only invite an attack on Frosthaven. It's this scout's life against the outposters whose lives would be at risk when her tribe attacks. You execute the prisoner and study her map, which reveals some easily exploited vulnerabilities you plan to fix when you get back to town.",
+				"rewards": {
+					"text": "Gain 2 morale."
+				}
+			},
+			"B": {
+				"trigger": "Invite her to share your campfire and rations.",
+				"text": "<p>You walk the scout back to camp and give her a bowl of stew and some of your wine. Once she realizes you aren't about to kill her, she tentatively tries the food, then goes back for seconds.</p><p>She won't divulge much other than a description of her leader: a Vermling wearing bright orange feathers. When you press for details she changes the topic to a parable of her people about the moon:</p><p>\"The moon is a giant Algox that hunts in the night sky, stalking its prey across the heavens. Whenever the sky hunter succeeds, the blood from its quarry sprays over the world, forming the glimmering streaks of the aurora... it means good hunting for the Vermlings of the land.\"</p><p>She gets up to leave, but turns back for a final thought: \"Careful when you see the aurora... the Vermlings will be ready.\"</p><p>You post an extra guard under the bright night sky.</p>",
+				"rewards": {
+					"text": "All characters start the next scenario with [warden]."
+				}
+			}
+		}
 	},
 	"SR-25": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -364,7 +381,27 @@
 		"unlockedBy": { "event": { "id": "WR-06" }}
 	},
 	"SR-38": {
-		"unlockedBy": { "section": { "id": "189.1" }}
+		"unlockedBy": { "section": { "id": "189.1" }},
+		"text": "<p>\"Just down that crevasse. Screaming like crazy,\" The mining camp foreman says. \"I'm not sending my folks down here. I'll leave it to you to put it down.\"</p><p>You climb down the ridge and sure enough, protruding from a recent rockslide is the limp arm of an Unfettered.</p><p>\"APPROACH CLOSER SO I MAY ELIMINATE YOU!\" The arm swings uselessly with its interior mechanics exposed. \"PUT YOURSELF WITHIN RANGE OF MY POWER-FLAIL AND TASTE MY STEEL.\" You don't know how long this thing's been down here, but it's clearly lost it. You brush aside the larger rocks and find its entire lower half has been crumpled by the rockslide.</p><p>\"I'VE GOT YOU NOW! <strong>CRUSHING LEAP</strong>!\"... The machine does not move.</p><p>You were sent to eliminate the threat and cash in on the scrap, but there may be an opportunity here. It could be a valuable asset if you can reason with it. That said, it would need a significant overhaul to get it back to operational.</p>",
+		"options": {
+			"A": {
+				"trigger": "This angry machine is worth more as scrap than as a pet project. Deactivate and salvage it.",
+				"text": "It doesn't take long to strip down the Unfettered for parts. The foreman is thankful for your help and they're able to get back to work quickly.",
+				"rewards": {
+					"text": "Gain 5 collective [metal]."
+				}
+			},
+			"B": {
+				"trigger": "Try to salvage the machine without deactivating it.",
+				"text": "<p>You drag the machine back to Frosthaven. It spends the whole trip launching impotent threats.</p><p>\"I WILL FILL YOUR BOOTS WITH BLOOD!\"</p><p>With some significant repairs you should be able to get it back to working order. Back in town you leave it with the capable Quatryl inventor, Pinter Droman, and hope for the best.</p>",
+				"rewards": {
+					"text": "Resolve another summer road event.",
+					"events": {
+						"SO": [{ "id": "SO-54" }]
+					}
+				}
+			}
+		}
 	},
 	"SR-46": {
 		"unlockedBy": { "section": { "id": "78.4" }},

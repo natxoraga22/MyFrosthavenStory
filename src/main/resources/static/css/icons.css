@@ -8,6 +8,10 @@
 	margin-top: -3px;
 }
 
+.icon.invisible {
+	visibility: visible !important;
+}
+
 /* Scenario helpers */
 .icon.one,
 .icon.two,

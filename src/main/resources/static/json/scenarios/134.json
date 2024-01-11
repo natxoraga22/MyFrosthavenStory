@@ -2,5 +2,51 @@
 	"id": "134",
 	"name": "Tower of Knowledge",
 	"questLine": "Other",
-	"unlockedBy": { "section": { "id": "116.3" }}
+	"coordinates": "R1",
+	"requirement": { "status": "Into the Forest" },
+	"unlockedBy": { "section": { "id": "116.3" }},
+	"complexity": 3,
+	"location": "Radiant Forest",
+	"goals": "The scenario is complete when the goal treasure tile is looted. At the end of that round, read [section_153.3].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>Deciding it is time to recover this Tome of Conflict, you set out for the Radiant Forest. As you make your way through the woods toward the spot on the map, you can’t help but think back to how Eddica said it wasn’t on any recent surveys. You would think that you’d be able to spot a giant tower sticking up out of the trees.</p><p>And then you see it. In a matter of a few steps, the once-invisible tower shimmers into view, looming perilously over you. Craning your neck, you peer upward, spotting four balconies that ring the top floor of the tower.</p><p>You force open a metal door at the base of the tower and find that the inside is hollow, save for a rusted spiral staircase that leads to a trap door. As you climb, the ancient metal creaks and shudders. Fortunately, it holds.</p><p>You reach the top and push open the trap door. Clambering through it, you find yourself in the center of an X-shaped room with doors at the far ends of each wing. You also notice dangerous machines hunkering in the shadows, but they seem inert.</p><p>In front of you is an altar, but it holds nothing. When you go to inspect it more closely, the trap door suddenly slams shut, and you hear the sound of bolts locking it in place. You tug on it, but it doesn’t budge. And then, the entire tower begins to tilt back and forth, sending you staggering sideways.</p>",
+			"specialRules": "<p>At the end of each odd round, all characters and character summons are simultaneously forced to move one hex to the top (toward 1-G or 1-D), while at the end of each even round, they are forced to move one hex to the bottom (toward 1-B or 1-E).</p><p>Whenever any character enters any pressure plate [a] or [b] in the scenario, it is triggered. When both pressure plates [a] have been triggered, characters and character summons are no longer forced to move at the end of each even round. Likewise, when both pressure plates [b] have been triggered, they are no longer forced to move at the end of each odd round.</p><p>Both rooms beyond doors [one] and [two] are considered neighboring balconies, as are those beyond doors [three] and [four]. Any figure can jump between neighboring balconies, revealing the map tile if it was unrevealed. Any figure on a balcony can also target hexes on the neighboring balcony, as if there were no wall lines between them.</p><p>Each barrel and crate has 3 hit points. They are enemies to you and allies to all monsters. Whenever any barrel or crate is destroyed, all figures occupying or adjacent to the hex it occupied gain [invisible]. In addition, any figure can be forced to enter the hex of a barrel or crate, in which case, the barrel or crate is destroyed.</p>",
+			"sectionLinks": "When door 1 is opened or tile 1-G is revealed, read [section_33.3].<br/>When door 2 is opened or tile 1-D is revealed, read [section_147.4].<br/>When door 3 is opened or tile 1-B is revealed, read [section_128.1].<br/>When door 4 is opened or tile 1-E is revealed, read [section_44.3].<br/>The first time each pressure plate A is triggered, read [section_11.6].<br/>The first time each pressure plate B is triggered, read [section_30.5].<br/>When all pressure plates have been triggered, read [section_154.4]."
+		},
+		"33.3": {
+			"trigger": "Door [one] is opened or tile 1-G is revealed"
+		},
+		"147.4": {
+			"trigger": "Door [two] is opened or tile 1-D is revealed"
+		},
+		"128.1": {
+			"trigger": "Door [three] is opened or tile 1-B is revealed"
+		},
+		"44.3": {
+			"trigger": "Door [four] is opened or tile 1-E is revealed"
+		},
+		"11.6": {
+			"trigger": "A pressure plate [a] is triggered",
+			"specialRules": "Spawn one Shrike Fiend at the closest nest, which the Shrike Fiend treats as a corridor. It is normal for two or three characters or elite for four characters."
+		},
+		"30.5": {
+			"trigger": "A pressure plate [b] is triggered",
+			"specialRules": "Spawn one Shrike Fiend at the closest nest, which the Shrike Fiend treats as a corridor. It is normal for two characters or elite for three or four characters."
+		},
+		"154.4": {
+			"trigger": "All pressure plates have been triggered",
+			"text": "The dizziness-inducing tilting stops at last. All is silent for a moment, but then, you hear a loud rumbling coming from inside the tower. At the center of the main room, an enormous automaton descends from the ceiling, crushing the altar beneath its bulk. Its metallic fists flex and red light blooms in its eyes. Its head swivels as it searches its surroundings, and then it spots you— intruders! It lumbers forward, murder in those glowing red eyes.",
+			"specialRules": "Replace altar [c] with an elite Steel Automaton. It has HxC/2 hit points (rounded up). When it dies, instead of a loot token, it drops a goal treasure tile."
+		},
+		"153.3": {
+			"trigger": "The goal treasure tile has been looted",
+			"conclusion": "<p>With a thunderous crash, the steel automaton falls. The lights in its eyes blink out. The remaining machines also power down, slumping into immobility. The bolts holding the trap door snap open. It is finally possible to escape.</p><p>Stepping forward cautiously, you prod the fallen metal monster with your foot. Something clicks, and a hatch pops open in its chest, revealing a cavity within. You reach inside, and pull out what can only be the Tome of Conflict. Perhaps this is what was powering this whole mechanical nightmare.</p>",
+			"rewards": {
+				"text": "Gain “Tome of Conflict” [item_219]."
+			}
+		}
+	},
+	"path": ["main", "33.3", "147.4", "128.1", "44.3", "11.6", "30.5", "154.4", "153.3"]
 }

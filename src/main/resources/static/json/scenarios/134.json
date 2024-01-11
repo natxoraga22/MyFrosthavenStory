@@ -1,5 +1,6 @@
 {
 	"id": "134",
 	"name": "Tower of Knowledge",
+	"questLine": "Other",
 	"unlockedBy": { "section": { "id": "116.3" }}
 }

@@ -325,7 +325,7 @@
 				"trigger": "Invite her to share your campfire and rations.",
 				"text": "<p>You walk the scout back to camp and give her a bowl of stew and some of your wine. Once she realizes you aren't about to kill her, she tentatively tries the food, then goes back for seconds.</p><p>She won't divulge much other than a description of her leader: a Vermling wearing bright orange feathers. When you press for details she changes the topic to a parable of her people about the moon:</p><p>\"The moon is a giant Algox that hunts in the night sky, stalking its prey across the heavens. Whenever the sky hunter succeeds, the blood from its quarry sprays over the world, forming the glimmering streaks of the aurora... it means good hunting for the Vermlings of the land.\"</p><p>She gets up to leave, but turns back for a final thought: \"Careful when you see the aurora... the Vermlings will be ready.\"</p><p>You post an extra guard under the bright night sky.</p>",
 				"rewards": {
-					"text": "All characters start the next scenario with [warden]."
+					"text": "All characters start the next scenario with [ward]."
 				}
 			}
 		}

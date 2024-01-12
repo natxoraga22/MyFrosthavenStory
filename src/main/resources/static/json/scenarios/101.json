@@ -2,5 +2,38 @@
 	"id": "101",
 	"name": "Harrower Library",
 	"questLine": "JobPosting",
-	"unlockedBy": { "scenario": { "id": "100" }}
+	"coordinates": "O3",
+	"requirement": { "status": "Into the Forest" },
+	"unlockedBy": { "scenario": { "id": "100" }},
+	"complexity": 1,
+	"location": "Radiant Forest",
+	"goals": "The scenario is complete when C+4 swarms have been absorbed by Zu. At the end of that round, read [section_137.4].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>You push past wrought-iron gates into what was once an ornate entrance hall, but today just barely provides a bit of shelter from the storm outside. Carvings, too intricate to have been made by human hands, adorn the broad wooden doors, coalescing into sublime patterns now worn away with time. The iron hinges are smashed in, and the door hangs lopsided— the fabled Harrower Library you were looking for is in disrepair.</p><p>“It wasss a place of reverenccee onceee.” Zu, the Harrower you rescued from prison, shuffles toward the door. “But it hasss the ansssswers we sseeek.”</p><p>Gem turns to you. “In any case, we’ll need to collect whatever remains from the resources here at the library. Harrowers aren’t like you or I—they’re many smaller creatures that have agreed to work in unison. A library for them doesn’t have scrolls or books, but rather deposits of themselves. A Harrower can subsume what’s in these receptacles and learn all that the depositor knew. Here are the remaining memories of the Harrowers who locked Zu away and drove the rest of us to the far reaches of the continent. They will know where to find our companion.”</p><p>The unmistakable sound of angry Algox down the hall interrupts your conversation. Gem brushes off a stone bench and sits down, folding her crystal-covered arms. “Well, I’ll let you fine mercenaries deal with that. Sounds like more guards stationed to thwart our plans. Best of luck and all.”</p>",
+			"sectionLinks": "When door [one] is opened, read [section_126.2].<br/>When door [two] is opened, read [section_194.4].<br/>When door [three] is opened, read [section_171.3]."
+		},
+		"126.2": {
+			"trigger": "Door [one] is opened",
+			"text": "Zu swarms into position at the center of the room and expands into a cloud of insects. “We are ready to acccepttt the knowledggge.”",
+			"specialRules": "<p>[a] represents Zu, an ally to you and an enemy to all monsters, but that cannot be interacted with in any way. They are not affected by any non-swarm traps or terrain.</p><p>Whenever any goal treasure tile is looted, create one [poison] trap in the closest empty hex. These represent swarms, which cannot be destroyed. At the end of each round, each swarm moves two hexes toward Zu through any featureless hexes.</p><p>Numbered tokens [four]-[twelve] can be looted as normal, and when each one is, create one [poison] trap in the closest empty hex.</p><p>After all swarms move, Zu performs [move] 2, focusing on moving toward and occupying the closest hex with a swarm. If Zu ever occupies a hex with a swarm, the swarm is absorbed and removed from the map.</p>"
+		},
+		"194.4": {
+			"trigger": "Door [two] is opened",
+			"sectionLinks": "Return to [section_126.2] to reference its special rules, if necessary."
+		},
+		"171.3": {
+			"trigger": "Door [three] is opened",
+			"sectionLinks": "Return to [section_126.2] to reference its special rules, if necessary."
+		},
+		"137.4": {
+			"trigger": "C+4 swarms have been absorbed by Zu",
+			"text": "<p>Zu finishes consuming the last of the repositories, drawing to a full height that towers over you. The remaining Algox take this as their cue to leave and hustle out without putting up any more fight. Gem waddles into the room and notes the number of corpses.</p><p>“Well, you lot certainly have a way about you.” Her tone is anything but admonishing. If anything, it’s envious.</p><p>Zu contemplates for a moment, communing with their new knowledge, then speaks: “We know where Bartlet is. But why should we disturb the Savvas’s rest?”</p><p>The old Orchid addresses the Harrower as though she’s standing before the dumbest creature on the planet. “Because we can finally put it to rest, once and for all. You have the knowledge of thousands of years of Harrowers stuffed into that cloak and you still don’t see it, do you?”</p><p>Zu pulses in thought, then gives a nod in your direction. “Has sshe told you we werre like you?”</p><p>Gem shakes her head. “Come on now, Zu! You’ll scare the poor crew.” She sees your confusion, then rolls her eyes. “We were mercenaries some time ago. A long time ago. We adventured together—Zu, Bartlet, and I. And... another.” You can’t help but notice the catch in her voice. “Then we made a mistake, and, well, now we’re here to put old ghosts to rest.</p><p>“That’s all I’ll say, and you’ll deal with it, because we’re the clients, and you’re the mercenaries.” She brightens up, “My, it’s a good feeling to say that. Wouldn’t want to be in your shoes.” She lets out a snorting chuckle.</p><p>“Now, my dear Zu, lead the way! I can’t wait to get the old band back together.”</p>",
+			"rewards": {
+				"text": "Gain 1 [checkmark] each and 10 [xp] each.",
+				"scenarios": [{ "id": "102" }]
+			}
+		}
+	}
 }

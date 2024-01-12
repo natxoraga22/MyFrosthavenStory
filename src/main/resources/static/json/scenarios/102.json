@@ -1,0 +1,6 @@
+{
+	"id": "102",
+	"name": "Into the Black",
+	"questLine": "JobPosting",
+	"unlockedBy": { "scenario": { "id": "101" }}
+}

@@ -254,6 +254,16 @@
 				"build": [{ "id": "enhancer", "level": 1 }],
 				"upgrade": [{ "id": "enhancer", "level": 2 }]
 			}
-		}
+		},
+		{ "event": { "id": "SR-04", "chosenOption": "A1" }},
+		{ "scenario": { "id": "101" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-57", "chosenOption": "B" },
+				"upgrade": [{ "id": "inn", "level": 3 }]
+			}
+		},
+		{ "event": { "id": "SR-28", "chosenOption": "B" }},
+		{ "scenario": { "id": "102" }}
 	]
 }

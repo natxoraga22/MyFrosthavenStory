@@ -234,6 +234,9 @@
 	"WR-41": {
 		"unlockedBy": { "section": { "id": "25.2" }}
 	},
+	"WR-44": {
+		"unlockedBy": { "section": { "id": "193.1" }}
+	},
 	"WR-45": {
 		"unlockedBy": [{ "section": { "id": "143.2" }}, { "section": { "id": "164.2" }}]
 	},

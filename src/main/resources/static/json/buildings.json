@@ -170,12 +170,28 @@
 		"levels": {
 			"1": {
 				"builtSections": {
-					"193.1": {}
+					"193.1": {
+						"title": "Enhancer Built",
+						"text": "<p>The enhancer projects an aura of mystery into Frosthaven’s streets. A tent of indigo-hued canvas on the outside and embroidered silk tapestries on the inside, the enhancer will use gold to provide enhancements to your abilities.</p><p>In the smoky enclosure, you encounter Voice-of-Eight, the unified being composed of eight different Aesthers who come and go depending upon their needs and whims. Specifically, you see Nera, studiously in the midst of preparing spell components for customers. Nera’s dark eyes sparkle with pleasure at your entrance. She seems to be settling into Frosthaven comfortably, though she and the others are certainly one of the outpost’s more unusual residents. “If you’re ever in need of a little strangeness,” she says, as if reading your mind, semitransparent teeth glinting in a smile, “you know where to find me.”</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-63" }],
+								"WR": [{ "id": "WR-44" }]
+							}
+						},
+						"sectionLinks": "If you have completed <strong><em>Forgotten Circles</em></strong>, add [section_118.3] to the calendar in three weeks."
+					}
 				}
 			},
 			"2": {
 				"builtSections": {
-					"157.2": {}
+					"157.2": {
+						"title": "Enhancer Upgraded",
+						"text": "<p>With the enhancer expanded, you visit Voice-of-Eight to see how they are liking the improved shop. Unsurprisingly, you find Nera embroiled in multiple tomes, the room aglow with spells, her hands weaving purple and black through the air. You wonder if you ought to leave her to it, but she signals you over, speaking excitedly.</p><p>“We have made contact with someone who may be trapped in the Void. They must have endured cruelties from the Corruption, but with that evil force gone, we should be able to pull them out to safety. Come, help me.” This sounds dangerous at best, but that’s a typical day in Frosthaven. Trusting Voice-of-Eight’s judgment, you assist Nera in setting up the spell components as the rest of the Aesther collective materializes around you. They form a circle, chanting as a portal opens at the center.</p><p>The procedure seems stable for a while as Nera scans for where the energy is strongest. “There!” She cries, and a surge of purple energy flares from the portal. A scarred hand emerges from the other side, but then the flat face of the rift cracks, and it appears the hand is stuck.</p><p>“Help!” Nera pleads, and, not knowing what else to do, you grab hold of the hand and pull. With great effort, an Aesther tumbles forth right before the portal shatters in a shower of ethereal glass.</p><p>The figure groans, shivering on the floor. “W—where is... the pain?” Their hand shoots out, grabbing a shard of the portal. You jump back in alarm, but the Aesther turns the sharp edge on themself, carving strange symbols into the translucent flesh of their leg. You feel a strange tickling sensation on your own leg.</p><p>“Ahhhh, much better,” they sigh. “Thank you for releasing me from that prison. I had been trapped there for so long, I don’t think I can live without pain.</p><p>“But,” the Aesther suddenly stares at you with fierce intensity. “I have also learned to redirect my pain, and I don’t want any other innocents to experience anything like what I have. Point me toward evil, and I will destroy it!”</p>",
+						"rewards": {
+							"text": "Unlock [painConduit] class box."
+						}
+					}
 				}
 			},
 			"3": {},

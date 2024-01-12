@@ -72,6 +72,9 @@
 	"115.1": {
 		"unlockedBy": { "event": { "id": "WO-17" }}
 	},
+	"118.3": {
+		"unlockedBy": { "section": { "id": "193.1" }}
+	},
 	"119.3": {
 		"title": "Random Scenario",
 		"text": "<p>You hold the curiously fragile bit of machinery in your hand, and it suddenly comes to life, projecting some sort of illusory, three-dimensional map in the empty space above it. You try to touch this projection with your other hand, but it just passes right through the light, blanking out anything above it. Very strange indeed.</p><p>The map itself appears to be of some sort of ancient building that constructs machines, you wonder whether it is still operational and whether it may be beneficial to visit. After a considerable amount of tinkering, you discover a way to make the map zoom out, and there it is: a blinking dot on a very recognizable landscape. Shouldn’t be too hard to find.</p>",

@@ -256,7 +256,7 @@
 			}
 		},
 		{ "event": { "id": "SR-04", "chosenOption": "A1" }},
-		{ "scenario": { "id": "101" }},
+		{ "scenario": { "id": "101", "path": ["main", "126.2", "137.4"] }},
 		{
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-57", "chosenOption": "B" },

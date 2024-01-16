@@ -426,7 +426,24 @@
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},
 	"SO-57": {
-		"unlockedBy": { "section": { "id": "78.4" }}
+		"unlockedBy": { "section": { "id": "78.4" }},
+		"text": "<p>The gates to Frosthaven open to reveal a lone Vermling traveler. He looks in good spirits as he shuffles through the gate and sets down his pack.</p><p>\"You there!\" he calls out. \"I'm new in town, don't suppose you could point me in the direction of a hot meal? Warm, even. It's been a long journey.\"</p><p>You direct him to the best restaurant in town. It also happens to be the worst restaurant in town. It's the only restaurant, really.</p><p>\"Thank you, such hospitality. Oh—one more thing. I have quite an affection for tea. Don't suppose you have some herbs you'd be willing to part with? Or any interest in buying some of the more exotic specimens I'm carrying myself?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Trade the Vermling some herbs from your personal collection.",
+				"text": "You offer the Vermling some plants and his eyes light up. \"Oh my, the varietals here are excellent! I'm sure we can work out a deal.\"",
+				"rewards": {
+					"text": "Select any one type of herb now. For each herb of that type any character trades to the Vermling, they gain one of any other type of herb."
+				}
+			},
+			"B": {
+				"trigger": "Show the Vermling to the town garden.",
+				"text": "<p>You walk the Vermling tea aficionado over to the town garden. He is visibly overwhelmed at the sight.</p><p>\"It's beautiful! After traveling through so much ice, to see this lush greenery... I could weep!\" As if to demonstrate the point, he does. Openly.</p><p>Then Listerius, the Savvas gardener, emerges from the greenhouse and the two hit it off incredibly well, discussing herbs and teas until the sun goes down. Eventually, the Vermling turns to you and hands you some withered herbs. \"Thank you for showing this to me. I think I am home.\"</p>",
+				"rewards": {
+					"text": "Gain 1 collective [arrowvine], 1 collective [flamefruit], and 1 collective [snowthistle]."
+				}
+			}
+		}
 	},
 	"SO-58": {
 		"unlockedBy": [{ "section": { "id": "152.3" }}, { "section": { "id": "164.2" }}]

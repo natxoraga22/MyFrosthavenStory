@@ -340,7 +340,41 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SR-28": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>Before you stands a rock wall covered in a thick layer of arrowvine. Some of it looks to be too dried to use, but many layers are fresh and suitable for harvest. The whole mess weaves and intertwines with itself, making a natural ladder up the rock wall—it must have been growing for hundreds of years. The vines are in bloom, and small yellow petals light up the wall, reflecting in the summer sun.</p><p>Footprints suggest there is considerable traffic past this wall, so it's unusual no one has harvested the arrowvine.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Harvest the vine.",
+				"requirement": "[trait] RESOURCEFUL",
+				"text": "There's significant work in separating the dried from the fresh vines, and after an hour or so, you've collected a tidy pile. The rock wall looks barren without the thick vines covering it, reduced to the sort of winter cliff face you see anywhere around Frosthaven. Unfortunate, but you'll put the arrowvine to good use.",
+				"rewards": {
+					"text": "Gain 6 collective [arrowvine].",
+					"events": {
+						"WO": [{ "id": "WO-60" }]
+					}
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Harvest the vine.",
+				"requirement": "[not] [trait] RESOURCEFUL",
+				"text": "There's significant work in separating the dried from the fresh vines, and after an hour or so, you've collected a tidy pile. The rock wall looks barren without the thick vines covering it, reduced to the sort of winter cliff face you see anywhere around Frosthaven. Unfortunate, but you'll put the arrowvine to good use.",
+				"rewards": {
+					"text": "Gain 6 collective [arrowvine].",
+					"events": {
+						"WO": [{ "id": "WO-60" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Enjoy the vine wall for its beauty, but leave it be.",
+				"text": "You stop and soak up the majesty of the wall, preserved here for so long. A light breeze drifts across the tight-knit network of plants, causing it to undulate with a pleasing rhythm that puts you at peace. You can see why no one has harvested it.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			}
+		}
 	},
 	"SR-29": {
 		"unlockedBy": { "section": { "id": "129.3" }}

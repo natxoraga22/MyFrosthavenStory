@@ -305,6 +305,9 @@
 	"WO-47": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
+	"WO-60": {
+		"unlockedBy": { "event": { "id": "SR-28" }}
+	},
 	"WO-61": {
 		"unlockedBy": { "event": { "id": "SO-19" }}
 	},

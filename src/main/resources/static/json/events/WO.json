@@ -317,6 +317,12 @@
 	"WO-71": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},
+	"WO-75": {
+		"unlockedBy": { "event": { "id": "SO-59" }}
+	},
+	"WO-76": {
+		"unlockedBy": { "event": { "id": "SO-59" }}
+	},
 	"WO-80": {
 		"unlockedBy": { "section": { "id": "25.2" }}
 	},

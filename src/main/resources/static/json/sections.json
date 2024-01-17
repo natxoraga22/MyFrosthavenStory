@@ -63,6 +63,9 @@
 			"scenarios": [{ "id": "049" }]
 		}
 	},
+	"103.2": {
+		"unlockedBy": { "event": { "id": "SO-10" }}
+	},
 	"104.3": {
 		"title": "Tome of Elements",
 		"unlockedBy": { "section": { "id": "44.4" }},
@@ -224,6 +227,9 @@
 		"rewards": {
 			"text": "Gain 2 morale."
 		}
+	},
+	"179.5": {
+		"unlockedBy": { "event": { "id": "SO-10" }}
 	},
 	"180.1": {
 		"title": "Great Dallum",

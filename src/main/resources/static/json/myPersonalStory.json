@@ -273,6 +273,16 @@
 				"levelUps": [{ "id": "snowdancer", "level": 5 }, { "id": "infuser", "level": 5 }],
 				"upgrade": [{ "id": "carpenter", "level": 2 }]
 			}
+		},
+		{ "event": { "id": "SR-40", "chosenOption": "A" }},
+		{ "scenario": { "id": "103" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "118.3" }],
+				"outpostEvent": { "id": "SO-10", "chosenOption": "A" },
+				"levelUps": [{ "id": "snowdancer", "level": 6 }, { "id": "infuser", "level": 6 }],
+				"upgrade": [{ "id": "loggingcamp", "level": 3 }]
+			}
 		}
 	]
 }

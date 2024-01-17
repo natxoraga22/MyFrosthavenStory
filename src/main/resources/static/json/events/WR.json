@@ -234,6 +234,9 @@
 	"WR-41": {
 		"unlockedBy": { "section": { "id": "25.2" }}
 	},
+	"WR-43": {
+		"unlockedBy": { "event": { "id": "SO-59" }}
+	},
 	"WR-44": {
 		"unlockedBy": { "section": { "id": "193.1" }}
 	},

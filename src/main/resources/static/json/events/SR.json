@@ -437,6 +437,26 @@
 			}
 		}
 	},
+	"SR-40": {
+		"unlockedBy": { "event": { "id": "SO-59" }},
+		"text": "<p>As your group is gathering around a warm campfire, a lone Orchid emerges from the woods. His weathered face tells you that he has probably spent the majority of his life here in the north. You offer him a seat. He looks you over with a sharp eye, then accepts.</p><p>After a while of sitting in silence, he speaks. \"During my lifetime, I have seen many things and pondered even more. One matter occupying me lately has been the survival of Frosthaven.\"</p><p>\"Based on what you've seen of the outpost, what is the best course of action to guarantee its survival: the strongest individuals contributing many resources, or everyone offering a small amount?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "The strong should contribute enough to provide for the weak.",
+				"text": "You tell him the strong will provide enough, and he gives you a curious look. \"Interesting choice, my friends. Many have given that answer in the past, but few were good for their word when the time came to slide their coin across the table. Why don't you prove to me how noble you are? And if you're true to your conviction, I'll contribute too.\"",
+				"rewards": {
+					"text": "Choose one character now. At the end of the next scenario, if no other character collected any loot tokens, the chosen character draws one additional loot card for each loot token they collected during the scenario."
+				}
+			},
+			"B": {
+				"trigger": "Everyone offering a small amount will lead to a strong community.",
+				"text": "You tell him a small contribution from everyone will suffice, and a smile creeps across his face. \"I like your way of thinking, friends. In my experience, equal contributions from everyone creates a community that can survive even the harshest of winters... usually. If you are all contributing, so am I.\"",
+				"rewards": {
+					"text": "At the end of the next scenario, if all characters collected the same number of loot tokens, all characters draw one additional loot card for each loot token they collected during the scenario."
+				}
+			}
+		}
+	},
 	"SR-46": {
 		"unlockedBy": { "section": { "id": "78.4" }},
 		"text": "<p>Heading toward your destination you see an old woman with a cord of dried vegetables hanging around her neck. She's digging in a stepped garden, carved level-by-level into the mountainside. Many of the plants have eye-catching colors and a ripeness to them begging to be eaten immediately.</p><p>The woman looks tired and watches you with a solemn curiosity as you approach. You try to strike up a conversation but she doesn't seem willing to speak. Ready to move on, you ask if you can take one of the magnificent fruits, but she frowns, pointing at the trowel. It looks like she wants you to work for it.</p>",

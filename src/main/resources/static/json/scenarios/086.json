@@ -1,0 +1,19 @@
+{
+	"id": "086",
+	"name": "The Lady in White",
+	"questLine": "JobPosting",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "91.4" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": ""
+		}
+	},
+	"path": []
+}

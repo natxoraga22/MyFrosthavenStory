@@ -46,6 +46,14 @@
 			"scenarios": [{ "id": "115" }]
 		}
 	},
+	"91.4": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>A knock at your longhouse reveals a guard you recognize from the battlements, hat in hand. You invite him in to get out of the cold night air.</p><p>“I’m not sure where else to turn. My wife is expecting. But the baby hasn’t arrived yet, and… and I think I know why.” The guard looks fragile without his armor. With a hitch in his voice he mumbles, “Do you believe in being cursed?”</p><p>A sigh heaves through his chest. “I was at my post in the guard tower last month and I looked out into the forest. There was a woman out there... I could barely make her out against the snow. Transparent, dressed all in white, looked almost like a ghostly Aesther, if you’d believe that.” He grips his hat tightly, refusing to look at you.</p><p>“She didn’t have a face, just pits where her eyes could’ve been, and this trickle of blood ran out of them.” He shudders. “She floated right up, tapped my forehead, and was gone.”</p><p>“I told the other guards, but they didn’t believe me. But I can feel it. She cursed me. And my wife and my child are going to pay the price.” He pulls out a satchel of gold coins. “I don’t have much, but I’ll give you all I have to lift this curse and save my family before it’s too late.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "086" }]
+		}
+	},
 	"94.4": {
 		"title": "Sneak Past the Lurkers",
 		"unlockedBy": { "section": { "id": "114.2" }},
@@ -201,7 +209,13 @@
 		}
 	},
 	"169.3": {
-		"unlockedBy": { "scenario": { "id": "026" }}
+		"title": "Crain's Recovery",
+		"unlockedBy": { "scenario": { "id": "026" }},
+		"text": "<p>You have been lucky—luckier than most—to have never spent more than a few nights inside a gaoler’s cage. Of course, there have been times when your temper’s gotten the better of you, when you’ve indulged more than was wise, but you’ve never been forced to spend night after night, month after month sleeping on a stone floor with nothing to look forward to but a glimmer of morning light through iron bars. So you can’t really fathom what it’s like to finally be free from prison or what a person would do when they finally got out, but you doubt they would do this.</p><p>Crain Tallengyr, the Quatryl scholar you rescued from the Unfettered catacombs, has transformed his previously clean, albeit sparse, room into the cluttered, cramped nest of an academic. Somehow between last night and this morning, the Quatryl has gathered several books and a large stack of parchment and he’s arranged everything on the floor around him like a flimsy mosaic. Behind him is a plate of half-eaten eggs and hard biscuits and several empty teacups. The bed looks unused, except the top sheet has been confiscated to sop up a large puddle of ink on the floor. His door is open and when you knock on the frame, his face lifts into a manic smile.</p><p>“My stalwart friends!” He bows without getting up. “Come to check on your rescued ward? What chivalry! And perfect timing, I might add. As you can tell, I’ve managed to get in a full night’s work.”</p><p>Crain pulls out a hefty book with an excited look. You ask if that will help you get to the center of the Unfettered facility, and the Quatryl frowns. “Oh, fine, I suppose we could talk about that first.”</p><p>Crain unfolds a set of building schematics in front of you and shows you two paths from the library that will take you to the core of the facility. One is through the duct system, bypassing the bulk of the Unfettered workers by sneaking above them [scenario_36]. The other is a long, narrow path deep in the facility that Crain says is an unfinished transportation system the Unfettered have abandoned [scenario_37]. Both lead to the central chamber, but there’s no knowing which one will yield the easier path.</p><p>“Now,” Crain says pointedly, pulling out his book again, “If we could get back to this...” The Quatryl clearly wants to move on from his memories of the Unfettered facility, so you take the hint and ask what he’s so excited about.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "036" }, { "id": "037" }]
+		},
+		"sectionLinks": "Read [section_190.4] now."
 	},
 	"176.4": {
 		"title": "Funeral for the Winter Fallen",
@@ -222,6 +236,14 @@
 		"text": "“Ah, my best customers! Heh.” It’s the old traveling merchant and his carriage full of items of suspicious origins. He invites you to poke through his inventory. “Same price as before, but even better value. No one’s going to come looking for these. Heh.” He doesn’t elaborate, and you think better than to press the issue.",
 		"rewards": { 
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
+		}
+	},
+	"190.4": {
+		"title": "Puzzle Book",
+		"unlockedBy": { "section": { "id": "169.3" }},
+		"text": "<p>Crain grins and lifts up a large decaying book, one you recognize from the catacombs. “Of all the texts I had a chance to peruse in those tunnels, this one fascinated me the most, and I understand absolutely none of it.”</p><p>The book doesn’t look like much. It’s bound in thin, tanned leather that’s so worn that the corners have begun to peek through. On the front cover are two words inscribed in faint, black ink. You raise a skeptical eyebrow.</p><p>“Yes! I’m excited as well,” Crain says. “That’s why I spent all night deciding on the best method to begin the translation. The numerical system, that’s what I’ve landed on. It’s quite different from any I’ve studied, but once I untangle it, I should be able to move on to the letters.” He pauses to consider something, then nods enthusiastically, convinced of it. “And how about you, friends? Care to take your luck with the old pen and paper?”</p><p>He riffles through the mosaic of parchment and snaps up a small leaf. On it, is a series of dots and dashes, a code if you were to guess. “It’s their numerals. Or could they be ordinals? No no, definitely numerals. Anyway, how about you give it a shot. A puzzle to fill the time between slaying and whatnot.”</p>",
+		"rewards": {
+			"text": "Open the puzzle book to the first page."
 		}
 	},
 	"194.3": {

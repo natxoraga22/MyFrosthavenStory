@@ -1,0 +1,19 @@
+{
+	"id": "037",
+	"name": "The Dead Mile",
+	"questLine": "Unfettered",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "169.3" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": ""
+		}
+	},
+	"path": []
+}

@@ -1,0 +1,27 @@
+{
+	"id": "103",
+	"name": "The Lead Door",
+	"questLine": "JobPosting",
+	"coordinates": "R8",
+	"unlockedBy": { "scenario": { "id": "102" }},
+	"complexity": 2,
+	"location": "Imperial Mountains",
+	"goals": "The scenario is complete when C+2 ice pillars have been destroyed. At the end of that round, read [section_158.2].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		},
+		"30.4": {
+			"trigger": "Door [one] is opened"
+		},
+		"11.7": {
+			"trigger": "Door [two] is opened"
+		},
+		"158.2": {
+			"trigger": "C+2 ice pillars have been destroyed",
+			"conclusion": "<p></p>"
+		}
+	},
+	"path": ["main", "30.4", "11.7", "158.2"]
+}

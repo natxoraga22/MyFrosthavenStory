@@ -264,6 +264,15 @@
 			}
 		},
 		{ "event": { "id": "SR-28", "chosenOption": "B" }},
-		{ "scenario": { "id": "102" }}
+		{ "scenario": { "id": "102" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "91.4" }],
+				"passageOfTime": [{ "id": "169.3" }, { "id": "190.4" }],
+				"outpostEvent": { "id": "SO-59", "chosenOption": "B" },
+				"levelUps": [{ "id": "snowdancer", "level": 5 }, { "id": "infuser", "level": 5 }],
+				"upgrade": [{ "id": "carpenter", "level": 2 }]
+			}
+		}
 	]
 }

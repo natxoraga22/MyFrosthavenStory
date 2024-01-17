@@ -111,6 +111,13 @@ div.section {
 	border-bottom: none;
 }
 
+.section .specialRules .table tbody hr {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	opacity: 1;
+	border-width: 2px;
+}
+
 
 /* ------------ */
 /* BOSS SPECIAL */

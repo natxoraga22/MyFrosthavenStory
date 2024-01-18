@@ -275,7 +275,7 @@
 			}
 		},
 		{ "event": { "id": "SR-40", "chosenOption": "A" }},
-		{ "scenario": { "id": "103" }},
+		{ "scenario": { "id": "103", "path": ["main", "158.2"] }},
 		{
 			"outpostPhase": {
 				"passageOfTime": [{ "id": "118.3" }],

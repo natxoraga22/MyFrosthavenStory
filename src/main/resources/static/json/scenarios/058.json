@@ -1,0 +1,19 @@
+{
+	"id": "058",
+	"name": "Orphan's Core",
+	"questLine": "Unfettered",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "scenario": { "id": "044" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

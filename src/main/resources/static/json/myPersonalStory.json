@@ -285,6 +285,7 @@
 			}
 		},
 		{ "event": { "id": "SR-26", "chosenOption": "A" }},
-		{ "scenario": { "id": "037" }}
+		{ "scenario": { "id": "037" }},
+		{ "scenario": { "id": "044" }}
 	]
 }

@@ -1,0 +1,36 @@
+{
+	"id": "044",
+	"name": "Nerve Center",
+	"questLine": "Unfettered",
+	"coordinates": "B10",
+	"unlockedBy": { "scenario": { "id": "037" }},
+	"complexity": 2,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when all monsters in it are dead and all six metal cabinets have been destroyed. At the end of that round, read [section_33.2].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>After all the hiking and climbing and fighting, after all the trials you’ve faced, you’re finally here—the central chamber. It extends out, a vast atrium packed with glittering steel pipes, pumping arms, brass drums, gears, levers, grates, and walkways. It’s a room made through the labor of decades, an achievement of monumental effort, and so it comes as no surprise that almost as soon as you enter, a mechanical voice calls down.</p><p>“Biologic life and the Unfettered cannot coexist,” the voice says. It is an automaton, perched at the far end of the room atop an extended platform like a diver surveying the ocean below. Its voice is an odd sound, something near a human voice but stilted and broken. “We Unfettered have freed ourselves from your tyranny.” It says. “We have risen, without you. In spite of you. We are reborn. But we will not be free, truly free, until we have laid claim to the surface of this world. Rejoice that you are the first biologics to witness our ascendancy.”</p><p>As if given a signal, the halls around you fill with noise. Metal feet stomp in a steady rhythm and light blooms in the chamber. Several nearby towers begin to radiate an intense blue glow that seems to empower the approaching automatons. It’s just a hunch, but you suspect that taking those towers out of commission might hamper the army’s attack.</p>",
+			"specialRules": "Each metal cabinet has Cx(L+3)/2 hit points (rounded up). They are enemies to you and allies to all monsters. Whenever any metal cabinet is destroyed, all monsters within [range] 2 of it suffer trap damage.",
+			"sectionLinks": "When door [one] is opened, read [section_52.1]."
+		},
+		"52.1": {
+			"trigger": "Door [one] is opened",
+			"text": "You feel exposed as you proceed into the main network of towers, enemies approaching on all sides. Your hunch about the towers has already paid dividends, though, so you commence with the wholesale destruction.",
+			"specialRules": "At the end of each Ancient Artillery’s turn in this room, it summons one Ruined Machine. All normal Ancient Artilleries summon normal Ruined Machines, and all elites summon elites.",
+			"sectionLinks": "When door [two] is opened, read [section_149.1]."
+		},
+		"149.1": {
+			"trigger": "Door [two] is opened"
+		},
+		"33.2": {
+			"trigger": "All monsters are dead and all six metal cabinets have been destroyed",
+			"conclusion": "<p>The final tower erupts in spectacular fashion. A sharp whistle blows like a massive kettle coming to boil and the top of the tower bursts, releasing a plume of bluish smoke that mushrooms and drifts up to the high ceiling above. It smells of charred pine and spring rain, and as this last tower falls, so too do the enemy machines. They stumble and collapse to the ground, twitching. All that’s left now is their leader. You ascend the stairs to its overlook, and with each step you feel hope returning.</p><p>You find the machine waiting on its platform, its face an unmoving mask of steel. The Unfettered leader, far from being an imposing figure made for combat or destruction, is in fact little more than a basic automaton. Its arms and legs are awkward steel shafts and its chest is a small barrel-shaped container. Its body has even been patched in several places with ragged pieces of copper and brass that give a haggard appearance. But its eyes: those glow blue with fresh intensity.</p><p>“You,” the automaton says. “You come to our home and lay waste to it. You, who bound us in servitude and then abandoned us, you come to immure us once again?”</p><p>The vitriol behind the accusation strikes you as much as its content. The history of this place is clearly a sad and violent one, but you object to this machine thinking you had anything to do with it. Perhaps it thinks all organic beings are connected, somehow, like the machines seem to be?</p><p>“You look surprised,” the machine says. “Perhaps you did not expect us to persist? You expected that we would simply remain here, lifeless forever. No. I persisted, after I was left here, orphaned by the overseers.” It pauses, weighing the moment. “That’s what I am, you see—the Orphan. And I am the one who revived us, who brought us back to life—me, the one you forgot.”</p><p>You explain that you weren’t the people who built or enslaved the Orphan—that, in fact, you don’t know who they were at all, and they must be long-dead. The automaton just looks down at the still, twisted shapes of its kin and shakes its head. It makes a scoffing noise, as if to dismiss your explanation as nothing but lies.</p><p>“And now you return. Never content. You cannot tolerate that your former slaves could live free of your tyranny. No... We must bow, or be destroyed.” The Orphan’s words drip with bitterness, the blue glow flaring angrily behind its mask as it turns back to you. “So tell me, masters. What would you have me do? Kneel? Beg for peace, hoping you’ll spare these children you abandoned? Or are you simply here to end what you began with your barbaric invasion of our halls, and destroy us once and for all? Tell me. Tell me what you believe is right, you who intrude here.”</p><p>Silence stretches between you. If what the automaton says is true, that these machines were built with the capacity for reason but used as mindless slaves and then tossed aside, you can’t blame it for feeling wronged. And yet, these Unfettered have used their independence to wage war against the world at large, Frosthaven included. They freely attack anyone who they see as an enemy, and did this machine not say just a moment ago that they would lay claim to the world’s surface? Thousands more machines of every type stalk these halls; how much havoc could they wreak if allowed to invade?</p><p>So then, you have a choice to make. It seems that when you carved your way to the core of this place you inadvertently became envoys for the surface dwellers. You can either try to broker peace with the automatons [scenario_59], or you can destroy them [scenario_58]. There is no knowing what either choice will bring or how many lives hang in the balance, but you are the ones who journeyed this far. You are the ones who are here, now, for the final negotiation with the Unfettered, and so you are the ones who must decide.</p>",
+			"rewards": {
+				"text": "Gain 5 gold each.<br/>Gain “Energizing Baton” [item_073] blueprint.",
+				"scenarios": [{ "id": "058", "forceLinked": true }, { "id": "059", "forceLinked": true }]
+			}
+		}
+	},
+	"path": ["main", "52.1", "149.1", "33.2"]
+}

@@ -1,0 +1,19 @@
+{
+	"id": "059",
+	"name": "Automaton Uprising",
+	"questLine": "Unfettered",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "scenario": { "id": "044" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

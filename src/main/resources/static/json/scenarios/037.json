@@ -2,18 +2,44 @@
 	"id": "037",
 	"name": "The Dead Mile",
 	"questLine": "Unfettered",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "C11",
 	"unlockedBy": { "section": { "id": "169.3" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 1,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when all characters have escaped. At the end of that round, read [section_98.3].",
+	"effects": "Each character adds two [minus1] cards to their attack modifier deck.",
 
 	"sections": {
 		"main": {
-			"introduction": ""
+			"introduction": "<p>Opting not to crawl around in the walls of an ancient mysterious catacomb, you decide to take the main exit from the library, and at first this appears a wise decision. But what started as a fairly wide passage has for the last twenty minutes descended into a dark and narrow alley. The walls are so close that you can barely walk two abreast without scraping the brick, and to make things worse, an overly ripe smell has begun to invade your nostrils. It’s the smell of dirt, of ancient moldering things steeped in dampness and dust. It’s the smell of decay.</p><p>Something moves—a shadow. You squint in the torchlight, and for a moment, you can make out rattling bones and the wispy forms of curse spirits. Only now does it become obvious why this place is called the dead mile.</p>",
+			"specialRules": "If any character becomes exhausted, the scenario is lost.",
+			"sectionLinks": "When door [one] is opened, read [section_70.1]."
+		},
+		"70.1": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>Undead are a sure sign that nothing good lies ahead. The creatures dwell where death and decay linger. It comes as no surprise, then, that shortly after leaving the undead behind you find more corruption.</p><p>Huge mounds of discarded skeletons have been heaped on either side of this hallway—the remains of humans and Quatryls, left here to molder. The smell is intense. Stale blood and dry rot stings your throat, but you must move forward.</p><p>As you do, you notice that other things are mixed in with the dead. Bits of metal and glass glimmer in the low light: cracked mechanical shells and half-bent legs, old tools ruined and tossed away. This is a junk chute, a tunnel where refuse is left for time to pick over. But not everything here has accepted that fate. The bodies are starting to move.</p><p>Several pale shapes shake loose from the piles. Metal arms and legs scrape their way out and, before you can think, several machines manage to pull themselves free from the mass graves. They clamber into the hallway like awkward puppets, and just behind you comes the familiar sound of spirits returning for another fight.</p>",
+			"specialRules": "At the start of each round, spawn one Living Spirit at any empty starting hex. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.",
+			"sectionLinks": "When door [two] is opened, read [section_81.5]."
+		},
+		"81.5": {
+			"trigger": "Door [two] is opened",
+			"text": "You’ve turned the hallway into a scattered mess of broken bones and dashed oily flesh, and yet, the dead keep coming. You run and burst into the next section of the hall only to find more piles of dead. To make matters worse, several of the gauzy ethereal shapes from before are materializing in the air—more wraiths, shrill and wanton.",
+			"specialRules": "<p>Remove everything on tile 7-F from the map, except door [one], connect it to the right of tile 7-H, and set it up as shown. If any character or character summon is removed in this way, place them, in initiative order, in unoccupied hexes closest to door [one].</p><p>At the start of each round, instead of spawning Living Spirits, now spawn one Living Bones at door [one]. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.</p>",
+			"sectionLinks": "When door [three] is opened, read [section_144.1]."
+		},
+		"144.1": {
+			"trigger": "Door [three] is opened",
+			"specialRules": "<p>Remove everything on tile 7-H from the map, except door [two], connect it to the right of tile 7-F, and set it up as shown. If any character or character summon is removed in this way, place them, in initiative order, in unoccupied hexes closest to door [two].</p><p>At the start of each round, instead of spawning Living Bones, now spawn one Ruined Machine at door [one]. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.</p><p>Each [a] is an escape hex.</p>"
+		},
+		"98.3": {
+			"trigger": "All characters have escaped",
+			"conclusion": "<p>The waves come and you cut them down. You run and dive over piles of dead, weaving between their cold, reaching hands, but the end of the tunnel is in sight. You dive through and slam the hatch behind you, leaving the scratching moans of the dead in your wake.</p><p>After a while, you allow yourselves to relax. Next to the undead, a bit of dull hallway isn’t so bad, and before long, the passage begins to change. The walls open up and the ceiling lowers. Light starts to trickle in through a long metal grate set in the ceiling. You’re just starting to enjoy the walk, and then, a storm of commotion.</p><p>Machine feet block out the light. Hundreds of them clatter just above your heads. You freeze where you are, not daring to move until they are gone. It takes several long minutes. You blood chills as you understand just how many of these automatons dwell in these tunnels, and what they could do if they broke free.</p><p>When the guards finally move away, you are allowed an unobstructed view into the chamber above. You find a great bustling place: a room filled with twisting cords and thumping arms, a chamber where all the machinations of this place come together to form an enormous heart of shivering steel. This is the central chamber. You’ve made it. All that’s left now is to climb up and figure out how to shut it down.</p>",
+			"rewards": {
+				"text": "Gain 3 collective [lumber] and 3 collective [hide].",
+				"scenarios": [{ "id": "044", "forceLinked": true }],
+				"lockedOutScenarios": [{ "id": "036" }]
+			}
 		}
 	},
-	"path": []
+	"path": ["main", "70.1", "81.5", "144.1", "98.3"]
 }

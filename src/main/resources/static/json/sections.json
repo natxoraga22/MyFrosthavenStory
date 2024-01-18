@@ -84,7 +84,12 @@
 		"unlockedBy": { "event": { "id": "WO-17" }}
 	},
 	"118.3": {
-		"unlockedBy": { "section": { "id": "193.1" }}
+		"title": "A Call for Help",
+		"unlockedBy": { "section": { "id": "193.1" }},
+		"text": "<p>You are awoken in the middle of the night by the glowing apparition of an unfamiliar Aesther woman. “This is a call for help,” she says. “Several weeks ago, I sent my dearest friends your way, but I am afraid they may now be in danger. A storm is brewing. Find them before it is too late.”</p><p>In your mind, you see a location: rocky terrain somewhat west of the Frozen Pass, in the Imperial Mountains. It is the center of a massive snowstorm, and you realize you must head there immediately.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "082" }]
+		}
 	},
 	"119.3": {
 		"title": "Random Scenario",

@@ -1,0 +1,19 @@
+{
+	"id": "082",
+	"name": "Expedition North",
+	"questLine": "Other",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "118.3" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

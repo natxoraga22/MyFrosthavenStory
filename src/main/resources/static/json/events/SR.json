@@ -334,7 +334,24 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SR-26": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You catch sight ofa glowing Snow Imp blocking your path, flittering from tree to tree. Unlike most you've encountered, this one seems to welcome your approach, floating in vitingly.</p><p>A drunken patron at The Crater once told you there are some imps that desire more than their normal brethren, drawn to the world of man. Gold has no value for them, but you've heard stories of imps that would be willing to barter some of their rare magical items for a price unlike any other.</p>",
+		"options": {
+			"A": {
+				"trigger": "Approach the imp as a friend and try to trade.",
+				"text": "After some hand waving and what you interpret as delighted tail-wagging, it seems you've reached an agreement. You recount stories of your adventures, and as you speak each word, you feel it fading from your memory, consumed by the imp in front of you. You detail the exciting conclusion, and it seems sated. It holds up its end of the bargain with a choice:",
+				"rewards": {
+					"text": "<p>Check one box and gain one collective copy of that item:</p><p><i class=\"fa-regular fa-square\"></i> A looping metal necklace [item_196]<br/><i class=\"fa-regular fa-square\"></i> A strange glowing powder [item_241]<br/><i class=\"fa-regular fa-square\"></i> A handheld magnifying glass [item_230]</p><p>Lose 15 collective experience. When the last item is checked, remove this card from the deck.</p>"
+				}
+			},
+			"B": {
+				"trigger": "Likely just fairy tales... but if it does have something of value, force is the quickest way to get it.",
+				"text": "You draw your weapons and try to get the jump on the imp, but it flitters off between the trees, casting something back over its shoulder as itgoes.",
+				"rewards": {
+					"text": "All characters start the next scenario with [muddle]."
+				}
+			}
+		}
 	},
 	"SR-27": {
 		"unlockedBy": { "section": { "id": "129.3" }}

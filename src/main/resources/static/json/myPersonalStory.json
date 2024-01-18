@@ -283,6 +283,8 @@
 				"levelUps": [{ "id": "snowdancer", "level": 6 }, { "id": "infuser", "level": 6 }],
 				"upgrade": [{ "id": "loggingcamp", "level": 3 }]
 			}
-		}
+		},
+		{ "event": { "id": "SR-26", "chosenOption": "A" }},
+		{ "scenario": { "id": "037" }}
 	]
 }

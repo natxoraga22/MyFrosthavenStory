@@ -114,6 +114,15 @@
 			"text": "<p>Lose any 3 collective resources.<br/>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
 		}
 	},
+	"128.2": {
+		"title": "Crain's Recovery",
+		"unlockedBy": { "scenario": { "id": "025" }},
+		"text": "<p>You have been lucky—luckier than most—to have never spent more than a few nights inside a gaoler’s cage. Of course, there have been times when your temper’s gotten the better of you, when you’ve indulged more than was wise, but you’ve never been forced to spend night after night, month after month sleeping on a stone floor with nothing to look forward to but a glimmer of morning light through iron-bars. So you can’t really fathom what it’s like to finally be free from prison or what a person would do when they finally got out, but you doubt they would do this.</p><p>Crain Tallengyr, the Quatryl scholar you rescued from the Unfettered catacombs, has transformed his previously clean, albeit sparse, room into the cluttered, cramped nest of an academic. Somehow between last night and this morning, the Quatryl has gathered several books and a large stack of parchment and he’s arranged everything on the floor around him like a flimsy mosaic. Behind him is a plate of half-eaten eggs and hard biscuits and several empty teacups. The bed is still made but the top sheet has been confiscated to sop up a large puddle of ink on the floor. His door is open and when you knock on the frame, his face lifts into a manic smile.</p><p>“My stalwart friend!” He bows without getting up. “Come to check on your rescued ward? What chivalry! And perfect timing, I might add. As you can tell, I’ve managed to get in a full night’s work.” Crain tries to pull out a book of notes, but you stop him, asking him about his ominous warning concerning the Unfettered.</p><p>“Oh, yes, them,” Crain waves his hands dismissively. “Certainly a problem. I suppose we are the ones best equipped to intervene. I’ve had plenty of time to study them, you see, and I am confident that if you bring me back into their facility to scavenge for some materials, I can create a device that will deactivate the Unfettered.</p><p>“But that,” Crain says pointedly, pulling out his book again, “is not the exciting part.” The Quatryl clearly wants to move on from those memories, so you take the hint and ask what he’s working on.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "035" }]
+		},
+		"sectionLinks": "Read [section_190.4] now."
+	},
 	"129.3": {
 		"title": "The Second Year",
 		"text": "<p>While life on the tundra is anything but easy, your time in Frosthaven has earned you a pedigree few could ever touch. You’ve survived in the place where life is so hostile to your existence that some battered wooden walls are all that stand between you and an icy death. But today, with the sun cresting over the mountains and the promise of summer stretching before you, you can’t help but feel hopeful.</p><p>You’ve tested your strength against countless enemies, but you’ve made some friends in this pocket of life, too. While you don’t know what the next year holds, you know this place has earned its name: “home.”</p>",
@@ -251,7 +260,7 @@
 	},
 	"190.4": {
 		"title": "Puzzle Book",
-		"unlockedBy": { "section": { "id": "169.3" }},
+		"unlockedBy": [{ "section": { "id": "128.2" }}, { "section": { "id": "169.3" }}],
 		"text": "<p>Crain grins and lifts up a large decaying book, one you recognize from the catacombs. “Of all the texts I had a chance to peruse in those tunnels, this one fascinated me the most, and I understand absolutely none of it.”</p><p>The book doesn’t look like much. It’s bound in thin, tanned leather that’s so worn that the corners have begun to peek through. On the front cover are two words inscribed in faint, black ink. You raise a skeptical eyebrow.</p><p>“Yes! I’m excited as well,” Crain says. “That’s why I spent all night deciding on the best method to begin the translation. The numerical system, that’s what I’ve landed on. It’s quite different from any I’ve studied, but once I untangle it, I should be able to move on to the letters.” He pauses to consider something, then nods enthusiastically, convinced of it. “And how about you, friends? Care to take your luck with the old pen and paper?”</p><p>He riffles through the mosaic of parchment and snaps up a small leaf. On it, is a series of dots and dashes, a code if you were to guess. “It’s their numerals. Or could they be ordinals? No no, definitely numerals. Anyway, how about you give it a shot. A puzzle to fill the time between slaying and whatnot.”</p>",
 		"rewards": {
 			"text": "Open the puzzle book to the first page."

@@ -1,0 +1,49 @@
+{
+	"id": "035",
+	"name": "Scrap Pit",
+	"questLine": "Unfettered",
+	"coordinates": "C10",
+	"unlockedBy": { "section": { "id": "128.2" }},
+	"complexity": 2,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when there are four damage tokens on debris [e]. At the end of that round, read [section_55.1].",
+	"effects": "Each character gains [muddle].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>The tunnels in this strange Unfettered complex have long since blended together into a tedious blur of gray stone and iron. It would be natural to question whether there’s anything down here of value. Really, you’ve mostly found angry machines and rust. But then, your new Quatryl ally stops.</p><p>“What’s this?” Crain says. He turns down the next hallway and shouts. “Why, my good friends, it seems we’ve struck a proper treasure trove!” Without any consideration for safety, the Quatryl runs into the darkness. You jog to catch up, concerned about what has him so excited.</p><p>Trash. He’s found a mound of scrap metal as tall as a house. It’s been piled up inside a chamber and looks to be made up of ruined machine parts, bent metal tubes, and oily clumps of fabric. It’s the last place you should be stopping, but Crain is already knee-deep in the pile, prying out pieces of ruined metal with little exclamations of “ah ha” and “quite nice”. His enthusiasm is almost inspiring. He moves with manic energy, scrambling over the hillock of trash and prying out discarded pieces of gear. Now and then he removes something large enough to send down a mini landslide of iron chest plates and unwanted metal legs.</p><p>However, this latest shifting of junk reveals a color that catches your eye— white. You bend down to inspect it and find a human femur. Rummaging a bit more, you uncover a number of buried skeletons, both human and Quatryl.</p><p>It’s a troubling discovery, but the remains are quite old—many of them worn down to nubs and splinters. Whatever happened here, it happened a long time ago. You make a mental note about the bones but your main concern is the tinkerer, because he’s just now started to hum some sort of jig to accompany his scavenging.</p><p>You shush him. You try to explain the need for caution, that if he hadn’t noticed, there are murderous automatons roving the halls, but Crain dismisses you with a wave.</p><p>“That’s why you’re here, my friends. The sturdy adventuring types, always ready for action! Oh, ah—oops,” Crain cringes, embarrassed by something behind you. “And would you look at that.”</p><p>You turn and find Unfettered, of course: a whole squad of them marching into the hallway, and their eyes are trained on the Quatryl.</p><p>“I just need a bit more time, friends,” the tinkerer shouts, “and a little time at the next pile, too, a-and then maybe a stop by that third one!”</p><p>You tell him to make it fast, then draw steel.</p>",
+			"specialRules": "<p>Place on numbered token in [a]. This represents Crain, an ally to you and an enemy to all monsters. He has Cx(L+3)/2 hit points (rounded down). On initiative 50 each round, he performs [move] 2, focusing on moving toward his goal, if not already adjacent to it. Crain’s current goal is debris [b]. Any character may lose one card from their hand or two from their discard pile to negate one source of damage to Crain. If Crain dies, the scenario is lost.</p><p>At the end of each round, if Crain is adjacent to his goal, place one damage token on it.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_104.4].<br/>At the start of any round where there are three damage tokens on debris [b], read [section_71.3]."
+		},
+		"71.3": {
+			"trigger": "There are three damage tokens on debris [b]",
+			"text": "“No good, no good!” Crain laments. “I must have picked that pile clean on my last visit. But that one over there looks promising” He begins to trundle off into the darkness, and you prepare to make up for his recklessness.",
+			"specialRules": "Crain’s current goal is now debris [c], which is on the other side of door [one]. If that door is closed, Crain can enter and open it.",
+			"sectionLinks": "At the start of any round, when there are three damage tokens on debris [c], read [section_117.3]."
+		},
+		"104.4": {
+			"trigger": "Door [one] is opened",
+			"sectionLinks": "If you have already read [section_71.3], return to it."
+		},
+		"117.3": {
+			"trigger": "There are three damage tokens on debris [c]",
+			"text": "“Ah, look at this!” Crain holds up a mass of steel and wire. “A perfectly pristine charging capacitor! How marvelous!” It looks anything but pristine, but you decide to continue to trust his process as he moves toward the next pile.",
+			"specialRules": "<p>Crain’s current goal is now debris [d].</p><p>At the start of each round, spawn one elite Ruined Machine for two characters, or two elite Ruined Machines for three or four characters at [f].</p>",
+			"sectionLinks": "At the start of any round, when there are three damage tokens on debris [d], read [section_126.3]."
+		},
+		"126.3": {
+			"trigger": "There are three damage tokens on debris [d]",
+			"text": "<p>“These should do nicely!” Crain throws more broken contraptions into his bag. “Yes, with these, you see, we could set up a feedback loop and increase the intensity of...” He trails off, staring into the dark with intent.</p><p>“Is that a...” He trails off again, rushing toward the final pile.</p>",
+			"specialRules": "<p>Crain’s current goal is now debris [e].</p><p>At the start of every round, instead of spawning Ruined Machines, now spawn one Spitting Drake at [g]. It is normal for two or three characters, or elite for four characters.</p>"
+		},
+		"55.1": {
+			"trigger": "There are four damage tokens on debris [e]",
+			"conclusion": "<p>“I’ve done it!” Crain shouts, though it’s hard to tell what exactly he’s done, since you’re still busy holding back the machine forces. You can hear him though. He’s coming toward you, his small feet scampering over the junk pile until, like a deranged bird, he jumps right into the middle of two Unfettered attackers.</p><p>You try to push forward and get to him before the machines do, but there’s no need. Crain lifts a skull-sized contraption into the air and shouts, “Have at you, Unfettered nuisance!” His contraption releases a flash of searing light and the machines all drop to the ground, dead.</p><p>Now there’s just Crain, standing there, untouched and gloating like a merchant who just sold sand to a Valrath.</p><p>“What do you say to that, mighty adventurer?” He tosses the contraption into the air but fumbles it for a second before getting it back in hand. “Ha, anyway there it is, my long-legged chums. One genuine Crain Unfettered Disabling Device. And,” he reaches into some decayed canvas bag he must have scavenged from the pile and pulls out several more identical gadgets, “I’ve made enough for everyone!”</p><p>Apparently, the contraptions mimic the same technology the machines use for communication, or something like that. The Quatryl speaks quickly whenever he gets excited, and so the details go over your head. What is clear, however, is that by activating one of the devices, you can disable an Unfettered fighter without cutting it down, provided you’re close enough.</p><p>Crain explains that with these devices you can move back through the first tunnel and make your way to the Unfettered core, finally putting these machines to rest.</p>",
+			"rewards": {
+				"text": "Gain 2 collective [lumber], 2 collective [metal], and 2 collective [hide].",
+				"scenarios": [{ "id": "043" }]
+			}
+		}
+	},
+	"path": ["main", "71.3", "104.4", "117.3", "126.3", "55.1"]
+}

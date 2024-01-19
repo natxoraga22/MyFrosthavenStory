@@ -36,6 +36,7 @@ public class Section {
 
 	private String introduction;
 
+	@JsonDeserialize(using = IconsDeserializer.class)
 	private String text;
 
 	@JsonDeserialize(using = IconsDeserializer.class)

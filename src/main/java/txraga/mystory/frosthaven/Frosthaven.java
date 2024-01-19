@@ -23,6 +23,7 @@ public class Frosthaven {
 	
 	private final FrosthavenService fhService;
 
+	private String welcome;
 	private Map<String,FhCharacter> characters;
 	private Map<String,PersonalQuest> personalQuests;
 	private Map<String,Event> events;
@@ -34,6 +35,7 @@ public class Frosthaven {
 	@PostConstruct
 	private void init() {
 		log.entry();
+		welcome = fhService.getWelcome();
 		characters = fhService.findAllCharacters();
 		scenarios = fhService.findAllScenarios();
 		events = fhService.findAllEvents(scenarios);
@@ -41,6 +43,11 @@ public class Frosthaven {
 		personalQuests = fhService.findAllPersonalQuests(buildings);
 		sections = fhService.findAllSections(scenarios);
 		log.exit();
+	}
+
+	public String getWelcome() {
+		log.entry();
+		return log.exit(welcome);
 	}
 
 	public FhCharacter getCharacter(String id) {

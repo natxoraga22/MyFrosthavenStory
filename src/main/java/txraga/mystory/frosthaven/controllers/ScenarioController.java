@@ -1,6 +1,5 @@
 package txraga.mystory.frosthaven.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -14,8 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.Frosthaven;
-import txraga.mystory.frosthaven.model.Scenario;
+import txraga.mystory.frosthaven.FrosthavenCampaign;
 
 
 @XSlf4j
@@ -24,7 +22,7 @@ import txraga.mystory.frosthaven.model.Scenario;
 @RequestMapping("/scenario")
 public class ScenarioController {
 
-	private final Frosthaven frosthaven;
+	private final FrosthavenCampaign fhCampaign;
 
 
 	@GetMapping({"", "/{scenarioId}"})
@@ -32,7 +30,8 @@ public class ScenarioController {
 		log.entry(scenarioId, path);
 		model.addAttribute("page", Page.SCENARIO);
 		model.addAttribute("scenarioId", scenarioId);
-		model.addAttribute("scenario", getScenario(scenarioId, path));
+		List<String> pathList = path != null && !path.isBlank() ? List.of(path.split(",")) : null;
+		model.addAttribute("scenario", fhCampaign.getScenario(scenarioId, pathList, null));
 
 		// Previous and next scenarios
 		if (scenarioId != null) {
@@ -46,26 +45,6 @@ public class ScenarioController {
 	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId, @RequestParam String scenarioPath) {
 		log.entry(scenarioId, scenarioPath);
 		return log.exit(new ModelAndView("redirect:/scenario/" + scenarioId + "?path=" + scenarioPath));
-	}
-
-
-	/* -------- */
-	/* SCENARIO */
-	/* -------- */
-
-	private Scenario getScenario(String id, String path) {
-		log.entry(id, path);
-		Scenario scenario = frosthaven.getScenario(id);
-		if (scenario != null) {
-			// Path
-			if (path != null && !path.isBlank()) {
-				List<String> scenarioPath = new ArrayList<>();
-				String[] pathSplit = path.split(",");
-				for (String pathItem : pathSplit) scenarioPath.add(pathItem.trim());
-				scenario.setPath(scenarioPath);
-			}
-		}
-		return log.exit(scenario);
 	}
 
 }

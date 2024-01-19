@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.Frosthaven;
+import txraga.mystory.frosthaven.FrosthavenCampaign;
 import txraga.mystory.frosthaven.model.Building;
 import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
@@ -27,7 +28,6 @@ import txraga.mystory.frosthaven.model.Section;
 import txraga.mystory.frosthaven.model.StoryObject;
 import txraga.mystory.frosthaven.model.personal.PersonalStory;
 import txraga.mystory.frosthaven.model.personal.StoryItem;
-import txraga.mystory.frosthaven.services.FrosthavenService;
 
 
 @XSlf4j
@@ -37,15 +37,14 @@ import txraga.mystory.frosthaven.services.FrosthavenService;
 public class CampaignController {
 	
 	private final Frosthaven frosthaven;
-
-	private final FrosthavenService fhService;
+	private final FrosthavenCampaign fhCampaign;
 
 
 	@GetMapping("")
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
 		model.addAttribute("page", Page.CAMPAIGN);
-		model.addAttribute("welcome", fhService.getWelcome());
+		model.addAttribute("welcome", frosthaven.getWelcome());
 		return log.exit(new ModelAndView("campaign"));
 	}
 
@@ -67,7 +66,7 @@ public class CampaignController {
 				}
 				// Scenario
 				else if (storyItem.getScenario() != null) {
-					Scenario scenario = getScenario(storyItem.getScenario());
+					Scenario scenario = fhCampaign.getScenario(storyItem.getScenario());
 					if (scenario != null) story.add(scenario);
 				}
 				// Outpost phase
@@ -80,7 +79,7 @@ public class CampaignController {
 		}
 
 		model.addAttribute("page", Page.CAMPAIGN);
-		model.addAttribute("welcome", fhService.getWelcome());
+		model.addAttribute("welcome", frosthaven.getWelcome());
 		model.addAttribute("party", originalParty.values());
 		model.addAttribute("story", story);
 		return log.exit(new ModelAndView("fragments/campaign :: campaign"));
@@ -137,26 +136,6 @@ public class CampaignController {
 			}
 		}
 		return log.exit(event);
-	}
-
-
-	/* -------- */
-	/* SCENARIO */
-	/* -------- */
-
-	private Scenario getScenario(Scenario storyItemScenario) {
-		log.entry(storyItemScenario);
-		Scenario scenario = frosthaven.getScenario(storyItemScenario.getId());
-		if (scenario != null) {
-			// Set path
-			if (storyItemScenario.getPath() != null) scenario.setPath(storyItemScenario.getPath());
-			// Set randomScenarioSection
-			if (storyItemScenario.getRandomScenarioSection() != null) {
-				Section section = frosthaven.getSection(storyItemScenario.getRandomScenarioSection().getId());
-				if (section != null) scenario.setRandomScenarioSection(section);
-			}
-		}
-		return log.exit(scenario);
 	}
 
 

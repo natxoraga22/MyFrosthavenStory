@@ -314,6 +314,9 @@
 	"WO-62": {
 		"unlockedBy": { "event": { "id": "SO-09" }}
 	},
+	"WO-63": {
+		"unlockedBy": { "scenario": { "id": "059" }}
+	},
 	"WO-71": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},

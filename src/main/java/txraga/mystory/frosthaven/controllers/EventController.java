@@ -31,7 +31,6 @@ public class EventController {
 		log.entry(eventId, chosenOptions);
 		model.addAttribute("page", Page.EVENT);
 		model.addAttribute("eventId", eventId);
-		model.addAttribute("chosenOptions", chosenOptions);
 		model.addAttribute("event", fhCampaign.getEvent(eventId, chosenOptions, null));
 		return log.exit(new ModelAndView("event"));
 	}

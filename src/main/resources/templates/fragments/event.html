@@ -121,8 +121,9 @@
 					<input type="text" class="form-control" id="inputEventId" name="eventId" th:value="${eventId}" required>
 				</div>
 				<div>
-					<label for="inputChosenOption" class="form-label">[[#{event.chosenOption}]]</label>
-					<input type="text" class="form-control" id="inputChosenOption" name="chosenOption" th:value="${chosenOption}">
+					<label for="inputChosenOptions" class="form-label">[[#{event.chosenOptions}]]</label>
+					<input type="text" class="form-control" id="inputChosenOptions" name="chosenOptions"
+					       th:value="${#strings.listJoin(event?.chosenOptions, ',')}">
 					<div th:if="${event}" class="form-text">[[#{event.availableOptions}]]: [[${event.options.keySet()}]]</div>
 				</div>
 				<div class="d-grid">

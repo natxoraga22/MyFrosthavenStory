@@ -21,9 +21,27 @@ public class Rewards {
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String text;
 
-	private Map<String,List<Event>> events;
-	private Map<String,List<Event>> removedEvents;
-	private List<Scenario> scenarios;
-	private List<Scenario> lockedOutScenarios;
+	private Map<String,List<Rewards.Event>> events;
+	private Map<String,List<Rewards.Event>> removedEvents;
+	private List<Rewards.Scenario> scenarios;
+	private List<Rewards.Scenario> lockedOutScenarios;
+
+
+	@Getter
+	@Setter
+	@ToString
+	public static class Event {
+		private String id;
+	}
+
+	@Getter
+	@Setter
+	@ToString
+	public static class Scenario {
+		private String id;
+		private String name;
+		private boolean linked = false;
+		private boolean forceLinked = false;
+	}
 
 }

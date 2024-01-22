@@ -30,9 +30,6 @@ public class Scenario extends StoryObject {
 	private int complexity;
 	private String location;
 
-	private boolean linked = false;
-	private boolean forceLinked = false;
-
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String goals;
 

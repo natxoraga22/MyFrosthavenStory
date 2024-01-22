@@ -26,12 +26,12 @@ public class ScenarioController {
 
 
 	@GetMapping({"", "/{scenarioId}"})
-	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId, @RequestParam(required = false) String path) {
+	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId,
+	                                          @RequestParam(required = false) List<String> path) {
 		log.entry(scenarioId, path);
 		model.addAttribute("page", Page.SCENARIO);
 		model.addAttribute("scenarioId", scenarioId);
-		List<String> pathList = path != null && !path.isBlank() ? List.of(path.split(",")) : null;
-		model.addAttribute("scenario", fhCampaign.getScenario(scenarioId, pathList, null));
+		model.addAttribute("scenario", fhCampaign.getScenario(scenarioId, path, null));
 
 		// Previous and next scenarios
 		if (scenarioId != null) {
@@ -42,7 +42,8 @@ public class ScenarioController {
 	}
 
 	@PostMapping("")
-	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId, @RequestParam String scenarioPath) {
+	public ModelAndView scenarioForm(Model model, @RequestParam String scenarioId,
+	                                              @RequestParam String scenarioPath) {
 		log.entry(scenarioId, scenarioPath);
 		return log.exit(new ModelAndView("redirect:/scenario/" + scenarioId + "?path=" + scenarioPath));
 	}

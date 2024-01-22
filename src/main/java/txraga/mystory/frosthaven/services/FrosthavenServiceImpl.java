@@ -120,22 +120,18 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 
 	private void populateRewards(Rewards rewards, Map<String,Scenario> scenarios) {
 		if (rewards != null) {
-			List<Scenario> rewardScenarios = rewards.getScenarios();
+			List<Rewards.Scenario> rewardScenarios = rewards.getScenarios();
 			if (rewardScenarios != null) populateRewardsScenarios(rewardScenarios, scenarios);
 
-			List<Scenario> rewardLockedOutScenarios = rewards.getLockedOutScenarios();
+			List<Rewards.Scenario> rewardLockedOutScenarios = rewards.getLockedOutScenarios();
 			if (rewardLockedOutScenarios != null) populateRewardsScenarios(rewardLockedOutScenarios, scenarios);
 		}
 	}
 
-	private void populateRewardsScenarios(List<Scenario> rewardScenarios, Map<String,Scenario> scenarios) {
-		for (int i = 0; i < rewardScenarios.size(); i++) {
-			Scenario scenario = scenarios.get(rewardScenarios.get(i).getId());
-			if (scenario != null) {
-				scenario.setLinked(rewardScenarios.get(i).isLinked());
-				scenario.setForceLinked(rewardScenarios.get(i).isForceLinked());
-				rewardScenarios.set(i, scenario);
-			}
+	private void populateRewardsScenarios(List<Rewards.Scenario> rewardScenarios, Map<String,Scenario> scenarios) {
+		for (Rewards.Scenario rewardScenario : rewardScenarios) {
+			Scenario scenario = scenarios.get(rewardScenario.getId());
+			rewardScenario.setName(scenario.getName());
 		}
 	}
 	

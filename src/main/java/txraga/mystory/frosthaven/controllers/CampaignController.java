@@ -61,7 +61,7 @@ public class CampaignController {
 			for (StoryItem storyItem : personalStory.getStory()) {
 				// Event
 				if (storyItem.getEvent() != null) {
-					Event event = getEvent(storyItem.getEvent());
+					Event event = fhCampaign.getEvent(storyItem.getEvent());
 					if (event != null) story.add(event);
 				}
 				// Scenario
@@ -118,27 +118,6 @@ public class CampaignController {
 	}
 
 
-	/* ----- */
-	/* EVENT */
-	/* ----- */
-
-	private Event getEvent(Event storyItemEvent) {
-		log.entry(storyItemEvent);
-		if (storyItemEvent == null) return log.exit(null);
-		Event event = frosthaven.getEvent(storyItemEvent.getId());
-		if (event != null) {
-			// Set chosen option
-			event.setChosenOptions(storyItemEvent.getChosenOptions());
-			// Set section
-			if (storyItemEvent.getSection() != null) {
-				Section section = frosthaven.getSection(storyItemEvent.getSection().getId());
-				if (section != null) event.setSection(section);
-			}
-		}
-		return log.exit(event);
-	}
-
-
 	/* ------------- */
 	/* OUTPOST PHASE */
 	/* ------------- */
@@ -169,7 +148,7 @@ public class CampaignController {
 		}
 
 		// OUTPOST EVENT
-		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent()));
+		outpostPhase.setOutpostEvent(fhCampaign.getEvent(outpostPhase.getOutpostEvent()));
 
 		// LEVEL UPS
 		if (outpostPhase.getLevelUps() != null) {

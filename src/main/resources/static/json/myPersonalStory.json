@@ -56,7 +56,7 @@
 		{
 			"outpostPhase": {
 				"passageOfTime": [{ "id": "62.2" }],
-				"outpostEvent": { "id": "SO-14", "chosenOption": "B", "section": { "id": "146.4" }},
+				"outpostEvent": { "id": "SO-14", "chosenOption": "B", "randomScenarioSection": { "id": "146.4" }},
 				"build": [{ "id": "sled" }]
 			}
 		},

@@ -35,7 +35,7 @@ public class Event extends StoryObject {
 	private List<String> chosenOptions;
 
 	// Some events unlock a random side scenario (meaning a section is read)
-	private Section section;
+	private Section randomScenarioSection;
 	
 	
 	@Override

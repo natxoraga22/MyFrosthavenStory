@@ -4,7 +4,7 @@
 	"questLine": "Unfettered",
 	"coordinates": "",
 	"requirement": {},
-	"unlockedBy": { "scenario": { "id": "044" }},
+	"unlockedBy": [{ "scenario": { "id": "044" }}, { "scenario": { "id": "051" }}],
 	"complexity": 0,
 	"location": "",
 	"goals": "",

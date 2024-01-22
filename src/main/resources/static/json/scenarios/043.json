@@ -2,18 +2,36 @@
 	"id": "043",
 	"name": "Overrun Barricade",
 	"questLine": "Unfettered",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "C9",
 	"unlockedBy": { "scenario": { "id": "035" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 2,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when all characters escape. At the end of that round, read [section_101.2].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>You make your way back to the first chamber in the Unfettered complex—the narrow tunnel where you found Crain trapped in his makeshift prison—and prepare your next move. The plan is simple: reopen one of the access tunnels, and using Crain’s familiarity with the place, make your way to the core of the Unfettered complex.</p><p>“You know,” Crain says, standing next to you and fiddling with a bit of trussing near the tunnel entrance, “there is a certain beauty to this place, wouldn’t you say?” The Quatryl takes in a full breath and exhales as if you were on top of a mountain looking down at a grand vista rather than buried some ungodly distance underground. Beauty, sure. You pry open the barricade and get moving.</p><p>The access tunnel is a bit less refined than some of the others you’ve seen so far. The walls are plain stone girded by metal beams, and the passage quickly takes on a more rounded, almost tubular shape. After a few minutes of walking, you learn that the Unfettered are prepared for your invasion.</p><p>Just ahead of you stands a line of automaton guards that completely block the way forward. Steel arms, dimly glowing eyes—an entire garrison waiting here in case you came this way.</p><p>“Stand fast, my friends,” Crain says and moves to your side. “They cannot stand against us!”</p><p>The sentiment is touching, but you can already tell this fight will be far tougher than any you’ve faced yet.</p>",
+			"specialRules": "<p>Place one numbered token face-up on each character’s mat. Any character with a face-up token may forgo a top action (discarding the card instead) and flip the token face-down to perform either [attack] L+3, all adjacent enemies, [pierce] 5 or [attack] L+5, [range] 5, [pierce] 3, [pull] 3. Whenever any character long rests, they may flip their facedown token face-up again.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_117.2]."
+		},
+		"117.2": {
+			"trigger": "Door [one] is opened",
+			"text": "Well, you’ve got to hand it to the industrious little fellow—these strange devices Crain has engineered are making the impossible possible. You fight through the first wave of Unfettered, fully prepared to take on the next.",
+			"sectionLinks": "When door [two] is opened, read [section_2.3]."
+		},
+		"2.3": {
+			"trigger": "Door [two] is opened",
+			"text": "<p>There are just too many machines. You destroy one, and two more take its place. Crain’s devices, though powerful, are too small to make a dent in the Unfettered ranks. You need to change tack, and, apparently realizing the same thing, the Quatryl shouts over the battle.</p><p>“To the side! Up near the ceiling—a passage we can escape through.”</p><p>You spot the opening a little way ahead. It’s another tunnel branching away, and if you get inside, you can seal the opening behind you. It’ll be hard to cross the battlefield, but it’s your only chance. You hoist your weapon high and begin the push forward.</p>",
+			"specialRules": "<p>At the start of each round, spawn one Ruined Machine at either [a]. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.</p><p>Each [a] is an escape hex.</p>"
+		},
+		"101.2": {
+			"trigger": "All characters have escaped",
+			"conclusion": "<p>The tunnel opening comes down in a rain of rock and rust, and for a moment you fear that you might have overdone it, but the debris soon slows to a trickle. You wipe away the grit from your eyes and find a wall of rubble between you and the enemy: a barricade thick enough to hold back even an Unfettered army. It’s a small victory, but you’ll take it.</p><p>This new passage is smaller than the previous one, but it’s built in largely the same way. The walls and ceiling come together into a wide tubular shape and are reinforced with iron and rivets, but thankfully, there are no more machines. The path extends out into pitch blackness, and the only sound you hear is the chunk of your footsteps. Crain seems a bit melancholy after your near brush with death, but he hides behind a brave face when he notices your concern.</p><p>“No worries, friends,” he says. “I’ve been through rougher scrapes than that. And we’re on our way to the core. It shouldn’t be much longer now.”</p><p>True to the Quatryl’s words, you see a light brightening at the far end of the tunnel. You can’t be sure what awaits, but you follow Crain’s lead.</p>",
+			"rewards": {
+				"text": "Gain 10 [xp] each.",
+				"scenarios": [{ "id": "051", "forceLinked": true }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "117.2", "2.3", "101.2"]
 }

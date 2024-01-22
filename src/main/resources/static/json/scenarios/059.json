@@ -3,7 +3,7 @@
 	"name": "Automaton Uprising",
 	"questLine": "Unfettered",
 	"coordinates": "A11",
-	"unlockedBy": { "scenario": { "id": "044" }},
+	"unlockedBy": [{ "scenario": { "id": "044" }}, { "scenario": { "id": "051" }}],
 	"complexity": 2,
 	"location": "Crystal Fields",
 	"goals": "The scenario is complete when the control console on tile 15-D has five damage tokens on it. At the end of that round, read [section_62.1].",

@@ -23,8 +23,8 @@ public class Rewards {
 
 	private Map<String,List<Rewards.Event>> events;
 	private Map<String,List<Rewards.Event>> removedEvents;
-	private List<Rewards.Scenario> scenarios;
-	private List<Rewards.Scenario> lockedOutScenarios;
+	private List<Rewards.Scenario> scenarios = List.of();
+	private List<Rewards.Scenario> lockedOutScenarios = List.of();
 
 
 	@Getter

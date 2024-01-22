@@ -40,6 +40,7 @@ public class FrosthavenCampaign {
 
 	public Event getEvent(Event storyItemEvent) {
 		log.entry(storyItemEvent);
+		if (storyItemEvent == null) return log.exit(null);
 		Section randomScenarioSection = storyItemEvent.getRandomScenarioSection();
 		return log.exit(getEvent(storyItemEvent.getId(),
 		                         storyItemEvent.getChosenOptions(),

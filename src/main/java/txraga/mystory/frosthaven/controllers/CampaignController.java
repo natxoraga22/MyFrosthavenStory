@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
+import txraga.mystory.frosthaven.CampaignTracker;
 import txraga.mystory.frosthaven.Frosthaven;
 import txraga.mystory.frosthaven.FrosthavenCampaign;
 import txraga.mystory.frosthaven.model.Building;
@@ -38,6 +39,7 @@ public class CampaignController {
 	
 	private final Frosthaven frosthaven;
 	private final FrosthavenCampaign fhCampaign;
+	private final CampaignTracker tracker;
 
 
 	@GetMapping("")
@@ -67,7 +69,10 @@ public class CampaignController {
 				// Scenario
 				else if (storyItem.getScenario() != null) {
 					Scenario scenario = fhCampaign.getScenario(storyItem.getScenario());
-					if (scenario != null) story.add(scenario);
+					if (scenario != null) {
+						story.add(scenario);
+						tracker.trackScenario(scenario);
+					}
 				}
 				// Outpost phase
 				else if (storyItem.getOutpostPhase() != null) {
@@ -77,6 +82,9 @@ public class CampaignController {
 				}
 			}
 		}
+
+		// DEBUG
+		log.debug("{}", tracker.getAvailableScenarios());
 
 		model.addAttribute("page", Page.CAMPAIGN);
 		model.addAttribute("welcome", frosthaven.getWelcome());

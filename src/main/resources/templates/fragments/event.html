@@ -12,7 +12,7 @@
 		<div class="title">
 			<h1>
 				<span class="titleSecondary">[[*{id}]] ·</span>
-				[[*{season}]] [[*{type}]] [[#{event.title}]]
+				[[*{typeAndSeason}]] [[#{event.title}]]
 			</h1>
 			<th:block th:if="*{unlockedBy}">
 				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
@@ -23,8 +23,8 @@
 		<th:block>
 			<th:block>
 				<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
-					@{/img/events/{type}/{season}/{id}.png(type=*{type.toLowerCase()},season=*{season?.toLowerCase()},id=*{id})},
-					@{/img/events/{type}/{season}/{id}_back.png(type=*{type.toLowerCase()},season=*{season?.toLowerCase()},id=*{id})})}">
+					@{/img/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
+					@{/img/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
 				</th:block>
 			</th:block>
 		</th:block>

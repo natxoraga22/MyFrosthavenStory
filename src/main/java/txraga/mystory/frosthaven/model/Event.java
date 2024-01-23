@@ -20,8 +20,9 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 public class Event extends StoryObject {
 	
 	@ToString.Include private String id;
-	private Type type;
-	private Season season;
+	//private Type type;
+	//private Season season;
+	private TypeAndSeason typeAndSeason;
 
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 	private List<StoryItem> unlockedBy;
@@ -95,6 +96,23 @@ public class Event extends StoryObject {
 	/* TYPE AND SEASON */
 	/* --------------- */
 
+	public enum TypeAndSeason {
+		SO, SR, WO, WR, B;
+
+		@Override
+		public String toString() {
+			switch(this) {
+				case SO: return "Summer Outpost";
+				case SR: return "Summer Road";
+				case WO: return "Winter Outpost";
+				case WR: return "Winter Road";
+				case B: return "Boat";
+				default: throw new IllegalArgumentException();
+			}
+		}
+	}
+
+	/*
 	public enum Type { 
 		O, R, B;
 	
@@ -129,5 +147,6 @@ public class Event extends StoryObject {
 			}
 		}
 	}
+	*/
 
 }

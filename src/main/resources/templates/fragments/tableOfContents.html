@@ -27,7 +27,7 @@
 			<th:block th:each="storyObject : ${story}" th:object="${storyObject}">
 				<!-- EVENT -->
 				<a th:if="*{objectType.name() == 'EVENT'}" class="list-group-item list-group-item-action" th:href="|#event_*{id}|">
-					[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
+					[[*{id}]] · [[*{typeAndSeason}]] [[#{event.title}]]
 				</a>
 
 				<!-- SCENARIO -->
@@ -56,7 +56,7 @@
 					<!-- Outpost event -->
 					<a th:if="*{outpostEvent}" th:object="${storyObject.outpostEvent}"
 					   class="list-group-item list-group-item-action child" th:href="|#event_*{id}|">
-						[[*{id}]] · [[*{season}]] [[*{type}]] [[#{event.title}]]
+						[[*{id}]] · [[*{typeAndSeason}]] [[#{event.title}]]
 					</a>
 					<!-- Retirements -->
 					<th:block th:each="character : *{retirements}" th:object="${character}">

@@ -25,30 +25,23 @@ public class EventsFile {
 	public Map<String,Event> findAllEventsAsMap() {
 		log.entry();
 		Map<String,Event> events = new HashMap<>();
-		for (Event.Type type : Event.Type.values()) {
-			if (type == Event.Type.B) events.putAll(findEventsByTypeAndSeasonAsMap(type, null));
-			else {
-				for (Event.Season season : Event.Season.values()) {
-					events.putAll(findEventsByTypeAndSeasonAsMap(type, season));
-				}
-			}
+		for (Event.TypeAndSeason typeAndSeason : Event.TypeAndSeason.values()) {
+			events.putAll(findEventsByTypeAndSeasonAsMap(typeAndSeason));
 		}
 		return log.exit(events);
 	}
 
-	public Map<String,Event> findEventsByTypeAndSeasonAsMap(Event.Type type, Event.Season season) {
-		log.entry(type, season);
-		String seasonAndTypeString = type == Event.Type.B ? type.name() : season.name() + type.name();
+	public Map<String,Event> findEventsByTypeAndSeasonAsMap(Event.TypeAndSeason typeAndSeason) {
+		log.entry(typeAndSeason);
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			InputStream eventsInputStream = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json").getInputStream();
+			InputStream eventsInputStream = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + typeAndSeason.name() + ".json").getInputStream();
 			Map<String,Event> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,Event>>(){});
 
 			events.forEach((id, event) -> {
 				// Set event id, type and season
 				event.setId(id);
-				event.setType(type);
-				if (type != Event.Type.B) event.setSeason(season);
+				event.setTypeAndSeason(typeAndSeason);
 				// Set options ids
 				event.getOptions().forEach((optionId, option) -> {
 					if (option.getId() == null) option.setId(optionId);
@@ -57,7 +50,7 @@ public class EventsFile {
 			return log.exit(events);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + seasonAndTypeString + ".json'", e);
+			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + typeAndSeason.name() + ".json'", e);
 			return log.exit(Map.of());
 		}
 	}

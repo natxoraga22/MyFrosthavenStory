@@ -1,5 +1,6 @@
 {
 	"id": "060",
 	"name": "Uniting the Crown",
+	"questLine": "Lurker",
 	"unlockedBy": { "scenario": { "id": "053" }}
 }

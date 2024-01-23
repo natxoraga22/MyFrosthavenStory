@@ -2,6 +2,8 @@ package txraga.mystory.frosthaven;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import lombok.Getter;
 import lombok.extern.slf4j.XSlf4j;
@@ -18,8 +20,7 @@ public class CampaignTracker {
 
 	private final Frosthaven frosthaven;
 
-	//private List<FhCharacter> party;
-	//private Map<String,List<Event>> availableEvents;
+	private Map<String,List<Event>> availableEvents;
 	private List<Scenario> availableScenarios;
 
 
@@ -30,6 +31,15 @@ public class CampaignTracker {
 		availableScenarios.add(frosthaven.getScenario("000"));
 		availableScenarios.add(frosthaven.getScenario("001"));
 	}
+
+	public List<Scenario> getMainQuestAvailableScenarios() {
+		return availableScenarios.stream().filter(scenario -> scenario.getQuestLine().isMainQuest()).sorted().collect(Collectors.toList());
+	}
+
+	public List<Scenario> getSideQuestAvailableScenarios() {
+		return availableScenarios.stream().filter(scenario -> !scenario.getQuestLine().isMainQuest()).sorted().collect(Collectors.toList());
+	}
+
 
 	public void trackEvent(Event event) {
 		log.entry(event);
@@ -71,6 +81,9 @@ public class CampaignTracker {
 			outpostPhase.getPassageOfTime().forEach(section -> trackRewards(section.getRewards()));
 		}
 		if (outpostPhase.getOutpostEvent() != null) trackEvent(outpostPhase.getOutpostEvent());
+
+		// TODO: Build, upgrade, retirement...
+
 		log.exit();
 	}
 

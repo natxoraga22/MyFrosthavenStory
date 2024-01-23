@@ -16,7 +16,7 @@ import txraga.mystory.frosthaven.model.personal.StoryItem;
 @Getter
 @Setter
 @ToString(onlyExplicitlyIncluded = true)
-public class Scenario extends StoryObject {
+public class Scenario extends StoryObject implements Comparable<Scenario> {
 	
 	@ToString.Include private String id;
 	@ToString.Include private String name;
@@ -48,6 +48,11 @@ public class Scenario extends StoryObject {
 		return StoryObject.Type.SCENARIO;
 	}
 
+	@Override
+	public int compareTo(Scenario other) {
+		return this.getId().compareTo(other.getId());
+	}
+
 
 	/* --------- */
 	/* QUESTLINE */
@@ -65,6 +70,10 @@ public class Scenario extends StoryObject {
 		JobPosting,
 		RandomScenario,
 		Other;
+
+		public boolean isMainQuest() {
+			return List.of(Introduction, AlgoxSnowspeaker, AlgoxIcespeaker, Algox, Unfettered, Lurker).contains(this);
+		}
 
 		@Override
 		public String toString() {

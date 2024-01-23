@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.FrosthavenCampaign;
+import txraga.mystory.frosthaven.FrosthavenStory;
 
 
 @XSlf4j
@@ -22,7 +22,7 @@ import txraga.mystory.frosthaven.FrosthavenCampaign;
 @RequestMapping("/event")
 public class EventController {
 
-	private final FrosthavenCampaign fhCampaign;
+	private final FrosthavenStory fhStory;
 
 
 	@GetMapping({"", "/{eventId}"})
@@ -31,7 +31,7 @@ public class EventController {
 		log.entry(eventId, chosenOptions);
 		model.addAttribute("page", Page.EVENT);
 		model.addAttribute("eventId", eventId);
-		model.addAttribute("event", fhCampaign.getEvent(eventId, chosenOptions, null));
+		model.addAttribute("event", fhStory.getEvent(eventId, chosenOptions, null));
 		return log.exit(new ModelAndView("event"));
 	}
 

@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.FrosthavenCampaign;
+import txraga.mystory.frosthaven.FrosthavenStory;
 
 
 @XSlf4j
@@ -22,7 +22,7 @@ import txraga.mystory.frosthaven.FrosthavenCampaign;
 @RequestMapping("/scenario")
 public class ScenarioController {
 
-	private final FrosthavenCampaign fhCampaign;
+	private final FrosthavenStory fhStory;
 
 
 	@GetMapping({"", "/{scenarioId}"})
@@ -31,7 +31,7 @@ public class ScenarioController {
 		log.entry(scenarioId, path);
 		model.addAttribute("page", Page.SCENARIO);
 		model.addAttribute("scenarioId", scenarioId);
-		model.addAttribute("scenario", fhCampaign.getScenario(scenarioId, path, null));
+		model.addAttribute("scenario", fhStory.getScenario(scenarioId, path, null));
 
 		// Previous and next scenarios
 		if (scenarioId != null) {

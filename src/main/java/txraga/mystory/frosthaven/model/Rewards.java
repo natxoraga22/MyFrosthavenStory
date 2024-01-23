@@ -21,8 +21,8 @@ public class Rewards {
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String text;
 
-	private Map<String,List<Rewards.Event>> events;
-	private Map<String,List<Rewards.Event>> removedEvents;
+	private Map<String,List<Rewards.Event>> events = Map.of();
+	private Map<String,List<Rewards.Event>> removedEvents = Map.of();
 	private List<Rewards.Scenario> scenarios = List.of();
 	private List<Rewards.Scenario> lockedOutScenarios = List.of();
 

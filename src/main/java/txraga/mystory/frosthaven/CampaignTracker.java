@@ -1,6 +1,7 @@
 package txraga.mystory.frosthaven;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -12,6 +13,7 @@ import txraga.mystory.frosthaven.model.OutpostPhase;
 import txraga.mystory.frosthaven.model.Rewards;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
+import txraga.mystory.frosthaven.model.Event.TypeAndSeason;
 
 
 @XSlf4j
@@ -20,13 +22,26 @@ public class CampaignTracker {
 
 	private final Frosthaven frosthaven;
 
-	private Map<String,List<Event>> availableEvents;
+	private Map<Event.TypeAndSeason,List<Event>> availableEvents;
 	private List<Scenario> availableScenarios;
 
 
 	public CampaignTracker(Frosthaven frosthaven) {
 		this.frosthaven = frosthaven;
 
+		// Initial events
+		availableEvents = new HashMap<>();
+		for (Event.TypeAndSeason typeAndSeason : Event.TypeAndSeason.values()) {
+			if (typeAndSeason != TypeAndSeason.B) {
+				List<Event> events = new ArrayList<>();
+				for (int i = 1; i <= 20; i++) {
+					Event event = frosthaven.getEvent(typeAndSeason.name() + "-" + String.format("%02d", i));
+					if (event != null) events.add(event);
+				}
+				availableEvents.put(typeAndSeason, events);
+			}
+		}
+		// Initial scenarios
 		availableScenarios = new ArrayList<>();
 		availableScenarios.add(frosthaven.getScenario("000"));
 		availableScenarios.add(frosthaven.getScenario("001"));
@@ -88,11 +103,29 @@ public class CampaignTracker {
 	}
 
 
+	/* --------------- */
+	/* PRIVATE METHODS */
+	/* --------------- */
+
 	private void trackRewards(Rewards rewards) {
 		if (rewards != null) {
+			// New events
+			rewards.getEvents().forEach((typeAndSeason, rewardEvents) -> {
+				rewardEvents.forEach(rewardEvent -> {
+					Event event = frosthaven.getEvent(rewardEvent.getId());
+					if (event != null) availableEvents.get(typeAndSeason).add(event);
+				});
+			});
+			// Removed events
+			rewards.getRemovedEvents().forEach((typeAndSeason, rewardRemovedEvents) -> {
+				rewardRemovedEvents.forEach(rewardRemovedEvent -> {
+					availableEvents.get(typeAndSeason).removeIf(availableEvent -> availableEvent.getId().equals(rewardRemovedEvent.getId()));
+				});
+			});
 			// New scenarios
 			rewards.getScenarios().forEach(rewardScenario -> {
-				availableScenarios.add(frosthaven.getScenario(rewardScenario.getId()));
+				Scenario scenario = frosthaven.getScenario(rewardScenario.getId());
+				if (scenario != null) availableScenarios.add(scenario);
 			});
 			// Locked out scenarios
 			rewards.getLockedOutScenarios().forEach(rewardLockedOutScenario -> {

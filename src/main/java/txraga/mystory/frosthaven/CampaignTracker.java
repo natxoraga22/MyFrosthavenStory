@@ -41,6 +41,14 @@ public class CampaignTracker {
 				availableEvents.put(typeAndSeason, events);
 			}
 		}
+		// Boat events (TEMPORARY SOLUTION to prevent crashes, TODO: should be unlocked when the Boat is built)
+		List<Event> boatEvents = new ArrayList<>();
+		for (int i = 1; i <= 20; i++) {
+			Event boatEvent = frosthaven.getEvent(Event.TypeAndSeason.B + "-" + String.format("%02d", i));
+			if (boatEvent != null) boatEvents.add(boatEvent);
+		}
+		availableEvents.put(Event.TypeAndSeason.B, boatEvents);
+
 		// Initial scenarios
 		availableScenarios = new ArrayList<>();
 		availableScenarios.add(frosthaven.getScenario("000"));
@@ -108,6 +116,7 @@ public class CampaignTracker {
 	/* --------------- */
 
 	private void trackRewards(Rewards rewards) {
+		log.entry(rewards);
 		if (rewards != null) {
 			// New events
 			rewards.getEvents().forEach((typeAndSeason, rewardEvents) -> {
@@ -132,6 +141,7 @@ public class CampaignTracker {
 				availableScenarios.removeIf(availableScenario -> availableScenario.getId().equals(rewardLockedOutScenario.getId()));
 			});
 		}
+		log.exit();
 	}
 
 }

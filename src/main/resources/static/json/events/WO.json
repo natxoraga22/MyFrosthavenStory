@@ -327,7 +327,24 @@
 		"unlockedBy": { "event": { "id": "SO-59" }}
 	},
 	"WO-80": {
-		"unlockedBy": { "section": { "id": "25.2" }}
+		"unlockedBy": { "section": { "id": "25.2" }},
+		"text": "<p>\"You there! Come. I require assistance.\"</p><p>In front of you stands a portly man with a fur collared cape. The rest of his clothing show signs of travel. He must have just gotten in through the main gate, but you can't see any travelling gear or any other possessions.</p><p>\"You must be wondering, who is this fine merchant named Joseph and where are all his things,\" the man asks pointing at himself. \"I decided to move to Frosthaven and open a new venture, but my travelling assistants, you see, they all perished in the journey, and my merchandise is just sitting out there in the frozen wilderness. Can you help me carry it to Frosthaven?\"</p>",
+		"options": {
+			"A": {
+				"trigger": "Help Joseph.",
+				"text": "Three hours later, you find Joseph's merchandise. The crates are heavy and frozen. The way back is long and the merchant seems uninterested in carrying anything and instead regales you with promises of payment and tells you that he invented a new dish that \"will take Frosthaven by storm.\" Sadly, when you return, you realise that \"payment\" and \"new dish\" are one and the same, as he scoops out something called \"ice-cream,\" and hands you each a cup. It's delicious, but unpleasantly cold.",
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Add [section_163.3] to the calendar in five weeks."
+				}
+			},
+			"B": {
+				"trigger": "Steal Joseph's merchandise and sell it back to him.",
+				"text": "Finding Joseph's merchandise was easy enough as it was just left lying on the road. You wonder why no Algox had commandeered it. The merchant isn't exactly pleased that you're extorting him, but agrees to pay you for his possessions. You are unfortunately barred from ever purchasing the new dish he invented called \"ice-cream\" from the stand he's planning to eventually open up.",
+				"rewards": {
+					"text": "Gain 10 collective gold.<br/>Add [section_163.3] to the calendar in five weeks."
+				}
+			}
+		}
 	},
 	"WO-81": {
 		"unlockedBy": { "scenario": { "id": "014" }}

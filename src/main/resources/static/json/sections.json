@@ -13,6 +13,9 @@
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
 		}
 	},
+	"41.1": {
+		"title": "Job Posting"
+	},
 	"44.4": {
 		"title": "Tome of Elements",
 		"unlockedBy": { "event": { "id": "SR-48" }},

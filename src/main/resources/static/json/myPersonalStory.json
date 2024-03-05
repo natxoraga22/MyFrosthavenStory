@@ -287,6 +287,17 @@
 		{ "event": { "id": "SR-26", "chosenOption": "A" }},
 		{ "scenario": { "id": "037" }},
 		{ "scenario": { "id": "044" }},
-		{ "scenario": { "id": "059" }}
+		{ "scenario": { "id": "059" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "41.1" }],
+				"passageOfTime": [{ "id": "183.3" }, { "id": "169.1" }],
+				"outpostEvent": { "id": "WO-80", "chosenOption": "A" },
+				"levelUps": [{ "id": "snowdancer", "level": 7 }, { "id": "infuser", "level": 7 }],
+				"build": [{ "id": "wallL" }],
+				"upgrade": [{ "id": "huntinglodge", "level": 2 }]
+			}
+		},
+		{ "scenario": { "id": "128" }}
 	]
 }

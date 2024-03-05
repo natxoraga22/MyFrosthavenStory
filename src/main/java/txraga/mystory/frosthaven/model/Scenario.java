@@ -37,7 +37,7 @@ public class Scenario extends StoryObject implements Comparable<Scenario> {
 	private String effects;
 
 	private Map<String,Section> sections = Map.of();
-	private List<String> path;
+	private List<String> path = List.of();
 
 	// Some chests unlock a random side scenario (meaning a section is read)
 	private Section randomScenarioSection;

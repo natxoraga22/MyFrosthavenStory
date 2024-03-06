@@ -10,6 +10,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 
+
 public class IconsMapDeserializer extends JsonDeserializer<Map<String,String>> {
 
 	@Override

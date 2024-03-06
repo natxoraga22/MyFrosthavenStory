@@ -77,7 +77,7 @@
 
 		<!-- Map -->
 		<div th:if="${scenario != null && section.hasMap(scenario.id)}" class="map">
-			<img th:src="@{/img/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
+			<img th:src="@{__${imgUrl}__/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
 		</div>
 	</div>
 </body>

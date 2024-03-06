@@ -77,8 +77,8 @@
 		<th:block th:each="scenario : ${scenariosList}">
 			<strong>[[${scenario.name}]]</strong>
 			<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
-			<img th:if="${scenario.linked}" class="icon linked" th:src="@{/img/icons/linked.png}">
-			<img th:if="${scenario.forceLinked}" class="icon forceLinked" th:src="@{/img/icons/forceLinked.png}">
+			<img th:if="${scenario.linked}" class="icon linked" th:src="@{__${imgUrl}__/icons/linked.png}">
+			<img th:if="${scenario.forceLinked}" class="icon forceLinked" th:src="@{__${imgUrl}__/icons/forceLinked.png}">
 			<br/>
 		</th:block>
 	</th:block>

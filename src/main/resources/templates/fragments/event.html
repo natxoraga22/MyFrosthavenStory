@@ -23,8 +23,8 @@
 		<th:block>
 			<th:block>
 				<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
-					@{/img/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
-					@{/img/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
+					@{__${imgUrl}__/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
+					@{__${imgUrl}__/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
 				</th:block>
 			</th:block>
 		</th:block>
@@ -86,11 +86,11 @@
 		<!-- Attack -->
 		<div bs:flex bs:flexAlign="center">
 			<div class="attack">
-				<img class="icon" th:src="@{/img/icons/attack.png}">
+				<img class="icon" th:src="@{__${imgUrl}__/icons/attack.png}">
 				[[*{attack}]]
 			</div>
 			<div class="target">
-				<img class="icon" th:src="@{/img/icons/target.png}">
+				<img class="icon" th:src="@{__${imgUrl}__/icons/target.png}">
 				[[*{target}]]
 			</div>
 			<div class="targetPriority">

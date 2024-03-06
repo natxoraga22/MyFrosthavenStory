@@ -70,7 +70,7 @@
 	<div th:fragment="requirement(requirement)" th:object="${requirement}" class="requirement">
 		<!-- Transport -->
 		<div th:if="*{transport}" class="transport">
-			<img th:src="@{/img/icons/{transport}.png(transport=*{transport})}">
+			<img th:src="@{__${imgUrl}__/icons/{transport}.png(transport=*{transport})}">
 		</div>
 		<!-- Status -->
 		<div th:if="*{status}" class="status">

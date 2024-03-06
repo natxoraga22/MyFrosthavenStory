@@ -81,7 +81,7 @@
 	<!-- --------- -->
 	<div th:fragment="character(character,titleSuffix)" th:object="${character}">
 		<div class="iconWrapper">
-			<img class="icon" th:classappend="*{id}" th:src="@{/img/icons/{id}.png(id=*{id})}">
+			<img class="icon" th:classappend="*{id}" th:src="@{__${imgUrl}__/icons/{id}.png(id=*{id})}">
 		</div>
 		[[*{fullName}]]<th:block th:if="${titleSuffix}"> [[${titleSuffix}]]</th:block>
 	</div>

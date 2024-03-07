@@ -21,7 +21,8 @@
 	--climbinggear-max-size: 250px;
 	--sled-max-size: 250px;
 	--wallJ-max-size: 350px;
-	--wallK-max-size: 500px;
+	--wallK-max-size: 450px;
+	--wallL-max-size: 350px;
 }
 
 
@@ -104,4 +105,9 @@
 .building img:not(.icon).wallK {
 	max-width: var(--wallK-max-size);
 	max-height: var(--wallK-max-size);
+}
+
+.building img:not(.icon).wallL {
+	max-width: var(--wallL-max-size);
+	max-height: var(--wallL-max-size);
 }

@@ -14,7 +14,11 @@
 		}
 	},
 	"41.1": {
-		"title": "Job Posting"
+		"title": "Job Posting",
+		"text": "<p>Captain Olmstead, head of the town guard, brings you out of the cold and into the warm barracks. By the fire is a shivering Inox girl wrapped in heavy pelts. The rest of the normally lively barracks is empty, cleared out at the Captain’s orders. He speaks quietly to you, out of earshot of the girl.</p><p>“Patrol found her outside the wall, frozen half to death. Claims someone called ‘The Collector’ has been holding her and her brothers for a few weeks now. I don’t have the troops to spare, but I’m not letting this one languish over at the town hall. Someone has to do something.”</p><p>You draw closer to the girl as nonthreateningly as you can. She tries to put on a brave face when she sees you, but the façade doesn’t last long. After a few deep breaths she speaks. “I… I think I can tell you where. He has my brothers. The Collector...” She sobs, and Captain Olmstead puts a reassuring hand on her shoulder. “Promise me you’ll stop him.”</p>",
+		"rewards": { 
+			"scenarios": [{ "id": "087" }]
+		}
 	},
 	"44.4": {
 		"title": "Tome of Elements",
@@ -226,6 +230,13 @@
 		"rewards": {
 			"text": "<p>Place map overlay sticker Z on the map in location Z (F2).</p><p>Do not resolve an outpost event this week.</p>",
 			"scenarios": [{ "id": "050" }]
+		}
+	},
+	"169.1": {
+		"title": "Trapper Returns",
+		"text": "<p>Unlike Frosthaven’s wintery landscape, the hunting lodge has entered a season of abundance, thrumming from an influx of ice fishers and fur traders. Drinks and tall tales are shared, prices for goods haggled over. You almost overlook the familiar, forlorn Vermling sitting by the roaring fire.</p><p>Discomfited in crowds, as usual, the Trapper fidgets with their tailcoat draped in their lap. You approach, surprised at their presence. You didn’t notice their furpiled sled outside.</p><p>“The empty one is mine,” the Trapper admits miserably. They have been residing in the Whitefire Wood, a region usually known for its diverse fauna. Lately, however, the population of small animals like snow foxes has been waning. This is due to a new predator: polar bears.</p><p>“When I decided to track the bears,” the Trapper says, “I discovered a local Vermling colony was overhunting them, pushing them out of their usual habitat in the barrens. I tried speaking to these other Vermlings.” The Trapper removes their bush hat, revealing a lump between their ears, likely from a slingshot. “Diplomatic lot,” they say ruefully.</p><p>The Trapper wants your help relocating the bears away from the tribe. “They need the chance to repopulate in an environment more suited to them.” Eager to escape town for a while, you readily agree. The Trapper provides a map for you, marking the spot where you shall meet.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "117" }]
 		}
 	},
 	"169.3": {

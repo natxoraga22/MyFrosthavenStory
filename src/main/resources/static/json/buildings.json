@@ -372,5 +372,8 @@
 	},
 	"wallK": {
 		"name": "Wall"
+	},
+	"wallL": {
+		"name": "Wall"
 	}
 }

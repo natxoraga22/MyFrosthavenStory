@@ -10,6 +10,9 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" th:href="@{/webjars/bootstrap/dist/css/bootstrap.min.css}">
 
+		<!-- TomSelect -->
+		<link rel="stylesheet" th:href="@{/webjars/tom-select/dist/css/tom-select.bootstrap5.min.css}">
+
 		<!-- Font Awesome -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
 		      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -54,6 +57,9 @@
 	<th:block th:fragment="jsLinks">
 		<!-- Bootstrap -->
 		<script th:src="@{/webjars/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+
+		<!-- TomSelect -->
+		<script th:src="@{/webjars/tom-select/dist/js/tom-select.complete.min.js}"></script>
 
 		<!-- Custom JS -->
 		<th:block th:replace="~{fragments/frosthaven :: playingCardJs}"></th:block>

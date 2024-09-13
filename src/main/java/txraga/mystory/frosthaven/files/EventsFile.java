@@ -12,7 +12,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.model.Event;
+import txraga.mystory.frosthaven.model.raw.RawEvent;
 
 
 @XSlf4j
@@ -22,21 +22,22 @@ public class EventsFile {
 	private final static String EVENTS_FOLDER_PATH = "static/json/events";
 
 
-	public Map<String,Event> findAllEventsAsMap() {
+	public Map<String,RawEvent> findAllEventsAsMap() {
 		log.entry();
-		Map<String,Event> events = new HashMap<>();
-		for (Event.TypeAndSeason typeAndSeason : Event.TypeAndSeason.values()) {
+		Map<String,RawEvent> events = new HashMap<>();
+		for (RawEvent.TypeAndSeason typeAndSeason : RawEvent.TypeAndSeason.values()) {
 			events.putAll(findEventsByTypeAndSeasonAsMap(typeAndSeason));
 		}
 		return log.exit(events);
 	}
 
-	public Map<String,Event> findEventsByTypeAndSeasonAsMap(Event.TypeAndSeason typeAndSeason) {
+	private Map<String,RawEvent> findEventsByTypeAndSeasonAsMap(RawEvent.TypeAndSeason typeAndSeason) {
 		log.entry(typeAndSeason);
+		String filePath = EVENTS_FOLDER_PATH + "/" + typeAndSeason.name() + ".json";
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			InputStream eventsInputStream = new ClassPathResource(EVENTS_FOLDER_PATH + "/" + typeAndSeason.name() + ".json").getInputStream();
-			Map<String,Event> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,Event>>(){});
+			InputStream eventsInputStream = new ClassPathResource(filePath).getInputStream();
+			Map<String,RawEvent> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,RawEvent>>(){});
 
 			events.forEach((id, event) -> {
 				// Set event id, type and season
@@ -50,7 +51,7 @@ public class EventsFile {
 			return log.exit(events);
 		}
 		catch (IOException e) {
-			log.warn("Error reading and parsing file '" + EVENTS_FOLDER_PATH + "/" + typeAndSeason.name() + ".json'", e);
+			log.warn("Error reading and parsing file '" + filePath + "'", e);
 			return log.exit(Map.of());
 		}
 	}

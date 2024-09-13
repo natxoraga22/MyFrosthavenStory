@@ -67,7 +67,7 @@
 
 		<!-- Rewards -->
 		<div class="rewards">
-			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"></th:block>
+			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
 		</div>
 	</div>
 
@@ -98,7 +98,7 @@
 
 		<!-- Rewards -->
 		<div class="rewards">
-			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"></th:block>
+			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
 		</div>
 	</div>
 
@@ -106,7 +106,7 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post">
+	<form th:fragment="eventFormOld" id="eventForm" th:action="@{/event}" method="post">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -125,5 +125,31 @@
 			</bs:cardBody>
 		</bs:card>
 	</form>
+	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post">
+		<bs:card>
+			<bs:cardBody>
+				<div>
+					<bs:label for="inputEventId">[[#{event.id}]]</bs:label>
+					<bs:select id="inputEventId" name="eventId" th:value="${eventId}" required></bs:select>
+				</div>
+				<div>
+					<bs:label for="inputChosenOptions">[[#{event.chosenOptions}]]</bs:label>
+					<bs:select id="inputChosenOptions" name="chosenOptions"></bs:select>
+				</div>
+				<div bs:display="grid">
+					<bs:button type="submit" color="primary">[[#{event.goTo}]]</bs:button>
+				</div>
+			</bs:cardBody>
+		</bs:card>
+	</form>
+
+
+	<!-- ------------- -->
+	<!-- EVENT FORM JS -->
+	<!-- ------------- -->
+	<script th:fragment="eventFormJs" th:inline="javascript">
+		new TomSelect("#inputEventId");
+		new TomSelect("#inputChosenOptions");
+	</script>
 </body>
 </html>

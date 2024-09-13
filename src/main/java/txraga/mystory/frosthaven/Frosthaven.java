@@ -1,5 +1,6 @@
 package txraga.mystory.frosthaven;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
@@ -13,6 +14,7 @@ import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.PersonalQuest;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
+import txraga.mystory.frosthaven.model.raw.RawEvent;
 import txraga.mystory.frosthaven.services.FrosthavenService;
 
 
@@ -26,7 +28,7 @@ public class Frosthaven {
 	private String welcome;
 	private Map<String,FhCharacter> characters;
 	private Map<String,PersonalQuest> personalQuests;
-	private Map<String,Event> events;
+	private Map<String,RawEvent> events;
 	private Map<String,Scenario> scenarios;
 	private Map<String,Building> buildings;
 	private Map<String,Section> sections;
@@ -70,15 +72,41 @@ public class Frosthaven {
 		else return log.exit(personalQuest);
 	}
 
-	public Event getEvent(String id) {
-		log.entry(id);
-		Event event = events.get(id);
+
+	/* ------ */
+	/* EVENTS */
+	/* ------ */
+
+	public RawEvent getRawEvent(String eventId) {
+		log.entry(eventId);
+		RawEvent event = events.get(eventId);
 		if (event == null) {
-			log.warn("Event '{}' not found", id);
+			log.warn("Event '{}' not found", eventId);
 			return log.exit(null);
 		}
 		else return log.exit(event);
 	}
+
+	public Event getEvent(String eventId, List<String> chosenOptionsIds, String randomScenarioSectionId) {
+		log.entry(eventId, chosenOptionsIds, randomScenarioSectionId);
+		RawEvent rawEvent = getRawEvent(eventId);
+		if (rawEvent != null) {
+			Event event = new Event(rawEvent);
+			// Set chosen options
+			if (chosenOptionsIds != null && !chosenOptionsIds.isEmpty()) {
+				event.setChosenOptions(chosenOptionsIds.stream().map(chosenOptionId -> rawEvent.getOptions().get(chosenOptionId)).toList());
+			}
+			// Set randomScenarioSection
+			if (randomScenarioSectionId != null) {
+				Section section = getSection(randomScenarioSectionId);
+				if (section != null) event.setRandomScenarioSection(section);
+			}
+			return log.exit(event);
+		}
+		else return log.exit(null);
+	}
+
+
 
 	public Scenario getScenario(String id) {
 		log.entry(id);

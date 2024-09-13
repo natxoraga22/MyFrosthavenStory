@@ -24,6 +24,7 @@
 		<bootstrapThymeleafDialect.version>2.0.0-SNAPSHOT</bootstrapThymeleafDialect.version>
 		<!-- Webjars -->
 		<bootstrap.version>5.3.3</bootstrap.version>
+		<tomSelect.version>2.3.1</tomSelect.version>
 	</properties>
 
 	<repositories>
@@ -68,6 +69,11 @@
 			<groupId>org.webjars.npm</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>${bootstrap.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>tom-select</artifactId>
+			<version>${tomSelect.version}</version>
 		</dependency>
 		
 		<!-- Development tools -->

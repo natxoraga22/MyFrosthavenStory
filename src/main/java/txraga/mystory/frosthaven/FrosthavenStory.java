@@ -62,6 +62,7 @@ public class FrosthavenStory {
 	/* EVENT */
 	/* ----- */
 
+	/*
 	public Event getEvent(String eventId, List<String> chosenOptions, String randomScenarioSectionId) {
 		log.entry(eventId, chosenOptions);
 		Event event = frosthaven.getEvent(eventId);
@@ -76,7 +77,9 @@ public class FrosthavenStory {
 		}
 		return log.exit(event);
 	}
+	*/
 
+	/*
 	public Event getEvent(Event storyItemEvent) {
 		log.entry(storyItemEvent);
 		if (storyItemEvent == null) return log.exit(null);
@@ -85,6 +88,7 @@ public class FrosthavenStory {
 		                         storyItemEvent.getChosenOptions(),
 		                         randomScenarioSection != null ? randomScenarioSection.getId() : null));
 	}
+	*/
 
 
 	/* -------- */

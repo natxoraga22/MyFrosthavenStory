@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+
+	<!-- ---------- -->
+	<!-- HEAD LINKS -->
+	<!-- ---------- -->
+	<th:block th:fragment="headLinks">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap/dist/css/bootstrap.min.css}">
+
+		<!-- Font Awesome -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+		      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		      crossorigin="anonymous" referrerpolicy="no-referrer">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" th:href="@{/css/fonts.css}">
+		<link rel="stylesheet" th:href="@{/css/frosthaven.css}">
+		<link rel="stylesheet" th:href="@{/css/icons.css}">
+		<link rel="stylesheet" th:href="@{/css/fhCard.css}">
+		<link rel="stylesheet" th:href="@{/css/playingCard.css}">
+	</th:block>
+</head>
+
+<body>
+	<!-- ------ -->
+	<!-- NAVBAR -->
+	<!-- ------ -->
+	<bs:navbar th:fragment="navbar" class="navbar-expand bg-body-tertiary">
+		<bs:container fluid="xl">
+			<!-- Frosthaven logo -->
+			<a bs:navbarBrand th:href="@{/}">
+				<img th:src="@{/img/frosthaven-logo.png}" alt="Frosthaven" height="30">
+			</a>
+
+			<!-- Links -->
+			<bs:navbarCollapse>
+				<bs:navbarNav>
+					<bs:navLink th:href="@{/}" th:active="${page?.name() == 'CAMPAIGN'}">[[#{navbar.campaign}]]</bs:navLink>
+					<bs:navLink th:href="@{/scenario}" th:active="${page?.name() == 'SCENARIO'}">[[#{navbar.scenario}]]</bs:navLink>
+					<bs:navLink th:href="@{/event}" th:active="${page?.name() == 'EVENT'}">[[#{navbar.event}]]</bs:navLink>
+					<bs:navLink th:href="@{/section}" th:active="${page?.name() == 'SECTION'}">[[#{navbar.section}]]</bs:navLink>
+				</bs:navbarNav>
+			</bs:navbarCollapse>
+		</bs:container>
+	</bs:navbar>
+
+
+	<!-- ---------------- -->
+	<!-- JAVASCRIPT LINKS -->
+	<!-- ---------------- -->
+	<th:block th:fragment="jsLinks">
+		<!-- Bootstrap -->
+		<script th:src="@{/webjars/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+
+		<!-- Custom JS -->
+		<th:block th:replace="~{fragments/frosthaven :: playingCardJs}"></th:block>
+	</th:block>
+</body>
+</html>

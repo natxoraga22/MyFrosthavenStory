@@ -2,6 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
 <head>
 	<meta charset="utf-8">
+	<title>[[#{eventPage.title}]]</title>
+
 	<link rel="stylesheet" th:href="@{/css/event.css}">
 	<link rel="stylesheet" th:href="@{/css/section.css}">
 	<link rel="stylesheet" th:href="@{/css/rewards.css}">
@@ -10,16 +12,16 @@
 <body>
 	<!-- Content -->
 	<th:block layout:fragment="content">
-		<div class="row gx-5">
-			<div class="col-3">
-				<th:block th:replace="~{fragments/event :: eventForm}"></th:block>
-			</div>
-			<div class="col-9">
+		<bs:row gx="{md:4, xl:5}" gy="4">
+			<bs:col col="{xs:12, md:3}">
+				<th:block th:replace="~{fragments/event :: eventForm}"/>
+			</bs:col>
+			<bs:col col="{xs:12, md:9}">
 				<th:block th:if="${event}">
-					<th:block th:replace="~{fragments/event :: event(${event})}"></th:block>
+					<th:block th:replace="~{fragments/event :: event(${event})}"/>
 				</th:block>
-			</div>
-		</div>
+			</bs:col>
+		</bs:row>
 	</th:block>
 </body>
 </html>

@@ -10,35 +10,28 @@
 	<div th:fragment="event(event)" th:object="${event}" th:id="|event_*{id}|" class="event">
 		<!-- Title -->
 		<div class="title">
-			<h1>
-				<span class="titleSecondary">[[*{id}]] ·</span>
-				[[*{typeAndSeason}]] [[#{event.title}]]
+			<h1 class="title">
+				<span class="titleSecondary">[[*{id}]] ·</span> [[*{typeAndSeason}]] [[#{event.title}]]
 			</h1>
 			<th:block th:if="*{unlockedBy}">
-				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
+				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"/>
 			</th:block>
 		</div>
 
 		<!-- Card -->
-		<th:block>
-			<th:block>
-				<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
-					@{__${imgUrl}__/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
-					@{__${imgUrl}__/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
-				</th:block>
-			</th:block>
+		<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
+		    @{__${imgUrl}__/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
+		    @{__${imgUrl}__/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
 		</th:block>
 
 		<!-- Text -->
-		<div class="text">
-			[(*{text})]
-		</div>
+		<div class="text">[(*{text})]</div>
 
 		<!-- Options -->
 		<div th:if="*{!#lists.isEmpty(chosenOptions)}" class="options">
 			<th:block th:each="chosenOptionId,iterStat : *{chosenOptions}" th:with="chosenOption = *{options['__${chosenOptionId}__']}">
 				<th:block th:if="${chosenOption}">
-					<th:block th:replace="~{:: option(${chosenOption},${iterStat.first})}"></th:block>
+					<th:block th:replace="~{:: option(${chosenOption},${iterStat.first})}"/>
 				</th:block>
 			</th:block>
 		</div>
@@ -46,12 +39,12 @@
 		<!-- Outpost attack -->
 		<th:block th:if="*{!skipAttack}">
 			<hr>
-			<th:block th:replace="~{:: outpostAttack(*{outpostAttack})}"></th:block>
+			<th:block th:replace="~{:: outpostAttack(*{outpostAttack})}"/>
 		</th:block>
 
 		<!-- Random scenario section -->
 		<th:block th:if="*{randomScenarioSection}">
-			<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"></th:block>
+			<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"/>
 		</th:block>
 	</div>
 
@@ -114,23 +107,23 @@
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
 	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post">
-		<div class="card">
-			<div class="card-body">
+		<bs:card>
+			<bs:cardBody>
 				<div>
-					<label for="inputEventId" class="form-label">[[#{event.id}]]</label>
-					<input type="text" class="form-control" id="inputEventId" name="eventId" th:value="${eventId}" required>
+					<bs:label for="inputEventId">[[#{event.id}]]</bs:label>
+					<bs:input type="text" id="inputEventId" name="eventId" th:value="${eventId}" required/>
 				</div>
 				<div>
-					<label for="inputChosenOptions" class="form-label">[[#{event.chosenOptions}]]</label>
-					<input type="text" class="form-control" id="inputChosenOptions" name="chosenOptions"
-					       th:value="${#strings.listJoin(event?.chosenOptions, ',')}">
-					<div th:if="${event}" class="form-text">[[#{event.availableOptions}]]: [[${event.options.keySet()}]]</div>
+					<bs:label for="inputChosenOptions">[[#{event.chosenOptions}]]</bs:label>
+					<bs:input type="text" id="inputChosenOptions" name="chosenOptions"
+					          th:value="${#strings.listJoin(event?.chosenOptions, ',')}"/>
+					<div th:if="${event}" bs:formText>[[#{event.availableOptions}]]: [[${event.options.keySet()}]]</div>
 				</div>
-				<div class="d-grid">
-					<button type="submit" class="btn btn-primary">[[#{event.goTo}]]</button>
+				<div bs:display="grid">
+					<bs:button type="submit" color="primary">[[#{event.goTo}]]</bs:button>
 				</div>
-			</div>
-		</div>
+			</bs:cardBody>
+		</bs:card>
 	</form>
 </body>
 </html>

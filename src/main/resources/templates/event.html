@@ -14,7 +14,7 @@
 	<th:block layout:fragment="content">
 		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
-				<th:block th:replace="~{fragments/event :: eventForm}"/>
+				<th:block th:replace="~{fragments/eventForm :: eventForm}"/>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
 				<th:block th:if="${playedEvent}">
@@ -26,7 +26,7 @@
 
 	<!-- Javascript -->
 	<th:block layout:fragment="javascript">
-		<script th:replace="~{fragments/event :: eventFormJs}"></script>
+		<script th:replace="~{fragments/eventForm :: eventFormJs}"></script>
 	</th:block>
 </body>
 </html>

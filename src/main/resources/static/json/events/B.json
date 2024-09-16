@@ -1,4 +1,5 @@
 {
+	"B-01": {},
 	"B-02": {
 		"text": "<p>\"Cap'n? We've spotted her, upwind. \"A deckhand delivers the report to Captain Doghogger. You watch a flash of ambition flicker across the captain's eyes, and he turns to a shipmate in the crow's nest.</p><p>\"Keep your eyes on that starfish! We won't let her get away this time! Ready the cannons! Every available hand to an oar!\" He turns and nearly bumps into you, a bit taken aback. \"No time to explain—there's a starfish I've been hunting for two decades. She's as big as a freighter, and today's the day she feels my harpoon! Finally, the revenge of the _____________________!\" He kisses a locket on a gold chain around his neck. \"Agatha, it's time.\"</p>",
 		"options": {
@@ -94,6 +95,12 @@
 			}
 		}
 	},
+	"B-05": {},
+	"B-06": {},
+	"B-07": {},
+	"B-08": {},
+	"B-09": {},
+	"B-10": {},
 	"B-11": {
 		"text": "<p>POP. POP! BOOOOOOOOM! An explosion rocks the ship from the port side, swinging the mast and throwing the crew into a frenzy of action. You rush to the side of the ship to find the cause: ominous barrels floating on the ocean's surface. Each has been painted blue in camouflage, but they're not hard to spot if you know what you're looking for.</p><p>A deckhand delivers a status report: \"Not too much damage to the ship... we're getting it patched up, and we'll be underway again soon. But there's a few dozen of these we can spot from the crow's nest. It's like an ocean minefield... wouldn't be surprised if someone set it for Lurkers.\"</p>",
 		"options": {
@@ -113,10 +120,16 @@
 			}
 		}
 	},
+	"B-12": {},
+	"B-13": {},
+	"B-14": {},
 	"B-15": {
 		"unlockedBy": { "section": { "id": "54.2" }}
 	},
 	"B-16": {
 		"unlockedBy": { "scenario": { "id": "042" }}
-	}
+	},
+	"B-17": {},
+	"B-18": {},
+	"B-19": {}
 }

@@ -39,9 +39,9 @@ public class EventController {
 
 	@PostMapping("")
 	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
-	                                           @RequestParam String chosenOptions) {
+	                                           @RequestParam(required = false) String chosenOptions) {
 		log.entry(eventId, chosenOptions);
-		return log.exit(new ModelAndView("redirect:/event/" + eventId + "?chosenOptions=" + chosenOptions));
+		return log.exit(new ModelAndView("redirect:/event/" + eventId + (chosenOptions != null ? "?chosenOptions=" + chosenOptions : "")));
 	}
 
 }

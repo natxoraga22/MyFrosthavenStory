@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.Frosthaven;
+import txraga.mystory.frosthaven.global.Frosthaven;
 
 
 @XSlf4j

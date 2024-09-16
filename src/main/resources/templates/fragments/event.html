@@ -7,7 +7,7 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event(event)" th:object="${event}" th:id="|event_*{id}|" class="event">
+	<div th:fragment="event(playedEvent)" th:object="${playedEvent}" th:id="|event_*{id}|" class="event">
 		<!-- Title -->
 		<div class="title">
 			<h1 class="title">
@@ -29,10 +29,8 @@
 
 		<!-- Options -->
 		<div th:if="*{!#lists.isEmpty(chosenOptions)}" class="options">
-			<th:block th:each="chosenOptionId,iterStat : *{chosenOptions}" th:with="chosenOption = *{options['__${chosenOptionId}__']}">
-				<th:block th:if="${chosenOption}">
-					<th:block th:replace="~{:: option(${chosenOption},${iterStat.first})}"/>
-				</th:block>
+			<th:block th:each="chosenOption,iterStat : *{chosenOptions}">
+				<th:block th:replace="~{:: eventOption(${chosenOption},${iterStat.first})}"/>
 			</th:block>
 		</div>
 
@@ -52,7 +50,7 @@
 	<!-- ------ -->
 	<!-- OPTION -->
 	<!-- ------ -->
-	<div th:fragment="option(option,showTrigger)" th:object="${option}" class="option">
+	<div th:fragment="eventOption(option,showTrigger)" th:object="${option}" class="option">
 		<!-- Trigger -->
 		<div th:if="${showTrigger}" class="trigger">
 			<i class="fa-solid fa-angles-right fa-sm"></i>
@@ -106,35 +104,24 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventFormOld" id="eventForm" th:action="@{/event}" method="post">
-		<bs:card>
-			<bs:cardBody>
-				<div>
-					<bs:label for="inputEventId">[[#{event.id}]]</bs:label>
-					<bs:input type="text" id="inputEventId" name="eventId" th:value="${eventId}" required/>
-				</div>
-				<div>
-					<bs:label for="inputChosenOptions">[[#{event.chosenOptions}]]</bs:label>
-					<bs:input type="text" id="inputChosenOptions" name="chosenOptions"
-					          th:value="${#strings.listJoin(event?.chosenOptions, ',')}"/>
-					<div th:if="${event}" bs:formText>[[#{event.availableOptions}]]: [[${event.options.keySet()}]]</div>
-				</div>
-				<div bs:display="grid">
-					<bs:button type="submit" color="primary">[[#{event.goTo}]]</bs:button>
-				</div>
-			</bs:cardBody>
-		</bs:card>
-	</form>
 	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post">
 		<bs:card>
 			<bs:cardBody>
 				<div>
 					<bs:label for="inputEventId">[[#{event.id}]]</bs:label>
-					<bs:select id="inputEventId" name="eventId" th:value="${eventId}" required></bs:select>
+					<bs:select id="inputEventId" name="eventId" required>
+						<option th:each="eventId: ${allEventsIds}" th:value="${eventId}" th:selected="${eventId} == ${rawEvent.id}">
+							[[${eventId}]]
+						</option>
+					</bs:select>
 				</div>
 				<div>
 					<bs:label for="inputChosenOptions">[[#{event.chosenOptions}]]</bs:label>
-					<bs:select id="inputChosenOptions" name="chosenOptions"></bs:select>
+					<bs:select id="inputChosenOptions" name="chosenOptions" multiple>
+						<option th:each="optionId: ${rawEvent.options.keySet()}" th:value="${optionId}">
+							[[${optionId}]]
+						</option>
+					</bs:select>
 				</div>
 				<div bs:display="grid">
 					<bs:button type="submit" color="primary">[[#{event.goTo}]]</bs:button>
@@ -148,8 +135,9 @@
 	<!-- EVENT FORM JS -->
 	<!-- ------------- -->
 	<script th:fragment="eventFormJs" th:inline="javascript">
-		new TomSelect("#inputEventId");
-		new TomSelect("#inputChosenOptions");
+		new TomSelect("#inputEventId", { maxOptions: null });
+		const chosenOptionsIds = /*[[${#strings.listSplit(param.chosenOptions, ',')}]]*/ [];
+		new TomSelect("#inputChosenOptions", { items: chosenOptionsIds });
 	</script>
 </body>
 </html>

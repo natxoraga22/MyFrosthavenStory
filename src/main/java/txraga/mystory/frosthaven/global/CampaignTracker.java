@@ -1,4 +1,4 @@
-package txraga.mystory.frosthaven;
+package txraga.mystory.frosthaven.global;
 
 import java.util.ArrayList;
 import java.util.HashMap;

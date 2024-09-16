@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.FrosthavenStory;
+import txraga.mystory.frosthaven.global.FrosthavenStory;
 
 
 @XSlf4j

@@ -17,8 +17,8 @@
 				<th:block th:replace="~{fragments/event :: eventForm}"/>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<th:block th:if="${event}">
-					<th:block th:replace="~{fragments/event :: event(${event})}"/>
+				<th:block th:if="${playedEvent}">
+					<th:block th:replace="~{fragments/event :: event(${playedEvent})}"/>
 				</th:block>
 			</bs:col>
 		</bs:row>

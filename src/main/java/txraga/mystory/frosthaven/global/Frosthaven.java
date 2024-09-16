@@ -1,4 +1,4 @@
-package txraga.mystory.frosthaven;
+package txraga.mystory.frosthaven.global;
 
 import java.util.List;
 import java.util.Map;
@@ -9,11 +9,11 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.model.Building;
-import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.PersonalQuest;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
+import txraga.mystory.frosthaven.model.played.PlayedEvent;
 import txraga.mystory.frosthaven.model.raw.RawEvent;
 import txraga.mystory.frosthaven.services.FrosthavenService;
 
@@ -77,6 +77,11 @@ public class Frosthaven {
 	/* EVENTS */
 	/* ------ */
 
+	public List<String> getAllRawEventsIds() {
+		log.entry();
+		return log.exit(events.keySet().stream().sorted().toList());
+	}
+
 	public RawEvent getRawEvent(String eventId) {
 		log.entry(eventId);
 		RawEvent event = events.get(eventId);
@@ -87,21 +92,21 @@ public class Frosthaven {
 		else return log.exit(event);
 	}
 
-	public Event getEvent(String eventId, List<String> chosenOptionsIds, String randomScenarioSectionId) {
+	public PlayedEvent getPlayedEvent(String eventId, List<String> chosenOptionsIds, String randomScenarioSectionId) {
 		log.entry(eventId, chosenOptionsIds, randomScenarioSectionId);
 		RawEvent rawEvent = getRawEvent(eventId);
 		if (rawEvent != null) {
-			Event event = new Event(rawEvent);
+			PlayedEvent playedEvent = new PlayedEvent(rawEvent);
 			// Set chosen options
 			if (chosenOptionsIds != null && !chosenOptionsIds.isEmpty()) {
-				event.setChosenOptions(chosenOptionsIds.stream().map(chosenOptionId -> rawEvent.getOptions().get(chosenOptionId)).toList());
+				playedEvent.setChosenOptions(chosenOptionsIds.stream().map(chosenOptionId -> rawEvent.getOptions().get(chosenOptionId)).toList());
 			}
 			// Set randomScenarioSection
 			if (randomScenarioSectionId != null) {
 				Section section = getSection(randomScenarioSectionId);
-				if (section != null) event.setRandomScenarioSection(section);
+				if (section != null) playedEvent.setRandomScenarioSection(section);
 			}
-			return log.exit(event);
+			return log.exit(playedEvent);
 		}
 		else return log.exit(null);
 	}

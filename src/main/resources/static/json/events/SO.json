@@ -20,6 +20,7 @@
 			}
 		}
 	},
+	"SO-02": {},
 	"SO-03": {
 		"text": "<p>\"Hear ye, hear ye! I am the crier of the Great Dallum, the most powerful seer the world has ever known!\" An ostentatiously dressed man is shouting in the middle of town, drawing a crowd. \"It is my great honor to advise you that the Great Dallum has selected this outpost for his next visitation!\"</p><p>There are audible gasps from the crowd. \"He will arrive in a fortnight! Prepare yourselves and be merry!\"</p><p>As the crier packs up, Frosthaven's citizenry come alive: \"The Great Dallum? Here?\" and \"We'll need to prepare a feast!\" and \"We'll need an offering—I've heard he grants the wishes of those who please him with lavish donations!\"</p><p>Even Mayor Satha looks to be hiding excitement under a façade of civility... this should be an event to remember.</p>",
 		"options": {
@@ -65,6 +66,9 @@
 			}
 		}
 	},
+	"SO-05": {},
+	"SO-06": {},
+	"SO-07": {},
 	"SO-08": {
 		"text": "<p>Regardless of season, Frosthaven and the surrounding environment is covered in a blanket of snow year-round. This week shows that even the most reliable of weather can take a break every now and then: the sun is shining, the air is warm, and the icy paths have melted into mud and stone.</p><p>The outposters are taking advantage of the heatwave by enjoying a splash in the bay. The Quatryl mail-carrier has taken to delivering popsicles made with ice harvested from the shade of the mountainside, and even Mayor Satha has paused her duties to take a running dive off the dock into the still-cold water.</p><p>Only one group is going about as normal: the town guard. Captain Olmstead has demanded the guard be at high alert and double the patrols.</p><p>He barks orders from the harbor tower at the sweating guards on patrol: \"All manner of sea life is just waiting to eat us alive! Be ready for them!\" The fully-armored guards look to be on the verge of collapse in the sweltering heat.</p>",
 		"options": {
@@ -295,6 +299,8 @@
 			}
 		}
 	},
+	"SO-17": {},
+	"SO-18": {},
 	"SO-19": {
 		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: \"We've stocked enough away and the harvest is plentiful. It's about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?\"</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
 		"options": {
@@ -318,6 +324,7 @@
 			}
 		}
 	},
+	"SO-20": {},
 	"SO-21": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
@@ -422,9 +429,16 @@
 	"SO-43": {
 		"unlockedBy": { "event": { "id": "SR-17" }}
 	},
+	"SO-44": {},
+	"SO-45": {},
+	"SO-46": {},
+	"SO-47": {},
+	"SO-48": {},
 	"SO-49": {
 		"unlockedBy": { "scenario": { "id": "059" }}
 	},
+	"SO-50": {},
+	"SO-51": {},
 	"SO-52": {
 		"unlockedBy": { "event": { "id": "B-04" }},
 		"text": "<p>You rush to the docks in response to the alarm bells and find a massive shell washed up on the icy shore. Slowly... slowly, a head wider than the guard tower emerges. It is a giant sea turtle, beached on the land. It opens its mouth and addresses Frosthaven with a slow drawl:</p><p>\"Hello, City. I apologize for intruding, when I last came through here it looked very different. I knew you when you were just Ice. Or perhaps time has not been kind on my eyes.\" The turtle's eyes are nearly glazed over in a white film. It looks blind, or close to it.</p><p>Children playing on the docks laugh at the silliness of the creature. A young girl shouts, \"Did you get stuck, Mr. Turtle?\"</p><p>\"Oh, how youthful you sound, City! You must be quite new to this world. I do appear stuck. Any chance for a push?\"</p>",
@@ -454,6 +468,7 @@
 	"SO-55": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},
+	"SO-56": {},
 	"SO-57": {
 		"unlockedBy": { "section": { "id": "78.4" }},
 		"text": "<p>The gates to Frosthaven open to reveal a lone Vermling traveler. He looks in good spirits as he shuffles through the gate and sets down his pack.</p><p>\"You there!\" he calls out. \"I'm new in town, don't suppose you could point me in the direction of a hot meal? Warm, even. It's been a long journey.\"</p><p>You direct him to the best restaurant in town. It also happens to be the worst restaurant in town. It's the only restaurant, really.</p><p>\"Thank you, such hospitality. Oh—one more thing. I have quite an affection for tea. Don't suppose you have some herbs you'd be willing to part with? Or any interest in buying some of the more exotic specimens I'm carrying myself?\"</p>",
@@ -519,5 +534,6 @@
 	},
 	"SO-64": {
 		"unlockedBy": { "section": { "id": "60.2" }}
-	}
+	},
+	"SO-65": {}
 }

@@ -1,4 +1,5 @@
 {
+	"SR-01": {},
 	"SR-02" : {
 		"text": "<p>\"Ho there! A moment of your time?\" from just off the path, a weathered Valrath calls for your attention. He approaches you with surprising speed despite the pack and gear strapped to his back. \"Edwin Merlsgate, Cartographer. You look familiar, have we met?\"</p><p>Before you can respond, he continues. \"I always forget a face, but never forget a trail. I can only cover so much ground, though—could we compare notes?\" He pulls out a scroll and quill, looking up expectantly.</p>",
 		"options": {
@@ -77,6 +78,8 @@
 			}
 		}
 	},
+	"SR-05": {},
+	"SR-06": {},
 	"SR-07": {
 		"text": "<p>\"Heeey. Heeeeey.\" You stop under a moss-covered tree, unsure if you heard what you think you heard: a tiny-sounding voice calling out—</p><p>\"Heeeeelllp.\" That one you're sure of. You search around the base of the tree and spot it: a beetle nearly the size of a fist. It rubs its limbs together in a practiced way, and the friction sounds nearly like human speech: \"Hellllp me.\" Against your better judgement you pick it up. Despite its unusual size it looks somehow fragile, lost.</p><p>\"Harrower. Hellllp. Saaaave.\" Is this bug claiming to be... part of a Harrower? A Harrower is a sentient collection of bugs, but it's unusual to have one maintain that intelligence when detached from the greater whole.</p>",
 		"options": {
@@ -118,6 +121,7 @@
 			}
 		}
 	},
+	"SR-09": {},
 	"SR-10": {
 		"text": "<p>You round a rocky outcropping and find a lavishly-dressed Savvas staring you down, anger in its eyes.</p><p>\"You're late!\" You stammer a non-committal half-response, but it's quickly cut off. \"Useless! Don't touch the food with those greasy hands of yours. It's worth more than all those pelts you're wearing. Grab a tray and get to work serving your betters—and be advised your tardiness is coming out of your tip!\"</p><p>A dozen Savvas are seated on stone benches around an outdoor table meticulously carved from a single slab of granite. Each Savvas is wearing elaborate clothing studded with metals and fine silks that really do put your own clothes to shame. The scene is set for a magnificent feast, and a nearby serving area has gorgeous platters heaped high with the most perfect cuts of... rocks?</p><p>\"Get on with it! We 're hungry!\"</p>",
 		"options": {
@@ -137,6 +141,8 @@
 			}
 		}
 	},
+	"SR-11": {},
+	"SR-12": {},
 	"SR-13": {
 		"text": "<p>As you pause for a rest along your journey, you spot a handful of bright orange produce sticking out from the meltwater mud. It looks not dissimilar to an elongated flamefruit, though the color is different. You pick one off and smell it, noting its rich, lively herb aroma. As you prepare to take a bite, you hear a voice shouting.</p><p>\"I wouldn't do that.\" An elderly Quatryl steps out of the bushes and points at you with her walking stick. \"That's a firepepper, the strongest spice on this side of the continent!\" As you look puzzled, she continues. \"It's been said a firepepper stew can reheat even the soul of the dead. I've heard the tale of a Hungry Maw living beneath the Copperneck Mountains that only spared a village from destruction when they served it a plate of their hottest sweet-and-fiery stew.\" She chuckles to herself.</p><p>\"I'm certain it would be too much for you. I grew up eating these, but it would probably take you a week to recover!\"</p>",
 		"options": {
@@ -170,6 +176,7 @@
 			}
 		}
 	},
+	"SR-14": {},
 	"SR-15": {
 		"text": "<p>You encounter a young Algox away from his tribe, looking hungry and weary. He explains his name is Malrog, and that he has been exiled as part of the ritual transition into adulthood. He will need to slay a great beast to prove his value and return to his people. It's clear he doesn't want to interact with you, but he's desperate.</p><p>\"I shattered my greatsword against the rocks two days ago, and now I am defenseless. It is beneath my status to ask, but do you have anything I could use?\"</p><p>Judging by his current condition, it doesn't look like he'll make it very long without your help.</p>",
 		"options": {
@@ -282,6 +289,9 @@
 			}
 		}
 	},
+	"SR-18": {},
+	"SR-19": {},
+	"SR-20": {},
 	"SR-21": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
@@ -428,9 +438,11 @@
 	"SR-34": {
 		"unlockedBy": { "event": { "id": "SR-07" }}
 	},
+	"SR-35": {},
 	"SR-36": {
 		"unlockedBy": { "event": { "id": "WR-06" }}
 	},
+	"SR-37": {},
 	"SR-38": {
 		"unlockedBy": { "section": { "id": "189.1" }},
 		"text": "<p>\"Just down that crevasse. Screaming like crazy,\" The mining camp foreman says. \"I'm not sending my folks down here. I'll leave it to you to put it down.\"</p><p>You climb down the ridge and sure enough, protruding from a recent rockslide is the limp arm of an Unfettered.</p><p>\"APPROACH CLOSER SO I MAY ELIMINATE YOU!\" The arm swings uselessly with its interior mechanics exposed. \"PUT YOURSELF WITHIN RANGE OF MY POWER-FLAIL AND TASTE MY STEEL.\" You don't know how long this thing's been down here, but it's clearly lost it. You brush aside the larger rocks and find its entire lower half has been crumpled by the rockslide.</p><p>\"I'VE GOT YOU NOW! <strong>CRUSHING LEAP</strong>!\"... The machine does not move.</p><p>You were sent to eliminate the threat and cash in on the scrap, but there may be an opportunity here. It could be a valuable asset if you can reason with it. That said, it would need a significant overhaul to get it back to operational.</p>",
@@ -454,6 +466,7 @@
 			}
 		}
 	},
+	"SR-39": {},
 	"SR-40": {
 		"unlockedBy": { "event": { "id": "SO-59" }},
 		"text": "<p>As your group is gathering around a warm campfire, a lone Orchid emerges from the woods. His weathered face tells you that he has probably spent the majority of his life here in the north. You offer him a seat. He looks you over with a sharp eye, then accepts.</p><p>After a while of sitting in silence, he speaks. \"During my lifetime, I have seen many things and pondered even more. One matter occupying me lately has been the survival of Frosthaven.\"</p><p>\"Based on what you've seen of the outpost, what is the best course of action to guarantee its survival: the strongest individuals contributing many resources, or everyone offering a small amount?\"</p>",
@@ -474,6 +487,11 @@
 			}
 		}
 	},
+	"SR-41": {},
+	"SR-42": {},
+	"SR-43": {},
+	"SR-44": {},
+	"SR-45": {},
 	"SR-46": {
 		"unlockedBy": { "section": { "id": "78.4" }},
 		"text": "<p>Heading toward your destination you see an old woman with a cord of dried vegetables hanging around her neck. She's digging in a stepped garden, carved level-by-level into the mountainside. Many of the plants have eye-catching colors and a ripeness to them begging to be eaten immediately.</p><p>The woman looks tired and watches you with a solemn curiosity as you approach. You try to strike up a conversation but she doesn't seem willing to speak. Ready to move on, you ask if you can take one of the magnificent fruits, but she frowns, pointing at the trowel. It looks like she wants you to work for it.</p>",
@@ -536,5 +554,9 @@
 				}
 			}
 		}
-	}
+	},
+	"SR-49": {},
+	"SR-50": {},
+	"SR-51": {},
+	"SR-52": {}
 }

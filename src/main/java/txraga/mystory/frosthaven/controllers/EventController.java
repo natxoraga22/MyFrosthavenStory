@@ -23,7 +23,6 @@ import txraga.mystory.frosthaven.global.Frosthaven;
 public class EventController {
 
 	private final Frosthaven frosthaven;
-	//private final FrosthavenStory fhStory;
 
 
 	@GetMapping({"", "/{eventId}"})
@@ -41,7 +40,8 @@ public class EventController {
 	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
 	                                           @RequestParam(required = false) String chosenOptions) {
 		log.entry(eventId, chosenOptions);
-		return log.exit(new ModelAndView("redirect:/event/" + eventId + (chosenOptions != null ? "?chosenOptions=" + chosenOptions : "")));
+		String redirectUrl = "/event/" + eventId + (chosenOptions != null ? "?chosenOptions=" + chosenOptions : "");
+		return log.exit(new ModelAndView("redirect:" + redirectUrl));
 	}
 
 }

@@ -1,4 +1,7 @@
 {
+	"WO-01": {},
+	"WO-02": {},
+	"WO-03": {},
 	"WO-04": {
 		"text": "<p>Frosthaven's no stranger to snow, but as dawn breaks, even the long-time veterans of the north utter cries of surprise. An overnight storm has covered the town in a blanket of snow that rises halfway up most of the doors in town. You grumble at first as you dig to clear the longhouse door and get on with your day, but the snow muffles every sound in a way you find soothing, and it isn't long before you and the other inhabitants are free. You breathe a sigh of relief.</p><p>And then the attack bells sound.</p><p>An Algox warband approaches the town at speed, using their natural abilities to bound across the deep snow without slowing. The guards on duty scramble to assume battle positions, but when you glance toward the barracks your spirits sink; the gates are still half-buried. You see the massive doors bulge as the guards within push desperately, trying to swing them open against the piled snow. They're making progress, but you can tell they won't make it to the gate towers in time.</p>",
 		"options": {
@@ -27,6 +30,9 @@
 			}
 		}
 	},
+	"WO-05": {},
+	"WO-06": {},
+	"WO-07": {},
 	"WO-08": {
 		"text": "<p>You're halfway through your polar bear burger when the alarm bell tolls. \"Algox to the west!\" a guard shouts. With a wistful look at the rest of your lunch, you grab your gear and rush toward the wall.</p><p>You don't make it twenty steps when the alarm bell tolls again. Strange—they're only supposed to ring it once per attack. A call of \"Algox to the east!\" rings over the outpost.</p><p>Wait a minute. Weren't they coming from the west? They couldn't have circled around that fast. The guards are clearly as confused as you are, but a frantic shout from the guard tower clears it up: \"Algox to the east—and the west!\"</p><p>Oh. Oh no.</p>",
 		"options": {
@@ -53,6 +59,7 @@
 			}
 		}
 	},
+	"WO-09": {},
 	"WO-10": {
 		"text": "<p>You step down into The Crater, Frosthaven's burned-out drinking spot, for an evening's relaxation. Hopes of a quiet evening are ruined by Xain, a local who is always \"temporarily\" down on his luck, walking off dejected from one of the tables. As soon as he spots you he brightens up and straightens himself out.</p><p>\"Hey! Friends! Just the folks I was looking to see. This is perfect timing—incredible timing—I've got something you're going to want to hear.\" You doubt it, but Xain nods emphatically.</p><p>\"I've got a new business opportunity. I've worked it out with a friend of mine—and this is real hush-hush—but Lurkers are apparently crazy about polar bear meat. I've got a supply chain lined up like you wouldn't believe: cash goes to the Algox, they get me the bear-meat, then I sell those juicy steaks to the Lurkers for valuable trinkets from the ocean floor.\" He pauses to let the brilliance sink in.</p><p>\"So, the problem is I need to front-load a bit of the funding here. The more money, the more steaks. I'm guaranteeing massive returns on your investment. Whaddaya say?\"</p>",
 		"options": {
@@ -94,6 +101,8 @@
 			}
 		}
 	},
+	"WO-11": {},
+	"WO-12": {},
 	"WO-13": {
 		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it's a whole cavern. A miner said it's been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don't have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
 		"options": {
@@ -163,6 +172,7 @@
 			}
 		}
 	},
+	"WO-16": {},
 	"WO-17": {
 		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won't board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it's up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain's log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship's entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
 		"options": {
@@ -185,6 +195,7 @@
 			}
 		}
 	},
+	"WO-18": {},
 	"WO-19": {
 		"text": "<p>\"Mercenaries! I require you! In the name of art!\"</p><p>A Savvas stands at your front door, a long black scarf wrapped around its neck.</p><p>\"I am Eros, purveyor of culture and director of theater. I am putting on a play, tentatively titled The Depths of Anguish, reenacting the most noble of sacrifices on our shores at the hands of the Lurkers. It will be my magnum opus.\" It pauses, dramatically.</p><p>You try to explain that while your services are for hire, those services don't include play-acting. It's more the \"smashing\" type of services, really.</p><p>\"What? No, never—\" It looks a bit stunned that you'd even consider yourselves actors. \"No, I need you to stand guard in the ocean. This will be set on location at the shore, and I can't have an encore of the subject matter. I'll want you staged in the water, out of sight, just in case Lurkers try to write a sequel.\"</p>",
 		"options": {
@@ -305,6 +316,18 @@
 	"WO-47": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
+	"WO-48": {},
+	"WO-49": {},
+	"WO-50": {},
+	"WO-51": {},
+	"WO-52": {},
+	"WO-53": {},
+	"WO-54": {},
+	"WO-55": {},
+	"WO-56": {},
+	"WO-57": {},
+	"WO-58": {},
+	"WO-59": {},
 	"WO-60": {
 		"unlockedBy": { "event": { "id": "SR-28" }}
 	},
@@ -317,15 +340,28 @@
 	"WO-63": {
 		"unlockedBy": { "scenario": { "id": "059" }}
 	},
+	"WO-64": {},
+	"WO-65": {},
+	"WO-66": {},
+	"WO-67": {},
+	"WO-68": {},
+	"WO-69": {},
+	"WO-70": {},
 	"WO-71": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},
+	"WO-72": {},
+	"WO-73": {},
+	"WO-74": {},
 	"WO-75": {
 		"unlockedBy": { "event": { "id": "SO-59" }}
 	},
 	"WO-76": {
 		"unlockedBy": { "event": { "id": "SO-59" }}
 	},
+	"WO-77": {},
+	"WO-78": {},
+	"WO-79": {},
 	"WO-80": {
 		"unlockedBy": { "section": { "id": "25.2" }},
 		"text": "<p>\"You there! Come. I require assistance.\"</p><p>In front of you stands a portly man with a fur collared cape. The rest of his clothing show signs of travel. He must have just gotten in through the main gate, but you can't see any travelling gear or any other possessions.</p><p>\"You must be wondering, who is this fine merchant named Joseph and where are all his things,\" the man asks pointing at himself. \"I decided to move to Frosthaven and open a new venture, but my travelling assistants, you see, they all perished in the journey, and my merchandise is just sitting out there in the frozen wilderness. Can you help me carry it to Frosthaven?\"</p>",

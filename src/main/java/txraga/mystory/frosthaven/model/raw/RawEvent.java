@@ -60,8 +60,9 @@ public class RawEvent {
 	@Setter
 	@ToString
 	public static class OutpostAttack {
+		private String race;
 		private int attack;
-		private int target;
+		private String target;
 		private String targetPriority;
 		private String text;
 		private Rewards rewards;

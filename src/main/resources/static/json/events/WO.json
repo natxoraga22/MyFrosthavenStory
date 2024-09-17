@@ -1,7 +1,117 @@
 {
-	"WO-01": {},
-	"WO-02": {},
-	"WO-03": {},
+	"WO-01": {
+		"text": "<p>It's a rare sunny afternoon in Frosthaven, and you find yourself spending it down at the docks. Supposedly you're replenishing food supplies, through organized ice-fishing, for the good of the town, but most of those present are here for the company and laughter as you swap stories. It's been more than an hour since anyone pulled something from the water, but no one seems to mind.</p><p>You're chatting with a neighbor when you hear grunting further down the platform—someone must have something massive on the line. Between the thrashing eddies in the water you can just spot a claw—that's no fish, it's a Lurker!</p>",
+		"options": {
+			"A": {
+				"trigger": "Cut the line.",
+				"text": "You deftly cut the fishing line, pulling the fisherman back from the water's edge. You shout up to the guard who sounds the alarm.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Help pull!",
+				"requirement": "[trait] STRONG",
+				"text": "You grab hold of the line and dig your heels into the ice. With a tremendous heave you pull the startled Lurker onto land.",
+				"rewards": {
+					"text": "-10 [attack]"
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Help pull!",
+				"requirement": "[not] [trait] STRONG",
+				"text": "You tug at the line ineffectually, then watch in horror as the fisherman is dragged under the water. The crowd screams and runs for cover.",
+				"rewards": {
+					"text": "Lose 1 morale."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 30,
+			"target": 5,
+			"targetPriority": "Target even-numbered buildings in ascending order.",
+			"text": "After several minutes of complete chaos, you and the town guard manage to drive the Lurker and its friends back into the water. If fishing is this dangerous, there really isn't a safe hobby in Frosthaven.",
+			"rewards": {
+				"text": "Gain 2 collective [hide]."
+			}
+		}
+	},
+	"WO-02": {
+		"text": "<p>Frosthaven at night in the winter verges on peaceful—the blanket of snow provides a quiet reminder to bundle up indoors, and sound barely carries from house to house. Tonight is an exception, though: dull thuds, coming from somewhere far off, rock the walls.</p><p>You meet at the wall and see an Algox raiding party just outside arrow-range, circled around a leader hollering into the night air. Each call is met with the remainder smashing their fists against the snow, sending ripples of vibration through the town.</p><p>The calls reach a fever pitch, and the thumping increases in frequency. Tonight will not be peaceful, and many in the outpost won’t see the sunrise.</p>",
+		"options": {
+			"A": {
+				"trigger": "Start your own chant on the battlements.",
+				"text": "You grab a bullhorn and organize a show of force to dishearten your attackers.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			},
+			"A1": {
+				"id": "A",
+				"requirement": "[trait] PERSUASIVE",
+				"text": "You rally the troops into the guard towers along the wall, whipping them into a frenzy of noise.",
+				"rewards": {
+					"text": "Additionally gain 1 morale."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Raise the alarm and secure the wall.",
+				"requirement": "MORALE > 10",
+				"text": "Frosthaven won’t be intimidated. You work as a team to drive back the Algox, who crumble in the face of the well-organized defense.",
+				"rewards": {
+					"text": "-10 [attack]"
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Raise the alarm and secure the wall.",
+				"requirement": "MORALE <= 10",
+				"text": "Guards abandon their posts in the face of the terrifying display. The attack floods over the wall, and the stores are pillaged before you can beat them back.",
+				"rewards": {
+					"text": "Lose 2 collective resources."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Algox",
+			"attack": 25,
+			"target": 4,
+			"targetPriority": "Target odd-numbered buildings from 1 to 40."
+		}
+	},
+	"WO-03": {
+		"text": "<p>You're enjoying a stiff drink when a fly drops into the liquid with a light \"plunk.\" You fish out the suicidal bug and are about to flick it to the floor when it musters the nerve to sting you, resulting in a reflexive slap.</p><p>The injection point leaves a spiderweb of black ink tracing down your veins. The bug itself is no bug at all—it's a minuscule clockwork machine with a long brass stinger hanging off the end. You turn to share your discovery and are horrified to see tiny brass dots pinging against the window—it's an attack!</p><p>Outside the glass, you can see a glittering cloud of metal against the snowfall, descending on Frosthaven.</p><p>Whatever it injected you with has left your arm as dead weight, unable to draw your weapon.</p>",
+		"options": {
+			"A": {
+				"trigger": "Seal the door.",
+				"text": "You use the last of the strength in your limp arm to seal the door, slumping to the ground. It seems like the populace outside is getting a stronger dose from the swarm’s repeat injections. You wait for the insects to settle into the snow before you charge out and join the defense.",
+				"rewards": {
+					"text": "-10 [attack]<br/>Lose 1 morale."
+				}
+			},
+			"B": {
+				"trigger": "Charge outside to warn the town.",
+				"text": "You burst out the door, hollering and screaming. It gives the town guard a split-moment’s notice to ring the alarm bell, saving countless citizens who rush inside.",
+				"rewards": {
+					"text": "-3 [target]<br/>All characters start the next scenario with [damage] 1."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 25,
+			"target": 7,
+			"targetPriority": "Target buildings randomly by drawing from the building deck.",
+			"text": "With the last of the insects crushed, you start the arduous process of cleaning up the streets. Looks like there's plenty of scrap metal, although it's dangerous to dispose of. You still feel pretty ill, actually...",
+			"rewards": {
+				"text": "Gain 1 [metal] each.<br/>All characters start the next scenario with [poison]."
+			}
+		}
+	},
 	"WO-04": {
 		"text": "<p>Frosthaven's no stranger to snow, but as dawn breaks, even the long-time veterans of the north utter cries of surprise. An overnight storm has covered the town in a blanket of snow that rises halfway up most of the doors in town. You grumble at first as you dig to clear the longhouse door and get on with your day, but the snow muffles every sound in a way you find soothing, and it isn't long before you and the other inhabitants are free. You breathe a sigh of relief.</p><p>And then the attack bells sound.</p><p>An Algox warband approaches the town at speed, using their natural abilities to bound across the deep snow without slowing. The guards on duty scramble to assume battle positions, but when you glance toward the barracks your spirits sink; the gates are still half-buried. You see the massive doors bulge as the guards within push desperately, trying to swing them open against the piled snow. They're making progress, but you can tell they won't make it to the gate towers in time.</p>",
 		"options": {
@@ -21,6 +131,7 @@
 			}
 		},
 		"outpostAttack": {
+			"race": "Algox",
 			"attack": 15,
 			"target": 7,
 			"targetPriority": "Target odd-numbered buildings in order of closest to farthest from the main gate.",
@@ -30,9 +141,64 @@
 			}
 		}
 	},
-	"WO-05": {},
+	"WO-05": {
+		"text": "<p>It started with discordant clanging—metal crashing against metal. Then came the abrupt twangs of taut wire being strummed, followed by the cacophonous wailing produced from deep within the robots surrounding the outpost. From sundown to sunup—and that’s a long period in the heart of winter—the machines blare their unquiet concert from just outside the city walls.</p><p>It has been five days. Five days of constant noise, of eardrums that ring throughout the day, of irritable townsfolk trying to survive on the sort of non-sleep new parents know too well. Enough is enough.</p>",
+		"options": {
+			"A": {
+				"trigger": "Lead a group to sabotage the machines at daybreak, when they turn off.",
+				"text": "You sneak up on the hellish band of noisemakers just as they turn off for the morning, dormant in the snow. You make quick work of dismantling the strings, drums, and rattles that have been tormenting the city. Unfortunately, before you can deactivate the last of them, they stir and charge the front gate.",
+				"rewards": {
+					"text": "-2 [target]"
+				}
+			},
+			"B": {
+				"trigger": "Lead a group to sabotage the machines at nightfall, when they turn on.",
+				"text": "The discordant noise is even more penetrating and disorienting at close range. You manage to sneak up to the metallic music machines and disable many of them, but while you mount a frontal attack they counterpunch past the gates of Frosthaven.",
+				"rewards": {
+					"text": "-10 [attack]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 35,
+			"target": 5,
+			"targetPriority": "Target highest-level buildings first (players break ties).",
+			"text": "You smash the last of the machines to bits, nearly collapsing from exhaustion. It is time for the most satisfying group nap Frosthaven has ever known.",
+			"rewards": {
+				"text": "Gain 2 collective [metal]."
+			}
+		}
+	},
 	"WO-06": {},
-	"WO-07": {},
+	"WO-07": {
+		"text": "<p>The Lurkers are unusually agitated today, skittering about manically on the docks, overturning crates and opening barrels. They move with purpose and their chittering is growing more frantic, but they’re not attacking.</p><p>You notice an Inox child in the courtyard playing with what you assume is a large doll—until you see its claws. The boy seems to be in no danger as he waves a stick at a baby Lurker with a bright green-and-red shell.</p><p>“This is Bumpy,” the Inox boy proclaims proudly as you approach. “I found him, and we are friends.”</p><p>The chittering from the docks grows louder, and Bumpy suddenly loses interest in the boy’s stick, turning toward the docks and emitting a loud, high-pitched whine.</p><p>The chittering stops. For a moment all is silent except for Bumpy’s call. Then, from beyond the wall, a voice echoes the noise. Then another. And another. Soon the keening is a cacophony, and the surprised shouts of the guards tell you the Lurkers have turned toward town.</p><p>It seems they found what they’re looking for.</p>",
+		"options": {
+			"A": {
+				"trigger": "Grab Bumpy and toss it to the attacking Lurkers.",
+				"text": "The boy protests as you yank Bumpy away and sprint to the gate. The Lurker makes a beautiful green-and-red arc as you heave it over the wall, and some of the attackers peel away to whisk the baby back underwater.",
+				"rewards": {
+					"text": "-3 [target]"
+				}
+			},
+			"B": {
+				"trigger": "Shoo the Inox boy inside and get ready for the fight.",
+				"text": "You ensure the Inox boy makes it safely inside. You make it to the gate just in time to see the swarm of Lurkers burst through.",
+				"rewards": {
+					"text": "Gain disadvantage on the first target."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 20,
+			"target": 5,
+			"targetPriority": "Target even-numbered buildings in ascending order.",
+			"rewards": {
+				"text": "Add [section_47.1] to the calendar in the final week of the next summer."
+			}
+		}
+	},
 	"WO-08": {
 		"text": "<p>You're halfway through your polar bear burger when the alarm bell tolls. \"Algox to the west!\" a guard shouts. With a wistful look at the rest of your lunch, you grab your gear and rush toward the wall.</p><p>You don't make it twenty steps when the alarm bell tolls again. Strange—they're only supposed to ring it once per attack. A call of \"Algox to the east!\" rings over the outpost.</p><p>Wait a minute. Weren't they coming from the west? They couldn't have circled around that fast. The guards are clearly as confused as you are, but a frantic shout from the guard tower clears it up: \"Algox to the east—and the west!\"</p><p>Oh. Oh no.</p>",
 		"options": {
@@ -52,6 +218,7 @@
 			}
 		},
 		"outpostAttack": {
+			"race": "Algox",
 			"attack": 20,
 			"target": 8,
 			"rewards": {
@@ -236,25 +403,248 @@
 		}
 	},
 	"WO-21": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>The ships left the harbor a few days ago, dragged ashore or sailing into deeper waters to avoid freezing in place. Now the cold snap has the docks in its grip, coating the whole harbor with a thick layer of motionless ice.</p><p>Even in winter, the harbor rarely freezes completely. But by the time you wake up, children have already seized the opportunity to play on the frozen waves, scampering after each other in a game of Catch the Lurker.</p><p>Then you notice one human child farther out than the others, sullenly swiping at the ice with a stick. He entertains himself with rhythmic banging for a while, before suddenly stopping as though he’d heard something. He gets down on all fours and wipes the snow away, peering into the ice.</p><p>With a yelp, the boy jumps back just as a huge claw breaches the ice where he stood. Similar eruptions arrest the other children’s game, and Lurkers emerge from the ice. Panic takes hold of the children, who scramble back toward the docks as the attack bell sounds.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Looks like it’s your turn to play Catch the Lurker. Head out and get the kids.",
+				"requirement": "[trait] ARMORED",
+				"text": "A group of kids is a lot lighter than a cadre of armored town guards. The ice groans and breaks under the weight of your group, and many of you plunge into the cold, dark water below.",
+				"rewards": {
+					"text": "Gain disadvantage on all targets."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Looks like it’s your turn to play Catch the Lurker. Head out and get the kids.",
+				"requirement": "[not] [trait] ARMORED",
+				"text": "You and a group of guards charge onto the ice as quickly as the terrain allows, distracting the Lurkers so the children can escape. As you fend off the sharp claws, you see the last of them make it to safety.",
+				"rewards": {
+					"text": "Gain 1 morale.<br/>All characters start the next scenario with [wound]."
+				}
+			},
+			"B": {
+				"trigger": "Open the gates for the kids to make it back, but keep the guards behind the wall. You’ve got a whole town to defend.",
+				"text": "You shout for the guards to hold defensive positions as more Lurkers emerge from the ice and the children run through the gate. Almost all of them make it back.",
+				"rewards": {
+					"text": "Lose 1 morale."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 20,
+			"target": 6,
+			"targetPriority": "Target even-numbered buildings first in descending order."
+		}
 	},
 	"WO-22": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You see them skittering just beyond the shoreline. Their spikes and claws make small splashes as they break against the waves. It’s hard to tell how many there are exactly, but it appears to be just two or three. If there were a lot of Lurkers, the water would be churning and sloshing as they position themselves.</p><p>You wait for them to make their charge. And you wait. And wait. This is new behavior for Lurker raiders—typically they attack within moments of reaching shallow water. They’re safe in the deep, and dangerous on land—but vulnerable along the shore.</p><p>You’re not sure what they’re up to, but you certainly aren’t going to sleep tonight while the enemy is on the beach.</p>",
+		"options": {
+			"A": {
+				"trigger": "Lead an attack and disrupt whatever the Lurkers are up to.",
+				"text": "You gather guards for a pre-emptive strike and signal for the gate to open. You sprint for the shore, but the water begins churning and a score of Lurker raiders emerge from the water—it’s an ambush.",
+				"rewards": {
+					"text": "Gain disadvantage on the first two targets."
+				}
+			},
+			"B": {
+				"trigger": "Stay behind the walls, check on your defenses, and wait them out.",
+				"text": "Patience paid off. After another hour of tense anticipation, the Lurker raiders seem to grow restless and a large army of them emerges from the deeper water. Waiting was a good choice.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 30,
+			"target": 5,
+			"targetPriority": "Target even-numbered buildings from 1 to 50.",
+			"text": "A smart commander learns from every battle. It seems your enemies are getting smarter too.",
+			"rewards": {
+				"text": "Gain 10 experience each."
+			}
+		}
 	},
 	"WO-23": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>A deckhand sprints through town, shouting at anyone who will listen.</p><p>“The ships—they’re going under!” He rushes up to you, fear in his eyes. “You have to help! They’re taking the ships!”</p><p>Few would leave a ship in Frosthaven over winter when the ice impedes passage, but excellent planning is not the hallmark of captains assigned to voyages this far north. You rush to the docks, and sure enough, a large ship is listing dangerously. Despite being lashed to the dock, it looks like it’s being dragged downward by its anchor. The small bubbles of air billowing around the bay remove any doubt—this is the work of Lurkers. If you don’t intervene, the vessel will surely capsize.</p>",
+		"options": {
+			"A": {
+				"trigger": "Fire cannons into the water to drive them off.",
+				"text": "You ready the defensive artillery and level it toward the water. Although the cannons won’t do much damage to anything deep undersea, it still does a nice job driving them away from the boats.",
+				"rewards": {
+					"text": "-2 [target]"
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "If it’s a tug-of-war they want, you’re happy to oblige.",
+				"requirement": "[trait] STRONG",
+				"text": "You wrap the line expertly around your arm and pull a Lurker’s head above water as your allies pounce.",
+				"rewards": {
+					"text": "-5 [attack], -1 [target]"
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "If it’s a tug-of-war they want, you’re happy to oblige.",
+				"requirement": "[not] [trait] STRONG",
+				"text": "You attempt to pull one of the Lurkers to the surface but it gets the best of you, dragging the ship into the depths.",
+				"rewards": {
+					"text": "Lose 1 morale."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 25,
+			"target": 6,
+			"targetPriority": "Target even-numbered buildings from 10 to 80.",
+			"text": "You beat back the Lurkers and swear off seafood for a month.",
+			"rewards": {
+				"text": "Gain 2 collective [hide]."
+			}
+		}
 	},
 	"WO-24": {
-		"unlockedBy": { "section": { "id": "129.3" }}
-	},
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>They come from the hills in the night—a horde of blinking red lights, sparkling over the dark, snowy landscape like fireflies.</p><p>By the time the guards have assembled at the gates, the creatures are near enough that you can make them out: glowing, mantis-like constructs no bigger than a dog. They line up just at the edge of the town’s torchlight, blinking in and out of your vision.</p><p>Suddenly, the metallic insectoids all rush forward as one. The archers drop dozens of them, but as the glowing creatures reach the base of the wall, they vanish, the guards’ arrows driving into empty ground.</p><p>You spin around as the creatures reappear on the inside of the wall. As the blinking lights proliferate through town, you realize they aren’t flashing their lights on and off—the glowing creatures are teleporting.</p><p>“How do we fight THAT?” one guard wails as the machines wreak havoc on a nearby longhouse.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "The same way you fight anything: hit it until it stops moving. Get everyone down from the guard towers and start smashing things.",
+				"requirement": "[trait] NIMBLE",
+				"text": "They’re fast, but you are too. You thin their numbers enough that you minimize the damage.",
+				"rewards": {
+					"text": "-2 [target]"
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "The same way you fight anything: hit it until it stops moving. Get everyone down from the guard towers and start smashing things.",
+				"requirement": "[not] [trait] NIMBLE",
+				"text": "They’re everywhere at once. It’s going to be a long night.",
+				"rewards": {
+					"text": "+3 [target]"
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Hold back and observe the attackers. Maybe you can find a pattern to their movements.",
+				"requirement": "[trait] EDUCATED or QUATRYL",
+				"text": "Before long, you notice a rhythm to the timing and direction of the teleportation. These machines, like many others, are as reliable as clockwork. You shout instructions to the guards, and they help you make short work of the automatons.",
+				"rewards": {
+					"text": "Gain 1 morale.<br/>Gain advantage on all targets."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Hold back and observe the attackers. Maybe you can find a pattern to their movements.",
+				"requirement": "[not] [trait] EDUCATED or QUATRYL",
+				"text": "You take your time looking for patterns, but the only thing you notice is metallic bugs terrorizing the town as you stand there scratching your head. You order the guards forward, but you’ve lost the opportunity to contain the damage.",
+				"rewards": {
+					"text": "Wreck two buildings by drawing randomly from the building deck."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 20,
+			"target": 5,
+			"targetPriority": "Target buildings randomly by drawing from the building deck."
+		}
+	},	
 	"WO-25": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WO-26": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You’re on a break during your rotation at the gate, watching children in the courtyard below roll balls of snow for their snowinox. They’re happily placing sticks in the head when you hear the attack bell sound behind you. Break’s over.</p><p>Dark metallic shapes crawl toward the outpost, firing nasty-looking bolts tipped with a greenish substance. The bolts thunk into the solid wood of the tower with an acidic hiss.</p><p>Suddenly an acrid stench seizes your senses, flooding your eyes and burning your nostrils as you choke for air. Many guards collapse in a retching fit. Another volley slams into the wall, and the resulting cloud drives even the most stalwart from the towers.</p><p>More poisonous bolts sail overhead and land deeper in town, and you hear sounds of panic as people rush to escape. The machines are nearing the walls… With no defenders to stop them, they’ll soon be inside.</p>",
+		"options": {
+			"A": {
+				"trigger": "Leave the guards to defend while you rush into town and evacuate the citizens.",
+				"text": "The gas swirls as you usher outposters toward the harbor gate. By the time you return to the fight, you see many guards have sacrificed themselves to slow the attackers.",
+				"rewards": {
+					"text": "+10 [attack], -2 [target]"
+				}
+			},
+			"A1": {
+				"id": "A",
+				"requirement": "[trait] STRONG",
+				"text": "You shake off the nausea as you help folks out of their longhouses. Seeing you square your shoulders makes everyone else a little braver too.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			},
+			"B": {
+				"trigger": "Hide and wait for the metallic fiends to pass, then strike from behind.",
+				"text": "You hide yourselves under the stairs to the guard tower. More toxic artillery sails overhead, and the mechanical beasts crawl up the wall and drop down in front of you, knocking over the snowinox. Your ambush is effective, but the citizens of Frosthaven bore the brunt while you waited for your moment.",
+				"rewards": {
+					"text": "Lose 1 morale.<br/>-2 [target]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 30,
+			"target": 5,
+			"targetPriority": "Target buildings randomly by drawing from the building deck.<br/>Wreck all damaged buildings."
+		}
 	},
 	"WO-27": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>An alarm bell draws you to the workshop, where workers are running out from the structure followed by a steady stream of many-legged robots swinging heavy, metal flails. You grab a panicked worker as he runs by. “They tunneled right in!” He screams. “They’re coming in through the floor!”</p><p>The building is overrun with the crawling machines that have now begun to flood out toward the rest of the outpost.</p><p>You see some black powder stashed by the side of the building. A well-placed bit of fire could destroy the building and cut off the invasion, but it would be tough to get close enough with all these attackers.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Light ’em up.",
+				"requirement": "[trait] ARCANE or SAVVAS",
+				"text": "You don’t need to get close to send fire. The barrels go up in a huge explosion, collapsing a section of the workshop and sealing up the tunnel.",
+				"rewards": {
+					"text": "-3 [target]<br/>Wreck the Workshop."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Light ’em up.",
+				"requirement": "[not] [trait] ARCANE or SAVVAS",
+				"text": "You try to get close enough to throw a torch, but you can’t make it past the swarming automatons.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Contain the threat by surrounding the building and blocking the advance as long as you can.",
+				"requirement": "[trait] ARMORED",
+				"text": "The flailing metal stings, but you don’t let them get past you, and the outposters are able to flee.",
+				"rewards": {
+					"text": "-10 [attack]<br/>Gain 1 morale."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Contain the threat by surrounding the building and blocking the advance as long as you can.",
+				"requirement": "[not] [trait] ARMORED",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 35,
+			"target": 5,
+			"targetPriority": "Target the Workshop (unless wrecked), then select additional targets based on proximity to the Workshop (players break ties).",
+			"text": "You pick over the fallen attackers, and alsos make a note to discuss fire safety protocols with Mayor Satha.",
+			"rewards": {
+				"text": "Gain 1 collective [metal] for each successfully defended building."
+			}
+		}
 	},
 	"WO-28": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -269,16 +659,133 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WO-32": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>Frosthaven is in good spirits on this cloudless, sunny winter day. The call of seabirds and splash of waves forms a rhythm with the strikes of the blacksmith’s hammer, the grunts of pack animals, the clanging of the alarm bell…</p><p>Wait, what?</p><p>You shake from your reverie and sprint to the harbor gate. The guard gives a confused shrug as you arrive at the tower. “The water is… attacking?”</p><p>Sure enough, huge swells undulate through the harbor as though moved by a heavy storm. The fishing boats are tossing about dangerously on the roiling waves.</p><p>The guards look down at their weapons… they’re not exactly trained to fight angry tides. Then, a cry: “Lurkers!”</p><p>You see them too, riding within a massive swell as it approaches and retreats, getting closer to the wall with every crashing wave. If this keeps up, the water will overwhelm the gates. It seems the Lurkers have invented a new kind of battering ram.</p>",
+		"options": {
+			"A": {
+				"trigger": "You can’t fight the tide, but you know how to deal with Lurkers. Lead a counterattack.",
+				"text": "The waters calm quickly once you scatter the Lurkers who are pushing and pulling the waves. However, your attack left the walls thinly defended; by the time you return, some Lurkers are already past the gates.",
+				"rewards": {
+					"text": "Wreck the even-numbered building nearest to the docks (players break ties).<br/>Gain disadvantage on all targets."
+				}
+			},
+			"B": {
+				"trigger": "Time to hunker down. Command the guards to stop the water from flooding past the gates using anything they can find.",
+				"text": "You didn’t expect to deal with floods in a town named after frozen water. You barricade the gates against the rising waters, which soon crash against the walls with titanic force. The gate holds, but the boats in the harbor aren’t so lucky, and dash themselves to pieces on the beach.",
+				"rewards": {
+					"text": "Lose 1 prosperity.<br/>-10 [attack]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 50,
+			"target": 5,
+			"targetPriority": "Target even-numbered buildings closest to the docks (players break ties).",
+			"rewards": {
+				"text": "Gain 10 experience each."
+			}
+		}
 	},
 	"WO-33": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You wake up just before dawn to the most beautiful music you’ve ever heard. Joy swells through you as you realize who is creating the symphony: your friends have arrived.</p><p>You climb the stairs to the gatehouse, which is already crowded with people enjoying the serene waves of music.</p><p>There they are, in front of the gate: your friends. Dozens of them, each armored crustacean head pointed up at the audience. They bob in time with the pre-dawn sonata, the notes braiding together with the gently falling snow.</p><p>You eye the lever that would open the town’s gate; if you let them in, you could all listen to the music, which now seems like the only important thing in the world. Maybe it’s time to let your friends in.</p><p>You should let your friends in. Let them in.</p>",
+		"options": {
+			"A": {
+				"trigger": "Let your friends in.",
+				"text": "You open the gate, beginning a rapturous parade through town. You hear bad sounds that aren’t music. You see Mayor Satha with a group of guards, all with furs pulled tight over their ears. They look like they’re not enjoying the music. That makes you sad. Then Satha hits your friends. That makes you mad.",
+				"rewards": {
+					"text": "For each target of the below attack, draw a card from the town guard deck and add its value to the threat level for that target only (treat Wreck cards drawn this way as [plus0]). Then defend as normal."
+				}
+			},
+			"B": {
+				"trigger": "Go out to greet your friends.",
+				"text": "You can’t wait. You jump from the gatehouse window into the snow. You hear something crunch as you land, but you feel only elation as you approach your friends, who swivel their focus toward you, keeping you awash in perfect harmonies. Angry cries rise behind you, and arrows start flying at your friends. The townsfolk must be angry that you took the music away from them.",
+				"rewards": {
+					"text": "All characters start the next scenario with [immobilize]."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 40,
+			"target": 8,
+			"targetPriority": "Target even-numbered buildings in descending order.",
+			"rewards": {
+				"text": "Lose 1 morale."
+			}
+		}
 	},
 	"WO-34": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>A scouting expedition has returned with a promising discovery: a previously unexplored cave near Frosthaven full of monolithic black stones. Mayor Satha is excited to find a source of easily transportable stone, as Frosthaven’s gates and buildings are in dire need of repairs, and quarrying is nearly impossible during the winter.</p><p>She dispatches a crew to retrieve the resources and places you in charge of making sure the stone gets used well. “You’ve done an admirable job of helping build up this town,” Satha says, smiling. “I trust you to take care of this.”</p><p>Only three days later, you stand on the wall with the master stonecutter watching the wagons come in, laden with massive black rocks. The artisan gives a low whistle. “I’ve got a shop in town I usually use,” he says, “but with stones that big, I’d prefer to do the cutting near the site where we’ll use most of the material. Where should I set up?”</p>",
+		"options": {
+			"A": {
+				"trigger": "Defense is the priority; send him and the stones to repair the gates.",
+				"text": "The stonecutter sets up a temporary shop outside the gates, but a chorus of screams erupts from the worksite. From your perch on the wall you see the stones come to life all at once, unfolding into bladed automatons. You sigh and draw your weapons. At least they’re not inside the walls.",
+				"rewards": {
+					"text": "+5 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "There’s no point in improving defenses if the buildings fall over on their own; send the stones to the stonecutter’s shop and repair the buildings that have been hit hard.",
+				"text": "<p>You send the stonecutter to his shop and the wagons follow, but as soon as your back is turned the attack alarm sounds.</p><p>You rush over and see the “stones” unfolded into bladed automatons, which are now wreaking havoc on the very buildings you’d hoped to repair.</p>",
+				"rewards": {
+					"text": "Lose 1 morale.<br/>Wreck all buildings damaged by the below threat."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 55,
+			"target": 5,
+			"targetPriority": "Target buildings from 1 to 40 in descending order.",
+			"text": "As you gaze over the aftermath, you hope the next “exciting discovery” is met with a bit more scrutiny.",
+			"rewards": {
+				"text": "Lose 1 morale.<br/>Gain 2 collective [hide]."
+			}
+		}
 	},
 	"WO-35": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>“Ma’am, there are a couple spiders coming our way.” The guard looks nervous to have interrupted your meeting with Mayor Satha. “Like, uh, metal spiders. Big ones.” Satha sighs and walks with you to the wall for a better look. Sure enough, two mechanical monstrosities are slowly closing the distance to the town wall. Thick plumes of black smoke gurgle out of chimneys affixed to their heads—this is the work of the Unfettered.</p><p>“Hm, not spiders.” Satha hands the spyglass back to the guard. “Looks like they don’t have eight legs. More like ten, by my count.” The Mayor is usually chipper, but her mounting exhaustion with the constant struggle for survival is coming through. She shrugs: “Keep them back from the wall, I guess they’ll try to climb it with all those appendages.”</p><p>POP! POP! Against expectation, the machines fire harpoons attached to tow cables into the wall. The noise of their engines grows as they backpedal away from Frosthaven in organized unison and begin to pull the wall down. Satha shakes her head, “Damn.”</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Climb down the wall to detach the tow cables.",
+				"requirement": "[trait] NIMBLE",
+				"text": "You scurry down the battlements and pull the anchors from the wall.",
+				"rewards": {
+					"text": "-10 [attack]"
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Climb down the wall to detach the tow cables.",
+				"requirement": "[not] [trait] NIMBLE",
+				"text": "You try to rappel down the battlements to get to the tow anchors, but slip and fall. The guards have to split their focus between retrieving you and warding off the attackers.",
+				"rewards": {
+					"text": "+5 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "The cables are a distraction: focus fire on the machines themselves.",
+				"text": "You concentrate all resources on disabling the mechanical tanks. You manage to knock the legs out from one of them, but another succeeds in pulling the wall down while you’re distracted.",
+				"rewards": {
+					"text": "-2 [target]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 55,
+			"target": 6,
+			"targetPriority": "Target highest-level buildings first (players break ties).",
+			"text": "By the time you’ve disabled the last rampaging machine, the town guard is on the verge of exhaustion.",
+			"rewards": {
+				"text": "Gain 2 collective [metal]."
+			}
+		}
 	},
 	"WO-36": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -287,19 +794,142 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WO-38": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>So. Tired.</p><p>It feels like hours since the Lurker raiders broke through the harbor gate, and you’d been in the guard towers repelling them for hours before that.</p><p>The fight has been brutal and relentless. Every time you cut a Lurker down, it seems two more take its place. The screams of civilians and animals echo around you as yet another monster bears down on you.</p><p>As you throw its lifeless carapace to the ground, you see a group of guards rallying in the courtyard, steeling themselves to fight their way through to barricade the broken gates. You’ve been in enough battles to know a final desperate charge when you see one.</p><p>You’re heading over to join them when you hear a series of cries from the nearby longhouse. A group of Lurkers have just burst through the door, and the civilians hiding inside are about to become snacks.</p>",
+		"options": {
+			"A": {
+				"trigger": "Help the guards close the gate.",
+				"text": "You crash once again into the Lurker raiders by the gate, throwing everything you have into one final, desperate charge. The effort is enough, and the guards overwhelm the attackers. You help them barricade the gate, finally halting the flow of Lurkers into Frosthaven. The longhouse, though, is now silent.",
+				"rewards": {
+					"text": "-3 [target]<br/>Lose 1 prosperity and 1 morale."
+				}
+			},
+			"B": {
+				"trigger": "Save the civilians.",
+				"text": "<p>Honestly, you thought everyone in that building was already dead. You shrug to yourself and charge in just in time to stop a large green Lurker from snipping a four-year-old child in two. You clear the raiders from the longhouse and post up at the door as more pour in to Frosthaven through the open gate.</p>",
+				"rewards": {
+					"text": "+5 [attack]<br/>Gain 1 morale."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 35,
+			"target": 7,
+			"targetPriority": "Target even-numbered buildings from 30 to 100.",
+			"text": "You look around at the ruined buildings and crustacean corpses. It’s finally over. You could use a drink, if there’s any place still standing that’ll serve one.",
+			"rewards": {
+				"text": "Gain 1 morale."
+			}
+		}
 	},
 	"WO-39": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>“Algox to the east!” The call comes as the alarm bells shriek through the twilight. You rush with the rest of the guards toward the eastern wall, where a warband of several dozen Algox are already in full charge.</p><p>“Archers!” Mayor Satha barks, and a volley sails forth into the attacking force. Arrows bury themselves into the frontmost attackers, but the Algox don’t slow at all.</p><p>“Again!” Satha shouts, and another hail of arrows drives into the attackers. They continue their charge undeterred.</p><p>“This’ll stop ’em,” she mutters as she draws a pitch-sealed arrow from a quiver. “Archers, light!” Satha calls, holding her fire arrow to a torch. As the attackers draw closer, you notice that the wounded Algox are moving unnaturally—some of their heads lolled freely as they run, and others charge full-speed on legs that drag in the snow.</p><p>Arrows flare on the guard towers as the archers light their ammunition and prepare to fire.</p><p>“Care to join us?” Satha grunts, nodding toward a rack of bows.</p>",
+		"options": {
+			"A": {
+				"trigger": "You had us at “fire arrows.” Grab a bow and join the fun.",
+				"text": "<p>You light your own arrows and let loose, cheering along with the guards as the first Algox light up in flame. Those cheers turn to cries of alarm, though, when the flaming Algox don’t stop, charging right to the wall and lighting it on fire. Meanwhile, a bell sounds on the other side of town. “Machines to the west!”</p><p>As the attacking “Algox” disintegrate in the flames and their metallic puppetmasters are exposed. You marshal some guards to help respond to the real threat, but many are forced to remain behind to fight the fire.</p>",
+				"rewards": {
+					"text": "+5 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "Order the guards to douse their arrows.",
+				"text": "You shout for the archers to douse, and moments later, your gut is vindicated as an alarm bell sounds from the other side of town. “Machines to the west!” You grab as many guards as you can and rush to face the true threat. The decoy Algox—giant dolls made of polar bear hides on some kind of metal scaffold—wheel away from the wall as soon as it’s clear their distraction is no longer working.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 50,
+			"target": 6,
+			"targetPriority": "Target buildings from 20 to 60.",
+			"rewards": {
+				"text": "Gain 3 collective [hide]."
+			}
+		}
 	},
 	"WO-40": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WO-41": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>The Lurkers are marching on Frosthaven.</p><p>Line after line emerges from the waves, each putting more carapaced bodies between you and the longboat floating just at the end of the main dock.</p><p>You see shapes huddled on the vessel, trying not to be noticed. The longboat crew had been unloading barrels of extremely valuable whale oil when the Lurkers emerged. Cut off from the safety of the walls, they were forced to retreat to the boat, where they’ve been left alone so far.</p><p>More than two dozen Lurkers approach Frosthaven now, and still more are appearing from beneath the waves. The guard next to you mumbles a prayer. These numbers are overwhelming.</p><p>Then you notice the unloaded longboat’s cargo sitting on the dock: the oil in those barrels is highly unstable, and you know the archers have been drilling with fire arrows. An explosion could even the odds, but collateral damage is inevitable… destroying the dock could cut off the longboat crew’s only route to the safety of the outpost.</p>",
+		"options": {
+			"A": {
+				"trigger": "Light ’em up.",
+				"text": "You shout orders to the archers, who ignite their fire arrows and train them on the barrels. As the volley forms a burning arc through the air, you think you hear a strangled “NO!” from the ship. The explosion sends a fiery spray of wood and claws all over the harbor… and then a second, smaller explosion aboard the longboat. It seems they hadn’t finished unloading their cargo.",
+				"rewards": {
+					"text": "Lose 1 prosperity.<br/>-10 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "Nobody gets left behind. Gather a strike team to force an opening for the crew to retreat.",
+				"text": "If the people of Frosthaven don’t believe you’ll help them when they need it, nobody will risk anything to get the resources you all need to survive. You call for volunteers to take up pikes and create a path down the docks."
+			},
+			"B1": {
+				"id": "B",
+				"requirement": "MORALE > 13",
+				"text": "You get more than enough militia to force the beasts back and help the crew retreat.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			},
+			"B2": {
+				"requirement": "MORALE <= 13",
+				"text": "Some follow you through the gates, but as soon as they’re face-to-face with the Lurkers, most of them break and retreat back inside the walls, leaving only you and a few brave souls to save yourselves or be torn apart by the relentless horde.",
+				"rewards": {
+					"text": "+10 [attack]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 45,
+			"target": 4,
+			"targetPriority": "Target even-numbered buildings from 50 to 100."
+		}
 	},
 	"WO-42": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>At noon exactly, the beeping starts. It is a high-pitched, sharp note, played in unison across Frosthaven. The first few times it goes nearly unnoticed, but as the tone comes more and more frequently its source becomes the only question on everyone’s lips.</p><p>You track the noise, beep by beep, to the walls of Frosthaven. A trek outside reveals wheel tracks in the snow and hundreds of devices evenly affixed around the entire perimeter.</p><p>“Oh yeah, those are bombs, no question.” Pinter Droman, Frosthaven’s resident tinkerer, looks up at you. “Mechanical bombs. Judging by the clockwork in this one, I’d say we’ve got an hour before they all go pop, maybe two tops. Whoo-wee, would not want to be the guy who has to rebuild after these go off!”</p><p>Hundreds of ticking bombs. One hour to stop the wall from being blown in. But they’re probably not going to stop at the walls...</p>",
+		"options": {
+			"A": {
+				"trigger": "Help the town guard remove the bombs before they explode.",
+				"text": "After a crash course from Pinter, you rush outside to assist in disarming bomb after bomb with the help of the town guard. The soldiers are barely able to make it back onto the battlements before the real invasion begins.",
+				"rewards": {
+					"text": "Gain disadvantage on all targets."
+				}
+			},
+			"A1": {
+				"id": "A",
+				"requirement": "[trait] NIMBLE or QUATRYL",
+				"text": "You’re able to defuse half of the bombs before the guards are through the explanation.",
+				"rewards": {
+					"text": "-3 [target]"
+				}
+			},
+			"B": {
+				"trigger": "The wall is as good as lost, prepare for the subsequent invasion.",
+				"text": "You know a lost cause when you see it, and you prepare the town guard for the attack. The beeping reaches a crescendo, and in synchronized detonations, the wall crumbles to dust in front of your eyes. The machines swarm, but you’re ready for them.",
+				"rewards": {
+					"text": "Do not count defense gained from the Wall for the threat."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 35,
+			"target": 7,
+			"targetPriority": "Target buildings closest to the Wall (players decide ties).",
+			"text": "You bash in the motor of the last machine, finally stopping the advance. Frosthaven looks like a scrap yard, but at least it’s safe for now.",
+			"rewards": {
+				"text": "Gain 3 collective [metal]."
+			}
+		}
 	},
 	"WO-43": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -320,9 +950,60 @@
 	"WO-49": {},
 	"WO-50": {},
 	"WO-51": {},
-	"WO-52": {},
+	"WO-52": {
+		"text": "<p>The guard’s head rolling down the street—still in its helmet—leaves a lasting impression. Unfettered leap over the wall, sharpened arms spinning in a furious blitz. The guards step up as they always have before, but it’s clear they’re shaken. The Unfettered aren’t here to knock down buildings or set fire to the wall... they’re here to exterminate the populace.</p><p>“THIS ZONE BELONGS TO THE UNFETTERED. LEAVE OR DIE.”</p>",
+		"options": {
+			"A": {
+				"trigger": "Leave your home.",
+				"text": "<p>You recognize the overwhelming force invading Frosthaven and make the impossible choice to protect life over possessions. Mayor Satha gathers the populace in the center of town and the robots march everyone out single-file under their watchful gaze. The outposters take refuge beyond the tree line while the mechanical horrors ravage the empty city.</p><p>After a couple days, the robots finally move on. You settle back in to the outpost and hope whatever has angered them to this extent is resolved soon.</p>",
+				"rewards": {
+					"text": "For the below threat, wreck all buildings for which you draw a negative modifier."
+				}
+			},
+			"B": {
+				"trigger": "Defend your home.",
+				"text": "<p>You step up to confront the Unfettered, but they’re ready for a fight. Despite knocking several down, the blades flash through another town guard’s head, leaving the others wide-eyed in fear.</p><p>The fight is swift and horrible—spinning, flaming blades obliterate the town’s defenses. It’s only when they choose to leave of their own accord that the outposters come out of hiding to pick up the pieces.</p>",
+				"rewards": {
+					"text": "Permanently remove one +10 card from the town guard deck.<br/>Lose 3 morale."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 60,
+			"target": "all"
+		}
+	},
 	"WO-53": {},
-	"WO-54": {},
+	"WO-54": {
+		"text": "<p>Something is very wrong. Returning from an errand outside the outpost, you find the gates wide open and guards shuffling aimlessly through the streets. One breaks off from the others and begins screaming in agony as he claws at his face.</p><p>Then you spot them: a dozen Lurkers, fury in their eyes, going door to door. You can feel their minds pushing into yours.</p><p>Images flash painfully through your mind: shards, a crown. Then the entirety of your being is overcome with emotion: desperation, desire, a NEED. It burns at the inside of your skull. You want to fight it, but it’s overwhelming. It crunches your existence into a marble embedded at the back of your head. You need to think about something—anything else.</p>",
+		"options": {
+			"A": {
+				"trigger": "Charge the Lurkers before you fully lose control.",
+				"text": "You draw your weapons and charge the Lurkers, but their focus is too much to sustain. They are so very angry.",
+				"rewards": {
+					"text": "+5 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "Light the nearest building aflame to give yourself something to concentrate on.",
+				"text": "You grab a flint and steel from your pack and within a few agonizing seconds you get the building aflame. It’s not much, but focusing on the fire to push out the thoughts may be enough.",
+				"rewards": {
+					"text": "-10 [attack]<br/>Wreck any building."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 60,
+			"target": 8,
+			"targetPriority": "Target any building, then for each subsequent target, choose the building closest to the previous target (players break ties).",
+			"text": "You wake up some hours later in the middle of the street. Each time you close your eyes, you can see the image of a shattered crown on the inside of your eyelids. If you don’t find a reason to prevent the Lurkers’ hunt soon, it will mean the death of Frosthaven.",
+			"rewards": {
+				"text": "Lose 1 prosperity."
+			}
+		}
+	},
 	"WO-55": {},
 	"WO-56": {},
 	"WO-57": {},
@@ -383,6 +1064,33 @@
 		}
 	},
 	"WO-81": {
-		"unlockedBy": { "scenario": { "id": "014" }}
+		"unlockedBy": { "scenario": { "id": "014" }},
+		"text": "<p>Returning to town from a scouting mission, you notice the guard towers are empty. You make a mental note to check the schedule and report the deserters to Captain Olmstead, but as you approach the gate, you discover the guards are missing from their posts, too.</p><p>Before you can sound the alarm, you hear the screams. It doesn’t take long to figure out what’s going on—a trio of Lurkers skitter down the street, swiping at anything in range. They must have breached the defenses while you were gone!</p><p>The Lurkers turn their attention to you, twitching and jerking in odd fits. Their eyes look hollow and their movements frenetic. Before you can take action they scamper off. It doesn’t seem like they were running away from you—they’re searching for something.</p><p>Oh no, surely they’re not looking for the shards you found...</p>",
+		"options": {
+			"A": {
+				"trigger": "Focus on defense and protect the building housing the shards.",
+				"text": "You rush to where you’ve been storing the precious shard fragments. You order the guards to barricade the door and set up a defensive perimeter. Now that you’re ready, you wait in apprehension for the Lurkers to approach.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "Go on the offensive and take down the Lurkers.",
+				"text": "If they find the shards, it will be impossible to stop them. You rally the town guard to regroup and launch a counter-attack. The Lurkers aren’t used to navigating the winding streets of Frosthaven, and you’re able to ambush small groups of them to diminish their numbers.",
+				"rewards": {
+					"text": "-1 [target]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 40,
+			"target": "X",
+			"targetPriority": "Where X is the number of coral shards you have.<br/>Target buildings from 1 to 100 in descending order. Target the same building repeatedly until the building is damaged or wrecked.<br/>Wreck all damaged buildings.",
+			"text": "Lurker carapaces are piled high in the streets—hopefully they’ll think twice before mounting an attack of that scale again.",
+			"rewards": {
+				"text": "Gain 4 collective [hide] and 2 morale."
+			}
+		}
 	}
 }

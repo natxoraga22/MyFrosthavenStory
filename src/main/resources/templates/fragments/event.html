@@ -25,7 +25,9 @@
 		</th:block>
 
 		<!-- Text -->
-		<div class="text">[(*{text})]</div>
+		<div class="text">
+			[(*{text})]
+		</div>
 
 		<!-- Options -->
 		<div th:if="*{!#lists.isEmpty(chosenOptions)}" class="options">
@@ -75,7 +77,7 @@
 	<!-- -------------- -->
 	<div th:fragment="outpostAttack(outpostAttack)" th:object="${outpostAttack}" class="outpostAttack">
 		<!-- Attack -->
-		<div bs:flex bs:flexAlign="center">
+		<bs:flex align="center">
 			<div class="attack">
 				<img class="icon" th:src="@{__${imgUrl}__/icons/attack.png}">
 				[[*{attack}]]
@@ -85,17 +87,17 @@
 				[[*{target}]]
 			</div>
 			<div class="targetPriority">
-				[[*{targetPriority}]]
+				[(*{targetPriority})]
 			</div>
-		</div>
+		</bs:flex>
 		
 		<!-- Text -->
 		<div class="text">
-			[[*{text}]]
+			[(*{text})]
 		</div>
 
 		<!-- Rewards -->
-		<div class="rewards">
+		<div th:if="*{rewards}" class="rewards">
 			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
 		</div>
 	</div>

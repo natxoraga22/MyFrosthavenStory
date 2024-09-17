@@ -26,6 +26,9 @@
 		"text": "<p>“I really enjoyed the, uh, the ending, Miss Eddica. A great twist!” A fresh-faced soldier is finishing up a conversation with the Valrath librarian as you enter. Eddica gives a smile from behind her desk as she checks in the book. Two more dockworkers wait in line for recommendations on additional literature from the young librarian—they’re nearly tripping over themselves for a chance to talk to her. She spots you and politely shoos them out the door, finally settling to a seat on the edge of her desk.</p><p>“I expected running a library to be more like Master Scrim’s… he had so much more uninterrupted time than I seem to have. In any case... do you have what I hope you have?” She purses her lips in anticipation, and when you pull the citrine-studded hide tome you found from your satchel she rushes over to snatch it from your hands, looking over it with wide eyes. “The Tome of the Elements! It’s true!”</p><p>She pushes up her red-rimmed glasses and collects herself. “Now, this is supposed to be the most volatile of the tomes. Let’s see if I can deactivate it...” She traces a sigil in arcane white light on the cover before bracing herself and gingerly cracking it open. No sparks, no explosions.</p><p>“There we go!” The pages splay out and Eddica hums a happy tune as she looks through the tome, punctuated with little “a-ha”s and lots of nodding. After a moment she sets the book down, looking up at you with a wide smile. “They’re actually in here! And I have heard very few accounts of these spells being painful.” She lays out the materials on the desk beside her.</p><p>“So, which will it be?”</p>",
 		"sectionLinks": "<p>If you offer to test the fire spell, read [section_104.3] now.</p><p>If you offer to test the cold spell, read [section_163.1] now.</p>"
 	},
+	"47.1": {
+		"unlockedBy": { "event": { "id": "WO-07" }}
+	},
 	"62.2": {
 		"title": "Bathysphere Plans",
 		"unlockedBy": { "scenario": { "id": "022" }},

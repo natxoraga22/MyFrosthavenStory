@@ -46,6 +46,7 @@ public class PlayedEvent /*extends StoryObject*/ {
 
 	public boolean isSkipAttack() {
 		if (outpostAttack == null) return true;
+		if (chosenOptions == null) return false;
 		for (RawEvent.Option chosenOption : chosenOptions) {
 			if (chosenOption != null && chosenOption.isSkipAttack()) return true;
 		}

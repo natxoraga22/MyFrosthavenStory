@@ -557,9 +557,48 @@
 			"target": 5,
 			"targetPriority": "Target buildings randomly by drawing from the building deck."
 		}
-	},	
+	},
 	"WO-25": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>“Another Algox raid on its way,” Satha waves a weary hand to dismiss the scout. “At least this time we have warning.” She turns to the assembled guard lieutenants with a sigh. “Well, what’s the plan?”</p><p>“Ms. Mayor,” a Valrath lieutenant gestures toward your group. “Our friends could lead a detachment through the forest and ambush the attackers from behind once they charge the wall. The Algox will be trapped!”</p><p>“That’s too risky,” an older guard grumbles. “The way to keep your head on your shoulders is fighting from inside the walls. Instead of sending guards on a suicide mission, let me put ‘em to work preparing some traps for our attackers.”</p><p>Satha considers for a moment, then nods. “Both are good plans.” She turns to you. “We’ll leave it up to you, mercenaries. What’s your pleasure?”</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Let’s take the risk. Bring some guards and prepare an ambush.",
+				"requirement": "[trait] CHAOTIC",
+				"text": "Hiding behind walls never got you anywhere. You lean into the disorder of the situation, painting yourself in camouflage and moving erratically. The Algox don’t even see what hits them.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				},
+				"skipAttack": true
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Let’s take the risk. Bring some guards and prepare an ambush.",
+				"requirement": "[not] [trait] CHAOTIC",
+				"text": "The Algox show up just as the scout predicted, but they sense your approach and turn to engage before they’re caught out of position.",
+				"rewards": {
+					"text": "Gain disadvantage on all targets."
+				}
+			},
+			"B": {
+				"trigger": "You didn’t build these walls so you could fight outside them. Lend a hand crafting traps.",
+				"text": "You join the rest of the guards camouflaging trenches and sharpening spikes. When the Algox finally arrive, they quickly learn the price of charging in blindly.",
+				"rewards": {
+					"text": "Gain advantage on all targets."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Algox",
+			"attack": 40,
+			"target": 4,
+			"targetPriority": "Target odd-numbered buildings in ascending order.",
+			"text": "The elder lieutenant spits as he regards the fallen. “Rule one: never leave the walls,” he says somberly. “Rule two: honor the dead. Get to it.”",
+			"rewards": {
+				"text": "Gain 2 morale."
+			}
+		}
 	},
 	"WO-26": {
 		"unlockedBy": { "section": { "id": "129.3" }},
@@ -650,10 +689,44 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WO-29": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You’re admiring some new construction going up in town when you feel a nagging thought at the back of your mind. Your companions, the ones who’ve fought by your side for countless hours? <strong>They’re preparing to betray you.</strong></p><p>No... no… it’s worse than that. They already have betrayed you, conspiring to take everything you hold dear and twist it to their own ends. Monsters! What’s this? It’s unthinkable, but they are in fact... <strong>Lurkers in disguise?</strong> That... that doesn’t seem right. <strong>Polar bears in disguise?</strong> Hold on a second.</p><p>You shake off the sentiment and see two Vermling children giggling in a nearby alley. They dart off as you notice them.</p>",
+		"options": {
+			"A": {
+				"trigger": "Confront them about personal boundaries.",
+				"text": "You catch up to the children and berate them for screwing with your head. They look genuinely sorry and the admonishment looks to have the intended effect. When you see them a few days later they avert their gaze and shuffle off to find a new place to play, but you can’t help feel like you’re forgetting something.",
+				"rewards": {
+					"text": "Lose 3 experience each."
+				}
+			},
+			"B": {
+				"trigger": "Put them to work on a project of your own.",
+				"text": "<p>You bring the Vermling children to The Crater, the burned-out drinking post where Frosthaven’s bar used to be. You never got to experience the original bar before it was destroyed in an attack, but The Crater certainly fills the hole in the town’s heart.</p><p>According to plan, the Vermling children help nudge your fellow patrons into showing their appreciation for your bravery around town with a bit of coin. It’s probably not the best lesson to teach them, but it sure feels good getting the recognition you deserve!</p>",
+				"rewards": {
+					"text": "Gain 10 collective gold."
+				}
+			}
+		}
 	},
 	"WO-30": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>A cook stumbles out of the barracks, looking around frantically. He spots you across the street and lumbers over.</p><p>“Rats got into the larder!” Several passers-by look concerned. He lowers his voice, then repeats, “I forgot to lock the storeroom, and rats got into the larder again. Help a chef out, or I’m gonna get eaten alive by those guards. You folks always have some extras, spare some so I can complete dinner? I can pay.”</p><p>He wipes sweat from his brow, waiting for your answer.</p>",
+		"options": {
+			"A": {
+				"trigger": "Sell the cook some food.",
+				"text": "“Oh, thank you. I appreciate this so much. The captain’s been all over me to keep better track of that storeroom... I guess it’s not the first time.”",
+				"rewards": {
+					"text": "Take one of each herb in the loot deck and shuffle them into a pile. Draw three: these are the herbs the chef desperately needs. He’ll buy as many of each type as you choose to sell him. For each herb you sell, gain 5 collective gold."
+				}
+			},
+			"B": {
+				"trigger": "Give the cook food from your supply at no charge.",
+				"text": "“You serious? Just... for free?” A grin spreads across his face from ear to ear. “Captain’s been all over me to keep better track of the storeroom... This’ll be the last time I screw up, I promise.”",
+				"rewards": {
+					"text": "Take one of each herb in the loot deck and shuffle them into a pile. Draw three: these are the herbs the chef desperately needs. He’ll take as many of each type as you choose to give him. For each herb you provide, gain 1 morale."
+				}
+			}
+		}
 	},
 	"WO-31": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -1019,7 +1092,24 @@
 		"unlockedBy": { "event": { "id": "SO-09" }}
 	},
 	"WO-63": {
-		"unlockedBy": { "scenario": { "id": "059" }}
+		"unlockedBy": { "scenario": { "id": "059" }},
+		"text": "<p>You enter Satha’s cabin and are surprised to see the expressionless metal mask of the Orphan greet you.</p><p>“Hello,” the Orphan says. “I was just explaining to Mayor Satha the collective inefficiencies of Frosthaven’s organic workers and merchants and soldiers and leaders.”</p><p>Satha is doing her best to keep her patience, but the effort is exhausting. “Our new friend has a lot of feedback,” she grimaces. “This has been... a long conversation.”</p><p>“Yes,” the Orphan agrees, “I have had to speak much more slowly than I anticipated. But the Unfettered are here to help, and I have prepared an exhaustive list of potential improvements over your current mismanagement...”</p><p>“NO MORE!” Satha blurts, jumping out of her seat. “I mean, um, I think our friends here can help direct your efforts. I need to... uh...” She hurries out of the cabin, leaving you with the overly helpful automaton.</p><p>“What would you have us do?” the Orphan asks, unfazed.</p>",
+		"options": {
+			"A": {
+				"trigger": "Ask the Unfettered for help collecting resources.",
+				"text": "<p>The Orphan nods sagely. “Organic workers must sleep,” it says. “This is a key weakness. The need for food and light and respiration are also key weaknesses.”</p><p>That evening, a swarm of Unfettered line up to relieve the workers wrapping up the day’s shift.</p>",
+				"rewards": {
+					"text": "Select one building from 1 to 20. That building’s effect occurs twice during the building operations step of this Outpost Phase."
+				}
+			},
+			"B": {
+				"trigger": "Ask the Unfettered for help repairing the town.",
+				"text": "<p>At the Orphan’s request, Unfettered swarm over the wreckage from the most recent attack, rebuilding the outpost with incredible speed. Strangely, as they reassemble the buildings they also create a stack of what look like raw materials in the center of town.</p><p>“REPAIRS COMPLETE. STRUCTURAL INEFFICIENCIES REMOVED,” an Unfettered confirms in a mechanical voice. “WHERE WOULD YOU LIKE THE REDUNDANT MATERIALS RELOCATED?”</p>",
+				"rewards": {
+					"text": "<p>Immediately repair all wrecked buildings for no cost. For each building repaired this way, gain 1 material resource of any type.</p><p>If no buildings were wrecked, gain 1 prosperity.</p>"
+				}
+			}
+		}
 	},
 	"WO-64": {},
 	"WO-65": {},

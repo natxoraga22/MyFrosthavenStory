@@ -30,7 +30,25 @@
 		}
 	},
 	"WR-02": {},
-	"WR-03": {},
+	"WR-03": {
+		"text": "<p>Walking along, you see a green burlap sack sticking out of the ice. You pry it free and unwrap the contents: a tattered letter and a smaller pouch. The letter reads:</p><p>“Dear Traveler,</p><p>I fear that if you are reading this, my hiding place has been discovered. The enclosed item—an otherwise unremarkable stone—is accursed. Do not touch it, do not carry it with you, and I daresay your life would be much improved were you to return it to its satchel and bury it again for some future unfortunate explorer to suffer its curse. I repeat: heed my warning, leave this item be! It is not a treasure, but a horror I cannot convey in the few words I have here. Step past and do not return!”</p><p>You peek into the smaller pouch: sure enough, it looks like a rock.</p>",
+		"options": {
+			"A": {
+				"trigger": "Take the rock.",
+				"text": "<p>Despite the clear warning, you uncinch the sack and pour the rock into your hand. For something buried in the ice it feels strangely warm to the touch. You roll it over in your hand and feel its heat curl up your body... it feels familiar somehow.</p><p>A wave of concern passes over you, which turns into a dark dread. This was not something you should have disturbed. You put it back in the satchel and push it down into the snow. You walk off and leave it behind, but further down the road you reach into your pocket to feel a hard lump. Seems like it won’t be lost so easily.</p>",
+				"rewards": {
+					"text": "Gain “Cursed Rock” [item_243]."
+				}
+			},
+			"B": {
+				"trigger": "Leave the rock.",
+				"text": "<p>This is either the world’s greatest threat or the world’s greatest treasure someone is trying to protect. If it was treasure, they wouldn’t have left it buried in the snow.</p><p>You push it back in the snow as deeply as the ice will allow and move on.</p>",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"WR-04": {},
 	"WR-05": {},
 	"WR-06": {
@@ -114,7 +132,18 @@
 	"WR-14": {},
 	"WR-15": {},
 	"WR-16": {},
-	"WR-17": {},
+	"WR-17": {
+		"text": "<p>A gnarled Orchid stands in the middle of the road, watching you approach. A ratty cloak barely covers her shoulders, but she doesn’t seem to mind the cold air. She beckons you closer, then quietly recites something under her breath.</p><p>“May your words never falter,<br/>When you face the crystal altar,<br/>They will not agree…”</p><p>She pauses before finishing, staring you down with deep blue eyes and urging you to step within whispering distance.</p>",
+		"options": {
+			"A": {
+				"trigger": "Choose one player now to hear the secret. Hand the card to them to read the conclusion.",
+				"text": "<p>The Orchid leans in close and whispers something only you can hear.</p><p><strong>STOP READING THIS CARD ALOUD. THE CONCLUSION IS FOR YOU AND YOU ALONE.</strong></p><p>“—but speak Option Sea.” She nods, then continues on her way.</p><p>As though in some kind of trance, you cannot reveal the information to your companions. They ask what you learned, you simply respond, “Nothing important.”</p>",
+				"rewards": {
+					"text": "<p>You may only reveal the contents of this card when the time comes and you are faced with the crystal altar.</p><p>Add event WR-34 to the winter road deck.</p>"
+				}
+			}
+		}
+	},
 	"WR-18": {
 		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle... and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs...\" Hurdle pauses, scrunching up his nose. \"On second thought, don't dig up eggs.\"</p>",
 		"options": {
@@ -233,12 +262,40 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WR-30": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>The sun is disappearing behind the mountains for the evening. You set your pack down on a rock embedded in the snow and start setting up camp.</p><p>CRACK! The weight of your pack was just enough to break the rock free of the snow and ice, creating a small avalanche and sending your supplies tumbling off a cliff.</p><p>Winter days are brutally cold, but without a source of warmth, winter nights are deadly. You're unprepared in unfamiliar territory, sunlight is dwindling, and you can already feel your fingertips going numb. If you don't find a way to warm up or find a way through this darkness, you're going to have a rough night.</p>",
+		"options": {
+			"A1": {
+				"trigger": "Search the remains of what you brought with you for a way to generate heat and light.",
+				"requirement": "[trait] RESOURCEFUL",
+				"text": "You are able to stretch the meager supplies and keep everyone warm through the night.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"A2": {
+				"trigger": "Search the remains of what you brought with you for a way to generate heat and light.",
+				"requirement": "[not] [trait] RESOURCEFUL",
+				"text": "You have to make some hard decisions, but it's this or freeze.",
+				"rewards": {
+					"text": "All characters start the next scenario either discarding one card with [fire] or [light] or suffer [damage] 3.<br/>Also infuse [ice] at the start of the next scenario."
+				}
+			},
+			"B": {
+				"trigger": "Give up and hike back to Frosthaven.",
+				"text": "You'll never make it through the night. The only way to keep warm is to keep moving, and without your supplies there's nothing you can do but turn back.",
+				"rewards": {
+					"text": "All characters start the next scenario discarding two cards.<br/>Resolve another winter road event."
+				}
+			}
+		}
 	},
 	"WR-31": {},
 	"WR-32": {},
 	"WR-33": {},
-	"WR-34": {},
+	"WR-34": {
+		"unlockedBy": { "event": { "id": "WR-17" }}
+	},
 	"WR-35": {},
 	"WR-36": {},
 	"WR-37": {
@@ -259,7 +316,24 @@
 		"unlockedBy": { "event": { "id": "SO-59" }}
 	},
 	"WR-44": {
-		"unlockedBy": { "section": { "id": "193.1" }}
+		"unlockedBy": { "section": { "id": "193.1" }},
+		"text": "<p>“Good to meet you. I’m Hail. Unless we’ve met before, in which case... uh, well, I’m still Hail.” A translucent Aesther is blocking the road in front of you. “You’re mercenaries, right? This sheer, icy cliff leads to the Crimson Plant Grove. I want you to climb up there and bring back a red one of that one plant. You know?” You do not know, but she’s willing to draw you a picture.</p><p>After a few hours of climbing, you uncrumple the drawing of the plant you’re looking for and... well, it leaves a lot to be desired.</p><p>It looks like there’s red axenuts and red corpsescaps here. She was very insistent that the Crimson Plant Grove is precious and you shouldn’t take more than one. Which do you bring back to Hail?</p>",
+		"options": {
+			"A": {
+				"trigger": "The red axenut.",
+				"text": "<p>“Perfect, thank y—wait, is that an axenut? I specifically said I wanted a red corpsescap.” Hail looks at you with intense scorn and sighs longer and louder than you think is necessary. You try to explain that she drew an axenut.</p><p>“The audacity...” she mutters, examining her drawing, which suddenly appears in her hand. “You were holding it upside down. Oh, look, just forget the whole thing.” She pops open a small portal to the top of the cliff and reaches through to pluck the red corpsescap. “I’ll just do it myself.”</p>",
+				"rewards": {
+					"text": "All characters start the next scenario discarding one card."
+				}
+			},
+			"B": {
+				"trigger": "The red corpsescap.",
+				"text": "<p>“Perfect,” she says as the red corpsescap you were holding suddenly appears in her hand. She gives it a big sniff. “Yes, this should do nicely...” She breaks off a small chunk and hands it to you. “Chew on that.”</p><p>It has a spongy, icy texture that melts to a distinct aftertaste of ash. “Don’t say I never gave you anything.” With that, she splits a portal open in the air and steps through to an alley in front of a decrepit tavern in a city that looks nice and warm. It snaps shut behind her.</p>",
+				"rewards": {
+					"text": "All characters start the next scenario with [warden] and [strengthen]."
+				}
+			}
+		}
 	},
 	"WR-45": {
 		"unlockedBy": [{ "section": { "id": "143.2" }}, { "section": { "id": "164.2" }}]

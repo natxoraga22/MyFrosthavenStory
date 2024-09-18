@@ -268,7 +268,25 @@
 			}
 		}
 	},
-	"WO-11": {},
+	"WO-11": {
+		"text": "Walking down the main street in Frosthaven, you see a burlap sack full of radishes slumped near the center of the road. You nudge the bag with your boot and find they’re hard as ice. Looks like they’ve been here for some time.",
+		"options": {
+			"A": {
+				"trigger": "Leave the radishes, someone will come for them eventually.",
+				"text": "You poke through the radishes and see the weather has kept them nice and cold. Still good, someone will probably come back for them.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B": {
+				"trigger": "Take the radishes. It’s been long enough.",
+				"text": "You pick up the sack of radishes and clandestinely try to find a buyer for them. No one around town is interested, though, and you’re not willing to keep hauling this bag around. You dump the bag back where you found it. Perhaps someone else will have better luck.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"WO-12": {},
 	"WO-13": {
 		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it's a whole cavern. A miner said it's been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don't have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
@@ -339,7 +357,27 @@
 			}
 		}
 	},
-	"WO-16": {},
+	"WO-16": {
+		"text": "<p>The side gate to town has been left unlatched, and the rigorous procedures around it leave only one conclusion: there’s a traitor in your midst. Captain Olmstead has narrowed it down to four guardsmen who were on shift last night. He asks you to interrogate each of them in turn.</p><p>The Orchid says, “The Savvas and the human are innocent.”<br/>The Valrath says, “It wasn’t the Savvas or the Orchid.”<br/>The Savvas says, “The Orchid is to blame.”<br/>The Human says, “It was either the Savvas or the Valrath.”</p><p>You’re pondering who did it when a glowing portal opens and out steps an Aesther in an unusual hat. He smiles, his translucent skin a swirl of star-stuff. “Quite the conundrum. I should note that just one of them is lying.” Before you have a chance to inquire further, he’s gone.</p><p>Who unlocked the gate?</p>",
+		"options": {
+			"A": {
+				"trigger": "Determine who unlocked the gate and say it aloud now, then flip over the card.",
+				"requirement": "IF YOU SAID “VALRATH”",
+				"text": "<p>He hangs his head. “I can’t live another day in this place! I got some Algox to agree that if I let them in, they’d destroy the town, and without something left to guard I could return home to White Oak. This isn’t a life!”</p><p>You learn afterwards that he paid the Savvas a month’s wages to cover for him. The Valrath will get his wish: both he and the Savvas are sent back to White Oak for punishment as soon as the pass opens back up.</p><p>Curious that the helpful Aesther showed up at just the right time. You wonder if you’ll see him again...</p>",
+				"rewards": {
+					"text": "Gain 2 morale.<br/>Gain 10 experience each."
+				}
+			},
+			"B": {
+				"trigger": "Determine who unlocked the gate and say it aloud now, then flip over the card.",
+				"requirement": "IF YOU SAID “ORCHID” OR “SAVVAS” OR “HUMAN”",
+				"text": "<p>You point to someone and they’re clasped in irons. “It wasn’t me!” they shout. After a bit more thought, you realize that if the Savvas is lying, everyone else’s stories match up, leaving the Valrath as the culprit.</p><p>Before you have a chance to correct your mistake, the Valrath breaks down under the weight of his guilt. “Fine! I confess! I don’t care if you send me to the Ghost Fortress, it’s still better than Frosthaven!”</p><p>The guards take him away and make sure the lying Savvas is demoted to kitchen duty for the foreseeable future.</p>You wonder where that Aesther with the odd hat went off to...",
+				"rewards": {
+					"text": "Lose 1 morale."
+				}
+			}
+		}
+	},
 	"WO-17": {
 		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won't board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it's up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain's log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship's entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
 		"options": {
@@ -1122,7 +1160,25 @@
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},
 	"WO-72": {},
-	"WO-73": {},
+	"WO-73": {
+		"text": "<p>Mayor Satha approaches you flanked by two balding priests in simple robes. “The temple won’t stop pestering me about some Volunteer Day,” the mayor says. “Frankly, I’ve got more important things to do. Find something useful they can volunteer for, won’t you?”</p><p>One of the clergy speaks up. “Winter brings such hardships on the people of Frosthaven. To improve their spirits, the Temple of the Great Oak has rallied many eager participants for a productive day of volunteering! How best can we be of service?”</p>",
+		"options": {
+			"A": {
+				"trigger": "With a group this size, you could gather a lot of lumber for future projects.",
+				"text": "There’s a break in the snowfall and the volunteers prove to be hardy workers. Alongside the logging team, the strongest volunteers make short work of the marked trees, while the others transport the fresh wood into town. By the end of the day the people are grim-faced and exhausted, but the city’s lumber supply is larger than it’s been in ages.",
+				"rewards": {
+					"text": "Gain 5 collective [lumber]."
+				}
+			},
+			"B": {
+				"trigger": "The weather is ideal for a successful hunt. You could pull together a modest feast to bring a bit of joy in these dark times.",
+				"text": "Under your guidance, the volunteers split into teams for foraging, hunting, and cooking. The day is long, but the anticipation of the upcoming feast keeps everyone motivated. As night falls, the smell of crackling meat fills the air. The people of Frosthaven gather to enjoy a rare and much-needed celebration with plenty of food and music. For a brief moment, the dreary chill of winter is all but forgotten.",
+				"rewards": {
+					"text": "Gain 1 prosperity."
+				}
+			}
+		}
+	},
 	"WO-74": {},
 	"WO-75": {
 		"unlockedBy": { "event": { "id": "SO-59" }}

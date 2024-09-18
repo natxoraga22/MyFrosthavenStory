@@ -50,7 +50,47 @@
 		}
 	},
 	"WR-04": {},
-	"WR-05": {},
+	"WR-05": {
+		"text": "<p>You approach the edge of a great chasm not far from Frosthaven’s gates. A rickety wooden bridge, wide enough for just a single person to cross at a time, spans from one end to the other. The alternative to the treacherous bridge is a swift-looking river fed by glacial runoff down below—it looks dire at best.</p><p>Before you have a chance to decide, a hulking Algox wearing a polar-bear-fur vest steps up to block your path. He speaks in a halting staccato. “You pay use bridge. My bridge.”</p><p>The Algox doesn’t wait for a response before explaining further. “Legitimate business bridge. You each pay or use death-path.” He points to the trail leading down to the river you’d have to ford to get across. The Algox crosses his arms and waits for an answer.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Pay to use the legitimate business bridge.",
+				"requirement": "LOSE 1 MATERIAL RESOURCE EACH",
+				"text": "The hulking Algox steps aside and waves you through. “No run, go slow. Enjoy bridge.” You’re not sure if going slow is recommended for safety or overall enjoyment, but the bridge does hold your party’s weight the whole way across.",
+				"rewards": {
+					"text": "Mark one box below. When all boxes are marked, remove this card from the deck and add event WR-35 to the winter road deck.<br/><i class=\"fa-regular fa-square\"></i><i class=\"fa-regular fa-square\"></i>"
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Pay to use the legitimate business bridge.",
+				"requirement": "[not] LOSE 1 MATERIAL RESOURCE EACH",
+				"text": "The Algox refuses to let you through, and you’re forced to cross the river.",
+				"rewards": {
+					"text": "Read outcome B."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Ford the river.",
+				"requirement": "[trait] CHAOTIC or RESOURCEFUL",
+				"text": "The river looks dire, but it’s a manageable problem. You see the patterns in the chaotic water and strategically toss in some larger stones and branches to create a makeshift path and get across with only a few unexpected dips into the stream.",
+				"rewards": {
+					"text": "All characters start the next scenario discarding one card."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Ford the river.",
+				"requirement": "[not] [trait] CHAOTIC or RESOURCEFUL",
+				"text": "You try to wade through the icy river, but it’s impossibly cold. The swift current takes your balance out from under you, and by the time you’ve made it to the other side, all warmth has left your body, and the contents of your pack are scattered.",
+				"rewards": {
+					"text": "All characters start the next scenario with [brittle], [damage] 3 and [loseCard] one [equipmentItem]."
+				}
+			}
+		}
+	},
 	"WR-06": {
 		"text": "<p>A translucent Aesther wearing hunter's garb is studying some tracks on the path, and turns to catch your attention as you approach. \"You there! A moment of your time!\" He flags you down. \"I've been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?\"</p><p>When you don't immediately respond, he thumbs a wicked-looking blade and continues: \"You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.\" The Aesther's eyes flash a dark longing.</p>",
 		"options": {
@@ -250,7 +290,37 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"WR-26": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You've been hiking for a long time. In fact, you should have reached your destination long ago, but still the path stretches on ahead.</p><p>Now that you think of it, you're certain you've seen that copse of trees before.</p><p>After another hour of telling yourselves that the destination must be around the next bend, you're forced to admit it: you're lost.</p><p>You pause to weigh your options. It might be better to stop and orient yourselves once the stars come out... but your supplies are already dwindling from the overlong journey, and waiting for nightfall would take up valuable time you don't have.</p>",
+		"options": {
+			"A": {
+				"trigger": "Press on—it’s got to be around here somewhere.",
+				"text": "You don’t have time or supplies to waste. You set forth with renewed vigor and are eventually rewarded: you emerge from the underbrush at the top of a hill to behold a magnificent view of the surrounding wilderness. Not only does it set you on the right path, it fills you with a sense of wonder.",
+				"rewards": {
+					"text": "Gain 1 inspiration.<br/>All characters start the next scenario discarding one card."
+				}
+			},
+			"B": {
+				"trigger": "Camp until night and try to navigate by the stars.",
+				"text": "<p>You wait until nightfall—it’s not a long wait this time of year. You peer through the rippling aurora as the stars emerge, trying to make sense of where you are.</p>"
+			},
+			"B1": {
+				"id": "B",
+				"requirement": "[trait] CHAOTIC",
+				"text": "Yes, the darkness of night is definitely more your thing. You embrace the uncertainty of the situation and follow your gut. It doesn’t lead you astray.",
+				"rewards": {
+					"text": "Gain 1 inspiration"
+				}
+			},
+			"B2": {
+				"id": "B",
+				"requirement": "[not] [trait] CHAOTIC",
+				"text": "You think you’ve got it figured out… until you realize the constellation you thought you were following isn’t even in the sky this time of year. Hopes dashed, you make camp and try again in the morning.",
+				"rewards": {
+					"text": "All characters start the next scenario with [damage] 2.<br/>Read outcome A."
+				}
+			}
+		}
 	},
 	"WR-27": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -296,7 +366,9 @@
 	"WR-34": {
 		"unlockedBy": { "event": { "id": "WR-17" }}
 	},
-	"WR-35": {},
+	"WR-35": {
+		"unlockedBy": { "event": { "id": "WR-05" }}
+	},
 	"WR-36": {},
 	"WR-37": {
 		"unlockedBy": { "event": { "id": "SR-15" }}

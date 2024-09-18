@@ -349,13 +349,78 @@
 		}
 	},
 	"SO-23": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>Some workers have dragged a chunk of strange machinery from a site outside Frosthaven back to the workshop. A few blacksmiths are prodding it and commenting on the craftsmanship.</p><p>“Look here: no tool lines. Really remarkable stuff. Flat plating, gentle curves where needed, the whole thing’s just a sight, really. Could learn a thing or two. From what we can tell, it was used as a smelter, so we’re gonna open it up and see what makes this thing tick.” With that, he pries open a panel with a crowbar, exposing the interior mechanics.</p><p>Before he has a chance to take a look inside, the machine emits a low whirr: “RAW ORGANIC MATERIAL MUST BE PROCESSED. PREPARE FOR SMELTING.” The temperature gauges on the machine flip aggressively back and forth as it rattles and heats up. It’s been a long time since this machine was last operational, and it looks to be on the verge of exploding. The onlookers rightly take the increasing noise as their cue to run.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Try to shut the machine down to preserve the research opportunity.",
+				"requirement": "[trait] EDUCATED",
+				"text": "You work quickly, probing the clockwork mechanics to find just the right cog. You can’t deactivate it entirely, but you can at least release the heat valve to reduce the pressure build up.",
+				"rewards": {
+					"text": "-1 [target]<br/>Gain 3 collective [metal]."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Try to shut the machine down to preserve the research opportunity.",
+				"requirement": "[not] [trait] EDUCATED",
+				"text": "You poke around in the mechanical guts, but you have no idea what to look for. The beeping intensifies, and you finally run for cover, but you’re still a little too close for comfort when it goes off.",
+				"rewards": {
+					"text": "All characters start the next scenario with [wound]."
+				}
+			},
+			"B": {
+				"trigger": "Destroy the machine to prevent it from detonating.",
+				"text": "With everyone fleeing you do what comes naturally: beat the device into submission.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 15,
+			"target": 4,
+			"targetPriority": "Wreck the Workshop.<br/>Target even-numbered buildings in order of closest to farthest from the Workshop (players break ties).",
+			"text": "The detonation sends a shockwave throughout Frosthaven. The outposters will be much more careful about dragging in unknown machinery in the future.",
+			"rewards": {
+				"text": "Gain 1 [metal] each."
+			}
+		}
 	},
 	"SO-24": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SO-25": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>When the sun sets for the evening, an ominous blood-red moon rises in its place. It washes rough, crimson light over the landscape, painting the ocean in a flat maroon that gives the illusion of stillness.</p><p>Some of the locals have pulled chairs outside, chatting and gambling with the guards in the monochrome moonlight. The red haze makes it impossible to spot the Lurker marauders shuffling along the snowy beachfront, staying close to the ground, silent, inching closer to their victims.</p><p>By sheer luck, a patrolling guard’s torchlight illuminates a carapace sneaking up from the water. The Lurker seems to recoil from it as the alarm sounds.</p>",
+		"options": {
+			"A": {
+				"trigger": "Tell the guards to light up the town and drown out the red moonlight.",
+				"text": "The Lurkers seem pacified by the effects of the lit town, and they recede from any buildings brighter than the dull red moonlight, concentrating their attention on the targets that were slower with their flame.",
+				"rewards": {
+					"text": "+5 [attack], -1 [target]"
+				}
+			},
+			"B": {
+				"trigger": "Drive the Lurker marauders back with torches.",
+				"text": "Whatever frenzy these Lurkers have churned up in the red moonlight fades in the fire, but they don’t seem interested in leaving quietly.",
+				"rewards": {
+					"text": "-5 [attack], +2 [target]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 15,
+			"target": 2,
+			"targetPriority": "Target even-numbered buildings first, from lowest-level to highest-level.",
+			"text": "The moon passes behind some clouds and the Lurkers retreat from the streets back into the water. Frosthaven continues burning lamp oil until morning, just in case.",
+			"rewards": {
+				"text": "Gain 3 collective [hide]."
+			}
+		}
 	},
 	"SO-26": {
 		"unlockedBy": { "section": { "id": "129.3" }}
@@ -373,13 +438,66 @@
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SO-31": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>It’s a peaceful summer day in Frosthaven. The sun is shining, it’s warm enough to leave the fur coats inside, and the scouts report no enemy activity anywhere in the region. You and your fellow guards are alert, but relaxed. There’s absolutely no indication today isn’t going to end with a few drinks at The Crater and a peaceful night’s sleep.</p><p>Until the screaming starts. You spin around as a giant hole in the ground opens up in the middle of town, swallowing up a young couple having a picnic. Running toward the chaos, you hear a swirl of whirring, buzzing, and clanking coming from underground.</p><p>As you reach the edge and peer over, you realize this isn’t a hole... it’s a tunnel. You see a horde of automatons swarming and crawling on top of each other, climbing up toward the surface, about to spill out into the town.</p>",
+		"options": {
+			"A": {
+				"trigger": "Attack the machines as they climb out of the tunnel.",
+				"text": "You call to the guards to form a circle around the edge of the hole. With the high ground, the attackers struggle to gain a foothold. Each one that crawls out gets a sword, boot, or arrow to whatever it has that passes for a face, knocking it back into the hole.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			},
+			"B": {
+				"trigger": "Leap into the tunnel and fight them underground.",
+				"text": "If they breach the perimeter around the hole, there’s no telling how much damage they’ll do. You signal to your ragtag group of mercenaries, and on “Three!” you leap down into the hole, ready to bring the fight to them.",
+				"rewards": {
+					"text": "No buildings are damaged during this attack. Choose one character now. That character starts the next scenario with [damage] X, where X is twice the number of targets that were not successfully defended."
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Unfettered",
+			"attack": 35,
+			"target": 4,
+			"targetPriority": "If A was resolved, select one building from 30 to 70. Target this building first, then target buildings closest to the selected building (players break ties).",
+			"rewards": {
+				"text": "Gain 3 collective [metal]."
+			}
+		}
 	},
 	"SO-32": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
 	"SO-33": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>“Don’t you have work to be doing?” A guard patrolling the harbor gate growls.</p><p>“Not my fault Lurkers took over!” the longshoreman snarls. “Why don’t you take that spear and chase them off yourself?”</p><p>Exchanges like this have become commonplace since a swarm of Lurker brigands settled on the docks. It’s been nearly a week, and tensions have escalated with each failed attempt to chase the swarm away.</p><p>You look out to the three ships anchored just outside the harbor. The trip to Frosthaven is long and dangerous, and to be trapped with supplies dwindling so close to their destination must be agonizing.</p><p>As if in response to your thoughts, a scarlet flag climbs one of the masts—a distress signal. The ships’ food stores must finally be running out; if you don’t act soon, the crews will starve. You could try to run supplies out with a smaller boat, but that could anger the Lurkers. The only other option is to clear the docks and get the hungry sailors to land.</p>",
+		"options": {
+			"A": {
+				"trigger": "Load up your fastest rowing vessel with supplies and run the blockade.",
+				"text": "<p>You lead a train of guards sneaking supplies to a longboat beached far from the Lurkers. The crew quietly slides the vessel into the water, but a guard loses her footing and falls into the water with a loud splash. The lurkers stir.</p><p>“ROW!” the captain cries as you haul the sputtering guard aboard and take up oars. The Lurker blockade is in a sudden frenzy. Many rush into the water to pursue your ship with unnatural speed, but others turn toward the town walls. You finish unloading the supplies and board the larger ship just as the Lurkers scuttle your longboat, leaving you to watch as Frosthaven defends itself.</p>",
+				"rewards": {
+					"text": "Lose 2 collective [lumber].<br/>Gain disadvantage on all targets."
+				}
+			},
+			"B": {
+				"trigger": "Mount an all-out attack to dislodge the Lurker brigands once and for all.",
+				"text": "You gather a group of guards and gear up for a tough fight. You make a dent in their numbers, but the Lurkers counterattack with vicious force and you’re pushed back through the gate. At least they’re off the docks now.",
+				"rewards": {
+					"text": "-5 [attack]"
+				}
+			}
+		},
+		"outpostAttack": {
+			"race": "Lurker",
+			"attack": 30,
+			"target": 5,
+			"targetPriority": "Target even-numbered buildings from 30 to 80.",
+			"text": "With the Lurker brigands finally gone, the beleaguered ships are able to dock. The grateful crews stumble ashore, where they share a full meal with the dockworkers.",
+			"rewards": {
+				"text": "Gain 2 morale."
+			}
+		}
 	},
 	"SO-34": {
 		"unlockedBy": { "section": { "id": "129.3" }}

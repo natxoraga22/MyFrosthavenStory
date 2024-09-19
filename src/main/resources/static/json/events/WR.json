@@ -1,6 +1,6 @@
 {
 	"WR-01": {
-		"text": "<p>\"YOU! Strong mer-canaries! You help Hurdle, yes!\"</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he's been on his own in the wilderness for a long, long time.</p><p>\"Help kill evil Clovis! Ruined Hurdle's home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!\" The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. \"Cloooovis,\" he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam...</p><p>It's a beaver. Clovis is a beaver. And not a very large one at that.</p><p>\"Clovis dam stream,\" the hermit spits, \"Stream flood Hurdle's home. Clovis must SUFFER, yes!\"</p><p>He turns back to you and repeats his demand. \"You kill evil Clovis! I reward greedy mer-canaries. Kill kill!\"</p>",
+		"text": "<p>\"YOU! Strong mer-canaries! You help Hurdle, yes!\"</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he’s been on his own in the wilderness for a long, long time.</p><p>\"Help kill evil Clovis! Ruined Hurdle’s home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!\" The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. \"Cloooovis,\" he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam...</p><p>It’s a beaver. Clovis is a beaver. And not a very large one at that.</p><p>\"Clovis dam stream,\" the hermit spits, \"Stream flood Hurdle’s home. Clovis must SUFFER, yes!\"</p><p>He turns back to you and repeats his demand. \"You kill evil Clovis! I reward greedy mer-canaries. Kill kill!\"</p>",
 		"options": {
 			"A": {
 				"trigger": "Kill Clovis.",
@@ -13,7 +13,7 @@
 				"id": "B",
 				"trigger": "Try to talk the raving hermit down.",
 				"requirement": "[trait] OUTCAST",
-				"text": "You know there's no use trying to convince the stubborn hermit of the beaver's innocence. Instead you appeal to Hurdle's better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. \"Wise mer-canary... You help Hurdle see truth, yes. Hurdle return gift.\"",
+				"text": "You know there’s no use trying to convince the stubborn hermit of the beaver’s innocence. Instead you appeal to Hurdle’s better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. \"Wise mer-canary... You help Hurdle see truth, yes. Hurdle return gift.\"",
 				"rewards": {
 					"text": "Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved)."
 				}
@@ -22,7 +22,7 @@
 				"id": "B",
 				"trigger": "Try to talk the raving hermit down.",
 				"requirement": "[not] [trait] OUTCAST",
-				"text": "You've been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. \"Stupid mer-canaries!\" The hermit rages as he scurries off. \"You regret!\" As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you... but when you look back, Clovis is gone.",
+				"text": "You’ve been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. \"Stupid mer-canaries!\" The hermit rages as he scurries off. \"You regret!\" As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you... but when you look back, Clovis is gone.",
 				"rewards": {
 					"text": "All characters start the next scenario with [curse]."
 				}
@@ -92,11 +92,11 @@
 		}
 	},
 	"WR-06": {
-		"text": "<p>A translucent Aesther wearing hunter's garb is studying some tracks on the path, and turns to catch your attention as you approach. \"You there! A moment of your time!\" He flags you down. \"I've been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?\"</p><p>When you don't immediately respond, he thumbs a wicked-looking blade and continues: \"You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.\" The Aesther's eyes flash a dark longing.</p>",
+		"text": "<p>A translucent Aesther wearing hunter’s garb is studying some tracks on the path, and turns to catch your attention as you approach. \"You there! A moment of your time!\" He flags you down. \"I’ve been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?\"</p><p>When you don’t immediately respond, he thumbs a wicked-looking blade and continues: \"You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.\" The Aesther’s eyes flash a dark longing.</p>",
 		"options": {
 			"A": {
 				"trigger": "Agree to keep an eye out for him.",
-				"text": "<p>You assure the Aesther hunter that you'll keep an eye out for the Vermling killer. He smiles.</p><p>\"My thanks. I am Malak. If you do locate him I ask only that you call for me so I can finish my task at last.\"</p>",
+				"text": "<p>You assure the Aesther hunter that you’ll keep an eye out for the Vermling killer. He smiles.</p><p>\"My thanks. I am Malak. If you do locate him I ask only that you call for me so I can finish my task at last.\"</p>",
 				"rewards": {
 					"events": {
 						"SR": [{ "id": "SR-36" }]
@@ -107,8 +107,8 @@
 				}
 			},
 			"B": {
-				"trigger": "No, you haven't seen him.",
-				"text": "You tell the Aesther you haven't seen Dramm. His eyes linger on you a bit too long, trying to determine whether you're lying, but ultimately he shrugs and accepts your statement with a disconcerting smile. You hurry on to your destination.",
+				"trigger": "No, you haven’t seen him.",
+				"text": "You tell the Aesther you haven’t seen Dramm. His eyes linger on you a bit too long, trying to determine whether you’re lying, but ultimately he shrugs and accepts your statement with a disconcerting smile. You hurry on to your destination.",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -117,18 +117,18 @@
 	},
 	"WR-07": {},
 	"WR-08": {
-		"text": "<p>The giant boughs of the willowburn tree hang low, heavy with the ice of the season. This picturesque grotto features an iced-over pond. During the warmer season, it would be fed by a waterfall, which is now frozen and anchored to th cliff face overlooking the area.</p><p>The ice over the pond is sturdy and supports your weight easily. The frozen waterfall beckons you closer with an unnatural blue light, and as you approach you can see glowing shapes moving behind the ice—it's a cave of some sort, now sealed off. The ice is much too thick to get a decent look, but you can feel a supernatural chill that turns your stomach.</p><p>The waterfall likely hasn't run since summer and has a rough surface that would be perfect for climbing. The top would put you right underneath the willowburn branches.</p>",
+		"text": "<p>The giant boughs of the willowburn tree hang low, heavy with the ice of the season. This picturesque grotto features an iced-over pond. During the warmer season, it would be fed by a waterfall, which is now frozen and anchored to th cliff face overlooking the area.</p><p>The ice over the pond is sturdy and supports your weight easily. The frozen waterfall beckons you closer with an unnatural blue light, and as you approach you can see glowing shapes moving behind the ice—it’s a cave of some sort, now sealed off. The ice is much too thick to get a decent look, but you can feel a supernatural chill that turns your stomach.</p><p>The waterfall likely hasn’t run since summer and has a rough surface that would be perfect for climbing. The top would put you right underneath the willowburn branches.</p>",
 		"options": {
 			"A": {
 				"trigger": "Make camp in the middle of the iced-over pond.",
-				"text": "You triple-check that the ice is frozen completely solid: the perfect place to set camp. Visibility is ideal in every direction, and you can make out the stars between the branches of the willowburn tree. you drift off to a peaceful night's sleep.",
+				"text": "You triple-check that the ice is frozen completely solid: the perfect place to set camp. Visibility is ideal in every direction, and you can make out the stars between the branches of the willowburn tree. you drift off to a peaceful night’s sleep.",
 				"rewards": {
 					"text": "All characters start the next scenario with [bless]."
 				}
 			},
 			"B": {
 				"trigger": "Climb to the top of the waterfall and make camp overlooking the grotto.",
-				"text": "The frozen waterfall provides easy handholds for climbing its surface, and before long, you're standing at the top, looking down on the grotto. You can even reach up and touch the willowburn tree branches. It looks like a great spot to make camp... before the buzzing starts. In a burst of angry yellow, thousands of bees swarm your party, driving you back down the waterfall. You're out of breath before they give up the chase.",
+				"text": "The frozen waterfall provides easy handholds for climbing its surface, and before long, you’re standing at the top, looking down on the grotto. You can even reach up and touch the willowburn tree branches. It looks like a great spot to make camp... before the buzzing starts. In a burst of angry yellow, thousands of bees swarm your party, driving you back down the waterfall. You’re out of breath before they give up the chase.",
 				"rewards": {
 					"text": "All characters start the next scenario with [impair] and discard two cards."
 				}
@@ -138,11 +138,11 @@
 	"WR-09": {},
 	"WR-10": {},
 	"WR-11": {
-		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They'll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It's a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers... they's a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans're just gray worms swimming around in a skull driving a skeleton around. This here's a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand 'em, but I can't say I understand 'em.\" The Kivak waits, unblinkingly.</p>",
+		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They’ll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It’s a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers... they’s a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans’re just gray worms swimming around in a skull driving a skeleton around. This here’s a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand ’em, but I can’t say I understand ’em.\" The Kivak waits, unblinkingly.</p>",
 		"options": {
 			"A": {
 				"trigger": "Kill the Kivak.",
-				"text": "You cut the doomed Kivak down. It doesn't move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: \"Most Kivak just want to eat dirt and grass. O'course I get the weird ones.\"",
+				"text": "You cut the doomed Kivak down. It doesn’t move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: \"Most Kivak just want to eat dirt and grass. O’course I get the weird ones.\"",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -151,7 +151,7 @@
 				"id": "B",
 				"trigger": "Refuse and force your way through the sea of animals.",
 				"requirement": "[trait] OUTCAST",
-				"text": "You don't know what this solitary Kivak did to wrong the others, but you understand rejection by your peers. You grab the Kivak and push through the herd. Once on the other side, the reject snorts in thanks before wandering off.",
+				"text": "You don’t know what this solitary Kivak did to wrong the others, but you understand rejection by your peers. You grab the Kivak and push through the herd. Once on the other side, the reject snorts in thanks before wandering off.",
 				"rewards": {
 					"text": "Gain 1 [checkmark] each."
 				}
@@ -185,18 +185,18 @@
 		}
 	},
 	"WR-18": {
-		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle... and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs...\" Hurdle pauses, scrunching up his nose. \"On second thought, don't dig up eggs.\"</p>",
+		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle... and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs...\" Hurdle pauses, scrunching up his nose. \"On second thought, don’t dig up eggs.\"</p>",
 		"options": {
 			"A": {
-				"trigger": "Help Hurdle dig up Jeremy's hidden food.",
+				"trigger": "Help Hurdle dig up Jeremy’s hidden food.",
 				"text": "<p>You sigh and heft your shovel. You suppose this is what they mean when they say \"No job is too small.\"</p>",
 				"rewards": {
-					"text": "<p>All characters each take one turn drawing as many cards as they want from the monster attack modifier deck, one at a time, until they choose to stop. If a character draws a null card, they've unearthed an old egg, and their number of drawn cards is considered O. Shuffle the entire monster attack modifier deck between each turn.</p><p>Characters are then awarded the following, based on who drew the most cards (tied characters gain the full rewards of their shared rank):</p><p>1st: Gain 12 experience.<br/>2nd: Gain 6 gold.<br/>3rd: Gain 2 [lumber].<br/>4th: Gain 1 [hide].</p><p>If you collectively drew at least Cx3 cards, Hurdle is overjoyed: add a [plus1] sticker to one [axenut] loot card (the card gives one extra [axenut] when resolved).</p>"
+					"text": "<p>All characters each take one turn drawing as many cards as they want from the monster attack modifier deck, one at a time, until they choose to stop. If a character draws a null card, they’ve unearthed an old egg, and their number of drawn cards is considered O. Shuffle the entire monster attack modifier deck between each turn.</p><p>Characters are then awarded the following, based on who drew the most cards (tied characters gain the full rewards of their shared rank):</p><p>1st: Gain 12 experience.<br/>2nd: Gain 6 gold.<br/>3rd: Gain 2 [lumber].<br/>4th: Gain 1 [hide].</p><p>If you collectively drew at least Cx3 cards, Hurdle is overjoyed: add a [plus1] sticker to one [axenut] loot card (the card gives one extra [axenut] when resolved).</p>"
 				}
 			},
 			"B": {
 				"trigger": "Offer to share your own rations instead.",
-				"text": "You're a sell-sword, not a sell-shovel. Still, you're happy to bail Jeremy out of an embarrassing situation, so you volunteer some of your own supplies. Hurdle snatches up your offering and scurries off in a huff, muttering that next time will be \"Jeremy soup.\"",
+				"text": "You’re a sell-sword, not a sell-shovel. Still, you’re happy to bail Jeremy out of an embarrassing situation, so you volunteer some of your own supplies. Hurdle snatches up your offering and scurries off in a huff, muttering that next time will be \"Jeremy soup.\"",
 				"rewards": {
 					"text": "All characters start the next scenario discarding one card."
 				}
@@ -204,7 +204,7 @@
 		}
 	},
 	"WR-19": {
-		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>\"Thank you!\" A stocky Quatryl woman crawls out of the hatch. \"My aeronautical hit some rough clouds, and I couldn't blow my emergency hatch. Been a while... I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!\" She looks around. \"Was worried I was being rescued by a bunch of Lurkers. I'm strictly opposed to being a snack.\"</p><p>She pulls a device from her pocket and scans the horizon. \"It's actually a decent hour to get back into the sky... could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?\" She gestures into the confined space of the aeronautical.</p>",
+		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>\"Thank you!\" A stocky Quatryl woman crawls out of the hatch. \"My aeronautical hit some rough clouds, and I couldn’t blow my emergency hatch. Been a while... I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!\" She looks around. \"Was worried I was being rescued by a bunch of Lurkers. I’m strictly opposed to being a snack.\"</p><p>She pulls a device from her pocket and scans the horizon. \"It’s actually a decent hour to get back into the sky... could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?\" She gestures into the confined space of the aeronautical.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -225,8 +225,8 @@
 				}
 			},
 			"B": {
-				"trigger": "Take her up on the lift—what's the worst that could happen?",
-				"text": "You dig out the aeronautical and cram into the restricted interior. The Quatryl just barely seals the hatch with you all inside and struggles to start up the machine with the extra weight. It's claustrophobic, but after it gets airborne much of the terror subsides. The descent is violent but you arrive in one piece closer to your destination.",
+				"trigger": "Take her up on the lift—what’s the worst that could happen?",
+				"text": "You dig out the aeronautical and cram into the restricted interior. The Quatryl just barely seals the hatch with you all inside and struggles to start up the machine with the extra weight. It’s claustrophobic, but after it gets airborne much of the terror subsides. The descent is violent but you arrive in one piece closer to your destination.",
 				"rewards": {
 					"text": "All characters without [trait] QUATRYL or VERMLING start the next scenario with [impair]."
 				}
@@ -234,13 +234,13 @@
 		}
 	},
 	"WR-20": {
-		"text": "<p>The sky has turned a perfect, uniform gray as the snowfall of a blizzard blots out any vision more than an arms-length ahead. The flurries hide his presence until you're right on top of him, but seated in deep meditation is an Orchid. While they have a frail humanoid appearance, they gain the majority of their sustenance from direct contact with the ground as a plant would, growing beautiful crystalline structures across their skin if they remain sedentary. Judging by the length and prominence of the crystals on this Orchid's head and arms, he's been seated here meditating for a very long time—perhaps years.</p><p>Although he shows no signs of noticing, the snow has begun to accumulate on him. Unfortunately the weather has left you turned around and without a bit of help you're as likely to be heading away from your destination as towards it.</p>",
+		"text": "<p>The sky has turned a perfect, uniform gray as the snowfall of a blizzard blots out any vision more than an arms-length ahead. The flurries hide his presence until you’re right on top of him, but seated in deep meditation is an Orchid. While they have a frail humanoid appearance, they gain the majority of their sustenance from direct contact with the ground as a plant would, growing beautiful crystalline structures across their skin if they remain sedentary. Judging by the length and prominence of the crystals on this Orchid’s head and arms, he’s been seated here meditating for a very long time—perhaps years.</p><p>Although he shows no signs of noticing, the snow has begun to accumulate on him. Unfortunately the weather has left you turned around and without a bit of help you’re as likely to be heading away from your destination as towards it.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Wake the Orchid to ask directions.",
 				"requirement": "[trait] ORCHID",
-				"text": "You begin a low, lilting hum. Orchids use it as something ofa reverse-lullaby, a melody to gently wake someone in deep meditative slumber. The Orchid slowly rouses itself to the tune, opening one eye with a smile. After a long, dramatic stretch he's happy to provide directions to your destination",
+				"text": "You begin a low, lilting hum. Orchids use it as something ofa reverse-lullaby, a melody to gently wake someone in deep meditative slumber. The Orchid slowly rouses itself to the tune, opening one eye with a smile. After a long, dramatic stretch he’s happy to provide directions to your destination",
 				"rewards": {
 					"text": "Gain 5 experience each."
 				}
@@ -249,7 +249,7 @@
 				"id": "A",
 				"trigger": "Wake the Orchid to ask directions.",
 				"requirement": "[not] [trait] ORCHID",
-				"text": "You brush the snow off the Orchid, then tap gently on his crystalline head. That leads to more insistent knocking, and finally a light shake. When he finally jolts awake, he's startled and furious. You do your best to apologize, and he points you in the right direction.",
+				"text": "You brush the snow off the Orchid, then tap gently on his crystalline head. That leads to more insistent knocking, and finally a light shake. When he finally jolts awake, he’s startled and furious. You do your best to apologize, and he points you in the right direction.",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -258,7 +258,7 @@
 				"id": "B",
 				"trigger": "Leave the Orchid to his meditation and find your own way.",
 				"requirement": "[trait] CHAOTIC or RESOURCEFUL",
-				"text": "The sun is gone, and the world is a sea of white, but you are at home in the confusion and know exactly how to handle the situation. You trace your steps back the way you came and reorient yourself based on your rapidly fading footprints. It's a cold trip but you make it to your destination.",
+				"text": "The sun is gone, and the world is a sea of white, but you are at home in the confusion and know exactly how to handle the situation. You trace your steps back the way you came and reorient yourself based on your rapidly fading footprints. It’s a cold trip but you make it to your destination.",
 				"rewards": {
 					"text": "All characters start the next scenario with [brittle]."
 				}
@@ -267,7 +267,7 @@
 				"id": "B",
 				"trigger": "Leave the Orchid to his meditation and find your own way.",
 				"requirement": "[not] [trait] CHAOTIC or RESOURCEFUL",
-				"text": "It can't be that difficult to find a way through this blizzard. You head back the way you came for a few steps, then strike out toward what you're sure is the right direction. It is not, and by the time you've determined where you are, you're numb with cold.",
+				"text": "It can’t be that difficult to find a way through this blizzard. You head back the way you came for a few steps, then strike out toward what you’re sure is the right direction. It is not, and by the time you’ve determined where you are, you’re numb with cold.",
 				"rewards": {
 					"text": "All characters start the next scenario with [brittle] and [damage] 2."
 				}
@@ -291,7 +291,7 @@
 	},
 	"WR-26": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>You've been hiking for a long time. In fact, you should have reached your destination long ago, but still the path stretches on ahead.</p><p>Now that you think of it, you're certain you've seen that copse of trees before.</p><p>After another hour of telling yourselves that the destination must be around the next bend, you're forced to admit it: you're lost.</p><p>You pause to weigh your options. It might be better to stop and orient yourselves once the stars come out... but your supplies are already dwindling from the overlong journey, and waiting for nightfall would take up valuable time you don't have.</p>",
+		"text": "<p>You’ve been hiking for a long time. In fact, you should have reached your destination long ago, but still the path stretches on ahead.</p><p>Now that you think of it, you’re certain you’ve seen that copse of trees before.</p><p>After another hour of telling yourselves that the destination must be around the next bend, you’re forced to admit it: you’re lost.</p><p>You pause to weigh your options. It might be better to stop and orient yourselves once the stars come out... but your supplies are already dwindling from the overlong journey, and waiting for nightfall would take up valuable time you don’t have.</p>",
 		"options": {
 			"A": {
 				"trigger": "Press on—it’s got to be around here somewhere.",
@@ -333,7 +333,7 @@
 	},
 	"WR-30": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>The sun is disappearing behind the mountains for the evening. You set your pack down on a rock embedded in the snow and start setting up camp.</p><p>CRACK! The weight of your pack was just enough to break the rock free of the snow and ice, creating a small avalanche and sending your supplies tumbling off a cliff.</p><p>Winter days are brutally cold, but without a source of warmth, winter nights are deadly. You're unprepared in unfamiliar territory, sunlight is dwindling, and you can already feel your fingertips going numb. If you don't find a way to warm up or find a way through this darkness, you're going to have a rough night.</p>",
+		"text": "<p>The sun is disappearing behind the mountains for the evening. You set your pack down on a rock embedded in the snow and start setting up camp.</p><p>CRACK! The weight of your pack was just enough to break the rock free of the snow and ice, creating a small avalanche and sending your supplies tumbling off a cliff.</p><p>Winter days are brutally cold, but without a source of warmth, winter nights are deadly. You’re unprepared in unfamiliar territory, sunlight is dwindling, and you can already feel your fingertips going numb. If you don’t find a way to warm up or find a way through this darkness, you’re going to have a rough night.</p>",
 		"options": {
 			"A1": {
 				"trigger": "Search the remains of what you brought with you for a way to generate heat and light.",
@@ -346,14 +346,14 @@
 			"A2": {
 				"trigger": "Search the remains of what you brought with you for a way to generate heat and light.",
 				"requirement": "[not] [trait] RESOURCEFUL",
-				"text": "You have to make some hard decisions, but it's this or freeze.",
+				"text": "You have to make some hard decisions, but it’s this or freeze.",
 				"rewards": {
 					"text": "All characters start the next scenario either discarding one card with [fire] or [light] or suffer [damage] 3.<br/>Also infuse [ice] at the start of the next scenario."
 				}
 			},
 			"B": {
 				"trigger": "Give up and hike back to Frosthaven.",
-				"text": "You'll never make it through the night. The only way to keep warm is to keep moving, and without your supplies there's nothing you can do but turn back.",
+				"text": "You’ll never make it through the night. The only way to keep warm is to keep moving, and without your supplies there’s nothing you can do but turn back.",
 				"rewards": {
 					"text": "All characters start the next scenario discarding two cards.<br/>Resolve another winter road event."
 				}
@@ -385,7 +385,35 @@
 	},
 	"WR-42": {},
 	"WR-43": {
-		"unlockedBy": { "event": { "id": "SO-59" }}
+		"unlockedBy": { "event": { "id": "SO-59" }},
+		"text": "<p>As you follow the road deeper into the woods, you hear a commotion off the path. After a bit of bushwhacking, you find a small, well-hidden Vermling village that looks like it has seen better days.</p><p>To your left, you see a small group hammering away on the roof of a small building. It looks like the thatching caved in under the weight of a recent snowstorm, and they still have a lot of work left to do before it’s weatherproof.</p><p>To your right, another group is sitting around a large fire with several pots of stew simmering over the flame. Looks like they’re trying to make enough food to get themselves through the next snowstorm. The smell wafts over to you. It smells delicious.</p><p>You’ve gotten into plenty of fights with Vermlings, but this pack seems like they could use a hand.</p>",
+		"options": {
+			"A": {
+				"trigger": "Help with repairs.",
+				"text": "You climb up and start helping with the repairs. A few minutes later, two Vermlings start arguing over whose turn it is to use a hammer. You walk over to break up the fight, but it seems like Vermling rooftops aren’t really that strong to begin with. With a loud crack, the board you’re standing on snaps in half, and you fall through. The Vermlings crowd around you—half of them wanting to make sure you’re okay, and the other half upset at you for undoing all their work.",
+				"rewards": {
+					"text": "All characters start the next scenario with [damage] 2."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Help with the cooking.",
+				"requirement": "[trait] VERMLING",
+				"text": "You catch a whiff of the meal they’re cooking and recognize it immediately! It’s Black Imp stew—your mother used to make it for the whole nest when you were young.",
+				"rewards": {
+					"text": "All [trait] VERMLING characters start the next scenario with [warden] and [bless]."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Help with the cooking.",
+				"requirement": "[not] [trait] VERMLING",
+				"text": "You offer to tend to the stew. The Vermlings are surprised, but happy for the help. After a few minutes of stirring, you taste it to see if it’s ready… and start vomiting within seconds. A Vermling mutters, “Most species can’t handle Black Imp meat like we can. Delicate stomachs.”",
+				"rewards": {
+					"text": "All characters start the next scenario with [poison]."
+				}
+			}
+		}
 	},
 	"WR-44": {
 		"unlockedBy": { "section": { "id": "193.1" }},

@@ -1,10 +1,10 @@
 {
 	"WO-01": {
-		"text": "<p>It's a rare sunny afternoon in Frosthaven, and you find yourself spending it down at the docks. Supposedly you're replenishing food supplies, through organized ice-fishing, for the good of the town, but most of those present are here for the company and laughter as you swap stories. It's been more than an hour since anyone pulled something from the water, but no one seems to mind.</p><p>You're chatting with a neighbor when you hear grunting further down the platform—someone must have something massive on the line. Between the thrashing eddies in the water you can just spot a claw—that's no fish, it's a Lurker!</p>",
+		"text": "<p>It’s a rare sunny afternoon in Frosthaven, and you find yourself spending it down at the docks. Supposedly you’re replenishing food supplies, through organized ice-fishing, for the good of the town, but most of those present are here for the company and laughter as you swap stories. It’s been more than an hour since anyone pulled something from the water, but no one seems to mind.</p><p>You’re chatting with a neighbor when you hear grunting further down the platform—someone must have something massive on the line. Between the thrashing eddies in the water you can just spot a claw—that’s no fish, it’s a Lurker!</p>",
 		"options": {
 			"A": {
 				"trigger": "Cut the line.",
-				"text": "You deftly cut the fishing line, pulling the fisherman back from the water's edge. You shout up to the guard who sounds the alarm.",
+				"text": "You deftly cut the fishing line, pulling the fisherman back from the water’s edge. You shout up to the guard who sounds the alarm.",
 				"rewards": {
 					"text": "-5 [attack]"
 				}
@@ -33,7 +33,7 @@
 			"attack": 30,
 			"target": 5,
 			"targetPriority": "Target even-numbered buildings in ascending order.",
-			"text": "After several minutes of complete chaos, you and the town guard manage to drive the Lurker and its friends back into the water. If fishing is this dangerous, there really isn't a safe hobby in Frosthaven.",
+			"text": "After several minutes of complete chaos, you and the town guard manage to drive the Lurker and its friends back into the water. If fishing is this dangerous, there really isn’t a safe hobby in Frosthaven.",
 			"rewards": {
 				"text": "Gain 2 collective [hide]."
 			}
@@ -84,7 +84,7 @@
 		}
 	},
 	"WO-03": {
-		"text": "<p>You're enjoying a stiff drink when a fly drops into the liquid with a light \"plunk.\" You fish out the suicidal bug and are about to flick it to the floor when it musters the nerve to sting you, resulting in a reflexive slap.</p><p>The injection point leaves a spiderweb of black ink tracing down your veins. The bug itself is no bug at all—it's a minuscule clockwork machine with a long brass stinger hanging off the end. You turn to share your discovery and are horrified to see tiny brass dots pinging against the window—it's an attack!</p><p>Outside the glass, you can see a glittering cloud of metal against the snowfall, descending on Frosthaven.</p><p>Whatever it injected you with has left your arm as dead weight, unable to draw your weapon.</p>",
+		"text": "<p>You’re enjoying a stiff drink when a fly drops into the liquid with a light \"plunk.\" You fish out the suicidal bug and are about to flick it to the floor when it musters the nerve to sting you, resulting in a reflexive slap.</p><p>The injection point leaves a spiderweb of black ink tracing down your veins. The bug itself is no bug at all—it’s a minuscule clockwork machine with a long brass stinger hanging off the end. You turn to share your discovery and are horrified to see tiny brass dots pinging against the window—it’s an attack!</p><p>Outside the glass, you can see a glittering cloud of metal against the snowfall, descending on Frosthaven.</p><p>Whatever it injected you with has left your arm as dead weight, unable to draw your weapon.</p>",
 		"options": {
 			"A": {
 				"trigger": "Seal the door.",
@@ -106,18 +106,18 @@
 			"attack": 25,
 			"target": 7,
 			"targetPriority": "Target buildings randomly by drawing from the building deck.",
-			"text": "With the last of the insects crushed, you start the arduous process of cleaning up the streets. Looks like there's plenty of scrap metal, although it's dangerous to dispose of. You still feel pretty ill, actually...",
+			"text": "With the last of the insects crushed, you start the arduous process of cleaning up the streets. Looks like there’s plenty of scrap metal, although it’s dangerous to dispose of. You still feel pretty ill, actually…",
 			"rewards": {
 				"text": "Gain 1 [metal] each.<br/>All characters start the next scenario with [poison]."
 			}
 		}
 	},
 	"WO-04": {
-		"text": "<p>Frosthaven's no stranger to snow, but as dawn breaks, even the long-time veterans of the north utter cries of surprise. An overnight storm has covered the town in a blanket of snow that rises halfway up most of the doors in town. You grumble at first as you dig to clear the longhouse door and get on with your day, but the snow muffles every sound in a way you find soothing, and it isn't long before you and the other inhabitants are free. You breathe a sigh of relief.</p><p>And then the attack bells sound.</p><p>An Algox warband approaches the town at speed, using their natural abilities to bound across the deep snow without slowing. The guards on duty scramble to assume battle positions, but when you glance toward the barracks your spirits sink; the gates are still half-buried. You see the massive doors bulge as the guards within push desperately, trying to swing them open against the piled snow. They're making progress, but you can tell they won't make it to the gate towers in time.</p>",
+		"text": "<p>Frosthaven’s no stranger to snow, but as dawn breaks, even the long-time veterans of the north utter cries of surprise. An overnight storm has covered the town in a blanket of snow that rises halfway up most of the doors in town. You grumble at first as you dig to clear the longhouse door and get on with your day, but the snow muffles every sound in a way you find soothing, and it isn’t long before you and the other inhabitants are free. You breathe a sigh of relief.</p><p>And then the attack bells sound.</p><p>An Algox warband approaches the town at speed, using their natural abilities to bound across the deep snow without slowing. The guards on duty scramble to assume battle positions, but when you glance toward the barracks your spirits sink; the gates are still half-buried. You see the massive doors bulge as the guards within push desperately, trying to swing them open against the piled snow. They’re making progress, but you can tell they won’t make it to the gate towers in time.</p>",
 		"options": {
 			"A": {
-				"trigger": "Join the fight at the outpost's main gate. You might be the only reinforcments those defenders get today.",
-				"text": "You wade through the snow and up to the gatehouse just in time to join the fight. There aren't many of you to hold the town against a faster enemy, but the guards in the tower perk up to see they're not alone.",
+				"trigger": "Join the fight at the outpost’s main gate. You might be the only reinforcments those defenders get today.",
+				"text": "You wade through the snow and up to the gatehouse just in time to join the fight. There aren’t many of you to hold the town against a faster enemy, but the guards in the tower perk up to see they’re not alone.",
 				"rewards": {
 					"text": "Gain 2 morale."
 				}
@@ -200,7 +200,7 @@
 		}
 	},
 	"WO-08": {
-		"text": "<p>You're halfway through your polar bear burger when the alarm bell tolls. \"Algox to the west!\" a guard shouts. With a wistful look at the rest of your lunch, you grab your gear and rush toward the wall.</p><p>You don't make it twenty steps when the alarm bell tolls again. Strange—they're only supposed to ring it once per attack. A call of \"Algox to the east!\" rings over the outpost.</p><p>Wait a minute. Weren't they coming from the west? They couldn't have circled around that fast. The guards are clearly as confused as you are, but a frantic shout from the guard tower clears it up: \"Algox to the east—and the west!\"</p><p>Oh. Oh no.</p>",
+		"text": "<p>You’re halfway through your polar bear burger when the alarm bell tolls. \"Algox to the west!\" a guard shouts. With a wistful look at the rest of your lunch, you grab your gear and rush toward the wall.</p><p>You don’t make it twenty steps when the alarm bell tolls again. Strange—they’re only supposed to ring it once per attack. A call of \"Algox to the east!\" rings over the outpost.</p><p>Wait a minute. Weren’t they coming from the west? They couldn’t have circled around that fast. The guards are clearly as confused as you are, but a frantic shout from the guard tower clears it up: \"Algox to the east—and the west!\"</p><p>Oh. Oh no.</p>",
 		"options": {
 			"A": {
 				"trigger": "Stay together and fend off one of the two attacks.",
@@ -211,7 +211,7 @@
 			},
 			"B": {
 				"trigger": "Split up and support defensive efforts on both sides of the town.",
-				"text": "The Algox raiders split their attack, and, as much as you don't like to admit it, the only way through this appears to be to split up your defenses.",
+				"text": "The Algox raiders split their attack, and, as much as you don’t like to admit it, the only way through this appears to be to split up your defenses.",
 				"rewards": {
 					"text": "During the below threat, target buildings closest to the wall (players break ties). For each target, alternate which side of Frosthaven is attacked."
 				}
@@ -228,13 +228,13 @@
 	},
 	"WO-09": {},
 	"WO-10": {
-		"text": "<p>You step down into The Crater, Frosthaven's burned-out drinking spot, for an evening's relaxation. Hopes of a quiet evening are ruined by Xain, a local who is always \"temporarily\" down on his luck, walking off dejected from one of the tables. As soon as he spots you he brightens up and straightens himself out.</p><p>\"Hey! Friends! Just the folks I was looking to see. This is perfect timing—incredible timing—I've got something you're going to want to hear.\" You doubt it, but Xain nods emphatically.</p><p>\"I've got a new business opportunity. I've worked it out with a friend of mine—and this is real hush-hush—but Lurkers are apparently crazy about polar bear meat. I've got a supply chain lined up like you wouldn't believe: cash goes to the Algox, they get me the bear-meat, then I sell those juicy steaks to the Lurkers for valuable trinkets from the ocean floor.\" He pauses to let the brilliance sink in.</p><p>\"So, the problem is I need to front-load a bit of the funding here. The more money, the more steaks. I'm guaranteeing massive returns on your investment. Whaddaya say?\"</p>",
+		"text": "<p>You step down into The Crater, Frosthaven’s burned-out drinking spot, for an evening’s relaxation. Hopes of a quiet evening are ruined by Xain, a local who is always \"temporarily\" down on his luck, walking off dejected from one of the tables. As soon as he spots you he brightens up and straightens himself out.</p><p>\"Hey! Friends! Just the folks I was looking to see. This is perfect timing—incredible timing—I’ve got something you’re going to want to hear.\" You doubt it, but Xain nods emphatically.</p><p>\"I’ve got a new business opportunity. I’ve worked it out with a friend of mine—and this is real hush-hush—but Lurkers are apparently crazy about polar bear meat. I’ve got a supply chain lined up like you wouldn’t believe: cash goes to the Algox, they get me the bear-meat, then I sell those juicy steaks to the Lurkers for valuable trinkets from the ocean floor.\" He pauses to let the brilliance sink in.</p><p>\"So, the problem is I need to front-load a bit of the funding here. The more money, the more steaks. I’m guaranteeing massive returns on your investment. Whaddaya say?\"</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Support Xain and invest in the scheme.",
 				"requirement": "LOSE 25 COLLECTIVE GOLD",
-				"text": "Xain's eyes widen, but he quickly gets it under control. \"Perfect, that's exactly how much I need to float the first shipment. I'll find you next week to give you your share of the proceeds!\"",
+				"text": "Xain’s eyes widen, but he quickly gets it under control. \"Perfect, that’s exactly how much I need to float the first shipment. I’ll find you next week to give you your share of the proceeds!\"",
 				"rewards": {
 					"text": "Add [section_68.1] OR [section_131.1] to the calendar in one week."
 				}
@@ -243,7 +243,7 @@
 				"id": "A",
 				"trigger": "Support Xain and invest in the scheme.",
 				"requirement": "LOSE 15 COLLECTIVE GOLD",
-				"text": "\"That is precisely how much I need to float the first shipment! I'll find you next week to give you your share of the proceeds, you won't regret this!\"",
+				"text": "\"That is precisely how much I need to float the first shipment! I’ll find you next week to give you your share of the proceeds, you won’t regret this!\"",
 				"rewards": {
 					"text": "Add [section_155.2] OR [section_158.3] to the calendar in one week."
 				}
@@ -252,7 +252,7 @@
 				"id": "B",
 				"trigger": "Try to convince Xain to make you a partner without a monetary investment.",
 				"requirement": "[trait] PERSUASIVE or RESOURCEFUL",
-				"text": "You talk up your business acumen and note how your hands-on understanding of both the Algox and the Lurkers make you uniquely suited to being a business partner. Xain looks doubtful, but eventually you bring him around by reminding him that you've got a good enough reputation around Frosthaven to convince some other people to invest—so long as he gives you a cut.",
+				"text": "You talk up your business acumen and note how your hands-on understanding of both the Algox and the Lurkers make you uniquely suited to being a business partner. Xain looks doubtful, but eventually you bring him around by reminding him that you’ve got a good enough reputation around Frosthaven to convince some other people to invest—so long as he gives you a cut.",
 				"rewards": {
 					"text": "Add [section_155.2] OR [section_158.3] to the calendar in one week."
 				}
@@ -289,11 +289,11 @@
 	},
 	"WO-12": {},
 	"WO-13": {
-		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it's a whole cavern. A miner said it's been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don't have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
+		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it’s a whole cavern. A miner said it’s been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don’t have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
 		"options": {
 			"A": {
 				"trigger": "Demand a healthy but not excessive flat fee up-front.",
-				"text": "<p>You've taken enough jobs to know that pricing before knowing the full story means you may leave some money on the table, but at least you never go home hungry. The job turns out to be pretty straightforward: a Night Demon, banished from the plane of eternal night, got trapped underground and clawed itself to the surface, then took refuge in the mine as it drew power from an evil pillar and has been biding its time before unleashing darkness on the town. Standard stuff.</p><p>A few minutes later, you've cleared out the problem and have some spending money.</p>",
+				"text": "<p>You’ve taken enough jobs to know that pricing before knowing the full story means you may leave some money on the table, but at least you never go home hungry. The job turns out to be pretty straightforward: a Night Demon, banished from the plane of eternal night, got trapped underground and clawed itself to the surface, then took refuge in the mine as it drew power from an evil pillar and has been biding its time before unleashing darkness on the town. Standard stuff.</p><p>A few minutes later, you’ve cleared out the problem and have some spending money.</p>",
 				"rewards": {
 					"text": "Gain 20 collective gold and 3 collective [metal].",
 					"removedEvents": {
@@ -302,8 +302,8 @@
 				}
 			},
 			"B": {
-				"trigger": "Demand that you're paid based on whatever it is you wind up having to clear out of that room.",
-				"text": "<p>You get the foreman to agree to a rate proportional to whatever horrors you discover in the room. A Night Demon has taken up residence, drawing power from a natural focus point in the mine. It's been harvesting the essence of evil and is pretty upset with your sudden interest in killing it.</p><p>The whole ordeal takes just a few minutes, but you'll be digging broken claws out of your skin for days. At least the foreman was happy to turn over some extra coin when he saw the trouble you went to.</p>",
+				"trigger": "Demand that you’re paid based on whatever it is you wind up having to clear out of that room.",
+				"text": "<p>You get the foreman to agree to a rate proportional to whatever horrors you discover in the room. A Night Demon has taken up residence, drawing power from a natural focus point in the mine. It’s been harvesting the essence of evil and is pretty upset with your sudden interest in killing it.</p><p>The whole ordeal takes just a few minutes, but you’ll be digging broken claws out of your skin for days. At least the foreman was happy to turn over some extra coin when he saw the trouble you went to.</p>",
 				"rewards": {
 					"text": "Gain 30 collective gold and 3 collective [metal].",
 					"removedEvents": {
@@ -314,11 +314,11 @@
 		}
 	},
 	"WO-14": {
-		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it's a whole cavern. A miner said it's been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don't have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
+		"text": "<p>\"There. Down to the left.\" The mining camp foreman points your way toward a narrow opening in the rock wall. \"Was just some scratches two days ago. Now it’s a whole cavern. A miner said it’s been growing every day, he figured it was the night crew.\" He refuses to go any further into the passage. \"We don’t have a night crew.\"</p><p>You toss a torch into the dark chamber and it casts light on the cavern walls: long, finger-width marks carved out into a full room. In the middle of it a stone pillar looms ominously, seemingly chiseled by claw out of the rock of the mine. This is precisely the sort of issue anyone would happily pay a mercenary to deal with.</p><p>So the question is: how much?</p>",
 		"options": {
 			"A": {
 				"trigger": "Demand a healthy but not excessive flat fee up-front.",
-				"text": "<p>You've taken enough jobs to know that pricing before knowing the full story means you may leave some money on the table, but at least you never go home hungry. Looks like your conservative outlook paid off: it turns out some teenagers have been sneaking in to the mines each night as a sort of prank on the workers. By the time you're done knocking on doors it seems like every teenager in town was in on it, and several hoped it was scary enough to become a permanent hangout free from adult oversight.</p><p>You give some admonishment to their parents, and after a few hours you have the thanks of the foreman and some spending money.</p>",
+				"text": "<p>You’ve taken enough jobs to know that pricing before knowing the full story means you may leave some money on the table, but at least you never go home hungry. Looks like your conservative outlook paid off: it turns out some teenagers have been sneaking in to the mines each night as a sort of prank on the workers. By the time you’re done knocking on doors it seems like every teenager in town was in on it, and several hoped it was scary enough to become a permanent hangout free from adult oversight.</p><p>You give some admonishment to their parents, and after a few hours you have the thanks of the foreman and some spending money.</p>",
 				"rewards": {
 					"text": "Gain 20 collective gold and 3 collective [metal].",
 					"removedEvents": {
@@ -327,8 +327,8 @@
 				}
 			},
 			"B": {
-				"trigger": "Demand that you're paid based on whatever it is you wind up having to clear out of that room.",
-				"text": "<p>You get the foreman to agree to a rate proportional to whatever horrors you discover in the room. Frustratingly, it turns out some teenagers have been sneaking in after dark, looking for an alcove to call their own, away from their parents. There isn't a single skull to bash in... at least, not without upsetting some parents.</p><p>The foreman happily pays you for tracking down the source of the problem, but not a penny for your fighting skills.</p>",
+				"trigger": "Demand that you’re paid based on whatever it is you wind up having to clear out of that room.",
+				"text": "<p>You get the foreman to agree to a rate proportional to whatever horrors you discover in the room. Frustratingly, it turns out some teenagers have been sneaking in after dark, looking for an alcove to call their own, away from their parents. There isn’t a single skull to bash in… at least, not without upsetting some parents.</p><p>The foreman happily pays you for tracking down the source of the problem, but not a penny for your fighting skills.</p>",
 				"rewards": {
 					"text": "Gain 5 collective gold and 1 collective [metal].",
 					"removedEvents": {
@@ -339,18 +339,18 @@
 		}
 	},
 	"WO-15": {
-		"text": "<p>Harrower Geminates are borne from a schism in the Harrower. That internal conflict manifests itself outwardly as two forms competing for control. Sitting across the table from you is a Harrower who became a Geminate just moments ago under interrogation for murder—half of the being rejected the other half for the crime they committed. A Geminate can be confused for weeks—or even permanently—following a split, and Mayor Satha has requested your assistance in getting a confession. Problem is, they've already confessed... sort of.</p><p>The left portion of the Harrower says: \"I am the murderer.\" The right portion of the Harrower says: \"I did not kill him.\"</p><p>You're about to lock them both up when you hear a cough from the corner of the room. An Aesther, translucent except for an odd hunting cap, speaks up.</p><p>\"Oh, don't mind me. Just observing today. Answer's quite simple. One of them and only one is definitely the murderer. Would it help if I told you at least one of these two are lying?\"</p>",
+		"text": "<p>Harrower Geminates are borne from a schism in the Harrower. That internal conflict manifests itself outwardly as two forms competing for control. Sitting across the table from you is a Harrower who became a Geminate just moments ago under interrogation for murder—half of the being rejected the other half for the crime they committed. A Geminate can be confused for weeks—or even permanently—following a split, and Mayor Satha has requested your assistance in getting a confession. Problem is, they’ve already confessed… sort of.</p><p>The left portion of the Harrower says: \"I am the murderer.\" The right portion of the Harrower says: \"I did not kill him.\"</p><p>You’re about to lock them both up when you hear a cough from the corner of the room. An Aesther, translucent except for an odd hunting cap, speaks up.</p><p>\"Oh, don’t mind me. Just observing today. Answer’s quite simple. One of them and only one is definitely the murderer. Would it help if I told you at least one of these two are lying?\"</p>",
 		"options": {
 			"A": {
 				"trigger": "Arrest the left portion of the Harrower.",
-				"text": "<p>You summon the guards to arrest the left portion of the Harrower. The Aesther shakes his head. \"No no, if either of them are lying, they both must be lying—otherwise they've both confessed, and we know only one side is at fault. That means the portion that claims they didn't kill him actually did do the dirty deed, and the left portion that claims to be the murderer is actually just confused.\"</p><p>The odd Aesther in the hunting cap disappears a moment later. The guards discuss it among themselves and agree they should actually arrest the right portion of the Harrower. They thank you for your time, even if you didn't crack the case yourself.</p>",
+				"text": "<p>You summon the guards to arrest the left portion of the Harrower. The Aesther shakes his head. \"No no, if either of them are lying, they both must be lying—otherwise they’ve both confessed, and we know only one side is at fault. That means the portion that claims they didn’t kill him actually did do the dirty deed, and the left portion that claims to be the murderer is actually just confused.\"</p><p>The odd Aesther in the hunting cap disappears a moment later. The guards discuss it among themselves and agree they should actually arrest the right portion of the Harrower. They thank you for your time, even if you didn’t crack the case yourself.</p>",
 				"rewards": {
 					"text": "No effect."
 				}
 			},
 			"B": {
 				"trigger": "Arrest the right portion of the Harrower.",
-				"text": "<p>You realize that if one of them is lying, they both must be lying. That means the right portion of the Harrower is the half being rejected for their murderous drives. You summon the guards accordingly.</p><p>The Aesther tips his hunting cap approvingly. \"Another mystery solved with the help of Detective Elsewhere! I'm sure they'll be more complex in the future. Of course, the real trick will be separating the two, but I'll leave you to it.\" With that, he steps into a rift and is gone.</p>",
+				"text": "<p>You realize that if one of them is lying, they both must be lying. That means the right portion of the Harrower is the half being rejected for their murderous drives. You summon the guards accordingly.</p><p>The Aesther tips his hunting cap approvingly. \"Another mystery solved with the help of Detective Elsewhere! I’m sure they’ll be more complex in the future. Of course, the real trick will be separating the two, but I’ll leave you to it.\" With that, he steps into a rift and is gone.</p>",
 				"rewards": {
 					"text": "Gain 2 morale."
 				}
@@ -363,7 +363,7 @@
 			"A": {
 				"trigger": "Determine who unlocked the gate and say it aloud now, then flip over the card.",
 				"requirement": "IF YOU SAID “VALRATH”",
-				"text": "<p>He hangs his head. “I can’t live another day in this place! I got some Algox to agree that if I let them in, they’d destroy the town, and without something left to guard I could return home to White Oak. This isn’t a life!”</p><p>You learn afterwards that he paid the Savvas a month’s wages to cover for him. The Valrath will get his wish: both he and the Savvas are sent back to White Oak for punishment as soon as the pass opens back up.</p><p>Curious that the helpful Aesther showed up at just the right time. You wonder if you’ll see him again...</p>",
+				"text": "<p>He hangs his head. “I can’t live another day in this place! I got some Algox to agree that if I let them in, they’d destroy the town, and without something left to guard I could return home to White Oak. This isn’t a life!”</p><p>You learn afterwards that he paid the Savvas a month’s wages to cover for him. The Valrath will get his wish: both he and the Savvas are sent back to White Oak for punishment as soon as the pass opens back up.</p><p>Curious that the helpful Aesther showed up at just the right time. You wonder if you’ll see him again…</p>",
 				"rewards": {
 					"text": "Gain 2 morale.<br/>Gain 10 experience each."
 				}
@@ -371,7 +371,7 @@
 			"B": {
 				"trigger": "Determine who unlocked the gate and say it aloud now, then flip over the card.",
 				"requirement": "IF YOU SAID “ORCHID” OR “SAVVAS” OR “HUMAN”",
-				"text": "<p>You point to someone and they’re clasped in irons. “It wasn’t me!” they shout. After a bit more thought, you realize that if the Savvas is lying, everyone else’s stories match up, leaving the Valrath as the culprit.</p><p>Before you have a chance to correct your mistake, the Valrath breaks down under the weight of his guilt. “Fine! I confess! I don’t care if you send me to the Ghost Fortress, it’s still better than Frosthaven!”</p><p>The guards take him away and make sure the lying Savvas is demoted to kitchen duty for the foreseeable future.</p>You wonder where that Aesther with the odd hat went off to...",
+				"text": "<p>You point to someone and they’re clasped in irons. “It wasn’t me!” they shout. After a bit more thought, you realize that if the Savvas is lying, everyone else’s stories match up, leaving the Valrath as the culprit.</p><p>Before you have a chance to correct your mistake, the Valrath breaks down under the weight of his guilt. “Fine! I confess! I don’t care if you send me to the Ghost Fortress, it’s still better than Frosthaven!”</p><p>The guards take him away and make sure the lying Savvas is demoted to kitchen duty for the foreseeable future.</p>You wonder where that Aesther with the odd hat went off to…",
 				"rewards": {
 					"text": "Lose 1 morale."
 				}
@@ -379,18 +379,18 @@
 		}
 	},
 	"WO-17": {
-		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won't board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it's up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain's log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship's entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
+		"text": "<p>Creaking into harbor comes a derelict ship with shredded sails. No one answers your hails, and the dockworkers won’t board for a superstitious fear of the \"Ghost Lurker,\" an ethereal monster that pillages ships and leaves them to drift into rocky cliffsides. So, then, it’s up to you.</p><p>The ship itself is totally unoccupied. One of the rowboats is missing, but a ship of this size would need both to safely evacuate the crew. The page in the Captain’s log that would detail the last hours of the ship has been torn out, and instead there is a hastily-scrawled note in shaky block letters: \"BURN IT.\" Most unusually, the ship’s entire supply of lamp oil has been spilled on the decks.</p><p>The cargo manifest shows eight crates of unknown origin being brought to the capital. A look below decks shows just one crate on board, sealed with a black tar on all sides. You try to move it, but realize it has been bolted to the hull.</p>",
 		"options": {
 			"A": {
 				"trigger": "Open the crate.",
-				"text": "Against the warnings of the superstitious dock workers, you carefully pry open the crate. The interior is lacquered and totally clean, as though someone had soaped and scrubbed the inside with a fine brush. A small, cracked egg sits at the center. You're not sure what it would have hatched into, but it's clear this one didn't survive.",
+				"text": "Against the warnings of the superstitious dock workers, you carefully pry open the crate. The interior is lacquered and totally clean, as though someone had soaped and scrubbed the inside with a fine brush. A small, cracked egg sits at the center. You’re not sure what it would have hatched into, but it’s clear this one didn’t survive.",
 				"rewards": {
 					"text": "Add [section_115.1] to the calendar in one week."
 				}
 			},
 			"B": {
 				"trigger": "Set fire to the ship.",
-				"text": "<p>You do not know what occurred here, but it is clear what needs to be done. You toss a burning rag onto the deck from the safety of the dock and push the ship back out to sea. It burns as the winds carry it into the bay, eventually disintegrating below the waves.</p><p>The dockworkers thank you for handling the matter, and there's a general air of relief.</p>",
+				"text": "<p>You do not know what occurred here, but it is clear what needs to be done. You toss a burning rag onto the deck from the safety of the dock and push the ship back out to sea. It burns as the winds carry it into the bay, eventually disintegrating below the waves.</p><p>The dockworkers thank you for handling the matter, and there’s a general air of relief.</p>",
 				"rewards": {
 					"text": "Gain 2 morale.",
 					"events": {
@@ -402,18 +402,18 @@
 	},
 	"WO-18": {},
 	"WO-19": {
-		"text": "<p>\"Mercenaries! I require you! In the name of art!\"</p><p>A Savvas stands at your front door, a long black scarf wrapped around its neck.</p><p>\"I am Eros, purveyor of culture and director of theater. I am putting on a play, tentatively titled The Depths of Anguish, reenacting the most noble of sacrifices on our shores at the hands of the Lurkers. It will be my magnum opus.\" It pauses, dramatically.</p><p>You try to explain that while your services are for hire, those services don't include play-acting. It's more the \"smashing\" type of services, really.</p><p>\"What? No, never—\" It looks a bit stunned that you'd even consider yourselves actors. \"No, I need you to stand guard in the ocean. This will be set on location at the shore, and I can't have an encore of the subject matter. I'll want you staged in the water, out of sight, just in case Lurkers try to write a sequel.\"</p>",
+		"text": "<p>\"Mercenaries! I require you! In the name of art!\"</p><p>A Savvas stands at your front door, a long black scarf wrapped around its neck.</p><p>\"I am Eros, purveyor of culture and director of theater. I am putting on a play, tentatively titled The Depths of Anguish, reenacting the most noble of sacrifices on our shores at the hands of the Lurkers. It will be my magnum opus.\" It pauses, dramatically.</p><p>You try to explain that while your services are for hire, those services don’t include play-acting. It’s more the \"smashing\" type of services, really.</p><p>\"What? No, never—\" It looks a bit stunned that you’d even consider yourselves actors. \"No, I need you to stand guard in the ocean. This will be set on location at the shore, and I can’t have an encore of the subject matter. I’ll want you staged in the water, out of sight, just in case Lurkers try to write a sequel.\"</p>",
 		"options": {
 			"A": {
 				"trigger": "Agree to defend the show from within the icy water.",
-				"text": "<p>The night of the show, you wade into the icy water, ready for Lurker attacks. What you weren't ready for was the assault on your ears as second-rate actors stumble through the unrealistic dialogue.</p><p>\"I'm going fast!\" shouts one. Ugh. Who would say that in combat?</p><p>The Lurkers you're there to protect against must have heard the reviews, because they weren't anywhere to be found. You retire at the end of the night a few coins richer, many of which need to be spent on hot tea to warm up.</p>",
+				"text": "<p>The night of the show, you wade into the icy water, ready for Lurker attacks. What you weren’t ready for was the assault on your ears as second-rate actors stumble through the unrealistic dialogue.</p><p>\"I’m going fast!\" shouts one. Ugh. Who would say that in combat?</p><p>The Lurkers you’re there to protect against must have heard the reviews, because they weren’t anywhere to be found. You retire at the end of the night a few coins richer, many of which need to be spent on hot tea to warm up.</p>",
 				"rewards": {
 					"text": "Gain 5 gold each.<br/>All characters start the next scenario with [brittle]."
 				}
 			},
 			"B": {
 				"trigger": "Try to convince Eros to let you defend the show from the guard tower.",
-				"text": "<p>You explain to Eros that being in the water won't do much good in the event of an attack, and that you'd have a much better vantage point from the guard towers... given that's what they're literally there for.</p><p>\"I see that this is a creative difference we will be unable to overcome. I bid you good day.\" The Savvas flips its scarf defiantly and moves on.</p><p>Later in the week, you're walking by a poorly-attended show on the docks and spot some other mercenaries keeping watch, weapons drawn, in the frigid ocean.</p><p>The show gets lukewarm reviews.</p>",
+				"text": "<p>You explain to Eros that being in the water won’t do much good in the event of an attack, and that you’d have a much better vantage point from the guard towers… given that’s what they’re literally there for.</p><p>\"I see that this is a creative difference we will be unable to overcome. I bid you good day.\" The Savvas flips its scarf defiantly and moves on.</p><p>Later in the week, you’re walking by a poorly-attended show on the docks and spot some other mercenaries keeping watch, weapons drawn, in the frigid ocean.</p><p>The show gets lukewarm reviews.</p>",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -421,10 +421,10 @@
 		}
 	},
 	"WO-20": {
-		"text": "<p>\"You know that I support this outpost's guard, but I've done everything I can.\" Mayor Satha stands firm in front of Captain Olmstead, who is speaking at a volume better suited for the battlements than the mayor's cabin home.</p><p>\"You can't be serious. We are this close to being able to support more troops, and you're telling me we can't stretch that little bit?\" The Captain looks on the verge of popping a blood vessel.</p><p>\"I've done everything I can. With any luck we've seen the last of the attacks. We haven 't seen one in...\" Satha looks over to a calendar with thick black X's denoting each attack. \"Well, that may have been the last one.\"</p><p>\"Can't you cut from the... the... I mean, there must be something!\" He grabs a decorative mug with Frosthaven's crest off Satha's desk, gesturing to it.</p><p>Satha takes the mug delicately out of his hands. \"The answer is no.\"</p>", 
+		"text": "<p>\"You know that I support this outpost’s guard, but I’ve done everything I can.\" Mayor Satha stands firm in front of Captain Olmstead, who is speaking at a volume better suited for the battlements than the mayor’s cabin home.</p><p>\"You can’t be serious. We are this close to being able to support more troops, and you’re telling me we can’t stretch that little bit?\" The Captain looks on the verge of popping a blood vessel.</p><p>\"I’ve done everything I can. With any luck we’ve seen the last of the attacks. We haven ’t seen one in…\" Satha looks over to a calendar with thick black X’s denoting each attack. \"Well, that may have been the last one.\"</p><p>\"Can’t you cut from the… the… I mean, there must be something!\" He grabs a decorative mug with Frosthaven’s crest off Satha’s desk, gesturing to it.</p><p>Satha takes the mug delicately out of his hands. \"The answer is no.\"</p>", 
 		"options": {
 			"A": {
-				"trigger": "You wouldn't want to make a habit of it, but you could kick in a bit from your personal coffers to assist in the upgrades to the barracks.",
+				"trigger": "You wouldn’t want to make a habit of it, but you could kick in a bit from your personal coffers to assist in the upgrades to the barracks.",
 				"requirement": "LOSE 10 COLLECTIVE GOLD",
 				"text": "<p>You step forward and offer to cover the remaining expenses for the barracks renovation. Satha smiles and thanks you, and Captain Olmstead beams. She turns to Olmstead:</p><p>\"See, I told you those mercenaries could do some good around here.\"</p>",
 				"rewards": {
@@ -432,7 +432,7 @@
 				}
 			},
 			"B": {
-				"trigger": "This is internal town business. They'll come up with the funds eventually.",
+				"trigger": "This is internal town business. They’ll come up with the funds eventually.",
 				"text": "You think better of interrupting the two most powerful people in Frosthaven and decide to come back later. Surely they can work this out between themselves.",
 				"rewards": {
 					"text": "No effect."
@@ -728,7 +728,7 @@
 	},
 	"WO-29": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>You’re admiring some new construction going up in town when you feel a nagging thought at the back of your mind. Your companions, the ones who’ve fought by your side for countless hours? <strong>They’re preparing to betray you.</strong></p><p>No... no… it’s worse than that. They already have betrayed you, conspiring to take everything you hold dear and twist it to their own ends. Monsters! What’s this? It’s unthinkable, but they are in fact... <strong>Lurkers in disguise?</strong> That... that doesn’t seem right. <strong>Polar bears in disguise?</strong> Hold on a second.</p><p>You shake off the sentiment and see two Vermling children giggling in a nearby alley. They dart off as you notice them.</p>",
+		"text": "<p>You’re admiring some new construction going up in town when you feel a nagging thought at the back of your mind. Your companions, the ones who’ve fought by your side for countless hours? <strong>They’re preparing to betray you.</strong></p><p>No… no… it’s worse than that. They already have betrayed you, conspiring to take everything you hold dear and twist it to their own ends. Monsters! What’s this? It’s unthinkable, but they are in fact… <strong>Lurkers in disguise?</strong> That… that doesn’t seem right. <strong>Polar bears in disguise?</strong> Hold on a second.</p><p>You shake off the sentiment and see two Vermling children giggling in a nearby alley. They dart off as you notice them.</p>",
 		"options": {
 			"A": {
 				"trigger": "Confront them about personal boundaries.",
@@ -752,14 +752,14 @@
 		"options": {
 			"A": {
 				"trigger": "Sell the cook some food.",
-				"text": "“Oh, thank you. I appreciate this so much. The captain’s been all over me to keep better track of that storeroom... I guess it’s not the first time.”",
+				"text": "“Oh, thank you. I appreciate this so much. The captain’s been all over me to keep better track of that storeroom… I guess it’s not the first time.”",
 				"rewards": {
 					"text": "Take one of each herb in the loot deck and shuffle them into a pile. Draw three: these are the herbs the chef desperately needs. He’ll buy as many of each type as you choose to sell him. For each herb you sell, gain 5 collective gold."
 				}
 			},
 			"B": {
 				"trigger": "Give the cook food from your supply at no charge.",
-				"text": "“You serious? Just... for free?” A grin spreads across his face from ear to ear. “Captain’s been all over me to keep better track of the storeroom... This’ll be the last time I screw up, I promise.”",
+				"text": "“You serious? Just… for free?” A grin spreads across his face from ear to ear. “Captain’s been all over me to keep better track of the storeroom… This’ll be the last time I screw up, I promise.”",
 				"rewards": {
 					"text": "Take one of each herb in the loot deck and shuffle them into a pile. Draw three: these are the herbs the chef desperately needs. He’ll take as many of each type as you choose to give him. For each herb you provide, gain 1 morale."
 				}
@@ -1006,7 +1006,7 @@
 	},
 	"WO-42": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>At noon exactly, the beeping starts. It is a high-pitched, sharp note, played in unison across Frosthaven. The first few times it goes nearly unnoticed, but as the tone comes more and more frequently its source becomes the only question on everyone’s lips.</p><p>You track the noise, beep by beep, to the walls of Frosthaven. A trek outside reveals wheel tracks in the snow and hundreds of devices evenly affixed around the entire perimeter.</p><p>“Oh yeah, those are bombs, no question.” Pinter Droman, Frosthaven’s resident tinkerer, looks up at you. “Mechanical bombs. Judging by the clockwork in this one, I’d say we’ve got an hour before they all go pop, maybe two tops. Whoo-wee, would not want to be the guy who has to rebuild after these go off!”</p><p>Hundreds of ticking bombs. One hour to stop the wall from being blown in. But they’re probably not going to stop at the walls...</p>",
+		"text": "<p>At noon exactly, the beeping starts. It is a high-pitched, sharp note, played in unison across Frosthaven. The first few times it goes nearly unnoticed, but as the tone comes more and more frequently its source becomes the only question on everyone’s lips.</p><p>You track the noise, beep by beep, to the walls of Frosthaven. A trek outside reveals wheel tracks in the snow and hundreds of devices evenly affixed around the entire perimeter.</p><p>“Oh yeah, those are bombs, no question.” Pinter Droman, Frosthaven’s resident tinkerer, looks up at you. “Mechanical bombs. Judging by the clockwork in this one, I’d say we’ve got an hour before they all go pop, maybe two tops. Whoo-wee, would not want to be the guy who has to rebuild after these go off!”</p><p>Hundreds of ticking bombs. One hour to stop the wall from being blown in. But they’re probably not going to stop at the walls…</p>",
 		"options": {
 			"A": {
 				"trigger": "Help the town guard remove the bombs before they explode.",
@@ -1062,7 +1062,7 @@
 	"WO-50": {},
 	"WO-51": {},
 	"WO-52": {
-		"text": "<p>The guard’s head rolling down the street—still in its helmet—leaves a lasting impression. Unfettered leap over the wall, sharpened arms spinning in a furious blitz. The guards step up as they always have before, but it’s clear they’re shaken. The Unfettered aren’t here to knock down buildings or set fire to the wall... they’re here to exterminate the populace.</p><p>“THIS ZONE BELONGS TO THE UNFETTERED. LEAVE OR DIE.”</p>",
+		"text": "<p>The guard’s head rolling down the street—still in its helmet—leaves a lasting impression. Unfettered leap over the wall, sharpened arms spinning in a furious blitz. The guards step up as they always have before, but it’s clear they’re shaken. The Unfettered aren’t here to knock down buildings or set fire to the wall… they’re here to exterminate the populace.</p><p>“THIS ZONE BELONGS TO THE UNFETTERED. LEAVE OR DIE.”</p>",
 		"options": {
 			"A": {
 				"trigger": "Leave your home.",
@@ -1124,14 +1124,31 @@
 		"unlockedBy": { "event": { "id": "SR-28" }}
 	},
 	"WO-61": {
-		"unlockedBy": { "event": { "id": "SO-19" }}
+		"unlockedBy": { "event": { "id": "SO-19" }},
+		"text": "<p>It’s a cold winter morning, and the town is alive with energy from the first light touching the snow. People shuttle decorations, sweet treats, and fireworks hidden away since summer toward the gathering in the middle of town. Today is the Winter Festival, a day to celebrate the success of this stubborn town and its stubborn inhabitants defying the odds.</p><p>Mayor Satha addresses the crowd, making note of the successes of the past difficult year. She calls for a moment of silence for those lost to attacks and the elements. Finally, she cracks a smile and says the words you’ve been waiting for: “Let’s eat!”</p><p>Honey-cakes, flamefruit tarts, meat pies, and cheese rolls tempt the festival-goers, and several have started in on the icewine a bit early in an effort to keep warm. Torches are lit and dancing takes hold deep into the night. The citizenry make it their duty to keep the party going until the last person stumbles home, closing the door to the chill with a warm heart.</p><p>It is a collective catharsis for the town of Frosthaven. It may not be hospitable, but it is home.</p>",
+		"options": {
+			"A": {
+				"trigger": "Help make sure everyone makes it back to their beds safely.",
+				"text": "<p>The fine liquor has taken hold of the populace. You help more than a dozen people home to their homes, herding them as a big, stumbling group. The last one drunkenly wishes you a “good knife” and presses some coins into your hand.</p><p>When you finally settle into bed yourself a smile is plastered over your face. You’ll remember this evening for a long while.</p>",
+				"rewards": {
+					"text": "Gain 2 morale.<br/>Gain 10 gold each.<br/>Place “Harvest Festival” campaign sticker on this week’s column of the calendar. Transfer over any sections in the covered weeks and add [section_57.3] to the week in each subsequent year."
+				}
+			},
+			"B": {
+				"trigger": "Keep the party going until sunrise.",
+				"text": "<p>You partake in icewine, juniper ale, and an axenut ale brewed by an industrious Quatryl. The dancing continues by torchlight, then by sunlight. As the sun warms the town, someone has the grand idea to jump—fully clothed—into the bay. Who are you to stop the fun?</p><p>As you rush from the water back to the welcoming bonfire, a towel wrapped around you, you can’t help but etch this moment into your memory. For all its trouble, Frosthaven is a beautiful place.</p>",
+				"rewards": {
+					"text": "Gain 3 morale.<br/>All characters start the next scenario with [bless].<br/>Place “Harvest Festival” campaign sticker on this week’s column of the calendar. Transfer over any sections in the covered weeks and add [section_57.3] to the week in each subsequent year."
+				}
+			}
+		}
 	},
 	"WO-62": {
 		"unlockedBy": { "event": { "id": "SO-09" }}
 	},
 	"WO-63": {
 		"unlockedBy": { "scenario": { "id": "059" }},
-		"text": "<p>You enter Satha’s cabin and are surprised to see the expressionless metal mask of the Orphan greet you.</p><p>“Hello,” the Orphan says. “I was just explaining to Mayor Satha the collective inefficiencies of Frosthaven’s organic workers and merchants and soldiers and leaders.”</p><p>Satha is doing her best to keep her patience, but the effort is exhausting. “Our new friend has a lot of feedback,” she grimaces. “This has been... a long conversation.”</p><p>“Yes,” the Orphan agrees, “I have had to speak much more slowly than I anticipated. But the Unfettered are here to help, and I have prepared an exhaustive list of potential improvements over your current mismanagement...”</p><p>“NO MORE!” Satha blurts, jumping out of her seat. “I mean, um, I think our friends here can help direct your efforts. I need to... uh...” She hurries out of the cabin, leaving you with the overly helpful automaton.</p><p>“What would you have us do?” the Orphan asks, unfazed.</p>",
+		"text": "<p>You enter Satha’s cabin and are surprised to see the expressionless metal mask of the Orphan greet you.</p><p>“Hello,” the Orphan says. “I was just explaining to Mayor Satha the collective inefficiencies of Frosthaven’s organic workers and merchants and soldiers and leaders.”</p><p>Satha is doing her best to keep her patience, but the effort is exhausting. “Our new friend has a lot of feedback,” she grimaces. “This has been… a long conversation.”</p><p>“Yes,” the Orphan agrees, “I have had to speak much more slowly than I anticipated. But the Unfettered are here to help, and I have prepared an exhaustive list of potential improvements over your current mismanagement…”</p><p>“NO MORE!” Satha blurts, jumping out of her seat. “I mean, um, I think our friends here can help direct your efforts. I need to… uh…” She hurries out of the cabin, leaving you with the overly helpful automaton.</p><p>“What would you have us do?” the Orphan asks, unfazed.</p>",
 		"options": {
 			"A": {
 				"trigger": "Ask the Unfettered for help collecting resources.",
@@ -1181,7 +1198,42 @@
 	},
 	"WO-74": {},
 	"WO-75": {
-		"unlockedBy": { "event": { "id": "SO-59" }}
+		"unlockedBy": { "event": { "id": "SO-59" }},
+		"text": "<p>“Hello? HELLO!?” a panicked Orchid calls out. Thwunk. “Arrrgh. Who left this bucket out? This fog is thicker than an Inox’s hide.”</p><p>You call out to the Orchid. It takes no small amount of yelling back and forth, but you finally find each other.</p><p>Frosthaven awoke this morning to find a mysterious thick fog blanketing the outpost. Everyone has been struggling just to make their way around and despite almost an hour of wandering, you’re still not sure if you’re walking through the logging camp or skirting the perimeter of the town hall.</p><p>You can just make out something in the distance though: a bright red shape so vibrant, it pierces the fog. Wait, could it be? It’s the well! Thank the Oak you voted to paint it red.</p><p>And Mayor Satha said democracy would have no effect on anything.</p>",
+		"options": {
+			"A1": {
+				"trigger": "Stay at the well. If you’re loud enough, people will come to you.",
+				"requirement": "[trait] RESOURCEFUL",
+				"text": "You grab the metal bucket and begin striking it like a bell. More and more of the town begin to show up and the atmosphere improves long before the weather does. By the time the fog dissipates, the whole outpost is gathered and enjoying each others’ company.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			},
+			"A2": {
+				"trigger": "Stay at the well. If you’re loud enough, people will come to you.",
+				"requirement": "[not] [trait] RESOURCEFUL",
+				"text": "Sound travels further than light in this fog. You and the Orchid stay at the bright red well, taking turns yelling. The sound draws outposters to you. Soon, the entire outpost has congregated at the well to ride out the strange weather. When the fog dissipates people head home, happy to put the whole affair behind them.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B1": {
+				"trigger": "Using the well as a reference point, make excursions to different parts of the outpost to find people who need help.",
+				"requirement": "[trait] EDUCATED",
+				"text": "You’ve studied the maps of Frosthaven and have the layout committed to memory. Now that you have your bearings, you’re able to traverse the outpost almost as quickly as you could without the fog. It doesn’t take long to gather all the outposters and lead them to the well. Safety in numbers! When the fog clears hours later, the outposters give a cheer for your helpfulness.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			},
+			"B2": {
+				"trigger": "Using the well as a reference point, make excursions to different parts of the outpost to find people who need help.",
+				"requirement": "[not] [trait] EDUCATED",
+				"text": "Using the well as a homing beacon, you make several excursions out into Frosthaven. It takes hours, but you finally lead everyone to the well. The fog eventually dissipates and you get a few nods in thanks.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
 	},
 	"WO-76": {
 		"unlockedBy": { "event": { "id": "SO-59" }}
@@ -1191,18 +1243,18 @@
 	"WO-79": {},
 	"WO-80": {
 		"unlockedBy": { "section": { "id": "25.2" }},
-		"text": "<p>\"You there! Come. I require assistance.\"</p><p>In front of you stands a portly man with a fur collared cape. The rest of his clothing show signs of travel. He must have just gotten in through the main gate, but you can't see any travelling gear or any other possessions.</p><p>\"You must be wondering, who is this fine merchant named Joseph and where are all his things,\" the man asks pointing at himself. \"I decided to move to Frosthaven and open a new venture, but my travelling assistants, you see, they all perished in the journey, and my merchandise is just sitting out there in the frozen wilderness. Can you help me carry it to Frosthaven?\"</p>",
+		"text": "<p>\"You there! Come. I require assistance.\"</p><p>In front of you stands a portly man with a fur collared cape. The rest of his clothing show signs of travel. He must have just gotten in through the main gate, but you can’t see any travelling gear or any other possessions.</p><p>\"You must be wondering, who is this fine merchant named Joseph and where are all his things,\" the man asks pointing at himself. \"I decided to move to Frosthaven and open a new venture, but my travelling assistants, you see, they all perished in the journey, and my merchandise is just sitting out there in the frozen wilderness. Can you help me carry it to Frosthaven?\"</p>",
 		"options": {
 			"A": {
 				"trigger": "Help Joseph.",
-				"text": "Three hours later, you find Joseph's merchandise. The crates are heavy and frozen. The way back is long and the merchant seems uninterested in carrying anything and instead regales you with promises of payment and tells you that he invented a new dish that \"will take Frosthaven by storm.\" Sadly, when you return, you realise that \"payment\" and \"new dish\" are one and the same, as he scoops out something called \"ice-cream,\" and hands you each a cup. It's delicious, but unpleasantly cold.",
+				"text": "Three hours later, you find Joseph’s merchandise. The crates are heavy and frozen. The way back is long and the merchant seems uninterested in carrying anything and instead regales you with promises of payment and tells you that he invented a new dish that \"will take Frosthaven by storm.\" Sadly, when you return, you realise that \"payment\" and \"new dish\" are one and the same, as he scoops out something called \"ice-cream,\" and hands you each a cup. It’s delicious, but unpleasantly cold.",
 				"rewards": {
 					"text": "Gain 1 morale.<br/>Add [section_163.3] to the calendar in five weeks."
 				}
 			},
 			"B": {
-				"trigger": "Steal Joseph's merchandise and sell it back to him.",
-				"text": "Finding Joseph's merchandise was easy enough as it was just left lying on the road. You wonder why no Algox had commandeered it. The merchant isn't exactly pleased that you're extorting him, but agrees to pay you for his possessions. You are unfortunately barred from ever purchasing the new dish he invented called \"ice-cream\" from the stand he's planning to eventually open up.",
+				"trigger": "Steal Joseph’s merchandise and sell it back to him.",
+				"text": "Finding Joseph’s merchandise was easy enough as it was just left lying on the road. You wonder why no Algox had commandeered it. The merchant isn’t exactly pleased that you’re extorting him, but agrees to pay you for his possessions. You are unfortunately barred from ever purchasing the new dish he invented called \"ice-cream\" from the stand he’s planning to eventually open up.",
 				"rewards": {
 					"text": "Gain 10 collective gold.<br/>Add [section_163.3] to the calendar in five weeks."
 				}
@@ -1211,7 +1263,7 @@
 	},
 	"WO-81": {
 		"unlockedBy": { "scenario": { "id": "014" }},
-		"text": "<p>Returning to town from a scouting mission, you notice the guard towers are empty. You make a mental note to check the schedule and report the deserters to Captain Olmstead, but as you approach the gate, you discover the guards are missing from their posts, too.</p><p>Before you can sound the alarm, you hear the screams. It doesn’t take long to figure out what’s going on—a trio of Lurkers skitter down the street, swiping at anything in range. They must have breached the defenses while you were gone!</p><p>The Lurkers turn their attention to you, twitching and jerking in odd fits. Their eyes look hollow and their movements frenetic. Before you can take action they scamper off. It doesn’t seem like they were running away from you—they’re searching for something.</p><p>Oh no, surely they’re not looking for the shards you found...</p>",
+		"text": "<p>Returning to town from a scouting mission, you notice the guard towers are empty. You make a mental note to check the schedule and report the deserters to Captain Olmstead, but as you approach the gate, you discover the guards are missing from their posts, too.</p><p>Before you can sound the alarm, you hear the screams. It doesn’t take long to figure out what’s going on—a trio of Lurkers skitter down the street, swiping at anything in range. They must have breached the defenses while you were gone!</p><p>The Lurkers turn their attention to you, twitching and jerking in odd fits. Their eyes look hollow and their movements frenetic. Before you can take action they scamper off. It doesn’t seem like they were running away from you—they’re searching for something.</p><p>Oh no, surely they’re not looking for the shards you found…</p>",
 		"options": {
 			"A": {
 				"trigger": "Focus on defense and protect the building housing the shards.",

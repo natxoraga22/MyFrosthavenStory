@@ -29,6 +29,9 @@
 	"47.1": {
 		"unlockedBy": { "event": { "id": "WO-07" }}
 	},
+	"57.3": {
+		"unlockedBy": [{ "event": { "id": "SO-36" }}, { "event": { "id": "WO-61" }}]
+	},
 	"62.2": {
 		"title": "Bathysphere Plans",
 		"unlockedBy": { "scenario": { "id": "022" }},
@@ -260,7 +263,12 @@
 		}
 	},
 	"179.5": {
-		"unlockedBy": { "event": { "id": "SO-10" }}
+		"title": "Metal Shipment",
+		"unlockedBy": { "event": { "id": "SO-10" }},
+		"text": "<p>A stern knock on your longhouse door reveals a man with skin as thick as leather. He tips his hat, then asks you to sign for a delivery as two men unload his wagon.</p><p>“Told you I’d come back around with those materials you ordered. The pass is brutal, but the gains are sweet.”",
+		"rewards": {
+			"text": "Gain 2 collective [lumber] and 5 collective [metal]."
+		}
 	},
 	"180.1": {
 		"title": "Great Dallum",

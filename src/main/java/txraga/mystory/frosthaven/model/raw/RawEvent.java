@@ -49,6 +49,7 @@ public class RawEvent {
 		private String text;
 		private Rewards rewards;
 		private boolean skipAttack;
+		private boolean returnCard;
 	}
 
 

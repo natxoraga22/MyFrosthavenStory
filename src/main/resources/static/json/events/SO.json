@@ -1,10 +1,10 @@
 {
 	"SO-01": {
-		"text": "<p>Knock knock knock! \"Mail call, open up.\"</p><p>You open the door to find a grumpy Quatryl With a low-riding sack of mail. She tosses a lumpy package wrapped in cord to you. \"No name, but this address. It's yours now!\"</p><p>As she walks away she snaps her fingers, remembering something. \"Oh, right. This too.\" She hands over a letter addressed to you. As she wanders off toward a drink, you rip the letter open to read a note scrawled in excellent cursive:</p><p class=\"ms-4\">\"Please do not open the package.<br/>We will retrieve it.<br/>—Leonidas and Maximus\"</p>",
+		"text": "<p>Knock knock knock! “Mail call, open up.”</p><p>You open the door to find a grumpy Quatryl With a low—riding sack of mail. She tosses a lumpy package wrapped in cord to you. “No name, but this address. It’s yours now!”</p><p>As she walks away she snaps her fingers, remembering something. “Oh, right. This too.” She hands over a letter addressed to you. As she wanders off toward a drink, you rip the letter open to read a note scrawled in excellent cursive:</p><p><span class=\"ms-4\">“Please do not open the package.</span><br/><span class=\"ms-4\">We will retrieve it.</span><br/><span class=\"ms-4\">—Leonidas and Maximus”</span></p>",
 		"options": {
 			"A": {
 				"trigger": "Open the package.",
-				"text": "<p>You tear open the edge of the package, just to get a peek. The closer you look, the less there is to see... it's empty. Sometime later a pair of Aesthers dressed in drab yellow arrive at your door.</p><p>\"Hello mercenaries. We are Leonidas—\"<br/>\"—and Maximus. We have come for our package.\"</p><p>You feign confusion and they return the sentiment.</p><p>\"Oh. Perhaps we have come too early—\"<br/>\"—or too late. We will return.\"</p>",
+				"text": "<p>You tear open the edge of the package, just to get a peek. The closer you look, the less there is to see… it’s empty. Sometime later a pair of Aesthers dressed in drab yellow arrive at your door.</p><p>“Hello mercenaries. We are Leonidas—”<br/>“—and Maximus. We have come for our package.”</p><p>You feign confusion and they return the sentiment.</p><p>“Oh. Perhaps we have come too early—”<br/>“—or too late. We will return.”</p>",
 				"rewards": {
 					"events": {
 						"SO": [{ "id": "SO-40" }]
@@ -12,8 +12,8 @@
 				}
 			},
 			"B": {
-				"trigger": "Respect the request.",
-				"text": "<p>Against all the curiosity in your being, you refrain from opening the lumpy package. A short while later two Aesthers dressed in drab yellow arrive at your door.</p><p>\"Hello mercenaries. We are Leonidas—\"<br/>\"—and Maximus. We have come for our package.\"</p><p>You hand it over, and they tear open the top, reaching much too deep inside to be obeying the laws of the universe. Out comes a large black diamond.</p><p>\"The Shadow Gem. We have—\"<br/>\"—your payment, as agreed.\"</p><p>They hand you a sack of coins and then turn and leave, passing the diamond back and forth between them.</p>",
+				"trigger": "Respect their request.",
+				"text": "<p>Against all the curiosity in your being, you refrain from opening the lumpy package. A short while later two Aesthers dressed in drab yellow arrive at your door.</p><p>“Hello mercenaries. We are Leonidas—”<br/>“—and Maximus. We have come for our package.”</p><p>You hand it over, and they tear open the top, reaching much too deep inside to be obeying the laws of the universe. Out comes a large black diamond.</p><p>“The Shadow Gem. We have—”<br/>“—your payment, as agreed.”</p><p>They hand you a sack of coins and then turn and leave, passing the diamond back and forth between them.</p>",
 				"rewards": {
 					"text": "Gain 30 collective gold."
 				}
@@ -22,18 +22,18 @@
 	},
 	"SO-02": {},
 	"SO-03": {
-		"text": "<p>\"Hear ye, hear ye! I am the crier of the Great Dallum, the most powerful seer the world has ever known!\" An ostentatiously dressed man is shouting in the middle of town, drawing a crowd. \"It is my great honor to advise you that the Great Dallum has selected this outpost for his next visitation!\"</p><p>There are audible gasps from the crowd. \"He will arrive in a fortnight! Prepare yourselves and be merry!\"</p><p>As the crier packs up, Frosthaven's citizenry come alive: \"The Great Dallum? Here?\" and \"We'll need to prepare a feast!\" and \"We'll need an offering—I've heard he grants the wishes of those who please him with lavish donations!\"</p><p>Even Mayor Satha looks to be hiding excitement under a façade of civility... this should be an event to remember.</p>",
+		"text": "<p>“Hear ye, hear ye! I am the crier of the Great Dallum, the most powerful seer the world has ever known!” An ostentatiously dressed man is shouting in the middle of town, drawing a crowd. “It is my great honor to advise you that the Great Dallum has selected this outpost for his next visitation!”</p><p>There are audible gasps from the crowd. “He will arrive in a fortnight! Prepare yourselves and be merry!”</p><p>As the crier packs up, Frosthaven’s citizenry come alive: “The Great Dallum? Here?” and “We’ll need to prepare a feast!” and “We’ll need an offering—I’ve heard he grants the wishes of those who please him with lavish donations!”</p><p>Even Mayor Satha looks to be hiding excitement under a façade of civility… this should be an event to remember.</p>",
 		"options": {
 			"A": {
 				"trigger": "Help clean the streets to make a good impression.",
-				"text": "<p>You put in the work to clean up the dirt-and-snow-covered streets of Frosthaven. Many of the residents come out to join you, excited. A young lady chats your ear off while sweeping, her face beaming.</p><p>\"I heard from a friend his watery-blue eyes see straight into your soul. He speaks quietly, but he knows your name without asking. He's the most incredible seer the world has ever known!\"</p>",
+				"text": "<p>You put in the work to clean up the dirt—and—snow—covered streets of Frosthaven. Many of the residents come out to join you, excited. A young lady chats your ear off while sweeping, her face beaming.</p><p>“I heard from a friend his watery—blue eyes see straight into your soul. He speaks quietly, but he knows your name without asking. He’s the most incredible seer the world has ever known!”</p>",
 				"rewards": {
 					"text": "Gain 1 morale and 1 inspiration.<br/>Add [section_180.1] to the calendar in two weeks."
 				}
 			},
 			"B": {
 				"trigger": "Assist in the preparation of a feast.",
-				"text": "<p>You join a hunting party gathering wild meats and harvesting vegetables outside Frosthaven. An older man has more spring in his step as he picks snowthistle to use as a tangy garnish.</p><p>\"He's got rough hands from working the fields before he got the gift of sight. Long, beautiful hair, not bald like me. Never met him, but heard he talks slow—not like me—he wants to make sure you get the attention you deserve. Great man, that Dallum.\"</p>",
+				"text": "<p>You join a hunting party gathering wild meats and harvesting vegetables outside Frosthaven. An older man has more spring in his step as he picks snowthistle to use as a tangy garnish.</p><p>“He’s got rough hands from working the fields before he got the gift of sight. Long, beautiful hair, not bald like me. Never met him, but heard he talks slow—not like me—he wants to make sure you get the attention you deserve. Great man, that Dallum.”</p>",
 				"rewards": {
 					"text": "Gain 1 morale.<br/>Gain 1 collective [snowthistle].<br/>Add [section_180.1] to the calendar in two weeks."
 				}
@@ -41,27 +41,27 @@
 		}
 	},
 	"SO-04": {
-		"text": "<p>A gentleman you haven't seen before wearing a dapper vest has set up a small table for cards on the street corner. He beckons you over.</p><p>\"Three Card Monte. Familiar? Simplest game there is.\" He pulls out three worn cards, frayed from use, and flips them upright on the table. \"Just need to watch the red queen. Ignore the spades. Just spot where she goes, nice an' easy.\" He flips the cards face-down and with slow, deliberate movements shuffles their positions. With a flourish he invites you to pick where the queen wound up.</p><p>You point to the queen. He flips it upright with feigned surprise. \"You got it! And on your first try. Say, why don't we make this interesting?\"</p><p>You agree to a wager. He shows you the queen, then shuffles the cards across the table. \"Tell you what, let's make this even simpler. I'll remove this one here...\" he plucks a card off the table, showing it's a spade. \"That leaves just two cards. Which'll it be?\" You're sure you followed the queen to the spot on the left.</p>",
+		"text": "<p>A gentleman you haven’t seen before wearing a dapper vest has set up a small table for cards on the street corner. He beckons you over.</p><p>“Three Card Monte. Familiar? Simplest game there is.” He pulls out three worn cards, frayed from use, and flips them upright on the table. “Just need to watch the red queen. Ignore the spades. Just spot where she goes, nice an’ easy.” He flips the cards face—down and with slow, deliberate movements shuffles their positions. With a flourish he invites you to pick where the queen wound up.</p><p>You point to the queen. He flips it upright with feigned surprise. “You got it! And on your first try. Say, why don’t we make this interesting?”</p><p>You agree to a wager. He shows you the queen, then shuffles the cards across the table. “Tell you what, let’s make this even simpler. I’ll remove this one here…” he plucks a card off the table, showing it’s a spade. “That leaves just two cards. Which’ll it be?” You’re sure you followed the queen to the spot on the left.</p>",
 		"options": {
 			"A": {
 				"trigger": "Pick the card on the left.",
-				"text": "You point to the card on the left. He flips it dramatically over—looks like a spade. \"Sorry, pal. It takes a certain smarts, better luck next time.\"",
+				"text": "You point to the card on the left. He flips it dramatically over—looks like a spade. “Sorry, pal. It takes a certain smarts, better luck next time.”",
 				"rewards": {
 					"text": "Lose 5 collective gold."
 				}
 			},
 			"B": {
 				"trigger": "Pick the card on the right.",
-				"text": "You point to the card on the right. He flips it dramatically over—looks like a spade. \"Sorry, pal. It takes a certain smarts, better luck next time.\"",
+				"text": "You point to the card on the right. He flips it dramatically over—looks like a spade. “Sorry, pal. It takes a certain smarts, better luck next time.”",
 				"rewards": {
 					"text": "Lose 5 collective gold."
 				}
 			},
 			"C": {
-				"requirement": "IF YOU SHOUTED \"CHEATING!\" OR \"NEITHER!\" INSTEAD OF CHOOSING A OR B",
-				"text": "<br/>You flip over both cards at the same time—aha! Two spades just like you suspected! You knock the table to the ground and drive the charlatan out of town. Sometimes the only way to beat a cheater is to beat them at your own game. Looks like he left behind a pouch of something...",
+				"requirement": "IF YOU SHOUTED “CHEATING!” OR “NEITHER!” INSTEAD OF CHOOSING A OR B",
+				"text": "<br/>You flip over both cards at the same time—aha! Two spades just like you suspected! You knock the table to the ground and drive the charlatan out of town. Sometimes the only way to beat a cheater is to beat them at your own game. Looks like he left behind a pouch of something…",
 				"rewards": {
-					"text": "Gain \"Lucky Dice\" [item_242]."
+					"text": "Gain “Lucky Dice” [item_242]."
 				}
 			}
 		}
@@ -70,7 +70,7 @@
 	"SO-06": {},
 	"SO-07": {},
 	"SO-08": {
-		"text": "<p>Regardless of season, Frosthaven and the surrounding environment is covered in a blanket of snow year-round. This week shows that even the most reliable of weather can take a break every now and then: the sun is shining, the air is warm, and the icy paths have melted into mud and stone.</p><p>The outposters are taking advantage of the heatwave by enjoying a splash in the bay. The Quatryl mail-carrier has taken to delivering popsicles made with ice harvested from the shade of the mountainside, and even Mayor Satha has paused her duties to take a running dive off the dock into the still-cold water.</p><p>Only one group is going about as normal: the town guard. Captain Olmstead has demanded the guard be at high alert and double the patrols.</p><p>He barks orders from the harbor tower at the sweating guards on patrol: \"All manner of sea life is just waiting to eat us alive! Be ready for them!\" The fully-armored guards look to be on the verge of collapse in the sweltering heat.</p>",
+		"text": "<p>Regardless of season, Frosthaven and the surrounding environment is covered in a blanket of snow year—round. This week shows that even the most reliable of weather can take a break every now and then: the sun is shining, the air is warm, and the icy paths have melted into mud and stone.</p><p>The outposters are taking advantage of the heatwave by enjoying a splash in the bay. The Quatryl mail—carrier has taken to delivering popsicles made with ice harvested from the shade of the mountainside, and even Mayor Satha has paused her duties to take a running dive off the dock into the still—cold water.</p><p>Only one group is going about as normal: the town guard. Captain Olmstead has demanded the guard be at high alert and double the patrols.</p><p>He barks orders from the harbor tower at the sweating guards on patrol: “All manner of sea life is just waiting to eat us alive! Be ready for them!” The fully—armored guards look to be on the verge of collapse in the sweltering heat.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -91,8 +91,8 @@
 				}
 			},
 			"B": {
-				"trigger": "Safety first. It's good someone is watching out for the relaxing populace.",
-				"text": "Screams ring out from the harbor, and Captain Olmstead blows a whistle hanging around his neck. Instantly, two teams of guards push past the outposters wading in the water and start stabbing spears at the icy waves. A red tint creeps through the bay—lightning eels were about to make a quick snack of Frosthaven's populace. Good thing someone was on the lookout... and shockingly enough, the eels make a pretty tasty dinner.",
+				"trigger": "Safety first. It’s good someone is watching out for the relaxing populace.",
+				"text": "Screams ring out from the harbor, and Captain Olmstead blows a whistle hanging around his neck. Instantly, two teams of guards push past the outposters wading in the water and start stabbing spears at the icy waves. A red tint creeps through the bay—lightning eels were about to make a quick snack of Frosthaven’s populace. Good thing someone was on the lookout… and shockingly enough, the eels make a pretty tasty dinner.",
 				"rewards": {
 					"text": "Gain 1 morale."
 				}
@@ -100,11 +100,11 @@
 		}
 	},
 	"SO-09": {
-		"text": "<p>\"I'm trying to explain, that's the very root cause of all of this! They're not aggressive by nature!\" Violet, the local Lurker researcher, is pleading on the street with Mayor Satha.</p><p>\"Right. And they have terrifying claws and razor-sharp protrusions because they're peaceful. \"Satha is having none of it. Violet is nervously balling up her purple scarf, clearly on the verge of a breakdown.</p><p>\"Please, you have to understand. My research suggests—\" Satha cuts the Valrath off.</p><p>\"Your research suggests the capital is willing to waste resources. Resources that could be put to use protecting the people of this outpost from those same Lurkers you so desperately want to repaint as benevolent! I'll be confiscating your supplies for the defense effort.\"</p>",
+		"text": "<p>“I’m trying to explain, that’s the very root cause of all of this! They’re not aggressive by nature!” Violet, the local Lurker researcher, is pleading on the street with Mayor Satha.</p><p>“Right. And they have terrifying claws and razor—sharp protrusions because they’re peaceful.” Satha is having none of it. Violet is nervously balling up her purple scarf, clearly on the verge of a breakdown.</p><p>“Please, you have to understand. My research suggests—” Satha cuts the Valrath off.</p><p>“Your research suggests the capital is willing to waste resources. Resources that could be put to use protecting the people of this outpost from those same Lurkers you so desperately want to repaint as benevolent! I’ll be confiscating your supplies for the defense effort.”</p>",
 		"options": {
 			"A": {
-				"trigger": "Come to Violet's aid—there's more to the Lurkers.",
-				"text": "<p>You intervene in the heated discussion and provide some reports from the field. Yes, the Lurkers can be an impressive adversary, but there are indications there's more to their actions. Violet is visibly relieved at your help.</p><p>Satha grunts. \"Fine, if you think there's value here, introduce her to the guard. But if her crackpot ideas don't pan out, I'm holding it against you lot.\"</p>",
+				"trigger": "Come to Violet’s aid—there’s more to the Lurkers.",
+				"text": "<p>You intervene in the heated discussion and provide some reports from the field. Yes, the Lurkers can be an impressive adversary, but there are indications there’s more to their actions. Violet is visibly relieved at your help.</p><p>Satha grunts. “Fine, if you think there’s value here, introduce her to the guard. But if her crackpot ideas don’t pan out, I’m holding it against you lot.”</p>",
 				"rewards": {
 					"events": {
 						"WO": [{ "id": "WO-62" }]
@@ -112,8 +112,8 @@
 				}
 			},
 			"B": {
-				"trigger": "Back up Satha's assessment—Lurker research is a waste of resources.",
-				"text": "<p>You can't help but side with Satha under the circumstances: the Lurkers have proven, time and again, to be vicious killing machines with physiology to match. You don't doubt that Violet means well, but if there are resources that could be used to protect the town, it's better for Satha to use them on defense rather than research projects.</p><p>Violet lowers her gaze, then walks off without another word, dejected.</p>",
+				"trigger": "Back up Satha’s assessment—Lurker research is a waste of resources.",
+				"text": "<p>You can’t help but side with Satha under the circumstances: the Lurkers have proven, time and again, to be vicious killing machines with physiology to match. You don’t doubt that Violet means well, but if there are resources that could be used to protect the town, it’s better for Satha to use them on defense rather than research projects.</p><p>Violet lowers her gaze, then walks off without another word, dejected.</p>",
 				"rewards": {
 					"events": {
 						"SO": [{ "id": "SO-39" }]
@@ -123,25 +123,25 @@
 		}
 	},
 	"SO-10": {
-		"text": "<p>\"Care to make a trade?\" A man with skin rough as leather beckons you over to the stool he's set on the main street through town. \"I've got the best deals on building materials, come have a chat.\" You wander over to hear his pitch.</p><p>\"The trick is buying this junk in bulk down in the real cities, then it's just a matter of hauling it up here. Massive profits for me, good deals for you. It'll take a few weeks to get here, but you can't beat the cost.\" He flips through a notepad, doing the math in his head. \"I've got enough room on the next shipment to squeeze in a few more things if you're interested. I'll even cut you a better deal than these other suckers just so I can head out before it gets dark.\"</p>",
+		"text": "<p>“Care to make a trade?” A man with skin rough as leather beckons you over to the stool he’s set on the main street through town. “I’ve got the best deals on building materials, come have a chat.” You wander over to hear his pitch.</p><p>“The trick is buying this junk in bulk down in the real cities, then it’s just a matter of hauling it up here. Massive profits for me, good deals for you. It’ll take a few weeks to get here, but you can’t beat the cost.” He flips through a notepad, doing the math in his head. “I’ve got enough room on the next shipment to squeeze in a few more things if you’re interested. I’ll even cut you a better deal than these other suckers just so I can head out before it gets dark.”</p>",
 		"options": {
 			"A": {
 				"trigger": "Order 5 [lumber] and 2 [metal] (requires 15 gold).",
-				"text": "The merchant marks down your order in his ledger. \"Alright, five lumber and two metal. Should be a few weeks before it gets here, what with the pass and all.\"",
+				"text": "The merchant marks down your order in his ledger. “Alright, five lumber and two metal. Should be a few weeks before it gets here, what with the pass and all.”",
 				"rewards": {
 					"text": "Lose 15 collective gold.<br/>Add [section_103.2] to the calendar in three weeks. If that week is in winter, add it to the second week of next summer instead."
 				}
 			},
 			"B": {
 				"trigger": "Order 5 [metal] and 2 [lumber] (requires 15 gold).",
-				"text": "The merchant marks down your order in his ledger. \"Got it, five metal and two lumber. I'll bring it over to your place when I get back.\"",
+				"text": "The merchant marks down your order in his ledger. “Got it, five metal and two lumber. I’ll bring it over to your place when I get back.”",
 				"rewards": {
 					"text": "Lose 15 collective gold.<br/>Add [section_179.5] to the calendar in three weeks. If that week is in winter, add it to the second week of next summer instead."
 				}
 			},
 			"C": {
 				"trigger": "Take him up on the offer some other time.",
-				"text": "\"Suit yourself. I'm sure there's a buyer looking for a deal somewhere in this popsicle.\"",
+				"text": "“Suit yourself. I’m sure there’s a buyer looking for a deal somewhere in this popsicle.”",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -149,38 +149,38 @@
 		}
 	},
 	"SO-11": {
-		"text": "<p>Pinter Droman, Frosthaven's resident Quatryl tinkerer, is unwrapping a package wrapped in brocade in his workshop.</p><p>\"Come take a look. Can't believe it. One of the guards just dropped this off. Says he found it on the hillside.\" Out from the cloth comes what looks like a long metallic-purple blade. \"Remarkable! Believe it or not, this is an antler from a Brummix. Quatryl settlers brought them here over a century ago, but they all died out. Or so I thought.\"</p><p>\"Watch this!\" He swings a heavy wrench at the antler, snapping it in two pieces.</p><p>\"Alright, let's see if the myths are true...\" He grabs the two halves of the antler and gently touches them together. Like magic, the two pieces fuse back together, looking as perfect as when he first unwrapped the antler. Pinter is grinning from ear to ear.\"</p><p>\"A marvel of nature! Now what should we use it for?\"</p>",
+		"text": "<p>Pinter Droman, Frosthaven’s resident Quatryl tinkerer, is unwrapping a package wrapped in brocade in his workshop.</p><p>“Come take a look. Can’t believe it. One of the guards just dropped this off. Says he found it on the hillside.” Out from the cloth comes what looks like a long metallic—purple blade. “Remarkable! Believe it or not, this is an antler from a Brummix. Quatryl settlers brought them here over a century ago, but they all died out. Or so I thought.”</p><p>“Watch this!” He swings a heavy wrench at the antler, snapping it in two pieces.</p><p>“Alright, let’s see if the myths are true…” He grabs the two halves of the antler and gently touches them together. Like magic, the two pieces fuse back together, looking as perfect as when he first unwrapped the antler. Pinter is grinning from ear to ear.</p><p>“A marvel of nature! Now what should we use it for?”</p>",
 		"options": {
 			"A": {
 				"trigger": "Use it as a mutable material for crafting.",
-				"text": "<p>Pinter fires up the furnace. \"We'll need to get it nice and toasty to melt this beauty!\" Pinter lobs the Brummix antler in. Soon, a purple liquid pours out the side and drains into the mold for three shiny purple bars.</p><p>\"Should be good for just about anything. Take it—just promise me if you ever find that beautiful Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
+				"text": "<p>Pinter fires up the furnace. “We’ll need to get it nice and toasty to melt this beauty!” Pinter lobs the Brummix antler in. Soon, a purple liquid pours out the side and drains into the mold for three shiny purple bars.</p><p>“Should be good for just about anything. Take it—just promise me if you ever find that beautiful Brummix, you treat it well. I heard they’re crazy for axenuts, if you’d believe it.”</p>",
 				"rewards": {
-					"text": "Gain 1 morale.<br/>Gain 3 collective material resources of any kind.<br/>Gain \"Brummix\" campaign sticker."
+					"text": "Gain 1 morale.<br/>Gain 3 collective material resources of any kind.<br/>Gain “Brummix” campaign sticker."
 				}
 			},
 			"B": {
 				"trigger": "Weave it into an art piece.",
-				"text": "<p>You return several hours later to find Pinter filing the last edges off a stunning purple necklace. He wipes it with the edge of his shirt sleeve and hands it to you.</p><p>\"You take it. Just promise me, if you ever find that enchanting Brummix, you treat it well. I heard they're crazy for axenuts, if you'd believe it.\"</p>",
+				"text": "<p>You return several hours later to find Pinter filing the last edges off a stunning purple necklace. He wipes it with the edge of his shirt sleeve and hands it to you.</p><p>“You take it. Just promise me, if you ever find that enchanting Brummix, you treat it well. I heard they’re crazy for axenuts, if you’d believe it.”</p>",
 				"rewards": {
-					"text": "Gain 1 morale.<br/>Gain \"Deathproof Charm\" [item].<br/>Gain \"Brummix\" campaign sticker."
+					"text": "Gain 1 morale.<br/>Gain “Deathproof Charm” [item].<br/>Gain “Brummix” campaign sticker."
 				}
 			}
 		}
 	},
 	"SO-12": {
-		"text": "<p>An incoming merchant ship tipped the town fishermen off to a dense school of large fish, about an hour's row up the bay. Captain Olmstead asked you to accompany and provide protection to the fishing expedition.</p><p>The merchants were right—after an afternoon in the calm water, the boat was full of enough fish to last the town half of winter. Which is why you're so dismayed when an Abael pops his head out of the water.</p><p>\"Per the Treaty of Deep Bay, these are our fish. Fin them over and leave immediately.\" He glares at you with black, unblinking eyes. You try to explain you've never heard of this treaty, but he cuts you off. \"Your disrespect for those already here and ignorance of our ways is no excuse. Give me the fish or face the consequences.\"</p>",
+		"text": "<p>An incoming merchant ship tipped the town fishermen off to a dense school of large fish, about an hour’s row up the bay. Captain Olmstead asked you to accompany and provide protection to the fishing expedition.</p><p>The merchants were right—after an afternoon in the calm water, the boat was full of enough fish to last the town half of winter. Which is why you’re so dismayed when an Abael pops his head out of the water.</p><p>“Per the Treaty of Deep Bay, these are our fish. Fin them over and leave immediately.” He glares at you with black, unblinking eyes. You try to explain you’ve never heard of this treaty, but he cuts you off. “Your disrespect for those already here and ignorance of our ways is no excuse. Give me the fish or face the consequences.”</p>",
 		"options": {
 			"A": {
-				"trigger": "You have plenty of enemies already, and it's not worth making more. Besides, you have no idea how many Abaeli are in the water below you.",
-				"text": "Even if this treaty is nonsense, it's not worth the risk. You order the fishermen to dump the fish overboard. They grumble, but comply. With a splash, you watch lunch slowly sink into the depths.",
+				"trigger": "You have plenty of enemies already, and it’s not worth making more. Besides, you have no idea how many Abaeli are in the water below you.",
+				"text": "Even if this treaty is nonsense, it’s not worth the risk. You order the fishermen to dump the fish overboard. They grumble, but comply. With a splash, you watch lunch slowly sink into the depths.",
 				"rewards": {
 					"text": "Lose 1 morale."
 				},
 				"skipAttack": true
 			},
 			"B": {
-				"trigger": "There's no treaty. This Abael is full of chum and just wants a free lunch. Keep the fish and row back to Frosthaven.",
-				"text": "\"You'll regret this! The Treaty has very specific penalties for violations!\" He yells after you, just before disappearing under the waves.",
+				"trigger": "There’s no treaty. This Abael is full of chum and just wants a free lunch. Keep the fish and row back to Frosthaven.",
+				"text": "“You’ll regret this! The Treaty has very specific penalties for violations!” He yells after you, just before disappearing under the waves.",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -189,7 +189,7 @@
 		"outpostAttack": {
 			"attack": 20,
 			"target": 3,
-			"targetPriority": "Target even-numbered buildings in order of closest to farthest from the docks (players break ties).",
+			"targetPriority": "Target even—numbered buildings in order of closest to farthest from the docks (players break ties).",
 			"text": "With the last of the Abaeli swimming away, you can finally dock. Satha demands to know what happened. At least you brought lunch.",
 			"rewards": {
 				"text": "Gain 1 morale."
@@ -197,13 +197,13 @@
 		}
 	},
 	"SO-13": {
-		"text": "<p>A Valrath man comes up to you in the street. \"Say... you spend some time outside the walls, right? Happened to come across any snowthistle?\" He speaks in a low voice, and his hood makes it difficult to make out his face.</p><p>Before you have a chance to respond, a portly woman rushes up with a broom, smacking the Valrath on the back. \"You again?! Leave these people alone!\" The valrath scurries off into an alley without another word. The woman turns to you, her hands on her hips.</p><p>\"Valraths and snowthistle, am I right? For most people it's a garnish, or medicinal. For them—well, they can't get enough of the stuff. Addicts!\" She mumbles to herself as she heads back into her home.</p><p>You continue your walk, but hear the Valrath's voice down the alley. \"So? Have any? I've got coin.\"</p>",
+		"text": "<p>A Valrath man comes up to you in the street. “Say… you spend some time outside the walls, right? Happened to come across any snowthistle?” He speaks in a low voice, and his hood makes it difficult to make out his face.</p><p>Before you have a chance to respond, a portly woman rushes up with a broom, smacking the Valrath on the back. “You again?! Leave these people alone!” The valrath scurries off into an alley without another word. The woman turns to you, her hands on her hips.</p><p>“Valraths and snowthistle, am I right? For most people it’s a garnish, or medicinal. For them—well, they can’t get enough of the stuff. Addicts!” She mumbles to herself as she heads back into her home.</p><p>You continue your walk, but hear the Valrath’s voice down the alley. “So? Have any? I’ve got coin.”</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Sell the Valrath some snowthistle (requires [snowthistle]).",
 				"requirement": "[trait] VALRATH",
-				"text": "The Valrath energetically prepares some of your snowthistle for sharing. Surely, a little bit couldn't hurt—oh, it's evening now. Well, just a bit more for the road—is that the morning sun? The buyer smiles. \"Let me know if you get more. Happy to share.\"",
+				"text": "The Valrath energetically prepares some of your snowthistle for sharing. Surely, a little bit couldn’t hurt—oh, it’s evening now. Well, just a bit more for the road—is that the morning sun? The buyer smiles. “Let me know if you get more. Happy to share.”",
 				"rewards": {
 					"text": "Gain 1 morale and 15 collective gold.<br/>Lose all collective [snowthistle]."
 				}
@@ -212,7 +212,7 @@
 				"id": "A",
 				"trigger": "Sell the Valrath some snowthistle (requires [snowthistle]).",
 				"requirement": "[not] [trait] VALRATH",
-				"text": "You hand the Valrath some snowthistle, and he licks his lips. \"Good, nice quality. Happy to put any excess to you have to better use...\"",
+				"text": "You hand the Valrath some snowthistle, and he licks his lips. “Good, nice quality. Happy to put any excess to you have to better use…”",
 				"rewards": {
 					"text": "Lose any number of collective [snowthistle].<br/>Gain 5 collective gold for each [snowthistle] lost."
 				}
@@ -221,7 +221,7 @@
 				"id": "B",
 				"trigger": "Admonish the Valrath for this pursuits.",
 				"requirement": "[trait] PERSUASIVE",
-				"text": "You offer encouraging words, reminding the Valrath that his pursuits don't need to define who he is. He grumbles as he slinks down the alley. \"I'll, uh, consider what you said.\"",
+				"text": "You offer encouraging words, reminding the Valrath that his pursuits don’t need to define who he is. He grumbles as he slinks down the alley. “I’ll, uh, consider what you said.”",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -230,7 +230,7 @@
 				"id": "B",
 				"trigger": "Admonish the Valrath for this pursuits.",
 				"requirement": "[not] [trait] PERSUASIVE",
-				"text": "You tell the Valrath just how troubling his actions are for society. He waves you off. \"Keep your opinions to yourself! And, uh, let me know if you come across some snowthistle, obviously.\"",
+				"text": "You tell the Valrath just how troubling his actions are for society. He waves you off. “Keep your opinions to yourself! And, uh, let me know if you come across some snowthistle, obviously.”",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -238,12 +238,12 @@
 		}
 	},
 	"SO-14": {
-		"text": "<p>A group of mercenaries are strapping supplies onto a donkey-drawn wagon. A woman in gleaming armor stows a warhammer, ignoring the agitated old man nattering at her.</p><p>\"Bah, go on then and rush to your deaths. There's nothing up that mountain but an unmarked grave with your name on it.\" He scrunches his face, struggling. \"Or I should say without your name on it! Because it'll be unmarked, and no one will find you!\"</p><p>He turns to you. \"These mercenaries are abandoning Frosthaven to venture into the hills for adventure. Waste of good manpower, I say!\" The mercenaries certainly look to be on the younger side, still excited for a march outside the walls.</p><p>A plucky Quatryl gathers a crowd with notes from her lute, hopping onto the back of the donkey. \"How about it, then? Who will fund our journey to treasure?\"</p>",
+		"text": "<p>A group of mercenaries are strapping supplies onto a donkey—drawn wagon. A woman in gleaming armor stows a warhammer, ignoring the agitated old man nattering at her.</p><p>“Bah, go on then and rush to your deaths. There’s nothing up that mountain but an unmarked grave with your name on it.” He scrunches his face, struggling. “Or I should say without your name on it! Because it’ll be unmarked, and no one will find you!”</p><p>He turns to you. “These mercenaries are abandoning Frosthaven to venture into the hills for adventure. Waste of good manpower, I say!” The mercenaries certainly look to be on the younger side, still excited for a march outside the walls.</p><p>A plucky Quatryl gathers a crowd with notes from her lute, hopping onto the back of the donkey. “How about it, then? Who will fund our journey to treasure?”</p>",
 		"options": {
 			"A": {
 				"trigger": "Mercenaries should be supported. Help them purchase supplies in return for a cut of what they find.",
 				"requirement": "LOSE 10 COLLECTIVE GOLD AND ANY 2 COLLECTIVE HERB RESOURCES",
-				"text": "You see them safely on their way and hope for the best as they make their way out of Frosthaven's gate and into the unknown. The backing of someone like you is enough for the town to also throw in their support, and an Orchid with a longbow strapped to his back nods in thanks as they pass.",
+				"text": "You see them safely on their way and hope for the best as they make their way out of Frosthaven’s gate and into the unknown. The backing of someone like you is enough for the town to also throw in their support, and an Orchid with a longbow strapped to his back nods in thanks as they pass.",
 				"rewards": {
 					"text": "Gain 1 morale.",
 					"events": {
@@ -252,8 +252,8 @@
 				}
 			},
 			"B": {
-				"trigger": "The old man's right. They're walking to their doom. Try to stop them.",
-				"text": "<p>You stop an Orchid mercenary as he loads the last of the meager supplies onto the wagon. He clearly hasn't seen much combat—you describe just how dangerous this could be.</p><p>\"I... uh, I didn't think of it that way. He walks off to talk with his companions who start looking more concerned. Eventually, he returns. \"Thanks for the dose of reality. I'm probably better off just joining the town guard. I guess we won't be needing this.\" He hands you the object that inspired their adventure.</p>",
+				"trigger": "The old man’s right. They’re walking to their doom. Try to stop them.",
+				"text": "<p>You stop an Orchid mercenary as he loads the last of the meager supplies onto the wagon. He clearly hasn’t seen much combat—you describe just how dangerous this could be.</p><p>“I… uh, I didn’t think of it that way.” He walks off to talk with his companions who start looking more concerned. Eventually, he returns. “Thanks for the dose of reality. I’m probably better off just joining the town guard. I guess we won’t be needing this.” He hands you the object that inspired their adventure.</p>",
 				"rewards": {
 					"text": "Gain one random side scenario.<br/>Gain 1 soldier."
 				}
@@ -261,12 +261,12 @@
 		}
 	},
 	"SO-15": {
-		"text": "<p>\"Damn White Oak! They give us half a budget and still expect us to stay alive!\"</p><p> Captain Olmstead is stomping around angrily. He punctuates his frustration by knocking a weapon rack to the floor.</p><p>\"Upgrades to the barracks could mean the difference of lives in this town, and we're stuck filing requests that take months to get through the pass and back—just to have their stupid red 'rejected' stamps!\" He grabs a training sword and stabs it into the straw belly of a practice dummy. \"ARRGH!\"</p><p>This seems like a bad time to ask if there are any new jobs posted.</p>",
+		"text": "<p>“Damn White Oak! They give us half a budget and still expect us to stay alive!”</p><p> Captain Olmstead is stomping around angrily. He punctuates his frustration by knocking a weapon rack to the floor.</p><p>“Upgrades to the barracks could mean the difference of lives in this town, and we’re stuck filing requests that take months to get through the pass and back—just to have their stupid red ’rejected’ stamps!” He grabs a training sword and stabs it into the straw belly of a practice dummy. “ARRGH!”</p><p>This seems like a bad time to ask if there are any new jobs posted.</p>",
 		"options": {
 			"A": {
 				"trigger": "Offer to cover the cost of upgrading the barracks yourself.",
 				"requirement": "LOSE 10 COLLECTIVE GOLD",
-				"text": "<p>You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead's eyes widen.</p><p>\"You mercenaries are not nearly the scum Satha thinks you are. I'm going to tell her right now!\"",
+				"text": "<p>You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead’s eyes widen.</p><p>“You mercenaries are not nearly the scum Satha thinks you are. I’m going to tell her right now!”",
 				"rewards": {
 					"text": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
 				}
@@ -281,18 +281,18 @@
 		}
 	},
 	"SO-16": {
-		"text": "<p>You're settling in for the night when a stern knock raps against the front door to your longhouse. It's a squat, sweaty Quatryl mail carrier, intent on making a delivery to your longhouse. You look at the package: the address is right, but the name belongs to a previous resident who met an unfortunate end under an Algox raider's fist.</p><p>You nod noncommittally and accept the package. You're saving the mail carrier a long trip back with the box, really. Now you just have to figure out what to do with it.</p>",
+		"text": "<p>You’re settling in for the night when a stern knock raps against the front door to your longhouse. It’s a squat, sweaty Quatryl mail carrier, intent on making a delivery to your longhouse. You look at the package: the address is right, but the name belongs to a previous resident who met an unfortunate end under an Algox raider’s fist.</p><p>You nod noncommittally and accept the package. You’re saving the mail carrier a long trip back with the box, really. Now you just have to figure out what to do with it.</p>",
 		"options": {
 			"A": {
 				"trigger": "Keep the contents for yourself.",
-				"text": "Inside you find heartfelt letters, a warm sweater, home-baked bread, and lots of well-wishes from a family in the capital. It feels awful to sift through, knowing the intended recipient's fate.",
+				"text": "Inside you find heartfelt letters, a warm sweater, home—baked bread, and lots of well—wishes from a family in the capital. It feels awful to sift through, knowing the intended recipient’s fate.",
 				"rewards": {
 					"text": "Gain 5 collective gold."
 				}
 			},
 			"B": {
-				"trigger": "Pass it along to some of the previous resident's friends.",
-				"text": "You find some of the dead guard's companions at the barracks and hand off the package. Opening it is a somber occasion, but, ultimately, all of the homemade items inside lift the soldiers' spirits, and using them brings back fond memories of their friend.",
+				"trigger": "Pass it along to some of the previous resident’s friends.",
+				"text": "You find some of the dead guard’s companions at the barracks and hand off the package. Opening it is a somber occasion, but, ultimately, all of the homemade items inside lift the soldiers’ spirits, and using them brings back fond memories of their friend.",
 				"rewards": {
 					"text": "Gain 1 morale."
 				}
@@ -302,11 +302,11 @@
 	"SO-17": {},
 	"SO-18": {},
 	"SO-19": {
-		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: \"We've stocked enough away and the harvest is plentiful. It's about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?\"</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
+		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: “We’ve stocked enough away and the harvest is plentiful. It’s about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?”</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
 		"options": {
 			"A": {
 				"trigger": "Encourage her to declare a summertime holiday to celebrate the success of the season.",
-				"text": "<p>You explain the virtues of a summertime holiday, highlighting the freshness of the fruit and how the town could dance into the night with the later summer sunsets. Satha is readily swayed.</p><p>\"It's settled, then! we'll have a Summer Harvest Festival!\"</p>",
+				"text": "<p>You explain the virtues of a summertime holiday, highlighting the freshness of the fruit and how the town could dance into the night with the later summer sunsets. Satha is readily swayed.</p><p>“It’s settled, then! we’ll have a Summer Harvest Festival!”</p>",
 				"rewards": {
 					"events": {
 						"SO": [{ "id": "SO-36" }]
@@ -315,7 +315,7 @@
 			},
 			"B": {
 				"trigger": "Encourage her to store the resources for a winter holiday, when the town may need to lift its spirits.",
-				"text": "<p>You explain the virtues of a wintertime holiday, highlighting that hot drinks and bonfires could warm the hearts of the townsfolk, providing much needed merriment during the dark winter days. Satha is readily swayed.</p><p>\"It's settled, then! We'll have a Winter Festival!\"</p>",
+				"text": "<p>You explain the virtues of a wintertime holiday, highlighting that hot drinks and bonfires could warm the hearts of the townsfolk, providing much needed merriment during the dark winter days. Satha is readily swayed.</p><p>“It’s settled, then! We’ll have a Winter Festival!”</p>",
 				"rewards": {
 					"events": {
 						"WO": [{ "id": "WO-61" }]
@@ -330,18 +330,18 @@
 	},
 	"SO-22": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>A young boy sits by himself on the edge of the pier, the overhead sun casting a short shadow as his legs dangle over the water. He's dragging a rope attached to a wooden dowel through the water, occasionally stopping to throw chunks of rotting meat. It takes a few minutes, but you finally figure out what he's doing.</p><p>He's fishing. Or trying to, at least.</p><p>You recognize the boy—his father is a fisherman. Well, was, until he was killed in a recent attack. It seems like the kid is trying to do his father's job and help feed the town, but at this rate, he's more likely to scare fish away than catch any.</p>",
+		"text": "<p>A young boy sits by himself on the edge of the pier, the overhead sun casting a short shadow as his legs dangle over the water. He’s dragging a rope attached to a wooden dowel through the water, occasionally stopping to throw chunks of rotting meat. It takes a few minutes, but you finally figure out what he’s doing.</p><p>He’s fishing. Or trying to, at least.</p><p>You recognize the boy—his father is a fisherman. Well, was, until he was killed in a recent attack. It seems like the kid is trying to do his father’s job and help feed the town, but at this rate, he’s more likely to scare fish away than catch any.</p>",
 		"options": {
 			"A": {
 				"trigger": "Surreptitiously pay someone a few coins to give the kid some fishing lessons.",
-				"text": "You flag down a respectable looking deckhand, motion toward the kid, and drop a few coins in his hand. You watch as he puts a hand on the boy's shoulder and they start talking, then you go about your duties. A few hours later, you see them still deep in conversation. You smile.",
+				"text": "You flag down a respectable looking deckhand, motion toward the kid, and drop a few coins in his hand. You watch as he puts a hand on the boy’s shoulder and they start talking, then you go about your duties. A few hours later, you see them still deep in conversation. You smile.",
 				"rewards": {
 					"text": "Gain 1 morale.<br/>Lose 5 collective gold."
 				}
 			},
 			"B": {
 				"trigger": "Spend some time with the boy and teach him yourself.",
-				"text": "You approach the boy and sit down next to him. After a few minutes of silence, he looks at you and introduces himself. You ask if anything is biting today. Next thing you know, it's nightfall. You skipped out on today's assigned duties, but you're pretty sure you spent the day doing the most important work that could be done.",
+				"text": "You approach the boy and sit down next to him. After a few minutes of silence, he looks at you and introduces himself. You ask if anything is biting today. Next thing you know, it’s nightfall. You skipped out on today’s assigned duties, but you’re pretty sure you spent the day doing the most important work that could be done.",
 				"rewards": {
 					"text": "One character starts the next scenario discarding two cards.<br/>Gain 2 morale."
 				}
@@ -382,7 +382,7 @@
 			"race": "Unfettered",
 			"attack": 15,
 			"target": 4,
-			"targetPriority": "Wreck the Workshop.<br/>Target even-numbered buildings in order of closest to farthest from the Workshop (players break ties).",
+			"targetPriority": "Wreck the Workshop.<br/>Target even—numbered buildings in order of closest to farthest from the Workshop (players break ties).",
 			"text": "The detonation sends a shockwave throughout Frosthaven. The outposters will be much more careful about dragging in unknown machinery in the future.",
 			"rewards": {
 				"text": "Gain 1 [metal] each."
@@ -394,7 +394,7 @@
 	},
 	"SO-25": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>When the sun sets for the evening, an ominous blood-red moon rises in its place. It washes rough, crimson light over the landscape, painting the ocean in a flat maroon that gives the illusion of stillness.</p><p>Some of the locals have pulled chairs outside, chatting and gambling with the guards in the monochrome moonlight. The red haze makes it impossible to spot the Lurker marauders shuffling along the snowy beachfront, staying close to the ground, silent, inching closer to their victims.</p><p>By sheer luck, a patrolling guard’s torchlight illuminates a carapace sneaking up from the water. The Lurker seems to recoil from it as the alarm sounds.</p>",
+		"text": "<p>When the sun sets for the evening, an ominous blood—red moon rises in its place. It washes rough, crimson light over the landscape, painting the ocean in a flat maroon that gives the illusion of stillness.</p><p>Some of the locals have pulled chairs outside, chatting and gambling with the guards in the monochrome moonlight. The red haze makes it impossible to spot the Lurker marauders shuffling along the snowy beachfront, staying close to the ground, silent, inching closer to their victims.</p><p>By sheer luck, a patrolling guard’s torchlight illuminates a carapace sneaking up from the water. The Lurker seems to recoil from it as the alarm sounds.</p>",
 		"options": {
 			"A": {
 				"trigger": "Tell the guards to light up the town and drown out the red moonlight.",
@@ -415,7 +415,7 @@
 			"race": "Lurker",
 			"attack": 15,
 			"target": 2,
-			"targetPriority": "Target even-numbered buildings first, from lowest-level to highest-level.",
+			"targetPriority": "Target even—numbered buildings first, from lowest—level to highest—level.",
 			"text": "The moon passes behind some clouds and the Lurkers retreat from the streets back into the water. Frosthaven continues burning lamp oil until morning, just in case.",
 			"rewards": {
 				"text": "Gain 3 collective [hide]."
@@ -439,7 +439,7 @@
 	},
 	"SO-31": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>It’s a peaceful summer day in Frosthaven. The sun is shining, it’s warm enough to leave the fur coats inside, and the scouts report no enemy activity anywhere in the region. You and your fellow guards are alert, but relaxed. There’s absolutely no indication today isn’t going to end with a few drinks at The Crater and a peaceful night’s sleep.</p><p>Until the screaming starts. You spin around as a giant hole in the ground opens up in the middle of town, swallowing up a young couple having a picnic. Running toward the chaos, you hear a swirl of whirring, buzzing, and clanking coming from underground.</p><p>As you reach the edge and peer over, you realize this isn’t a hole... it’s a tunnel. You see a horde of automatons swarming and crawling on top of each other, climbing up toward the surface, about to spill out into the town.</p>",
+		"text": "<p>It’s a peaceful summer day in Frosthaven. The sun is shining, it’s warm enough to leave the fur coats inside, and the scouts report no enemy activity anywhere in the region. You and your fellow guards are alert, but relaxed. There’s absolutely no indication today isn’t going to end with a few drinks at The Crater and a peaceful night’s sleep.</p><p>Until the screaming starts. You spin around as a giant hole in the ground opens up in the middle of town, swallowing up a young couple having a picnic. Running toward the chaos, you hear a swirl of whirring, buzzing, and clanking coming from underground.</p><p>As you reach the edge and peer over, you realize this isn’t a hole… it’s a tunnel. You see a horde of automatons swarming and crawling on top of each other, climbing up toward the surface, about to spill out into the town.</p>",
 		"options": {
 			"A": {
 				"trigger": "Attack the machines as they climb out of the tunnel.",
@@ -481,7 +481,7 @@
 				}
 			},
 			"B": {
-				"trigger": "Mount an all-out attack to dislodge the Lurker brigands once and for all.",
+				"trigger": "Mount an all—out attack to dislodge the Lurker brigands once and for all.",
 				"text": "You gather a group of guards and gear up for a tough fight. You make a dent in their numbers, but the Lurkers counterattack with vicious force and you’re pushed back through the gate. At least they’re off the docks now.",
 				"rewards": {
 					"text": "-5 [attack]"
@@ -492,7 +492,7 @@
 			"race": "Lurker",
 			"attack": 30,
 			"target": 5,
-			"targetPriority": "Target even-numbered buildings from 30 to 80.",
+			"targetPriority": "Target even—numbered buildings from 30 to 80.",
 			"text": "With the Lurker brigands finally gone, the beleaguered ships are able to dock. The grateful crews stumble ashore, where they share a full meal with the dockworkers.",
 			"rewards": {
 				"text": "Gain 2 morale."
@@ -504,19 +504,19 @@
 	},
 	"SO-35": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>As you enter the barracks, you find Captain Olmstead staring down Eros, the local Savvas playwright. Eros taunts the Captain with a smirk, gathering the pot into a pocket in its scarf after a game of cards.</p><p>\"Don't worry, Captain. This money will be put towards building Unfettered costumes for my latest work: 'The Fettered Life: A Musical.' I'll be sure to list these barracks and especially you as a sponsor.\" Eros scoops up the last of the winnings and makes an exit.</p><p>Captain Olmstead looks to be on the verge of steam pouring out of his ears. He grabs a chair, snapping it in half with his bare hands. \"That was supposed to be for upgrading the barracks! ARRgh!\" He picks up the table, struggling to tear it apart.</p>",
+		"text": "<p>As you enter the barracks, you find Captain Olmstead staring down Eros, the local Savvas playwright. Eros taunts the Captain with a smirk, gathering the pot into a pocket in its scarf after a game of cards.</p><p>“Don’t worry, Captain. This money will be put towards building Unfettered costumes for my latest work: ’The Fettered Life: A Musical.’ I’ll be sure to list these barracks and especially you as a sponsor.” Eros scoops up the last of the winnings and makes an exit.</p><p>Captain Olmstead looks to be on the verge of steam pouring out of his ears. He grabs a chair, snapping it in half with his bare hands. “That was supposed to be for upgrading the barracks! ARRgh!” He picks up the table, struggling to tear it apart.</p>",
 		"options": {
 			"A": {
-				"trigger": "Offer to pay to upgrade the barracks; it's worth it for town defense.",
+				"trigger": "Offer to pay to upgrade the barracks; it’s worth it for town defense.",
 				"requirement": "LOSE 10 COLLECTIVE GOLD",
-				"text": "Captain Olmstead looks relieved, calming his breathing. \"It's not that I don't like art. I like art. I love music. I even love musicals. I just hate that Savvas.\" He centers himself. \"In any case, thank you.\"",
+				"text": "Captain Olmstead looks relieved, calming his breathing. “It’s not that I don’t like art. I like art. I love music. I even love musicals. I just hate that Savvas.” He centers himself. “In any case, thank you.”",
 				"rewards": {
 					"text": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
 				}
 			},
 			"B": {
 				"trigger": "This seems like the perfect time to be somewhere else.",
-				"text": "You make a hasty exit—no need to disturb the Captain when it's clear he needs some alone time. There will be other opportunities.",
+				"text": "You make a hasty exit—no need to disturb the Captain when it’s clear he needs some alone time. There will be other opportunities.",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -536,7 +536,29 @@
 		"unlockedBy": { "event": { "id": "SO-09" }}
 	},
 	"SO-40": {
-		"unlockedBy": { "event": { "id": "SO-01" }}
+		"unlockedBy": { "event": { "id": "SO-01" }},
+		"text": "<p>A pair of familiar Aesthers in drab yellow clothes approach you in the street.</p><p>“Hello mercenaries. We need your services—”</p><p>“—to receive a package. We will pay 10 gold.”</p><p>These guys again? You ask what sort of package is so important. One of them looks confused at your question, then produces a lumpy package wrapped in cord.</p><p>“This is the package today. We will receive—”</p><p>“—it yesterday. Do you accept?”</p><p>While Aesthers in general have an air of mystery, these two in particular make no sense.</p>",
+		"options": {
+			"A": {
+				"trigger": "Accept the job.",
+				"text": "<p>You agree to the Aesthers’ terms, and they flag down a passing mail carrier. They hand over the lumpy package.</p><p>“No name, but an address—”</p><p>“—it’s theirs now.”</p><p>The Quatryl mail carrier looks at them like they’re the oddest individuals in Frosthaven. She’s probably not wrong. “Sure guys. I’ll get it there. Just gonna stop off for a drink first.” The mail carrier rolls her eyes and heads off.</p>",
+				"rewards": {
+					"events": {
+						"SO": [{ "id": "SO-01" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Demand double the payment.",
+				"text": "<p>The Aesthers look surprised.</p><p>“That is not according to plan. Perhaps—”</p><p>“—we could pay half now, half on delivery.”</p><p>They shrug, then hand over a sack of gold and flag down a mail carrier. She takes the lumpy package from them.</p><p>She looks at the package, wrapped in cord. “There’s no name?”</p><p>“No name, but an address—”</p><p>“—it’s theirs now.”</p>",
+				"rewards": {
+					"text": "Gain 10 collective gold.",
+					"events": {
+						"SO": [{ "id": "SO-01" }]
+					}
+				}
+			}
+		}
 	},
 	"SO-41": {
 		"unlockedBy": { "event": { "id": "WO-17" }}
@@ -559,11 +581,11 @@
 	"SO-51": {},
 	"SO-52": {
 		"unlockedBy": { "event": { "id": "B-04" }},
-		"text": "<p>You rush to the docks in response to the alarm bells and find a massive shell washed up on the icy shore. Slowly... slowly, a head wider than the guard tower emerges. It is a giant sea turtle, beached on the land. It opens its mouth and addresses Frosthaven with a slow drawl:</p><p>\"Hello, City. I apologize for intruding, when I last came through here it looked very different. I knew you when you were just Ice. Or perhaps time has not been kind on my eyes.\" The turtle's eyes are nearly glazed over in a white film. It looks blind, or close to it.</p><p>Children playing on the docks laugh at the silliness of the creature. A young girl shouts, \"Did you get stuck, Mr. Turtle?\"</p><p>\"Oh, how youthful you sound, City! You must be quite new to this world. I do appear stuck. Any chance for a push?\"</p>",
+		"text": "<p>You rush to the docks in response to the alarm bells and find a massive shell washed up on the icy shore. Slowly… slowly, a head wider than the guard tower emerges. It is a giant sea turtle, beached on the land. It opens its mouth and addresses Frosthaven with a slow drawl:</p><p>“Hello, City. I apologize for intruding, when I last came through here it looked very different. I knew you when you were just Ice. Or perhaps time has not been kind on my eyes.” The turtle’s eyes are nearly glazed over in a white film. It looks blind, or close to it.</p><p>Children playing on the docks laugh at the silliness of the creature. A young girl shouts, “Did you get stuck, Mr. Turtle?”</p><p>“Oh, how youthful you sound, City! You must be quite new to this world. I do appear stuck. Any chance for a push?”</p>",
 		"options": {
 			"A": {
 				"trigger": "Rally the guard and give a push.",
-				"text": "<p>The town guard puts their backs into it and heaves the massive turtle back into the water.</p><p>\"Oh my, thank you, City! Such a polite young city. I will be sure to tell my friends.</p>",
+				"text": "<p>The town guard puts their backs into it and heaves the massive turtle back into the water.</p><p>“Oh my, thank you, City! Such a polite young city. I will be sure to tell my friends.”</p>",
 				"rewards": {
 					"text": "Gain 2 morale."
 				}
@@ -589,18 +611,18 @@
 	"SO-56": {},
 	"SO-57": {
 		"unlockedBy": { "section": { "id": "78.4" }},
-		"text": "<p>The gates to Frosthaven open to reveal a lone Vermling traveler. He looks in good spirits as he shuffles through the gate and sets down his pack.</p><p>\"You there!\" he calls out. \"I'm new in town, don't suppose you could point me in the direction of a hot meal? Warm, even. It's been a long journey.\"</p><p>You direct him to the best restaurant in town. It also happens to be the worst restaurant in town. It's the only restaurant, really.</p><p>\"Thank you, such hospitality. Oh—one more thing. I have quite an affection for tea. Don't suppose you have some herbs you'd be willing to part with? Or any interest in buying some of the more exotic specimens I'm carrying myself?\"</p>",
+		"text": "<p>The gates to Frosthaven open to reveal a lone Vermling traveler. He looks in good spirits as he shuffles through the gate and sets down his pack.</p><p>“You there!” he calls out. “I’m new in town, don’t suppose you could point me in the direction of a hot meal? Warm, even. It’s been a long journey.”</p><p>You direct him to the best restaurant in town. It also happens to be the worst restaurant in town. It’s the only restaurant, really.</p><p>“Thank you, such hospitality. Oh—one more thing. I have quite an affection for tea. Don’t suppose you have some herbs you’d be willing to part with? Or any interest in buying some of the more exotic specimens I’m carrying myself?”</p>",
 		"options": {
 			"A": {
 				"trigger": "Trade the Vermling some herbs from your personal collection.",
-				"text": "You offer the Vermling some plants and his eyes light up. \"Oh my, the varietals here are excellent! I'm sure we can work out a deal.\"",
+				"text": "You offer the Vermling some plants and his eyes light up. “Oh my, the varietals here are excellent! I’m sure we can work out a deal.”",
 				"rewards": {
 					"text": "Select any one type of herb now. For each herb of that type any character trades to the Vermling, they gain one of any other type of herb."
 				}
 			},
 			"B": {
 				"trigger": "Show the Vermling to the town garden.",
-				"text": "<p>You walk the Vermling tea aficionado over to the town garden. He is visibly overwhelmed at the sight.</p><p>\"It's beautiful! After traveling through so much ice, to see this lush greenery... I could weep!\" As if to demonstrate the point, he does. Openly.</p><p>Then Listerius, the Savvas gardener, emerges from the greenhouse and the two hit it off incredibly well, discussing herbs and teas until the sun goes down. Eventually, the Vermling turns to you and hands you some withered herbs. \"Thank you for showing this to me. I think I am home.\"</p>",
+				"text": "<p>You walk the Vermling tea aficionado over to the town garden. He is visibly overwhelmed at the sight.</p><p>“It’s beautiful! After traveling through so much ice, to see this lush greenery… I could weep!” As if to demonstrate the point, he does. Openly.</p><p>Then Listerius, the Savvas gardener, emerges from the greenhouse and the two hit it off incredibly well, discussing herbs and teas until the sun goes down. Eventually, the Vermling turns to you and hands you some withered herbs. “Thank you for showing this to me. I think I am home.”</p>",
 				"rewards": {
 					"text": "Gain 1 collective [arrowvine], 1 collective [flamefruit], and 1 collective [snowthistle]."
 				}
@@ -612,13 +634,13 @@
 	},
 	"SO-59": {
 		"unlockedBy": { "section": { "id": "189.1" }},
-		"text": "<p>Democracy: the lifeblood of a fledgling society. Now that the Town Hall is operational, you'll have the chance to weigh in on some of the important facets of life in Frosthaven—you'll finally have a say in the way this place is run!</p><p>\"Absolutely not.\" Mayor Satha's square jawline ripples with a tinge of anger. \"You don't have votes. You don't have say. This is a dictatorship at best.\"</p><p>\"Actually, ma'am, with all due respect—\" Captain Olmstead straightens the Frosthaven insignia on his lapel, his confidence uncharacteristically in check. \"—it would perhaps assist in town morale if you permitted voting on matters.\" Satha growls at him, balling her fists. \"... erm, small matters.\"</p><p>\"Fine! You can have one stupid vote, and then you're all going back to work keeping us from dying on the frozen tundra. And Captain? Something small. I want it to have zero effect on anything.\"</p>",
+		"text": "<p>Democracy: the lifeblood of a fledgling society. Now that the Town Hall is operational, you’ll have the chance to weigh in on some of the important facets of life in Frosthaven—you’ll finally have a say in the way this place is run!</p><p>“Absolutely not.” Mayor Satha’s square jawline ripples with a tinge of anger. “You don’t have votes. You don’t have say. This is a dictatorship at best.”</p><p>“Actually, ma’am, with all due respect—” Captain Olmstead straightens the Frosthaven insignia on his lapel, his confidence uncharacteristically in check. “—it would perhaps assist in town morale if you permitted voting on matters.” Satha growls at him, balling her fists. “… erm, small matters.”</p><p>“Fine! You can have one stupid vote, and then you’re all going back to work keeping us from dying on the frozen tundra. And Captain? Something small. I want it to have zero effect on anything.”</p>",
 		"options": {
 			"A": {
-				"trigger": "Vote to paint the town's well red.",
-				"text": "<p>You joyously cast your vote and wait for the results to come in. Captain Olmstead tallies them with care.</p><p>\"And that's seven votes for red. Congratulations, all.\"</p><p>Satha rolls her eyes. \"Fine. If that makes you feel like you had some power, great. It's pointless. Now get back to work!\"</p>",
+				"trigger": "Vote to paint the town’s well red.",
+				"text": "<p>You joyously cast your vote and wait for the results to come in. Captain Olmstead tallies them with care.</p><p>“And that’s seven votes for red. Congratulations, all.”</p><p>Satha rolls her eyes. “Fine. If that makes you feel like you had some power, great. It’s pointless. Now get back to work!”</p>",
 				"rewards": {
-					"text": "Gain 1 morale.<br/>Place \"Red Well\" campaign sticker on the town map in location G.",
+					"text": "Gain 1 morale.<br/>Place “Red Well” campaign sticker on the town map in location G.",
 					"events": {
 						"WO": [{ "id": "WO-75" }],
 						"WR": [{ "id": "WR-43" }]
@@ -626,10 +648,10 @@
 				}
 			},
 			"B": {
-				"trigger": "Vote to paint the town's well blue.",
-				"text": "<p>You throw in your votes and stand by in anticipation as Captain Olmstead tallies the votes.</p><p>\"Oh my. Seven votes for blue. We have our first decision by vote!\"</p><p>Satha cuts in. \"Also your last decision by vote. I hope it makes you feel like you had some power here. This is meaningless and won't change a thing.\"</p>",
+				"trigger": "Vote to paint the town’s well blue.",
+				"text": "<p>You throw in your votes and stand by in anticipation as Captain Olmstead tallies the votes.</p><p>“Oh my. Seven votes for blue. We have our first decision by vote!”</p><p>Satha cuts in. “Also your last decision by vote. I hope it makes you feel like you had some power here. This is meaningless and won’t change a thing.”</p>",
 				"rewards": {
-					"text": "Gain 1 morale.<br/>Place \"Blue Well\" campaign sticker on the town map in location G.",
+					"text": "Gain 1 morale.<br/>Place “Blue Well” campaign sticker on the town map in location G.",
 					"events": {
 						"WO": [{ "id": "WO-76" }],
 						"WR": [{ "id": "SR-40" }]

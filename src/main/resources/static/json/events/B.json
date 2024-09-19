@@ -1,51 +1,52 @@
 {
 	"B-01": {},
 	"B-02": {
-		"text": "<p>\"Cap'n? We've spotted her, upwind. \"A deckhand delivers the report to Captain Doghogger. You watch a flash of ambition flicker across the captain's eyes, and he turns to a shipmate in the crow's nest.</p><p>\"Keep your eyes on that starfish! We won't let her get away this time! Ready the cannons! Every available hand to an oar!\" He turns and nearly bumps into you, a bit taken aback. \"No time to explain—there's a starfish I've been hunting for two decades. She's as big as a freighter, and today's the day she feels my harpoon! Finally, the revenge of the _____________________!\" He kisses a locket on a gold chain around his neck. \"Agatha, it's time.\"</p>",
+		"text": "<p>“Cap’n? We’ve spotted her, upwind.” A deckhand delivers the report to Captain Doghogger. You watch a flash of ambition flicker across the captain’s eyes, and he turns to a shipmate in the crow’s nest.</p><p>“Keep your eyes on that starfish! We won’t let her get away this time! Ready the cannons! Every available hand to an oar!” He turns and nearly bumps into you, a bit taken aback. “No time to explain—there’s a starfish I’ve been hunting for two decades. She’s as big as a freighter, and today’s the day she feels my harpoon! Finally, the revenge of the ____________________!” He kisses a locket on a gold chain around his neck. “Agatha, it’s time.”</p>",
 		"options": {
 			"A1": {
 				"id": "A",
-				"trigger": "There's nothing to shoot at unless you catch it: grab an oar.",
+				"trigger": "There’s nothing to shoot at unless you catch it: grab an oar.",
 				"requirement": "[trait] STRONG",
-				"text": "You pull with concerted effort in time with the rest of the crew. The Wind mercilessly pushes you back, but as you feel the fatigue settling into your arms, a voice calls out from the crow's nest: \"She's there! we're pulling up on her!\"",
+				"text": "You pull with concerted effort in time with the rest of the crew. The Wind mercilessly pushes you back, but as you feel the fatigue settling into your arms, a voice calls out from the crow’s nest: “She’s there! we’re pulling up on her!”",
 				"rewards": {
 					"text": "Read outcome B and add +2 [attack]."
 				}
 			},
 			"A2": {
 				"id": "A",
-				"trigger": "There's nothing to shoot at unless you catch it: grab an oar.",
+				"trigger": "There’s nothing to shoot at unless you catch it: grab an oar.",
 				"requirement": "[not] [trait] STRONG",
-				"text": "You pull with concerted effort in time with the rest of the crew. The Wind mercilessly pushes you back, but as you feel the fatigue settling into your arms, a voice calls out from the crow's nest: \"She's there! we're pulling up on her!\"",
+				"text": "You pull with concerted effort in time with the rest of the crew. The Wind mercilessly pushes you back, but as you feel the fatigue settling into your arms, a voice calls out from the crow’s nest: “She’s there! we’re pulling up on her!”",
 				"rewards": {
 					"text": "Read outcome B and add +1 [attack]."
 				}
 			},
 			"B": {
 				"trigger": "Combat is your specialty: ready the cannons.",
-				"text": "Looming ahead is a starfish bigger than any you've ever seen. Its arms drift in and out of the water, propelling it forward. It pays you no mind, but the Captain grits his teeth and looks to you. \"Fire!\"",
+				"text": "Looming ahead is a starfish bigger than any you’ve ever seen. Its arms drift in and out of the water, propelling it forward. It pays you no mind, but the Captain grits his teeth and looks to you. “Fire!”",
 				"rewards": {
-					"text": "Select one character to perform [attack] 5, including a draw from their attack modifier deck. Ignore any effects that don't modify the value of the attack."
+					"text": "Select one character to perform [attack] 5, including a draw from their attack modifier deck. Ignore any effects that don’t modify the value of the attack."
 				}
 			},
 			"B1": {
 				"requirement": "RESULT > 6",
-				"text": "You sink the harpoon dead center in the beast, who howls a haunting scream, then sinks below the waves. The Captain lets a tear run openly down his face. \"Thank you. Finally, peace for my love.\"",
+				"text": "You sink the harpoon dead center in the beast, who howls a haunting scream, then sinks below the waves. The Captain lets a tear run openly down his face. “Thank you. Finally, peace for my love.”",
 				"rewards": {
 					"text": "All characters start the next scenario with [bless] x2."
 				}
 			},
 			"B2": {
 				"requirement": "RESULT <= 6",
-				"text": "The harpoon falls short of the massive starfish, and it continues on its way. The Captain dejectedly retires to his cabin, and you don't see him again for the remainder of the journey.",
+				"text": "The harpoon falls short of the massive starfish, and it continues on its way. The Captain dejectedly retires to his cabin, and you don’t see him again for the remainder of the journey.",
 				"rewards": {
 					"text": "Lose 2 morale."
-				}
+				},
+				"returnCard": true
 			}
 		}
 	},
 	"B-03": {
-		"text": "<p>It's a cold but gorgeous day for sailing. You're making excellent time, the wind is at your back, and with any luck, you'll arrive to your destination before sunset. Your gaze drifts off the side of the boat, then you spot it: a Lurker keeping perfect pace with your ship.</p><p>It breaches the surface of the water, flipping in the air before splashing back down. It locks eyes with you and you can almost feel its thoughts... it wants to race. Can that be right? Yes—yes, you're sure of it, it wants to race your boat.</p>",
+		"text": "<p>It’s a cold but gorgeous day for sailing. You’re making excellent time, the wind is at your back, and with any luck, you’ll arrive to your destination before sunset. Your gaze drifts off the side of the boat, then you spot it: a Lurker keeping perfect pace with your ship.</p><p>It breaches the surface of the water, flipping in the air before splashing back down. It locks eyes with you and you can almost feel its thoughts… it wants to race. Can that be right? Yes—yes, you’re sure of it, it wants to race your boat.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -60,26 +61,27 @@
 				"id": "A",
 				"trigger": "Accept the challenge to race.",
 				"requirement": "[not] [trait] NIMBLE",
-				"text": "You do your best to keep pace, but the Lurker is designed for the ocean, and you're fumbling with ropes on deck. It handily beats you.",
+				"text": "You do your best to keep pace, but the Lurker is designed for the ocean, and you’re fumbling with ropes on deck. It handily beats you.",
 				"rewards": {
 					"text": "All characters start the next scenario discarding two cards."
 				}
 			},
 			"B": {
 				"trigger": "This is undoubtedly a trap. Attack before it ambushes you.",
-				"text": "You agree to the race as a pretense, but meanwhile prepare to attack. Halfway through the race you open fire on the Lurker. It disappears under the water, and after some rumblings under the ship, reappears off to the side of your vessel. You spin the ship's wheel to turn toward it, but notice your rudder is floating in your wake. It wins this round, and you'll have to make repairs before challenging a Lurker again.",
+				"text": "You agree to the race as a pretense, but meanwhile prepare to attack. Halfway through the race you open fire on the Lurker. It disappears under the water, and after some rumblings under the ship, reappears off to the side of your vessel. You spin the ship’s wheel to turn toward it, but notice your rudder is floating in your wake. It wins this round, and you’ll have to make repairs before challenging a Lurker again.",
 				"rewards": {
 					"text": "Lose 1 collective [lumber]."
-				}
+				},
+				"returnCard": true
 			}
 		}
 	},
 	"B-04": {
-		"text": "<p>An enormous sea turtle easily twice the size of your ship pulls up alongside, making steady strokes to keep pace. The crew mans the harpoons, drawing down their sights. But then, against all odds, the sea turtle looks up and poses a question in a slow drawl:</p><p>\"Why, hello, Boat. Don't suppose you could point me to the nearest land. I'm quite tired and my eyesight isn't what it used to be.\"</p><p>The crew stammer incredulously, and finally the captain hollers back the question on everyone's mind: \"Are you a talking sea turtle?\"</p><p>The sea turtle looks stunned. \"Oh my, are you a talking boat?\"</p>",
+		"text": "<p>An enormous sea turtle easily twice the size of your ship pulls up alongside, making steady strokes to keep pace. The crew mans the harpoons, drawing down their sights. But then, against all odds, the sea turtle looks up and poses a question in a slow drawl:</p><p>“Why, hello, Boat. Don’t suppose you could point me to the nearest land. I’m quite tired and my eyesight isn’t what it used to be.”</p><p>The crew stammer incredulously, and finally the captain hollers back the question on everyone’s mind: “Are you a talking sea turtle?”</p><p>The sea turtle looks stunned. “Oh my, are you a talking boat?”</p>",
 		"options": {
 			"A": {
 				"trigger": "Direct the turtle to Frosthaven.",
-				"text": "\"Thank you, Boat! You are a credit to your species.\" With that, the sea turtle begins the arduous process of turning its enormous body, setting off for Frosthaven.",
+				"text": "“Thank you, Boat! You are a credit to your species.” With that, the sea turtle begins the arduous process of turning its enormous body, setting off for Frosthaven.",
 				"rewards": {
 					"events": {
 						"SO": [{ "id": "SO-52" }]
@@ -87,8 +89,8 @@
 				}
 			},
 			"B": {
-				"trigger": "The meat from this turtle could feed Frosthaven for months, and the shell undoubtedly has defensive applications... fire the harpoons.",
-				"text": "In silent conspiracy you nod to the captain, who gives the order to fire the harpoons. It's not much of a fight, but when it's over your ship is dragging a sturdy shell, and her decks are piled high with meat.",
+				"trigger": "The meat from this turtle could feed Frosthaven for months, and the shell undoubtedly has defensive applications… fire the harpoons.",
+				"text": "In silent conspiracy you nod to the captain, who gives the order to fire the harpoons. It’s not much of a fight, but when it’s over your ship is dragging a sturdy shell, and her decks are piled high with meat.",
 				"rewards": {
 					"text": "Gain 4 collective [hide].<br/>Lose 2 morale."
 				}
@@ -102,18 +104,18 @@
 	"B-09": {},
 	"B-10": {},
 	"B-11": {
-		"text": "<p>POP. POP! BOOOOOOOOM! An explosion rocks the ship from the port side, swinging the mast and throwing the crew into a frenzy of action. You rush to the side of the ship to find the cause: ominous barrels floating on the ocean's surface. Each has been painted blue in camouflage, but they're not hard to spot if you know what you're looking for.</p><p>A deckhand delivers a status report: \"Not too much damage to the ship... we're getting it patched up, and we'll be underway again soon. But there's a few dozen of these we can spot from the crow's nest. It's like an ocean minefield... wouldn't be surprised if someone set it for Lurkers.\"</p>",
+		"text": "<p>POP. POP! BOOOOOOOOM! An explosion rocks the ship from the port side, swinging the mast and throwing the crew into a frenzy of action. You rush to the side of the ship to find the cause: ominous barrels floating on the ocean’s surface. Each has been painted blue in camouflage, but they’re not hard to spot if you know what you’re looking for.</p><p>A deckhand delivers a status report: “Not too much damage to the ship… we’re getting it patched up, and we’ll be underway again soon. But there’s a few dozen of these we can spot from the crow’s nest. It’s like an ocean minefield… wouldn’t be surprised if someone set it for Lurkers.”</p>",
 		"options": {
 			"A": {
 				"trigger": "Send out a rowboat to retrieve one of the devices.",
-				"text": "A few crewmembers carefully pilot a rowboat out to the nearest barrel and hoist it back onto the ship. It's clearly made to blend in from below. It has an exceptionally sensitive ignition charge designed to detonate on impact—the whole setup would probably mean death to an unsuspecting Lurker. You deactivate it and stow it in the ship's hold for the time being.",
+				"text": "A few crewmembers carefully pilot a rowboat out to the nearest barrel and hoist it back onto the ship. It’s clearly made to blend in from below. It has an exceptionally sensitive ignition charge designed to detonate on impact—the whole setup would probably mean death to an unsuspecting Lurker. You deactivate it and stow it in the ship’s hold for the time being.",
 				"rewards": {
-					"text": "Gain \"Boom Barrel\" [item]."
+					"text": "Gain “Boom Barrel” [item_211]."
 				}
 			},
 			"B": {
 				"trigger": "An ocean full of explosives in your path? Sounds like target practice.",
-				"text": "\"Aim. FIRE!\" The prospect of destroying a minefield would be slow work were it not for the sheer fun of watching barrel after barrel detonate on the water. After a half dozen test explosions, the crew expertly uses the wake of the ship to knock barrels together, resulting in chain reactions of even more epic proportions. You don't know who put so much work into laying this trap, but there couldn't have been better entertainment on the way to your destination.",
+				"text": "“Aim. FIRE!” The prospect of destroying a minefield would be slow work were it not for the sheer fun of watching barrel after barrel detonate on the water. After a half dozen test explosions, the crew expertly uses the wake of the ship to knock barrels together, resulting in chain reactions of even more epic proportions. You don’t know who put so much work into laying this trap, but there couldn’t have been better entertainment on the way to your destination.",
 				"rewards": {
 					"text": "Gain 2 morale."
 				}

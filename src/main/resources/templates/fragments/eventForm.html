@@ -40,7 +40,7 @@
 	<script th:fragment="eventFormJs" th:inline="javascript">
 		new TomSelect("#inputEventId", { maxOptions: null });
 		const chosenOptionsIds = /*[[${#strings.listSplit(param.chosenOptions, ',')}]]*/ [];
-		new TomSelect("#inputChosenOptions", { items: chosenOptionsIds });
+		new TomSelect("#inputChosenOptions", { plugins: ["remove_button"], items: chosenOptionsIds, closeAfterSelect: true });
 	</script>
 </body>
 </html>

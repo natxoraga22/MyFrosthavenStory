@@ -1,35 +1,37 @@
 {
 	"SR-01": {},
 	"SR-02" : {
-		"text": "<p>\"Ho there! A moment of your time?\" from just off the path, a weathered Valrath calls for your attention. He approaches you with surprising speed despite the pack and gear strapped to his back. \"Edwin Merlsgate, Cartographer. You look familiar, have we met?\"</p><p>Before you can respond, he continues. \"I always forget a face, but never forget a trail. I can only cover so much ground, though—could we compare notes?\" He pulls out a scroll and quill, looking up expectantly.</p>",
+		"text": "<p>“Ho there! A moment of your time?” from just off the path, a weathered Valrath calls for your attention. He approaches you with surprising speed despite the pack and gear strapped to his back. “Edwin Merlsgate, Cartographer. You look familiar, have we met?”</p><p>Before you can respond, he continues. “I always forget a face, but never forget a trail. I can only cover so much ground, though—could we compare notes?” He pulls out a scroll and quill, looking up expectantly.</p>",
 		"options": {
 			"A": {
 				"trigger": "Share notes of your travels.",
-				"text": "<p>Edwin is overjoyed to hear of your travels.</p><p><strong class=\"fst-normal\">Mark a box next to each location in which you've completed at least one scenario:</strong></p><p><i class=\"fa-regular fa-square\"></i> Radiant Forest<br/><i class=\"fa-regular fa-square\"></i> Copperneck Mountains<br/><i class=\"fa-regular fa-square\"></i> Whitefire Wood<br/><i class=\"fa-regular fa-square\"></i> Crystal Fields<br/><i class=\"fa-regular fa-square\"></i> The Biting Sea</p><p>\"Thank you tremendously, that helps confirm several of the first-hand accounts I've collected. Nearly identical!\"</p>",
+				"text": "<p>Edwin is overjoyed to hear of your travels.</p><p><strong class=\"fst-normal\">Mark a box next to each location in which you’ve completed at least one scenario:</strong></p><p>[square] Radiant Forest<br/>[square] Copperneck Mountains<br/>[square] Whitefire Wood<br/>[square] Crystal Fields<br/>[square] The Biting Sea</p><p>“Thank you tremendously, that helps confirm several of the first-hand accounts I’ve collected. Nearly identical!”</p>",
 				"rewards": {
-					"text": "<p>Gain 3 collective gold for each checked box above.</p><p>When all boxes are checked:</p>",
+					"text": "<p>Gain 3 collective gold for each checked box above.</p><p>When all boxes are checked, remove this card from the deck and:</p>",
 					"events": {
 						"SO": [{ "id": "SO-42" }]
 					}
-				}
+				},
+				"returnCard": true
 			},
 			"B": {
 				"trigger": "Ask him about his more notable travels.",
-				"text": "<p>You note that you're not as well-traveled as he is, and ask if there's any locales he'd recommend.</p><p>\"I'm not a huge fan of the tourist-y places, but I can tell you about some exciting regions I've noted from afar...\"</p>",
+				"text": "<p>You note that you’re not as well-traveled as he is, and ask if there’s any locales he’d recommend.</p><p>“I’m not a huge fan of the tourist-y places, but I can tell you about some exciting regions I’ve noted from afar…”</p>",
 				"rewards": {
 					"text": "Gain 1 inspiration."
-				}
+				},
+				"returnCard": true
 			}
 		}
 	},
 	"SR-03" : {
-		"text": "<p>Camouflaged into an outcropping of a stone cliff face sits a savvas. You're trying to determine whether it's still alive when it proudly reveals itself with a long, gravely clearing of its throat.</p><p>\"Hello, adventurers.\" It lifts itself from the rock, standing with a creaking stretch. Some Savvas modify their bodies through painful sculpting, shaping their rocky skin like carved marble. This one has chiseled its face into the visage of a lion, and its chest glows with a swirl of black and white.</p><p>\"You look clever... answer me correctly, and I'll give you something worthy of your answer. Fail, and you shall suffer the punishment.\"</p><p>\"Fished from the waters, drawn from the earth.<br/>My presence bears both jealousy, and mirth.<br/>I've corrupted and captivated, I'm sought out and sold.<br/>If you still can't guess me: I'm worth my weight... in gold.\"</p>",
+		"text": "<p>Camouflaged into an outcropping of a stone cliff face sits a savvas. You’re trying to determine whether it’s still alive when it proudly reveals itself with a long, gravely clearing of its throat.</p><p>“Hello, adventurers.” It lifts itself from the rock, standing with a creaking stretch. Some Savvas modify their bodies through painful sculpting, shaping their rocky skin like carved marble. This one has chiseled its face into the visage of a lion, and its chest glows with a swirl of black and white.</p><p>“You look clever… answer me correctly, and I’ll give you something worthy of your answer. Fail, and you shall suffer the punishment.”</p><p>“Fished from the waters, drawn from the earth.<br/>My presence bears both jealousy, and mirth.<br/>I’ve corrupted and captivated, I’m sought out and sold.<br/>If you still can’t guess me: I’m worth my weight… in gold.”</p>",
 		"options": {
 			"A1": {
 				"id": "",
 				"trigger": "Solve the riddle and say your answer aloud now.",
-				"requirement": "IF YOU SAID \"GOLD\"",
-				"text": "<p>\"Clever, good.\" It scratches its stony fingers along its face in thought. \"Perhaps you are the ones. Return someday, we'll see.\" It curls back into the cliff face, then remembers your deal. \"Ah, and as promised, something worth its weight, right?\"</p>",
+				"requirement": "IF YOU SAID “GOLD”",
+				"text": "<p>“Clever, good.” It scratches its stony fingers along its face in thought. “Perhaps you are the ones. Return someday, we’ll see.” It curls back into the cliff face, then remembers your deal. “Ah, and as promised, something worth its weight, right?”</p>",
 				"rewards": {
 					"text": "Gain 1 inspiration.<br/>Gain 20 collective gold.",
 					"events": {
@@ -40,8 +42,8 @@
 			"A2": {
 				"id": "",
 				"trigger": "Solve the riddle and say your answer aloud now.",
-				"requirement": "IF YOU DIDN\"T SAY \"GOLD\"",
-				"text": "<p>\"Foolish. Only one thing is worth its weight in gold: gold itself. Not the ones I was looking for. Begone.\" The Savvas curls back into the cliff face, turning its lion head away. It ignores you as you move on, but you hear it mutter something under its breath.</p>",
+				"requirement": "IF YOU DIDN’T SAY “GOLD”",
+				"text": "<p>“Foolish. Only one thing is worth its weight in gold: gold itself. Not the ones I was looking for. Begone.” The Savvas curls back into the cliff face, turning its lion head away. It ignores you as you move on, but you hear it mutter something under its breath.</p>",
 				"rewards": {
 					"text": "All characters start the next scenario with [muddle].<br/>During battle goal selection in the next scenario, all characters draw one fewer card."
 				}
@@ -49,7 +51,7 @@
 		}
 	},
 	"SR-04": {
-		"text": "Just outside Frosthaven, right where the road begins to become less traveled, you find a man in dusty white vestments. A few burnt-down candles are on the ground next to him, dripping wax onto the rocks.</p><p>\"Would you like to make a donation?\" The young priest holds out a bowl for offerings. \"I would be happy to extend the blessings of the Great Oak to you as protection on your journeys.\"</p><p>He sees your trepidation in turning over hard-earned gold. \"The Sanctuary sent me here to set up a shrine, but I was unfortunately set upon by robbers. I just need a bit of time to earn back the funds. And my blessings are nearly as good as the ones you'd find elsewhere!\"",
+		"text": "Just outside Frosthaven, right where the road begins to become less traveled, you find a man in dusty white vestments. A few burnt-down candles are on the ground next to him, dripping wax onto the rocks.</p><p>“Would you like to make a donation?” The young priest holds out a bowl for offerings. “I would be happy to extend the blessings of the Great Oak to you as protection on your journeys.”</p><p>He sees your trepidation in turning over hard-earned gold. “The Sanctuary sent me here to set up a shrine, but I was unfortunately set upon by robbers. I just need a bit of time to earn back the funds. And my blessings are nearly as good as the ones you’d find elsewhere!”",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -57,21 +59,23 @@
 				"requirement": "LOSE 5 GOLD",
 				"text": "You drop a few coins in the wooden offering plate, which gets you a sincere nod of thanks. He sends you on your way, but you feel a bit lighter in your step.",
 				"rewards": {
-					"text": "All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity."
-				}
+					"text": "<p>All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity.</p><p>[square] [square] [square] [square] [square] [square]</p>"
+				},
+				"returnCard": true
 			},
 			"A2": {
 				"id": "A",
 				"trigger": "Make an offering at the improvised shrine.",
 				"requirement": "[not] LOSE 5 GOLD",
-				"text": "You're not willing to support the roadside shrine.",
+				"text": "You’re not willing to support the roadside shrine.",
 				"rewards": {
 					"text": "No effect."
-				}
+				},
+				"returnCard": true
 			},
 			"B": {
-				"trigger": "It's clear this is an easy mark. Steal from the offering plate.",
-				"text": "This sap expects us to believe he represents the Great Oak? you're putting a stop to this right now. A few swings of the arm take care of the makeshift shrine, and you don't expect to see this charlatan harassing travelers in the future.",
+				"trigger": "It’s clear this is an easy mark. Steal from the offering plate.",
+				"text": "This sap expects us to believe he represents the Great Oak? You’re putting a stop to this right now. A few swings of the arm take care of the makeshift shrine, and you don’t expect to see this charlatan harassing travelers in the future.",
 				"rewards": {
 					"text": "Gain 10 collective gold.<br/>All characters start the next scenario with [curse]."
 				}
@@ -81,11 +85,11 @@
 	"SR-05": {},
 	"SR-06": {},
 	"SR-07": {
-		"text": "<p>\"Heeey. Heeeeey.\" You stop under a moss-covered tree, unsure if you heard what you think you heard: a tiny-sounding voice calling out—</p><p>\"Heeeeelllp.\" That one you're sure of. You search around the base of the tree and spot it: a beetle nearly the size of a fist. It rubs its limbs together in a practiced way, and the friction sounds nearly like human speech: \"Hellllp me.\" Against your better judgement you pick it up. Despite its unusual size it looks somehow fragile, lost.</p><p>\"Harrower. Hellllp. Saaaave.\" Is this bug claiming to be... part of a Harrower? A Harrower is a sentient collection of bugs, but it's unusual to have one maintain that intelligence when detached from the greater whole.</p>",
+		"text": "<p>“Heeey. Heeeeey.” You stop under a moss-covered tree, unsure if you heard what you think you heard: a tiny-sounding voice calling out—</p><p>“Heeeeelllp.” That one you’re sure of. You search around the base of the tree and spot it: a beetle nearly the size of a fist. It rubs its limbs together in a practiced way, and the friction sounds nearly like human speech: “Hellllp me.” Against your better judgement you pick it up. Despite its unusual size it looks somehow fragile, lost.</p><p>“Harrower. Hellllp. Saaaave.” Is this bug claiming to be… part of a Harrower? A Harrower is a sentient collection of bugs, but it’s unusual to have one maintain that intelligence when detached from the greater whole.</p>",
 		"options": {
 			"A": {
-				"trigger": "There's a mass of fire ants marching over to get a look. Put the two together to see if it can commune with them.",
-				"text": "You find an ants' nest nearby and set the beetle down next to it. There's a definite connection, but there is a power struggle as well: the ant hive has its own hierarchy and is unwilling to support a new member. Eventually, the ants take decisive action and swarm the beetle.",
+				"trigger": "There’s a mass of fire ants marching over to get a look. Put the two together to see if it can commune with them.",
+				"text": "You find an ants’ nest nearby and set the beetle down next to it. There’s a definite connection, but there is a power struggle as well: the ant hive has its own hierarchy and is unwilling to support a new member. Eventually, the ants take decisive action and swarm the beetle.",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -94,7 +98,7 @@
 				"trigger": "A talking bug? Might as well take it with you and keep it safe.",
 				"text": "You find a suitable container and pocket the beetle. Maybe it will be useful someday.",
 				"rewards": {
-					"text": "Gain \"Bug in a Jar\" campaign sticker.",
+					"text": "Gain “Bug in a Jar” campaign sticker.",
 					"events": {
 						"SR": [{ "id": "SR-34" }]
 					}
@@ -103,18 +107,18 @@
 		}
 	},
 	"SR-08": {
-		"text": "<p>Out of the corner of your eye you catch a glimpse of a floating tuft of fur by the side of the road. As soon as you're certain of it, it's gone. You pause a moment, then call out asking if anyone is there.</p><p>A shimmering cloak of invisibility is pulled down off an old Vermling's shoulders. \"Cloak's getting a bit dusty... wearing out.\" He sits down, pulling a set of glass beads looped on a string from his pocket. \"Name's Dramm. Don't suppose you've been looking for me.\"</p><p>You can't say that you have, and tell him as much. He flips the beads around in his hand, lost in thought.</p><p>\"Good, good. Do me a favor, will you? There's an Aesther that's been hunting me for almost as long as I've been alive. If you run into him, would you point him the other way?\"</p>",
+		"text": "<p>Out of the corner of your eye you catch a glimpse of a floating tuft of fur by the side of the road. As soon as you’re certain of it, it’s gone. You pause a moment, then call out asking if anyone is there.</p><p>A shimmering cloak of invisibility is pulled down off an old Vermling’s shoulders. “Cloak’s getting a bit dusty… wearing out.” He sits down, pulling a set of glass beads looped on a string from his pocket. “Name’s Dramm. Don’t suppose you’ve been looking for me.”</p><p>You can’t say that you have, and tell him as much. He flips the beads around in his hand, lost in thought.</p><p>“Good, good. Do me a favor, will you? There’s an Aesther that’s been hunting me for almost as long as I’ve been alive. If you run into him, would you point him the other way?”</p>",
 		"options": {
 			"A": {
 				"trigger": "Agree to cover for the Vermling.",
-				"text": "<p>Dramm explains that a persistent hunter, Malak, selected him from the infinite beings in the multiverse as his next kill. Most would roll over and accept the inevitable, but as Dramm puts it, \"I've been dodging him for years. He may catch me eventually, but I have no interest in making it easy on him.\"</p><p>He expresses his thanks. \"Say, I might as well pass off some of these clothes. I have a hunch he's been tracking me by the scent.\"</p>",
+				"text": "<p>Dramm explains that a persistent hunter, Malak, selected him from the infinite beings in the multiverse as his next kill. Most would roll over and accept the inevitable, but as Dramm puts it, “I’ve been dodging him for years. He may catch me eventually, but I have no interest in making it easy on him.”</p><p>He expresses his thanks. “Say, I might as well pass off some of these clothes. I have a hunch he’s been tracking me by the scent.”</p>",
 				"rewards": {
 					"text": "Gain 2 collective [hide]."
 				}
 			},
 			"B": {
 				"trigger": "Ask for payment for services. You are a mercenary, after all.",
-				"text": "<p>Dramm smiles. \"Not much to offer, never had much myself.\" He explains that a persistent hunter, Malak, selected him from the infinite beings in the multiverse as his next kill. Most would roll over and accept the inevitable, but as Dramm puts it, \"I've been dodging him for years. He may catch me eventually, but I have no interest in making it easy on him.\"</p><p>\"Alright... payment for a service. But if you see him, you've never met me.\"</p>",
+				"text": "<p>Dramm smiles. “Not much to offer, never had much myself.” He explains that a persistent hunter, Malak, selected him from the infinite beings in the multiverse as his next kill. Most would roll over and accept the inevitable, but as Dramm puts it, “I’ve been dodging him for years. He may catch me eventually, but I have no interest in making it easy on him.”</p><p>“Alright… payment for a service. But if you see him, you’ve never met me.”</p>",
 				"rewards": {
 					"text": "Gain 15 collective gold."
 				}
@@ -123,18 +127,18 @@
 	},
 	"SR-09": {},
 	"SR-10": {
-		"text": "<p>You round a rocky outcropping and find a lavishly-dressed Savvas staring you down, anger in its eyes.</p><p>\"You're late!\" You stammer a non-committal half-response, but it's quickly cut off. \"Useless! Don't touch the food with those greasy hands of yours. It's worth more than all those pelts you're wearing. Grab a tray and get to work serving your betters—and be advised your tardiness is coming out of your tip!\"</p><p>A dozen Savvas are seated on stone benches around an outdoor table meticulously carved from a single slab of granite. Each Savvas is wearing elaborate clothing studded with metals and fine silks that really do put your own clothes to shame. The scene is set for a magnificent feast, and a nearby serving area has gorgeous platters heaped high with the most perfect cuts of... rocks?</p><p>\"Get on with it! We 're hungry!\"</p>",
+		"text": "<p>You round a rocky outcropping and find a lavishly-dressed Savvas staring you down, anger in its eyes.</p><p>“You’re late!” You stammer a non-committal half-response, but it’s quickly cut off. “Useless! Don’t touch the food with those greasy hands of yours. It’s worth more than all those pelts you’re wearing. Grab a tray and get to work serving your betters—and be advised your tardiness is coming out of your tip!”</p><p>A dozen Savvas are seated on stone benches around an outdoor table meticulously carved from a single slab of granite. Each Savvas is wearing elaborate clothing studded with metals and fine silks that really do put your own clothes to shame. The scene is set for a magnificent feast, and a nearby serving area has gorgeous platters heaped high with the most perfect cuts of… rocks?</p><p>“Get on with it! We ’re hungry!”</p>",
 		"options": {
 			"A": {
-				"trigger": "You heard the Savvas. Let's make some coin.",
+				"trigger": "You heard the Savvas. Let’s make some coin.",
 				"text": "You shuttle heavy platters of fine rocks from the serving area to the assembled Savvas, refilling drinks and generally staying out of their way. The Savvas consume the geologic sampler with a deliberate slowness, savoring the crunch and grinding each bite to sand before swallowing. When the gathered group is satiated, one calls you over and hands you a small pouch full of gold with an idle nod of thanks.",
 				"rewards": {
 					"text": "Gain 15 collective gold."
 				}
 			},
 			"B": {
-				"trigger": "Oh sure, you'll serve them—but these haughty Savvas need to be taught a lesson. Rations from your packs it is.",
-				"text": "<p>You dig out some of the hardened rations that have ridden around in your pack for weeks now—they're as good as rocks and equally hard. You slip a few onto the platters as you serve the uptight Savvas, and they relish them the same as any of their fancy rocks. They finish their meal happily and hand over a small pouch of gold, but cant help but remind you they're withholding some of the payment for your tardiness.</p><p>You make a quick exit and are nearly out of earshot before the retching starts.</p>",
+				"trigger": "Oh sure, you’ll serve them—but these haughty Savvas need to be taught a lesson. Rations from your packs it is.",
+				"text": "<p>You dig out some of the hardened rations that have ridden around in your pack for weeks now—they’re as good as rocks and equally hard. You slip a few onto the platters as you serve the uptight Savvas, and they relish them the same as any of their fancy rocks. They finish their meal happily and hand over a small pouch of gold, but cant help but remind you they’re withholding some of the payment for your tardiness.</p><p>You make a quick exit and are nearly out of earshot before the retching starts.</p>",
 				"rewards": {
 					"text": "Gain 1 morale.<br/>Gain 10 collective gold."
 				}
@@ -144,15 +148,15 @@
 	"SR-11": {},
 	"SR-12": {},
 	"SR-13": {
-		"text": "<p>As you pause for a rest along your journey, you spot a handful of bright orange produce sticking out from the meltwater mud. It looks not dissimilar to an elongated flamefruit, though the color is different. You pick one off and smell it, noting its rich, lively herb aroma. As you prepare to take a bite, you hear a voice shouting.</p><p>\"I wouldn't do that.\" An elderly Quatryl steps out of the bushes and points at you with her walking stick. \"That's a firepepper, the strongest spice on this side of the continent!\" As you look puzzled, she continues. \"It's been said a firepepper stew can reheat even the soul of the dead. I've heard the tale of a Hungry Maw living beneath the Copperneck Mountains that only spared a village from destruction when they served it a plate of their hottest sweet-and-fiery stew.\" She chuckles to herself.</p><p>\"I'm certain it would be too much for you. I grew up eating these, but it would probably take you a week to recover!\"</p>",
+		"text": "<p>As you pause for a rest along your journey, you spot a handful of bright orange produce sticking out from the meltwater mud. It looks not dissimilar to an elongated flamefruit, though the color is different. You pick one off and smell it, noting its rich, lively herb aroma. As you prepare to take a bite, you hear a voice shouting.</p><p>“I wouldn’t do that.” An elderly Quatryl steps out of the bushes and points at you with her walking stick. “That’s a firepepper, the strongest spice on this side of the continent!” As you look puzzled, she continues. “It’s been said a firepepper stew can reheat even the soul of the dead. I’ve heard the tale of a Hungry Maw living beneath the Copperneck Mountains that only spared a village from destruction when they served it a plate of their hottest sweet-and-fiery stew.” She chuckles to herself.</p><p>“I’m certain it would be too much for you. I grew up eating these, but it would probably take you a week to recover!”</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Try the firepepper.",
 				"requirement": "[trait] QUATRYL, SAVVAS, STRONG or UNFETTERED",
-				"text": "A challenge must be met. You pop the firepepper into your mouth, and after a second, it's clear why she warned you: this thing is HOT! After an hour, most of the burning has subsided, and the woman nods, impressed. \"Alright, perhaps you could handle a challenge of a different sort...\"",
+				"text": "A challenge must be met. You pop the firepepper into your mouth, and after a second, it’s clear why she warned you: this thing is HOT! After an hour, most of the burning has subsided, and the woman nods, impressed. “Alright, perhaps you could handle a challenge of a different sort…”",
 				"rewards": {
-					"text": "Gain 10 experience each.<br/>Gain \"Firepepper\" campaign sticker.",
+					"text": "Gain 10 experience each.<br/>Gain “Firepepper” campaign sticker.",
 					"scenarios": [{ "id": "122" }]
 				}
 			},
@@ -160,17 +164,17 @@
 				"id": "A",
 				"trigger": "Try the firepepper.",
 				"requirement": "[not] [trait] QUATRYL, SAVVAS, STRONG or UNFETTERED",
-				"text": "You pop the firepepper into your mouth, and the juices explode like lava. The old Quatryl was right. She chuckles, pouring cool milk from a canteen at her hip into your mouth. \"I told you, it was strong enough to satisfy the Hungry Maw! Now that I don't have to worry about backtalk, I'll tell you a story...\"",
+				"text": "You pop the firepepper into your mouth, and the juices explode like lava. The old Quatryl was right. She chuckles, pouring cool milk from a canteen at her hip into your mouth. “I told you, it was strong enough to satisfy the Hungry Maw! Now that I don’t have to worry about backtalk, I’ll tell you a story…”",
 				"rewards": {
-					"text": "All characters start the next scenario with [damage] 2 and [brittle].<br/>Gain \"Firepepper\" campaign sticker.",
+					"text": "All characters start the next scenario with [damage] 2 and [brittle].<br/>Gain “Firepepper” campaign sticker.",
 					"scenarios": [{ "id": "122" }]
 				}
 			},
 			"B": {
 				"trigger": "Ask her to demonstrate just how easily she could eat it.",
-				"text": "She pops the firepepper into her mouth with a shrug, washing it down with something from her canteen. \"See? Easy for someone like me. That's the way it goes... some things are just easier depending on who you are. Now, some battle-hardened warriors like yourselves? Well, you'd probably be best at a task I need some help with...\"",
+				"text": "She pops the firepepper into her mouth with a shrug, washing it down with something from her canteen. “See? Easy for someone like me. That’s the way it goes… some things are just easier depending on who you are. Now, some battle-hardened warriors like yourselves? Well, you’d probably be best at a task I need some help with…”",
 				"rewards": {
-					"text": "Gain \"Firepepper\" campaign sticker.",
+					"text": "Gain “Firepepper” campaign sticker.",
 					"scenarios": [{ "id": "122" }]
 				}
 			}
@@ -178,13 +182,13 @@
 	},
 	"SR-14": {},
 	"SR-15": {
-		"text": "<p>You encounter a young Algox away from his tribe, looking hungry and weary. He explains his name is Malrog, and that he has been exiled as part of the ritual transition into adulthood. He will need to slay a great beast to prove his value and return to his people. It's clear he doesn't want to interact with you, but he's desperate.</p><p>\"I shattered my greatsword against the rocks two days ago, and now I am defenseless. It is beneath my status to ask, but do you have anything I could use?\"</p><p>Judging by his current condition, it doesn't look like he'll make it very long without your help.</p>",
+		"text": "<p>You encounter a young Algox away from his tribe, looking hungry and weary. He explains his name is Malrog, and that he has been exiled as part of the ritual transition into adulthood. He will need to slay a great beast to prove his value and return to his people. It’s clear he doesn’t want to interact with you, but he’s desperate.</p><p>“I shattered my greatsword against the rocks two days ago, and now I am defenseless. It is beneath my status to ask, but do you have anything I could use?”</p><p>Judging by his current condition, it doesn’t look like he’ll make it very long without your help.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Leave Malrog with a [singleHand] or [dualHand] item (select the item now).",
 				"requirement": "THE SELECTED ITEM IS [dualHand]",
-				"text": "\"Thank you! Your kindness is incredible. I will not forget this day. Our peoples have a history of adversity, but we are friends.\"",
+				"text": "“Thank you! Your kindness is incredible. I will not forget this day. Our peoples have a history of adversity, but we are friends.”",
 				"rewards": {
 					"text": "Return the selected item to the available supply.",
 					"events": {
@@ -196,7 +200,7 @@
 				"id": "A",
 				"trigger": "Leave Malrog with a [singleHand] or [dualHand] item (select the item now).",
 				"requirement": "THE SELECTED ITEM IS [singleHand]",
-				"text": "\"I am grateful for your kindness. Thank you.\"",
+				"text": "“I am grateful for your kindness. Thank you.”",
 				"rewards": {
 					"text": "Return the selected item to the available supply.",
 					"events": {
@@ -216,13 +220,13 @@
 		}
 	},
 	"SR-16": {
-		"text": "<p>The treacherous road ahead of you is blocked by a tattered blue blanket stretched across the path. Your approach disturbs the Inox under it, who jumps up in surprise.</p><p>\"Oh, eh. Wasn't expecting to see others out here. you from Frosthaven? I used to be from there, but haven't been back in uh... a while.\" He rubs the grey fur on his chin thoughtfully, which irritates one of the long scratches running down his face. A bit of blood oozes out, and he sees your concern.</p><p>\"That? It's nothing. Was cold last night, bedded down with an Algox—what they call 'sharing a horn.' Turned on me in the morning. Buyer's remorse, eh?\" He smiles in a way that suggests he hasn't smiled around people for some time.</p><p>\"Y'know... I used to work in Frosthaven's lumber yard. I've got some skill with a saw. Would be willing to teach you, if you've got something edible to trade. Or maybe you've got something warm to wear?\"</p>",
+		"text": "<p>The treacherous road ahead of you is blocked by a tattered blue blanket stretched across the path. Your approach disturbs the Inox under it, who jumps up in surprise.</p><p>“Oh, eh. Wasn’t expecting to see others out here. You from Frosthaven? I used to be from there, but haven’t been back in uh… a while.” He rubs the grey fur on his chin thoughtfully, which irritates one of the long scratches running down his face. A bit of blood oozes out, and he sees your concern.</p><p>“That? It’s nothing. Was cold last night, bedded down with an Algox—what they call ‘sharing a horn.’ Turned on me in the morning. Buyer’s remorse, eh?” He smiles in a way that suggests he hasn’t smiled around people for some time.</p><p>“Y’know… I used to work in Frosthaven’s lumber yard. I’ve got some skill with a saw. Would be willing to teach you, if you’ve got something edible to trade. Or maybe you’ve got something warm to wear?”</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Offer him herbs for wood-cutting skills.",
 				"requirement": "<p>LOSE 2 COLLECTIVE HERB RESOURCES",
-				"text": "\"I built up a bit of skill with the saw. It's part technique and part sharpening the blade right. Watch this.\"</p><p> What he lacks in decorum he certainly makes up in skill. You learn a thing or two before heading on your way.</p>",
+				"text": "“I built up a bit of skill with the saw. It’s part technique and part sharpening the blade right. Watch this.”</p><p> What he lacks in decorum he certainly makes up in skill. You learn a thing or two before heading on your way.</p>",
 				"rewards": {
 					"text": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
 				}
@@ -231,16 +235,17 @@
 				"id": "A",
 				"trigger": "Offer him herbs for wood-cutting skills.",
 				"requirement": "[not] LOSE 2 COLLECTIVE HERB RESOURCES",
-				"text": "\"Come back when you've got something worth swappin' for.\"",
+				"text": "“Come back when you’ve got something worth swappin’ for.”",
 				"rewards": {
 					"text": "No effect."
-				}
+				},
+				"returnCard": true
 			},
 			"B1": {
 				"id": "B",
 				"trigger": "Offer him hides for wood-cutting skills.",
 				"requirement": "<p>LOSE 2 COLLECTIVE [hide]",
-				"text": "\"Nice pelt. Is this Valrath?\" It is not Valrath.</p><p> True to his word, the Inox shows you how to sharpen a saw with a technique new to you. You thank him and head on your way.</p>",
+				"text": "“Nice pelt. Is this Valrath?” It is not Valrath.</p><p>True to his word, the Inox shows you how to sharpen a saw with a technique new to you. You thank him and head on your way.</p>",
 				"rewards": {
 					"text": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
 				}
@@ -249,23 +254,24 @@
 				"id": "B",
 				"trigger": "Offer him hides for wood-cutting skills.",
 				"requirement": "[not] LOSE 2 COLLECTIVE [hide]",
-				"text": "\"No offense, but I think you've overstayed your welcome. See you when you've got something worth swappin' for.\"",
+				"text": "“No offense, but I think you’ve overstayed your welcome. See you when you’ve got something worth swappin’ for.”",
 				"rewards": {
 					"text": "No effect."
-				}
+				},
+				"returnCard": true
 			}
 		}
 	},
 	"SR-17": {
-		"text": "<p>Pushing through a set of spindly trees, you find a beautiful cloak swarmed over with scarabs and insects. It has ornate gold threading and looks quite expensive, but whenever you try to grab it the insects swarm tighter and ward you off—they're fiercely defensive of it.</p><p>You're always a bit wary of bugs that appear to be on a mission—this could be a Harrower in some state of disorganization. Then again, it could be that someone left candy in a discarded cloak pocket.</p>",
+		"text": "<p>Pushing through a set of spindly trees, you find a beautiful cloak swarmed over with scarabs and insects. It has ornate gold threading and looks quite expensive, but whenever you try to grab it the insects swarm tighter and ward you off—they’re fiercely defensive of it.</p><p>You’re always a bit wary of bugs that appear to be on a mission—this could be a Harrower in some state of disorganization. Then again, it could be that someone left candy in a discarded cloak pocket.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
-				"trigger": "Attempt to communicate with the \"Harrower.\"",
-				"requirement": "BUG IN A JAR",
-				"text": "<p>You release the beetle you've been carrying into the swarm, and a few moments later, it forms into a full-sized Harrower.</p><p>\"Thank you, friends. This will not be forgotten.\"</p>",
+				"trigger": "Attempt to communicate with the “Harrower.”",
+				"requirement": "<p>BUG IN A JAR",
+				"text": "You release the beetle you’ve been carrying into the swarm, and a few moments later, it forms into a full-sized Harrower.</p><p>“Thank you, friends. This will not be forgotten.”</p>",
 				"rewards": {
-					"text": "Place \"Empty Jar\" campaign sticker over \"Bug in a Jar\".",
+					"text": "Place “Empty Jar” campaign sticker over “Bug in a Jar”.",
 					"events": {
 						"SO": [{ "id": "SO-43" }]
 					}
@@ -273,18 +279,19 @@
 			},
 			"A2": {
 				"id": "A",
-				"trigger": "Attempt to communicate with the \"Harrower.\"",
+				"trigger": "Attempt to communicate with the “Harrower.”",
 				"requirement": "[not] BUG IN A JAR",
-				"text": "If it is a Harrower, it's much too scattered to communicate with you. You try giving it some rations, scooping the bugs closer, and even some old wives' tricks from around the tavern. No luck.",
+				"text": "If it is a Harrower, it’s much too scattered to communicate with you. You try giving it some rations, scooping the bugs closer, and even some old wives’ tricks from around the tavern. No luck.",
 				"rewards": {
 					"text": "No effect."
-				}
+				},
+				"returnCard": true
 			},
 			"B": {
 				"trigger": "Make a more aggressive attempt at grabbing the cloak.",
 				"text": "It takes a torch and some chasing, but you manage to retrieve the cloak and brush off the last of the bugs. Looks pretty nice!",
 				"rewards": {
-					"text": "Gain \"Cloak of Warding\" [item]."
+					"text": "Gain “Cloak of Warding” [item_027]."
 				}
 			}
 		}
@@ -300,11 +307,11 @@
 	},
 	"SR-23": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>It is much too early to have started drinking for the day, and much too late to still be tipsy from the night before, which makes it all the more surprising when you come upon two disheveled men fist-fighting on the path before you. They're fighting not only one another but also seemingly with the snow, and if you had to place a bet, you'd say the snow is winning. You intervene between the two drunks.</p><p>After a couple sloppy swings somewhere in your direction, they drop all animosity. \"Thank the—hic—Oak! We were out here gathering snowthistle when we were set upon by those terrible—hic—monsters! I'm Nits and this is my brother Narb.\"</p><p>Narb tries to step forward at the introduction, but winds up tripping back into the snow. It doesn't faze him in the slightest, and he rolls over onto his back to continue singing your praises, \"If you hadn't stopped those monsters, we'd be digested by now!\"</p>",
+		"text": "<p>It is much too early to have started drinking for the day, and much too late to still be tipsy from the night before, which makes it all the more surprising when you come upon two disheveled men fist-fighting on the path before you. They’re fighting not only one another but also seemingly with the snow, and if you had to place a bet, you’d say the snow is winning. You intervene between the two drunks.</p><p>After a couple sloppy swings somewhere in your direction, they drop all animosity. “Thank the—hic—Oak! We were out here gathering snowthistle when we were set upon by those terrible—hic—monsters! I’m Nits and this is my brother Narb.”</p><p>Narb tries to step forward at the introduction, but winds up tripping back into the snow. It doesn’t faze him in the slightest, and he rolls over onto his back to continue singing your praises, “If you hadn’t stopped those monsters, we’d be digested by now!”</p>",
 		"options": {
 			"A": {
 				"trigger": "Bask in this newfound adoration.",
-				"text": "The reverence seems fine at first, but Narb's words eventually trail off as he falls asleep in the snow. Nits starts weeping in appreciation, noting emphatically that he loves you, his praise sporadically interrupted by hiccups. It becomes almost an adventure in itself just to get back on your way. You make sure both brothers are safely on their way back to Frosthaven and then head off at the first opportunity.",
+				"text": "The reverence seems fine at first, but Narb’s words eventually trail off as he falls asleep in the snow. Nits starts weeping in appreciation, noting emphatically that he loves you, his praise sporadically interrupted by hiccups. It becomes almost an adventure in itself just to get back on your way. You make sure both brothers are safely on their way back to Frosthaven and then head off at the first opportunity.",
 				"rewards": {
 					"text": "Lose 5 gold.",
 					"scenarios": [{ "id": "128" }]
@@ -312,7 +319,7 @@
 			},
 			"B": {
 				"trigger": "Deny there were ever any monsters.",
-				"text": "<p>\"Monsters?!\" Narb starts pummeling you, or attempts as much, and Nits takes to stomping the snow. \"Take that!\"</p><p>Eventually, you calm them both, but it's to no avail. A moment later, the cycle repeats itself, leaving them to fight whatever is in arms' reach. You make an exit in the chaos. At least all that activity should keep them from freezing to death in the snow.</p>",
+				"text": "<p>“Monsters?!” Narb starts pummeling you, or attempts as much, and Nits takes to stomping the snow. “Take that!”</p><p>Eventually, you calm them both, but it’s to no avail. A moment later, the cycle repeats itself, leaving them to fight whatever is in arms’ reach. You make an exit in the chaos. At least all that activity should keep them from freezing to death in the snow.</p>",
 				"rewards": {
 					"text": "All characters start the next scenario with [damage] 1.",
 					"scenarios": [{ "id": "128" }]
@@ -322,18 +329,18 @@
 	},
 	"SR-24": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>The aurora shimmers in the night sky as you set up camp in a copse of trees after a long day's hike toward your destination. You're hammering a tent stake and dreaming of the stew simmering on the cookfire when movement from the edge of the firelight catches your eye.</p><p>You approach cautiously, wondering if you're paranoid for feeling as though you're being watched. Suddenly, a Vermling leaps from her hiding spot up a tree and takes off running.</p><p>You have questions and take off after her. The lone Vermling is nimble, bounding across the snow and scampering over tree limbs, but you have the numbers advantage, and your group corners and captures her.</p><p>An investigation of her belongings yields a spyglass and a sketchy map detailing weaknesses in Frosthaven's defenses. She's clearly an advance scout for an attack; you caught her on her way back to deliver her report.</p><p>\"You think Vermlings are uncoordinated. You think we're stupid! We're not stupid, you'll see!\"</p>",
+		"text": "<p>The aurora shimmers in the night sky as you set up camp in a copse of trees after a long day’s hike toward your destination. You’re hammering a tent stake and dreaming of the stew simmering on the cookfire when movement from the edge of the firelight catches your eye.</p><p>You approach cautiously, wondering if you’re paranoid for feeling as though you’re being watched. Suddenly, a Vermling leaps from her hiding spot up a tree and takes off running.</p><p>You have questions and take off after her. The lone Vermling is nimble, bounding across the snow and scampering over tree limbs, but you have the numbers advantage, and your group corners and captures her.</p><p>An investigation of her belongings yields a spyglass and a sketchy map detailing weaknesses in Frosthaven’s defenses. She’s clearly an advance scout for an attack; you caught her on her way back to deliver her report.</p><p>“You think Vermlings are uncoordinated. You think we’re stupid! We’re not stupid, you’ll see!”</p>",
 		"options": {
 			"A": {
-				"trigger": "You can't let her report on Frosthaven's defenses. Kill her.",
-				"text": "Letting her leave would only invite an attack on Frosthaven. It's this scout's life against the outposters whose lives would be at risk when her tribe attacks. You execute the prisoner and study her map, which reveals some easily exploited vulnerabilities you plan to fix when you get back to town.",
+				"trigger": "You can’t let her report on Frosthaven’s defenses. Kill her.",
+				"text": "Letting her leave would only invite an attack on Frosthaven. It’s this scout’s life against the outposters whose lives would be at risk when her tribe attacks. You execute the prisoner and study her map, which reveals some easily exploited vulnerabilities you plan to fix when you get back to town.",
 				"rewards": {
 					"text": "Gain 2 morale."
 				}
 			},
 			"B": {
 				"trigger": "Invite her to share your campfire and rations.",
-				"text": "<p>You walk the scout back to camp and give her a bowl of stew and some of your wine. Once she realizes you aren't about to kill her, she tentatively tries the food, then goes back for seconds.</p><p>She won't divulge much other than a description of her leader: a Vermling wearing bright orange feathers. When you press for details she changes the topic to a parable of her people about the moon:</p><p>\"The moon is a giant Algox that hunts in the night sky, stalking its prey across the heavens. Whenever the sky hunter succeeds, the blood from its quarry sprays over the world, forming the glimmering streaks of the aurora... it means good hunting for the Vermlings of the land.\"</p><p>She gets up to leave, but turns back for a final thought: \"Careful when you see the aurora... the Vermlings will be ready.\"</p><p>You post an extra guard under the bright night sky.</p>",
+				"text": "<p>You walk the scout back to camp and give her a bowl of stew and some of your wine. Once she realizes you aren’t about to kill her, she tentatively tries the food, then goes back for seconds.</p><p>She won’t divulge much other than a description of her leader: a Vermling wearing bright orange feathers. When you press for details she changes the topic to a parable of her people about the moon:</p><p>“The moon is a giant Algox that hunts in the night sky, stalking its prey across the heavens. Whenever the sky hunter succeeds, the blood from its quarry sprays over the world, forming the glimmering streaks of the aurora… it means good hunting for the Vermlings of the land.”</p><p>She gets up to leave, but turns back for a final thought: “Careful when you see the aurora… the Vermlings will be ready.”</p><p>You post an extra guard under the bright night sky.</p>",
 				"rewards": {
 					"text": "All characters start the next scenario with [ward]."
 				}
@@ -345,18 +352,19 @@
 	},
 	"SR-26": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>You catch sight ofa glowing Snow Imp blocking your path, flittering from tree to tree. Unlike most you've encountered, this one seems to welcome your approach, floating in vitingly.</p><p>A drunken patron at The Crater once told you there are some imps that desire more than their normal brethren, drawn to the world of man. Gold has no value for them, but you've heard stories of imps that would be willing to barter some of their rare magical items for a price unlike any other.</p>",
+		"text": "<p>You catch sight ofa glowing Snow Imp blocking your path, flittering from tree to tree. Unlike most you’ve encountered, this one seems to welcome your approach, floating in vitingly.</p><p>A drunken patron at The Crater once told you there are some imps that desire more than their normal brethren, drawn to the world of man. Gold has no value for them, but you’ve heard stories of imps that would be willing to barter some of their rare magical items for a price unlike any other.</p>",
 		"options": {
 			"A": {
 				"trigger": "Approach the imp as a friend and try to trade.",
-				"text": "After some hand waving and what you interpret as delighted tail-wagging, it seems you've reached an agreement. You recount stories of your adventures, and as you speak each word, you feel it fading from your memory, consumed by the imp in front of you. You detail the exciting conclusion, and it seems sated. It holds up its end of the bargain with a choice:",
+				"text": "After some hand waving and what you interpret as delighted tail-wagging, it seems you’ve reached an agreement. You recount stories of your adventures, and as you speak each word, you feel it fading from your memory, consumed by the imp in front of you. You detail the exciting conclusion, and it seems sated. It holds up its end of the bargain with a choice:",
 				"rewards": {
-					"text": "<p>Check one box and gain one collective copy of that item:</p><p><i class=\"fa-regular fa-square\"></i> A looping metal necklace [item_196]<br/><i class=\"fa-regular fa-square\"></i> A strange glowing powder [item_241]<br/><i class=\"fa-regular fa-square\"></i> A handheld magnifying glass [item_230]</p><p>Lose 15 collective experience. When the last item is checked, remove this card from the deck.</p>"
-				}
+					"text": "<p>Check one box and gain one collective copy of that item:</p><p>[square] A looping metal necklace [item_196]<br/>[square] A strange glowing powder [item_241]<br/>[square] A handheld magnifying glass [item_230]</p><p>Lose 15 collective experience.<br/>When the last item is checked, remove this card from the deck.</p>"
+				},
+				"returnCard": true
 			},
 			"B": {
-				"trigger": "Likely just fairy tales... but if it does have something of value, force is the quickest way to get it.",
-				"text": "You draw your weapons and try to get the jump on the imp, but it flitters off between the trees, casting something back over its shoulder as itgoes.",
+				"trigger": "Likely just fairy tales… but if it does have something of value, force is the quickest way to get it.",
+				"text": "You draw your weapons and try to get the jump on the imp, but it flitters off between the trees, casting something back over its shoulder as it goes.",
 				"rewards": {
 					"text": "All characters start the next scenario with [muddle]."
 				}
@@ -368,13 +376,13 @@
 	},
 	"SR-28": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>Before you stands a rock wall covered in a thick layer of arrowvine. Some of it looks to be too dried to use, but many layers are fresh and suitable for harvest. The whole mess weaves and intertwines with itself, making a natural ladder up the rock wall—it must have been growing for hundreds of years. The vines are in bloom, and small yellow petals light up the wall, reflecting in the summer sun.</p><p>Footprints suggest there is considerable traffic past this wall, so it's unusual no one has harvested the arrowvine.</p>",
+		"text": "<p>Before you stands a rock wall covered in a thick layer of arrowvine. Some of it looks to be too dried to use, but many layers are fresh and suitable for harvest. The whole mess weaves and intertwines with itself, making a natural ladder up the rock wall—it must have been growing for hundreds of years. The vines are in bloom, and small yellow petals light up the wall, reflecting in the summer sun.</p><p>Footprints suggest there is considerable traffic past this wall, so it’s unusual no one has harvested the arrowvine.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
 				"trigger": "Harvest the vine.",
 				"requirement": "[trait] RESOURCEFUL",
-				"text": "There's significant work in separating the dried from the fresh vines, and after an hour or so, you've collected a tidy pile. The rock wall looks barren without the thick vines covering it, reduced to the sort of winter cliff face you see anywhere around Frosthaven. Unfortunate, but you'll put the arrowvine to good use.",
+				"text": "There’s significant work in separating the dried from the fresh vines, and after an hour or so, you’ve collected a tidy pile. The rock wall looks barren without the thick vines covering it, reduced to the sort of winter cliff face you see anywhere around Frosthaven. Unfortunate, but you’ll put the arrowvine to good use.",
 				"rewards": {
 					"text": "Gain 6 collective [arrowvine].",
 					"events": {
@@ -386,9 +394,9 @@
 				"id": "A",
 				"trigger": "Harvest the vine.",
 				"requirement": "[not] [trait] RESOURCEFUL",
-				"text": "There's significant work in separating the dried from the fresh vines, and after an hour or so, you've collected a tidy pile. The rock wall looks barren without the thick vines covering it, reduced to the sort of winter cliff face you see anywhere around Frosthaven. Unfortunate, but you'll put the arrowvine to good use.",
+				"text": "There’s significant work in separating the dried from the fresh vines, and after an hour or so, you’ve collected a tidy pile. The rock wall looks barren without the thick vines covering it, reduced to the sort of winter cliff face you see anywhere around Frosthaven. Unfortunate, but you’ll put the arrowvine to good use.",
 				"rewards": {
-					"text": "Gain 6 collective [arrowvine].",
+					"text": "Gain 4 collective [arrowvine].",
 					"events": {
 						"WO": [{ "id": "WO-60" }]
 					}
@@ -399,7 +407,8 @@
 				"text": "You stop and soak up the majesty of the wall, preserved here for so long. A light breeze drifts across the tight-knit network of plants, causing it to undulate with a pleasing rhythm that puts you at peace. You can see why no one has harvested it.",
 				"rewards": {
 					"text": "Gain 1 morale."
-				}
+				},
+				"returnCard": true
 			}
 		}
 	},
@@ -425,7 +434,7 @@
 			},
 			"B": {
 				"trigger": "Chop it into more manageable pieces for collection and go on your way.",
-				"text": "With considerable effort, you break the chunk of metal into pieces you can carry. It looks to be of excellent quality—you'll be sure to put it to good use.",
+				"text": "With considerable effort, you break the chunk of metal into pieces you can carry. It looks to be of excellent quality—you’ll be sure to put it to good use.",
 				"rewards": {
 					"text": "Gain 4 collective [metal]."
 				}
@@ -445,18 +454,18 @@
 	"SR-37": {},
 	"SR-38": {
 		"unlockedBy": { "section": { "id": "189.1" }},
-		"text": "<p>\"Just down that crevasse. Screaming like crazy,\" The mining camp foreman says. \"I'm not sending my folks down here. I'll leave it to you to put it down.\"</p><p>You climb down the ridge and sure enough, protruding from a recent rockslide is the limp arm of an Unfettered.</p><p>\"APPROACH CLOSER SO I MAY ELIMINATE YOU!\" The arm swings uselessly with its interior mechanics exposed. \"PUT YOURSELF WITHIN RANGE OF MY POWER-FLAIL AND TASTE MY STEEL.\" You don't know how long this thing's been down here, but it's clearly lost it. You brush aside the larger rocks and find its entire lower half has been crumpled by the rockslide.</p><p>\"I'VE GOT YOU NOW! <strong>CRUSHING LEAP</strong>!\"... The machine does not move.</p><p>You were sent to eliminate the threat and cash in on the scrap, but there may be an opportunity here. It could be a valuable asset if you can reason with it. That said, it would need a significant overhaul to get it back to operational.</p>",
+		"text": "<p>“Just down that crevasse. Screaming like crazy,” The mining camp foreman says. “I’m not sending my folks down here. I’ll leave it to you to put it down.”</p><p>You climb down the ridge and sure enough, protruding from a recent rockslide is the limp arm of an Unfettered.</p><p>“APPROACH CLOSER SO I MAY ELIMINATE YOU!” The arm swings uselessly with its interior mechanics exposed. “PUT YOURSELF WITHIN RANGE OF MY POWER-FLAIL AND TASTE MY STEEL.” You don’t know how long this thing’s been down here, but it’s clearly lost it. You brush aside the larger rocks and find its entire lower half has been crumpled by the rockslide.</p><p>“I’VE GOT YOU NOW! <strong>CRUSHING LEAP</strong>!”… The machine does not move.</p><p>You were sent to eliminate the threat and cash in on the scrap, but there may be an opportunity here. It could be a valuable asset if you can reason with it. That said, it would need a significant overhaul to get it back to operational.</p>",
 		"options": {
 			"A": {
 				"trigger": "This angry machine is worth more as scrap than as a pet project. Deactivate and salvage it.",
-				"text": "It doesn't take long to strip down the Unfettered for parts. The foreman is thankful for your help and they're able to get back to work quickly.",
+				"text": "It doesn’t take long to strip down the Unfettered for parts. The foreman is thankful for your help and they’re able to get back to work quickly.",
 				"rewards": {
 					"text": "Gain 5 collective [metal]."
 				}
 			},
 			"B": {
 				"trigger": "Try to salvage the machine without deactivating it.",
-				"text": "<p>You drag the machine back to Frosthaven. It spends the whole trip launching impotent threats.</p><p>\"I WILL FILL YOUR BOOTS WITH BLOOD!\"</p><p>With some significant repairs you should be able to get it back to working order. Back in town you leave it with the capable Quatryl inventor, Pinter Droman, and hope for the best.</p>",
+				"text": "<p>You drag the machine back to Frosthaven. It spends the whole trip launching impotent threats.</p><p>“I WILL FILL YOUR BOOTS WITH BLOOD!”</p><p>With some significant repairs you should be able to get it back to working order. Back in town you leave it with the capable Quatryl inventor, Pinter Droman, and hope for the best.</p>",
 				"rewards": {
 					"text": "Resolve another summer road event.",
 					"events": {
@@ -469,18 +478,18 @@
 	"SR-39": {},
 	"SR-40": {
 		"unlockedBy": { "event": { "id": "SO-59" }},
-		"text": "<p>As your group is gathering around a warm campfire, a lone Orchid emerges from the woods. His weathered face tells you that he has probably spent the majority of his life here in the north. You offer him a seat. He looks you over with a sharp eye, then accepts.</p><p>After a while of sitting in silence, he speaks. \"During my lifetime, I have seen many things and pondered even more. One matter occupying me lately has been the survival of Frosthaven.\"</p><p>\"Based on what you've seen of the outpost, what is the best course of action to guarantee its survival: the strongest individuals contributing many resources, or everyone offering a small amount?\"</p>",
+		"text": "<p>As your group is gathering around a warm campfire, a lone Orchid emerges from the woods. His weathered face tells you that he has probably spent the majority of his life here in the north. You offer him a seat. He looks you over with a sharp eye, then accepts.</p><p>After a while of sitting in silence, he speaks. “During my lifetime, I have seen many things and pondered even more. One matter occupying me lately has been the survival of Frosthaven.”</p><p>“Based on what you’ve seen of the outpost, what is the best course of action to guarantee its survival: the strongest individuals contributing many resources, or everyone offering a small amount?”</p>",
 		"options": {
 			"A": {
 				"trigger": "The strong should contribute enough to provide for the weak.",
-				"text": "You tell him the strong will provide enough, and he gives you a curious look. \"Interesting choice, my friends. Many have given that answer in the past, but few were good for their word when the time came to slide their coin across the table. Why don't you prove to me how noble you are? And if you're true to your conviction, I'll contribute too.\"",
+				"text": "You tell him the strong will provide enough, and he gives you a curious look. “Interesting choice, my friends. Many have given that answer in the past, but few were good for their word when the time came to slide their coin across the table. Why don’t you prove to me how noble you are? And if you’re true to your conviction, I’ll contribute too.”",
 				"rewards": {
 					"text": "Choose one character now. At the end of the next scenario, if no other character collected any loot tokens, the chosen character draws one additional loot card for each loot token they collected during the scenario."
 				}
 			},
 			"B": {
 				"trigger": "Everyone offering a small amount will lead to a strong community.",
-				"text": "You tell him a small contribution from everyone will suffice, and a smile creeps across his face. \"I like your way of thinking, friends. In my experience, equal contributions from everyone creates a community that can survive even the harshest of winters... usually. If you are all contributing, so am I.\"",
+				"text": "You tell him a small contribution from everyone will suffice, and a smile creeps across his face. “I like your way of thinking, friends. In my experience, equal contributions from everyone creates a community that can survive even the harshest of winters… usually. If you are all contributing, so am I.”",
 				"rewards": {
 					"text": "At the end of the next scenario, if all characters collected the same number of loot tokens, all characters draw one additional loot card for each loot token they collected during the scenario."
 				}
@@ -494,18 +503,18 @@
 	"SR-45": {},
 	"SR-46": {
 		"unlockedBy": { "section": { "id": "78.4" }},
-		"text": "<p>Heading toward your destination you see an old woman with a cord of dried vegetables hanging around her neck. She's digging in a stepped garden, carved level-by-level into the mountainside. Many of the plants have eye-catching colors and a ripeness to them begging to be eaten immediately.</p><p>The woman looks tired and watches you with a solemn curiosity as you approach. You try to strike up a conversation but she doesn't seem willing to speak. Ready to move on, you ask if you can take one of the magnificent fruits, but she frowns, pointing at the trowel. It looks like she wants you to work for it.</p>",
+		"text": "<p>Heading toward your destination you see an old woman with a cord of dried vegetables hanging around her neck. She’s digging in a stepped garden, carved level-by-level into the mountainside. Many of the plants have eye-catching colors and a ripeness to them begging to be eaten immediately.</p><p>The woman looks tired and watches you with a solemn curiosity as you approach. You try to strike up a conversation but she doesn’t seem willing to speak. Ready to move on, you ask if you can take one of the magnificent fruits, but she frowns, pointing at the trowel. It looks like she wants you to work for it.</p>",
 		"options": {
 			"A": {
 				"trigger": "Offer to work for a sampling of the beautiful fruits.",
-				"text": "<p>You toil in the dirt, pumping water from a nearby well and hauling it between each of the levels of the stepped garden. It's a true surprise this woman can do it herself, but after you've exhausted the list of chores she silently gestures at the plants and lets you take your pick.</p><p>The fruits live up to their appearance.</p>",
+				"text": "<p>You toil in the dirt, pumping water from a nearby well and hauling it between each of the levels of the stepped garden. It’s a true surprise this woman can do it herself, but after you’ve exhausted the list of chores she silently gestures at the plants and lets you take your pick.</p><p>The fruits live up to their appearance.</p>",
 				"rewards": {
 					"text": "Gain any 2 collective herb resources.<br/>All characters start the next scenario with [bless]."
 				}
 			},
 			"B": {
 				"trigger": "Offer to work for her secret to growing such a bountiful harvest.",
-				"text": "<p>You spend hours smashing rocks with a sledgehammer to make the rough soil suitable for the next plantings, then it's carefully removing frosted berries from the vineyard to be crushed into icewine. When you've exhausted the list of chores she holds up her end of the bargain. Out from her pocket comes a small satchel of yellow dust, which she silently hands over to you.</p><p>She pantomimes sprinkling it over crops. Seems to be easy enough.</p>",
+				"text": "<p>You spend hours smashing rocks with a sledgehammer to make the rough soil suitable for the next plantings, then it’s carefully removing frosted berries from the vineyard to be crushed into icewine. When you’ve exhausted the list of chores she holds up her end of the bargain. Out from her pocket comes a small satchel of yellow dust, which she silently hands over to you.</p><p>She pantomimes sprinkling it over crops. Seems to be easy enough.</p>",
 				"rewards": {
 					"text": "Resolve the building operation of the Garden immediately (in addition to its normal resolution in the building operation step)."
 				}
@@ -517,7 +526,7 @@
 	},
 	"SR-48": {
 		"unlockedBy": { "section": { "id": "116.3" }},
-		"text": "<p>The spot Eddica the Librarian marked out for you was certainly easy to find: you just had to make your way toward the ominous column of smoke and ash billowing out of the top of the hillside. The hike up was treacherous and the snow underfoot frequently crumbled away to dark pits you'd prefer not to explore. Cresting the lip of the caldera reveals a single pillar with a stone dome on top. A pool of lava swirls around the pillar and gives off a brazen heat.</p><p>You approach the dome to lift the heavy covering and the boiling rock recedes to allow you passage. Underneath is a tome covered in a beautifully-sculpted cover—the piece looks like a work of art. Images of the elements are carved into the rough Kivak leather as a ring of familiar circles, and ornate citrine studs bind it together. It is warm, and inviting, and impossibly light. It is breathtaking. This is the Tome of the Elements.</p>",
+		"text": "<p>The spot Eddica the Librarian marked out for you was certainly easy to find: you just had to make your way toward the ominous column of smoke and ash billowing out of the top of the hillside. The hike up was treacherous and the snow underfoot frequently crumbled away to dark pits you’d prefer not to explore. Cresting the lip of the caldera reveals a single pillar with a stone dome on top. A pool of lava swirls around the pillar and gives off a brazen heat.</p><p>You approach the dome to lift the heavy covering and the boiling rock recedes to allow you passage. Underneath is a tome covered in a beautifully-sculpted cover—the piece looks like a work of art. Images of the elements are carved into the rough Kivak leather as a ring of familiar circles, and ornate citrine studs bind it together. It is warm, and inviting, and impossibly light. It is breathtaking. This is the Tome of the Elements.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -545,7 +554,7 @@
 			},
 			"B": {
 				"trigger": "Bring the book back to Eddica for her informed review.",
-				"text": "You remember Eddica's warning and quickly stow the book in your satchel without opening it. She'll be in a better position to unlock the power within.",
+				"text": "You remember Eddica’s warning and quickly stow the book in your satchel without opening it. She’ll be in a better position to unlock the power within.",
 				"rewards": {
 					"text": "Add [section_44.4] to the calendar in one week.",
 					"removedEvents": {

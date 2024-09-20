@@ -60,6 +60,7 @@
 				"returnCard": true
 			},
 			"C": {
+				"id": "",
 				"requirement": "IF YOU SHOUTED “CHEATING!” OR “NEITHER!” INSTEAD OF CHOOSING A OR B",
 				"text": "<p>You flip over both cards at the same time—aha! Two spades just like you suspected! You knock the table to the ground and drive the charlatan out of town. Sometimes the only way to beat a cheater is to beat them at your own game. Looks like he left behind a pouch of something…</p>",
 				"rewards": {
@@ -271,8 +272,8 @@
 		"options": {
 			"A": {
 				"trigger": "Offer to cover the cost of upgrading the barracks yourself.",
-				"requirement": "LOSE 10 COLLECTIVE GOLD",
-				"text": "<p>You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead’s eyes widen.</p><p>“You mercenaries are not nearly the scum Satha thinks you are. I’m going to tell her right now!”",
+				"requirement": "<p>LOSE 10 COLLECTIVE GOLD",
+				"text": "You offer to make up the budget deficit to upgrade the Barracks out of your own pocket. Captain Olmstead’s eyes widen.</p><p>“You mercenaries are not nearly the scum Satha thinks you are. I’m going to tell her right now!”",
 				"rewards": {
 					"text": "Upgrade the Barracks to the next level, or, if the Barracks is already level 4, gain 1 morale instead."
 				}

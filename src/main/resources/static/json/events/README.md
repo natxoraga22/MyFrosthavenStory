@@ -11,3 +11,10 @@
 * **B-02**: a l'opció A hi ha un text comú i després dos resultats segons un requisit (STRONG). Semblant també a la opció B.
 
 * **SO-01**: part del text principal amb marge a l'esquerra
+* **SO-04**: tercera opció oculta
+
+* **SR-02**: checkboxes per marcar amb un reward condicional segons els checkboxes
+* **SR-03**: només una opció, endevinalla
+* **SR-04**: checkboxes per marcar amb un reward condicional segons els checkboxes
+* **SR-26**: checkboxes per marcar amb un reward condicional segons els checkboxes
+* **SR-28**: a l'opció A hi ha un requisit (RESOURCEFUL) a la conclusió, donant una recompensa extra

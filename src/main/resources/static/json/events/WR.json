@@ -1,6 +1,6 @@
 {
 	"WR-01": {
-		"text": "<p>\"YOU! Strong mer-canaries! You help Hurdle, yes!\"</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he’s been on his own in the wilderness for a long, long time.</p><p>\"Help kill evil Clovis! Ruined Hurdle’s home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!\" The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. \"Cloooovis,\" he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam...</p><p>It’s a beaver. Clovis is a beaver. And not a very large one at that.</p><p>\"Clovis dam stream,\" the hermit spits, \"Stream flood Hurdle’s home. Clovis must SUFFER, yes!\"</p><p>He turns back to you and repeats his demand. \"You kill evil Clovis! I reward greedy mer-canaries. Kill kill!\"</p>",
+		"text": "<p>\"YOU! Strong mer-canaries! You help Hurdle, yes!\"</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he’s been on his own in the wilderness for a long, long time.</p><p>\"Help kill evil Clovis! Ruined Hurdle’s home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!\" The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. \"Cloooovis,\" he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam…</p><p>It’s a beaver. Clovis is a beaver. And not a very large one at that.</p><p>\"Clovis dam stream,\" the hermit spits, \"Stream flood Hurdle’s home. Clovis must SUFFER, yes!\"</p><p>He turns back to you and repeats his demand. \"You kill evil Clovis! I reward greedy mer-canaries. Kill kill!\"</p>",
 		"options": {
 			"A": {
 				"trigger": "Kill Clovis.",
@@ -13,7 +13,7 @@
 				"id": "B",
 				"trigger": "Try to talk the raving hermit down.",
 				"requirement": "[trait] OUTCAST",
-				"text": "You know there’s no use trying to convince the stubborn hermit of the beaver’s innocence. Instead you appeal to Hurdle’s better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. \"Wise mer-canary... You help Hurdle see truth, yes. Hurdle return gift.\"",
+				"text": "You know there’s no use trying to convince the stubborn hermit of the beaver’s innocence. Instead you appeal to Hurdle’s better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. \"Wise mer-canary… You help Hurdle see truth, yes. Hurdle return gift.\"",
 				"rewards": {
 					"text": "Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved)."
 				}
@@ -22,7 +22,7 @@
 				"id": "B",
 				"trigger": "Try to talk the raving hermit down.",
 				"requirement": "[not] [trait] OUTCAST",
-				"text": "You’ve been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. \"Stupid mer-canaries!\" The hermit rages as he scurries off. \"You regret!\" As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you... but when you look back, Clovis is gone.",
+				"text": "You’ve been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. \"Stupid mer-canaries!\" The hermit rages as he scurries off. \"You regret!\" As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you… but when you look back, Clovis is gone.",
 				"rewards": {
 					"text": "All characters start the next scenario with [curse]."
 				}
@@ -35,7 +35,7 @@
 		"options": {
 			"A": {
 				"trigger": "Take the rock.",
-				"text": "<p>Despite the clear warning, you uncinch the sack and pour the rock into your hand. For something buried in the ice it feels strangely warm to the touch. You roll it over in your hand and feel its heat curl up your body... it feels familiar somehow.</p><p>A wave of concern passes over you, which turns into a dark dread. This was not something you should have disturbed. You put it back in the satchel and push it down into the snow. You walk off and leave it behind, but further down the road you reach into your pocket to feel a hard lump. Seems like it won’t be lost so easily.</p>",
+				"text": "<p>Despite the clear warning, you uncinch the sack and pour the rock into your hand. For something buried in the ice it feels strangely warm to the touch. You roll it over in your hand and feel its heat curl up your body… it feels familiar somehow.</p><p>A wave of concern passes over you, which turns into a dark dread. This was not something you should have disturbed. You put it back in the satchel and push it down into the snow. You walk off and leave it behind, but further down the road you reach into your pocket to feel a hard lump. Seems like it won’t be lost so easily.</p>",
 				"rewards": {
 					"text": "Gain “Cursed Rock” [item_243]."
 				}
@@ -128,7 +128,7 @@
 			},
 			"B": {
 				"trigger": "Climb to the top of the waterfall and make camp overlooking the grotto.",
-				"text": "The frozen waterfall provides easy handholds for climbing its surface, and before long, you’re standing at the top, looking down on the grotto. You can even reach up and touch the willowburn tree branches. It looks like a great spot to make camp... before the buzzing starts. In a burst of angry yellow, thousands of bees swarm your party, driving you back down the waterfall. You’re out of breath before they give up the chase.",
+				"text": "The frozen waterfall provides easy handholds for climbing its surface, and before long, you’re standing at the top, looking down on the grotto. You can even reach up and touch the willowburn tree branches. It looks like a great spot to make camp… before the buzzing starts. In a burst of angry yellow, thousands of bees swarm your party, driving you back down the waterfall. You’re out of breath before they give up the chase.",
 				"rewards": {
 					"text": "All characters start the next scenario with [impair] and discard two cards."
 				}
@@ -138,7 +138,7 @@
 	"WR-09": {},
 	"WR-10": {},
 	"WR-11": {
-		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They’ll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It’s a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers... they’s a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans’re just gray worms swimming around in a skull driving a skeleton around. This here’s a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand ’em, but I can’t say I understand ’em.\" The Kivak waits, unblinkingly.</p>",
+		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They’ll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It’s a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers… they’s a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans’re just gray worms swimming around in a skull driving a skeleton around. This here’s a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand ’em, but I can’t say I understand ’em.\" The Kivak waits, unblinkingly.</p>",
 		"options": {
 			"A": {
 				"trigger": "Kill the Kivak.",
@@ -185,7 +185,7 @@
 		}
 	},
 	"WR-18": {
-		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle... and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs...\" Hurdle pauses, scrunching up his nose. \"On second thought, don’t dig up eggs.\"</p>",
+		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle… and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs…\" Hurdle pauses, scrunching up his nose. \"On second thought, don’t dig up eggs.\"</p>",
 		"options": {
 			"A": {
 				"trigger": "Help Hurdle dig up Jeremy’s hidden food.",
@@ -204,7 +204,7 @@
 		}
 	},
 	"WR-19": {
-		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>\"Thank you!\" A stocky Quatryl woman crawls out of the hatch. \"My aeronautical hit some rough clouds, and I couldn’t blow my emergency hatch. Been a while... I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!\" She looks around. \"Was worried I was being rescued by a bunch of Lurkers. I’m strictly opposed to being a snack.\"</p><p>She pulls a device from her pocket and scans the horizon. \"It’s actually a decent hour to get back into the sky... could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?\" She gestures into the confined space of the aeronautical.</p>",
+		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>\"Thank you!\" A stocky Quatryl woman crawls out of the hatch. \"My aeronautical hit some rough clouds, and I couldn’t blow my emergency hatch. Been a while… I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!\" She looks around. \"Was worried I was being rescued by a bunch of Lurkers. I’m strictly opposed to being a snack.\"</p><p>She pulls a device from her pocket and scans the horizon. \"It’s actually a decent hour to get back into the sky… could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?\" She gestures into the confined space of the aeronautical.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -291,7 +291,7 @@
 	},
 	"WR-26": {
 		"unlockedBy": { "section": { "id": "129.3" }},
-		"text": "<p>You’ve been hiking for a long time. In fact, you should have reached your destination long ago, but still the path stretches on ahead.</p><p>Now that you think of it, you’re certain you’ve seen that copse of trees before.</p><p>After another hour of telling yourselves that the destination must be around the next bend, you’re forced to admit it: you’re lost.</p><p>You pause to weigh your options. It might be better to stop and orient yourselves once the stars come out... but your supplies are already dwindling from the overlong journey, and waiting for nightfall would take up valuable time you don’t have.</p>",
+		"text": "<p>You’ve been hiking for a long time. In fact, you should have reached your destination long ago, but still the path stretches on ahead.</p><p>Now that you think of it, you’re certain you’ve seen that copse of trees before.</p><p>After another hour of telling yourselves that the destination must be around the next bend, you’re forced to admit it: you’re lost.</p><p>You pause to weigh your options. It might be better to stop and orient yourselves once the stars come out… but your supplies are already dwindling from the overlong journey, and waiting for nightfall would take up valuable time you don’t have.</p>",
 		"options": {
 			"A": {
 				"trigger": "Press on—it’s got to be around here somewhere.",
@@ -374,10 +374,44 @@
 		"unlockedBy": { "event": { "id": "SR-15" }}
 	},
 	"WR-38": {
-		"unlockedBy": { "event": { "id": "SR-15" }}
+		"unlockedBy": { "event": { "id": "SR-15" }},
+		"text": "<p>You’re walking along the trail when you hear the unmistakable howl of hounds from behind you. You try to hustle to keep ahead of them, scrambling along the snowy path, but their excited yips make clear they’re gaining on you. From the sounds of it, there’s a full pack massing to attack.</p><p>Perched at the top of the ridgeline, you see a familiar-looking Algox. Time has not been kind to him, but you’re certain it’s Malrog, the young Algox you helped so long ago.</p>",
+		"options": {
+			"A": {
+				"trigger": "Stand your ground.",
+				"text": "<p>You find an open enough area to make your stand. The hounds rush into the clearing and circle around your party, each waiting for another to make the first move. Malrog silently watches as you batter back wave after wave, fighting for your life. Finally, the exhaustion setting in and your guard down, the last of the hounds jumps toward you only to be cut down by a well-placed arrow from Malrog’s bow.</p><p>“You honored me with your assistance some time ago, and an Algox doesn’t forget.” He throws a fresh kill at your feet. “As repayment. My debt is cleared.”</p>",
+				"rewards": {
+					"text": "Gain 3 collective [hide].<br/>All characters start the next scenario with [wound]."
+				}
+			},
+			"B": {
+				"trigger": "Call up to the Algox for help.",
+				"text": "<p>You shout up to Malrog, who obliges with a flurry of blue-feathered arrows from his bow. The hounds scatter, uninterested in a fight they’re not sure to win.</p><p>“You honored me with your assistance some time ago, and an Algox doesn’t forget. Regardless of your appearance, you will always be among my Algox friends.”</p><p>He drops a fresh kill at your feet. “I wish you safe travels.”</p>",
+				"rewards": {
+					"text": "Gain 2 collective [hide]."
+				}
+			}
+		}
 	},
 	"WR-39": {
-		"unlockedBy": { "event": { "id": "SR-15" }}
+		"unlockedBy": { "event": { "id": "SR-15" }},
+		"text": "<p>You’re walking along the trail when you hear the unmistakable howl of hounds from behind you. You try to hustle to keep ahead of them, scrambling along the snowy path, but their excited yips make clear they’re gaining on you. From the sounds of it, there’s a full pack massing to attack.</p><p>Perched at the top of the ridgeline, you see a familiar-looking Algox. He’s older, and time certainly has not been kind to him, but you’re certain it’s Malrog, the young Algox you refused to help so long ago.</p>",
+		"options": {
+			"A": {
+				"trigger": "Stand your ground.",
+				"text": "<p>You find an open enough area to make your stand. The hounds rush into the clearing and circle around your party, each waiting for another to make the first move. Malrog silently watches as you batter back wave after wave, fighting for your life. Finally, the exhaustion setting in and your guard down, the last of the hounds jumps toward you, and you barely beat it away. Still Malrog watches.</p><p>“You taught me an important lesson about self-sufficiency, and I am thrilled you’ve been able to learn the same lesson. Until we meet again.”</p>",
+				"rewards": {
+					"text": "All characters start the next scenario with [wound], [brittle], [impair], and discard one card."
+				}
+			},
+			"B": {
+				"trigger": "Call up to the Algox for help.",
+				"text": "<p>You shout up to Malrog, asking for help in the face of impossible odds. “You taught me an important lesson about self-sufficiency, and I would not dishonor you by preventing your own education.”</p><p>The hounds circle your party and attack, a maelstrom of bites and claws, as Malrog silently watches from his perch. You fight for your lives as the exhaustion sets in, and still Malrog refuses to do more than observe. You barely beat back the last of the hounds and see that Malrog has turned to leave.</p><p>“Until we meet again.”</p>",
+				"rewards": {
+					"text": "All characters start the next scenario with [wound], [brittle], [impair], and discard one card."
+				}
+			}
+		}
 	},
 	"WR-40": {},
 	"WR-41": {
@@ -417,18 +451,18 @@
 	},
 	"WR-44": {
 		"unlockedBy": { "section": { "id": "193.1" }},
-		"text": "<p>“Good to meet you. I’m Hail. Unless we’ve met before, in which case... uh, well, I’m still Hail.” A translucent Aesther is blocking the road in front of you. “You’re mercenaries, right? This sheer, icy cliff leads to the Crimson Plant Grove. I want you to climb up there and bring back a red one of that one plant. You know?” You do not know, but she’s willing to draw you a picture.</p><p>After a few hours of climbing, you uncrumple the drawing of the plant you’re looking for and... well, it leaves a lot to be desired.</p><p>It looks like there’s red axenuts and red corpsescaps here. She was very insistent that the Crimson Plant Grove is precious and you shouldn’t take more than one. Which do you bring back to Hail?</p>",
+		"text": "<p>“Good to meet you. I’m Hail. Unless we’ve met before, in which case… uh, well, I’m still Hail.” A translucent Aesther is blocking the road in front of you. “You’re mercenaries, right? This sheer, icy cliff leads to the Crimson Plant Grove. I want you to climb up there and bring back a red one of that one plant. You know?” You do not know, but she’s willing to draw you a picture.</p><p>After a few hours of climbing, you uncrumple the drawing of the plant you’re looking for and… well, it leaves a lot to be desired.</p><p>It looks like there’s red axenuts and red corpsescaps here. She was very insistent that the Crimson Plant Grove is precious and you shouldn’t take more than one. Which do you bring back to Hail?</p>",
 		"options": {
 			"A": {
 				"trigger": "The red axenut.",
-				"text": "<p>“Perfect, thank y—wait, is that an axenut? I specifically said I wanted a red corpsescap.” Hail looks at you with intense scorn and sighs longer and louder than you think is necessary. You try to explain that she drew an axenut.</p><p>“The audacity...” she mutters, examining her drawing, which suddenly appears in her hand. “You were holding it upside down. Oh, look, just forget the whole thing.” She pops open a small portal to the top of the cliff and reaches through to pluck the red corpsescap. “I’ll just do it myself.”</p>",
+				"text": "<p>“Perfect, thank y—wait, is that an axenut? I specifically said I wanted a red corpsescap.” Hail looks at you with intense scorn and sighs longer and louder than you think is necessary. You try to explain that she drew an axenut.</p><p>“The audacity…” she mutters, examining her drawing, which suddenly appears in her hand. “You were holding it upside down. Oh, look, just forget the whole thing.” She pops open a small portal to the top of the cliff and reaches through to pluck the red corpsescap. “I’ll just do it myself.”</p>",
 				"rewards": {
 					"text": "All characters start the next scenario discarding one card."
 				}
 			},
 			"B": {
 				"trigger": "The red corpsescap.",
-				"text": "<p>“Perfect,” she says as the red corpsescap you were holding suddenly appears in her hand. She gives it a big sniff. “Yes, this should do nicely...” She breaks off a small chunk and hands it to you. “Chew on that.”</p><p>It has a spongy, icy texture that melts to a distinct aftertaste of ash. “Don’t say I never gave you anything.” With that, she splits a portal open in the air and steps through to an alley in front of a decrepit tavern in a city that looks nice and warm. It snaps shut behind her.</p>",
+				"text": "<p>“Perfect,” she says as the red corpsescap you were holding suddenly appears in her hand. She gives it a big sniff. “Yes, this should do nicely…” She breaks off a small chunk and hands it to you. “Chew on that.”</p><p>It has a spongy, icy texture that melts to a distinct aftertaste of ash. “Don’t say I never gave you anything.” With that, she splits a portal open in the air and steps through to an alley in front of a decrepit tavern in a city that looks nice and warm. It snaps shut behind her.</p>",
 				"rewards": {
 					"text": "All characters start the next scenario with [warden] and [strengthen]."
 				}
@@ -439,7 +473,44 @@
 		"unlockedBy": [{ "section": { "id": "143.2" }}, { "section": { "id": "164.2" }}]
 	},
 	"WR-46": {
-		"unlockedBy": { "section": { "id": "116.3" }}
+		"unlockedBy": { "section": { "id": "116.3" }},
+		"text": "<p>The spot Eddica the Librarian marked out for you was certainly easy to find: you just had to make your way toward the ominous column of smoke and ash billowing out of the top of the hillside. The hike up was treacherous and the snow underfoot frequently crumbled away to dark pits you’d prefer not to explore. Cresting the lip of the caldera reveals a single pillar with a stone dome on top. A pool of lava swirls around the pillar and gives off a brazen heat.</p><p>You approach the dome to lift the heavy covering and the boiling rock recedes to allow you passage. Underneath is a tome covered in a beautifully-sculpted cover—the piece looks like a work of art. Images of the elements are carved into the rough Kivak leather as a ring of familiar circles, and ornate citrine studs bind it together. It is warm, and inviting, and impossibly light. It is breathtaking. This is the Tome of the Elements.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Open the tome to learn its secrets.",
+				"requirement": "[trait] ARCANE",
+				"text": "You unlatch the tome and feel the thrum of power within it. It burns, it trembles, it screams in a conflicting storm of energy. You attune yourself to its contents and feel it swell through you.",
+				"rewards": {
+					"text": "Start the next scenario with all elements in the strong column.<br/>Add [section_44.4] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "SR-48" }]
+					}
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Open the tome to learn its secrets.",
+				"requirement": "[not] [trait] ARCANE",
+				"text": "From the instant you break open the binding, the elemental energy of the tome swells through your being, ripping through your insides indiscriminately. You feel a gust of wind travel under your skin, you feel the searing intensity of the sun. Every nerve, every piece of you fills with the terrifying churn of power. And then—as quickly as it began—it stops, leaving you to catch your breath in short gasps.",
+				"rewards": {
+					"text": "All characters start the next scenario with [brittle] and [damage] 3.<br/>Add [section_44.4] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "SR-48" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Bring the book back to Eddica for her informed review.",
+				"text": "You remember Eddica’s warning and quickly stow the book in your satchel without opening it. She’ll be in a better position to unlock the power within.",
+				"rewards": {
+					"text": "Add [section_44.4] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "SR-48" }]
+					}
+				}
+			}
+		}
 	},
 	"WR-47": {},
 	"WR-48": {},

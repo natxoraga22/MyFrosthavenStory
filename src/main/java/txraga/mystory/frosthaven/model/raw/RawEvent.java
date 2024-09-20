@@ -46,7 +46,9 @@ public class RawEvent {
 		@JsonDeserialize(using = IconsDeserializer.class)
 		private String requirement;
 
+		@JsonDeserialize(using = IconsDeserializer.class)
 		private String text;
+		
 		private Rewards rewards;
 		private boolean skipAttack;
 		private boolean returnCard;

@@ -24,6 +24,7 @@
 		<bootstrapThymeleafDialect.version>2.0.0-SNAPSHOT</bootstrapThymeleafDialect.version>
 		<!-- Webjars -->
 		<bootstrap.version>5.3.3</bootstrap.version>
+		<fontAwesome.version>6.5.2</fontAwesome.version>
 		<tomSelect.version>2.3.1</tomSelect.version>
 	</properties>
 
@@ -69,6 +70,11 @@
 			<groupId>org.webjars.npm</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>${bootstrap.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>${fontAwesome.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.npm</groupId>

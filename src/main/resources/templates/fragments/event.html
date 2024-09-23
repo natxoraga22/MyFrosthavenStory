@@ -7,41 +7,57 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event" x-bind:id="'event_' + eventId" class="event" x-data="eventData(eventId)">
-		<!-- Title -->
-		<div class="title">
-			<h1 class="title" x-jsz>
-				<span class="titleSecondary">{{event.id}} ·</span> {{event.typeAndSeason}} [[#{event.title}]]
-			</h1>
-			<!--
-			<th:block th:if="*{unlockedBy}">
-				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"/>
-			</th:block>
-			-->
-		</div>
+	<div th:fragment="event" x-bind:id="'event_' + eventId">
+		<template x-if="!loadingEvent">
+			<div class="event">
+				<!-- Title -->
+				<div class="title">
+					<h1 class="title" x-jsz>
+						<span class="titleSecondary">{{event.id}} ·</span> {{event.typeAndSeason}} [[#{event.title}]]
+					</h1>
+					<!--
+					<th:block th:if="*{unlockedBy}">
+						<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"/>
+					</th:block>
+					-->
+				</div>
 
-		<!-- Card image -->
-		<!--
-		<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
-		    @{__${imgUrl}__/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
-		    @{__${imgUrl}__/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
-		</th:block>
-		-->
-		<div x-data="playingCardData(() => frontImgSrc, () => backImgSrc)">
-			<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
-		</div>
+				<!-- Card image -->
+				<div x-data="playingCardData(eventFrontImgSrc, eventBackImgSrc)">
+					<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
+				</div>
 
-		<!-- Text -->
-		<div class="text" x-jsz>
-			{{event.text}}
-		</div>
+				<!-- Text -->
+				<div class="text" x-jsz>
+					{{event.text}}
+				</div>
 
-		<!-- Options -->
-		<div class="options">
-			<template x-for="option in event.chosenOptions" x-bind:key="">
-				<th:block th:replace="~{:: eventOption}"/>
-			</template>
-		</div>
+				<!-- Options -->
+				<div class="options">
+					<template x-if="event.chosenOptions">
+						<template x-for="(option, index) in event.chosenOptions" x-bind:key="option.id">
+							<th:block th:replace="~{:: eventOption}"/>
+						</template>
+					</template>
+				</div>
+
+				<!-- Outpost attack -->
+				<template x-if="!event.skipAttack">
+					<hr>
+					<th:block th:replace="~{:: outpostAttack}"/>
+				</template>
+
+				<!-- Random scenario section -->
+				<!--
+				<th:block th:if="*{randomScenarioSection}">
+					<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"/>
+				</th:block>
+				-->
+			</div>
+		</template>
+		
+
+		
 
 
 		<!-- DEBUG -->
@@ -57,7 +73,7 @@
 	<!-- ------ -->
 	<div th:fragment="eventOption" class="option">
 		<!-- Trigger -->
-		<div class="trigger">
+		<div class="trigger" x-show="index == 0">
 			<i class="fa-solid fa-angles-right fa-sm"></i>
 			<strong>[[#{event.option}]]<span x-show="option.id" x-jsz> {{option.id}}</span>:</strong>
 			<span x-jsz>{{option.trigger}}</span>
@@ -70,42 +86,42 @@
 		</div>
 
 		<!-- Rewards -->
-		<!--
-		<div class="rewards">
-			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
+		<div class="rewards" x-data="rewardsData(option.rewards)">
+			<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 		</div>
-		-->
 	</div>
 
 
 	<!-- -------------- -->
 	<!-- OUTPOST ATTACK -->
 	<!-- -------------- -->
-	<div th:fragment="outpostAttack(outpostAttack)" th:object="${outpostAttack}" class="outpostAttack">
+	<div th:fragment="outpostAttack" class="outpostAttack">
 		<!-- Attack -->
 		<bs:flex align="center">
-			<div class="attack">
+			<div class="attack" x-jsz>
 				<img class="icon" th:src="@{__${imgUrl}__/icons/attack.png}">
-				[[*{attack}]]
+				{{outpostAttack.attack}}
 			</div>
-			<div class="target">
+			<div class="target" x-jsz>
 				<img class="icon" th:src="@{__${imgUrl}__/icons/target.png}">
-				[[*{target}]]
+				{{outpostAttack.target}}
 			</div>
-			<div class="targetPriority">
-				[(*{targetPriority})]
+			<div class="targetPriority" x-jsz>
+				{{outpostAttack.targetPriority}}
 			</div>
 		</bs:flex>
 		
 		<!-- Text -->
-		<div class="text">
-			[(*{text})]
+		<div class="text" x-jsz>
+			{{outpostAttack.text}}
 		</div>
 
 		<!-- Rewards -->
+		<!--
 		<div th:if="*{rewards}" class="rewards">
 			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
 		</div>
+		-->
 	</div>
 
 
@@ -114,23 +130,28 @@
 	<!-- -------- -->
 	<script th:fragment="eventJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("eventData", (eventId, chosenOptionsIds = ["A"]) => ({
+			Alpine.data("eventData", (eventId, chosenOptionsIds) => ({
 				imgUrl: /*[[${imgUrl}]]*/ "",
 				eventId: eventId,
 				chosenOptionsIds: chosenOptionsIds,
-				event: { images: { front: "testFront", back: "testBack" } },
+				event: {},
+				loadingEvent: true,
 
-				get frontImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
-				get backImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
+				get eventFrontImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
+				get eventBackImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
 
 				init() {
 					this.loadEvent();
 				},
 
 				loadEvent() {
-					ajaxGet("/event/" + this.eventId + "/data?chosenOptions=" + this.chosenOptionsIds.join(","))
+					this.loadingEvent = true;
+					let eventDataUrl = "/event/" + this.eventId + "/data";
+					if (this.chosenOptionsIds) eventDataUrl += "?chosenOptions=" + this.chosenOptionsIds.join(",");
+					ajaxGet(eventDataUrl)
 						.success(event => this.event = event)
-						.error(errorData => log.error("ERROR fetching event", errorData.message));
+						.error(errorData => log.error("ERROR fetching event", errorData.message))
+						.always(() => this.loadingEvent = false);
 				}
 			}));
 		});

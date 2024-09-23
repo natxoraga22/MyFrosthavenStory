@@ -16,10 +16,8 @@
 			<bs:col col="{xs:12, md:3}">
 				<th:block th:replace="~{fragments/eventForm :: eventForm}"/>
 			</bs:col>
-			<bs:col col="{xs:12, md:9}">
-				<!--<th:block th:if="${playedEvent}">-->
+			<bs:col col="{xs:12, md:9}" x-data="eventData(eventId, chosenOptionsIds)">
 				<th:block th:replace="~{fragments/event :: event}"/>
-				<!--</th:block>-->
 			</bs:col>
 		</bs:row>
 	</th:block>
@@ -29,6 +27,7 @@
 		<script th:replace="~{:: eventPageJs}"></script>
 		<script th:replace="~{fragments/eventForm :: eventFormJs}"></script>
 		<script th:replace="~{fragments/event :: eventJs}"></script>
+		<script th:replace="~{fragments/rewards :: rewardsJs}"></script>
 	</th:block>
 
 	
@@ -39,7 +38,7 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventPageData", () => ({
 				eventId: /*[[${eventId}]]*/ null,
-				chosenOptions: /*[[${chosenOptions}]]*/ []
+				chosenOptionsIds: /*[[${chosenOptionsIds}]]*/ []
 			}));
 		});
 	</script>

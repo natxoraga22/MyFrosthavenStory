@@ -10,47 +10,59 @@
 	<bs:card th:fragment="rewards(rewards)" class="fhCard rewards">
 		<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
 		<bs:cardBody>
-			<div th:fragment="rewardsBody(rewards)" th:object="${rewards}" class="rewardsBody">
+			<div th:fragment="rewardsBody" class="rewardsBody">
 				<!-- Text -->
-				<div th:if="*{text}" class="fw-bold">
-					[(*{text})]
-				</div>
+				<template x-if="rewards.text">
+					<div class="fw-bold" x-jsz>{{rewards.text}}</div>
+				</template>
 
 				<!-- New events -->
-				<div th:if="*{!#maps.isEmpty(events)}">
-					[[#{section.rewards.newEvents}]]:
-					<br/>
-					<th:block th:replace="~{:: rewardsEvents(*{events['SO']}, #{section.rewards.events.SO})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['SR']}, #{section.rewards.events.SR})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['WO']}, #{section.rewards.events.WO})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['WR']}, #{section.rewards.events.WR})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{events['B']}, #{section.rewards.events.B})}"></th:block>
-				</div>
+				<template x-if="rewards.events">
+					<div>
+						[[#{section.rewards.newEvents}]]:
+						<br/>
+						<template x-for="typeAndSeason in typesAndSeasons">
+							<div x-data="rewardsEventsData(rewards.events[typeAndSeason])">
+								<th:block th:replace="~{:: rewardsEvents}"/>
+							</div>
+						</template>
+					</div>
+				</template>
 
 				<!-- Removed events -->
-				<div th:if="*{!#maps.isEmpty(removedEvents)}">
-					[[#{section.rewards.removedEvents}]]:
-					<br/>
-					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['SO']}, #{section.rewards.events.SO})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['SR']}, #{section.rewards.events.SR})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['WO']}, #{section.rewards.events.WO})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['WR']}, #{section.rewards.events.WR})}"></th:block>
-					<th:block th:replace="~{:: rewardsEvents(*{removedEvents['B']}, #{section.rewards.events.B})}"></th:block>
-				</div>
+				<template x-if="rewards.removedEvents">
+					<div>
+						[[#{section.rewards.removedEvents}]]:
+						<br/>
+						<template x-for="typeAndSeason in typesAndSeasons">
+							<div x-data="rewardsEventsData(rewards.removedEvents[typeAndSeason])">
+								<th:block th:replace="~{:: rewardsEvents}"/>
+							</div>
+						</template>
+					</div>
+				</template>
 
 				<!-- New scenarios -->
-				<div th:if="*{!#lists.isEmpty(scenarios)}">
-					[[#{section.rewards.newScenarios}]]:
-					<br/>
-					<th:block th:replace="~{:: rewardsScenarios(*{scenarios})}"></th:block>
-				</div>
+				<template x-if="rewards.scenarios">
+					<div>
+						[[#{section.rewards.newScenarios}]]:
+						<br/>
+						<div x-data="rewardsScenariosData(rewards.scenarios)">
+							<th:block th:replace="~{:: rewardsScenarios}"/>
+						</div>
+					</div>
+				</template>
 
 				<!-- Locked out scenarios -->
-				<div th:if="*{!#lists.isEmpty(lockedOutScenarios)}">
-					[[#{section.rewards.lockedOutScenarios}]]:
-					<br/>
-					<th:block th:replace="~{:: rewardsScenarios(*{lockedOutScenarios})}"></th:block>
-				</div>
+				<template x-if="rewards.lockedOutScenarios">
+					<div>
+						[[#{section.rewards.lockedOutScenarios}]]:
+						<br/>
+						<div x-data="rewardsScenariosData(rewards.lockedOutScenarios)">
+							<th:block th:replace="~{:: rewardsScenarios}"/>
+						</div>
+					</div>
+				</template>
 			</div>
 		</bs:cardBody>
 	</bs:card>
@@ -59,28 +71,53 @@
 	<!-- -------------- -->
 	<!-- REWARDS EVENTS -->
 	<!-- -------------- -->
-	<th:block th:fragment="rewardsEvents(eventsList,seasonAndTypeString)">
-		<th:block th:if="${!#lists.isEmpty(eventsList)}">
-			<strong th:each="event,iterStat : ${eventsList}">
-				[[${event.id}]]<th:block th:if="${!iterStat.last}">, </th:block>
-			</strong>
-			([[${seasonAndTypeString}]])
-			<br/>
-		</th:block>
+	<th:block th:fragment="rewardsEvents">
+		<template x-if="events?.length > 0">
+			<div>
+				<strong x-jsz>{{events.map(event => event.id).join(", ")}}</strong>
+				<span x-jsz>({{typeAndSeason}})</span>
+			</div>
+		</template>
 	</th:block>
 
 
 	<!-- ----------------- -->
 	<!-- REWARDS SCENARIOS -->
 	<!-- ----------------- -->
-	<th:block th:fragment="rewardsScenarios(scenariosList)">
-		<th:block th:each="scenario : ${scenariosList}">
-			<strong>[[${scenario.name}]]</strong>
-			<span class="scenarioNumber">([[${#numbers.formatInteger(scenario.id,1)}]])</span>
-			<img th:if="${scenario.linked}" class="icon linked" th:src="@{__${imgUrl}__/icons/linked.png}">
-			<img th:if="${scenario.forceLinked}" class="icon forceLinked" th:src="@{__${imgUrl}__/icons/forceLinked.png}">
-			<br/>
-		</th:block>
+	<th:block th:fragment="rewardsScenarios">
+		<template x-for="scenario in scenarios">
+			<div>
+				<strong x-jsz>{{scenario.name}}</strong>
+				<span class="scenarioNumber" x-jsz>({{scenario.id}})</span>
+				<img x-show="scenario.linked" class="icon linked" th:src="@{__${imgUrl}__/icons/linked.png}">
+				<img x-show="scenario.forceLinked" class="icon forceLinked" th:src="@{__${imgUrl}__/icons/forceLinked.png}">
+			</div>
+		</template>
 	</th:block>
+
+
+	<!-- ---------- -->
+	<!-- REWARDS JS -->
+	<!-- ---------- -->
+	<script th:fragment="rewardsJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("rewardsData", (rewards) => ({
+				rewards: rewards,
+				typesAndSeasons: ["B", "SO", "SR", "WO", "WR"]
+			}));
+		});
+
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("rewardsEventsData", (events) => ({
+				events: events
+			}));
+		});
+
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("rewardsScenariosData", (scenarios) => ({
+				scenarios: scenarios
+			}));
+		});
+	</script>
 </body>
 </html>

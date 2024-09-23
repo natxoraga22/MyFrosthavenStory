@@ -28,17 +28,17 @@ public class EventController {
 
 
 	@GetMapping({"", "/{eventId}"})
-	public ModelAndView event(Model model, @PathVariable(required = false) String eventId, 
-	                                       @RequestParam(required = false) List<String> chosenOptions) {
-		log.entry(eventId, chosenOptions);
+	public ModelAndView event(Model model, @PathVariable(required = false) String eventId,
+	                                       @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
+		log.entry(eventId, chosenOptionsIds);
 		model.addAttribute("page", Page.EVENT);
 		model.addAttribute("eventId", eventId);
-		model.addAttribute("chosenOptions", chosenOptions);
+		model.addAttribute("chosenOptionsIds", chosenOptionsIds);
 
 
 		model.addAttribute("allEventsIds", frosthaven.getAllRawEventsIds());
 		model.addAttribute("rawEvent", frosthaven.getRawEvent(eventId));
-		model.addAttribute("playedEvent", frosthaven.getPlayedEvent(eventId, chosenOptions, null));
+		//model.addAttribute("playedEvent", frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
 		return log.exit(new ModelAndView("event"));
 	}
 
@@ -52,9 +52,10 @@ public class EventController {
 
 	@GetMapping("/{eventId}/data")
 	@ResponseBody
-	public PlayedEvent getPlayedEvent(@PathVariable String eventId, @RequestParam(required = false) List<String> chosenOptions) {
-		log.entry(eventId, chosenOptions);
-		return log.exit(frosthaven.getPlayedEvent(eventId, chosenOptions, null));
+	public PlayedEvent getPlayedEvent(@PathVariable String eventId,
+	                                  @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
+		log.entry(eventId, chosenOptionsIds);
+		return log.exit(frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
 	}
 
 }

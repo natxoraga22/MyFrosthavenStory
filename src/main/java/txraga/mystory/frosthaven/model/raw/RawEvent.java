@@ -77,19 +77,7 @@ public class RawEvent {
 	/* --------------- */
 
 	public enum TypeAndSeason {
-		SO, SR, WO, WR, B;
-
-		@Override
-		public String toString() {
-			switch(this) {
-				case SO: return "Summer Outpost";
-				case SR: return "Summer Road";
-				case WO: return "Winter Outpost";
-				case WR: return "Winter Road";
-				case B: return "Boat";
-				default: throw new IllegalArgumentException();
-			}
-		}
+		B, SO, SR, WO, WR;
 	}
 
 }

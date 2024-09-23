@@ -22,10 +22,10 @@ public class Rewards {
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String text;
 
-	private Map<RawEvent.TypeAndSeason,List<Rewards.Event>> events = Map.of();
-	private Map<RawEvent.TypeAndSeason,List<Rewards.Event>> removedEvents = Map.of();
-	private List<Rewards.Scenario> scenarios = List.of();
-	private List<Rewards.Scenario> lockedOutScenarios = List.of();
+	private Map<RawEvent.TypeAndSeason,List<Rewards.Event>> events;
+	private Map<RawEvent.TypeAndSeason,List<Rewards.Event>> removedEvents;
+	private List<Rewards.Scenario> scenarios;
+	private List<Rewards.Scenario> lockedOutScenarios;
 
 
 	@Getter

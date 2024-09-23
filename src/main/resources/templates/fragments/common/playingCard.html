@@ -25,15 +25,10 @@
 	<!-- --------------- -->
 	<script th:fragment="playingCardJs" id="playingCardJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("playingCardData", (getFrontImgSrc, getBackImgSrc) => ({
-				frontImgSrc: getFrontImgSrc(),
-				backImgSrc: getBackImgSrc(),
-				flipped: false,
-
-				init() {
-					this.$watch(getFrontImgSrc, value => this.frontImgSrc = value);
-					this.$watch(getBackImgSrc, value => this.backImgSrc = value);
-				}
+			Alpine.data("playingCardData", (frontImgSrc, backImgSrc) => ({
+				frontImgSrc: frontImgSrc,
+				backImgSrc: backImgSrc,
+				flipped: false
 			}));
 		});
 	</script>

@@ -7,68 +7,74 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event(playedEvent)" th:object="${playedEvent}" th:id="|event_*{id}|" class="event">
+	<div th:fragment="event" x-bind:id="'event_' + eventId" class="event" x-data="eventData(eventId)">
 		<!-- Title -->
 		<div class="title">
-			<h1 class="title">
-				<span class="titleSecondary">[[*{id}]] ·</span> [[*{typeAndSeason}]] [[#{event.title}]]
+			<h1 class="title" x-jsz>
+				<span class="titleSecondary">{{event.id}} ·</span> {{event.typeAndSeason}} [[#{event.title}]]
 			</h1>
+			<!--
 			<th:block th:if="*{unlockedBy}">
 				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"/>
 			</th:block>
+			-->
 		</div>
 
-		<!-- Card -->
+		<!-- Card image -->
+		<!--
 		<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
 		    @{__${imgUrl}__/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
 		    @{__${imgUrl}__/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
 		</th:block>
+		-->
+		<div x-data="playingCardData(() => frontImgSrc, () => backImgSrc)">
+			<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
+		</div>
 
 		<!-- Text -->
-		<div class="text">
-			[(*{text})]
+		<div class="text" x-jsz>
+			{{event.text}}
 		</div>
 
 		<!-- Options -->
-		<div th:if="*{!#lists.isEmpty(chosenOptions)}" class="options">
-			<th:block th:each="chosenOption,iterStat : *{chosenOptions}">
-				<th:block th:replace="~{:: eventOption(${chosenOption},${iterStat.first})}"/>
-			</th:block>
+		<div class="options">
+			<template x-for="option in event.chosenOptions" x-bind:key="">
+				<th:block th:replace="~{:: eventOption}"/>
+			</template>
 		</div>
 
-		<!-- Outpost attack -->
-		<th:block th:if="*{!skipAttack}">
-			<hr>
-			<th:block th:replace="~{:: outpostAttack(*{outpostAttack})}"/>
-		</th:block>
 
-		<!-- Random scenario section -->
-		<th:block th:if="*{randomScenarioSection}">
-			<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"/>
-		</th:block>
+		<!-- DEBUG -->
+		<div bs:mt="5">
+			<hr>
+			<span x-jsz>{{JSON.stringify(event)}}</span>
+		</div>
 	</div>
 
 
 	<!-- ------ -->
 	<!-- OPTION -->
 	<!-- ------ -->
-	<div th:fragment="eventOption(option,showTrigger)" th:object="${option}" class="option">
+	<div th:fragment="eventOption" class="option">
 		<!-- Trigger -->
-		<div th:if="${showTrigger}" class="trigger">
+		<div class="trigger">
 			<i class="fa-solid fa-angles-right fa-sm"></i>
-			<strong>[[#{event.option}]]<span th:if="*{!#strings.isEmpty(id)}"> [[*{id}]]</span>:</strong>
-			[(*{trigger})]
+			<strong>[[#{event.option}]]<span x-show="option.id" x-jsz> {{option.id}}</span>:</strong>
+			<span x-jsz>{{option.trigger}}</span>
 		</div>
 
 		<!-- Text -->
 		<div class="text">
-			<span th:if="*{requirement}">[(*{requirement})]: </span>[(*{text})]
+			<span x-show="option.requirement" x-jsz>{{option.requirement}}: </span>
+			<span x-jsz>{{option.text}}</span>
 		</div>
 
 		<!-- Rewards -->
+		<!--
 		<div class="rewards">
 			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
 		</div>
+		-->
 	</div>
 
 
@@ -101,5 +107,33 @@
 			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
 		</div>
 	</div>
+
+
+	<!-- -------- -->
+	<!-- EVENT JS -->
+	<!-- -------- -->
+	<script th:fragment="eventJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("eventData", (eventId, chosenOptionsIds = ["A"]) => ({
+				imgUrl: /*[[${imgUrl}]]*/ "",
+				eventId: eventId,
+				chosenOptionsIds: chosenOptionsIds,
+				event: { images: { front: "testFront", back: "testBack" } },
+
+				get frontImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
+				get backImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
+
+				init() {
+					this.loadEvent();
+				},
+
+				loadEvent() {
+					ajaxGet("/event/" + this.eventId + "/data?chosenOptions=" + this.chosenOptionsIds.join(","))
+						.success(event => this.event = event)
+						.error(errorData => log.error("ERROR fetching event", errorData.message));
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

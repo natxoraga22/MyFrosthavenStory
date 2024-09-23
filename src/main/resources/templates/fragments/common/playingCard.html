@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------------ -->
+	<!-- PLAYING CARD -->
+	<!-- ------------ -->
+	<div th:fragment="playingCard" class="playingCard flippable integrated" x-bind:class="{ 'flipped' : flipped }"
+	     @click="flipped = !flipped">
+		<div class="flippableInner">
+			<div class="front">
+				<img x-bind:src="frontImgSrc">
+			</div>
+			<div class="back">
+				<img x-bind:src="backImgSrc">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- --------------- -->
+	<!-- PLAYING CARD JS -->
+	<!-- --------------- -->
+	<script th:fragment="playingCardJs" id="playingCardJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("playingCardData", (getFrontImgSrc, getBackImgSrc) => ({
+				frontImgSrc: getFrontImgSrc(),
+				backImgSrc: getBackImgSrc(),
+				flipped: false,
+
+				init() {
+					this.$watch(getFrontImgSrc, value => this.frontImgSrc = value);
+					this.$watch(getBackImgSrc, value => this.backImgSrc = value);
+				}
+			}));
+		});
+	</script>
+</body>
+</html>

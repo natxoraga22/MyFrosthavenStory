@@ -56,11 +56,18 @@
 		<!-- Bootstrap -->
 		<script th:src="@{/webjars/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
 
+		<!-- Alpine -->
+		<script src="https://cdn.jsdelivr.net/npm/alpinejs-jsz@1.0.7/dist/jsz.cdn.min.js"></script>
+		<script th:src="@{/webjars/alpinejs/dist/cdn.min.js}" defer></script>
+
 		<!-- TomSelect -->
 		<script th:src="@{/webjars/tom-select/dist/js/tom-select.complete.min.js}"></script>
 
 		<!-- Custom JS -->
-		<th:block th:replace="~{fragments/frosthaven :: playingCardJs}"></th:block>
+		<script th:src="@{/js/libs/csb/logUtils.js}"></script>
+		<script th:src="@{/js/libs/csb/ajaxUtils.js}"></script>
+		<!--<th:block th:replace="~{fragments/frosthaven :: playingCardJs}"></th:block>-->
+		<th:block th:replace="~{fragments/common/playingCard :: playingCardJs}">
 	</th:block>
 </body>
 </html>

@@ -12,21 +12,36 @@
 <body>
 	<!-- Content -->
 	<th:block layout:fragment="content">
-		<bs:row gx="{md:4, xl:5}" gy="4">
+		<bs:row gx="{md:4, xl:5}" gy="4" x-data="eventPageData">
 			<bs:col col="{xs:12, md:3}">
 				<th:block th:replace="~{fragments/eventForm :: eventForm}"/>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<th:block th:if="${playedEvent}">
-					<th:block th:replace="~{fragments/event :: event(${playedEvent})}"/>
-				</th:block>
+				<!--<th:block th:if="${playedEvent}">-->
+				<th:block th:replace="~{fragments/event :: event}"/>
+				<!--</th:block>-->
 			</bs:col>
 		</bs:row>
 	</th:block>
 
 	<!-- Javascript -->
 	<th:block layout:fragment="javascript">
+		<script th:replace="~{:: eventPageJs}"></script>
 		<script th:replace="~{fragments/eventForm :: eventFormJs}"></script>
+		<script th:replace="~{fragments/event :: eventJs}"></script>
 	</th:block>
+
+	
+	<!-- ------------- -->
+	<!-- EVENT PAGE JS -->
+	<!-- ------------- -->
+	<script th:fragment="eventPageJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("eventPageData", () => ({
+				eventId: /*[[${eventId}]]*/ null,
+				chosenOptions: /*[[${chosenOptions}]]*/ []
+			}));
+		});
+	</script>
 </body>
 </html>

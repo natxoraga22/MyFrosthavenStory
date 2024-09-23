@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ----- -->
+	<!-- EVENT -->
+	<!-- ----- -->
+	<div th:fragment="event(playedEvent)" th:object="${playedEvent}" th:id="|event_*{id}|" class="event">
+		<!-- Title -->
+		<div class="title">
+			<h1 class="title">
+				<span class="titleSecondary">[[*{id}]] ·</span> [[*{typeAndSeason}]] [[#{event.title}]]
+			</h1>
+			<th:block th:if="*{unlockedBy}">
+				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"/>
+			</th:block>
+		</div>
+
+		<!-- Card -->
+		<th:block th:replace="~{fragments/frosthaven :: playingCard(true,
+		    @{__${imgUrl}__/events/{typeAndSeason}/{id}.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})},
+		    @{__${imgUrl}__/events/{typeAndSeason}/{id}_back.png(typeAndSeason=*{typeAndSeason.name()},id=*{id})})}">
+		</th:block>
+
+		<!-- Text -->
+		<div class="text">
+			[(*{text})]
+		</div>
+
+		<!-- Options -->
+		<div th:if="*{!#lists.isEmpty(chosenOptions)}" class="options">
+			<th:block th:each="chosenOption,iterStat : *{chosenOptions}">
+				<th:block th:replace="~{:: eventOption(${chosenOption},${iterStat.first})}"/>
+			</th:block>
+		</div>
+
+		<!-- Outpost attack -->
+		<th:block th:if="*{!skipAttack}">
+			<hr>
+			<th:block th:replace="~{:: outpostAttack(*{outpostAttack})}"/>
+		</th:block>
+
+		<!-- Random scenario section -->
+		<th:block th:if="*{randomScenarioSection}">
+			<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"/>
+		</th:block>
+	</div>
+
+
+	<!-- ------ -->
+	<!-- OPTION -->
+	<!-- ------ -->
+	<div th:fragment="eventOption(option,showTrigger)" th:object="${option}" class="option">
+		<!-- Trigger -->
+		<div th:if="${showTrigger}" class="trigger">
+			<i class="fa-solid fa-angles-right fa-sm"></i>
+			<strong>[[#{event.option}]]<span th:if="*{!#strings.isEmpty(id)}"> [[*{id}]]</span>:</strong>
+			[(*{trigger})]
+		</div>
+
+		<!-- Text -->
+		<div class="text">
+			<span th:if="*{requirement}">[(*{requirement})]: </span>[(*{text})]
+		</div>
+
+		<!-- Rewards -->
+		<div class="rewards">
+			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
+		</div>
+	</div>
+
+
+	<!-- -------------- -->
+	<!-- OUTPOST ATTACK -->
+	<!-- -------------- -->
+	<div th:fragment="outpostAttack(outpostAttack)" th:object="${outpostAttack}" class="outpostAttack">
+		<!-- Attack -->
+		<bs:flex align="center">
+			<div class="attack">
+				<img class="icon" th:src="@{__${imgUrl}__/icons/attack.png}">
+				[[*{attack}]]
+			</div>
+			<div class="target">
+				<img class="icon" th:src="@{__${imgUrl}__/icons/target.png}">
+				[[*{target}]]
+			</div>
+			<div class="targetPriority">
+				[(*{targetPriority})]
+			</div>
+		</bs:flex>
+		
+		<!-- Text -->
+		<div class="text">
+			[(*{text})]
+		</div>
+
+		<!-- Rewards -->
+		<div th:if="*{rewards}" class="rewards">
+			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
+		</div>
+	</div>
+</body>
+</html>

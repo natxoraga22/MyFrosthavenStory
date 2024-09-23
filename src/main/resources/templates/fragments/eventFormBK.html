@@ -7,7 +7,7 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" id="eventForm" x-data="eventFormData">
+	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -38,29 +38,9 @@
 	<!-- EVENT FORM JS -->
 	<!-- ------------- -->
 	<script th:fragment="eventFormJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			Alpine.data("eventFormData", () => ({
-				eventId: null,
-				chosenOptions: [],
-
-				// Inputs
-				eventIdSelect: null,
-				chosenOptionsSelect: null,
-
-				init() {
-					this.eventIdSelect = new TomSelect("#inputEventId", { maxOptions: null });
-					this.chosenOptionsSelect = new TomSelect("#inputChosenOptions", { plugins: ["remove_button"], closeAfterSelect: true });
-
-					this.eventIdSelect.on("change", value => {
-						this.eventId = value;
-
-						// TODO: Ajax call for the rawEvent with id = this.eventId
-						// Populate this.chosenOptions with the rawEvent.options
-						// ...
-					});
-				}
-			}));
-		});
+		new TomSelect("#inputEventId", { maxOptions: null });
+		const chosenOptionsIds = /*[[${#strings.listSplit(param.chosenOptions, ',')}]]*/ [];
+		new TomSelect("#inputChosenOptions", { plugins: ["remove_button"], items: chosenOptionsIds, closeAfterSelect: true });
 	</script>
 </body>
 </html>

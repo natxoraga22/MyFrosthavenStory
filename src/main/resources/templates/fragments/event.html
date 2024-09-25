@@ -13,7 +13,9 @@
 				<!-- Title -->
 				<div class="title">
 					<h1 class="title" x-jsz>
-						<span class="titleSecondary">{{event.id}} ·</span> {{event.typeAndSeason}} [[#{event.title}]]
+						<span class="titleSecondary">{{event.id}} ·</span>
+						{{$store.typesAndSeasonsStrings[event.typeAndSeason]}}
+						[[#{event.title}]]
 					</h1>
 					<!--
 					<th:block th:if="*{unlockedBy}">
@@ -35,7 +37,7 @@
 				<!-- Options -->
 				<div class="options">
 					<template x-if="event.chosenOptions">
-						<template x-for="(option, index) in event.chosenOptions" x-bind:key="option.id">
+						<template x-for="(option, index) in event.chosenOptions">
 							<th:block th:replace="~{:: eventOption}"/>
 						</template>
 					</template>
@@ -43,8 +45,10 @@
 
 				<!-- Outpost attack -->
 				<template x-if="!event.skipAttack">
-					<hr>
-					<th:block th:replace="~{:: outpostAttack}"/>
+					<div x-data="{ outpostAttack: event.outpostAttack }">
+						<hr>
+						<th:block th:replace="~{:: outpostAttack}"/>
+					</div>
 				</template>
 
 				<!-- Random scenario section -->
@@ -86,7 +90,7 @@
 		</div>
 
 		<!-- Rewards -->
-		<div class="rewards" x-data="rewardsData(option.rewards)">
+		<div class="rewards" x-data="{ rewards: option.rewards }">
 			<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 		</div>
 	</div>
@@ -117,11 +121,11 @@
 		</div>
 
 		<!-- Rewards -->
-		<!--
-		<div th:if="*{rewards}" class="rewards">
-			<th:block th:replace="~{fragments/rewards :: rewardsBody(*{rewards})}"/>
-		</div>
-		-->
+		<template x-if="outpostAttack.rewards">
+			<div class="rewards" x-data="{ rewards: outpostAttack.rewards }">
+				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
+			</div>
+		</template>
 	</div>
 
 
@@ -131,14 +135,13 @@
 	<script th:fragment="eventJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventData", (eventId, chosenOptionsIds) => ({
-				imgUrl: /*[[${imgUrl}]]*/ "",
 				eventId: eventId,
 				chosenOptionsIds: chosenOptionsIds,
 				event: {},
 				loadingEvent: true,
 
-				get eventFrontImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
-				get eventBackImgSrc() { return this.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
+				get eventFrontImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
+				get eventBackImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
 
 				init() {
 					this.loadEvent();

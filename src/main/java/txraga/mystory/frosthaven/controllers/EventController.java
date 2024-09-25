@@ -1,6 +1,7 @@
 package txraga.mystory.frosthaven.controllers;
 
 import java.util.List;
+import java.util.Locale;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,26 +29,19 @@ public class EventController {
 
 
 	@GetMapping({"", "/{eventId}"})
-	public ModelAndView event(Model model, @PathVariable(required = false) String eventId,
-	                                       @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
+	public ModelAndView event(Model model, Locale locale,
+	                          @PathVariable(required = false) String eventId,
+	                          @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
 		log.entry(eventId, chosenOptionsIds);
 		model.addAttribute("page", Page.EVENT);
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOptionsIds", chosenOptionsIds);
 
-
 		model.addAttribute("allEventsIds", frosthaven.getAllRawEventsIds());
-		model.addAttribute("rawEvent", frosthaven.getRawEvent(eventId));
+		
+		//model.addAttribute("rawEvent", frosthaven.getRawEvent(eventId));
 		//model.addAttribute("playedEvent", frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
 		return log.exit(new ModelAndView("event"));
-	}
-
-	@PostMapping("")
-	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
-	                                           @RequestParam(required = false) String chosenOptions) {
-		log.entry(eventId, chosenOptions);
-		String redirectUrl = "/event/" + eventId + (chosenOptions != null ? "?chosenOptions=" + chosenOptions : "");
-		return log.exit(new ModelAndView("redirect:" + redirectUrl));
 	}
 
 	@GetMapping("/{eventId}/data")
@@ -58,4 +52,12 @@ public class EventController {
 		return log.exit(frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
 	}
 
+	@PostMapping("")
+	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
+	                                           @RequestParam(required = false) String chosenOptions) {
+		log.entry(eventId, chosenOptions);
+		String redirectUrl = "/event/" + eventId + (chosenOptions != null ? "?chosenOptions=" + chosenOptions : "");
+		return log.exit(new ModelAndView("redirect:" + redirectUrl));
+	}
+	
 }

@@ -69,5 +69,17 @@
 		<!--<th:block th:replace="~{fragments/frosthaven :: playingCardJs}"></th:block>-->
 		<th:block th:replace="~{fragments/common/playingCard :: playingCardJs}">
 	</th:block>
+
+
+	<!-- ------------ -->
+	<!-- ALPINE STORE -->
+	<!-- ------------ -->
+	<script th:fragment="alpineStoreJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.store("imgUrl", /*[[${imgUrl}]]*/ "");
+			Alpine.store("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
+			Alpine.store("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});
+		});
+	</script>
 </body>
 </html>

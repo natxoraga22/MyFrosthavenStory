@@ -152,7 +152,7 @@
 				loadEvent() {
 					this.loadingEvent = true;
 					// Get event data URL
-					let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
+					let eventDataUrl = /*[[@{__${eventPlayedDataPage.url}__}]]*/ "";
 					eventDataUrl = eventDataUrl.replace("{eventId}", this.eventId);
 					if (this.chosenOptionsIds) eventDataUrl += "?chosenOptions=" + this.chosenOptionsIds.join(",");
 					// AJAX GET request

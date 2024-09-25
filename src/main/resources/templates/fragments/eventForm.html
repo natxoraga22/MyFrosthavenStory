@@ -7,24 +7,16 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" id="eventForm" x-data="eventFormData">
+	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post" x-data="eventFormData(eventId, chosenOptionsIds)">
 		<bs:card>
 			<bs:cardBody>
 				<div>
 					<bs:label for="inputEventId">[[#{event.id}]]</bs:label>
-					<bs:select id="inputEventId" name="eventId" required>
-						<option th:each="eventId: ${allEventsIds}" th:value="${eventId}" th:selected="${eventId} == ${rawEvent?.id}">
-							[[${eventId}]]
-						</option>
-					</bs:select>
+					<bs:select id="inputEventId" name="eventId" required></bs:select>
 				</div>
 				<div>
 					<bs:label for="inputChosenOptions">[[#{event.chosenOptions}]]</bs:label>
-					<bs:select id="inputChosenOptions" name="chosenOptions" multiple>
-						<option th:each="optionId: ${rawEvent?.options?.keySet()}" th:value="${optionId}">
-							[[${optionId}]]
-						</option>
-					</bs:select>
+					<bs:select id="inputChosenOptions" name="chosenOptions" multiple></bs:select>
 				</div>
 				<div bs:display="grid">
 					<bs:button type="submit" color="primary">[[#{event.goTo}]]</bs:button>
@@ -39,25 +31,49 @@
 	<!-- ------------- -->
 	<script th:fragment="eventFormJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("eventFormData", () => ({
-				eventId: null,
-				chosenOptions: [],
+			Alpine.data("eventFormData", (eventId, chosenOptionsIds) => ({
+				eventsIdsList: /*[[${eventsIdsList}]]*/ [],
+				eventId: eventId,
+				chosenOptionsIds: chosenOptionsIds,
 
 				// Inputs
 				eventIdSelect: null,
 				chosenOptionsSelect: null,
 
 				init() {
-					this.eventIdSelect = new TomSelect("#inputEventId", { maxOptions: null });
-					this.chosenOptionsSelect = new TomSelect("#inputChosenOptions", { plugins: ["remove_button"], closeAfterSelect: true });
-
-					this.eventIdSelect.on("change", value => {
-						this.eventId = value;
-
-						// TODO: Ajax call for the rawEvent with id = this.eventId
-						// Populate this.chosenOptions with the rawEvent.options
-						// ...
+					// Selects setup
+					this.eventIdSelect = new TomSelect("#inputEventId", {
+						options: this.eventsIdsList.map(eventId => ({ value: eventId, text: eventId })),
+						items: this.eventId,
+						onChange: newEventId => {
+							this.eventId = newEventId;
+							this.fillChosenOptionsSelect();
+						},
+						maxOptions: null
 					});
+					this.chosenOptionsSelect = new TomSelect("#inputChosenOptions", {
+						plugins: ["remove_button"],
+						closeAfterSelect: true
+					});
+
+					this.fillChosenOptionsSelect(this.chosenOptionsIds);
+				},
+
+				fillChosenOptionsSelect(selectedChosenOptionsIds) {
+					log.entry(selectedChosenOptionsIds);
+					// Get event data URL
+					let eventDataUrl = /*[[@{__${eventRawDataPage.url}__}]]*/ "";
+					eventDataUrl = eventDataUrl.replace("{eventId}", this.eventId);
+					// AJAX GET request
+					ajaxGet(eventDataUrl)
+						.success(event => {
+							this.chosenOptionsSelect.clear();
+							this.chosenOptionsSelect.clearOptions();
+							this.chosenOptionsSelect.addOptions(Object.keys(event.options).map(key => ({ value: key, text: key })));
+							this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);
+						})
+						.error(errorData => log.error("ERROR fetching event", errorData.message));
+					log.exit();
 				}
 			}));
 		});

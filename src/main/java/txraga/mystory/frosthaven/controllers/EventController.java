@@ -17,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.global.Frosthaven;
 import txraga.mystory.frosthaven.model.played.PlayedEvent;
+import txraga.mystory.frosthaven.model.raw.RawEvent;
 
 
 @XSlf4j
@@ -39,11 +40,18 @@ public class EventController {
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOptionsIds", chosenOptionsIds);
 		// Event form
-		model.addAttribute("allEventsIds", frosthaven.getAllRawEventsIds());
+		model.addAttribute("eventsIdsList", frosthaven.getAllRawEventsIds());
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 
-	@GetMapping(WebPage.EVENT_DATA_URL)
+	@GetMapping(WebPage.EVENT_RAW_DATA_URL)
+	@ResponseBody
+	public RawEvent getRawEvent(@PathVariable String eventId) {
+		log.entry(eventId);
+		return log.exit(frosthaven.getRawEvent(eventId));
+	}
+
+	@GetMapping(WebPage.EVENT_PLAYED_DATA_URL)
 	@ResponseBody
 	public PlayedEvent getPlayedEvent(@PathVariable String eventId,
 	                                  @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
@@ -51,11 +59,12 @@ public class EventController {
 		return log.exit(frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
 	}
 
-	@PostMapping("")
+	@PostMapping
 	public ModelAndView eventForm(Model model, @RequestParam String eventId, 
 	                                           @RequestParam(required = false) String chosenOptions) {
 		log.entry(eventId, chosenOptions);
-		String redirectUrl = "/event/" + eventId + (chosenOptions != null ? "?chosenOptions=" + chosenOptions : "");
+		String redirectUrl = WebPage.EVENT.getUrl().replace("{eventId}", eventId);
+		if (chosenOptions != null) redirectUrl += "?chosenOptions=" + chosenOptions;
 		return log.exit(new ModelAndView("redirect:" + redirectUrl));
 	}
 	

@@ -82,6 +82,11 @@ public class Frosthaven {
 		return log.exit(events.keySet().stream().sorted().toList());
 	}
 
+	public Map<String,RawEvent> getAllRawEventsAsMap() {
+		log.entry();
+		return log.exit(events);
+	}
+
 	public RawEvent getRawEvent(String eventId) {
 		log.entry(eventId);
 		RawEvent event = events.get(eventId);

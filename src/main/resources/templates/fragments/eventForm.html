@@ -32,9 +32,7 @@
 	<script th:fragment="eventFormJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventFormData", (eventId, chosenOptionsIds) => ({
-				eventsIdsList: /*[[${eventsIdsList}]]*/ [],
-				eventId: eventId,
-				chosenOptionsIds: chosenOptionsIds,
+				rawEventsMap: /*[[${rawEventsMap}]]*/ {},
 
 				// Inputs
 				eventIdSelect: null,
@@ -43,12 +41,9 @@
 				init() {
 					// Selects setup
 					this.eventIdSelect = new TomSelect("#inputEventId", {
-						options: this.eventsIdsList.map(eventId => ({ value: eventId, text: eventId })),
-						items: this.eventId,
-						onChange: newEventId => {
-							this.eventId = newEventId;
-							this.fillChosenOptionsSelect();
-						},
+						options: Object.keys(this.rawEventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
+						items: eventId,
+						onChange: newEventId => this.fillChosenOptionsSelect(newEventId),
 						maxOptions: null
 					});
 					this.chosenOptionsSelect = new TomSelect("#inputChosenOptions", {
@@ -56,23 +51,16 @@
 						closeAfterSelect: true
 					});
 
-					this.fillChosenOptionsSelect(this.chosenOptionsIds);
+					this.fillChosenOptionsSelect(eventId, chosenOptionsIds);
 				},
 
-				fillChosenOptionsSelect(selectedChosenOptionsIds) {
-					log.entry(selectedChosenOptionsIds);
-					// Get event data URL
-					let eventDataUrl = /*[[@{__${eventRawDataPage.url}__}]]*/ "";
-					eventDataUrl = eventDataUrl.replace("{eventId}", this.eventId);
-					// AJAX GET request
-					ajaxGet(eventDataUrl)
-						.success(event => {
-							this.chosenOptionsSelect.clear();
-							this.chosenOptionsSelect.clearOptions();
-							this.chosenOptionsSelect.addOptions(Object.keys(event.options).map(key => ({ value: key, text: key })));
-							this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);
-						})
-						.error(errorData => log.error("ERROR fetching event", errorData.message));
+				fillChosenOptionsSelect(selectedEventId, selectedChosenOptionsIds) {
+					log.entry(selectedEventId, selectedChosenOptionsIds);
+					const selectedEvent = this.rawEventsMap[selectedEventId];
+					this.chosenOptionsSelect.clear();
+					this.chosenOptionsSelect.clearOptions();
+					this.chosenOptionsSelect.addOptions(Object.keys(selectedEvent.options).map(key => ({ value: key, text: key })));
+					this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);
 					log.exit();
 				}
 			}));

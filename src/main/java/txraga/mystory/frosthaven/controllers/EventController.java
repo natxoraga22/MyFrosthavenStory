@@ -40,7 +40,7 @@ public class EventController {
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOptionsIds", chosenOptionsIds);
 		// Event form
-		model.addAttribute("eventsIdsList", frosthaven.getAllRawEventsIds());
+		model.addAttribute("rawEventsMap", frosthaven.getAllRawEventsAsMap());
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 

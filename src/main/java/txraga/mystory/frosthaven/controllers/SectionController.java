@@ -24,7 +24,7 @@ public class SectionController {
 	@GetMapping({"", "/{sectionId}"})
 	public ModelAndView section(Model model, @PathVariable(required = false) String sectionId) {
 		log.entry(sectionId);
-		model.addAttribute("page", Page.SECTION);
+		model.addAttribute("page", WebPage.SECTION);
 		model.addAttribute("sectionId", sectionId);
 		model.addAttribute("section", frosthaven.getSection(sectionId));
 		return log.exit(new ModelAndView("section"));

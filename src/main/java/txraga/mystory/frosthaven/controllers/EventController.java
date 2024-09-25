@@ -22,29 +22,28 @@ import txraga.mystory.frosthaven.model.played.PlayedEvent;
 @XSlf4j
 @RequiredArgsConstructor
 @Controller
-@RequestMapping("/event")
+@RequestMapping(WebPage.EVENT_CONTROLLER_URL)
 public class EventController {
 
 	private final Frosthaven frosthaven;
 
 
-	@GetMapping({"", "/{eventId}"})
+	@GetMapping({"", WebPage.EVENT_URL})
 	public ModelAndView event(Model model, Locale locale,
 	                          @PathVariable(required = false) String eventId,
 	                          @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
 		log.entry(eventId, chosenOptionsIds);
-		model.addAttribute("page", Page.EVENT);
+		WebPage webPage = WebPage.EVENT;
+		model.addAttribute("webPage", webPage);
+		// URL parameters
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOptionsIds", chosenOptionsIds);
-
+		// Event form
 		model.addAttribute("allEventsIds", frosthaven.getAllRawEventsIds());
-		
-		//model.addAttribute("rawEvent", frosthaven.getRawEvent(eventId));
-		//model.addAttribute("playedEvent", frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
-		return log.exit(new ModelAndView("event"));
+		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 
-	@GetMapping("/{eventId}/data")
+	@GetMapping(WebPage.EVENT_DATA_URL)
 	@ResponseBody
 	public PlayedEvent getPlayedEvent(@PathVariable String eventId,
 	                                  @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {

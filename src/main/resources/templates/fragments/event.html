@@ -65,10 +65,12 @@
 
 
 		<!-- DEBUG -->
+		<!--
 		<div bs:mt="5">
 			<hr>
 			<span x-jsz>{{JSON.stringify(event)}}</span>
 		</div>
+		-->
 	</div>
 
 
@@ -149,8 +151,11 @@
 
 				loadEvent() {
 					this.loadingEvent = true;
-					let eventDataUrl = "/event/" + this.eventId + "/data";
+					// Get event data URL
+					let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
+					eventDataUrl = eventDataUrl.replace("{eventId}", this.eventId);
 					if (this.chosenOptionsIds) eventDataUrl += "?chosenOptions=" + this.chosenOptionsIds.join(",");
+					// AJAX GET request
 					ajaxGet(eventDataUrl)
 						.success(event => this.event = event)
 						.error(errorData => log.error("ERROR fetching event", errorData.message))

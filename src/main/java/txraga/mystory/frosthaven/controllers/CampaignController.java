@@ -31,7 +31,7 @@ public class CampaignController {
 	@GetMapping("")
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
-		model.addAttribute("page", Page.CAMPAIGN);
+		model.addAttribute("page", WebPage.CAMPAIGN);
 		model.addAttribute("welcome", frosthaven.getWelcome());
 		return log.exit(new ModelAndView("campaign"));
 	}
@@ -46,7 +46,7 @@ public class CampaignController {
 		log.debug("{}", campaign.getTracker().getMainQuestAvailableScenarios());
 		log.debug("{}", campaign.getTracker().getSideQuestAvailableScenarios());
 
-		model.addAttribute("page", Page.CAMPAIGN);
+		model.addAttribute("page", WebPage.CAMPAIGN);
 		model.addAttribute("welcome", frosthaven.getWelcome());
 		model.addAttribute("party", campaign.getOriginalParty().values());
 		model.addAttribute("story", campaign.getStory());

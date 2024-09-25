@@ -29,7 +29,7 @@ public class ScenarioController {
 	public ModelAndView scenario(Model model, @PathVariable(required = false) String scenarioId,
 	                                          @RequestParam(required = false) List<String> path) {
 		log.entry(scenarioId, path);
-		model.addAttribute("page", Page.SCENARIO);
+		model.addAttribute("page", WebPage.SCENARIO);
 		model.addAttribute("scenarioId", scenarioId);
 		model.addAttribute("scenario", fhStory.getScenario(scenarioId, path, null));
 

@@ -7,7 +7,8 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post" x-data="eventFormData(eventId, chosenOptionsIds)">
+	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post"
+	      x-data="eventFormData(eventId, chosenOptionsIds)">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -39,7 +40,6 @@
 				chosenOptionsSelect: null,
 
 				init() {
-					// Selects setup
 					this.eventIdSelect = new TomSelect("#inputEventId", {
 						options: Object.keys(this.rawEventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
 						items: eventId,

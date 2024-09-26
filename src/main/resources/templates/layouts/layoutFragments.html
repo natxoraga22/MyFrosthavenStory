@@ -76,6 +76,7 @@
 	<!-- ------------ -->
 	<script th:fragment="alpineStoreJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
+			Alpine.store("webPage", /*[[${webPage}]]*/ "");
 			Alpine.store("imgUrl", /*[[${imgUrl}]]*/ "");
 			Alpine.store("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
 			Alpine.store("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});

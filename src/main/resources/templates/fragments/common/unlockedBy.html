@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ----------- -->
+	<!-- UNLOCKED BY -->
+	<!-- ----------- -->
+	<div th:fragment="unlockedBy" class="subtitle" x-data="unlockedByData(unlockedBy)">
+		<i class="fa-solid fa-unlock me-1"></i> [[#{unlockedBy}]]:
+		<template x-for="(unlockedByItem, index) in unlockedByList">
+			<div>
+				<span x-show="index > 0">|</span>
+				<a x-show="unlockedByItem.event" class="link-secondary" x-bind:href="getLinkUrl(unlockedByItem)" x-jsz>
+					[[#{unlockedBy.event}]] {{unlockedByItem.event?.id}}
+				</a>
+				<a x-show="unlockedByItem.scenario" class="link-secondary" x-bind:href="getLinkUrl(unlockedByItem)" x-jsz>
+					[[#{unlockedBy.scenario}]] {{unlockedByItem.scenario?.id}}
+				</a>
+				<a x-show="unlockedByItem.section" class="link-secondary" x-bind:href="getLinkUrl(unlockedByItem)" x-jsz>
+					[[#{unlockedBy.section}]] {{unlockedByItem.section.id}}
+				</a>
+				<span x-show="unlockedByItem.other" x-jsz>{{unlockedByItem.other}}</span>
+
+				<!-- Other page links -->
+				<template x-if="$store.webPage != 'CAMPAIGN'">
+					<div>
+						<a x-show="unlockedByItem.event" class="link-secondary" x-bind:href="'/event/' + unlockedByItem.event?.id" x-jsz></a>
+							[[#{unlockedBy.event}]] {{unlockedByItem.event?.id}}
+						</a>
+						<a x-show="unlockedByItem.scenario" class="link-secondary" x-bind:href="'/scenario/' + unlockedByItem.scenario?.id" x-jsz></a>
+							[[#{unlockedBy.scenario}]] {{unlockedByItem.scenario?.id}}
+						</a>
+						<a x-show="unlockedByItem.section" class="link-secondary" x-bind:href="'#section_' + unlockedByItem.section?.htmlSafeId" x-jsz>
+							[[#{unlockedBy.section}]] {{unlockedByItem.section.id}}
+						</a>
+						<span x-show="unlockedByItem.other" x-jsz>{{unlockedByItem.other}}</span>
+
+
+
+						<a th:if="*{event}" class="link-secondary" th:href="@{/event/{id}(id=*{event.id})}">Event [[*{event.id}]]</a>
+						<a th:if="*{scenario}" class="link-secondary" th:href="@{/scenario/{id}(id=*{scenario.id})}">Scenario [[*{scenario.id}]]</a>
+						<a th:if="*{section}" class="link-secondary" th:href="@{/section/{id}(id=*{section.id})}">Section [[*{section.id}]]</a>
+					</div>
+				</template>
+			</div>
+		</template>
+	</div>
+
+
+	<!-- -------------- -->
+	<!-- UNLOCKED BY JS -->
+	<!-- -------------- -->
+	<script th:fragment="unlockedByJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("unlockedByData", (unlockedBy) => ({
+				unlockedByList: unlockedBy,
+
+				getLinkUrl(unlockedByItem) {
+					const urlPrefix = $store.webPage == "CAMPAIGN" ? "#" : "/";
+					const urlSuffix = $store.webPage == "CAMPAIGN" ? "_" : "/";
+					if (unlockedByItem.event) return `${urlPrefix}event${urlSuffix}${unlockedByItem.event.id}`;
+					else if (unlockedByItem.scenario) return `${urlPrefix}scenario${urlSuffix}${unlockedByItem.scenario.id}`;
+					else if (unlockedByItem.section) return `${urlPrefix}section${urlSuffix}${unlockedByItem.section.htmlSafeId}`;
+					else return "";
+				}
+			}));
+		});
+	</script>
+</body>
+</html>

@@ -7,13 +7,15 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
 import txraga.mystory.frosthaven.model.Rewards;
-import txraga.mystory.frosthaven.model.personal.StoryItem;
+import txraga.mystory.frosthaven.model.UnlockedBy;
 
 
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString(onlyExplicitlyIncluded = true)
@@ -23,7 +25,7 @@ public class RawEvent {
 	private TypeAndSeason typeAndSeason;
 
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-	private List<StoryItem> unlockedBy;
+	private List<UnlockedBy> unlockedBy;
 
 	private String text;
 	private Map<String,Option> options = Map.of();

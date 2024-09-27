@@ -17,11 +17,11 @@
 						{{$store.typesAndSeasonsStrings[event.typeAndSeason]}}
 						[[#{event.title}]]
 					</h1>
-					<!--
-					<th:block th:if="*{unlockedBy}">
-						<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"/>
-					</th:block>
-					-->
+					<template x-if="event.unlockedBy">
+						<div x-data="{ unlockedBy: event.unlockedBy }">
+							<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
+						</div>
+					</template>
 				</div>
 
 				<!-- Card image -->

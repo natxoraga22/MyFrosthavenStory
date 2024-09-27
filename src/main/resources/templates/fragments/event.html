@@ -7,7 +7,7 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event" x-bind:id="'event_' + eventId">
+	<div th:fragment="event" x-bind:id="'event_' + eventId" x-data="eventData(eventId, chosenOptionsIds)">
 		<template x-if="!loadingEvent">
 			<div class="event">
 				<!-- Title -->
@@ -17,6 +17,7 @@
 						{{$store.typesAndSeasonsStrings[event.typeAndSeason]}}
 						[[#{event.title}]]
 					</h1>
+					<!-- Unlocked by -->
 					<template x-if="event.unlockedBy">
 						<div x-data="{ unlockedBy: event.unlockedBy }">
 							<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
@@ -25,7 +26,7 @@
 				</div>
 
 				<!-- Card image -->
-				<div x-data="playingCardData(eventFrontImgSrc, eventBackImgSrc)">
+				<div x-data="{ frontImgSrc: eventFrontImgSrc, backImgSrc: eventBackImgSrc }">
 					<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
 				</div>
 
@@ -53,23 +54,14 @@
 
 				<!-- Random scenario section -->
 				<!--
-				<th:block th:if="*{randomScenarioSection}">
-					<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"/>
-				</th:block>
+				<template x-if="event.randomScenarioSection">
+					<div x-data="{ section: event.randomScenarioSection }">
+						<th:block th:replace="~{fragments/section :: section}"/>
+					</div>
+				</template>
 				-->
 			</div>
 		</template>
-		
-
-		
-
-
-		<!-- DEBUG -->
-		<div bs:mt="5">
-			<hr>
-			<span x-jsz>{{JSON.stringify($store.webPage)}}</span>
-			<span x-jsz>{{JSON.stringify(event)}}</span>
-		</div>
 	</div>
 
 
@@ -136,8 +128,6 @@
 	<script th:fragment="eventJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventData", (eventId, chosenOptionsIds) => ({
-				eventId: eventId,
-				chosenOptionsIds: chosenOptionsIds,
 				event: {},
 				loadingEvent: true,
 
@@ -151,9 +141,9 @@
 				loadEvent() {
 					this.loadingEvent = true;
 					// Get event data URL
-					let eventDataUrl = /*[[@{__${eventPlayedDataPage.url}__}]]*/ "";
-					eventDataUrl = eventDataUrl.replace("{eventId}", this.eventId);
-					if (this.chosenOptionsIds) eventDataUrl += "?chosenOptions=" + this.chosenOptionsIds.join(",");
+					let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
+					eventDataUrl = eventDataUrl.replace("{eventId}", eventId);
+					if (chosenOptionsIds) eventDataUrl += "?chosenOptions=" + chosenOptionsIds.join(",");
 					// AJAX GET request
 					ajaxGet(eventDataUrl)
 						.success(event => this.event = event)

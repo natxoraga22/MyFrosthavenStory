@@ -7,8 +7,8 @@
 	<!-- ------------ -->
 	<!-- PLAYING CARD -->
 	<!-- ------------ -->
-	<div th:fragment="playingCard" class="playingCard flippable integrated" x-bind:class="{ 'flipped' : flipped }"
-	     @click="flipped = !flipped">
+	<div th:fragment="playingCard" class="playingCard flippable integrated" 
+	     x-data="{ flipped: false }" x-bind:class="{ 'flipped' : flipped }" @click="flipped = !flipped">
 		<div class="flippableInner">
 			<div class="front">
 				<img x-bind:src="frontImgSrc">
@@ -18,19 +18,5 @@
 			</div>
 		</div>
 	</div>
-
-
-	<!-- --------------- -->
-	<!-- PLAYING CARD JS -->
-	<!-- --------------- -->
-	<script th:fragment="playingCardJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			Alpine.data("playingCardData", (frontImgSrc, backImgSrc) => ({
-				frontImgSrc: frontImgSrc,
-				backImgSrc: backImgSrc,
-				flipped: false
-			}));
-		});
-	</script>
 </body>
 </html>

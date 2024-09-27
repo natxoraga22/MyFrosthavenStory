@@ -99,7 +99,9 @@ public class Frosthaven {
 			PlayedEvent playedEvent = new PlayedEvent(rawEvent);
 			// Set chosen options
 			if (chosenOptionsIds != null && !chosenOptionsIds.isEmpty()) {
-				playedEvent.setChosenOptions(chosenOptionsIds.stream().map(chosenOptionId -> rawEvent.getOptions().get(chosenOptionId)).toList());
+				playedEvent.setChosenOptions(chosenOptionsIds.stream().map(chosenOptionId -> {
+					return rawEvent.getOptions().get(chosenOptionId);
+				}).toList());
 			}
 			// Set randomScenarioSection
 			if (randomScenarioSectionId != null) {

@@ -36,6 +36,7 @@ public class RawEvent {
 	/* OPTION */
 	/* ------ */
 
+	@NoArgsConstructor
 	@Getter
 	@Setter
 	@ToString
@@ -61,6 +62,7 @@ public class RawEvent {
 	/* OUTPOST ATTACK */
 	/* -------------- */
 
+	@NoArgsConstructor
 	@Getter
 	@Setter
 	@ToString

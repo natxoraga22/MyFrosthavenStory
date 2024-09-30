@@ -1,4 +1,4 @@
-package txraga.mystory.frosthaven.model.raw;
+package txraga.mystory.frosthaven.model;
 
 import java.util.List;
 import java.util.Map;
@@ -11,15 +11,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
-import txraga.mystory.frosthaven.model.Rewards;
-import txraga.mystory.frosthaven.model.UnlockedBy;
 
 
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString(onlyExplicitlyIncluded = true)
-public class RawEvent {
+public class Event {
 	
 	@ToString.Include private String id;
 	private TypeAndSeason typeAndSeason;

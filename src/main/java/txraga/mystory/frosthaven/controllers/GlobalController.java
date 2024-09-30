@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import lombok.RequiredArgsConstructor;
-import txraga.mystory.frosthaven.model.raw.RawEvent;
+import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.utils.EnumUtils;
 
 
@@ -30,9 +30,9 @@ public class GlobalController {
 
 	@ModelAttribute
 	public void addEnumsToModel(Model model, Locale locale) {
-		model.addAttribute("typesAndSeasonsList", RawEvent.TypeAndSeason.values());
+		model.addAttribute("typesAndSeasonsList", Event.TypeAndSeason.values());
 		// Maps with messageSource values for each enum value
-		model.addAttribute("typesAndSeasonsStrings", EnumUtils.toMap(RawEvent.TypeAndSeason.class, messageSource, "event.typeAndSeason", locale));
+		model.addAttribute("typesAndSeasonsStrings", EnumUtils.toMap(Event.TypeAndSeason.class, messageSource, "event.typeAndSeason", locale));
 	}
 
 	

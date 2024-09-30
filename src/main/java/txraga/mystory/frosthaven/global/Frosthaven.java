@@ -1,6 +1,5 @@
 package txraga.mystory.frosthaven.global;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
@@ -9,12 +8,11 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.model.Building;
+import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.PersonalQuest;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
-import txraga.mystory.frosthaven.model.played.PlayedEvent;
-import txraga.mystory.frosthaven.model.raw.RawEvent;
 import txraga.mystory.frosthaven.services.FrosthavenService;
 
 
@@ -28,7 +26,7 @@ public class Frosthaven {
 	private String welcome;
 	private Map<String,FhCharacter> characters;
 	private Map<String,PersonalQuest> personalQuests;
-	private Map<String,RawEvent> events;
+	private Map<String,Event> events;
 	private Map<String,Scenario> scenarios;
 	private Map<String,Building> buildings;
 	private Map<String,Section> sections;
@@ -77,40 +75,19 @@ public class Frosthaven {
 	/* EVENTS */
 	/* ------ */
 
-	public Map<String,RawEvent> getAllRawEventsAsMap() {
+	public Map<String,Event> getAllEventsAsMap() {
 		log.entry();
 		return log.exit(events);
 	}
 
-	public RawEvent getRawEvent(String eventId) {
+	public Event getEvent(String eventId) {
 		log.entry(eventId);
-		RawEvent event = events.get(eventId);
+		Event event = events.get(eventId);
 		if (event == null) {
 			log.warn("Event '{}' not found", eventId);
 			return log.exit(null);
 		}
 		else return log.exit(event);
-	}
-
-	public PlayedEvent getPlayedEvent(String eventId, List<String> chosenOptionsIds, String randomScenarioSectionId) {
-		log.entry(eventId, chosenOptionsIds, randomScenarioSectionId);
-		RawEvent rawEvent = getRawEvent(eventId);
-		if (rawEvent != null) {
-			PlayedEvent playedEvent = new PlayedEvent(rawEvent);
-			// Set chosen options
-			if (chosenOptionsIds != null && !chosenOptionsIds.isEmpty()) {
-				playedEvent.setChosenOptions(chosenOptionsIds.stream().map(chosenOptionId -> {
-					return rawEvent.getOptions().get(chosenOptionId);
-				}).toList());
-			}
-			// Set randomScenarioSection
-			if (randomScenarioSectionId != null) {
-				Section section = getSection(randomScenarioSectionId);
-				if (section != null) playedEvent.setRandomScenarioSection(section);
-			}
-			return log.exit(playedEvent);
-		}
-		else return log.exit(null);
 	}
 
 

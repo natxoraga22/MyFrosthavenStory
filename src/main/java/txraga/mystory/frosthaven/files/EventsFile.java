@@ -12,7 +12,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.model.raw.RawEvent;
+import txraga.mystory.frosthaven.model.Event;
 
 
 @XSlf4j
@@ -22,22 +22,22 @@ public class EventsFile {
 	private final static String EVENTS_FOLDER_PATH = "static/json/events";
 
 
-	public Map<String,RawEvent> findAllEventsAsMap() {
+	public Map<String,Event> findAllEventsAsMap() {
 		log.entry();
-		Map<String,RawEvent> events = new HashMap<>();
-		for (RawEvent.TypeAndSeason typeAndSeason : RawEvent.TypeAndSeason.values()) {
+		Map<String,Event> events = new HashMap<>();
+		for (Event.TypeAndSeason typeAndSeason : Event.TypeAndSeason.values()) {
 			events.putAll(findEventsByTypeAndSeasonAsMap(typeAndSeason));
 		}
 		return log.exit(events);
 	}
 
-	private Map<String,RawEvent> findEventsByTypeAndSeasonAsMap(RawEvent.TypeAndSeason typeAndSeason) {
+	private Map<String,Event> findEventsByTypeAndSeasonAsMap(Event.TypeAndSeason typeAndSeason) {
 		log.entry(typeAndSeason);
 		String filePath = EVENTS_FOLDER_PATH + "/" + typeAndSeason.name() + ".json";
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
 			InputStream eventsInputStream = new ClassPathResource(filePath).getInputStream();
-			Map<String,RawEvent> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,RawEvent>>(){});
+			Map<String,Event> events = objectMapper.readValue(eventsInputStream, new TypeReference<Map<String,Event>>(){});
 
 			events.forEach((id, event) -> {
 				// Set event id, type and season

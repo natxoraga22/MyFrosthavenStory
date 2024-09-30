@@ -16,12 +16,12 @@ import txraga.mystory.frosthaven.files.ScenariosFile;
 import txraga.mystory.frosthaven.files.SectionsFile;
 import txraga.mystory.frosthaven.files.WelcomeFile;
 import txraga.mystory.frosthaven.model.Building;
+import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.PersonalQuest;
 import txraga.mystory.frosthaven.model.Rewards;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
-import txraga.mystory.frosthaven.model.raw.RawEvent;
 
 
 @XSlf4j
@@ -68,11 +68,11 @@ public class FrosthavenServiceImpl implements FrosthavenService {
 	}
 
 	@Override
-	public Map<String,RawEvent> findAllEvents(Map<String,Scenario> scenarios) {
+	public Map<String,Event> findAllEvents(Map<String,Scenario> scenarios) {
 		log.entry();
-		Map<String,RawEvent> events = eventsFile.findAllEventsAsMap();
-		for (RawEvent event : events.values()) {
-			for (RawEvent.Option option : event.getOptions().values()) {
+		Map<String,Event> events = eventsFile.findAllEventsAsMap();
+		for (Event event : events.values()) {
+			for (Event.Option option : event.getOptions().values()) {
 				populateRewards(option.getRewards(), scenarios);
 			}
 		}

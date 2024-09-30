@@ -3,11 +3,11 @@ package txraga.mystory.frosthaven.services;
 import java.util.Map;
 
 import txraga.mystory.frosthaven.model.Building;
+import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.PersonalQuest;
 import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.Section;
-import txraga.mystory.frosthaven.model.raw.RawEvent;
 
 
 public interface FrosthavenService {
@@ -22,8 +22,7 @@ public interface FrosthavenService {
 	public Map<String,PersonalQuest> findAllPersonalQuests(Map<String,Building> buildings);
 
 	/** Gets all events (road, outpost, etc.) from all files inside "events" folder (there is a file for each type/season). */
-	//public Map<String,Event> findAllEvents(Map<String,Scenario> scenarios);
-	public Map<String,RawEvent> findAllEvents(Map<String,Scenario> scenarios);
+	public Map<String,Event> findAllEvents(Map<String,Scenario> scenarios);
 
 	/** Gets all scenarios from all files inside "scenarios" folder (there is a file for each scenario). */
 	public Map<String,Scenario> findAllScenarios();

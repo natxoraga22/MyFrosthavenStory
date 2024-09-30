@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.global.Frosthaven;
-import txraga.mystory.frosthaven.model.played.PlayedEvent;
+import txraga.mystory.frosthaven.model.Event;
 
 
 @XSlf4j
@@ -39,16 +39,15 @@ public class EventController {
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOptionsIds", chosenOptionsIds);
 		// Event form
-		model.addAttribute("rawEventsMap", frosthaven.getAllRawEventsAsMap());
+		model.addAttribute("eventsMap", frosthaven.getAllEventsAsMap());
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 
 	@GetMapping(WebPage.EVENT_DATA_URL)
 	@ResponseBody
-	public PlayedEvent getPlayedEvent(@PathVariable String eventId,
-	                                  @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
-		log.entry(eventId, chosenOptionsIds);
-		return log.exit(frosthaven.getPlayedEvent(eventId, chosenOptionsIds, null));
+	public Event getEvent(@PathVariable String eventId) {
+		log.entry(eventId);
+		return log.exit(frosthaven.getEvent(eventId));
 	}
 
 	@PostMapping

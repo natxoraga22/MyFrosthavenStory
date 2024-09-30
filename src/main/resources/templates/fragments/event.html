@@ -26,7 +26,7 @@
 				</div>
 
 				<!-- Card image -->
-				<div x-data="{ frontImgSrc: eventFrontImgSrc, backImgSrc: eventBackImgSrc }">
+				<div x-data="{ frontImgSrc: frontImgSrc, backImgSrc: backImgSrc }">
 					<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
 				</div>
 
@@ -37,15 +37,17 @@
 
 				<!-- Options -->
 				<div class="options">
-					<template x-if="event.chosenOptions">
-						<template x-for="(option, index) in event.chosenOptions">
-							<th:block th:replace="~{:: eventOption}"/>
-						</template>
+					<template x-for="(chosenOptionId, index) in chosenOptionsIds" :key="chosenOptionId">
+						<div x-data="{ option: event.options[chosenOptionId] }">
+							<template x-if="option">
+								<th:block th:replace="~{:: option}"/>
+							</template>
+						</div>
 					</template>
 				</div>
 
 				<!-- Outpost attack -->
-				<template x-if="!event.skipAttack">
+				<template x-if="!skipAttack">
 					<div x-data="{ outpostAttack: event.outpostAttack }">
 						<hr>
 						<th:block th:replace="~{:: outpostAttack}"/>
@@ -68,7 +70,7 @@
 	<!-- ------ -->
 	<!-- OPTION -->
 	<!-- ------ -->
-	<div th:fragment="eventOption" class="option">
+	<div th:fragment="option" class="option">
 		<!-- Trigger -->
 		<div class="trigger" x-show="index == 0">
 			<i class="fa-solid fa-angles-right fa-sm"></i>
@@ -83,9 +85,11 @@
 		</div>
 
 		<!-- Rewards -->
-		<div class="rewards" x-data="{ rewards: option.rewards }">
-			<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
-		</div>
+		<template x-if="event.rewards">
+			<div class="rewards" x-data="{ rewards: option.rewards }">
+				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
+			</div>
+		</template>
 	</div>
 
 
@@ -128,27 +132,46 @@
 	<script th:fragment="eventJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventData", (eventId, chosenOptionsIds) => ({
+				chosenOptionsIds: chosenOptionsIds ?? [],
 				event: {},
 				loadingEvent: true,
 
-				get eventFrontImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
-				get eventBackImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
+				get frontImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
+				get backImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
+
+				get skipAttack() {
+					if (!this.event.outpostAttack || !this.chosenOptionsIds) return true;
+					for (let chosenOptionId of this.chosenOptionsIds) {
+						const chosenOption = this.event.options[chosenOptionId];
+						if (chosenOption?.skipAttack) return true;
+					}
+				},
 
 				init() {
 					this.loadEvent();
+					// Event listeners
+					window.addEventListener("changed-chosen-options", event => this.setChosenOptionsIds(event.detail));
 				},
 
 				loadEvent() {
+					log.entry(eventId);
 					this.loadingEvent = true;
 					// Get event data URL
 					let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
 					eventDataUrl = eventDataUrl.replace("{eventId}", eventId);
-					if (chosenOptionsIds) eventDataUrl += "?chosenOptions=" + chosenOptionsIds.join(",");
 					// AJAX GET request
 					ajaxGet(eventDataUrl)
 						.success(event => this.event = event)
 						.error(errorData => log.error("ERROR fetching event", errorData.message))
 						.always(() => this.loadingEvent = false);
+					log.exit();
+				},
+
+				// "changed-chosen-options" event handler
+				setChosenOptionsIds(newChosenOptionsIds) {
+					log.entry(newChosenOptionsIds);
+					this.chosenOptionsIds = [...newChosenOptionsIds];
+					log.exit();
 				}
 			}));
 		});

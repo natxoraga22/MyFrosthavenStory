@@ -37,7 +37,7 @@
 
 				<!-- Options -->
 				<div class="options">
-					<template x-for="(chosenOptionId, index) in chosenOptionsIds" :key="chosenOptionId">
+					<template x-for="(chosenOptionId, index) in chosenOptionsIds">
 						<div x-data="{ option: event.options[chosenOptionId] }">
 							<template x-if="option">
 								<th:block th:replace="~{:: option}"/>
@@ -85,7 +85,7 @@
 		</div>
 
 		<!-- Rewards -->
-		<template x-if="event.rewards">
+		<template x-if="option.rewards">
 			<div class="rewards" x-data="{ rewards: option.rewards }">
 				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 			</div>
@@ -148,14 +148,17 @@
 				},
 
 				init() {
-					this.loadEvent();
+					this.loadEvent(eventId, false);
 					// Event listeners
+					window.addEventListener("changed-event-id", event => this.loadEvent(event.detail));
 					window.addEventListener("changed-chosen-options", event => this.setChosenOptionsIds(event.detail));
 				},
 
-				loadEvent() {
+				// "changed-event-id" event handler
+				loadEvent(eventId, clearChosenOptionsIds = true) {
 					log.entry(eventId);
 					this.loadingEvent = true;
+
 					// Get event data URL
 					let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
 					eventDataUrl = eventDataUrl.replace("{eventId}", eventId);
@@ -164,6 +167,9 @@
 						.success(event => this.event = event)
 						.error(errorData => log.error("ERROR fetching event", errorData.message))
 						.always(() => this.loadingEvent = false);
+
+					// Clear chosen options
+					if (clearChosenOptionsIds) this.chosenOptionsIds = [];
 					log.exit();
 				},
 

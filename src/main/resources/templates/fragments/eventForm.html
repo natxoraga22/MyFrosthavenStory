@@ -7,8 +7,7 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" id="eventForm" th:action="@{/event}" method="post"
-	      x-data="eventFormData(eventId, chosenOptionsIds)">
+	<form th:fragment="eventForm" id="eventForm" x-data="eventFormData(eventId, chosenOptionsIds)">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -18,9 +17,6 @@
 				<div>
 					<bs:label for="inputChosenOptions">[[#{event.chosenOptions}]]</bs:label>
 					<bs:select id="inputChosenOptions" name="chosenOptions" multiple></bs:select>
-				</div>
-				<div bs:display="grid">
-					<bs:button type="submit" color="primary">[[#{event.goTo}]]</bs:button>
 				</div>
 			</bs:cardBody>
 		</bs:card>
@@ -43,7 +39,10 @@
 					this.eventIdSelect = new TomSelect("#inputEventId", {
 						options: Object.keys(this.eventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
 						items: eventId,
-						onChange: newEventId => this.fillChosenOptionsSelect(newEventId),
+						onChange: newEventId => {
+							this.$dispatch("changed-event-id", newEventId);
+							this.fillChosenOptionsSelect(newEventId);
+						},
 						maxOptions: null
 					});
 					this.chosenOptionsSelect = new TomSelect("#inputChosenOptions", {

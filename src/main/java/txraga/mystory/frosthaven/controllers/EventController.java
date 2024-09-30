@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -48,15 +47,6 @@ public class EventController {
 	public Event getEvent(@PathVariable String eventId) {
 		log.entry(eventId);
 		return log.exit(frosthaven.getEvent(eventId));
-	}
-
-	@PostMapping
-	public ModelAndView eventFormSubmit(Model model, @RequestParam String eventId, 
-	                                                 @RequestParam(required = false) String chosenOptions) {
-		log.entry(eventId, chosenOptions);
-		String redirectUrl = WebPage.EVENT.getUrl().replace("{eventId}", eventId);
-		if (chosenOptions != null) redirectUrl += "?chosenOptions=" + chosenOptions;
-		return log.exit(new ModelAndView("redirect:" + redirectUrl));
 	}
 	
 }

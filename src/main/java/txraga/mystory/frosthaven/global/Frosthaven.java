@@ -26,9 +26,9 @@ public class Frosthaven {
 	private String welcome;
 	private Map<String,FhCharacter> characters;
 	private Map<String,PersonalQuest> personalQuests;
+	private Map<String,Building> buildings;
 	private Map<String,Event> events;
 	private Map<String,Scenario> scenarios;
-	private Map<String,Building> buildings;
 	private Map<String,Section> sections;
 
 
@@ -50,6 +50,11 @@ public class Frosthaven {
 		return log.exit(welcome);
 	}
 
+
+	/* ---------------------- */
+	/* CHARACTERS & BUILDINGS */
+	/* ---------------------- */
+
 	public FhCharacter getCharacter(String id) {
 		log.entry(id);
 		FhCharacter character = characters.get(id);
@@ -68,6 +73,16 @@ public class Frosthaven {
 			return log.exit(null);
 		}
 		else return log.exit(personalQuest);
+	}
+
+	public Building getBuilding(String id) {
+		log.entry(id);
+		Building building = buildings.get(id);
+		if (building == null) {
+			log.warn("Building '{}' not found", id);
+			return log.exit(null);
+		}
+		else return log.exit(new Building(building));
 	}
 
 
@@ -91,32 +106,40 @@ public class Frosthaven {
 	}
 
 
+	/* --------- */
+	/* SCENARIOS */
+	/* --------- */
 
-	public Scenario getScenario(String id) {
-		log.entry(id);
-		Scenario scenario = scenarios.get(id);
+	public Map<String,Scenario> getAllScenariosAsMap() {
+		log.entry();
+		return log.exit(scenarios);
+	}
+
+	public Scenario getScenario(String scenarioId) {
+		log.entry(scenarioId);
+		Scenario scenario = scenarios.get(scenarioId);
 		if (scenario == null) {
-			log.warn("Scenario '{}' not found", id);
+			log.warn("Scenario '{}' not found", scenarioId);
 			return log.exit(null);
 		}
 		else return log.exit(scenario);
 	}
 
-	public Building getBuilding(String id) {
-		log.entry(id);
-		Building building = buildings.get(id);
-		if (building == null) {
-			log.warn("Building '{}' not found", id);
-			return log.exit(null);
-		}
-		else return log.exit(new Building(building));
+
+	/* -------- */
+	/* SECTIONS */
+	/* -------- */
+
+	public Map<String,Section> getAllSectionsAsMap() {
+		log.entry();
+		return log.exit(sections);
 	}
 
-	public Section getSection(String id) {
-		log.entry(id);
-		Section section = sections.get(id);
+	public Section getSection(String sectionId) {
+		log.entry(sectionId);
+		Section section = sections.get(sectionId);
 		if (section == null) {
-			log.warn("Section '{}' not found", id);
+			log.warn("Section '{}' not found", sectionId);
 			return log.exit(null);
 		}
 		else return log.exit(section);

@@ -7,7 +7,7 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" id="eventForm" x-data="eventFormData(eventId, chosenOptionsIds)">
+	<form th:fragment="eventForm" x-data="eventFormData(eventId, chosenOptionsIds)">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -56,11 +56,14 @@
 
 				fillChosenOptionsSelect(selectedEventId, selectedChosenOptionsIds) {
 					log.entry(selectedEventId, selectedChosenOptionsIds);
-					const selectedEvent = this.eventsMap[selectedEventId];
 					this.chosenOptionsSelect.clear();
 					this.chosenOptionsSelect.clearOptions();
-					this.chosenOptionsSelect.addOptions(Object.keys(selectedEvent.options).map(key => ({ value: key, text: key })));
-					this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);
+
+					const selectedEvent = this.eventsMap[selectedEventId];
+					if (selectedEvent) {
+						this.chosenOptionsSelect.addOptions(Object.keys(selectedEvent.options).map(key => ({ value: key, text: key })));
+						this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);
+					}
 					log.exit();
 				}
 			}));

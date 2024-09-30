@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
+<head>
+	<meta charset="utf-8">
+	<title>[[#{eventPage.title}]]</title>
+
+	<link rel="stylesheet" th:href="@{/css/scenario.css}">
+	<link rel="stylesheet" th:href="@{/css/section.css}">
+	<link rel="stylesheet" th:href="@{/css/rewards.css}">
+</head>
+
+<body>
+	<!-- Content -->
+	<th:block layout:fragment="content">
+		<bs:row gx="{md:4, xl:5}" gy="4" x-data="sectionPageData">
+			<bs:col col="{xs:12, md:3}">
+				<th:block th:replace="~{fragments/sectionForm :: sectionForm}"/>
+			</bs:col>
+			<bs:col col="{xs:12, md:9}">
+				<th:block th:replace="~{fragments/section :: section}"/>
+			</bs:col>
+		</bs:row>
+	</th:block>
+
+	<!-- Javascript -->
+	<th:block layout:fragment="javascript">
+		<script th:replace="~{:: sectionPageJs}"></script>
+		<script th:replace="~{fragments/sectionForm :: sectionFormJs}"></script>
+		<script th:replace="~{fragments/section :: sectionJs}"></script>
+	</th:block>
+
+
+	<!-- --------------- -->
+	<!-- SECTION PAGE JS -->
+	<!-- --------------- -->
+	<script th:fragment="sectionPageJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("sectionPageData", () => ({
+				sectionId: /*[[${sectionId}]]*/ null
+			}));
+		});
+	</script>
+</body>
+</html>

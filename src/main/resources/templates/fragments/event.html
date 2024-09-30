@@ -7,8 +7,8 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event" x-bind:id="'event_' + eventId" x-data="eventData(eventId, chosenOptionsIds)">
-		<template x-if="!loadingEvent">
+	<div th:fragment="event" x-bind:id="'event_' + event.id" x-data="eventData(eventId, chosenOptionsIds)">
+		<template x-if="!loadingEvent && Object.keys(event).length > 0">
 			<div class="event">
 				<!-- Title -->
 				<div class="title">
@@ -134,7 +134,7 @@
 			Alpine.data("eventData", (eventId, chosenOptionsIds) => ({
 				chosenOptionsIds: chosenOptionsIds ?? [],
 				event: {},
-				loadingEvent: true,
+				loadingEvent: false,
 
 				get frontImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
 				get backImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
@@ -156,17 +156,20 @@
 
 				// "changed-event-id" event handler
 				loadEvent(eventId, clearChosenOptionsIds = true) {
-					log.entry(eventId);
-					this.loadingEvent = true;
+					log.entry(eventId, clearChosenOptionsIds);
+					if (eventId) {
+						this.loadingEvent = true;
 
-					// Get event data URL
-					let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
-					eventDataUrl = eventDataUrl.replace("{eventId}", eventId);
-					// AJAX GET request
-					ajaxGet(eventDataUrl)
-						.success(event => this.event = event)
-						.error(errorData => log.error("ERROR fetching event", errorData.message))
-						.always(() => this.loadingEvent = false);
+						// Get event data URL
+						let eventDataUrl = /*[[@{__${eventDataPage.url}__}]]*/ "";
+						eventDataUrl = eventDataUrl.replace("{eventId}", eventId);
+						// AJAX GET request
+						ajaxGet(eventDataUrl)
+							.success(event => this.event = event)
+							.error(errorData => log.error("ERROR fetching event", errorData.message))
+							.always(() => this.loadingEvent = false);
+					}
+					else this.event = {};
 
 					// Clear chosen options
 					if (clearChosenOptionsIds) this.chosenOptionsIds = [];

@@ -7,78 +7,137 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section(section)" th:object="${section}" th:id="|section_*{htmlSafeId}|" class="section">
+	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" class="section" x-data="sectionData(sectionId)">
 		<!-- Trigger -->
-		<div th:if="*{trigger}" class="trigger">
-			<i class="fa-solid fa-angles-right fa-sm"></i> [(*{trigger})]:
-		</div>
+		<template x-if="section.trigger">
+			<div class="trigger" x-jsz>
+				<i class="fa-solid fa-angles-right fa-sm"></i>
+				{{section.trigger}}:
+			</div>
+		</template>
 
 		<!-- Title -->
-		<div th:if="*{title}" class="title titleSecondary">
-			<h2>
-				<span class="titleTertiary">[[*{id}]] ·</span> [[*{title}]]
-			</h2>
-			<th:block th:if="*{unlockedBy}">
-				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
-			</th:block>
-		</div>
-
-		<!-- Introduction -->
-		<div th:if="*{introduction}" class="card fhCard fhCardFlush introduction">
-			<div class="card-header">[[#{section.introduction}]]</div>
-			<div class="card-body">
-				[(*{introduction})]
+		<template x-if="section.title">
+			<div class="title titleSecondary">
+				<h2 x-jsz>
+					<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
+				</h2>
+				<!-- Unlocked by -->
+				<template x-if="section.unlockedBy">
+					<div x-data="{ unlockedBy: section.unlockedBy }">
+						<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
+					</div>
+				</template>
 			</div>
-		</div>
-
+		</template>
+		
+		<!-- Introduction -->
+		<template x-if="section.introduction">
+			<bs:card class="fhCard fhCardFlush introduction">
+				<bs:cardHeader>[[#{section.introduction}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>
+					{{section.introduction}}
+				</bs:cardBody>
+			</bs:card>
+		</template>
+		
 		<!-- Text -->
-		<div th:if="*{text}" class="text">
-			[(*{text})]
-		</div>
+		<template x-if="section.text">
+			<div class="text" x-jsz>
+				{{section.text}}
+			</div>
+		</template>
 
 		<!-- Special rules -->
-		<div th:if="*{specialRules}" class="card fhCard specialRules">
-			<div class="card-header">[[#{section.specialRules}]]</div>
-			<div class="card-body">
-				[(*{specialRules})]
-			</div>
-		</div>
+		<template x-if="section.specialRules">
+			<bs:card class="fhCard specialRules">
+				<bs:cardHeader>[[#{section.specialRules}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>
+					{{section.specialRules}}
+				</bs:cardBody>
+			</bs:card>
+		</template>
 
 		<!-- Boss specials -->
-		<div th:each="bossSpecial : *{bossSpecials.entrySet()}" class="card fhCard bossSpecial">
-			<div class="card-header">
-				<i class="fa-solid fa-skull fa-xs"></i> [[#{section.bossSpecial}]] [[${bossSpecial.key}]]
-			</div>
-			<div class="card-body">
-				[(${bossSpecial.value})]
-			</div>
-		</div>
+		<template x-for="bossSpecial in section.bossSpecials">
+			<bs:card class="fhCard bossSpecial" x-jsz>
+				<bs:cardHeader>
+					<i class="fa-solid fa-skull fa-xs"></i> [[#{section.bossSpecial}]] {{bossSpecial.key}}
+				</bs:cardHeader>
+				<bs:cardBody>
+					{{bossSpecial.value}}
+				</bs:cardBody>
+			</bs:card>
+		</template>
 
 		<!-- Conclusion -->
-		<div th:if="*{conclusion}" class="card fhCard fhCardFlush conclusion">
-			<div class="card-header">[[#{section.conclusion}]]</div>
-			<div class="card-body">
-				[(*{conclusion})]
-			</div>
-		</div>
+		<template x-if="section.conclusion">
+			<bs:card class="fhCard fhCardFlush conclusion">
+				<bs:cardHeader>[[#{section.conclusion}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>
+					{{section.conclusion}}
+				</bs:cardBody>
+			</bs:card>
+		</template>
 
 		<!-- Rewards -->
-		<th:block th:if="*{rewards}">
-			<th:block th:replace="~{fragments/rewards :: rewards(*{rewards})}"></th:block>
-		</th:block>
+		<template x-if="section.rewards">
+			<div class="rewards" x-data="{ rewards: section.rewards }">
+				<th:block th:replace="~{fragments/rewards :: rewards}"/>
+			</div>
+		</template>
 
 		<!-- Section links -->
-		<div th:if="*{sectionLinks}" class="card fhCard sectionLinks">
-			<div class="card-header">[[#{section.sectionLinks}]]</div>
-			<div class="card-body">
-				[(*{sectionLinks})]
-			</div>
-		</div>
+		<template x-if="section.sectionLinks">
+			<bs:card class="fhCard sectionLinks">
+				<bs:cardHeader>[[#{section.sectionLinks}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>
+					{{section.sectionLinks}}
+				</bs:cardBody>
+			</bs:card>
+		</template>
 
 		<!-- Map -->
+		<!--
 		<div th:if="${scenario != null && section.hasMap(scenario.id)}" class="map">
 			<img th:src="@{__${imgUrl}__/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
 		</div>
+		-->
 	</div>
+
+
+	<!-- ---------- -->
+	<!-- SECTION JS -->
+	<!-- ---------- -->
+	<script th:fragment="sectionJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("sectionData", (sectionId) => ({
+				section: {},
+				loadingSection: false,
+
+				init() {
+					this.loadSection(sectionId);
+					// Event listeners
+					window.addEventListener("changed-section-id", event => this.loadSection(event.detail));
+				},
+
+				// "changed-section-id" event handler
+				loadSection(sectionId) {
+					log.entry(sectionId);
+					this.loadingSection = true;
+
+					// Get section data URL
+					let sectionDataUrl = /*[[@{__${sectionDataPage.url}__}]]*/ "";
+					sectionDataUrl = sectionDataUrl.replace("{sectionId}", sectionId);
+					// AJAX GET request
+					ajaxGet(sectionDataUrl)
+						.success(section => this.section = section)
+						.error(errorData => log.error("ERROR fetching section", errorData.message))
+						.always(() => this.loadingSection = false);
+					log.exit();
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

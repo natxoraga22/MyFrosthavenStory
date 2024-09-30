@@ -1,7 +1,6 @@
 package txraga.mystory.frosthaven.controllers;
 
 import java.util.List;
-import java.util.Locale;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,9 +27,8 @@ public class EventController {
 
 
 	@GetMapping({"", WebPage.EVENT_URL})
-	public ModelAndView event(Model model, Locale locale,
-	                          @PathVariable(required = false) String eventId,
-	                          @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
+	public ModelAndView event(Model model, @PathVariable(required = false) String eventId,
+	                                       @RequestParam(name = "chosenOptions", required = false) List<String> chosenOptionsIds) {
 		log.entry(eventId, chosenOptionsIds);
 		WebPage webPage = WebPage.EVENT;
 		model.addAttribute("webPage", webPage);

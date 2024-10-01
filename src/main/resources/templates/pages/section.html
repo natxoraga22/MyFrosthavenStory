@@ -35,6 +35,8 @@
 	<!-- --------------- -->
 	<script th:fragment="sectionPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
+			Alpine.store("sectionsMap", /*[[${sectionsMap}]]*/ {});
+
 			Alpine.data("sectionPageData", () => ({
 				sectionId: /*[[${sectionId}]]*/ null,
 

@@ -7,7 +7,7 @@
 	<!-- ------------ -->
 	<!-- SECTION FORM -->
 	<!-- ------------ -->
-	<form th:fragment="sectionForm" x-data="sectionFormData(sectionId)">
+	<form th:fragment="sectionForm" id="sectionForm" x-data="sectionFormData(sectionId)">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -25,14 +25,20 @@
 	<script th:fragment="sectionFormJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("sectionFormData", (sectionId) => ({
-				sectionsMap: /*[[${sectionsMap}]]*/ {},
-
-				// Inputs
 				sectionIdSelect: null,
 
 				init() {
+					const sectionIds = Object.keys(this.$store.sectionsMap).toSorted((firstSection, secondSection) => {
+						const [firstSectionPage, firstSectionPart] = firstSection.split(".");
+						const [secondSectionPage, secondSectionPart] = secondSection.split(".");
+						if (Number(firstSectionPage) !== Number(secondSectionPage)) {
+							return Number(firstSectionPage) - Number(secondSectionPage);
+						}
+						return Number(firstSectionPart) - Number(secondSectionPart);
+					});
+
 					this.sectionIdSelect = new TomSelect("#inputSectionId", {
-						options: Object.keys(this.sectionsMap).toSorted().map(sectionId => ({ value: sectionId, text: sectionId })),
+						options: sectionIds.map(sectionId => ({ value: sectionId, text: sectionId })),
 						items: sectionId,
 						onChange: newSectionId => this.$dispatch("changed-section-id", newSectionId),
 						maxOptions: null

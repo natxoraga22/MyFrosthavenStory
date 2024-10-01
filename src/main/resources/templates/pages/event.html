@@ -34,6 +34,8 @@
 	<!-- ------------- -->
 	<script th:fragment="eventPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
+			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
+
 			Alpine.data("eventPageData", () => ({
 				eventId: /*[[${eventId}]]*/ null,
 				chosenOptionsIds: /*[[${chosenOptionsIds}]]*/ []

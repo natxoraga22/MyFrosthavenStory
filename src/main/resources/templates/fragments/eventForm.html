@@ -7,7 +7,7 @@
 	<!-- ---------- -->
 	<!-- EVENT FORM -->
 	<!-- ---------- -->
-	<form th:fragment="eventForm" x-data="eventFormData(eventId, chosenOptionsIds)">
+	<form th:fragment="eventForm" id="eventForm" x-data="eventFormData(eventId, chosenOptionsIds)">
 		<bs:card>
 			<bs:cardBody>
 				<div>
@@ -29,15 +29,12 @@
 	<script th:fragment="eventFormJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventFormData", (eventId, chosenOptionsIds) => ({
-				eventsMap: /*[[${eventsMap}]]*/ {},
-
-				// Inputs
 				eventIdSelect: null,
 				chosenOptionsSelect: null,
 
 				init() {
 					this.eventIdSelect = new TomSelect("#inputEventId", {
-						options: Object.keys(this.eventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
+						options: Object.keys(this.$store.eventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
 						items: eventId,
 						onChange: newEventId => {
 							this.$dispatch("changed-event-id", newEventId);
@@ -59,7 +56,7 @@
 					this.chosenOptionsSelect.clear();
 					this.chosenOptionsSelect.clearOptions();
 
-					const selectedEvent = this.eventsMap[selectedEventId];
+					const selectedEvent = this.$store.eventsMap[selectedEventId];
 					if (selectedEvent) {
 						this.chosenOptionsSelect.addOptions(Object.keys(selectedEvent.options).map(key => ({ value: key, text: key })));
 						this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);

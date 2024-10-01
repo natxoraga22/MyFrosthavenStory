@@ -8,7 +8,7 @@
 	<!-- SECTION -->
 	<!-- ------- -->
 	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" x-data="sectionData(sectionId)">
-		<template x-if="!loadingSection && Object.keys(section).length > 0">
+		<template x-if="Object.keys(section).length > 0">
 			<div class="section">
 				<!-- Trigger -->
 				<template x-if="section.trigger">
@@ -117,7 +117,6 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("sectionData", (sectionId) => ({
 				section: {},
-				loadingSection: false,
 
 				init() {
 					this.loadSection(sectionId);
@@ -128,18 +127,7 @@
 				// "changed-section-id" event handler
 				loadSection(sectionId) {
 					log.entry(sectionId);
-					if (sectionId) {
-						this.loadingSection = true;
-
-						// Get section data URL
-						let sectionDataUrl = /*[[@{__${sectionDataPage.url}__}]]*/ "";
-						sectionDataUrl = sectionDataUrl.replace("{sectionId}", sectionId);
-						// AJAX GET request
-						ajaxGet(sectionDataUrl)
-							.success(section => this.section = section)
-							.error(errorData => log.error("ERROR fetching section", errorData.message))
-							.always(() => this.loadingSection = false);
-					}
+					if (sectionId) this.section = this.$store.sectionsMap[sectionId] ?? {};
 					log.exit();
 				}
 			}));

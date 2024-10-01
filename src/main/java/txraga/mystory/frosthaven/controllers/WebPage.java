@@ -18,11 +18,9 @@ public enum WebPage {
 
 	EVENTS(WebPage.EVENT_CONTROLLER_URL, null, "event"),
 	EVENT(WebPage.EVENT_CONTROLLER_URL, WebPage.EVENT_URL, "event"),
-	EVENT_DATA(WebPage.EVENT_CONTROLLER_URL, WebPage.EVENT_DATA_URL, null),
 	
 	SECTIONS(WebPage.SECTION_CONTROLLER_URL, null, "section"),
-	SECTION(WebPage.SECTION_CONTROLLER_URL, WebPage.SECTION_URL, "section"),
-	SECTION_DATA(WebPage.SECTION_CONTROLLER_URL, WebPage.SECTION_DATA_URL, null);
+	SECTION(WebPage.SECTION_CONTROLLER_URL, WebPage.SECTION_URL, "section");
 
 
 	/* ------------- */
@@ -36,11 +34,9 @@ public enum WebPage {
 
 	public static final String EVENT_CONTROLLER_URL = "/event";
 	public static final String EVENT_URL = "/{eventId}";
-	public static final String EVENT_DATA_URL = EVENT_URL + "/data";
 
 	public static final String SECTION_CONTROLLER_URL = "/section";
 	public static final String SECTION_URL = "/{sectionId}";
-	public static final String SECTION_DATA_URL = SECTION_URL + "/data";
 
 
 	/* ------------------ */

@@ -27,7 +27,7 @@ public class SectionController {
 	public ModelAndView section(Model model, @PathVariable(required = false) String sectionId) {
 		log.entry(sectionId);
 		WebPage webPage = WebPage.SECTION;
-		model.addAttribute("page", webPage);
+		model.addAttribute("webPage", webPage);
 		// URL parameters
 		model.addAttribute("sectionId", sectionId);
 		// Section form

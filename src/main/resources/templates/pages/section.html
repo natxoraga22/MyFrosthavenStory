@@ -36,7 +36,11 @@
 	<script th:fragment="sectionPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("sectionPageData", () => ({
-				sectionId: /*[[${sectionId}]]*/ null
+				sectionId: /*[[${sectionId}]]*/ null,
+
+				init() {
+					if (this.sectionId) this.sectionId = this.sectionId.replace("_", ".");
+				}
 			}));
 		});
 	</script>

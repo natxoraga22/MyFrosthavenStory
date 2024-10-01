@@ -21,6 +21,9 @@
 	--scenario-requirement-transport-size: 48px;
 	--scenario-requirement-transport-padding: 10px;
 	--scenario-requirement-status-padding: 6px;
+
+	/* Gap between scenario form inputs */
+	--scenario-form-inner-gap: 1rem;
 }
 
 
@@ -144,4 +147,15 @@
 
 .scenario > .section {
 	margin-top: calc(var(--scenario-randomScenarioSection-gap) - var(--scenario-inner-gap));
+}
+
+
+/* ------------- */
+/* SCENARIO FORM */
+/* ------------- */
+
+#scenarioForm .card-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--scenario-form-inner-gap);
 }

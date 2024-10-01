@@ -147,14 +147,14 @@
 				},
 
 				init() {
-					this.loadEvent(eventId, false);
+					this.setEvent(eventId, false);
 					// Event listeners
-					window.addEventListener("changed-event-id", event => this.loadEvent(event.detail));
+					window.addEventListener("changed-event-id", event => this.setEvent(event.detail));
 					window.addEventListener("changed-chosen-options", event => this.setChosenOptionsIds(event.detail));
 				},
 
 				// "changed-event-id" event handler
-				loadEvent(eventId, clearChosenOptionsIds = true) {
+				setEvent(eventId, clearChosenOptionsIds = true) {
 					log.entry(eventId, clearChosenOptionsIds);
 					if (eventId) this.event = this.$store.eventsMap[eventId] ?? {};
 					if (clearChosenOptionsIds) this.chosenOptionsIds = [];

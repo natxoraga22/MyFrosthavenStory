@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------------- -->
+	<!-- SCENARIO FORM -->
+	<!-- ------------- -->
+	<form th:fragment="scenarioForm" id="scenarioForm" x-data="scenarioFormData(scenarioId, scenarioPath)">
+		<!-- Previous and next scenarios -->
+		<!--
+		<div th:if="${scenarioId}" class="d-flex justify-content-between mb-4">
+			<a class="btn btn-secondary" th:href="@{/scenario/{id}(id=${prevScenario})}">
+				<i class="fa-solid fa-angle-left me-1"></i> [[#{scenario.previous}]]
+			</a>
+			<a class="btn btn-secondary" th:href="@{/scenario/{id}(id=${nextScenario})}">
+				[[#{scenario.next}]] <i class="fa-solid fa-angle-right ms-1"></i>
+			</a>
+		</div>
+		-->
+		<bs:card>
+			<bs:cardBody>
+				<div>
+					<bs:label for="inputScenarioId">[[#{scenario.id}]]</bs:label>
+					<bs:select id="inputScenarioId" name="scenarioId" required></bs:select>
+				</div>
+				<div>
+					<bs:label for="inputScenarioPath">[[#{scenario.path}]]</bs:label>
+					<bs:select id="inputScenarioPath" name="scenarioPath" multiple></bs:select>
+				</div>
+			</bs:cardBody>
+		</bs:card>
+	</form>
+
+
+	<!-- ---------------- -->
+	<!-- SCENARIO FORM JS -->
+	<!-- ---------------- -->
+	<script th:fragment="scenarioFormJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("scenarioFormData", (scenarioId, scenarioPath) => ({
+				scenarioIdSelect: null,
+				scenarioPathSelect: null,
+
+				init() {
+					this.scenarioIdSelect = new TomSelect("#inputScenarioId", {
+						options: Object.keys(this.$store.scenariosMap).toSorted().map(scenarioId => ({ value: scenarioId, text: scenarioId })),
+						items: scenarioId,
+						onChange: newScenarioId => {
+							this.$dispatch("changed-scenario-id", newScenarioId);
+							this.fillScenarioPathSelect(newScenarioId);
+						},
+						maxOptions: null
+					});
+					this.scenarioPathSelect = new TomSelect("#inputScenarioPath", {
+						onChange: newScenarioPath => this.$dispatch("changed-scenario-path", newScenarioPath),
+						plugins: ["remove_button"],
+						closeAfterSelect: true
+					});
+
+					this.fillScenarioPathSelect(scenarioId, scenarioPath);
+				},
+
+				fillScenarioPathSelect(selectedScenarioId, selectedScenarioPath) {
+					log.entry(selectedScenarioId, selectedScenarioPath);
+					this.scenarioPathSelect.clear();
+					this.scenarioPathSelect.clearOptions();
+
+					const selectedScenario = this.$store.scenariosMap[selectedScenarioId];
+					if (selectedScenario) {
+						this.scenarioPathSelect.addOptions(Object.keys(selectedScenario.sections).map(key => ({ value: key, text: key })));
+						this.scenarioPathSelect.addItems(selectedScenarioPath);
+					}
+					log.exit();
+				}
+			}));
+		});
+	</script>
+</body>
+</html>

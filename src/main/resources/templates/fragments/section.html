@@ -119,13 +119,13 @@
 				section: {},
 
 				init() {
-					this.loadSection(sectionId);
+					this.setSection(sectionId);
 					// Event listeners
-					window.addEventListener("changed-section-id", event => this.loadSection(event.detail));
+					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
 				},
 
 				// "changed-section-id" event handler
-				loadSection(sectionId) {
+				setSection(sectionId) {
 					log.entry(sectionId);
 					if (sectionId) this.section = this.$store.sectionsMap[sectionId] ?? {};
 					log.exit();

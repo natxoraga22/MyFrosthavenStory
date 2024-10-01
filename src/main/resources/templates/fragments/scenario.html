@@ -7,60 +7,70 @@
 	<!-- -------- -->
 	<!-- SCENARIO -->
 	<!-- -------- -->
-	<div th:fragment="scenario(scenario)" th:object="${scenario}" th:id="|scenario_*{id}|" class="scenario">
-		<!-- Title -->
-		<div class="title">
-			<!-- Questline -->
-			<div th:if="*{questLine}" class="questLine" th:classappend="*{#strings.unCapitalize(questLine.name())}">
-				[[*{questLine}]]
-			</div>
-			<h1>
-				<!-- Id and name -->
-				<span class="titleSecondary">[[*{#numbers.formatInteger(id,1)}]] ·</span> [[*{name}]]
-				<!-- Requirements -->
-				<th:block th:if="*{requirement}">
-					<th:block th:replace="~{:: requirement(*{requirement})}"></th:block>
+	<div th:fragment="scenario" x-bind:id="'scenario_' + scenario.id" x-data="scenarioData(scenarioId, scenarioPath)">
+		<template x-if="Object.keys(scenario).length > 0">
+			<div class="scenario">
+				<!-- Title -->
+				<div class="title">
+					<!-- Questline -->
+					<div th:if="*{questLine}" class="questLine" th:classappend="*{#strings.unCapitalize(questLine.name())}">
+						[[*{questLine}]]
+					</div>
+					<h1>
+						<!-- Id and name -->
+						<span class="titleSecondary">[[*{#numbers.formatInteger(id,1)}]] ·</span> [[*{name}]]
+						<!-- Requirements -->
+						<th:block th:if="*{requirement}">
+							<th:block th:replace="~{:: requirement(*{requirement})}"></th:block>
+						</th:block>
+					</h1>
+					<!-- Unlocked by -->
+					<th:block th:if="*{unlockedBy}">
+						<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
+					</th:block>
+					<!-- Location -->
+					<div th:if="*{location}" class="subtitle">
+						<i class="fa-solid fa-map-location me-1"></i> [[*{location}]]
+					</div>
+				</div>
+
+				<!-- Scenario goals -->
+				<template x-if="scenario.goals">
+					<bs:card class="fhCard goals">
+						<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
+						<bs:cardBody x-jsz>
+							{{scenario.goals}}
+						</bs:cardBody>
+					</bs:card>
+				</template>
+				
+				<!-- Scenario effects -->
+				<template x-if="scenario.effects">
+					<bs:card class="fhCard effects">
+						<bs:cardHeader>[[#{scenario.effects}]]</bs:cardHeader>
+						<bs:cardBody x-jsz>
+							{{scenario.effects}}
+						</bs:cardBody>
+					</bs:card>
+				</template>
+
+				<!-- Sections -->
+				<div class="sections">
+					<th:block th:each="pathItem : *{path}" th:with="section = *{sections['__${pathItem}__']}">
+						<th:block th:if="${section}">
+							<div th:replace="~{fragments/section :: section(${section})}"></div>
+						</th:block>
+					</th:block>
+				</div>
+
+				<!-- Random scenario section -->
+				<!--
+				<th:block th:if="*{randomScenarioSection}">
+					<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"></th:block>
 				</th:block>
-			</h1>
-			<!-- Unlocked by -->
-			<th:block th:if="*{unlockedBy}">
-				<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
-			</th:block>
-			<!-- Location -->
-			<div th:if="*{location}" class="subtitle">
-				<i class="fa-solid fa-map-location me-1"></i> [[*{location}]]
+				-->
 			</div>
-		</div>
-
-		<!-- Scenario goals -->
-		<div th:if="*{goals}" class="card fhCard goals">
-			<div class="card-header">[[#{scenario.goals}]]</div>
-			<div class="card-body">
-				[(*{goals})]
-			</div>
-		</div>
-
-		<!-- Scenario effects -->
-		<div th:if="*{effects}" class="card fhCard effects">
-			<div class="card-header">[[#{scenario.effects}]]</div>
-			<div class="card-body">
-				[(*{effects})]
-			</div>
-		</div>
-
-		<!-- Sections -->
-		<div class="sections">
-			<th:block th:each="pathItem : *{path}" th:with="section = *{sections['__${pathItem}__']}">
-				<th:block th:if="${section}">
-					<div th:replace="~{fragments/section :: section(${section})}"></div>
-				</th:block>
-			</th:block>
-		</div>
-
-		<!-- Random scenario section -->
-		<th:block th:if="*{randomScenarioSection}">
-			<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"></th:block>
-		</th:block>
+		</template>
 	</div>
 
 
@@ -79,38 +89,38 @@
 	</div>
 
 
-	<!-- ------------- -->
-	<!-- SCENARIO FORM -->
-	<!-- ------------- -->
-	<form th:fragment="scenarioForm" th:action="@{/scenario}" method="post" class="scenarioForm">
-		<!-- Previous and next scenarios -->
-		<div th:if="${scenarioId}" class="d-flex justify-content-between mb-4">
-			<a class="btn btn-secondary" th:href="@{/scenario/{id}(id=${prevScenario})}">
-				<i class="fa-solid fa-angle-left me-1"></i> [[#{scenario.previous}]]
-			</a>
-			<a class="btn btn-secondary" th:href="@{/scenario/{id}(id=${nextScenario})}">
-				[[#{scenario.next}]] <i class="fa-solid fa-angle-right ms-1"></i>
-			</a>
-		</div>
+	<!-- ----------- -->
+	<!-- SCENARIO JS -->
+	<!-- ----------- -->
+	<script th:fragment="scenarioJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("scenarioData", (scenarioId, scenarioPath) => ({
+				scenarioPath: scenarioPath ?? [],
+				scenario: {},
 
-		<div class="card">
-			<div class="card-body">
-				<div class="mb-3">
-					<label for="inputScenarioId" class="form-label">[[#{scenario.id}]]</label>
-					<input type="text" class="form-control" id="inputScenarioId" name="scenarioId"
-					       th:value="${scenarioId}" required>
-				</div>
-				<div class="mb-3">
-					<label for="inputScenarioPath" class="form-label">[[#{scenario.path}]]</label>
-					<input type="text" class="form-control" id="inputScenarioPath" name="scenarioPath"
-					       th:value="${#strings.listJoin(scenario?.path, ',')}">
-					<div th:if="${scenario}" class="form-text">[[#{scenario.availableSections}]]: [[${scenario.sections?.keySet()}]]</div>
-				</div>
-				<div class="d-grid">
-					<button type="submit" class="btn btn-primary">[[#{scenario.goTo}]]</button>
-				</div>
-			</div>
-		</div>
-	</form>
+				init() {
+					this.setScenario(scenarioId, false);
+					// Event listeners
+					window.addEventListener("changed-scenario-id", event => this.setScenario(event.detail));
+					window.addEventListener("changed-scenario-path", event => this.setScenarioPath(event.detail));
+				},
+
+				// "changed-scenario-id" event handler
+				setScenario(scenarioId, clearScenarioPath = true) {
+					log.entry(scenarioId, clearScenarioPath);
+					if (scenarioId) this.scenario = this.$store.scenariosMap[scenarioId] ?? {};
+					if (clearScenarioPath) this.scenarioPath = [];
+					log.exit();
+				},
+
+				// "changed-scenario-path" event handler
+				setScenarioPath(newScenarioPath) {
+					log.entry(newScenarioPath);
+					this.scenarioPath = [...newScenarioPath];
+					log.exit();
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

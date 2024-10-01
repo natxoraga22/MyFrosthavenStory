@@ -28,17 +28,8 @@
 				sectionIdSelect: null,
 
 				init() {
-					const sectionIds = Object.keys(this.$store.sectionsMap).toSorted((firstSection, secondSection) => {
-						const [firstSectionPage, firstSectionPart] = firstSection.split(".");
-						const [secondSectionPage, secondSectionPart] = secondSection.split(".");
-						if (Number(firstSectionPage) !== Number(secondSectionPage)) {
-							return Number(firstSectionPage) - Number(secondSectionPage);
-						}
-						return Number(firstSectionPart) - Number(secondSectionPart);
-					});
-
 					this.sectionIdSelect = new TomSelect("#inputSectionId", {
-						options: sectionIds.map(sectionId => ({ value: sectionId, text: sectionId })),
+						options: Object.keys(this.$store.sectionsMap).map(sectionId => ({ value: sectionId, text: sectionId })),
 						items: sectionId,
 						onChange: newSectionId => this.$dispatch("changed-section-id", newSectionId),
 						maxOptions: null

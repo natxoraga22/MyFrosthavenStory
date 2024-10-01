@@ -14,7 +14,8 @@ public enum WebPage {
 
 	CAMPAIGN(WebPage.CAMPAIGN_CONTROLLER_URL, null, "campaign"),
 
-	SCENARIO(WebPage.SCENARIO_CONTROLLER_URL, null, "scenario"),
+	SCENARIOS(WebPage.SCENARIO_CONTROLLER_URL, null, "scenario"),
+	SCENARIO(WebPage.SCENARIO_CONTROLLER_URL, WebPage.SCENARIO_URL, "scenario"),
 
 	EVENTS(WebPage.EVENT_CONTROLLER_URL, null, "event"),
 	EVENT(WebPage.EVENT_CONTROLLER_URL, WebPage.EVENT_URL, "event"),
@@ -31,6 +32,7 @@ public enum WebPage {
 	public static final String CAMPAIGN_CONTROLLER_URL = "/";
 
 	public static final String SCENARIO_CONTROLLER_URL = "/scenario";
+	public static final String SCENARIO_URL = "/{scenarioId}";
 
 	public static final String EVENT_CONTROLLER_URL = "/event";
 	public static final String EVENT_URL = "/{eventId}";

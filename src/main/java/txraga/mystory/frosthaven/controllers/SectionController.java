@@ -26,10 +26,9 @@ public class SectionController {
 		log.entry(sectionId);
 		WebPage webPage = WebPage.SECTION;
 		model.addAttribute("webPage", webPage);
+		model.addAttribute("sectionsMap", frosthaven.getAllSectionsAsMap());
 		// URL parameters
 		model.addAttribute("sectionId", sectionId);
-		// Section form
-		model.addAttribute("sectionsMap", frosthaven.getAllSectionsAsMap());
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 

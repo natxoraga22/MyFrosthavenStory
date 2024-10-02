@@ -39,6 +39,7 @@
 
 			Alpine.data("sectionPageData", () => ({
 				sectionId: /*[[${sectionId}]]*/ null,
+				section: {},
 
 				init() {
 					if (this.sectionId) this.sectionId = this.sectionId.replace("_", ".");

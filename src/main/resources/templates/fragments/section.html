@@ -100,14 +100,11 @@
 				</template>
 
 				<!-- Map -->
-				<div class="map">
-					<img x-bind:src="mapUrl" onload="this.width*=0.66;">
-				</div>
-				<!--
-				<div th:if="${scenario != null && section.hasMap(scenario.id)}" class="map">
-					<img th:src="@{__${imgUrl}__/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
-				</div>
-				-->
+				<template x-if="mapExists">
+					<div class="map">
+						<img x-bind:src="mapUrl" onload="this.width*=0.66;">
+					</div>
+				</template>
 			</div>
 		</template>
 	</div>
@@ -120,9 +117,11 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("sectionData", (sectionId, section) => ({
 				section: section ?? {},
+				mapExists: false,
 
 				init() {
 					this.setSection(sectionId);
+					this.checkIfMapExists();
 					// Event listeners
 					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
 				},
@@ -132,8 +131,18 @@
 				// "changed-section-id" event handler
 				setSection(sectionId) {
 					log.entry(sectionId);
-					if (sectionId) this.section = this.$store.sectionsMap[sectionId] ?? {};
+					if (sectionId) {
+						this.section = this.$store.sectionsMap[sectionId] ?? {};
+						this.checkIfMapExists();
+					}
 					log.exit();
+				},
+
+				checkIfMapExists() {
+					const mapImage = new Image();
+					mapImage.onload = () => this.mapExists = true;
+					mapImage.onerror = () => this.mapExists = false;
+					mapImage.src = this.mapUrl;
 				}
 			}));
 		});

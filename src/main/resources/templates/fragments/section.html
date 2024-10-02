@@ -7,7 +7,7 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" x-data="sectionData(sectionId)">
+	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" x-data="sectionData(sectionId, section)">
 		<template x-if="Object.keys(section).length > 0">
 			<div class="section">
 				<!-- Trigger -->
@@ -100,6 +100,9 @@
 				</template>
 
 				<!-- Map -->
+				<div class="map">
+					<img x-bind:src="mapUrl" onload="this.width*=0.66;">
+				</div>
 				<!--
 				<div th:if="${scenario != null && section.hasMap(scenario.id)}" class="map">
 					<img th:src="@{__${imgUrl}__/scenarios/{imgName}.png(imgName=${scenario.id} + '_' + *{id})}" onload="this.width*=0.66;">
@@ -115,14 +118,16 @@
 	<!-- ---------- -->
 	<script th:fragment="sectionJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("sectionData", (sectionId) => ({
-				section: {},
+			Alpine.data("sectionData", (sectionId, section) => ({
+				section: section ?? {},
 
 				init() {
 					this.setSection(sectionId);
 					// Event listeners
 					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
 				},
+
+				get mapUrl() { return this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png" },
 
 				// "changed-section-id" event handler
 				setSection(sectionId) {

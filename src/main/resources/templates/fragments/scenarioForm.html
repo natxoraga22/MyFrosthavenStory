@@ -59,7 +59,7 @@
 					const selectedScenario = this.$store.scenariosMap[selectedScenarioId];
 					if (selectedScenario) {
 						this.scenarioPathSelect.addOptions(Object.keys(selectedScenario.sections).map(key => ({ value: key, text: key })));
-						this.scenarioPathSelect.addItems(selectedScenarioPath);
+						this.scenarioPathSelect.addItems(selectedScenarioPath ?? selectedScenario.path, false);
 					}
 					log.exit();
 				}

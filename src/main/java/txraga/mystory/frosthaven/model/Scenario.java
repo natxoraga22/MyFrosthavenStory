@@ -10,7 +10,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
-import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 
 @Getter
@@ -25,7 +24,7 @@ public class Scenario extends StoryObject implements Comparable<Scenario> {
 	private Requirement requirement;
 
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-	private List<StoryItem> unlockedBy;
+	private List<UnlockedBy> unlockedBy;
 
 	private int complexity;
 	private String location;

@@ -13,34 +13,42 @@
 				<!-- Title -->
 				<div class="title">
 					<!-- Questline -->
-					<div th:if="*{questLine}" class="questLine" th:classappend="*{#strings.unCapitalize(questLine.name())}">
-						[[*{questLine}]]
-					</div>
+					<template x-if="scenario.questLine">
+						<div class="questLine" x-bind:class="uncapitalizedQuestLine" x-jsz>
+							{{scenario.questLine}}
+						</div>
+					</template>
 					<h1>
 						<!-- Id and name -->
-						<span class="titleSecondary">[[*{#numbers.formatInteger(id,1)}]] ·</span> [[*{name}]]
+						<span class="titleSecondary" x-jsz>{{Number(scenario.id)}} ·</span>
+						<span x-jsz>{{scenario.name}}</span>
 						<!-- Requirements -->
-						<th:block th:if="*{requirement}">
-							<th:block th:replace="~{:: requirement(*{requirement})}"></th:block>
-						</th:block>
+						<template x-if="scenario.requirement">
+							<div x-data="{ get requirement() { return scenario.requirement } }">
+								<th:block th:replace="~{:: requirement}"/>
+							</div>
+						</template>
 					</h1>
 					<!-- Unlocked by -->
-					<th:block th:if="*{unlockedBy}">
-						<th:block th:replace="~{fragments/frosthaven :: unlockedBy(*{unlockedBy})}"></th:block>
-					</th:block>
+					<template x-if="scenario.unlockedBy">
+						<div x-data="{ get unlockedBy() { return scenario.unlockedBy } }">
+							<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
+						</div>
+					</template>
 					<!-- Location -->
-					<div th:if="*{location}" class="subtitle">
-						<i class="fa-solid fa-map-location me-1"></i> [[*{location}]]
-					</div>
+					<template x-if="scenario.location">
+						<div class="subtitle" x-jsz>
+							<i class="fa-solid fa-map-location me-1"></i>
+							{{scenario.location}}
+						</div>
+					</template>
 				</div>
 
 				<!-- Scenario goals -->
 				<template x-if="scenario.goals">
 					<bs:card class="fhCard goals">
 						<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>
-							{{scenario.goals}}
-						</bs:cardBody>
+						<bs:cardBody x-jsz>{{scenario.goals}}</bs:cardBody>
 					</bs:card>
 				</template>
 				
@@ -48,19 +56,19 @@
 				<template x-if="scenario.effects">
 					<bs:card class="fhCard effects">
 						<bs:cardHeader>[[#{scenario.effects}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>
-							{{scenario.effects}}
-						</bs:cardBody>
+						<bs:cardBody x-jsz>{{scenario.effects}}</bs:cardBody>
 					</bs:card>
 				</template>
 
 				<!-- Sections -->
 				<div class="sections">
-					<th:block th:each="pathItem : *{path}" th:with="section = *{sections['__${pathItem}__']}">
-						<th:block th:if="${section}">
-							<div th:replace="~{fragments/section :: section(${section})}"></div>
-						</th:block>
-					</th:block>
+					<template x-for="scenarioPathItem in scenarioPath" x-bind:key="scenarioPathItem">
+						<div x-data="{ sectionId: null, get section() { return scenario.sections[scenarioPathItem] } }">
+							<template x-if="section">
+								<th:block th:replace="~{fragments/section :: section}"/>
+							</template>
+						</div>
+					</template>
 				</div>
 
 				<!-- Random scenario section -->
@@ -77,15 +85,19 @@
 	<!-- ----------- -->
 	<!-- REQUIREMENT -->
 	<!-- ----------- -->
-	<div th:fragment="requirement(requirement)" th:object="${requirement}" class="requirement">
+	<div th:fragment="requirement" class="requirement">
 		<!-- Transport -->
-		<div th:if="*{transport}" class="transport">
-			<img th:src="@{__${imgUrl}__/icons/{transport}.png(transport=*{transport})}">
-		</div>
+		<template x-if="requirement.transport">
+			<div class="transport">
+				<img x-bind:src="getTransportIconUrl(requirement.transport)">
+			</div>
+		</template>
 		<!-- Status -->
-		<div th:if="*{status}" class="status">
-			[[*{status}]]
-		</div>
+		<template x-if="requirement.status">
+			<div class="status" x-jsz>
+				{{requirement.status}}
+			</div>
+		</template>
 	</div>
 
 
@@ -105,11 +117,18 @@
 					window.addEventListener("changed-scenario-path", event => this.setScenarioPath(event.detail));
 				},
 
+				get uncapitalizedQuestLine() {
+					const questLine = this.scenario.questLine;
+					return questLine?.charAt(0).toLowerCase() + questLine?.slice(1);
+				},
+
+				getTransportIconUrl(transport) { return this.$store.imgUrl + "/icons/" + transport + ".png" },
+
 				// "changed-scenario-id" event handler
 				setScenario(scenarioId, clearScenarioPath = true) {
 					log.entry(scenarioId, clearScenarioPath);
 					if (scenarioId) this.scenario = this.$store.scenariosMap[scenarioId] ?? {};
-					if (clearScenarioPath) this.scenarioPath = [];
+					if (clearScenarioPath || this.scenarioPath.length == 0) this.scenarioPath = [...this.scenario.path];
 					log.exit();
 				},
 

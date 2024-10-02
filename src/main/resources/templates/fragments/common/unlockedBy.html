@@ -9,7 +9,7 @@
 	<!-- ----------- -->
 	<div th:fragment="unlockedBy" class="subtitle" x-data="unlockedByData(unlockedBy)">
 		<i class="fa-solid fa-unlock me-1"></i> [[#{unlockedBy}]]:
-		<template x-for="(unlockedByItem, index) in unlockedByList">
+		<template x-for="(unlockedByItem, index) in unlockedBy">
 			<span>
 				<span x-show="index > 0">[[#{unlockedBy.separator}]]</span>
 				<template x-if="unlockedByItem.event">
@@ -41,8 +41,6 @@
 	<script th:fragment="unlockedByJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("unlockedByData", (unlockedBy) => ({
-				unlockedByList: unlockedBy,
-
 				getLinkUrl(unlockedByItem) {
 					const urlPrefix = this.$store.webPage == "CAMPAIGN" ? "#" : "/";
 					const urlSuffix = this.$store.webPage == "CAMPAIGN" ? "_" : "/";

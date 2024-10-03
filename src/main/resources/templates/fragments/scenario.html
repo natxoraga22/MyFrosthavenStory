@@ -127,8 +127,10 @@
 				// "changed-scenario-id" event handler
 				setScenario(scenarioId, clearScenarioPath = true) {
 					log.entry(scenarioId, clearScenarioPath);
-					if (scenarioId) this.scenario = this.$store.scenariosMap[scenarioId] ?? {};
-					if (clearScenarioPath || this.scenarioPath.length == 0) this.scenarioPath = [...this.scenario.path];
+					if (scenarioId) {
+						this.scenario = this.$store.scenariosMap[scenarioId] ?? {};
+						if (clearScenarioPath || this.scenarioPath.length == 0) this.scenarioPath = [...this.scenario.path];
+					}
 					log.exit();
 				},
 

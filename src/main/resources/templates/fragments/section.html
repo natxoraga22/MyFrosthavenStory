@@ -26,7 +26,7 @@
 						</h2>
 						<!-- Unlocked by -->
 						<template x-if="section.unlockedBy">
-							<div x-data="{ unlockedBy: section.unlockedBy }">
+							<div x-data="{ get unlockedBy() { return section.unlockedBy } }">
 								<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
 							</div>
 						</template>

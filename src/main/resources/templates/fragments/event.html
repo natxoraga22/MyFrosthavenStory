@@ -19,7 +19,7 @@
 					</h1>
 					<!-- Unlocked by -->
 					<template x-if="event.unlockedBy">
-						<div x-data="{ unlockedBy: event.unlockedBy }">
+						<div x-data="{ get unlockedBy() { return event.unlockedBy } }">
 							<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
 						</div>
 					</template>

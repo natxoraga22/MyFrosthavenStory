@@ -1,18 +1,13 @@
 package txraga.mystory.frosthaven.global;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import lombok.Getter;
-import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
-import txraga.mystory.frosthaven.model.OutpostPhase;
-import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.model.StoryObject;
 import txraga.mystory.frosthaven.model.personal.PersonalStory;
-import txraga.mystory.frosthaven.model.personal.StoryItem;
 
 
 @Getter
@@ -33,6 +28,7 @@ public class Campaign {
 		this.fhStory = fhStory;
 		this.tracker = new CampaignTracker(frosthaven);
 
+		/*
 		if (personalStory != null) {
 			party = fhStory.getParty(personalStory.getParty());
 			originalParty = new LinkedHashMap<>(party);
@@ -66,6 +62,7 @@ public class Campaign {
 				}
 			}
 		}
+		*/
 	}
 
 }

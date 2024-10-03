@@ -1,32 +1,26 @@
 package txraga.mystory.frosthaven.global;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import lombok.Getter;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.model.Event;
-import txraga.mystory.frosthaven.model.OutpostPhase;
-import txraga.mystory.frosthaven.model.Rewards;
 import txraga.mystory.frosthaven.model.Scenario;
-import txraga.mystory.frosthaven.model.Section;
-import txraga.mystory.frosthaven.model.Event.TypeAndSeason;
 
 
 @XSlf4j
 @Getter
 public class CampaignTracker {
 
-	private final Frosthaven frosthaven;
+	//private final Frosthaven frosthaven;
 
 	private Map<Event.TypeAndSeason,List<Event>> availableEvents;
 	private List<Scenario> availableScenarios;
 
-
+	
 	public CampaignTracker(Frosthaven frosthaven) {
+		/*
 		this.frosthaven = frosthaven;
 
 		// Initial events
@@ -53,8 +47,10 @@ public class CampaignTracker {
 		availableScenarios = new ArrayList<>();
 		availableScenarios.add(frosthaven.getScenario("000"));
 		availableScenarios.add(frosthaven.getScenario("001"));
+		*/
 	}
 
+	/*
 	public List<Scenario> getMainQuestAvailableScenarios() {
 		return availableScenarios.stream().filter(scenario -> scenario.getQuestLine().isMainQuest()).sorted().collect(Collectors.toList());
 	}
@@ -109,12 +105,13 @@ public class CampaignTracker {
 
 		log.exit();
 	}
-
+	*/
 
 	/* --------------- */
 	/* PRIVATE METHODS */
 	/* --------------- */
 
+	/*
 	private void trackRewards(Rewards rewards) {
 		log.entry(rewards);
 		if (rewards != null) {
@@ -143,5 +140,6 @@ public class CampaignTracker {
 		}
 		log.exit();
 	}
+	*/
 
 }

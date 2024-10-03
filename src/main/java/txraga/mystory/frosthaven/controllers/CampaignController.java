@@ -42,9 +42,9 @@ public class CampaignController {
 		Campaign campaign = new Campaign(personalStory, frosthaven, fhStory);
 
 		// DEBUG tracker
-		log.debug("{}", campaign.getTracker().getAvailableEvents());
-		log.debug("{}", campaign.getTracker().getMainQuestAvailableScenarios());
-		log.debug("{}", campaign.getTracker().getSideQuestAvailableScenarios());
+		//log.debug("{}", campaign.getTracker().getAvailableEvents());
+		//log.debug("{}", campaign.getTracker().getMainQuestAvailableScenarios());
+		//log.debug("{}", campaign.getTracker().getSideQuestAvailableScenarios());
 
 		model.addAttribute("page", WebPage.CAMPAIGN);
 		model.addAttribute("welcome", frosthaven.getWelcome());

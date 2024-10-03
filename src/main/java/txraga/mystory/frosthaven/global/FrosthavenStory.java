@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import txraga.mystory.frosthaven.model.Building;
-import txraga.mystory.frosthaven.model.Event;
 import txraga.mystory.frosthaven.model.FhCharacter;
 import txraga.mystory.frosthaven.model.OutpostPhase;
 import txraga.mystory.frosthaven.model.PersonalQuest;
@@ -149,7 +148,7 @@ public class FrosthavenStory {
 		}
 
 		// OUTPOST EVENT
-		outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent()));
+		//outpostPhase.setOutpostEvent(getEvent(outpostPhase.getOutpostEvent()));
 
 		// LEVEL UPS
 		if (outpostPhase.getLevelUps() != null) {

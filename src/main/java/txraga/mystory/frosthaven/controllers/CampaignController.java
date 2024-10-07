@@ -21,20 +21,28 @@ import txraga.mystory.frosthaven.model.personal.PersonalStory;
 @XSlf4j
 @RequiredArgsConstructor
 @Controller
-@RequestMapping("/")
+@RequestMapping(WebPage.CAMPAIGN_CONTROLLER_URL)
 public class CampaignController {
 	
 	private final Frosthaven frosthaven;
 	private final FrosthavenStory fhStory;
 
 
-	@GetMapping("")
+	@GetMapping
 	public ModelAndView campaign(Model model) throws IOException {
 		log.entry();
-		model.addAttribute("page", WebPage.CAMPAIGN);
+		WebPage webPage = WebPage.CAMPAIGN;
+		model.addAttribute("webPage", webPage);
 		model.addAttribute("welcome", frosthaven.getWelcome());
-		return log.exit(new ModelAndView("campaign"));
+		model.addAttribute("scenariosMap", frosthaven.getAllScenariosAsMap());
+		model.addAttribute("eventsMap", frosthaven.getAllEventsAsMap());
+		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
+
+
+
+
+
 
 	@PostMapping("/personalStory")
 	public ModelAndView personalStory(Model model, @RequestBody(required = false) PersonalStory personalStory) throws IOException {

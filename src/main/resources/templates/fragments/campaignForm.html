@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------------- -->
+	<!-- CAMPAIGN FORM -->
+	<!-- ------------- -->
+	<form th:fragment="campaignForm" id="campaignForm" x-data="campaignFormData()">
+		<bs:card bs:mt="5">
+			<bs:cardBody>
+				<!-- SCENARIO -->
+				<bs:row bs:mb="5">
+					<bs:col col="12">
+						<h4 bs:cardTitle>[[#{campaign.scenario}]]</h4>
+					</bs:col>
+					<bs:col>
+						<bs:label for="inputScenarioId">[[#{scenario.id}]]</bs:label>
+						<bs:select id="inputScenarioId" name="scenarioId"></bs:select>
+					</bs:col>
+					<bs:col>
+						<bs:label for="inputScenarioPath">[[#{scenario.path}]]</bs:label>
+						<bs:select id="inputScenarioPath" name="scenarioPath" multiple></bs:select>
+					</bs:col>
+					<bs:col col="auto" bs:flex bs:flexAlign="end">
+						<bs:button color="primary">[[#{campaign.addScenario}]]</bs:button>
+					</bs:col>
+				</bs:row>
+
+				<!-- EVENT -->
+				<bs:row>
+					<bs:col col="12">
+						<h4 bs:cardTitle>[[#{campaign.event}]]</h4>
+					</bs:col>
+					<bs:col>
+						<bs:label for="inputEventId">[[#{event.id}]]</bs:label>
+						<bs:select id="inputEventId" name="eventId"></bs:select>
+					</bs:col>
+					<bs:col>
+						<bs:label for="inputEventChosenOptions">[[#{event.chosenOptions}]]</bs:label>
+						<bs:select id="inputEventChosenOptions" name="chosenOptions" multiple></bs:select>
+					</bs:col>
+					<bs:col col="auto" bs:flex bs:flexAlign="end">
+						<bs:button color="primary">[[#{campaign.addEvent}]]</bs:button>
+					</bs:col>
+				</bs:row>
+			</bs:cardBody>
+		</bs:card>
+	</form>
+
+
+	<!-- ---------------- -->
+	<!-- CAMPAIGN FORM JS -->
+	<!-- ---------------- -->
+	<script th:fragment="campaignFormJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("campaignFormData", () => ({
+				scenarioIdSelect: null,
+				scenarioPathSelect: null,
+				eventIdSelect: null,
+				eventChosenOptionsSelect: null,
+
+				init() {
+					// SCENARIO selects
+					this.scenarioIdSelect = new TomSelect("#inputScenarioId", {
+						options: Object.keys(this.$store.scenariosMap).toSorted().map(scenarioId => ({ value: scenarioId, text: scenarioId })),
+						onChange: newScenarioId => this.fillScenarioPathSelect(newScenarioId),
+						maxOptions: null
+					});
+					this.scenarioPathSelect = new TomSelect("#inputScenarioPath", {
+						plugins: ["remove_button"],
+						closeAfterSelect: true
+					});
+
+					// EVENT selects
+					this.eventIdSelect = new TomSelect("#inputEventId", {
+						options: Object.keys(this.$store.eventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
+						onChange: newEventId => this.fillEventChosenOptionsSelect(newEventId),
+						maxOptions: null
+					});
+					this.eventChosenOptionsSelect = new TomSelect("#inputEventChosenOptions", {
+						plugins: ["remove_button"],
+						closeAfterSelect: true
+					});
+				},
+
+				fillScenarioPathSelect(selectedScenarioId) {
+					log.entry(selectedScenarioId);
+					this.scenarioPathSelect.clear();
+					this.scenarioPathSelect.clearOptions();
+
+					const selectedScenario = this.$store.scenariosMap[selectedScenarioId];
+					if (selectedScenario) {
+						this.scenarioPathSelect.addOptions(Object.keys(selectedScenario.sections).map(key => ({ value: key, text: key })));
+						this.scenarioPathSelect.addItems(selectedScenario.path, false);
+					}
+					log.exit();
+				},
+
+				fillEventChosenOptionsSelect(selectedEventId) {
+					log.entry(selectedEventId);
+					this.eventChosenOptionsSelect.clear();
+					this.eventChosenOptionsSelect.clearOptions();
+
+					const selectedEvent = this.$store.eventsMap[selectedEventId];
+					if (selectedEvent) {
+						const options = Object.keys(selectedEvent.options).map(key => ({ value: key, text: key }));
+						this.eventChosenOptionsSelect.addOptions(options);
+					}
+					log.exit();
+				}
+			}));
+		});
+	</script>
+</body>
+</html>

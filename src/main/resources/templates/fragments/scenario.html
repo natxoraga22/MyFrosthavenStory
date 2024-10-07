@@ -20,7 +20,7 @@
 					</template>
 					<h1>
 						<!-- Id and name -->
-						<span class="titleSecondary" x-jsz>{{Number(scenario.id)}} ·</span>
+						<span class="titleSecondary" x-jsz>{{Number(scenario.id).toString()}} ·</span>
 						<span x-jsz>{{scenario.name}}</span>
 						<!-- Requirements -->
 						<template x-if="scenario.requirement">

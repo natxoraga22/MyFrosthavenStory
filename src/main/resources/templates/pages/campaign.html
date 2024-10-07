@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
+<head>
+	<meta charset="utf-8">
+	<title>[[#{campaignPage.title}]]</title>
+
+	<link rel="stylesheet" th:href="@{/css/tableOfContents.css}">
+	<link rel="stylesheet" th:href="@{/css/campaign.css}">
+	<link rel="stylesheet" th:href="@{/css/character.css}">
+	<link rel="stylesheet" th:href="@{/css/event.css}">
+	<link rel="stylesheet" th:href="@{/css/scenario.css}">
+	<link rel="stylesheet" th:href="@{/css/section.css}">
+	<link rel="stylesheet" th:href="@{/css/rewards.css}">
+	<link rel="stylesheet" th:href="@{/css/outpostPhase.css}">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#tableOfContents" data-bs-smooth-scroll="true">
+	<!-- CONTENT -->
+	<th:block layout:fragment="content">
+		<th:block th:replace="~{fragments/campaign :: campaign}"/>
+		<th:block th:replace="~{fragments/campaignForm :: campaignForm}"/>
+	</th:block>
+
+	<!-- JAVASCRIPT -->
+	<th:block layout:fragment="javascript">
+		<script th:replace="~{:: campaignPageJs}"></script>
+		<script th:replace="~{fragments/campaignForm :: campaignFormJs}"></script>
+	</th:block>
+
+
+	<!-- ---------------- -->
+	<!-- CAMPAIGN PAGE JS -->
+	<!-- ---------------- -->
+	<script th:fragment="campaignPageJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.store("scenariosMap", /*[[${scenariosMap}]]*/ {});
+			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
+		});
+	</script>
+</body>
+</html>

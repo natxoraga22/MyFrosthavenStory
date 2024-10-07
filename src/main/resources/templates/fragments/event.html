@@ -26,9 +26,7 @@
 				</div>
 
 				<!-- Card image -->
-				<div>
-					<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
-				</div>
+				<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
 
 				<!-- Text -->
 				<div class="text" x-jsz>
@@ -38,7 +36,7 @@
 				<!-- Options -->
 				<div class="options">
 					<template x-for="(chosenOptionId, index) in chosenOptionsIds">
-						<div x-data="{ option: event.options[chosenOptionId] }">
+						<div x-data="{ get option() { return event.options[chosenOptionId] } }">
 							<template x-if="option">
 								<th:block th:replace="~{:: option}"/>
 							</template>
@@ -48,7 +46,7 @@
 
 				<!-- Outpost attack -->
 				<template x-if="!skipAttack">
-					<div x-data="{ outpostAttack: event.outpostAttack }">
+					<div x-data="{ get outpostAttack() { return event.outpostAttack } }">
 						<hr>
 						<th:block th:replace="~{:: outpostAttack}"/>
 					</div>
@@ -86,7 +84,7 @@
 
 		<!-- Rewards -->
 		<template x-if="option.rewards">
-			<div class="rewards" x-data="{ rewards: option.rewards }">
+			<div class="rewards" x-data="{ get rewards() { return option.rewards } }">
 				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 			</div>
 		</template>
@@ -119,7 +117,7 @@
 
 		<!-- Rewards -->
 		<template x-if="outpostAttack.rewards">
-			<div class="rewards" x-data="{ rewards: outpostAttack.rewards }">
+			<div class="rewards" x-data="{ get rewards() { return outpostAttack.rewards } }">
 				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 			</div>
 		</template>
@@ -139,7 +137,7 @@
 				get backImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
 
 				get skipAttack() {
-					if (!this.event.outpostAttack || !this.chosenOptionsIds) return true;
+					if (!this.event.outpostAttack || this.chosenOptionsIds.length == 0) return true;
 					for (let chosenOptionId of this.chosenOptionsIds) {
 						const chosenOption = this.event.options[chosenOptionId];
 						if (chosenOption?.skipAttack) return true;

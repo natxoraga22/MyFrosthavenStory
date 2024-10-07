@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<!-- Content -->
+	<!-- CONTENT -->
 	<th:block layout:fragment="content">
 		<bs:row gx="{md:4, xl:5}" gy="4" x-data="sectionPageData">
 			<bs:col col="{xs:12, md:3}">
@@ -22,7 +22,7 @@
 		</bs:row>
 	</th:block>
 
-	<!-- Javascript -->
+	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: sectionPageJs}"></script>
 		<script th:replace="~{fragments/sectionForm :: sectionFormJs}"></script>

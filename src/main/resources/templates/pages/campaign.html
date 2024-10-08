@@ -14,16 +14,25 @@
 	<link rel="stylesheet" th:href="@{/css/outpostPhase.css}">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#tableOfContents" data-bs-smooth-scroll="true">
+<body data-bs-spy="scroll" data-bs-target="#tableOfContents" data-bs-smooth-scroll="true" x-data="campaignPageData">
 	<!-- CONTENT -->
 	<th:block layout:fragment="content">
-		<th:block th:replace="~{fragments/campaign :: campaign}"/>
-		<th:block th:replace="~{fragments/campaignForm :: campaignForm}"/>
+		<bs:row gx="5">
+			<bs:col col="3">
+				<th:block th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContents}"/>
+			</bs:col>
+			<bs:col col="9">
+				<th:block th:replace="~{fragments/campaign :: campaign}"/>
+				<th:block th:replace="~{fragments/campaignForm :: campaignForm}"/>
+			</bs:col>
+		</bs:row>
 	</th:block>
 
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: campaignPageJs}"></script>
+		<script th:replace="~{fragments/campaignTableOfContentsJs :: campaignTableOfContentsJs}"></script>
+		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
 		<script th:replace="~{fragments/campaignForm :: campaignFormJs}"></script>
 	</th:block>
 
@@ -35,6 +44,26 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.store("scenariosMap", /*[[${scenariosMap}]]*/ {});
 			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
+
+			Alpine.data("campaignPageData", () => ({
+				campaignItems: [],
+
+				init() {
+					const personalStory = JSON.parse(localStorage.getItem("personalStory"));
+					log.debug(personalStory);
+
+					for (const personalStoryItem of personalStory) {
+						if (personalStoryItem.scenario) {
+							const scenario = this.$store.scenariosMap[personalStoryItem.scenario];
+							this.campaignItems.push({ scenario: scenario });
+						}
+						else if (personalStoryItem.event) {
+							const event = this.$store.eventsMap[personalStoryItem.event];
+							this.campaignItems.push({ event: event });
+						}
+					}
+				}
+			}));
 		});
 	</script>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ----------------- -->
+	<!-- TABLE OF CONTENTS -->
+	<!-- ----------------- -->
+	<div th:fragment="campaignTableOfContents" id="tableOfContents" x-data="campaignTableOfContentsData">
+		<bs:list flush>
+			<!-- WELCOME -->
+			<bs:listItem action th:if="${welcome}" href="#welcome">
+				[[#{welcome.title}]]
+			</bs:listItem>
+		</bs:list>
+	</div>
+
+
+	<!-- -------------------- -->
+	<!-- TABLE OF CONTENTS JS -->
+	<!-- -------------------- -->
+	<script th:fragment="campaignTableOfContentsJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("campaignTableOfContentsData", () => ({
+
+			}));
+		});
+	</script>
+</body>
+</html>

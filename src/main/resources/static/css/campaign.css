@@ -102,3 +102,12 @@
 	height: var(--back-to-top-button-size);
 	--bs-btn-border-radius: var(--back-to-top-button-size);
 }
+
+
+/* ------------- */
+/* CAMPAIGN FORM */
+/* ------------- */
+
+#campaignForm {
+	margin-top: var(--story-objects-gap);
+}

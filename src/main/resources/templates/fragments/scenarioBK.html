@@ -7,14 +7,14 @@
 	<!-- -------- -->
 	<!-- SCENARIO -->
 	<!-- -------- -->
-	<div th:fragment="scenario" x-bind:id="'scenario_' + scenario.id">
+	<div th:fragment="scenario" x-bind:id="'scenario_' + scenario.id" x-data="scenarioData(scenarioId, scenarioPath)">
 		<template x-if="Object.keys(scenario).length > 0">
 			<div class="scenario">
 				<!-- Title -->
 				<div class="title">
 					<!-- Questline -->
 					<template x-if="scenario.questLine">
-						<div class="questLine" x-bind:class="$store.uncapitalize(scenario.questLine)" x-jsz>
+						<div class="questLine" x-bind:class="uncapitalizedQuestLine" x-jsz>
 							{{scenario.questLine}}
 						</div>
 					</template>
@@ -62,8 +62,8 @@
 
 				<!-- Sections -->
 				<div class="sections">
-					<template x-for="pathItem in scenario.path" x-bind:key="pathItem">
-						<div x-data="{ sectionId: null, get section() { return scenario.sections[pathItem] } }">
+					<template x-for="scenarioPathItem in scenarioPath" x-bind:key="scenarioPathItem">
+						<div x-data="{ sectionId: null, get section() { return scenario.sections[scenarioPathItem] } }">
 							<template x-if="section">
 								<th:block th:replace="~{fragments/section :: section}"/>
 							</template>
@@ -89,7 +89,7 @@
 		<!-- Transport -->
 		<template x-if="requirement.transport">
 			<div class="transport">
-				<img x-bind:src="$store.imgUrl + '/icons/' + requirement.transport + '.png'">
+				<img x-bind:src="getTransportIconUrl(requirement.transport)">
 			</div>
 		</template>
 		<!-- Status -->
@@ -99,5 +99,49 @@
 			</div>
 		</template>
 	</div>
+
+
+	<!-- ----------- -->
+	<!-- SCENARIO JS -->
+	<!-- ----------- -->
+	<script th:fragment="scenarioJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("scenarioData", (scenarioId, scenarioPath) => ({
+				scenarioPath: scenarioPath ?? [],
+				scenario: {},
+
+				init() {
+					this.setScenario(scenarioId, false);
+					// Event listeners
+					window.addEventListener("changed-scenario-id", event => this.setScenario(event.detail));
+					window.addEventListener("changed-scenario-path", event => this.setScenarioPath(event.detail));
+				},
+
+				get uncapitalizedQuestLine() {
+					const questLine = this.scenario.questLine;
+					return questLine?.charAt(0).toLowerCase() + questLine?.slice(1);
+				},
+
+				getTransportIconUrl(transport) { return this.$store.imgUrl + "/icons/" + transport + ".png" },
+
+				// "changed-scenario-id" event handler
+				setScenario(scenarioId, clearScenarioPath = true) {
+					log.entry(scenarioId, clearScenarioPath);
+					if (scenarioId) {
+						this.scenario = this.$store.scenariosMap[scenarioId] ?? {};
+						if (clearScenarioPath || this.scenarioPath.length == 0) this.scenarioPath = [...this.scenario.path];
+					}
+					log.exit();
+				},
+
+				// "changed-scenario-path" event handler
+				setScenarioPath(newScenarioPath) {
+					log.entry(newScenarioPath);
+					this.scenarioPath = [...newScenarioPath];
+					log.exit();
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

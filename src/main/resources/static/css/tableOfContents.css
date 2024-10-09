@@ -12,6 +12,7 @@
 #tableOfContents .list-group-item {
 	display: flex;
 	align-items: baseline;
+	line-height: 30px;
 
 	/* Active colors */
 	--bs-list-group-active-color: var(--frosthaven-color);
@@ -22,11 +23,12 @@
 #tableOfContents .scenarioNumber {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	margin-right: 0.4rem;
-	border-radius: 25px;
+	border-radius: 30px;
 }
 
 #tableOfContents .iconWrapper {
@@ -37,4 +39,13 @@
 
 #tableOfContents .child {
 	padding-left: 3rem;
+}
+
+
+/* --------- */
+/* BOOTSTRAP */
+/* --------- */
+
+#tableOfContents .list-group-flush .list-group-item {
+	border-width: 0 0 var(--bs-list-group-border-width);
 }

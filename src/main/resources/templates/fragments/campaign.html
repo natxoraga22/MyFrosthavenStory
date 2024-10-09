@@ -9,11 +9,29 @@
 	<!-- -------- -->
 	<div th:fragment="campaign" id="campaign">
 		<div id="personalStory">
-			<!-- Welcome -->
+			<!-- WELCOME -->
 			<div th:if="${welcome}" id="welcome">
 				<h1 class="title">[[#{welcome.title}]]</h1>
 				<div class="text">[(${welcome})]</div>
 			</div>
+
+			<!-- PARTY -->
+			<!-- TO-DO -->
+
+			<template x-for="campaignItem in campaignItems">
+				<div>
+					<!-- SCENARIO -->
+					<template x-if="campaignItem.scenario" x-data="{ get scenario() { return campaignItem.scenario } }">
+						<th:block th:replace="~{fragments/scenario :: scenario}"/>
+					</template>
+
+					<!-- EVENT -->
+					<!-- TO-DO -->
+
+					<!-- OUTPOST PHASE -->
+					<!-- TO-DO -->
+				</div>
+			</template>
 		</div>
 	</div>
 

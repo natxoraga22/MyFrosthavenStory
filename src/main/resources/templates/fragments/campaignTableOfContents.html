@@ -10,9 +10,36 @@
 	<div th:fragment="campaignTableOfContents" id="tableOfContents" x-data="campaignTableOfContentsData">
 		<bs:list flush>
 			<!-- WELCOME -->
-			<bs:listItem action th:if="${welcome}" href="#welcome">
+			<bs:listItem th:if="${welcome}" tag="a" action href="#welcome">
 				[[#{welcome.title}]]
 			</bs:listItem>
+
+			<!-- PARTY -->
+			<!-- TO-DO -->
+
+			<template x-for="campaignItem in campaignItems">
+				<div style="display:contents;">
+					<!-- SCENARIO -->
+					<template x-if="campaignItem.scenario" x-data="{ get scenario() { return campaignItem.scenario } }">
+						<bs:listItem tag="a" action x-bind:href="'#scenario_' + scenario.id">
+							<div class="scenarioNumber questLine" x-bind:class="uncapitalize(scenario.questLine)" x-jsz>
+								{{Number(scenario.id).toString()}}
+							</div>
+							<strong x-jsz>{{scenario.name}}</strong>
+						</bs:listItem>
+					</template>
+
+					<!-- EVENT -->
+					<template x-if="campaignItem.event" x-data="{ get event() { return campaignItem.event } }">
+						<bs:listItem tag="a" action x-bind:href="'#event_' + event.id" x-jsz>
+							{{event.id}} · {{$store.typesAndSeasonsStrings[event.typeAndSeason]}} [[#{event.title}]]
+						</bs:listItem>
+					</template>
+
+					<!-- OUTPOST PHASE -->
+					<!-- TO-DO -->
+				</div>
+			</template>
 		</bs:list>
 	</div>
 
@@ -23,7 +50,9 @@
 	<script th:fragment="campaignTableOfContentsJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("campaignTableOfContentsData", () => ({
-
+				uncapitalize(string) {
+					return string?.charAt(0).toLowerCase() + string?.slice(1);
+				}
 			}));
 		});
 	</script>

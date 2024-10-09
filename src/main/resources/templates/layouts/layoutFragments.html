@@ -79,6 +79,8 @@
 			Alpine.store("imgUrl", /*[[${imgUrl}]]*/ "");
 			Alpine.store("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
 			Alpine.store("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});
+
+			Alpine.store("uncapitalize", string => string?.charAt(0).toLowerCase() + string?.slice(1));
 		});
 	</script>
 </body>

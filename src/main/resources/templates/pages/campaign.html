@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>[[#{campaignPage.title}]]</title>
 
+	<!-- STYLES -->
 	<link rel="stylesheet" th:href="@{/css/tableOfContents.css}">
 	<link rel="stylesheet" th:href="@{/css/campaign.css}">
 	<link rel="stylesheet" th:href="@{/css/character.css}">
@@ -23,7 +24,6 @@
 			</bs:col>
 			<bs:col col="9">
 				<th:block th:replace="~{fragments/campaign :: campaign}"/>
-				<th:block th:replace="~{fragments/campaignForm :: campaignForm}"/>
 			</bs:col>
 		</bs:row>
 	</th:block>
@@ -31,7 +31,7 @@
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: campaignPageJs}"></script>
-		<script th:replace="~{fragments/campaignTableOfContentsJs :: campaignTableOfContentsJs}"></script>
+		<script th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
 		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
 		<script th:replace="~{fragments/campaignForm :: campaignFormJs}"></script>
 	</th:block>
@@ -50,15 +50,17 @@
 
 				init() {
 					const personalStory = JSON.parse(localStorage.getItem("personalStory"));
-					log.debug(personalStory);
-
-					for (const personalStoryItem of personalStory) {
+					for (const personalStoryItem of personalStory.story) {
+						// SCENARIO
 						if (personalStoryItem.scenario) {
-							const scenario = this.$store.scenariosMap[personalStoryItem.scenario];
+							const psScenario = personalStoryItem.scenario;
+							const scenario = this.$store.scenariosMap[psScenario.id];
+							if (psScenario.path?.length > 0) scenario.path = psScenario.path;
 							this.campaignItems.push({ scenario: scenario });
 						}
+						// EVENT
 						else if (personalStoryItem.event) {
-							const event = this.$store.eventsMap[personalStoryItem.event];
+							const event = this.$store.eventsMap[personalStoryItem.event.id];
 							this.campaignItems.push({ event: event });
 						}
 					}

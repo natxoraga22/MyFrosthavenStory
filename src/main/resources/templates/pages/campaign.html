@@ -31,9 +31,9 @@
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: campaignPageJs}"></script>
-		<script th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
 		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
-		<script th:replace="~{fragments/campaignForm :: campaignFormJs}"></script>
+		<script th:replace="~{fragments/event :: eventJs}"></script>
+		<script th:replace="~{fragments/section :: sectionJs}"></script>
 	</th:block>
 
 
@@ -60,7 +60,9 @@
 						}
 						// EVENT
 						else if (personalStoryItem.event) {
-							const event = this.$store.eventsMap[personalStoryItem.event.id];
+							const psEvent = personalStoryItem.event;
+							const event = this.$store.eventsMap[psEvent.id];
+							if (psEvent.chosenOptions?.length > 0) event.chosenOptions = psEvent.chosenOptions;
 							this.campaignItems.push({ event: event });
 						}
 					}

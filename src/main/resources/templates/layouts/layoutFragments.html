@@ -29,15 +29,18 @@
 	<!-- ------ -->
 	<!-- NAVBAR -->
 	<!-- ------ -->
-	<bs:navbar th:fragment="navbar" class="navbar-expand bg-body-tertiary">
+	<bs:navbar th:fragment="navbar" expand="sm" bs:bgColor="body-secondary" bs:stickyTop>
 		<bs:container fluid="xl">
 			<!-- Frosthaven logo -->
 			<a bs:navbarBrand th:href="@{/}">
 				<img th:src="@{/img/frosthaven-logo.png}" alt="Frosthaven" height="30">
 			</a>
 
+			<!-- Toggler -->
+			<bs:navbarToggler bs:targetCollapse="#navbarNav"></bs:navbarToggler>
+
 			<!-- Links -->
-			<bs:navbarCollapse>
+			<bs:navbarCollapse id="navbarNav">
 				<bs:navbarNav>
 					<bs:navLink th:href="@{/}" th:active="${webPage?.name() == 'CAMPAIGN'}">[[#{navbar.campaign}]]</bs:navLink>
 					<bs:navLink th:href="@{/scenario}" th:active="${webPage?.name() == 'SCENARIO'}">[[#{navbar.scenario}]]</bs:navLink>

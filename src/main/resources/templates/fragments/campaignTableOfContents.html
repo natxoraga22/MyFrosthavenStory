@@ -7,7 +7,7 @@
 	<!-- ----------------- -->
 	<!-- TABLE OF CONTENTS -->
 	<!-- ----------------- -->
-	<div th:fragment="campaignTableOfContents" id="tableOfContents" x-data="campaignTableOfContentsData">
+	<div th:fragment="campaignTableOfContents" id="tableOfContents">
 		<bs:list flush>
 			<!-- WELCOME -->
 			<bs:listItem th:if="${welcome}" tag="a" action href="#welcome">
@@ -22,7 +22,7 @@
 					<!-- SCENARIO -->
 					<template x-if="campaignItem.scenario" x-data="{ get scenario() { return campaignItem.scenario } }">
 						<bs:listItem tag="a" action x-bind:href="'#scenario_' + scenario.id">
-							<div class="scenarioNumber questLine" x-bind:class="uncapitalize(scenario.questLine)" x-jsz>
+							<div class="scenarioNumber questLine" x-bind:class="$store.uncapitalize(scenario.questLine)" x-jsz>
 								{{Number(scenario.id).toString()}}
 							</div>
 							<strong x-jsz>{{scenario.name}}</strong>
@@ -42,19 +42,5 @@
 			</template>
 		</bs:list>
 	</div>
-
-
-	<!-- -------------------- -->
-	<!-- TABLE OF CONTENTS JS -->
-	<!-- -------------------- -->
-	<script th:fragment="campaignTableOfContentsJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			Alpine.data("campaignTableOfContentsData", () => ({
-				uncapitalize(string) {
-					return string?.charAt(0).toLowerCase() + string?.slice(1);
-				}
-			}));
-		});
-	</script>
 </body>
 </html>

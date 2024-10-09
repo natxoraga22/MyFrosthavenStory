@@ -7,7 +7,7 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event" x-bind:id="'event_' + event.id" x-data="eventData(event)">
+	<div th:fragment="event" x-bind:id="'event_' + event.id" x-data="eventData(eventId, chosenOptionsIds)">
 		<template x-if="Object.keys(event).length > 0">
 			<div class="event">
 				<!-- Title -->
@@ -35,7 +35,7 @@
 
 				<!-- Options -->
 				<div class="options">
-					<template x-for="(chosenOptionId, index) in event.chosenOptions">
+					<template x-for="(chosenOptionId, index) in chosenOptionsIds">
 						<div x-data="{ get option() { return event.options[chosenOptionId] } }">
 							<template x-if="option">
 								<th:block th:replace="~{:: option}"/>
@@ -129,16 +129,41 @@
 	<!-- -------- -->
 	<script th:fragment="eventJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("eventData", (event) => ({
-				get frontImgSrc() { return this.$store.imgUrl + "/events/" + event.typeAndSeason + "/" + event.id + ".png" },
-				get backImgSrc() { return this.$store.imgUrl + "/events/" + event.typeAndSeason + "/" + event.id + "_back.png" },
+			Alpine.data("eventData", (eventId, chosenOptionsIds) => ({
+				chosenOptionsIds: chosenOptionsIds ?? [],
+				event: {},
+
+				get frontImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
+				get backImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
 
 				get skipAttack() {
-					if (!event.outpostAttack || event.chosenOptions.length == 0) return true;
-					for (let chosenOptionId of event.chosenOptions) {
-						const chosenOption = event.options[chosenOptionId];
+					if (!this.event.outpostAttack || this.chosenOptionsIds.length == 0) return true;
+					for (let chosenOptionId of this.chosenOptionsIds) {
+						const chosenOption = this.event.options[chosenOptionId];
 						if (chosenOption?.skipAttack) return true;
 					}
+				},
+
+				init() {
+					this.setEvent(eventId, false);
+					// Event listeners
+					window.addEventListener("changed-event-id", event => this.setEvent(event.detail));
+					window.addEventListener("changed-chosen-options", event => this.setChosenOptionsIds(event.detail));
+				},
+
+				// "changed-event-id" event handler
+				setEvent(eventId, clearChosenOptionsIds = true) {
+					log.entry(eventId, clearChosenOptionsIds);
+					if (eventId) this.event = this.$store.eventsMap[eventId] ?? {};
+					if (clearChosenOptionsIds) this.chosenOptionsIds = [];
+					log.exit();
+				},
+
+				// "changed-chosen-options" event handler
+				setChosenOptionsIds(newChosenOptionsIds) {
+					log.entry(newChosenOptionsIds);
+					this.chosenOptionsIds = [...newChosenOptionsIds];
+					log.exit();
 				}
 			}));
 		});

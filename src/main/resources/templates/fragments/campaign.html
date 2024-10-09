@@ -26,7 +26,9 @@
 					</template>
 
 					<!-- EVENT -->
-					<!-- TO-DO -->
+					<template x-if="campaignItem.event" x-data="{ get event() { return campaignItem.event } }">
+						<th:block th:replace="~{fragments/event :: event}"/>
+					</template>
 
 					<!-- OUTPOST PHASE -->
 					<!-- TO-DO -->

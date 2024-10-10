@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import lombok.RequiredArgsConstructor;
 import txraga.mystory.frosthaven.model.Event;
+import txraga.mystory.frosthaven.model.Scenario;
 import txraga.mystory.frosthaven.utils.EnumUtils;
 
 
@@ -32,6 +33,7 @@ public class GlobalController {
 	public void addEnumsToModel(Model model, Locale locale) {
 		model.addAttribute("typesAndSeasonsList", Event.TypeAndSeason.values());
 		// Maps with messageSource values for each enum value
+		model.addAttribute("questLinesStrings", EnumUtils.toMap(Scenario.QuestLine.class, messageSource, "scenario.questLine", locale));
 		model.addAttribute("typesAndSeasonsStrings", EnumUtils.toMap(Event.TypeAndSeason.class, messageSource, "event.typeAndSeason", locale));
 	}
 

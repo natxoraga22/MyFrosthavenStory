@@ -7,16 +7,21 @@
 	<!-- -------- -->
 	<!-- CAMPAIGN -->
 	<!-- -------- -->
-	<div th:fragment="campaign" id="campaign">
+	<div th:fragment="campaign" id="campaign" x-data="campaignData">
+		<!-- Edit personal story button -->
+		<bs:button tag="a" id="editPersonalStoryButton" color="primary" href="/edit">
+			<i class="fa-solid fa-pen-to-square"></i>
+		</bs:button>
+
 		<div id="personalStory">
 			<!-- WELCOME -->
-			<div th:if="${welcome}" id="welcome">
+			<div th:if="${welcome}" id="welcome" class="anchor">
 				<h1 class="title">[[#{welcome.title}]]</h1>
 				<div class="text">[(${welcome})]</div>
 			</div>
 
 			<!-- PARTY -->
-			<div id="party">
+			<div id="party" class="anchor">
 				<h1 class="title">[[#{party.title}]]</h1>
 				<template x-for="character in partyMembers">
 					<th:block th:replace="~{fragments/character :: character}"></th:block>
@@ -36,10 +41,17 @@
 					</template>
 
 					<!-- OUTPOST PHASE -->
-					<!-- TO-DO -->
+					<template x-if="campaignItem.outpostPhase" x-data="{ get outpostPhase() { return campaignItem.outpostPhase } }">
+						<th:block th:replace="~{fragments/outpostPhase :: outpostPhase}"/>
+					</template>
 				</div>
 			</template>
 		</div>
+
+		<!-- Back to top button -->
+		<bs:button id="backToTopButton" color="secondary" x-bind:class="{ 'd-none': !scrolledDown }" @click="backToTop()">
+			<i class="fa-solid fa-arrow-up fa-lg"></i>
+		</bs:button>
 	</div>
 
 
@@ -47,24 +59,23 @@
 	<!-- CAMPAIGN JS -->
 	<!-- ----------- -->
 	<script th:fragment="campaignJs" th:inline="javascript">
-		/*
-		// Only show back to top button if the user has scrolled down
-		window.onscroll = function() {
-			const backToTopButton = document.getElementById("backToTopButton");
-			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-				backToTopButton.classList.remove("d-none");
-			}
-			else backToTopButton.classList.add("d-none");
-		};
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("campaignData", () => ({
+				scrolledDown: false,
 
-		function backToTop() {
-			console.log("backToTop()");
-			// Safari
-			document.body.scrollTop = 0;
-			// Chrome, Firefox, IE and Opera
-  			document.documentElement.scrollTop = 0; 
-		}
-		*/
+				init() {
+					window.onscroll = () => {
+						this.scrolledDown = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100;
+					};
+				},
+
+				backToTop() {
+					log.entry();
+					document.body.scrollTop = 0;               // Safari
+					document.documentElement.scrollTop = 0;    // Chrome, Firefox, IE and Opera
+				}
+			}));
+		});
 	</script>
 </body>
 </html>

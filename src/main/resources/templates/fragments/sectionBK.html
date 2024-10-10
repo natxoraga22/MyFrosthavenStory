@@ -7,7 +7,7 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId">
+	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" x-data="sectionData(sectionId, section)">
 		<template x-if="Object.keys(section).length > 0">
 			<div class="section">
 				<!-- Trigger -->
@@ -100,15 +100,52 @@
 				</template>
 
 				<!-- Map -->
-				<!--
 				<template x-if="mapExists">
 					<div class="map">
 						<img x-bind:src="mapUrl" onload="this.width*=0.66;">
 					</div>
 				</template>
-				-->
 			</div>
 		</template>
 	</div>
+
+
+	<!-- ---------- -->
+	<!-- SECTION JS -->
+	<!-- ---------- -->
+	<script th:fragment="sectionJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("sectionData", (sectionId, section) => ({
+				section: section ?? {},
+				mapExists: false,
+
+				init() {
+					this.setSection(sectionId);
+					this.checkIfMapExists();
+					// Event listeners
+					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
+				},
+
+				get mapUrl() { return this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png" },
+
+				// "changed-section-id" event handler
+				setSection(sectionId) {
+					log.entry(sectionId);
+					if (sectionId) {
+						this.section = this.$store.sectionsMap[sectionId] ?? {};
+						this.checkIfMapExists();
+					}
+					log.exit();
+				},
+
+				checkIfMapExists() {
+					const mapImage = new Image();
+					mapImage.onload = () => this.mapExists = true;
+					mapImage.onerror = () => this.mapExists = false;
+					mapImage.src = this.mapUrl;
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

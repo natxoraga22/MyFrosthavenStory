@@ -73,19 +73,6 @@ public class Scenario extends StoryObject implements Comparable<Scenario> {
 		public boolean isMainQuest() {
 			return List.of(Introduction, AlgoxSnowspeaker, AlgoxIcespeaker, Algox, Unfettered, Lurker).contains(this);
 		}
-
-		@Override
-		public String toString() {
-			switch(this) {
-				case AlgoxSnowspeaker: return "Algox Snowspeaker";
-				case AlgoxIcespeaker: return "Algox Icespeaker";
-				case PuzzleBook: return "Puzzle Book";
-				case PersonalQuest: return "Personal Quest";
-				case JobPosting: return "Job Posting";
-				case RandomScenario: return "Random Scenario";
-				default: return this.name();
-			}
-		}
 	}
 
 	

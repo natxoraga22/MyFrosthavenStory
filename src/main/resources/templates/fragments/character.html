@@ -7,7 +7,7 @@
 	<!-- --------- -->
 	<!-- CHARACTER -->
 	<!-- --------- -->
-	<div th:fragment="character" x-bind:id="'character_' + character.id" class="character">
+	<div th:fragment="character" x-bind:id="'character_' + character.id" class="character anchor">
 		<!-- Title -->
 		<h2 class="title titleSecondary">
 			<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">

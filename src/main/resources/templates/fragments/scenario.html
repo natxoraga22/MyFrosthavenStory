@@ -7,78 +7,67 @@
 	<!-- -------- -->
 	<!-- SCENARIO -->
 	<!-- -------- -->
-	<div th:fragment="scenario" x-bind:id="'scenario_' + scenario.id">
-		<template x-if="Object.keys(scenario).length > 0">
-			<div class="scenario">
-				<!-- Title -->
-				<div class="title">
-					<!-- Questline -->
-					<template x-if="scenario.questLine">
-						<div class="questLine" x-bind:class="$store.uncapitalize(scenario.questLine)" x-jsz>
-							{{scenario.questLine}}
-						</div>
-					</template>
-					<h1>
-						<!-- Id and name -->
-						<span class="titleSecondary" x-jsz>{{Number(scenario.id).toString()}} ·</span>
-						<span x-jsz>{{scenario.name}}</span>
-						<!-- Requirements -->
-						<template x-if="scenario.requirement">
-							<div x-data="{ get requirement() { return scenario.requirement } }">
-								<th:block th:replace="~{:: requirement}"/>
-							</div>
-						</template>
-					</h1>
-					<!-- Unlocked by -->
-					<template x-if="scenario.unlockedBy">
-						<div x-data="{ get unlockedBy() { return scenario.unlockedBy } }">
-							<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
-						</div>
-					</template>
-					<!-- Location -->
-					<template x-if="scenario.location">
-						<div class="subtitle" x-jsz>
-							<i class="fa-solid fa-map-location me-1"></i>
-							{{scenario.location}}
-						</div>
-					</template>
+	<div th:fragment="scenario" x-bind:id="'scenario_' + scenario.id" class="scenario anchor">
+		<!-- Title -->
+		<div class="title">
+			<!-- Questline -->
+			<template x-if="scenario.questLine">
+				<div class="questLine" x-bind:class="$store.uncapitalize(scenario.questLine)" x-jsz>
+					{{$store.questLinesStrings[scenario.questLine]}}
 				</div>
-
-				<!-- Scenario goals -->
-				<template x-if="scenario.goals">
-					<bs:card class="fhCard goals">
-						<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>{{scenario.goals}}</bs:cardBody>
-					</bs:card>
+			</template>
+			<h1>
+				<!-- Id and name -->
+				<span class="titleSecondary" x-jsz>{{Number(scenario.id).toString()}} ·</span>
+				<span x-jsz>{{scenario.name}}</span>
+				<!-- Requirements -->
+				<template x-if="scenario.requirement">
+					<div x-data="{ get requirement() { return scenario.requirement } }">
+						<th:block th:replace="~{:: requirement}"/>
+					</div>
 				</template>
-				
-				<!-- Scenario effects -->
-				<template x-if="scenario.effects">
-					<bs:card class="fhCard effects">
-						<bs:cardHeader>[[#{scenario.effects}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>{{scenario.effects}}</bs:cardBody>
-					</bs:card>
-				</template>
-
-				<!-- Sections -->
-				<div class="sections">
-					<template x-for="pathItem in scenario.path" x-bind:key="pathItem">
-						<div x-data="{ sectionId: null, get section() { return scenario.sections[pathItem] } }">
-							<template x-if="section">
-								<th:block th:replace="~{fragments/section :: section}"/>
-							</template>
-						</div>
-					</template>
+			</h1>
+			<!-- Unlocked by -->
+			<template x-if="scenario.unlockedBy">
+				<div x-data="{ get unlockedBy() { return scenario.unlockedBy } }">
+					<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
 				</div>
+			</template>
+			<!-- Location -->
+			<template x-if="scenario.location">
+				<div class="subtitle" x-jsz>
+					<i class="fa-solid fa-fw fa-map-location me-1"></i>
+					{{scenario.location}}
+				</div>
+			</template>
+		</div>
 
-				<!-- Random scenario section -->
-				<!--
-				<th:block th:if="*{randomScenarioSection}">
-					<th:block th:replace="~{fragments/section :: section(*{randomScenarioSection})}"></th:block>
-				</th:block>
-				-->
-			</div>
+		<!-- Scenario goals -->
+		<template x-if="scenario.goals">
+			<bs:card class="fhCard goals">
+				<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{scenario.goals}}</bs:cardBody>
+			</bs:card>
 		</template>
+		
+		<!-- Scenario effects -->
+		<template x-if="scenario.effects">
+			<bs:card class="fhCard effects">
+				<bs:cardHeader>[[#{scenario.effects}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{scenario.effects}}</bs:cardBody>
+			</bs:card>
+		</template>
+
+		<!-- Sections -->
+		<div class="sections">
+			<template x-for="pathItem in scenario.path" x-bind:key="pathItem">
+				<div x-data="{ get section() { return scenario.sections[pathItem] } }">
+					<template x-if="section">
+						<th:block th:replace="~{fragments/section :: section}"/>
+					</template>
+				</div>
+			</template>
+		</div>
 	</div>
 
 
@@ -89,7 +78,7 @@
 		<!-- Transport -->
 		<template x-if="requirement.transport">
 			<div class="transport">
-				<img x-bind:src="$store.imgUrl + '/icons/' + requirement.transport + '.png'">
+				<img x-bind:src="$store.iconsUrl + '/' + requirement.transport + '.png'">
 			</div>
 		</template>
 		<!-- Status -->

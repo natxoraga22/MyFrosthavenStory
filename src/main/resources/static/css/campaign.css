@@ -79,9 +79,9 @@
 /* ------------------- */
 
 #editPersonalStoryButton {
-	position: absolute;
-	right: 0;
-	margin-right: calc(var(--bs-gutter-x)/2);
+	position: sticky;
+	top: calc(56px + var(--frosthaven-padding-y));
+	float: right;
 }
 
 #editPersonalStoryModal textarea {
@@ -89,9 +89,13 @@
 }
 
 
-/* ----------- */
-/* BACK TO TOP */
-/* ----------- */
+/* ------ */
+/* SCROLL */
+/* ------ */
+
+.anchor {
+	scroll-margin-top: calc(56px + var(--frosthaven-padding-y));
+}
 
 #backToTopButton {
 	position: sticky;

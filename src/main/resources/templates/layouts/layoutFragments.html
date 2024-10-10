@@ -84,6 +84,8 @@
 			Alpine.store("imgUrl", imgUrl);
 			Alpine.store("iconsUrl", imgUrl + "/icons");
 			Alpine.store("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
+
+			Alpine.store("questLinesStrings", /*[[${questLinesStrings}]]*/ {});
 			Alpine.store("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});
 
 			Alpine.store("uncapitalize", string => string?.charAt(0).toLowerCase() + string?.slice(1));

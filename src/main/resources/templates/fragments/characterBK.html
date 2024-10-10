@@ -7,34 +7,30 @@
 	<!-- --------- -->
 	<!-- CHARACTER -->
 	<!-- --------- -->
-	<div th:fragment="character" x-bind:id="'character_' + character.id" class="character">
+	<div th:fragment="character(character,initialParty)" th:object="${character}" th:id="|character_*{id}|" class="character">
 		<!-- Title -->
 		<h2 class="title titleSecondary">
-			<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">
-			<span x-jsz>{{character.fullName}}</span>
-
-			<!-- TODO -->
-			<!-- Joins the party message -->
+			<img class="icon" th:classappend="*{id}" th:src="@{__${imgUrl}__/icons/{id}.png(id=*{id})}">
+			[[*{fullName}]]
+			<th:block th:if="${!initialParty}"> [[#{character.joining}]]</th:block>
 		</h2>
 
 		<!-- Mat -->
-		<div class="mat flippable" x-data="{ flipped: false }" x-bind:class="{ 'flipped' : flipped }" @click="flipped = !flipped">
+		<div class="mat flippable" onclick="flip(event)">
 			<div class="flippableInner">
 				<div class="front">
-					<img x-bind:src="$store.imgUrl + '/characters/' + character.id + '.png'">
+					<img th:src="@{__${imgUrl}__/characters/{id}.png(id=*{id})}">
 				</div>
 				<div class="back">
-					<img x-bind:src="$store.imgUrl + '/characters/' + character.id + '_back.png'">
+					<img th:src="@{__${imgUrl}__/characters/{id}_back.png(id=*{id})}">
 				</div>
 			</div>
 		</div>
 
 		<!-- Background -->
-		<template x-if="character.background">
-			<div class="background" x-jsz>
-				{{character.background}}
-			</div>
-		</template>
+		<div th:if="*{background}" class="background">
+			[(*{background})]
+		</div>
 	</div>
 
 

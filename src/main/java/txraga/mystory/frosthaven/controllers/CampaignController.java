@@ -5,17 +5,12 @@ import java.io.IOException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.global.Campaign;
 import txraga.mystory.frosthaven.global.Frosthaven;
-import txraga.mystory.frosthaven.global.FrosthavenStory;
-import txraga.mystory.frosthaven.model.personal.PersonalStory;
 
 
 @XSlf4j
@@ -25,7 +20,6 @@ import txraga.mystory.frosthaven.model.personal.PersonalStory;
 public class CampaignController {
 	
 	private final Frosthaven frosthaven;
-	private final FrosthavenStory fhStory;
 
 
 	@GetMapping
@@ -34,6 +28,7 @@ public class CampaignController {
 		WebPage webPage = WebPage.CAMPAIGN;
 		model.addAttribute("webPage", webPage);
 		model.addAttribute("welcome", frosthaven.getWelcome());
+		model.addAttribute("charactersMap", frosthaven.getAllCharactersAsMap());
 		model.addAttribute("scenariosMap", frosthaven.getAllScenariosAsMap());
 		model.addAttribute("eventsMap", frosthaven.getAllEventsAsMap());
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
@@ -43,7 +38,7 @@ public class CampaignController {
 
 
 
-
+/*
 	@PostMapping("/personalStory")
 	public ModelAndView personalStory(Model model, @RequestBody(required = false) PersonalStory personalStory) throws IOException {
 		log.entry(personalStory);
@@ -59,6 +54,6 @@ public class CampaignController {
 		model.addAttribute("party", campaign.getOriginalParty().values());
 		model.addAttribute("story", campaign.getStory());
 		return log.exit(new ModelAndView("fragments/campaign :: campaign"));
-	}
+	}*/
 
 }

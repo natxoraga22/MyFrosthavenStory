@@ -1,6 +1,5 @@
 package txraga.mystory.frosthaven.global;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,12 +8,8 @@ import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
-import txraga.mystory.frosthaven.model.Building;
 import txraga.mystory.frosthaven.model.FhCharacter;
-import txraga.mystory.frosthaven.model.OutpostPhase;
 import txraga.mystory.frosthaven.model.PersonalQuest;
-import txraga.mystory.frosthaven.model.Scenario;
-import txraga.mystory.frosthaven.model.Section;
 
 
 @XSlf4j
@@ -94,6 +89,7 @@ public class FrosthavenStory {
 	/* SCENARIO */
 	/* -------- */
 
+	/*
 	public Scenario getScenario(String scenarioId, List<String> path, String randomScenarioSectionId) {
 		log.entry(scenarioId, path, randomScenarioSectionId);
 		Scenario scenario = frosthaven.getScenario(scenarioId);
@@ -116,12 +112,14 @@ public class FrosthavenStory {
 		                            storyItemScenario.getPath(),
 		                            randomScenarioSection != null ? randomScenarioSection.getId() : null));
 	}
+									*/
 
 
 	/* ------------- */
 	/* OUTPOST PHASE */
 	/* ------------- */
 
+	/*
 	public OutpostPhase getOutpostPhase(OutpostPhase outpostPhase, int id, Map<String,FhCharacter> party) {
 		log.entry(outpostPhase);
 		// ID
@@ -225,5 +223,6 @@ public class FrosthavenStory {
 		}
 		return log.exit(outpostPhase);
 	}
+	*/
 
 }

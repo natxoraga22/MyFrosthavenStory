@@ -35,7 +35,7 @@
 
 				<!-- Options -->
 				<div class="options">
-					<template x-for="(chosenOptionId, index) in event.chosenOptions">
+					<template x-for="(chosenOptionId, index) in event.chosenOptionsIds">
 						<div x-data="{ get option() { return event.options[chosenOptionId] } }">
 							<template x-if="option">
 								<th:block th:replace="~{:: option}"/>
@@ -134,8 +134,8 @@
 				get backImgSrc() { return this.$store.imgUrl + "/events/" + event.typeAndSeason + "/" + event.id + "_back.png" },
 
 				get skipAttack() {
-					if (!event.outpostAttack || event.chosenOptions.length == 0) return true;
-					for (let chosenOptionId of event.chosenOptions) {
+					if (!event.outpostAttack || event.chosenOptionsIds.length == 0) return true;
+					for (let chosenOptionId of event.chosenOptionsIds) {
 						const chosenOption = event.options[chosenOptionId];
 						if (chosenOption?.skipAttack) return true;
 					}

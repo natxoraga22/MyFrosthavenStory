@@ -15,7 +15,19 @@
 			</bs:listItem>
 
 			<!-- PARTY -->
-			<!-- TO-DO -->
+			<template x-if="partyMembers.length > 0">
+				<div style="display:contents;">
+					<bs:listItem tag="a" action href="#party">[[#{party.title}]]</bs:listItem>
+					<template x-for="character in partyMembers">
+						<bs:listItem tag="a" action class="child" x-bind:href="'#character_' + character.id">
+							<div class="iconWrapper">
+								<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">
+							</div>
+							<span x-jsz>{{character.fullName}}</span>
+						</bs:listItem>
+					</template>
+				</div>
+			</template>
 
 			<template x-for="campaignItem in campaignItems">
 				<div style="display:contents;">

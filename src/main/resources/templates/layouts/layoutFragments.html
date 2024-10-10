@@ -78,8 +78,11 @@
 	<!-- ------------ -->
 	<script th:fragment="alpineStoreJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
+			const imgUrl = /*[[${imgUrl}]]*/ "";
+
 			Alpine.store("webPage", /*[[${webPage}]]*/ "");
-			Alpine.store("imgUrl", /*[[${imgUrl}]]*/ "");
+			Alpine.store("imgUrl", imgUrl);
+			Alpine.store("iconsUrl", imgUrl + "/icons");
 			Alpine.store("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
 			Alpine.store("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});
 

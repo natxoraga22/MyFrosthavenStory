@@ -55,6 +55,11 @@ public class Frosthaven {
 	/* CHARACTERS & BUILDINGS */
 	/* ---------------------- */
 
+	public Map<String,FhCharacter> getAllCharactersAsMap() {
+		log.entry();
+		return log.exit(characters);
+	}
+
 	public FhCharacter getCharacter(String id) {
 		log.entry(id);
 		FhCharacter character = characters.get(id);
@@ -95,16 +100,6 @@ public class Frosthaven {
 		return log.exit(events);
 	}
 
-	public Event getEvent(String eventId) {
-		log.entry(eventId);
-		Event event = events.get(eventId);
-		if (event == null) {
-			log.warn("Event '{}' not found", eventId);
-			return log.exit(null);
-		}
-		else return log.exit(event);
-	}
-
 
 	/* --------- */
 	/* SCENARIOS */
@@ -115,16 +110,6 @@ public class Frosthaven {
 		return log.exit(scenarios);
 	}
 
-	public Scenario getScenario(String scenarioId) {
-		log.entry(scenarioId);
-		Scenario scenario = scenarios.get(scenarioId);
-		if (scenario == null) {
-			log.warn("Scenario '{}' not found", scenarioId);
-			return log.exit(null);
-		}
-		else return log.exit(scenario);
-	}
-
 
 	/* -------- */
 	/* SECTIONS */
@@ -133,16 +118,6 @@ public class Frosthaven {
 	public Map<String,Section> getAllSectionsAsMap() {
 		log.entry();
 		return log.exit(sections);
-	}
-
-	public Section getSection(String sectionId) {
-		log.entry(sectionId);
-		Section section = sections.get(sectionId);
-		if (section == null) {
-			log.warn("Section '{}' not found", sectionId);
-			return log.exit(null);
-		}
-		else return log.exit(section);
 	}
 
 }

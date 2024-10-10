@@ -42,30 +42,55 @@
 	<!-- ---------------- -->
 	<script th:fragment="campaignPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
+			Alpine.store("charactersMap", /*[[${charactersMap}]]*/ {});
 			Alpine.store("scenariosMap", /*[[${scenariosMap}]]*/ {});
 			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
 
 			Alpine.data("campaignPageData", () => ({
+				partyMembers: [],
 				campaignItems: [],
 
 				init() {
 					const personalStory = JSON.parse(localStorage.getItem("personalStory"));
+					this.initParty(personalStory.party);
 					for (const personalStoryItem of personalStory.story) {
-						// SCENARIO
-						if (personalStoryItem.scenario) {
-							const psScenario = personalStoryItem.scenario;
-							const scenario = this.$store.scenariosMap[psScenario.id];
-							if (psScenario.path?.length > 0) scenario.path = psScenario.path;
-							this.campaignItems.push({ scenario: scenario });
-						}
-						// EVENT
-						else if (personalStoryItem.event) {
-							const psEvent = personalStoryItem.event;
-							const event = this.$store.eventsMap[psEvent.id];
-							if (psEvent.chosenOptions?.length > 0) event.chosenOptions = psEvent.chosenOptions;
-							this.campaignItems.push({ event: event });
+						if (personalStoryItem.scenario) this.initScenario(personalStoryItem.scenario);
+						else if (personalStoryItem.event) this.initEvent(personalStoryItem.event);
+					}
+				},
+
+				initParty(psPartyMembers) {
+					log.entry(psPartyMembers);
+					for (const psPartyMember of psPartyMembers) {
+						const partyMember = this.$store.charactersMap[psPartyMember.id];
+						if (partyMember) {
+							// TO-DO: Personal Quest
+							// ...
+							this.partyMembers.push(partyMember);
 						}
 					}
+					log.exit();
+				},
+
+				initScenario(psScenario) {
+					log.entry(psScenario);
+					const scenario = this.$store.scenariosMap[psScenario.id];
+					if (scenario) {
+						if (psScenario.path?.length > 0) scenario.path = psScenario.path;
+						this.campaignItems.push({ scenario: scenario });
+					}
+					log.exit();
+				},
+
+				initEvent(psEvent) {
+					log.entry(psEvent);
+					const event = this.$store.eventsMap[psEvent.id];
+					if (event) {
+						if (psEvent.chosenOptions?.length > 0) event.chosenOptionsIds = psEvent.chosenOptions;
+						else if (psEvent.chosenOption) event.chosenOptionsIds = [psEvent.chosenOption];
+						this.campaignItems.push({ event: event });
+					}
+					log.exit();
 				}
 			}));
 		});

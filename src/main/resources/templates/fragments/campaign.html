@@ -16,7 +16,12 @@
 			</div>
 
 			<!-- PARTY -->
-			<!-- TO-DO -->
+			<div id="party">
+				<h1 class="title">[[#{party.title}]]</h1>
+				<template x-for="character in partyMembers">
+					<th:block th:replace="~{fragments/character :: character}"></th:block>
+				</template>
+			</div>
 
 			<template x-for="campaignItem in campaignItems">
 				<div>
@@ -42,6 +47,7 @@
 	<!-- CAMPAIGN JS -->
 	<!-- ----------- -->
 	<script th:fragment="campaignJs" th:inline="javascript">
+		/*
 		// Only show back to top button if the user has scrolled down
 		window.onscroll = function() {
 			const backToTopButton = document.getElementById("backToTopButton");
@@ -58,6 +64,7 @@
 			// Chrome, Firefox, IE and Opera
   			document.documentElement.scrollTop = 0; 
 		}
+		*/
 	</script>
 </body>
 </html>

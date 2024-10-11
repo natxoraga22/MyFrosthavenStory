@@ -7,7 +7,7 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event" x-bind:id="'event_' + event.id" x-data="eventData(event)">
+	<div th:fragment="event" x-bind:id="'event_' + event.id" class="anchor" x-data="eventData(event)">
 		<template x-if="Object.keys(event).length > 0">
 			<div class="event">
 				<!-- Title -->

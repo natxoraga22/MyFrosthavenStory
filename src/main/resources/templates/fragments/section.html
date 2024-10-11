@@ -7,108 +7,125 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId">
-		<template x-if="Object.keys(section).length > 0">
-			<div class="section">
-				<!-- Trigger -->
-				<template x-if="section.trigger">
-					<div class="trigger" x-jsz>
-						<i class="fa-solid fa-angles-right fa-sm"></i>
-						{{section.trigger}}:
+	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" class="section anchor" x-data="sectionData(section)">
+		<!-- Trigger -->
+		<template x-if="section.trigger">
+			<div class="trigger" x-jsz>
+				<i class="fa-solid fa-angles-right fa-sm"></i>
+				{{section.trigger}}:
+			</div>
+		</template>
+
+		<!-- Title -->
+		<template x-if="section.title">
+			<div class="title titleSecondary">
+				<h2 x-jsz>
+					<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
+				</h2>
+				<!-- Unlocked by -->
+				<template x-if="section.unlockedBy">
+					<div x-data="{ get unlockedBy() { return section.unlockedBy } }">
+						<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
 					</div>
 				</template>
+			</div>
+		</template>
 
-				<!-- Title -->
-				<template x-if="section.title">
-					<div class="title titleSecondary">
-						<h2 x-jsz>
-							<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
-						</h2>
-						<!-- Unlocked by -->
-						<template x-if="section.unlockedBy">
-							<div x-data="{ get unlockedBy() { return section.unlockedBy } }">
-								<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
-							</div>
-						</template>
-					</div>
-				</template>
+		<!-- Introduction -->
+		<template x-if="section.introduction">
+			<bs:card class="fhCard fhCardFlush introduction">
+				<bs:cardHeader>[[#{section.introduction}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{section.introduction}}</bs:cardBody>
+			</bs:card>
+		</template>
 
-				<!-- Introduction -->
-				<template x-if="section.introduction">
-					<bs:card class="fhCard fhCardFlush introduction">
-						<bs:cardHeader>[[#{section.introduction}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>
-							{{section.introduction}}
-						</bs:cardBody>
-					</bs:card>
-				</template>
+		<!-- Text -->
+		<template x-if="section.text">
+			<div class="text" x-jsz>
+				{{section.text}}
+			</div>
+		</template>
 
-				<!-- Text -->
-				<template x-if="section.text">
-					<div class="text" x-jsz>
-						{{section.text}}
-					</div>
-				</template>
+		<!-- Special rules -->
+		<template x-if="section.specialRules">
+			<bs:card class="fhCard specialRules">
+				<bs:cardHeader>[[#{section.specialRules}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{section.specialRules}}</bs:cardBody>
+			</bs:card>
+		</template>
 
-				<!-- Special rules -->
-				<template x-if="section.specialRules">
-					<bs:card class="fhCard specialRules">
-						<bs:cardHeader>[[#{section.specialRules}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>
-							{{section.specialRules}}
-						</bs:cardBody>
-					</bs:card>
-				</template>
+		<!-- Boss specials -->
+		<template x-for="bossSpecial in section.bossSpecials">
+			<bs:card class="fhCard bossSpecial" x-jsz>
+				<bs:cardHeader>
+					<i class="fa-solid fa-skull fa-xs"></i>
+					[[#{section.bossSpecial}]] {{bossSpecial.key}}
+				</bs:cardHeader>
+				<bs:cardBody>
+					{{bossSpecial.value}}
+				</bs:cardBody>
+			</bs:card>
+		</template>
 
-				<!-- Boss specials -->
-				<template x-for="bossSpecial in section.bossSpecials">
-					<bs:card class="fhCard bossSpecial" x-jsz>
-						<bs:cardHeader>
-							<i class="fa-solid fa-skull fa-xs"></i> [[#{section.bossSpecial}]] {{bossSpecial.key}}
-						</bs:cardHeader>
-						<bs:cardBody>
-							{{bossSpecial.value}}
-						</bs:cardBody>
-					</bs:card>
-				</template>
+		<!-- Conclusion -->
+		<template x-if="section.conclusion">
+			<bs:card class="fhCard fhCardFlush conclusion">
+				<bs:cardHeader>[[#{section.conclusion}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{section.conclusion}}</bs:cardBody>
+			</bs:card>
+		</template>
 
-				<!-- Conclusion -->
-				<template x-if="section.conclusion">
-					<bs:card class="fhCard fhCardFlush conclusion">
-						<bs:cardHeader>[[#{section.conclusion}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>
-							{{section.conclusion}}
-						</bs:cardBody>
-					</bs:card>
-				</template>
+		<!-- Rewards -->
+		<template x-if="section.rewards">
+			<div class="rewards" x-data="{ get rewards() { return section.rewards } }">
+				<th:block th:replace="~{fragments/rewards :: rewards}"/>
+			</div>
+		</template>
 
-				<!-- Rewards -->
-				<template x-if="section.rewards">
-					<div class="rewards" x-data="{ rewards: section.rewards }">
-						<th:block th:replace="~{fragments/rewards :: rewards}"/>
-					</div>
-				</template>
+		<!-- Section links -->
+		<template x-if="section.sectionLinks">
+			<bs:card class="fhCard sectionLinks">
+				<bs:cardHeader>[[#{section.sectionLinks}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{section.sectionLinks}}</bs:cardBody>
+			</bs:card>
+		</template>
 
-				<!-- Section links -->
-				<template x-if="section.sectionLinks">
-					<bs:card class="fhCard sectionLinks">
-						<bs:cardHeader>[[#{section.sectionLinks}]]</bs:cardHeader>
-						<bs:cardBody x-jsz>
-							{{section.sectionLinks}}
-						</bs:cardBody>
-					</bs:card>
-				</template>
-
-				<!-- Map -->
-				<!--
-				<template x-if="mapExists">
-					<div class="map">
-						<img x-bind:src="mapUrl" onload="this.width*=0.66;">
-					</div>
-				</template>
-				-->
+		<!-- Map -->
+		<template x-if="mapExists">
+			<div class="map">
+				<img x-bind:src="mapUrl" onload="this.width*=0.66;">
 			</div>
 		</template>
 	</div>
+
+
+	<!-- ---------- -->
+	<!-- SECTION JS -->
+	<!-- ---------- -->
+	<script th:fragment="sectionJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("sectionData", (section) => ({
+				mapExists: false,
+
+				get mapUrl() { return this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png" },
+
+				init() {
+					/*
+					fetch(this.mapUrl, { method: "HEAD" })
+						.then(response => {
+							log.debug("THEN");
+							log.debug(response);
+							this.mapExists = response.ok;
+						})
+						.catch(error => {
+							log.debug("CATCH");
+							log.debug(error);
+							this.mapExists = false;
+						});
+					*/
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

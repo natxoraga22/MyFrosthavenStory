@@ -49,7 +49,28 @@
 					</template>
 
 					<!-- OUTPOST PHASE -->
-					<!-- TO-DO -->
+					<template x-if="campaignItem.outpostPhase" x-data="{ get outpostPhase() { return campaignItem.outpostPhase } }">
+						<div style="display:contents">
+							<bs:listItem tag="a" action x-bind:href="'#outpostPhase_' + outpostPhase.id" x-jsz>
+								[[#{outpostPhase.title}]] #{{outpostPhase.id}}
+							</bs:listItem>
+
+							<!-- Town guard perks -->
+
+							<!-- Passage of time -->
+
+							<!-- Outpost event -->
+							<template x-if="outpostPhase.outpostEvent" x-data="{ get event() { return outpostPhase.outpostEvent } }">
+								<bs:listItem tag="a" action class="child" x-bind:href="'#event_' + event.id" x-jsz>
+									{{event.id}} · {{$store.typesAndSeasonsStrings[event.typeAndSeason]}} [[#{event.title}]]
+								</bs:listItem>
+							</template>
+
+							<!-- Retirements -->
+
+							<!-- New members -->
+						</div>
+					</template>
 				</div>
 			</template>
 		</bs:list>

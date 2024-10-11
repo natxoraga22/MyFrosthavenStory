@@ -7,8 +7,101 @@
 	<!-- ------------- -->
 	<!-- OUTPOST PHASE -->
 	<!-- ------------- -->
-	<div th:fragment="outpostPhase" class="outpostPhase">
-		
+	<div th:fragment="outpostPhase" x-bind:id="'outpostPhase_' + outpostPhase.id" class="outpostPhase"
+	     x-data="outpostPhaseData(outpostPhase)">
+	
+		<!-- Title -->
+		<h1 class="title">
+			[[#{outpostPhase.title}]] <span class="titleSecondary" x-jsz>#{{outpostPhase.id}}</span>
+		</h1>
+
+		<!-- Town guard perks -->
+
+		<!-- Passage of time -->
+
+		<!-- Outpost event -->
+		<template x-if="outpostPhase.outpostEvent">
+			<div x-data="{ get event() { return outpostPhase.outpostEvent } }">
+				<th:block th:replace="~{fragments/event :: event}"/>
+			</div>
+		</template>
+
+		<!-- Level ups -->
+
+		<!-- Retirements -->
+
+		<!-- New members -->
+
+		<!-- Construction (build & upgrade) -->
+		<template x-if="outpostPhase.build?.length > 0 || outpostPhase.upgrade?.length > 0">
+			<div class="construction">
+				<h2 class="title">[[#{outpostPhase.construction.title}]]</h2>
+
+				<!-- Build -->
+				<template x-if="outpostPhase.build?.length > 0">
+					<div class="build">
+	
+					</div>
+				</template>
+	
+				<!-- Upgrade -->
+				<template x-if="outpostPhase.upgrade?.length > 0">
+					<div class="upgrade">
+						<template x-for="building in outpostPhase.upgrade">
+							<div class="building">
+								<div class="text" x-jsz>
+									{{getUpgradeString(building)}}
+								</div>
+								<div class="playingCards">
+									<div class="playingCard">
+										<img x-bind:src="getBuildingCardUrl(building.id, building.level - 1)">
+									</div>
+									<i class="fa-solid fa-right-long fa-2xl" bs:mx="4"></i>
+									<div class="playingCard">
+										<img x-bind:src="getBuildingCardUrl(building.id, building.level)">
+									</div>
+								</div>
+
+								<!-- Built sections -->
+								<template x-for="sectionPathItem in building.sectionPath">
+									<div x-data="{ get section() { return building.levels[building.level]?.builtSections[sectionPathItem] } }">
+										<template x-if="section">
+											<th:block th:replace="~{fragments/section :: section}"/>
+										</template>
+									</div>
+								</template>
+							</div>
+						</template>
+					</div>
+				</template>
+			</div>
+		</template>
 	</div>
+
+
+	<!-- ---------------- -->
+	<!-- OUTPOST PHASE JS -->
+	<!-- ---------------- -->
+	<script th:fragment="outpostPhaseJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("outpostPhaseData", (outpostPhase) => ({
+				getBuildString(building) {
+					let buildString = /*[[#{outpostPhase.construction.build}]]*/ "";
+					buildString = buildString.format(building.name);
+					return buildString;
+				},
+
+				getUpgradeString(building) {
+					let upgradeString = /*[[#{outpostPhase.construction.upgrade}]]*/ "";
+					upgradeString = upgradeString.format(building.name, building.level);
+					return upgradeString;
+				},
+
+				getBuildingCardUrl(buildingId, buildingLevel) {
+					return this.$store.imgUrl + "/buildings/" + buildingId + "_" + buildingLevel + ".png";
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 	--story-objects-gap: 6rem;
 
 	/* Gap between party characters */
-	--party-inner-gap: 2rem;
+	--party-inner-gap: 3rem;
 
 	/* Loading padding */
 	--loading-padding: 5rem;
@@ -105,13 +105,4 @@
 	width: var(--back-to-top-button-size);
 	height: var(--back-to-top-button-size);
 	--bs-btn-border-radius: var(--back-to-top-button-size);
-}
-
-
-/* ------------- */
-/* CAMPAIGN FORM */
-/* ------------- */
-
-#campaignForm {
-	margin-top: var(--story-objects-gap);
 }

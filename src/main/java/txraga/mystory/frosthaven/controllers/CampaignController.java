@@ -28,9 +28,11 @@ public class CampaignController {
 		WebPage webPage = WebPage.CAMPAIGN;
 		model.addAttribute("webPage", webPage);
 		model.addAttribute("welcome", frosthaven.getWelcome());
-		model.addAttribute("charactersMap", frosthaven.getAllCharactersAsMap());
-		model.addAttribute("scenariosMap", frosthaven.getAllScenariosAsMap());
-		model.addAttribute("eventsMap", frosthaven.getAllEventsAsMap());
+		model.addAttribute("charactersMap", frosthaven.getCharacters());
+		model.addAttribute("scenariosMap", frosthaven.getScenarios());
+		model.addAttribute("eventsMap", frosthaven.getEvents());
+		model.addAttribute("sectionsMap", frosthaven.getSections());
+		model.addAttribute("buildingsMap", frosthaven.getBuildings());
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 

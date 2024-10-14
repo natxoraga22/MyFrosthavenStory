@@ -107,6 +107,13 @@
 					}
 
 					// Level ups
+					if (psOutpostPhase.levelUps?.length > 0) {
+						outpostPhase.levelUps = [];
+						for (const psLevelUp of psOutpostPhase.levelUps) {
+							const character = this.getCharacter(psLevelUp);
+							if (character) outpostPhase.levelUps.push(character);
+						}
+					}
 
 					// Retirements
 
@@ -140,9 +147,20 @@
 				/* ------- */
 				/* Get full campaign items from the personal story info */
 
+				getCharacter(psCharacter) {
+					const rawCharacter = this.$store.charactersMap[psCharacter.id];
+					if (rawCharacter) {
+						const character = { ...rawCharacter };
+						if (psCharacter.level) character.level = psCharacter.level;
+						return character;
+					}
+					return null;
+				},
+
 				getScenario(psScenario) {
-					const scenario = { ...this.$store.scenariosMap[psScenario.id] };
-					if (scenario) {
+					const rawScenario = this.$store.scenariosMap[psScenario.id];
+					if (rawScenario) {
+						const scenario = { ...rawScenario };
 						if (psScenario.path?.length > 0) scenario.path = psScenario.path;
 						return scenario;
 					}
@@ -150,8 +168,9 @@
 				},
 
 				getEvent(psEvent) {
-					const event = { ...this.$store.eventsMap[psEvent.id] };
-					if (event) {
+					const rawEvent = this.$store.eventsMap[psEvent.id];
+					if (rawEvent) {
+						const event = { ...rawEvent };
 						if (psEvent.chosenOptions?.length > 0) event.chosenOptionsIds = psEvent.chosenOptions;
 						else if (psEvent.chosenOption) event.chosenOptionsIds = [psEvent.chosenOption];
 						return event;
@@ -160,8 +179,9 @@
 				},
 
 				getBuilding(psBuilding) {
-					const building = { ...this.$store.buildingsMap[psBuilding.id] };
-					if (building) {
+					const rawBuilding = this.$store.buildingsMap[psBuilding.id];
+					if (rawBuilding) {
+						const building = { ...rawBuilding };
 						building.level = psBuilding.level;
 						building.sectionPath = psBuilding.path;
 						return building;

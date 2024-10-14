@@ -30,7 +30,7 @@ public class ScenarioController {
 		log.entry(scenarioId, scenarioPath);
 		WebPage webPage = WebPage.SCENARIO;
 		model.addAttribute("webPage", webPage);
-		model.addAttribute("scenariosMap", frosthaven.getAllScenariosAsMap());
+		model.addAttribute("scenariosMap", frosthaven.getScenarios());
 		// URL parameters
 		model.addAttribute("scenarioId", scenarioId);
 		model.addAttribute("scenarioPath", scenarioPath);

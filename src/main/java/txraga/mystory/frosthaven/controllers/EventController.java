@@ -30,7 +30,7 @@ public class EventController {
 		log.entry(eventId, chosenOptionsIds);
 		WebPage webPage = WebPage.EVENT;
 		model.addAttribute("webPage", webPage);
-		model.addAttribute("eventsMap", frosthaven.getAllEventsAsMap());
+		model.addAttribute("eventsMap", frosthaven.getEvents());
 		// URL parameters
 		model.addAttribute("eventId", eventId);
 		model.addAttribute("chosenOptionsIds", chosenOptionsIds);

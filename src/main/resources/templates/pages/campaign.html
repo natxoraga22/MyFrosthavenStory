@@ -97,15 +97,26 @@
 					const outpostPhase = { id: this.outpostPhaseCount };
 
 					// Town guard perks
-
+					if (psOutpostPhase.townGuardPerks?.length > 0) {
+						outpostPhase.townGuardPerks = [];
+						for (const psSection of psOutpostPhase.townGuardPerks) {
+							const section = this.$store.sectionsMap[psSection.id];
+							if (section) outpostPhase.townGuardPerks.push(section);
+						}
+					}
 					// Passage of time
-
+					if (psOutpostPhase.passageOfTime?.length > 0) {
+						outpostPhase.passageOfTime = [];
+						for (const psSection of psOutpostPhase.passageOfTime) {
+							const section = this.$store.sectionsMap[psSection.id];
+							if (section) outpostPhase.passageOfTime.push(section);
+						}
+					}
 					// Outpost event
 					if (psOutpostPhase.outpostEvent) {
 						const outpostEvent = this.getEvent(psOutpostPhase.outpostEvent);
 						if (outpostEvent) outpostPhase.outpostEvent = outpostEvent;
 					}
-
 					// Level ups
 					if (psOutpostPhase.levelUps?.length > 0) {
 						outpostPhase.levelUps = [];
@@ -127,7 +138,6 @@
 							if (building) outpostPhase.build.push(building);
 						}
 					}
-
 					// Upgrade
 					if (psOutpostPhase.upgrade?.length > 0) {
 						outpostPhase.upgrade = [];
@@ -136,7 +146,6 @@
 							if (building) outpostPhase.upgrade.push(building);
 						}
 					}
-
 					this.campaignItems.push({ outpostPhase: outpostPhase });
 					log.exit();
 				},

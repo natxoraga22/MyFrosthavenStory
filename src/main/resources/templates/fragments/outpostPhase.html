@@ -16,8 +16,14 @@
 		</h1>
 
 		<!-- Town guard perks -->
+		<template x-for="section in outpostPhase.townGuardPerks">
+			<th:block th:replace="~{fragments/section :: section}"/>
+		</template>
 
 		<!-- Passage of time -->
+		<template x-for="section in outpostPhase.passageOfTime">
+			<th:block th:replace="~{fragments/section :: section}"/>
+		</template>
 
 		<!-- Outpost event -->
 		<template x-if="outpostPhase.outpostEvent">

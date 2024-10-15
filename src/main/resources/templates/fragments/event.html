@@ -69,8 +69,12 @@
 
 		<!-- Text -->
 		<div class="text">
-			<span x-show="option.requirement" x-jsz>{{option.requirement}}: </span>
-			<span x-jsz>{{option.text}}</span>
+			<template x-if="option.requirement">
+				<div x-jsz>{{option.requirement}}: {{option.text}}</div>
+			</template>
+			<template x-if="!option.requirement">
+				<div x-jsz>{{option.text}}</div>
+			</template>
 		</div>
 
 		<!-- Rewards -->

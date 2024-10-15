@@ -19,7 +19,7 @@
 				</template>
 				<template x-if="unlockedByItem.scenario">
 					<a class="link-secondary" x-bind:href="getLinkUrl(unlockedByItem)" x-jsz>
-						[[#{unlockedBy.scenario}]] {{unlockedByItem.scenario.id}}
+						[[#{unlockedBy.scenario}]] {{Number(unlockedByItem.scenario.id).toString()}}
 					</a>
 				</template>
 				<template x-if="unlockedByItem.section">

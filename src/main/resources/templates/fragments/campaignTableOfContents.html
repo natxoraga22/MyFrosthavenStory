@@ -56,8 +56,18 @@
 							</bs:listItem>
 
 							<!-- Town guard perks -->
+							<template x-for="section in outpostPhase.townGuardPerks">
+								<bs:listItem tag="a" action class="child" x-bind:href="'#section_' + section.htmlSafeId" x-jsz>
+									{{section.id}} · {{section.title}}
+								</bs:listItem>
+							</template>
 
 							<!-- Passage of time -->
+							<template x-for="section in outpostPhase.passageOfTime">
+								<bs:listItem tag="a" action class="child" x-bind:href="'#section_' + section.htmlSafeId" x-jsz>
+									{{section.id}} · {{section.title}}
+								</bs:listItem>
+							</template>
 
 							<!-- Outpost event -->
 							<template x-if="outpostPhase.outpostEvent" x-data="{ get event() { return outpostPhase.outpostEvent } }">

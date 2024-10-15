@@ -109,6 +109,7 @@ div.section {
 
 .section .specialRules .table td {
 	border-bottom: none;
+	background-color: inherit;
 }
 
 .section .specialRules .table tbody hr {

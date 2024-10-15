@@ -41,7 +41,9 @@ public class ScenariosFile {
 			Scenario scenario = objectMapper.readValue(scenarioInputStream, Scenario.class);
 			
 			// Set sections ids
-			scenario.getSections().forEach((id, section) -> section.setId(id));
+			scenario.getSections().forEach((id, section) -> {
+				if (section.getId() == null) section.setId(id);
+			});
 			return log.exit(scenario);
 		}
 		catch (IOException e) {

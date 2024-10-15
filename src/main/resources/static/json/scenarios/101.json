@@ -12,20 +12,24 @@
 	"sections": {
 		"main": {
 			"introduction": "<p>You push past wrought-iron gates into what was once an ornate entrance hall, but today just barely provides a bit of shelter from the storm outside. Carvings, too intricate to have been made by human hands, adorn the broad wooden doors, coalescing into sublime patterns now worn away with time. The iron hinges are smashed in, and the door hangs lopsided— the fabled Harrower Library you were looking for is in disrepair.</p><p>“It wasss a place of reverenccee onceee.” Zu, the Harrower you rescued from prison, shuffles toward the door. “But it hasss the ansssswers we sseeek.”</p><p>Gem turns to you. “In any case, we’ll need to collect whatever remains from the resources here at the library. Harrowers aren’t like you or I—they’re many smaller creatures that have agreed to work in unison. A library for them doesn’t have scrolls or books, but rather deposits of themselves. A Harrower can subsume what’s in these receptacles and learn all that the depositor knew. Here are the remaining memories of the Harrowers who locked Zu away and drove the rest of us to the far reaches of the continent. They will know where to find our companion.”</p><p>The unmistakable sound of angry Algox down the hall interrupts your conversation. Gem brushes off a stone bench and sits down, folding her crystal-covered arms. “Well, I’ll let you fine mercenaries deal with that. Sounds like more guards stationed to thwart our plans. Best of luck and all.”</p>",
-			"sectionLinks": "When door [one] is opened, read [section_126.2].<br/>When door [two] is opened, read [section_194.4].<br/>When door [three] is opened, read [section_171.3]."
+			"sectionLinks": "When door [one] is opened, read [section_126.2].<br/>When door [two] is opened, read [section_194.4].<br/>When door [three] is opened, read [section_171.3].",
+			"containsImage": true
 		},
 		"126.2": {
 			"trigger": "Door [one] is opened",
 			"text": "Zu swarms into position at the center of the room and expands into a cloud of insects. “We are ready to acccepttt the knowledggge.”",
-			"specialRules": "<p>[a] represents Zu, an ally to you and an enemy to all monsters, but that cannot be interacted with in any way. They are not affected by any non-swarm traps or terrain.</p><p>Whenever any goal treasure tile is looted, create one [poison] trap in the closest empty hex. These represent swarms, which cannot be destroyed. At the end of each round, each swarm moves two hexes toward Zu through any featureless hexes.</p><p>Numbered tokens [four]-[twelve] can be looted as normal, and when each one is, create one [poison] trap in the closest empty hex.</p><p>After all swarms move, Zu performs [move] 2, focusing on moving toward and occupying the closest hex with a swarm. If Zu ever occupies a hex with a swarm, the swarm is absorbed and removed from the map.</p>"
+			"specialRules": "<p>[a] represents Zu, an ally to you and an enemy to all monsters, but that cannot be interacted with in any way. They are not affected by any non-swarm traps or terrain.</p><p>Whenever any goal treasure tile is looted, create one [poison] trap in the closest empty hex. These represent swarms, which cannot be destroyed. At the end of each round, each swarm moves two hexes toward Zu through any featureless hexes.</p><p>Numbered tokens [four]-[twelve] can be looted as normal, and when each one is, create one [poison] trap in the closest empty hex.</p><p>After all swarms move, Zu performs [move] 2, focusing on moving toward and occupying the closest hex with a swarm. If Zu ever occupies a hex with a swarm, the swarm is absorbed and removed from the map.</p>",
+			"containsImage": true
 		},
 		"194.4": {
 			"trigger": "Door [two] is opened",
-			"sectionLinks": "Return to [section_126.2] to reference its special rules, if necessary."
+			"sectionLinks": "Return to [section_126.2] to reference its special rules, if necessary.",
+			"containsImage": true
 		},
 		"171.3": {
 			"trigger": "Door [three] is opened",
-			"sectionLinks": "Return to [section_126.2] to reference its special rules, if necessary."
+			"sectionLinks": "Return to [section_126.2] to reference its special rules, if necessary.",
+			"containsImage": true
 		},
 		"137.4": {
 			"trigger": "C+4 swarms have been absorbed by Zu",

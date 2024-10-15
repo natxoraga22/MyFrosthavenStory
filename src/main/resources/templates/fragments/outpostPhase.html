@@ -83,15 +83,13 @@
 		<!-- Card images -->
 		<div class="playingCards">
 			<template x-if="type == 'UPGRADE'">
-				<div>
-					<div class="playingCard">
-						<img x-bind:src="getBuildingCardUrl(building.id, building.level - 1)">
-					</div>
-					<i class="fa-solid fa-right-long fa-2xl" bs:mx="4"></i>
+				<div class="playingCard">
+					<img x-bind:src="getBuildingCardUrl(building.id, building.level - 1)">
 				</div>
 			</template>
-			<div class="playingCard">
-				<img x-bind:src="getBuildingCardUrl(building.id, building.level)">
+			<i x-show="type == 'UPGRADE'" class="fa-solid fa-right-long fa-2xl" bs:mx="4"></i>
+			<div x-bind:class="{ 'playingCard': building.level }">
+				<img x-bind:class="building.id" x-bind:src="getBuildingCardUrl(building.id, building.level)">
 			</div>
 		</div>
 
@@ -131,7 +129,7 @@
 				},
 
 				getBuildingCardUrl(buildingId, buildingLevel) {
-					return this.$store.imgUrl + "/buildings/" + buildingId + "_" + buildingLevel + ".png";
+					return this.$store.imgUrl + "/buildings/" + buildingId + (buildingLevel ? "_" + buildingLevel : "") + ".png";
 				}
 			}));
 		});

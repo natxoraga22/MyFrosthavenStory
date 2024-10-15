@@ -13,19 +13,22 @@
 		"main": {
 			"introduction": "<p>You have arrived at the center of the Unfettered complex, a cavernous temple dedicated to the proliferation of mechanical life. Everywhere huge metal pillars crisscross with iron beams and brass pipes. And high above the steel arms, pistons, pumps, and wires, you see your target standing on an overseer’s platform.</p><p>It is an Unfettered machine shaped in the rough likeness of a human, two arms and two legs, but that’s where the similarities end. Its body is an awkward conglomeration of parts: a rough iron chest plate, one arm made of bent angular brass and the other of cylindrical steel. Its face is little more than a curve of hammered metal with holes cut for a mouth and eyes, but even from this far away you can see a burning blue light radiating behind it.</p><p>“The Orphan,” Crain says in a low whisper. “It is the leader of the Unfettered. If we can get to that automaton, we can disable the entire army.”</p><p>This suggestion, however, is far more complicated than the Quatryl’s tone implies. Between you and the Orphan stands a horde of enemy guards. Crain notices your skepticism and pulls you down to his level.</p><p>“There is a way,” he whispers, “but you won’t like it.” He lifts one of his disabling devices up to the light. “If we remove the regulator, we can overload the power core to create a massive burst that will cut through a significant portion of the Unfettered—a bomb, in other words. The problem is it will only work once.”</p><p>It sounds dubious. Crain’s expertise has been a boon in these tunnels, but this idea feels hasty. And yet, what other option do you have?</p><p>You give the go-ahead, and within a few moments Crain has wired the devices for single-use detonation. You’ll want to trigger them when the fight gets to its absolute worst, because if you miss your chance, there is no way out.</p>",
 			"specialRules": "<p>Distribute four numbered tokens as evenly as possible among the characters, placing them on their mats. These represent the jamming explosives. Any character can forgo a top action (discarding the card instead) to set off one of their explosives. If this occurs, remove the explosive from their mat, kill all enemies within [range] 2 of them, and destroy all obstacles with at least one hex within [range] 2 of them.</p><p>If any character becomes exhausted while not occupying tile 8-A, the scenario is lost.</p>",
-			"sectionLinks": "When any door [one] is opened, read [section_32.1]."
+			"sectionLinks": "When any door [one] is opened, read [section_32.1].",
+			"containsImage": true
 		},
 		"32.1": {
 			"trigger": "Door [one] is opened",
 			"text": "<p>You burst into a large central room, and your heart drops. There are just so. Many. Machines.</p><p>They pour into the room in droves, but you find your resolve. With Crain’s bombs in hand, your only hope is to punch a hole through the main force and get to the hall on the other side of the room.</p>",
 			"specialRules": "<p>Open all doors [one].</p><p>At the start of each round, spawn one Ruined Machine at each [a] and one Steel Automaton at [b]. These are normal for two characters, Steel Automaton are elite for three characters, or all are elite for four characters.</p>",
-			"sectionLinks": "When door [two] is opened, read [section_137.1]."
+			"sectionLinks": "When door [two] is opened, read [section_137.1].",
+			"containsImage": true
 		},
 		"137.1": {
 			"trigger": "Door [two] is opened",
 			"text": "There are fewer enemies here. There are still a lot, but it is nothing compared to the angry wave of metal swarming on the other side of the corridor. And up ahead you see the leader, angrier than all of them combined. If you can collapse the tunnel and dispatch this final battalion, maybe you can get some muchneeded alone time with the boss.",
 			"specialRules": "Door [two] is now considered an objective with Cx(L+2) hit points, which can also be destroyed if within [range] 2 of an explosion, but it is still treated as a corridor for the purpose of movement. When door [two] is destroyed, remove the door tile and any figure on it, turning its hex into a wall. If door [two] is destroyed while any character is not occupying tile 8-A, the scenario is lost.",
-			"sectionLinks": "Return to [section_32.1] to reference its special rules if necessary."
+			"sectionLinks": "Return to [section_32.1] to reference its special rules if necessary.",
+			"containsImage": true
 		},
 		"49.1": {
 			"trigger": "All characters occupy tile 8-A, no monsters occupy tile 8-A, and door [two] has been collapsed",

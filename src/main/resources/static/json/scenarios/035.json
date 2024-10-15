@@ -13,7 +13,8 @@
 		"main": {
 			"introduction": "<p>The tunnels in this strange Unfettered complex have long since blended together into a tedious blur of gray stone and iron. It would be natural to question whether there’s anything down here of value. Really, you’ve mostly found angry machines and rust. But then, your new Quatryl ally stops.</p><p>“What’s this?” Crain says. He turns down the next hallway and shouts. “Why, my good friends, it seems we’ve struck a proper treasure trove!” Without any consideration for safety, the Quatryl runs into the darkness. You jog to catch up, concerned about what has him so excited.</p><p>Trash. He’s found a mound of scrap metal as tall as a house. It’s been piled up inside a chamber and looks to be made up of ruined machine parts, bent metal tubes, and oily clumps of fabric. It’s the last place you should be stopping, but Crain is already knee-deep in the pile, prying out pieces of ruined metal with little exclamations of “ah ha” and “quite nice”. His enthusiasm is almost inspiring. He moves with manic energy, scrambling over the hillock of trash and prying out discarded pieces of gear. Now and then he removes something large enough to send down a mini landslide of iron chest plates and unwanted metal legs.</p><p>However, this latest shifting of junk reveals a color that catches your eye— white. You bend down to inspect it and find a human femur. Rummaging a bit more, you uncover a number of buried skeletons, both human and Quatryl.</p><p>It’s a troubling discovery, but the remains are quite old—many of them worn down to nubs and splinters. Whatever happened here, it happened a long time ago. You make a mental note about the bones but your main concern is the tinkerer, because he’s just now started to hum some sort of jig to accompany his scavenging.</p><p>You shush him. You try to explain the need for caution, that if he hadn’t noticed, there are murderous automatons roving the halls, but Crain dismisses you with a wave.</p><p>“That’s why you’re here, my friends. The sturdy adventuring types, always ready for action! Oh, ah—oops,” Crain cringes, embarrassed by something behind you. “And would you look at that.”</p><p>You turn and find Unfettered, of course: a whole squad of them marching into the hallway, and their eyes are trained on the Quatryl.</p><p>“I just need a bit more time, friends,” the tinkerer shouts, “and a little time at the next pile, too, a-and then maybe a stop by that third one!”</p><p>You tell him to make it fast, then draw steel.</p>",
 			"specialRules": "<p>Place on numbered token in [a]. This represents Crain, an ally to you and an enemy to all monsters. He has Cx(L+3)/2 hit points (rounded down). On initiative 50 each round, he performs [move] 2, focusing on moving toward his goal, if not already adjacent to it. Crain’s current goal is debris [b]. Any character may lose one card from their hand or two from their discard pile to negate one source of damage to Crain. If Crain dies, the scenario is lost.</p><p>At the end of each round, if Crain is adjacent to his goal, place one damage token on it.</p>",
-			"sectionLinks": "When door [one] is opened, read [section_104.4].<br/>At the start of any round where there are three damage tokens on debris [b], read [section_71.3]."
+			"sectionLinks": "When door [one] is opened, read [section_104.4].<br/>At the start of any round where there are three damage tokens on debris [b], read [section_71.3].",
+			"containsImage": true
 		},
 		"71.3": {
 			"trigger": "There are three damage tokens on debris [b]",
@@ -23,7 +24,8 @@
 		},
 		"104.4": {
 			"trigger": "Door [one] is opened",
-			"sectionLinks": "If you have already read [section_71.3], return to it."
+			"sectionLinks": "If you have already read [section_71.3], return to it.",
+			"containsImage": true
 		},
 		"117.3": {
 			"trigger": "There are three damage tokens on debris [c]",

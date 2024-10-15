@@ -90,10 +90,10 @@
 			</bs:card>
 		</template>
 
-		<!-- Map -->
-		<template x-if="mapExists">
+		<!-- Image -->
+		<template x-if="section.containsImage">
 			<div class="map">
-				<img x-bind:src="mapUrl" onload="this.width*=0.66;">
+				<img x-bind:src="imageUrl" onload="this.width*=0.66;">
 			</div>
 		</template>
 	</div>
@@ -105,24 +105,8 @@
 	<script th:fragment="sectionJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("sectionData", (section) => ({
-				mapExists: false,
-
-				get mapUrl() { return this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png" },
-
-				init() {
-					/*
-					fetch(this.mapUrl, { method: "HEAD" })
-						.then(response => {
-							log.debug("THEN");
-							log.debug(response);
-							this.mapExists = response.ok;
-						})
-						.catch(error => {
-							log.debug("CATCH");
-							log.debug(error);
-							this.mapExists = false;
-						});
-					*/
+				get imageUrl() {
+					return this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png"
 				}
 			}));
 		});

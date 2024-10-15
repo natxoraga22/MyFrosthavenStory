@@ -12,13 +12,16 @@
 		"main": {
 			"introduction": "<p>Gem stands over her Savvas friend Bartlet. Zu the Harrower paces the icy cavern, casting concerned glances over their shoulder as Gem prepares to send you on another trip into the Savvas’ mind.</p><p>“You’re certain you saw the door? Describe it to me!” You recount having found a lead door at the bottom of a chest when you were last in the Savvas’s head.</p><p>The old Orchid seems satisfied with your description. “The truth is I brought you here not to solve some terrible blight on this world, but merely to give one person a bit of comfort in their time of passing. If you’ve discovered a door as securely hidden as you describe, you’ve found where Bartlet is keeping its most painful thoughts—the demonic tormentors of its mind. You’ll need to break apart the scaffolding holding those dark memories together.”</p><p>Zu interrupts: “Bartlet doessssn’t have muccch time leffft.”</p><p>Gem nods. “Right. You’ll be entering the deepest recesses of the mind: a jail cell of Bartlet’s own making. It has been tormenting itself for centuries.”</p><p>The Harrower exudes a nervous energy. “Ssssend themmm!”</p><p>Gem takes a deep breath, then thrusts her finger into the Savvas’s skull. She turns to you as the process takes hold. “Bring the whole place down. Release Bartlet from its demons... and please don’t go mad in the process.”</p><p>You grab a crystal on Gem’s back and plunge into a creature’s mind for the last time.</p>",
 			"specialRules": "<p>Each ice pillar has (Lx2)+4 hit points. They are enemies to you and allies to all monsters. Whenever any character ends their turn adjacent to any ice pillar, damages one, or suffers damage themselves, add one damage token to their character mat. This represents stress on their mind.</p><p>At the end of each round, if any ice pillars suffered damage that round, spawn the following monsters at each character’s location based on the number of damage tokens on their mat:</p><table class=\"table\"><thead><tr><th>Tokens</th><th>Spawn</th></tr></thead><tbody><tr><th>0 to 5</th><td>One normal Living Spirit</td></tr><tr><th>6 to 8</th><td>One normal Shrike Fiend</td></tr><tr><th>9 to 11</th><td>One normal Living Doom</td></tr><tr><th>12+</th><td>One elite Living Spirit and one normal Lurker Clawcrusher</td></tr></tbody></table>",
-			"sectionLinks": "When door [one] is opened, read [section_30.4].<br/>When door [two] is opened, read [section_11.7]."
+			"sectionLinks": "When door [one] is opened, read [section_30.4].<br/>When door [two] is opened, read [section_11.7].",
+			"containsImage": true
 		},
 		"30.4": {
-			"trigger": "Door [one] is opened"
+			"trigger": "Door [one] is opened",
+			"containsImage": true
 		},
 		"11.7": {
-			"trigger": "Door [two] is opened"
+			"trigger": "Door [two] is opened",
+			"containsImage": true
 		},
 		"158.2": {
 			"trigger": "C+2 ice pillars have been destroyed",

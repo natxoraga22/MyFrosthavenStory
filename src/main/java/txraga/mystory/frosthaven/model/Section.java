@@ -54,6 +54,8 @@ public class Section {
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String sectionLinks;
 
+	private boolean containsImage;
+
 
 	public String getHtmlSafeId() {
 		return id.replace(".", "_");

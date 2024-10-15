@@ -12,17 +12,20 @@
 		"main":  {
 			"introduction": "<p>“They’ll be tired from the raid, so this is your moment.” Satha had explained, pointing you toward the foothills of the Copperneck Mountains where her scout tracked the Algox attackers. “I doubt you’ll be able to fight them all on your own, but maybe you can find another way to subdue them if you get close. On the other hand, they’ll be worn out after this little battle, so feel free to test your luck. Just remember, even a tired Algox is strong enough to rip someone in two.”</p><p>After hours of tracking, you find yourself before a cave, a wide black stain on an otherwise pristine mountainside, a crowd of Algox moving around in front of it. Getting a bit closer, you realize there are two different groups of Algox gathered at the cave mouth, and they seem to be fighting.</p><p>The defenders look like the Algox who attacked Frosthaven: huge figures with fur-covered muscle and vicious strength. They’re throwing punches that could flatten a longhouse (you’ve seen it happen), but you can tell their strength is flagging against their assailants.</p><p>The attackers, on the other hand, wear leather robes and move their clawed hands in intricate patterns. Covered in the same white fur as the defenders, they stand their ground outside the cave, guarded by wild beasts as they hurl magical storms of snow.</p><p>You creep in close and the battle begins to shift. A flank has thinned out on one side and you can see a path into the cave ahead. It won’t be easy to break through the fighting, but if you want to see what the defenders are guarding without getting your hands dirty, this is the best chance you’re going to get.</p>",
 			"specialRules": "<p>All Algox Priests and Hounds are allies to each other and enemies to all other figures. Likewise, all Algox Guards and Algox Archers are allies to each other and enemies to all other figures. Use the [ally] attack modifier deck for the Algox Priests and Hounds, though they are still considered enemies to you.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
-			"sectionLinks": "When door [one] is opened, read [section_30.2]."
+			"sectionLinks": "When door [one] is opened, read [section_30.2].",
+			"containsImage": true
 		},
 		"30.2": {
 			"trigger": "Door [one] is opened",
 			"text": "You duck and weave, winding your way through the battle, dodging arcane blasts and enormous Algox fists, but you manage to sneak through without losing your head. Unfortunately, there are many more Algox standing in your way.",
-			"sectionLinks": "When door [two] is opened, read [section_28.2]."
+			"sectionLinks": "When door [two] is opened, read [section_28.2].",
+			"containsImage": true
 		},
 		"28.2": {
 			"trigger": "Door [two] is opened",
 			"text": "Their numbers are thinning. If you can just get past this line, you should be able to push through into the heart of this place.",
-			"specialRules": "Each [a] is an escape hex."
+			"specialRules": "Each [a] is an escape hex.",
+			"containsImage": true
 		},
 		"8.3": {
 			"trigger": "All characters have escaped",

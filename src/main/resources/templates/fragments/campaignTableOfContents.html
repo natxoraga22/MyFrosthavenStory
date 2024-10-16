@@ -20,10 +20,7 @@
 					<bs:listItem tag="a" action href="#party">[[#{party.title}]]</bs:listItem>
 					<template x-for="character in partyMembers">
 						<bs:listItem tag="a" action class="child" x-bind:href="'#character_' + character.id">
-							<div class="iconWrapper">
-								<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">
-							</div>
-							<span x-jsz>{{character.fullName}}</span>
+							<th:block th:replace="~{:: character}"/>
 						</bs:listItem>
 					</template>
 				</div>
@@ -77,13 +74,66 @@
 							</template>
 
 							<!-- Retirements -->
+							<template x-for="character in outpostPhase.retirements">
+								<bs:listItem tag="a" action class="child" x-bind:href="'#retirement_' + character.id"
+								             x-data="{ retirement: true }">
+									<th:block th:replace="~{:: character}"/>
+								</bs:listItem>
+							</template>
 
 							<!-- New members -->
+							<template x-for="character in outpostPhase.newMembers">
+								<bs:listItem tag="a" action class="child" x-bind:href="'#character_' + character.id"
+								             x-data="{ newMember: true }">
+									<th:block th:replace="~{:: character}"/>
+								</bs:listItem>
+							</template>
 						</div>
 					</template>
 				</div>
 			</template>
 		</bs:list>
 	</div>
+
+
+	<!-- --------- -->
+	<!-- CHARACTER -->
+	<!-- --------- -->
+	<div th:fragment="character">
+		<div class="iconWrapper">
+			<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">
+		</div>
+		<span x-jsz>{{character.fullName}}</span>
+		<span x-show="retirement">[[#{character.retirement}]]</span>
+		<span x-show="newMember">[[#{character.joining}]]</span>
+	</div>
+
+
+	<!-- -------------------- -->
+	<!-- TABLE OF CONTENTS JS -->
+	<!-- -------------------- -->
+	<script th:fragment="campaignTableOfContentsJs" th:inline="javascript">
+		window.addEventListener("load", function() {
+			/* Always keep table of contents active element in view */
+			document.body.addEventListener("activate.bs.scrollspy", () => {
+				const scrollSpy = bootstrap.ScrollSpy.getInstance(document.body);
+				const tableOfContents = document.getElementById("tableOfContents");
+				const activeListGroupItem = tableOfContents.querySelector(".list-group-item.active"); 
+
+				if (activeListGroupItem != null) {
+					// Calculate position of activeListGroupItem relative to tableOfContents
+					const activeListGroupItemPosition = activeListGroupItem.getBoundingClientRect().top - tableOfContents.getBoundingClientRect().top;
+
+					if (activeListGroupItemPosition < 0) {
+						tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition;
+					}
+					else if (activeListGroupItemPosition + activeListGroupItem.offsetHeight > tableOfContents.offsetHeight) {
+						const heightDiff = tableOfContents.offsetHeight - activeListGroupItem.offsetHeight;
+						tableOfContents.scrollTop = tableOfContents.scrollTop + activeListGroupItemPosition - heightDiff;
+					}
+				}
+			});
+		});
+	</script>
 </body>
 </html>

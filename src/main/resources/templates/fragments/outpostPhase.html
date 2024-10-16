@@ -43,8 +43,16 @@
 		</template>
 
 		<!-- Retirements -->
+		<template x-for="character in outpostPhase.retirements">
+			<th:block th:replace="~{fragments/character :: retirement}"/>
+		</template>
 
 		<!-- New members -->
+		<template x-for="character in outpostPhase.newMembers">
+			<div x-data="{ initialParty: false }">
+				<th:block th:replace="~{fragments/character :: character}"/>
+			</div>
+		</template>
 
 		<!-- Construction (build & upgrade) -->
 		<template x-if="outpostPhase.build?.length > 0 || outpostPhase.upgrade?.length > 0">

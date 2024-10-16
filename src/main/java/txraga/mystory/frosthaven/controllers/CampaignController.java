@@ -29,6 +29,7 @@ public class CampaignController {
 		model.addAttribute("webPage", webPage);
 		model.addAttribute("welcome", frosthaven.getWelcome());
 		model.addAttribute("charactersMap", frosthaven.getCharacters());
+		model.addAttribute("personalQuestsMap", frosthaven.getPersonalQuests());
 		model.addAttribute("scenariosMap", frosthaven.getScenarios());
 		model.addAttribute("eventsMap", frosthaven.getEvents());
 		model.addAttribute("sectionsMap", frosthaven.getSections());

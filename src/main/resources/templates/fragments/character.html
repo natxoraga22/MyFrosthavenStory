@@ -12,9 +12,7 @@
 		<h2 class="title titleSecondary">
 			<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">
 			<span x-jsz>{{character.fullName}}</span>
-
-			<!-- TODO -->
-			<!-- Joins the party message -->
+			<span x-show="!initialParty">[[#{character.joining}]]</span>
 		</h2>
 
 		<!-- Mat -->
@@ -41,56 +39,66 @@
 	<!-- ---------- -->
 	<!-- RETIREMENT -->
 	<!-- ---------- -->
-	<div th:fragment="retirement(character)" th:object="${character}" th:id="|retirement_*{id}|" class="character retirement">
+	<div th:fragment="retirement" x-bind:id="'retirement_' + character.id" class="character retirement anchor">
 		<!-- Title -->
 		<h2 class="title titleSecondary">
-			<img class="icon" th:classappend="*{id}" th:src="@{__${imgUrl}__/icons/{id}.png(id=*{id})}">
-			[[*{fullName}]] [[#{character.retirement}]]
+			<img class="icon" x-bind:class="character.id" x-bind:src="$store.iconsUrl + '/' + character.id + '.png'">
+			<span x-jsz>{{character.fullName}}</span>
+			[[#{character.retirement}]]
 		</h2>
 
 		<!-- Personal quests -->
-		<th:block th:if="*{personalQuest}">
-			<th:block th:replace="~{:: personalQuest(*{personalQuest})}"></th:block>
-		</th:block>
-		<th:block th:if="*{additionalPersonalQuest}">
-			<th:block th:replace="~{:: personalQuest(*{additionalPersonalQuest})}"></th:block>
-		</th:block>
+		<template x-if="character.personalQuest">
+			<div x-data="{ get personalQuest() { return character.personalQuest } }">
+				<th:block th:replace="~{:: personalQuest}"/>
+			</div>
+		</template>
+		<template x-if="character.additionalPersonalQuest">
+			<div x-data="{ get personalQuest() { return character.additionalPersonalQuest } }">
+				<th:block th:replace="~{:: personalQuest}"/>
+			</div>
+		</template>
 
 		<!-- Retirement section -->
-		<th:block th:if="*{retirement}">
-			<th:block th:replace="~{fragments/section :: section(*{retirement})}"></th:block>
-		</th:block>
+		<template x-if="character.retirement">
+			<div x-data="{ get section() { return character.retirement } }">
+				<th:block th:replace="~{fragments/section :: section}"/>
+			</div>
+		</template>
 	</div>
 
 
 	<!-- -------------- -->
 	<!-- PERSONAL QUEST -->
 	<!-- -------------- -->
-	<div th:fragment="personalQuest(personalQuest)" th:object="${personalQuest}" th:id="|personalQuest_*{id}|" class="personalQuest">
+	<div th:fragment="personalQuest" x-bind:id="'personalQuest_' + personalQuest.id" class="personalQuest">
 		<!-- Card -->
 		<div class="playingCard integrated">
-			<img th:src="@{__${imgUrl}__/personalQuests/{id}.png(id=*{id})}">
+			<img x-bind:src="$store.imgUrl + '/personalQuests/' + personalQuest.id + '.png'">
 		</div>
 
 		<!-- Title -->
-		<h3 class="title titleSecondary">[[*{title}]]</h3>
+		<h3 class="title titleSecondary" x-jsz>{{personalQuest.title}}</h3>
 
 		<!-- Description -->
-		<div class="description">[[*{description}]]</div>
+		<div class="description" x-jsz>{{personalQuest.description}}</div>
 		<hr>
 
 		<!-- Requirements -->
-		<div class="requirements">[(*{requirements})]</div>
+		<div class="requirements" x-jsz>{{personalQuest.requirements}}</div>
 
 		<!-- Rewards -->
-		<div class="card fhCard pqRewards" th:with="unlockedBuilding=*{unlockedBuilding.name() == 'MAIN'} ? *{building} : *{altBuilding}">
-			<div class="card-header">[[#{section.rewards}]]</div>
-			<div class="card-body">
-				[[#{personalQuest.openEnvelope}]] <img class="icon envelope" th:src="@{__${imgUrl}__/icons/envelope.png}"> [[${unlockedBuilding.number}]]
+		<bs:card class="fhCard pqRewards">
+			<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
+			<bs:cardBody>
+				[[#{personalQuest.openEnvelope}]]
+				<img class="icon envelope" x-bind:src="$store.imgUrl + '/icons/envelope.png'">
+				<span x-jsz>{{personalQuest.building.number}}</span>
 				<i class="fa-solid fa-right-long mx-1"></i>
-				[[#{personalQuest.unlockBuilding}]] <strong>[[${unlockedBuilding.name}]]</strong>
-			</div>
-		</div>
+				[[#{personalQuest.unlockBuilding}]]
+				<strong x-jsz>{{personalQuest.building.name}}</strong>
+			</bs:cardBody>
+		</bs:card>
 	</div>
 </body>
 </html>

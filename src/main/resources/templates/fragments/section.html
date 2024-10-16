@@ -55,15 +55,13 @@
 		</template>
 
 		<!-- Boss specials -->
-		<template x-for="bossSpecial in section.bossSpecials">
+		<template x-for="(bossSpecial, key) in section.bossSpecials">
 			<bs:card class="fhCard bossSpecial" x-jsz>
 				<bs:cardHeader>
 					<i class="fa-solid fa-skull fa-xs"></i>
-					[[#{section.bossSpecial}]] {{bossSpecial.key}}
+					[[#{section.bossSpecial}]] {{key}}
 				</bs:cardHeader>
-				<bs:cardBody>
-					{{bossSpecial.value}}
-				</bs:cardBody>
+				<bs:cardBody>{{bossSpecial}}</bs:cardBody>
 			</bs:card>
 		</template>
 

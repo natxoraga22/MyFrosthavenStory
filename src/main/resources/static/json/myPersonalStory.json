@@ -1,7 +1,7 @@
 {
 	"party": [
 		{ "id": "blinkblade", "personalQuest": { "id": "04" }},
-		{ "id": "deathwalker", "personalQuest": { "id": "10" } }
+		{ "id": "deathwalker", "personalQuest": { "id": "10" }}
 	],
 	"story": [
 		{ "scenario": { "id": "000" }},

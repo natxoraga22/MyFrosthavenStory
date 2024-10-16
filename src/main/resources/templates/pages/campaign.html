@@ -31,6 +31,7 @@
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: campaignPageJs}"></script>
+		<script th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
 		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
 		<script th:replace="~{fragments/event :: eventJs}"></script>
 		<script th:replace="~{fragments/section :: sectionJs}"></script>
@@ -44,6 +45,7 @@
 	<script th:fragment="campaignPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
 			Alpine.store("charactersMap", /*[[${charactersMap}]]*/ {});
+			Alpine.store("personalQuestsMap", /*[[${personalQuestsMap}]]*/ {});
 			Alpine.store("scenariosMap", /*[[${scenariosMap}]]*/ {});
 			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
 			Alpine.store("sectionsMap", /*[[${sectionsMap}]]*/ {});
@@ -67,12 +69,8 @@
 				initParty(psPartyMembers) {
 					log.entry(psPartyMembers);
 					for (const psPartyMember of psPartyMembers) {
-						const partyMember = { ...this.$store.charactersMap[psPartyMember.id] };
-						if (partyMember) {
-							// TO-DO: Personal Quest
-							// ...
-							this.partyMembers.push(partyMember);
-						}
+						const partyMember = this.getCharacter(psPartyMember);
+						if (partyMember !== null) this.partyMembers.push(partyMember);
 					}
 					log.exit();
 				},
@@ -80,7 +78,7 @@
 				initScenario(psScenario) {
 					log.entry(psScenario);
 					const scenario = this.getScenario(psScenario);
-					if (scenario != null) this.campaignItems.push({ scenario: scenario });
+					if (scenario !== null) this.campaignItems.push({ scenario: scenario });
 					log.exit();
 				},
 
@@ -100,7 +98,7 @@
 					if (psOutpostPhase.townGuardPerks?.length > 0) {
 						outpostPhase.townGuardPerks = [];
 						for (const psSection of psOutpostPhase.townGuardPerks) {
-							const section = this.$store.sectionsMap[psSection.id];
+							const section = this.getSection(psSection);
 							if (section) outpostPhase.townGuardPerks.push(section);
 						}
 					}
@@ -108,7 +106,7 @@
 					if (psOutpostPhase.passageOfTime?.length > 0) {
 						outpostPhase.passageOfTime = [];
 						for (const psSection of psOutpostPhase.passageOfTime) {
-							const section = this.$store.sectionsMap[psSection.id];
+							const section = this.getSection(psSection);
 							if (section) outpostPhase.passageOfTime.push(section);
 						}
 					}
@@ -120,16 +118,27 @@
 					// Level ups
 					if (psOutpostPhase.levelUps?.length > 0) {
 						outpostPhase.levelUps = [];
-						for (const psLevelUp of psOutpostPhase.levelUps) {
-							const character = this.getCharacter(psLevelUp);
+						for (const psCharacter of psOutpostPhase.levelUps) {
+							const character = this.getPartyMember(psCharacter);
 							if (character) outpostPhase.levelUps.push(character);
 						}
 					}
-
 					// Retirements
-
+					if (psOutpostPhase.retirements?.length > 0) {
+						outpostPhase.retirements = [];
+						for (const psCharacter of psOutpostPhase.retirements) {
+							const character = this.getPartyMember(psCharacter);
+							if (character) outpostPhase.retirements.push(character);
+						}
+					}
 					// New members
-
+					if (psOutpostPhase.newMembers?.length > 0) {
+						outpostPhase.newMembers = [];
+						for (const psCharacter of psOutpostPhase.newMembers) {
+							const character = this.getCharacter(psCharacter);
+							if (character) outpostPhase.newMembers.push(character);
+						}
+					}
 					// Build
 					if (psOutpostPhase.build?.length > 0) {
 						outpostPhase.build = [];
@@ -160,10 +169,36 @@
 					const rawCharacter = this.$store.charactersMap[psCharacter.id];
 					if (rawCharacter) {
 						const character = { ...rawCharacter };
-						if (psCharacter.level) character.level = psCharacter.level;
+						// Personal quest
+						if (psCharacter.personalQuest) {
+							const personalQuest = this.getPersonalQuest(psCharacter.personalQuest);
+							if (personalQuest) character.personalQuest = personalQuest;
+						}
 						return character;
 					}
-					return null;
+					else return null;
+				},
+
+				getPartyMember(psCharacter) {
+					const partyMember = this.partyMembers.find(partyMember => partyMember.id === psCharacter.id);
+					if (partyMember) {
+						const partyMemberCopy = { ...partyMember };
+						// Additional personal quest
+						if (psCharacter.additionalPersonalQuest) {
+							const additionalPersonalQuest = this.getPersonalQuest(psCharacter.additionalPersonalQuest);
+							if (additionalPersonalQuest) partyMemberCopy.additionalPersonalQuest = additionalPersonalQuest;
+						}
+						// Level
+						if (psCharacter.level) partyMemberCopy.level = psCharacter.level;
+						return partyMemberCopy;
+					}
+					else return null;
+				},
+
+				getPersonalQuest(psPersonalQuest) {
+					const rawPersonalQuest = this.$store.personalQuestsMap[psPersonalQuest.id];
+					if (rawPersonalQuest) return { ...rawPersonalQuest };
+					else return null;
 				},
 
 				getScenario(psScenario) {
@@ -173,18 +208,29 @@
 						if (psScenario.path?.length > 0) scenario.path = psScenario.path;
 						return scenario;
 					}
-					return null;
+					else return null;
 				},
 
 				getEvent(psEvent) {
 					const rawEvent = this.$store.eventsMap[psEvent.id];
 					if (rawEvent) {
 						const event = { ...rawEvent };
+						// Chosen options
 						if (psEvent.chosenOptions?.length > 0) event.chosenOptionsIds = psEvent.chosenOptions;
 						else if (psEvent.chosenOption) event.chosenOptionsIds = [psEvent.chosenOption];
+						// Random scenario section
+						if (psEvent.randomScenarioSection) {
+							event.randomScenarioSection = this.$store.sectionsMap[psEvent.randomScenarioSection.id];
+						}
 						return event;
 					}
-					return null;
+					else return null;
+				},
+
+				getSection(psSection) {
+					const rawSection = this.$store.sectionsMap[psSection.id];
+					if (rawSection) return { ...rawSection };
+					else return null;
 				},
 
 				getBuilding(psBuilding) {
@@ -195,7 +241,7 @@
 						building.sectionPath = psBuilding.path;
 						return building;
 					}
-					return null;
+					else return null;
 				}
 			}));
 		});

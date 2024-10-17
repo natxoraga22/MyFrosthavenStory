@@ -68,6 +68,13 @@
 				</div>
 			</template>
 		</div>
+
+		<!-- Random scenario section -->
+		<template x-if="scenario.randomScenarioSection">
+			<div x-data="{ section: scenario.randomScenarioSection }">
+				<th:block th:replace="~{fragments/section :: section}"/>
+			</div>
+		</template>
 	</div>
 
 

@@ -23,7 +23,7 @@
 			<!-- PARTY -->
 			<div id="party" class="anchor">
 				<h1 class="title">[[#{party.title}]]</h1>
-				<template x-for="character in partyMembers">
+				<template x-for="character in initialParty">
 					<div x-data="{ initialParty: true }">
 						<th:block th:replace="~{fragments/character :: character}"></th:block>
 					</div>

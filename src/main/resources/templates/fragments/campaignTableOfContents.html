@@ -15,11 +15,12 @@
 			</bs:listItem>
 
 			<!-- PARTY -->
-			<template x-if="partyMembers.length > 0">
+			<template x-if="initialParty.length > 0">
 				<div style="display:contents;">
 					<bs:listItem tag="a" action href="#party">[[#{party.title}]]</bs:listItem>
-					<template x-for="character in partyMembers">
-						<bs:listItem tag="a" action class="child" x-bind:href="'#character_' + character.id">
+					<template x-for="character in initialParty">
+						<bs:listItem tag="a" action class="child" x-bind:href="'#character_' + character.id"
+						             x-data="{ retirement: false, newMember: false }">
 							<th:block th:replace="~{:: character}"/>
 						</bs:listItem>
 					</template>
@@ -76,7 +77,7 @@
 							<!-- Retirements -->
 							<template x-for="character in outpostPhase.retirements">
 								<bs:listItem tag="a" action class="child" x-bind:href="'#retirement_' + character.id"
-								             x-data="{ retirement: true }">
+								             x-data="{ retirement: true, newMember: false }">
 									<th:block th:replace="~{:: character}"/>
 								</bs:listItem>
 							</template>
@@ -84,7 +85,7 @@
 							<!-- New members -->
 							<template x-for="character in outpostPhase.newMembers">
 								<bs:listItem tag="a" action class="child" x-bind:href="'#character_' + character.id"
-								             x-data="{ newMember: true }">
+								             x-data="{ retirement: false, newMember: true }">
 									<th:block th:replace="~{:: character}"/>
 								</bs:listItem>
 							</template>

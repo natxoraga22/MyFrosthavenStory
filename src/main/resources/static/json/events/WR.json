@@ -1,10 +1,10 @@
 {
 	"WR-01": {
-		"text": "<p>\"YOU! Strong mer-canaries! You help Hurdle, yes!\"</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he’s been on his own in the wilderness for a long, long time.</p><p>\"Help kill evil Clovis! Ruined Hurdle’s home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!\" The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. \"Cloooovis,\" he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam…</p><p>It’s a beaver. Clovis is a beaver. And not a very large one at that.</p><p>\"Clovis dam stream,\" the hermit spits, \"Stream flood Hurdle’s home. Clovis must SUFFER, yes!\"</p><p>He turns back to you and repeats his demand. \"You kill evil Clovis! I reward greedy mer-canaries. Kill kill!\"</p>",
+		"text": "<p>“YOU! Strong mer-canaries! You help Hurdle, yes!”</p><p>An ancient Vermling approaches from a copse of trees. From the looks of him, he’s been on his own in the wilderness for a long, long time.</p><p>“Help kill evil Clovis! Ruined Hurdle’s home! Mer-canaries bring justice for Hurdle! You follow, you kill, I reward!” The Vermling called Hurdle leads you to the bank of a briskly running stream, where he points a bony claw toward a large pile of sticks lying across the stream bed. “Cloooovis,” he whispers.</p><p>As you watch, the malodorous beast called Clovis emerges from the water and climbs atop the dam…</p><p>It’s a beaver. Clovis is a beaver. And not a very large one at that.</p><p>“Clovis dam stream,” the hermit spits, “Stream flood Hurdle’s home. Clovis must SUFFER, yes!”</p><p>He turns back to you and repeats his demand. “You kill evil Clovis! I reward greedy mer-canaries. Kill kill!”</p>",
 		"options": {
 			"A": {
 				"trigger": "Kill Clovis.",
-				"text": "Clovis sounds like a pretty bad guy. You decide to do this Vermling—no, the world—a favor and rid it of this nefarious beast. A single arrow is all it takes to lay Clovis to rest. Hurdle is overjoyed. \"YES! Take that, Clovis!\" Regarding your reward, the hermit touches you. \"You lucky now,\" he says cryptically. \"You find what you seek.\"",
+				"text": "Clovis sounds like a pretty bad guy. You decide to do this Vermling—no, the world—a favor and rid it of this nefarious beast. A single arrow is all it takes to lay Clovis to rest. Hurdle is overjoyed. “YES! Take that, Clovis!” Regarding your reward, the hermit touches you. “You lucky now,” he says cryptically. “You find what you seek.”",
 				"rewards": {
 					"text": "Gain 1 collective [hide].<br/>All characters start the next scenario with [muddle].<br/>The first time any character would draw a loot card next scenario, they instead draw two cards, choose one to keep, and place the other on the bottom of the deck."
 				}
@@ -13,7 +13,7 @@
 				"id": "B",
 				"trigger": "Try to talk the raving hermit down.",
 				"requirement": "[trait] OUTCAST",
-				"text": "You know there’s no use trying to convince the stubborn hermit of the beaver’s innocence. Instead you appeal to Hurdle’s better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. \"Wise mer-canary… You help Hurdle see truth, yes. Hurdle return gift.\"",
+				"text": "You know there’s no use trying to convince the stubborn hermit of the beaver’s innocence. Instead you appeal to Hurdle’s better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. “Wise mer-canary… You help Hurdle see truth, yes. Hurdle return gift.”",
 				"rewards": {
 					"text": "Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved)."
 				}
@@ -22,7 +22,7 @@
 				"id": "B",
 				"trigger": "Try to talk the raving hermit down.",
 				"requirement": "[not] [trait] OUTCAST",
-				"text": "You’ve been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. \"Stupid mer-canaries!\" The hermit rages as he scurries off. \"You regret!\" As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you… but when you look back, Clovis is gone.",
+				"text": "You’ve been asked to do some demeaning things as a mercenary, but your pride is still above settling a vendetta against a small, semi-aquatic mammal. “Stupid mer-canaries!” The hermit rages as he scurries off. “You regret!” As you turn away, you hear a menacing chitter—almost a laugh—from the dam behind you… but when you look back, Clovis is gone.",
 				"rewards": {
 					"text": "All characters start the next scenario with [curse]."
 				}
@@ -59,7 +59,7 @@
 				"requirement": "LOSE 1 MATERIAL RESOURCE EACH",
 				"text": "The hulking Algox steps aside and waves you through. “No run, go slow. Enjoy bridge.” You’re not sure if going slow is recommended for safety or overall enjoyment, but the bridge does hold your party’s weight the whole way across.",
 				"rewards": {
-					"text": "Mark one box below. When all boxes are marked, remove this card from the deck and add event WR-35 to the winter road deck.<br/><i class=\"fa-regular fa-square\"></i><i class=\"fa-regular fa-square\"></i>"
+					"text": "Mark one box below. When all boxes are marked, remove this card from the deck and add event WR-35 to the winter road deck.<br/>[square] [square]</i>"
 				}
 			},
 			"A2": {
@@ -92,11 +92,11 @@
 		}
 	},
 	"WR-06": {
-		"text": "<p>A translucent Aesther wearing hunter’s garb is studying some tracks on the path, and turns to catch your attention as you approach. \"You there! A moment of your time!\" He flags you down. \"I’ve been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?\"</p><p>When you don’t immediately respond, he thumbs a wicked-looking blade and continues: \"You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.\" The Aesther’s eyes flash a dark longing.</p>",
+		"text": "<p>A translucent Aesther wearing hunter’s garb is studying some tracks on the path, and turns to catch your attention as you approach. “You there! A moment of your time!” He flags you down. “I’ve been searching for a Vermling by the name of Dramm. About yea high. Have you seen him?”</p><p>When you don’t immediately respond, he thumbs a wicked-looking blade and continues: “You see, this particular Vermling killed someone quite dear to me, and I promised that I would return the favor.” The Aesther’s eyes flash a dark longing.</p>",
 		"options": {
 			"A": {
 				"trigger": "Agree to keep an eye out for him.",
-				"text": "<p>You assure the Aesther hunter that you’ll keep an eye out for the Vermling killer. He smiles.</p><p>\"My thanks. I am Malak. If you do locate him I ask only that you call for me so I can finish my task at last.\"</p>",
+				"text": "<p>You assure the Aesther hunter that you’ll keep an eye out for the Vermling killer. He smiles.</p><p>“My thanks. I am Malak. If you do locate him I ask only that you call for me so I can finish my task at last.”</p>",
 				"rewards": {
 					"events": {
 						"SR": [{ "id": "SR-36" }]
@@ -138,11 +138,11 @@
 	"WR-09": {},
 	"WR-10": {},
 	"WR-11": {
-		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. \"Yep. They’ll let you through, but they want something in return.\" The Kivak blink in unison. You look at him, not understanding. \"It’s a Kivak hive. All linked up,\" he says, as if this clarified things.</p><p>He rolls his eyes. \"Harrowers… they’s a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans’re just gray worms swimming around in a skull driving a skeleton around. This here’s a buncha Kivak all as one. Anyways, they want something first.\" The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>\"That one wronged the others. They want you to kill her.\" He shrugs. \"I understand ’em, but I can’t say I understand ’em.\" The Kivak waits, unblinkingly.</p>",
+		"text": "<p>For as far as the eye can see, the view is the same: nothing but Kivak, pack animals known for their rocky skin and prominent horn. Hundreds, packed in together for warmth or comfort, block the path ahead of you. As you approach, they stop their grazing in an eerie unison, their heads turning in perfect concert. They refuse to part to allow you passage.</p><p>A Quatryl shephard in muddy overalls steps forward from the crowd. “Yep. They’ll let you through, but they want something in return.” The Kivak blink in unison. You look at him, not understanding. “It’s a Kivak hive. All linked up,” he says, as if this clarified things.</p><p>He rolls his eyes. “Harrowers… they’s a bunch a bugs that all work as one thing. Savvas is thinking rocks. Heck, even humans’re just gray worms swimming around in a skull driving a skeleton around. This here’s a buncha Kivak all as one. Anyways, they want something first.” The animals part, leaving a single member of their group staring at you in the center of the clearing.</p><p>“That one wronged the others. They want you to kill her.” He shrugs. “I understand ’em, but I can’t say I understand ’em.” The Kivak waits, unblinkingly.</p>",
 		"options": {
 			"A": {
 				"trigger": "Kill the Kivak.",
-				"text": "You cut the doomed Kivak down. It doesn’t move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: \"Most Kivak just want to eat dirt and grass. O’course I get the weird ones.\"",
+				"text": "You cut the doomed Kivak down. It doesn’t move or cry out, having seemingly accepted its fate. The remaining Kivak part and allow you to pass, no longer interested in the proceedings. The shepherd mumbles as you go: “Most Kivak just want to eat dirt and grass. O’course I get the weird ones.”",
 				"rewards": {
 					"text": "No effect."
 				}
@@ -171,7 +171,25 @@
 	"WR-13": {},
 	"WR-14": {},
 	"WR-15": {},
-	"WR-16": {},
+	"WR-16": {
+		"text": "<p>Screaming is usually a pretty good indication something is wrong, and an Algox battle cry is a good reason to hurry up and get involved. Breaking into a full sprint through the snowy road, you quickly find an overturned cart surrounded by bright white Algox hides. A short distance away, you spot four Algox bandits attacking a Valrath.</p><p>You shout to distract them from the bloodied Valrath. The good news is it worked—they stop attacking the Valrath. The bad news is that it worked—they’re now very focused on you.</p><p>They growl as you circle each other, both groups waiting for the other to make a move. The Valrath whimpers in pain between you.</p>",
+		"options": {
+			"A": {
+				"trigger": "Don’t let any of these bandits near the injured traveler. Take up a defensive position around the Valrath.",
+				"text": "Your top priority is to defend this Valrath. You take up a defensive position and bear your weapons. The Algox initiate a few attacks, but seeing your resolute defense of the traveler, they break off, collect the hides from around the cart, and retreat into the woods. Once you’re sure it’s safe, you check on the Valrath. The wounds are too severe and you can’t tend to them fast enough. You search the body—the dead have no need for material possessions.",
+				"rewards": {
+					"text": "Gain “Skinning Knife” [item_231]."
+				}
+			},
+			"B": {
+				"trigger": "The best defense is a good offense. Charge in and bring the fight to them.",
+				"text": "You charge at the Algox, hoping to drive them off quickly so you can come back to tend to the Valrath. These towering bandits are holding their own, putting up a ferocious fight, when they suddenly flee into the woods. Confused, you turn around just in time to see a fifth Algox dragging the Valrath into the woods. You try to track them, but the robbers are very adept at covering their tracks in the snow, and you soon lose the trail. The Valrath might be gone, but the overturned cart is still there.",
+				"rewards": {
+					"text": "Gain 1 [hide] each.<br/>Lose 1 morale."
+				}
+			}
+		}
+	},
 	"WR-17": {
 		"text": "<p>A gnarled Orchid stands in the middle of the road, watching you approach. A ratty cloak barely covers her shoulders, but she doesn’t seem to mind the cold air. She beckons you closer, then quietly recites something under her breath.</p><p>“May your words never falter,<br/>When you face the crystal altar,<br/>They will not agree…”</p><p>She pauses before finishing, staring you down with deep blue eyes and urging you to step within whispering distance.</p>",
 		"options": {
@@ -185,18 +203,18 @@
 		}
 	},
 	"WR-18": {
-		"text": "<p>\"Mer-canaries! You help! Help Hurdle, yes!\"</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>\"Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!\" Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>\"Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle… and greedy mer-canaries!\" Hurdle grins, sweeping his arm to indicate a nearby clearing. \"Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs…\" Hurdle pauses, scrunching up his nose. \"On second thought, don’t dig up eggs.\"</p>",
+		"text": "<p>“Mer-canaries! You help! Help Hurdle, yes!”</p><p>The snow-wizened Vermling calling himself Hurdle rushes up to you with such speed that you think he might attack, but he stops short, waving his arms indignantly.</p><p>“Tonight is soup! Jeremy hide food for soup night, but forgot hiding spots. STUPID Jeremy!” Hurdle shouts at a tree behind you. Following his gaze you see Jeremy, a red squirrel, sitting on a branch. Jeremy chitters back angrily, clearly masking embarrassment.</p><p>“Stupid Jeremy lost food, and now finding it is up to Hurdle. Hurdle… and greedy mer-canaries!” Hurdle grins, sweeping his arm to indicate a nearby clearing. “Jeremy leave food all over! I reward mer-canary who digs up most! Berries, and nuts, and eggs…” Hurdle pauses, scrunching up his nose. “On second thought, don’t dig up eggs.”</p>",
 		"options": {
 			"A": {
 				"trigger": "Help Hurdle dig up Jeremy’s hidden food.",
-				"text": "<p>You sigh and heft your shovel. You suppose this is what they mean when they say \"No job is too small.\"</p>",
+				"text": "<p>You sigh and heft your shovel. You suppose this is what they mean when they say “No job is too small.”</p>",
 				"rewards": {
 					"text": "<p>All characters each take one turn drawing as many cards as they want from the monster attack modifier deck, one at a time, until they choose to stop. If a character draws a null card, they’ve unearthed an old egg, and their number of drawn cards is considered O. Shuffle the entire monster attack modifier deck between each turn.</p><p>Characters are then awarded the following, based on who drew the most cards (tied characters gain the full rewards of their shared rank):</p><p>1st: Gain 12 experience.<br/>2nd: Gain 6 gold.<br/>3rd: Gain 2 [lumber].<br/>4th: Gain 1 [hide].</p><p>If you collectively drew at least Cx3 cards, Hurdle is overjoyed: add a [plus1] sticker to one [axenut] loot card (the card gives one extra [axenut] when resolved).</p>"
 				}
 			},
 			"B": {
 				"trigger": "Offer to share your own rations instead.",
-				"text": "You’re a sell-sword, not a sell-shovel. Still, you’re happy to bail Jeremy out of an embarrassing situation, so you volunteer some of your own supplies. Hurdle snatches up your offering and scurries off in a huff, muttering that next time will be \"Jeremy soup.\"",
+				"text": "You’re a sell-sword, not a sell-shovel. Still, you’re happy to bail Jeremy out of an embarrassing situation, so you volunteer some of your own supplies. Hurdle snatches up your offering and scurries off in a huff, muttering that next time will be “Jeremy soup.”",
 				"rewards": {
 					"text": "All characters start the next scenario discarding one card."
 				}
@@ -204,7 +222,7 @@
 		}
 	},
 	"WR-19": {
-		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>\"Thank you!\" A stocky Quatryl woman crawls out of the hatch. \"My aeronautical hit some rough clouds, and I couldn’t blow my emergency hatch. Been a while… I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!\" She looks around. \"Was worried I was being rescued by a bunch of Lurkers. I’m strictly opposed to being a snack.\"</p><p>She pulls a device from her pocket and scans the horizon. \"It’s actually a decent hour to get back into the sky… could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?\" She gestures into the confined space of the aeronautical.</p>",
+		"text": "<p>ding, diNG, dING, DING! A lone bell rings from somewhere down a crevasse. You make your way down the mountainside and find a metal vessel mostly-buried at the bottom. Attached to the top of the vessel and floating without explanation is a red canvas balloon large enough to fit a building inside.</p><p>DING! DING! DING! A brass bell clangs for your attention—sounds like someone inside needs your help. With a crank, the hatch pops open, and a hiss of air passes through.</p><p>“Thank you!” A stocky Quatryl woman crawls out of the hatch. “My aeronautical hit some rough clouds, and I couldn’t blow my emergency hatch. Been a while… I tell you, that bell was the best investment in this thing—I use it more than the steering wheel!” She looks around. “Was worried I was being rescued by a bunch of Lurkers. I’m strictly opposed to being a snack.”</p><p>She pulls a device from her pocket and scans the horizon. “It’s actually a decent hour to get back into the sky… could I impose on you a bit more to dig out my crash landing in exchange for a ride closer to your destination?” She gestures into the confined space of the aeronautical.</p>",
 		"options": {
 			"A1": {
 				"id": "A",
@@ -336,6 +354,7 @@
 		"text": "<p>The sun is disappearing behind the mountains for the evening. You set your pack down on a rock embedded in the snow and start setting up camp.</p><p>CRACK! The weight of your pack was just enough to break the rock free of the snow and ice, creating a small avalanche and sending your supplies tumbling off a cliff.</p><p>Winter days are brutally cold, but without a source of warmth, winter nights are deadly. You’re unprepared in unfamiliar territory, sunlight is dwindling, and you can already feel your fingertips going numb. If you don’t find a way to warm up or find a way through this darkness, you’re going to have a rough night.</p>",
 		"options": {
 			"A1": {
+				"id": "A",
 				"trigger": "Search the remains of what you brought with you for a way to generate heat and light.",
 				"requirement": "[trait] RESOURCEFUL",
 				"text": "You are able to stretch the meager supplies and keep everyone warm through the night.",
@@ -344,6 +363,7 @@
 				}
 			},
 			"A2": {
+				"id": "A",
 				"trigger": "Search the remains of what you brought with you for a way to generate heat and light.",
 				"requirement": "[not] [trait] RESOURCEFUL",
 				"text": "You have to make some hard decisions, but it’s this or freeze.",

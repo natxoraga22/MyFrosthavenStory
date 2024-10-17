@@ -37,26 +37,4 @@ public class CampaignController {
 		return log.exit(new ModelAndView(webPage.getTemplateName()));
 	}
 
-
-
-
-
-/*
-	@PostMapping("/personalStory")
-	public ModelAndView personalStory(Model model, @RequestBody(required = false) PersonalStory personalStory) throws IOException {
-		log.entry(personalStory);
-		Campaign campaign = new Campaign(personalStory, frosthaven, fhStory);
-
-		// DEBUG tracker
-		//log.debug("{}", campaign.getTracker().getAvailableEvents());
-		//log.debug("{}", campaign.getTracker().getMainQuestAvailableScenarios());
-		//log.debug("{}", campaign.getTracker().getSideQuestAvailableScenarios());
-
-		model.addAttribute("page", WebPage.CAMPAIGN);
-		model.addAttribute("welcome", frosthaven.getWelcome());
-		model.addAttribute("party", campaign.getOriginalParty().values());
-		model.addAttribute("story", campaign.getStory());
-		return log.exit(new ModelAndView("fragments/campaign :: campaign"));
-	}*/
-
 }

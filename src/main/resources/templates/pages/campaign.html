@@ -52,7 +52,8 @@
 			Alpine.store("buildingsMap", /*[[${buildingsMap}]]*/ {});
 
 			Alpine.data("campaignPageData", () => ({
-				partyMembers: [],
+				initialParty: [],
+				currentParty: [],
 				campaignItems: [],
 				outpostPhaseCount: 0,
 
@@ -70,7 +71,10 @@
 					log.entry(psPartyMembers);
 					for (const psPartyMember of psPartyMembers) {
 						const partyMember = this.getCharacter(psPartyMember);
-						if (partyMember !== null) this.partyMembers.push(partyMember);
+						if (partyMember !== null) {
+							this.initialParty.push(partyMember);
+							this.currentParty.push(partyMember);
+						}
 					}
 					log.exit();
 				},
@@ -128,7 +132,10 @@
 						outpostPhase.retirements = [];
 						for (const psCharacter of psOutpostPhase.retirements) {
 							const character = this.getPartyMember(psCharacter);
-							if (character) outpostPhase.retirements.push(character);
+							if (character) {
+								outpostPhase.retirements.push(character);
+								this.currentParty = this.currentParty.filter(partyMember => partyMember.id !== character.id);
+							}
 						}
 					}
 					// New members
@@ -136,7 +143,10 @@
 						outpostPhase.newMembers = [];
 						for (const psCharacter of psOutpostPhase.newMembers) {
 							const character = this.getCharacter(psCharacter);
-							if (character) outpostPhase.newMembers.push(character);
+							if (character) {
+								outpostPhase.newMembers.push(character);
+								this.currentParty.push(character);
+							}
 						}
 					}
 					// Build
@@ -180,7 +190,7 @@
 				},
 
 				getPartyMember(psCharacter) {
-					const partyMember = this.partyMembers.find(partyMember => partyMember.id === psCharacter.id);
+					const partyMember = this.currentParty.find(partyMember => partyMember.id === psCharacter.id);
 					if (partyMember) {
 						const partyMemberCopy = { ...partyMember };
 						// Additional personal quest
@@ -205,7 +215,12 @@
 					const rawScenario = this.$store.scenariosMap[psScenario.id];
 					if (rawScenario) {
 						const scenario = { ...rawScenario };
+						// Path
 						if (psScenario.path?.length > 0) scenario.path = psScenario.path;
+						// Random scenario section
+						if (psScenario.randomScenarioSection) {
+							scenario.randomScenarioSection = this.$store.sectionsMap[psScenario.randomScenarioSection.id];
+						}
 						return scenario;
 					}
 					else return null;
@@ -237,8 +252,10 @@
 					const rawBuilding = this.$store.buildingsMap[psBuilding.id];
 					if (rawBuilding) {
 						const building = { ...rawBuilding };
-						building.level = psBuilding.level;
-						building.sectionPath = psBuilding.path;
+						if (psBuilding.level) {
+							building.level = psBuilding.level;
+							building.sectionPath = psBuilding.path ?? Object.keys(building.levels[building.level].builtSections);
+						}
 						return building;
 					}
 					else return null;

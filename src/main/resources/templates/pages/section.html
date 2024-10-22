@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
 <head>
 	<meta charset="utf-8">
-	<title>[[#{eventPage.title}]]</title>
+	<title>[[#{sectionPage.title}]]</title>
 
 	<link rel="stylesheet" th:href="@{/css/scenario.css}">
 	<link rel="stylesheet" th:href="@{/css/section.css}">
@@ -25,8 +25,8 @@
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: sectionPageJs}"></script>
+		<script th:replace="~{fragments/frosthaven :: frosthavenJs}"></script>
 		<script th:replace="~{fragments/sectionForm :: sectionFormJs}"></script>
-		<script th:replace="~{fragments/section :: sectionJs}"></script>
 	</th:block>
 
 
@@ -35,14 +35,26 @@
 	<!-- --------------- -->
 	<script th:fragment="sectionPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.store("sectionsMap", /*[[${sectionsMap}]]*/ {});
-
 			Alpine.data("sectionPageData", () => ({
 				sectionId: /*[[${sectionId}]]*/ null,
 				section: {},
 
 				init() {
-					if (this.sectionId) this.sectionId = this.sectionId.replace("_", ".");
+					if (this.sectionId) {
+						this.sectionId = this.sectionId.replace("_", ".");
+						this.setSection(this.sectionId);
+					}
+					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
+				},
+
+				// "changed-section-id" event handler
+				setSection(sectionId) {
+					log.entry(sectionId);
+					if (sectionId) {
+						this.section = this.$store.frosthaven.getSection({ id: sectionId });
+						log.debug(this.section);
+					}
+					log.exit();
 				}
 			}));
 		});

@@ -31,10 +31,10 @@
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: campaignPageJs}"></script>
+		<script th:replace="~{fragments/frosthaven :: frosthavenJs}"></script>
 		<script th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
 		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
 		<script th:replace="~{fragments/event :: eventJs}"></script>
-		<script th:replace="~{fragments/section :: sectionJs}"></script>
 		<script th:replace="~{fragments/outpostPhase :: outpostPhaseJs}"></script>
 	</th:block>
 
@@ -44,13 +44,6 @@
 	<!-- ---------------- -->
 	<script th:fragment="campaignPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.store("charactersMap", /*[[${charactersMap}]]*/ {});
-			Alpine.store("personalQuestsMap", /*[[${personalQuestsMap}]]*/ {});
-			Alpine.store("scenariosMap", /*[[${scenariosMap}]]*/ {});
-			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
-			Alpine.store("sectionsMap", /*[[${sectionsMap}]]*/ {});
-			Alpine.store("buildingsMap", /*[[${buildingsMap}]]*/ {});
-
 			Alpine.data("campaignPageData", () => ({
 				initialParty: [],
 				currentParty: [],
@@ -71,7 +64,7 @@
 				initParty(psPartyMembers) {
 					log.entry(psPartyMembers);
 					for (const psPartyMember of psPartyMembers) {
-						const partyMember = this.getCharacter(psPartyMember);
+						const partyMember = this.$store.frosthaven.getCharacter(psPartyMember);
 						if (partyMember !== null) {
 							this.initialParty.push(partyMember);
 							this.currentParty.push(partyMember);
@@ -82,21 +75,21 @@
 
 				initScenario(psScenario) {
 					log.entry(psScenario);
-					const scenario = this.getScenario(psScenario);
+					const scenario = this.$store.frosthaven.getScenario(psScenario);
 					if (scenario !== null) this.campaignItems.push({ scenario: scenario });
 					log.exit();
 				},
 
 				initEvent(psEvent) {
 					log.entry(psEvent);
-					const event = this.getEvent(psEvent);
+					const event = this.$store.frosthaven.getEvent(psEvent);
 					if (event !== null) this.campaignItems.push({ event: event });
 					log.exit();
 				},
 
 				initSection(psSection) {
 					log.entry(psSection);
-					const section = this.getSection(psSection);
+					const section = this.$store.frosthaven.getSection(psSection);
 					if (section !== null) this.campaignItems.push({ section: section });
 					log.exit();
 				},
@@ -110,7 +103,7 @@
 					if (psOutpostPhase.townGuardPerks?.length > 0) {
 						outpostPhase.townGuardPerks = [];
 						for (const psSection of psOutpostPhase.townGuardPerks) {
-							const section = this.getSection(psSection);
+							const section = this.$store.frosthaven.getSection(psSection);
 							if (section) outpostPhase.townGuardPerks.push(section);
 						}
 					}
@@ -118,20 +111,20 @@
 					if (psOutpostPhase.passageOfTime?.length > 0) {
 						outpostPhase.passageOfTime = [];
 						for (const psSection of psOutpostPhase.passageOfTime) {
-							const section = this.getSection(psSection);
+							const section = this.$store.frosthaven.getSection(psSection);
 							if (section) outpostPhase.passageOfTime.push(section);
 						}
 					}
 					// Outpost event
 					if (psOutpostPhase.outpostEvent) {
-						const outpostEvent = this.getEvent(psOutpostPhase.outpostEvent);
+						const outpostEvent = this.$store.frosthaven.getEvent(psOutpostPhase.outpostEvent);
 						if (outpostEvent) outpostPhase.outpostEvent = outpostEvent;
 					}
 					// Level ups
 					if (psOutpostPhase.levelUps?.length > 0) {
 						outpostPhase.levelUps = [];
 						for (const psCharacter of psOutpostPhase.levelUps) {
-							const character = this.getPartyMember(psCharacter);
+							const character = this.$store.frosthaven.getPartyMember(psCharacter);
 							if (character) outpostPhase.levelUps.push(character);
 						}
 					}
@@ -139,7 +132,7 @@
 					if (psOutpostPhase.retirements?.length > 0) {
 						outpostPhase.retirements = [];
 						for (const psCharacter of psOutpostPhase.retirements) {
-							const character = this.getPartyMember(psCharacter);
+							const character = this.$store.frosthaven.getPartyMember(psCharacter);
 							if (character) {
 								outpostPhase.retirements.push(character);
 								this.currentParty = this.currentParty.filter(partyMember => partyMember.id !== character.id);
@@ -150,7 +143,7 @@
 					if (psOutpostPhase.newMembers?.length > 0) {
 						outpostPhase.newMembers = [];
 						for (const psCharacter of psOutpostPhase.newMembers) {
-							const character = this.getCharacter(psCharacter);
+							const character = this.$store.frosthaven.getCharacter(psCharacter);
 							if (character) {
 								outpostPhase.newMembers.push(character);
 								this.currentParty.push(character);
@@ -161,7 +154,7 @@
 					if (psOutpostPhase.build?.length > 0) {
 						outpostPhase.build = [];
 						for (const psBuilding of psOutpostPhase.build) {
-							const building = this.getBuilding(psBuilding);
+							const building = this.$store.frosthaven.getBuilding(psBuilding);
 							if (building) outpostPhase.build.push(building);
 						}
 					}
@@ -169,108 +162,12 @@
 					if (psOutpostPhase.upgrade?.length > 0) {
 						outpostPhase.upgrade = [];
 						for (const psBuilding of psOutpostPhase.upgrade) {
-							const building = this.getBuilding(psBuilding);
+							const building = this.$store.frosthaven.getBuilding(psBuilding);
 							if (building) outpostPhase.upgrade.push(building);
 						}
 					}
 					this.campaignItems.push({ outpostPhase: outpostPhase });
 					log.exit();
-				},
-
-
-				/* ------- */
-				/* HELPERS */
-				/* ------- */
-				/* Get full campaign items from the personal story info */
-
-				getCharacter(psCharacter) {
-					const rawCharacter = this.$store.charactersMap[psCharacter.id];
-					if (rawCharacter) {
-						const character = { ...rawCharacter };
-						// Personal quest
-						if (psCharacter.personalQuest) {
-							const personalQuest = this.getPersonalQuest(psCharacter.personalQuest);
-							if (personalQuest) character.personalQuest = personalQuest;
-						}
-						return character;
-					}
-					else return null;
-				},
-
-				getPartyMember(psCharacter) {
-					const partyMember = this.currentParty.find(partyMember => partyMember.id === psCharacter.id);
-					if (partyMember) {
-						const partyMemberCopy = { ...partyMember };
-						// Additional personal quest
-						if (psCharacter.additionalPersonalQuest) {
-							const additionalPersonalQuest = this.getPersonalQuest(psCharacter.additionalPersonalQuest);
-							if (additionalPersonalQuest) partyMemberCopy.additionalPersonalQuest = additionalPersonalQuest;
-						}
-						// Level
-						if (psCharacter.level) partyMemberCopy.level = psCharacter.level;
-						return partyMemberCopy;
-					}
-					else return null;
-				},
-
-				getPersonalQuest(psPersonalQuest) {
-					const rawPersonalQuest = this.$store.personalQuestsMap[psPersonalQuest.id];
-					if (rawPersonalQuest) {
-						const personalQuest = { ...rawPersonalQuest };
-						personalQuest.unlockedBuilding = psPersonalQuest.unlockedBuilding ?? "MAIN";
-						return personalQuest;
-					}
-					else return null;
-				},
-
-				getScenario(psScenario) {
-					const rawScenario = this.$store.scenariosMap[psScenario.id];
-					if (rawScenario) {
-						const scenario = { ...rawScenario };
-						// Path
-						if (psScenario.path?.length > 0) scenario.path = psScenario.path;
-						// Random scenario section
-						if (psScenario.randomScenarioSection) {
-							scenario.randomScenarioSection = this.$store.sectionsMap[psScenario.randomScenarioSection.id];
-						}
-						return scenario;
-					}
-					else return null;
-				},
-
-				getEvent(psEvent) {
-					const rawEvent = this.$store.eventsMap[psEvent.id];
-					if (rawEvent) {
-						const event = { ...rawEvent };
-						// Chosen options
-						if (psEvent.chosenOptions?.length > 0) event.chosenOptionsIds = psEvent.chosenOptions;
-						else if (psEvent.chosenOption) event.chosenOptionsIds = [psEvent.chosenOption];
-						// Random scenario section
-						if (psEvent.randomScenarioSection) {
-							event.randomScenarioSection = this.$store.sectionsMap[psEvent.randomScenarioSection.id];
-						}
-						return event;
-					}
-					else return null;
-				},
-
-				getSection(psSection) {
-					const rawSection = this.$store.sectionsMap[psSection.id];
-					if (rawSection) return { ...rawSection };
-					else return null;
-				},
-
-				getBuilding(psBuilding) {
-					const rawBuilding = this.$store.buildingsMap[psBuilding.id];
-					if (rawBuilding) {
-						const building = { ...rawBuilding };
-						if (psBuilding.level) {
-							building.level = psBuilding.level;
-							building.sectionPath = psBuilding.path ?? Object.keys(building.levels[building.level].builtSections);
-						}
-						return building;
-					}
-					else return null;
 				}
 			}));
 		});

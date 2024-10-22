@@ -7,7 +7,7 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" class="section anchor" x-data="sectionData(section)">
+	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" class="section anchor">
 		<!-- Trigger -->
 		<template x-if="section.trigger">
 			<div class="trigger" x-jsz>
@@ -41,9 +41,7 @@
 
 		<!-- Text -->
 		<template x-if="section.text">
-			<div class="text" x-jsz>
-				{{section.text}}
-			</div>
+			<div class="text" x-jsz>{{section.text}}</div>
 		</template>
 
 		<!-- Special rules -->
@@ -75,7 +73,7 @@
 
 		<!-- Rewards -->
 		<template x-if="section.rewards">
-			<div class="rewards" x-data="{ get rewards() { return section.rewards } }">
+			<div x-data="{ get rewards() { return section.rewards } }">
 				<th:block th:replace="~{fragments/rewards :: rewards}"/>
 			</div>
 		</template>
@@ -91,23 +89,9 @@
 		<!-- Image -->
 		<template x-if="section.containsImage">
 			<div class="map">
-				<img x-bind:src="imageUrl" onload="this.width*=0.66;">
+				<img x-bind:src="$store.imgUrl + '/scenarios/' + scenario?.id + '_' + section.id + '.png'" onload="this.width*=0.66;">
 			</div>
 		</template>
 	</div>
-
-
-	<!-- ---------- -->
-	<!-- SECTION JS -->
-	<!-- ---------- -->
-	<script th:fragment="sectionJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			Alpine.data("sectionData", (section) => ({
-				get imageUrl() {
-					return this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png"
-				}
-			}));
-		});
-	</script>
 </body>
 </html>

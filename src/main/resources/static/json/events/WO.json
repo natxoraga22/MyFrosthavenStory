@@ -1172,7 +1172,9 @@
 	"WO-67": {},
 	"WO-68": {},
 	"WO-69": {},
-	"WO-70": {},
+	"WO-70": {
+		"unlockedBy": { "section": { "id": "47.1" }}
+	},
 	"WO-71": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},

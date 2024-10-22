@@ -276,6 +276,7 @@
 		},
 		{ "section": { "id": "29.5" }},
 		{ "section": { "id": "30.6" }},
+		{ "section": { "id": "43.5" }},
 		{ "event": { "id": "SR-40", "chosenOption": "A" }},
 		{ "scenario": { "id": "103", "path": ["main", "158.2"] }},
 		{
@@ -288,7 +289,7 @@
 		},
 		{ "event": { "id": "SR-26", "chosenOption": "A" }},
 		{ "scenario": { "id": "037" }},
-		{ "scenario": { "id": "044" }},
+		{ "scenario": { "id": "044", "randomScenarioSection": { "id": "171.2" }}},
 		{ "scenario": { "id": "059" }},
 		{
 			"outpostPhase": {

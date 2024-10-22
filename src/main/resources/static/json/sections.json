@@ -34,6 +34,13 @@
 			"scenarios": [{ "id": "087" }]
 		}
 	},
+	"43.5": {
+		"title": "Puzzle Solution (puzzle #3)",
+		"text": "<p>Crain’s room is empty. The books, the papers—everything is still here, but the Quatryl himself is missing. Given you’ve never seen him outside his room, you find it a bit odd and set out to find him.</p><p>Nearly half an hour later, you spot the Quatryl shuffling between cabins. In one hand, he’s carrying a half-used torch and in the other, a pot of pine pitch. As you approach, you notice he’s shaking his head and talking, as if stuck in an argument with himself. It isn’t until you’re a few feet away that he notices you.</p><p>“Ah ha,” he says, a bit surprised. “It’s nice to see you again. And what’s that?” You hand him your notes on the diagram and explain what happened in the spire, but the Quatryl seems distracted.</p><p>“Yes, it’s troubling. Good work, but troubling.” He pockets the note. “Listen, I have some news as well, but I’m in the middle of an experiment so you’ll have to walk with me while I explain.” The Quatryl starts moving without waiting for a response.</p><p>“The book, Project Source,” he rattles on, gesturing with his charred stick. “I’ve made some more progress with the translation, but in order to move any further I need you to verify some of the—er—findings.” The two of you snake between cabins and Crain pauses to sift through a pile of junk, pulling from it a piece of ruined cloth which he wraps around the used torch. Satisfied, he keeps moving.</p><p>“According to their notes, the researchers concluded the energy source at the spire was too dangerous to work with and so it was ultimately abandoned—a very grim account, I assure you. Though it sounds like you know exactly what they mean.” He stops at a section of the palisade wall and, using a metal spoon, scrapes out a bit of clay from between the logs. He crumbles the clay into his pitch pot and keeps walking. “But their account did help me crack one of their thornier words in their dialect—death.</p><p>“It would seem these researchers were very interested in the concept. After the incident at the spire complex, they went on to investigate a new location, one they only refer to as the ‘death site.’ I need you to find it and tell me what’s inside. Torfi’s journal contains a sketch of some device at the site. If you come across it in your travels—should be in a temple or crypt of some kind—hopefully her notes will prove useful.”</p><p>Crain comes to a sudden halt. He’s brought you to one of the guard stations, right next to one of the iron braziers they use to keep warm. The guards themselves watch from their post as Crain, without any ceremony or explanation, Crain dunks his stick into the pitch pot and then shoves the gloopy thing into the guard’s fire, which bursts into a violent blue flame.</p><p>“Ach, all wrong.” Crain holds up his torch, the flame burning a brilliant sky blue. He scoffs, drops it into the snow, and walks off.</p>",
+		"rewards": { 
+			"text": "Turn to the next page in the puzzle book." 
+		}
+	},
 	"44.4": {
 		"title": "Tome of Elements",
 		"unlockedBy": { "event": { "id": "SR-48" }},
@@ -267,6 +274,13 @@
 			"scenarios": [{ "id": "036" }, { "id": "037" }]
 		},
 		"sectionLinks": "Read [section_190.4] now."
+	},
+	"171.2": {
+		"title": "Random Scenario",
+		"text": "You look down at an ancient sheet of stone—hardly the riches and jewels you were expecting. But there on the stone, faded, yet still complete, is a painting: a landscape, as if painted using the tip of a stick or a claw. And despite the crudeness, the details look familiar to you. You could probably find the place this painting depicts if you searched long enough.",
+		"rewards": {
+			"scenarios": [{ "id": "108" }]
+		}
 	},
 	"176.4": {
 		"title": "Funeral for the Winter Fallen",

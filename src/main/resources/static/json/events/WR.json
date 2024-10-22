@@ -227,8 +227,8 @@
 			"A1": {
 				"id": "A",
 				"trigger": "Help her dig out the remainder and set the aeronautical back into the air without you.",
-				"requirement": "[trait] STRONG",
-				"text": "<p>The Quatryl waves her thanks and seals the hatch as you dig out the last of the aeronautical. A burst of flame erupts from the top of the craft, inflating the red canvas balloon. Flapping metal wings unfurl and it vanishes majestically into the distance.</p><p>A few minutes later you think you hear a phantom ringing of a bell. Probably nothing.</p>",
+				"requirement": "<p>[trait] STRONG",
+				"text": "The Quatryl waves her thanks and seals the hatch as you dig out the last of the aeronautical. A burst of flame erupts from the top of the craft, inflating the red canvas balloon. Flapping metal wings unfurl and it vanishes majestically into the distance.</p><p>A few minutes later you think you hear a phantom ringing of a bell. Probably nothing.</p>",
 				"rewards": {
 					"text": "No effect."
 				}

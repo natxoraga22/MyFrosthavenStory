@@ -14,6 +14,7 @@
 			"containsImage": true
 		},
 		"33.4": {
+			"trigger": "End of the tenth round",
 			"conclusion": "With the Algox raiders defeated, Droman says he can clean up the rubble and reinforce the remaining pylons to be much sturdier. This was the final obstacle stopping traffic through the shortcut; if there’s still time in the season after Droman’s crew finishes cleanup, Satha might be able to send for a caravan of much-needed resources.",
 			"rewards": {
 				"text": "Gain 15 [xp] each."

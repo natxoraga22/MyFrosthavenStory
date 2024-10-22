@@ -23,13 +23,4 @@ public class PersonalQuest {
 	private Building building;
 	private Building altBuilding;
 
-	private UnlockedBuildingType unlockedBuilding = UnlockedBuildingType.MAIN;
-
-
-	public enum UnlockedBuildingType {
-		MAIN,
-		ALT,
-		NONE
-	}
-
 }

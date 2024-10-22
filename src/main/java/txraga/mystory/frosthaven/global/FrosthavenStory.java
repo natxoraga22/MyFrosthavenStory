@@ -24,6 +24,7 @@ public class FrosthavenStory {
 	/* PARTY */
 	/* ----- */
 
+	/*
 	public Map<String,FhCharacter> getParty(List<FhCharacter> personalStoryParty) {
 		log.entry(personalStoryParty);
 		Map<String,FhCharacter> party = new LinkedHashMap<>();
@@ -33,7 +34,9 @@ public class FrosthavenStory {
 		}
 		return log.exit(party);
 	}
+		*/
 
+	/*
 	private FhCharacter getPartyMember(FhCharacter personalStoryPartyMember) {
 		log.entry(personalStoryPartyMember);
 		FhCharacter partyMember = frosthaven.getCharacter(personalStoryPartyMember.getId());
@@ -50,6 +53,7 @@ public class FrosthavenStory {
 		}
 		return log.exit(null);
 	}
+		*/
 
 
 	/* ----- */

@@ -42,6 +42,11 @@
 						<th:block th:replace="~{fragments/event :: event}"/>
 					</template>
 
+					<!-- SECTION -->
+					<template x-if="campaignItem.section" x-data="{ get section() { return campaignItem.section } }">
+						<th:block th:replace="~{fragments/section :: section}"/>
+					</template>
+
 					<!-- OUTPOST PHASE -->
 					<template x-if="campaignItem.outpostPhase" x-data="{ get outpostPhase() { return campaignItem.outpostPhase } }">
 						<th:block th:replace="~{fragments/outpostPhase :: outpostPhase}"/>

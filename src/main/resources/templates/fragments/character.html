@@ -90,13 +90,13 @@
 		<!-- Rewards -->
 		<bs:card class="fhCard pqRewards">
 			<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
-			<bs:cardBody>
+			<bs:cardBody x-data="{ building: personalQuest.unlockedBuilding == 'ALT' ? personalQuest.altBuilding : personalQuest.building }">
 				[[#{personalQuest.openEnvelope}]]
 				<img class="icon envelope" x-bind:src="$store.imgUrl + '/icons/envelope.png'">
-				<span x-jsz>{{personalQuest.building.number}}</span>
+				<span x-jsz>{{building.number}}</span>
 				<i class="fa-solid fa-right-long mx-1"></i>
 				[[#{personalQuest.unlockBuilding}]]
-				<strong x-jsz>{{personalQuest.building.name}}</strong>
+				<strong x-jsz>{{building.name}}</strong>
 			</bs:cardBody>
 		</bs:card>
 	</div>

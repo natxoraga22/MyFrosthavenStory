@@ -274,6 +274,8 @@
 				"upgrade": [{ "id": "carpenter", "level": 2 }]
 			}
 		},
+		{ "section": { "id": "29.5" }},
+		{ "section": { "id": "30.6" }},
 		{ "event": { "id": "SR-40", "chosenOption": "A" }},
 		{ "scenario": { "id": "103", "path": ["main", "158.2"] }},
 		{

@@ -46,6 +46,13 @@
 						</bs:listItem>
 					</template>
 
+					<!-- SECTION -->
+					<template x-if="campaignItem.section" x-data="{ get section() { return campaignItem.section } }">
+						<bs:listItem tag="a" action x-bind:href="'#section_' + section.htmlSafeId" x-jsz>
+							{{section.id}} · {{section.title}}
+						</bs:listItem>
+					</template>
+
 					<!-- OUTPOST PHASE -->
 					<template x-if="campaignItem.outpostPhase" x-data="{ get outpostPhase() { return campaignItem.outpostPhase } }">
 						<div style="display:contents">

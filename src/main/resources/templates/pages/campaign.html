@@ -63,6 +63,7 @@
 					for (const personalStoryItem of personalStory.story) {
 						if (personalStoryItem.scenario) this.initScenario(personalStoryItem.scenario);
 						else if (personalStoryItem.event) this.initEvent(personalStoryItem.event);
+						else if (personalStoryItem.section) this.initSection(personalStoryItem.section);
 						else if (personalStoryItem.outpostPhase) this.initOutpostPhase(personalStoryItem.outpostPhase);
 					}
 				},
@@ -90,6 +91,13 @@
 					log.entry(psEvent);
 					const event = this.getEvent(psEvent);
 					if (event !== null) this.campaignItems.push({ event: event });
+					log.exit();
+				},
+
+				initSection(psSection) {
+					log.entry(psSection);
+					const section = this.getSection(psSection);
+					if (section !== null) this.campaignItems.push({ section: section });
 					log.exit();
 				},
 
@@ -207,7 +215,11 @@
 
 				getPersonalQuest(psPersonalQuest) {
 					const rawPersonalQuest = this.$store.personalQuestsMap[psPersonalQuest.id];
-					if (rawPersonalQuest) return { ...rawPersonalQuest };
+					if (rawPersonalQuest) {
+						const personalQuest = { ...rawPersonalQuest };
+						personalQuest.unlockedBuilding = psPersonalQuest.unlockedBuilding ?? "MAIN";
+						return personalQuest;
+					}
 					else return null;
 				},
 

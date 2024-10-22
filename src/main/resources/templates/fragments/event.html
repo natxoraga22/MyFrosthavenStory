@@ -7,57 +7,51 @@
 	<!-- ----- -->
 	<!-- EVENT -->
 	<!-- ----- -->
-	<div th:fragment="event" x-bind:id="'event_' + event.id" class="anchor" x-data="eventData(event)">
-		<template x-if="Object.keys(event).length > 0">
-			<div class="event">
-				<!-- Title -->
-				<div class="title">
-					<h1 class="title" x-jsz>
-						<span class="titleSecondary">{{event.id}} ·</span>
-						{{$store.typesAndSeasonsStrings[event.typeAndSeason]}}
-						[[#{event.title}]]
-					</h1>
-					<!-- Unlocked by -->
-					<template x-if="event.unlockedBy">
-						<div x-data="{ get unlockedBy() { return event.unlockedBy } }">
-							<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
-						</div>
+	<div th:fragment="event" x-bind:id="'event_' + event.id" class="event anchor" x-data="eventData">
+		<!-- Title -->
+		<div class="title">
+			<h1 class="title" x-jsz>
+				<span class="titleSecondary">{{event.id}} ·</span>
+				{{$store.typesAndSeasonsStrings[event.typeAndSeason]}}
+				[[#{event.title}]]
+			</h1>
+			<!-- Unlocked by -->
+			<template x-if="event.unlockedBy">
+				<div x-data="{ get unlockedBy() { return event.unlockedBy } }">
+					<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
+				</div>
+			</template>
+		</div>
+
+		<!-- Card image -->
+		<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
+
+		<!-- Text -->
+		<div class="text" x-jsz>{{event.text}}</div>
+
+		<!-- Options -->
+		<div class="options">
+			<template x-for="(chosenOptionId, index) in event.chosenOptionsIds">
+				<div x-data="{ get option() { return event.options[chosenOptionId] } }">
+					<template x-if="option">
+						<th:block th:replace="~{:: option}"/>
 					</template>
 				</div>
+			</template>
+		</div>
 
-				<!-- Card image -->
-				<th:block th:replace="~{fragments/common/playingCard :: playingCard}"/>
+		<!-- Outpost attack -->
+		<template x-if="!skipAttack">
+			<div x-data="{ get outpostAttack() { return event.outpostAttack } }">
+				<hr>
+				<th:block th:replace="~{:: outpostAttack}"/>
+			</div>
+		</template>
 
-				<!-- Text -->
-				<div class="text" x-jsz>
-					{{event.text}}
-				</div>
-
-				<!-- Options -->
-				<div class="options">
-					<template x-for="(chosenOptionId, index) in event.chosenOptionsIds">
-						<div x-data="{ get option() { return event.options[chosenOptionId] } }">
-							<template x-if="option">
-								<th:block th:replace="~{:: option}"/>
-							</template>
-						</div>
-					</template>
-				</div>
-
-				<!-- Outpost attack -->
-				<template x-if="!skipAttack">
-					<div x-data="{ get outpostAttack() { return event.outpostAttack } }">
-						<hr>
-						<th:block th:replace="~{:: outpostAttack}"/>
-					</div>
-				</template>
-
-				<!-- Random scenario section -->
-				<template x-if="event.randomScenarioSection">
-					<div x-data="{ section: event.randomScenarioSection }">
-						<th:block th:replace="~{fragments/section :: section}"/>
-					</div>
-				</template>
+		<!-- Random scenario section -->
+		<template x-if="event.randomScenarioSection">
+			<div x-data="{ section: event.randomScenarioSection }">
+				<th:block th:replace="~{fragments/section :: section}"/>
 			</div>
 		</template>
 	</div>
@@ -131,14 +125,14 @@
 	<!-- -------- -->
 	<script th:fragment="eventJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("eventData", (event) => ({
-				get frontImgSrc() { return this.$store.imgUrl + "/events/" + event.typeAndSeason + "/" + event.id + ".png" },
-				get backImgSrc() { return this.$store.imgUrl + "/events/" + event.typeAndSeason + "/" + event.id + "_back.png" },
+			Alpine.data("eventData", () => ({
+				get frontImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + ".png" },
+				get backImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
 
 				get skipAttack() {
-					if (!event.outpostAttack || event.chosenOptionsIds.length == 0) return true;
-					for (let chosenOptionId of event.chosenOptionsIds) {
-						const chosenOption = event.options[chosenOptionId];
+					if (!this.event.outpostAttack || this.event.chosenOptionsIds.length == 0) return true;
+					for (let chosenOptionId of this.event.chosenOptionsIds) {
+						const chosenOption = this.event.options[chosenOptionId];
 						if (chosenOption?.skipAttack) return true;
 					}
 				}

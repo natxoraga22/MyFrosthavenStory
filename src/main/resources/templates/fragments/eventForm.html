@@ -34,7 +34,9 @@
 
 				init() {
 					this.eventIdSelect = new TomSelect("#inputEventId", {
-						options: Object.keys(this.$store.eventsMap).toSorted().map(eventId => ({ value: eventId, text: eventId })),
+						options: Object.keys(this.$store.frosthaven.eventsMap).toSorted().map(eventId =>
+							({ value: eventId, text: eventId })
+						),
 						items: eventId,
 						onChange: newEventId => {
 							this.$dispatch("changed-event-id", newEventId);
@@ -56,7 +58,7 @@
 					this.chosenOptionsSelect.clear();
 					this.chosenOptionsSelect.clearOptions();
 
-					const selectedEvent = this.$store.eventsMap[selectedEventId];
+					const selectedEvent = this.$store.frosthaven.eventsMap[selectedEventId];
 					if (selectedEvent) {
 						this.chosenOptionsSelect.addOptions(Object.keys(selectedEvent.options).map(key => ({ value: key, text: key })));
 						this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);

@@ -40,20 +40,14 @@
 				section: {},
 
 				init() {
-					if (this.sectionId) {
-						this.sectionId = this.sectionId.replace("_", ".");
-						this.setSection(this.sectionId);
-					}
+					if (this.sectionId) this.setSection(this.sectionId.replace("_", "."));
 					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
 				},
 
 				// "changed-section-id" event handler
 				setSection(sectionId) {
 					log.entry(sectionId);
-					if (sectionId) {
-						this.section = this.$store.frosthaven.getSection({ id: sectionId });
-						log.debug(this.section);
-					}
+					if (sectionId) this.section = this.$store.frosthaven.getSection({ id: sectionId }) ?? {};
 					log.exit();
 				}
 			}));

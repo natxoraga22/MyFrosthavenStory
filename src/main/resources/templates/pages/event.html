@@ -16,7 +16,9 @@
 				<th:block th:replace="~{fragments/eventForm :: eventForm}"/>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<th:block th:replace="~{fragments/event :: event}"/>
+				<template x-if="Object.keys(event).length > 0">
+					<th:block th:replace="~{fragments/event :: event}"/>
+				</template>
 			</bs:col>
 		</bs:row>
 	</th:block>
@@ -24,6 +26,7 @@
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: eventPageJs}"></script>
+		<script th:replace="~{fragments/frosthaven :: frosthavenJs}"></script>
 		<script th:replace="~{fragments/eventForm :: eventFormJs}"></script>
 		<script th:replace="~{fragments/event :: eventJs}"></script>
 	</th:block>
@@ -34,11 +37,39 @@
 	<!-- ------------- -->
 	<script th:fragment="eventPageJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.store("eventsMap", /*[[${eventsMap}]]*/ {});
-
 			Alpine.data("eventPageData", () => ({
 				eventId: /*[[${eventId}]]*/ null,
-				chosenOptionsIds: /*[[${chosenOptionsIds}]]*/ []
+				chosenOptionsIds: /*[[${chosenOptionsIds}]]*/ [],
+				event: {},
+
+				init() {
+					if (this.eventId) this.setEvent(this.eventId, this.chosenOptionsIds);
+					window.addEventListener("changed-event-id", event => this.setEventId(event.detail));
+					window.addEventListener("changed-chosen-options", event => this.setChosenOptionsIds(event.detail));
+				},
+
+				setEvent(eventId, chosenOptionsIds) {
+					log.entry(eventId, chosenOptionsIds);
+					this.event = this.$store.frosthaven.getEvent({ id: eventId, chosenOptions: chosenOptionsIds });
+					log.exit();
+				},
+
+				// "changed-event-id" event handler
+				setEventId(eventId) {
+					log.entry(eventId);
+					this.eventId = eventId;
+					this.chosenOptionsIds = [];
+					this.setEvent(this.eventId, this.chosenOptionsIds);
+					log.exit();
+				},
+
+				// "changed-chosen-options" event handler
+				setChosenOptionsIds(newChosenOptionsIds) {
+					log.entry(newChosenOptionsIds);
+					this.chosenOptionsIds = newChosenOptionsIds;
+					this.setEvent(this.eventId, this.chosenOptionsIds);
+					log.exit();
+				}
 			}));
 		});
 	</script>

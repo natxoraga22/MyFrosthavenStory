@@ -35,6 +35,7 @@
 		<script th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
 		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
 		<script th:replace="~{fragments/event :: eventJs}"></script>
+		<script th:replace="~{fragments/section :: sectionJs}"></script>
 		<script th:replace="~{fragments/outpostPhase :: outpostPhaseJs}"></script>
 	</th:block>
 
@@ -124,7 +125,7 @@
 					if (psOutpostPhase.levelUps?.length > 0) {
 						outpostPhase.levelUps = [];
 						for (const psCharacter of psOutpostPhase.levelUps) {
-							const character = this.$store.frosthaven.getPartyMember(psCharacter);
+							const character = this.$store.frosthaven.getPartyMember(psCharacter, this.currentParty);
 							if (character) outpostPhase.levelUps.push(character);
 						}
 					}
@@ -132,7 +133,7 @@
 					if (psOutpostPhase.retirements?.length > 0) {
 						outpostPhase.retirements = [];
 						for (const psCharacter of psOutpostPhase.retirements) {
-							const character = this.$store.frosthaven.getPartyMember(psCharacter);
+							const character = this.$store.frosthaven.getPartyMember(psCharacter, this.currentParty);
 							if (character) {
 								outpostPhase.retirements.push(character);
 								this.currentParty = this.currentParty.filter(partyMember => partyMember.id !== character.id);

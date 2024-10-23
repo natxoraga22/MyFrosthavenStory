@@ -31,8 +31,8 @@
 					else return null;
 				},
 
-				getPartyMember(psCharacter) {
-					const partyMember = this.currentParty.find(partyMember => partyMember.id === psCharacter.id);
+				getPartyMember(psCharacter, currentParty) {
+					const partyMember = currentParty.find(partyMember => partyMember.id === psCharacter.id);
 					if (partyMember) {
 						const partyMemberCopy = { ...partyMember };
 						// Additional personal quest

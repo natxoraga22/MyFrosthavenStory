@@ -3,11 +3,13 @@ package txraga.mystory.frosthaven.model;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
 
 
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString

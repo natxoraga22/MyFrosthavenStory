@@ -3,9 +3,6 @@ package txraga.mystory.frosthaven.model;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
@@ -59,12 +56,6 @@ public class Section {
 
 	public String getHtmlSafeId() {
 		return id.replace(".", "_");
-	}
-
-	public boolean hasMap(String scenarioId) {
-		if (scenarioId == null) return false;
-		Resource resource = new ClassPathResource("static/img/scenarios/" + scenarioId + "_" + id + ".png");
-		return resource.exists();
 	}
 
 }

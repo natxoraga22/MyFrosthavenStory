@@ -47,39 +47,4 @@ public class Frosthaven {
 		log.exit();
 	}
 
-
-	/* ---------------------- */
-	/* CHARACTERS & BUILDINGS */
-	/* ---------------------- */
-
-	public FhCharacter getCharacter(String id) {
-		log.entry(id);
-		FhCharacter character = characters.get(id);
-		if (character == null) {
-			log.warn("Character '{}' not found", id);
-			return log.exit(null);
-		}
-		else return log.exit(new FhCharacter(character));
-	}
-
-	public PersonalQuest getPersonalQuest(String id) {
-		log.entry(id);
-		PersonalQuest personalQuest = personalQuests.get(id);
-		if (personalQuest == null) {
-			log.warn("Personal quest '{}' not found", id);
-			return log.exit(null);
-		}
-		else return log.exit(personalQuest);
-	}
-
-	public Building getBuilding(String id) {
-		log.entry(id);
-		Building building = buildings.get(id);
-		if (building == null) {
-			log.warn("Building '{}' not found", id);
-			return log.exit(null);
-		}
-		else return log.exit(new Building(building));
-	}
-
 }

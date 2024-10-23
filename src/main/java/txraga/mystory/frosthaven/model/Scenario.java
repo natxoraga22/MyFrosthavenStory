@@ -7,15 +7,17 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
 
 
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString(onlyExplicitlyIncluded = true)
-public class Scenario extends StoryObject implements Comparable<Scenario> {
+public class Scenario implements Comparable<Scenario> {
 	
 	@ToString.Include private String id;
 	@ToString.Include private String name;
@@ -36,16 +38,7 @@ public class Scenario extends StoryObject implements Comparable<Scenario> {
 	private String effects;
 
 	private Map<String,Section> sections = Map.of();
-	private List<String> path = List.of();
 
-	// Some chests unlock a random side scenario (meaning a section is read)
-	private Section randomScenarioSection;
-
-
-	@Override
-	public StoryObject.Type getObjectType() {
-		return StoryObject.Type.SCENARIO;
-	}
 
 	@Override
 	public int compareTo(Scenario other) {
@@ -80,6 +73,7 @@ public class Scenario extends StoryObject implements Comparable<Scenario> {
 	/* REQUIREMENT */
 	/* ----------- */
 
+	@NoArgsConstructor
 	@Getter
 	@Setter
 	@ToString

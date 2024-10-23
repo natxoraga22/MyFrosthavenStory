@@ -31,8 +31,8 @@
 
 		<!-- Options -->
 		<div class="options">
-			<template x-for="(chosenOptionId, index) in event.chosenOptionsIds">
-				<div x-data="{ get option() { return event.options[chosenOptionId] } }">
+			<template x-for="(chosenOptionId, index) in event.chosenOptionsIds" x-bind:key="chosenOptionId">
+				<div x-data="{ option: event.options[chosenOptionId] }">
 					<template x-if="option">
 						<th:block th:replace="~{:: option}"/>
 					</template>
@@ -42,7 +42,7 @@
 
 		<!-- Outpost attack -->
 		<template x-if="!skipAttack">
-			<div x-data="{ get outpostAttack() { return event.outpostAttack } }">
+			<div>
 				<hr>
 				<th:block th:replace="~{:: outpostAttack}"/>
 			</div>
@@ -80,7 +80,7 @@
 
 		<!-- Rewards -->
 		<template x-if="option.rewards">
-			<div class="rewards" x-data="{ get rewards() { return option.rewards } }">
+			<div class="rewards" x-data="{ rewards: option.rewards }">
 				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 			</div>
 		</template>
@@ -95,25 +95,25 @@
 		<bs:flex align="center">
 			<div class="attack" x-jsz>
 				<img class="icon" th:src="@{__${imgUrl}__/icons/attack.png}">
-				{{outpostAttack.attack}}
+				{{event.outpostAttack.attack}}
 			</div>
 			<div class="target" x-jsz>
 				<img class="icon" th:src="@{__${imgUrl}__/icons/target.png}">
-				{{outpostAttack.target}}
+				{{event.outpostAttack.target}}
 			</div>
 			<div class="targetPriority" x-jsz>
-				{{outpostAttack.targetPriority}}
+				{{event.outpostAttack.targetPriority}}
 			</div>
 		</bs:flex>
 		
 		<!-- Text -->
 		<div class="text" x-jsz>
-			{{outpostAttack.text}}
+			{{event.outpostAttack.text}}
 		</div>
 
 		<!-- Rewards -->
-		<template x-if="outpostAttack.rewards">
-			<div class="rewards" x-data="{ get rewards() { return outpostAttack.rewards } }">
+		<template x-if="event.outpostAttack.rewards">
+			<div class="rewards" x-data="{ rewards: event.outpostAttack.rewards }">
 				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 			</div>
 		</template>
@@ -130,11 +130,12 @@
 				get backImgSrc() { return this.$store.imgUrl + "/events/" + this.event.typeAndSeason + "/" + this.event.id + "_back.png" },
 
 				get skipAttack() {
-					if (!this.event.outpostAttack || this.event.chosenOptionsIds.length == 0) return true;
+					if (!this.event.outpostAttack || !this.event.chosenOptionsIds || this.event.chosenOptionsIds.length == 0) return true;
 					for (let chosenOptionId of this.event.chosenOptionsIds) {
 						const chosenOption = this.event.options[chosenOptionId];
 						if (chosenOption?.skipAttack) return true;
 					}
+					return false;
 				}
 			}));
 		});

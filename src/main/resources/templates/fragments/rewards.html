@@ -21,8 +21,8 @@
 					<div>
 						[[#{section.rewards.newEvents}]]:
 						<br/>
-						<template x-for="typeAndSeason in $store.typesAndSeasonsList">
-							<div x-data="{ get events() { return rewards.events[typeAndSeason] } }">
+						<template x-for="typeAndSeason in $store.typesAndSeasonsList" x-bind:key="typeAndSeason">
+							<div x-data="{ events: rewards.events[typeAndSeason] }">
 								<th:block th:replace="~{:: rewardsEvents}"/>
 							</div>
 						</template>
@@ -34,8 +34,8 @@
 					<div>
 						[[#{section.rewards.removedEvents}]]:
 						<br/>
-						<template x-for="typeAndSeason in $store.typesAndSeasonsList">
-							<div x-data="{ get events() { return rewards.removedEvents[typeAndSeason] } }">
+						<template x-for="typeAndSeason in $store.typesAndSeasonsList" x-bind:key="typeAndSeason">
+							<div x-data="{ events: rewards.removedEvents[typeAndSeason] }">
 								<th:block th:replace="~{:: rewardsEvents}"/>
 							</div>
 						</template>
@@ -44,7 +44,7 @@
 
 				<!-- New scenarios -->
 				<template x-if="rewards.scenarios">
-					<div x-data="{ get scenarios() { return rewards.scenarios } }">
+					<div x-data="{ scenarios: rewards.scenarios }">
 						[[#{section.rewards.newScenarios}]]:
 						<br/>
 						<th:block th:replace="~{:: rewardsScenarios}"/>
@@ -53,7 +53,7 @@
 
 				<!-- Locked out scenarios -->
 				<template x-if="rewards.lockedOutScenarios">
-					<div x-data="{ get scenarios() { return rewards.lockedOutScenarios } }">
+					<div x-data="{ scenarios: rewards.lockedOutScenarios }">
 						[[#{section.rewards.lockedOutScenarios}]]:
 						<br/>
 						<th:block th:replace="~{:: rewardsScenarios}"/>
@@ -81,7 +81,7 @@
 	<!-- REWARDS SCENARIOS -->
 	<!-- ----------------- -->
 	<th:block th:fragment="rewardsScenarios">
-		<template x-for="scenario in scenarios">
+		<template x-for="scenario in scenarios" x-bind:key="scenario.id">
 			<div>
 				<strong x-jsz>{{scenario.name}}</strong>
 				<span class="scenarioNumber" x-jsz>({{Number(scenario.id)}})</span>

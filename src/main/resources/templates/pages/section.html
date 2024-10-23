@@ -17,7 +17,9 @@
 				<th:block th:replace="~{fragments/sectionForm :: sectionForm}"/>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<th:block th:replace="~{fragments/section :: section}"/>
+				<template x-if="Object.keys(section).length > 0">
+					<th:block th:replace="~{fragments/section :: section}"/>
+				</template>
 			</bs:col>
 		</bs:row>
 	</th:block>
@@ -47,7 +49,8 @@
 				// "changed-section-id" event handler
 				setSection(sectionId) {
 					log.entry(sectionId);
-					if (sectionId) this.section = this.$store.frosthaven.getSection({ id: sectionId }) ?? {};
+					this.section = {};
+					this.$nextTick(() => this.section = this.$store.frosthaven.getSection({ id: sectionId }));
 					log.exit();
 				}
 			}));

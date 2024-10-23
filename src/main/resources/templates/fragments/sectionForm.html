@@ -29,8 +29,8 @@
 
 				init() {
 					this.sectionIdSelect = new TomSelect("#inputSectionId", {
-						options: Object.keys(this.$store.frosthaven.sectionsMap).map(sectionId => 
-							({ value: sectionId, text: sectionId })
+						options: Object.entries(this.$store.frosthaven.sectionsMap).map(([sectionId, section]) => 
+							({ value: sectionId, text: sectionId + ' · ' + section.title })
 						),
 						items: sectionId,
 						onChange: newSectionId => this.$dispatch("changed-section-id", newSectionId),

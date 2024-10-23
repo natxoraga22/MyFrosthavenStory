@@ -24,7 +24,7 @@
 				</h2>
 				<!-- Unlocked by -->
 				<template x-if="section.unlockedBy">
-					<div x-data="{ get unlockedBy() { return section.unlockedBy } }">
+					<div x-data="{ unlockedBy: section.unlockedBy }">
 						<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
 					</div>
 				</template>
@@ -73,7 +73,7 @@
 
 		<!-- Rewards -->
 		<template x-if="section.rewards">
-			<div x-data="{ get rewards() { return section.rewards } }">
+			<div x-data="{ rewards: section.rewards }">
 				<th:block th:replace="~{fragments/rewards :: rewards}"/>
 			</div>
 		</template>

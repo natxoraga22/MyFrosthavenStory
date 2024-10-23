@@ -27,7 +27,7 @@
 
 		<!-- Outpost event -->
 		<template x-if="outpostPhase.outpostEvent">
-			<div x-data="{ get event() { return outpostPhase.outpostEvent } }">
+			<div x-data="{ event: outpostPhase.outpostEvent }">
 				<th:block th:replace="~{fragments/event :: event}"/>
 			</div>
 		</template>
@@ -109,7 +109,7 @@
 
 		<!-- Built sections -->
 		<template x-for="sectionPathItem in building.sectionPath">
-			<div x-data="{ get section() { return building.levels[building.level]?.builtSections[sectionPathItem] } }">
+			<div x-data="{ section: building.levels[building.level]?.builtSections[sectionPathItem] }">
 				<template x-if="section">
 					<th:block th:replace="~{fragments/section :: section}"/>
 				</template>

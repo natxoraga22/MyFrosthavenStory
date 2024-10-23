@@ -49,19 +49,19 @@
 
 		<!-- Personal quests -->
 		<template x-if="character.personalQuest">
-			<div x-data="{ get personalQuest() { return character.personalQuest } }">
+			<div x-data="{ personalQuest: character.personalQuest }">
 				<th:block th:replace="~{:: personalQuest}"/>
 			</div>
 		</template>
 		<template x-if="character.additionalPersonalQuest">
-			<div x-data="{ get personalQuest() { return character.additionalPersonalQuest } }">
+			<div x-data="{ personalQuest: character.additionalPersonalQuest }">
 				<th:block th:replace="~{:: personalQuest}"/>
 			</div>
 		</template>
 
 		<!-- Retirement section -->
 		<template x-if="character.retirement">
-			<div x-data="{ get section() { return character.retirement } }">
+			<div x-data="{ section: character.retirement }">
 				<th:block th:replace="~{fragments/section :: section}"/>
 			</div>
 		</template>

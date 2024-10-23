@@ -20,10 +20,10 @@
 	<th:block layout:fragment="content">
 		<bs:row gx="5">
 			<bs:col col="3">
-				<th:block th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContents}"/>
+				<th:block th:replace="~{fragments/campaign/campaignTableOfContents :: campaignTableOfContents}"/>
 			</bs:col>
 			<bs:col col="9">
-				<th:block th:replace="~{fragments/campaign :: campaign}"/>
+				<th:block th:replace="~{fragments/campaign/campaign :: campaign}"/>
 			</bs:col>
 		</bs:row>
 	</th:block>
@@ -32,8 +32,8 @@
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: campaignPageJs}"></script>
 		<script th:replace="~{fragments/frosthaven :: frosthavenJs}"></script>
-		<script th:replace="~{fragments/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
-		<script th:replace="~{fragments/campaign :: campaignJs}"></script>
+		<script th:replace="~{fragments/campaign/campaignTableOfContents :: campaignTableOfContentsJs}"></script>
+		<script th:replace="~{fragments/campaign/campaign :: campaignJs}"></script>
 		<script th:replace="~{fragments/event :: eventJs}"></script>
 		<script th:replace="~{fragments/section :: sectionJs}"></script>
 		<script th:replace="~{fragments/outpostPhase :: outpostPhaseJs}"></script>

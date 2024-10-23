@@ -53,7 +53,7 @@
 					log.entry(this.scenarioId, this.scenarioPath);
 					this.scenario = {};
 					this.$nextTick(() => {
-						this.scenario = this.$store.frosthaven.getScenario({ id: this.scenarioId, path: this.scenarioPath });
+						this.scenario = this.$store.frosthaven.getScenario({ id: this.scenarioId, path: this.scenarioPath }) ?? {};
 					});
 					log.exit();
 				},

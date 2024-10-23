@@ -51,7 +51,7 @@
 				setSection(sectionId) {
 					log.entry(sectionId);
 					this.section = {};
-					this.$nextTick(() => this.section = this.$store.frosthaven.getSection({ id: sectionId }));
+					this.$nextTick(() => this.section = this.$store.frosthaven.getSection({ id: sectionId }) ?? {});
 					log.exit();
 				}
 			}));

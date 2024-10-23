@@ -39,7 +39,7 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("eventPageData", () => ({
 				eventId: /*[[${eventId}]]*/ null,
-				chosenOptionsIds: /*[[${chosenOptionsIds}]]*/ [],
+				chosenOptionsIds: /*[[${chosenOptionsIds}]]*/ null,
 				event: {},
 
 				init() {
@@ -52,7 +52,7 @@
 					log.entry(this.eventId, this.chosenOptionsIds);
 					this.event = {};
 					this.$nextTick(() => {
-						this.event = this.$store.frosthaven.getEvent({ id: this.eventId, chosenOptions: this.chosenOptionsIds });
+						this.event = this.$store.frosthaven.getEvent({ id: this.eventId, chosenOptions: this.chosenOptionsIds }) ?? {};
 					});
 					log.exit();
 				},
@@ -61,7 +61,7 @@
 				setEventId(eventId) {
 					log.entry(eventId);
 					this.eventId = eventId;
-					this.chosenOptionsIds = [];
+					this.chosenOptionsIds = null;
 					this.setEvent();
 					log.exit();
 				},

@@ -46,8 +46,7 @@
 					});
 					this.scenarioPathSelect = new TomSelect("#inputScenarioPath", {
 						onChange: newScenarioPath => this.$dispatch("changed-scenario-path", newScenarioPath),
-						plugins: ["remove_button"],
-						closeAfterSelect: true
+						plugins: ["remove_button"]
 					});
 
 					this.fillScenarioPathSelect(scenarioId, scenarioPath);

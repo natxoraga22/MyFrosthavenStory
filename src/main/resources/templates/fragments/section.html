@@ -7,7 +7,7 @@
 	<!-- ------- -->
 	<!-- SECTION -->
 	<!-- ------- -->
-	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" class="section anchor">
+	<div th:fragment="section" x-bind:id="'section_' + section.htmlSafeId" class="section anchor" x-data="sectionData">
 		<!-- Trigger -->
 		<template x-if="section.trigger">
 			<div class="trigger" x-jsz>
@@ -89,9 +89,25 @@
 		<!-- Image -->
 		<template x-if="section.containsImage">
 			<div class="map">
-				<img x-bind:src="$store.imgUrl + '/scenarios/' + scenario?.id + '_' + section.id + '.png'" onload="this.width*=0.66;">
+				<img x-bind:src="mapImgSrc" onload="this.width*=0.66;">
 			</div>
 		</template>
 	</div>
+
+
+	<!-- ---------- -->
+	<!-- SECTION JS -->
+	<!-- ---------- -->
+	<script th:fragment="sectionJs" th:inline="javascript">
+		document.addEventListener("alpine:init", () => {
+			Alpine.data("sectionData", () => ({
+				mapImgSrc: null,
+
+				init() {
+					this.mapImgSrc = this.$store.imgUrl + "/scenarios/" + this.scenario?.id + "_" + this.section.id + ".png";
+				}
+			}));
+		});
+	</script>
 </body>
 </html>

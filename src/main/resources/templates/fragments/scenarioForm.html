@@ -34,7 +34,9 @@
 
 				init() {
 					this.scenarioIdSelect = new TomSelect("#inputScenarioId", {
-						options: Object.keys(this.$store.scenariosMap).toSorted().map(scenarioId => ({ value: scenarioId, text: scenarioId })),
+						options: Object.entries(this.$store.frosthaven.scenariosMap).toSorted().map(([scenarioId, scenario]) =>
+							({ value: scenarioId, text: scenarioId + ' · ' + scenario.name })
+						),
 						items: scenarioId,
 						onChange: newScenarioId => {
 							this.$dispatch("changed-scenario-id", newScenarioId);
@@ -56,7 +58,7 @@
 					this.scenarioPathSelect.clear();
 					this.scenarioPathSelect.clearOptions();
 
-					const selectedScenario = this.$store.scenariosMap[selectedScenarioId];
+					const selectedScenario = this.$store.frosthaven.scenariosMap[selectedScenarioId];
 					if (selectedScenario) {
 						this.scenarioPathSelect.addOptions(Object.keys(selectedScenario.sections).map(key => ({ value: key, text: key })));
 						this.scenarioPathSelect.addItems(selectedScenarioPath ?? selectedScenario.path, false);

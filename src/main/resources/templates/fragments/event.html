@@ -17,7 +17,7 @@
 			</h1>
 			<!-- Unlocked by -->
 			<template x-if="event.unlockedBy">
-				<div x-data="{ get unlockedBy() { return event.unlockedBy } }">
+				<div x-data="{ unlockedBy: event.unlockedBy }">
 					<th:block th:replace="~{fragments/common/unlockedBy :: unlockedBy}"/>
 				</div>
 			</template>
@@ -42,7 +42,7 @@
 
 		<!-- Outpost attack -->
 		<template x-if="!skipAttack">
-			<div>
+			<div x-data="{ outpostAttack: event.outpostAttack }">
 				<hr>
 				<th:block th:replace="~{:: outpostAttack}"/>
 			</div>
@@ -95,25 +95,23 @@
 		<bs:flex align="center">
 			<div class="attack" x-jsz>
 				<img class="icon" th:src="@{__${imgUrl}__/icons/attack.png}">
-				{{event.outpostAttack.attack}}
+				{{outpostAttack.attack}}
 			</div>
 			<div class="target" x-jsz>
 				<img class="icon" th:src="@{__${imgUrl}__/icons/target.png}">
-				{{event.outpostAttack.target}}
+				{{outpostAttack.target}}
 			</div>
 			<div class="targetPriority" x-jsz>
-				{{event.outpostAttack.targetPriority}}
+				{{outpostAttack.targetPriority}}
 			</div>
 		</bs:flex>
 		
 		<!-- Text -->
-		<div class="text" x-jsz>
-			{{event.outpostAttack.text}}
-		</div>
+		<div class="text" x-jsz>{{outpostAttack.text}}</div>
 
 		<!-- Rewards -->
-		<template x-if="event.outpostAttack.rewards">
-			<div class="rewards" x-data="{ rewards: event.outpostAttack.rewards }">
+		<template x-if="outpostAttack.rewards">
+			<div class="rewards" x-data="{ rewards: outpostAttack.rewards }">
 				<th:block th:replace="~{fragments/rewards :: rewardsBody}"/>
 			</div>
 		</template>

@@ -50,7 +50,8 @@
 
 				setEvent(eventId, chosenOptionsIds) {
 					log.entry(eventId, chosenOptionsIds);
-					this.event = this.$store.frosthaven.getEvent({ id: eventId, chosenOptions: chosenOptionsIds });
+					this.event = {};
+					this.$nextTick(() => this.event = this.$store.frosthaven.getEvent({ id: eventId, chosenOptions: chosenOptionsIds }));
 					log.exit();
 				},
 

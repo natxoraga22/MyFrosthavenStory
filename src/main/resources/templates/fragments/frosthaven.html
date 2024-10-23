@@ -62,7 +62,7 @@
 					if (rawScenario) {
 						const scenario = { ...rawScenario };
 						// Path
-						if (psScenario.path?.length > 0) scenario.path = psScenario.path;
+						if (psScenario.path) scenario.path = psScenario.path;
 						// Random scenario section
 						if (psScenario.randomScenarioSection) {
 							scenario.randomScenarioSection = this.sectionsMap[psScenario.randomScenarioSection.id];

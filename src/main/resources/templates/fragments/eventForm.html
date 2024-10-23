@@ -61,7 +61,7 @@
 					const selectedEvent = this.$store.frosthaven.eventsMap[selectedEventId];
 					if (selectedEvent) {
 						this.chosenOptionsSelect.addOptions(Object.keys(selectedEvent.options).map(key => ({ value: key, text: key })));
-						this.chosenOptionsSelect.addItems(selectedChosenOptionsIds);
+						this.chosenOptionsSelect.addItems(selectedChosenOptionsIds, false);
 					}
 					log.exit();
 				}

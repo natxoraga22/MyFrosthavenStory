@@ -40,7 +40,7 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("scenarioPageData", () => ({
 				scenarioId: /*[[${scenarioId}]]*/ null,
-				scenarioPath: /*[[${scenarioPath}]]*/ [],
+				scenarioPath: /*[[${scenarioPath}]]*/ null,
 				scenario: {},
 
 				init() {
@@ -62,12 +62,8 @@
 				setScenarioId(scenarioId) {
 					log.entry(scenarioId);
 					this.scenarioId = scenarioId;
-					this.scenarioPath = [];
+					this.scenarioPath = null;
 					this.setScenario();
-					/*if (scenarioId) {
-						this.scenario = this.$store.scenariosMap[scenarioId] ?? {};
-						if (clearScenarioPath || this.scenarioPath.length == 0) this.scenarioPath = [...this.scenario.path];
-					}*/
 					log.exit();
 				},
 

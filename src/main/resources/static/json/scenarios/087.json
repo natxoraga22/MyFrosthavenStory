@@ -2,18 +2,53 @@
 	"id": "087",
 	"name": "The Collection",
 	"questLine": "JobPosting",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "J7",
 	"unlockedBy": { "section": { "id": "41.1" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 1,
+	"location": "Whitefire Woods",
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section_68.4].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>The girl provides detailed descriptions of the landmarks she remembers seeing when she escaped, and you are certain you can find the location of the Collector. The metallic structure she remembers being held in was deep within the Whitefire Woods. Gathering up your materials, you head east to find the Collector.</p><p>You eventually come upon the weathered metallic structure hidden within the woods. Entrance into the structure is easy, and you quietly make your way inside. You explore the ruins, inspecting rooms until an echo finds its way to you.</p><p>As you follow the sounds, now steadily growing larger, you finally find a large room filled with cages containing various creatures. A tall, golden Savvas hovers around the room using focused energy to hold itself upright. It must be the Collector.</p><p>Unfortunately, the Collector also has guards—a pack of Algox that are quite incensed at your sudden arrival. You are unsure what the Collector needs so many different creatures for, but with these types of situations, it’s never good.</p>",
+			"specialRules": "Set up the Boss monster ability deck, though you will not need it at this time.",
+			"sectionLinks": "When door [one] is opened, read [section_31.2].<br/>When door [two] is opened, read [section_184.6].<br/>When door [three] is opened, read [section_77.2].<br/>When door [four] is opened, read [section_73.1].",
+			"containsImage": true
+		},
+		"31.2": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>You rush into the next room, but the Collector is long-gone, apparently fleeing from the commotion you caused.</p><p>As you look around the cage, a voice crackles above you. “Who are these new morsels that have wandered into my web? Normally I need the Algox to go find my subjects, but you saved me the inconvenience. So diverse and succulent... Let’s run some new experiments!” And that’s when you see the giant automaton lumber out from one of the cages.</p>",
+			"specialRules": "Door [four] is locked and will unlock when doors [two] and [three] have been opened and all revealed enemies are dead.",
+			"containsImage": true
+		},
+		"184.6": {
+			"trigger": "Door [two] is opened",
+			"text": "The Collector’s voice crackles in again. It seems to be coming from various metal boxes in the corners of the ceiling. “Ah, the polar bears. They showed potential— they’re hardy beasts, after all—but their animal intelligence dulled my senses. And we can’t have that now, can we?”",
+			"containsImage": true
+		},
+		"77.2": {
+			"trigger": "Door [three] is opened",
+			"text": "“Willful, willful Lurkers! They have an abundance of stamina and intelligence, but accompanied by such willfulness! When I tried to drain their energy, their psychic power nearly tore me apart from the inside. Horrible creatures!”",
+			"containsImage": true
+		},
+		"73.1": {
+			"trigger": "Door [four] is opened",
+			"text": "<p>After searching the cages and not finding your quarry, you move deeper into the facility. You enter some sort of laboratory and find both of the brothers. They are tied down in the center of the room, a circular machine of flames and blades spinning between them. “I see you have found my latest experiment: humans. They have proved to be the most valuable of all of my subjects. Not so willful.”</p><p>The two young men see you and cry out for help, while also trying to fight off the spinning death robot.</p>",
+			"specialRules": "<p>The Flaming Bladespinner cannot perform move abilities and is immune to forced movement.</p><p>[a] and [b] represent the brothers, allies to you and enemies to all monsters. Each has Cx(L+2) hit points and a base attack value of 4, cannot perform any move abilities and is immune to forced movement. At the start of each round, reveal one Boss monster ability card to determine their actions, with [a] being lower than [b] in initiative order for the purpose of focusing. Whenever they perform an attack ability, only brother [a] performs it, unless he is dead, in which case brother [b] performs it. If both brothers die, the scenario is lost.</p>",
+			"bossSpecials": {
+				"1": "One brother performs:<br/>[attack] +0",
+				"2": "Brother [b] performs:<br/>[heal] 2, [target] all allies, [range] 2"
+			},
+			"containsImage": true
+		},
+		"68.4": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>The chaos of the room subsides, and you free the two brothers from their restraints. One of them doesn’t look so great, but the other seems fit to travel.</p><p>“We must stop that monster!” One of the brothers pleads. “It steals the life force of its captives to prolong its own miserable life. I won’t rest until all those it has killed are avenged!”</p><p>He picks up a weapon off the floor and starts toward a door at the far end of the room. You grab him by the shoulder, trying to calm him down. You explain that his brother needs medical attention and should be carried back to Frosthaven as quickly as possible. He nods, taking the task upon himself while providing you with directions on how to reach the Collector’s inner sanctum.</p>",
+			"rewards": {
+				"text": "Gain 1 inspiration, or 2 inspiration if both brothers survived.",
+				"scenarios": [{ "id": "088", "forceLinked": true }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "31.2", "184.6", "77.2", "73.1", "68.4"]
 }

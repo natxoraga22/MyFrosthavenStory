@@ -1,4 +1,7 @@
 {
+	"15.4": {
+		"unlockedBy": { "scenario": { "id": "069" }}
+	},
 	"21.4": {
 		"title": "Winter Arrives",
 		"text": "<p>It’s been a summer of adversity, but your decision is made: this outpost at the corner of civilization won’t make it through another winter without your assistance. Of course, it’s possible they won’t make it with you, either—but at least you’ll find out together.</p><p>The Quatryl mail carrier cinches her bag and plods through the main gate. In her satchel is your final reconnaissance report to the guild at White Oak, detailing the condition of the town, the support it will need to continue, and your decision to stay.</p><p>With a sober final thump, the gates of Frosthaven seal shut. The populace barely acknowledge it, but for you it means you’ve linked your fate with that of this town.</p>",
@@ -29,6 +32,7 @@
 	},
 	"41.1": {
 		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
 		"text": "<p>Captain Olmstead, head of the town guard, brings you out of the cold and into the warm barracks. By the fire is a shivering Inox girl wrapped in heavy pelts. The rest of the normally lively barracks is empty, cleared out at the Captain’s orders. He speaks quietly to you, out of earshot of the girl.</p><p>“Patrol found her outside the wall, frozen half to death. Claims someone called ‘The Collector’ has been holding her and her brothers for a few weeks now. I don’t have the troops to spare, but I’m not letting this one languish over at the town hall. Someone has to do something.”</p><p>You draw closer to the girl as nonthreateningly as you can. She tries to put on a brave face when she sees you, but the façade doesn’t last long. After a few deep breaths she speaks. “I… I think I can tell you where. He has my brothers. The Collector…” She sobs, and Captain Olmstead puts a reassuring hand on her shoulder. “Promise me you’ll stop him.”</p>",
 		"rewards": { 
 			"scenarios": [{ "id": "087" }]
@@ -114,6 +118,9 @@
 			"text": "<p>Place map overlay sticker Z on the map in location Z (F2).</p><p>Do not resolve an outpost event this week.</p>",
 			"scenarios": [{ "id": "049" }]
 		}
+	},
+	"100.3": {
+		"unlockedBy": { "scenario": { "id": "128" }}
 	},
 	"103.2": {
 		"title": "Lumber Shipment",

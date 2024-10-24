@@ -1,0 +1,39 @@
+{
+	"id": "069",
+	"name": "Sacred Soil",
+	"questLine": "PersonalQuest",
+	"coordinates": "P2",
+	"requirement": { "status": "Into the Forest" },
+	"unlockedBy": { "other": "Personal Quest" },
+	"complexity": 2,
+	"location": "Radiant Forest",
+	"goals": "The scenario is complete when three soil samples have been looted. At the end of that round, read [section_27.3].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>“More tea?” You sit in the cabin of a local botanist, a Savvas named Listeritus. It holds an iron pot with a cloth and pours out another steaming herbal draft for you. “Of course, I can’t really drink it myself, but I do so love the smell.”</p><p>You have asked Listeritus to help study the wood you’ve been bringing back from your missions for some sign of the Great Oak. On the table between you is a piece of bark. “Now that looks like oak to me,” it says. “Divine? I can’t tell, but definitely the same type as the Great Oak in the capital. And you say you found this far from here, near the Radiant Forest? Interesting indeed.”</p><p>Liseritus sits and sniffs at its tea, savoring the hint of mint and nutmeg. “I’m confident we’ll find a grove of oaks out there, but it may require a bit of legwork.</p><p>“Given how the roots of trees can grow deep and far, I have a plan. Head to the Radiant Forest and gather some soil samples from three different regions of the forest. Bring them here, and I should be able to triangulate where the oaks should be.”</p><p>You finish your tea, and then stand to gather your things. “Oh, and be careful. That forest is home to all manner of dangerous creatures. Here, take some more tea with you.”</p>",
+			"specialRules": "<p>Whenever any Earth Demon in the scenario dies, instead of a loot token, it drops one goal treasure tile. These represent soil samples.</p><p>All lettered hexes [a] to [f] represent passages to other rooms.</p><p>Whenever any character ends their turn occupying a passage, they and any of their summons or tokens within [range] 2 may be removed from the map to travel through the passage.</p><p>At the start of each round (before card selection), all traveling characters must discard two cards (if able). Then, in any order, they are placed in the lettered hex on the other side of the passage they entered or the closest empty hex. All their summons and tokens that were removed are placed in viable hexes closest to the character.</p><p>[a] and [c] are two sides of the same passage, [b] and [d] are two sides of the same passage, and [e] and [f] are two sides of the same passage.</p><p>No figure can teleport or find focus between rooms.</p>",
+			"sectionLinks": "When any character travels from any [a] or [f] for the first time, at the start of the round read [section_143.3]. When any character travels from any [b] or [e] for the first time, at the start of the round read [section_122.1].",
+			"containsImage": true
+		},
+		"143.3": {
+			"trigger": "Any character travels from any [a] or [f]",
+			"text": "The trees give way to a clearing where light spills down onto a crystal-clear pool fed by a babbling spring. This brief break in the trees attracts all manner of woodland creatures who drink from the pool and graze on the lush foliage that grows around it. Unfortunately, some woodland creatures are unfriendly.",
+			"containsImage": true
+		},
+		"122.1": {
+			"trigger": "Any character travels from any [b] or [e]",
+			"text": "The trees grow closer, thrust up into the sky as if groping skeletal hands, and the vines twist into the thick knots, making progress painful and tricky. Barely any light reaches the forest floor making it easy to be turned around in this maze of thorns and beasts.",
+			"containsImage": true
+		},
+		"27.3": {
+			"trigger": "Three soil samples have been looted",
+			"conclusion": "<p>Carrying a case laden with soil samples from all about the forest, you trek back to Liseritus’ humble abode and sit to enjoy one more cup of tea as it sets about examining the samples. Using an array of magnifying glasses, Liseritus peers down at the soil, picking at it with tweezers, muttering, and scribbling notes.</p><p>Not even breaking from its work, Liseritus breaks the silence. “This is going to take longer than I thought. I will send for you when I have an answer.”</p>",
+			"rewards": {
+				"text": "Gain 1 [snowthistle], 1 [axenut] and 1 [flamefruit]."
+			},
+			"sectionLinks": "Add [section_15.4] to the calendar in three weeks."
+		}
+	},
+	"path": ["main", "143.3", "122.1", "27.3"]
+}

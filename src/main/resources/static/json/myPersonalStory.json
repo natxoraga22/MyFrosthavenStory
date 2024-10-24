@@ -301,6 +301,33 @@
 				"upgrade": [{ "id": "huntinglodge", "level": 2 }]
 			}
 		},
-		{ "scenario": { "id": "128" }}
+		{ "scenario": { "id": "128" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-25", "chosenOption": "A1" },
+				"upgrade": [{ "id": "tradingpost", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "WR-17", "chosenOption": "A" }},
+		{ "scenario": { "id": "069" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-30", "chosenOption": "B" },
+				"upgrade": [{ "id": "enhancer", "level": 3 }, { "id": "library", "level": 3 }]
+			}
+		},
+		{ "event": { "id": "WR-44", "chosenOption": "B" }},
+		{ "scenario": { "id": "087" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "192.1" }],
+				"passageOfTime": [{ "id": "100.3" }],
+				"outpostEvent": { "id": "WO-29", "chosenOption": "B" },
+				"levelUps": [{ "id": "snowdancer", "level": 8 }, { "id": "infuser", "level": 8 }],
+				"retirements": [{ "id": "snowdancer", "additionalPersonalQuest": { "id": "11" }}],
+				"newMembers": [{ "id": "pyroclast" }],
+				"build": [{ "id": "jeweler", "level": 1 }, { "id": "temple", "level": 1 }]
+			}
+		}
 	]
 }

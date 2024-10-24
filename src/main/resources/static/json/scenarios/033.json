@@ -25,7 +25,7 @@
 			"trigger": "Three radiant stones have been found",
 			"conclusion": "<p>Working in the north for as long as you have, you’d think snow would be the last thing you’d want to see. And yet, here you are—drenched in sweat, flame coursing around you, and all you want is a nice, three-day blizzard. But you’ve found it— the last stone.</p><p>You cleave through the flame demons, snatch up the final orange rock, and dash free of the cave. The fresh air is incredible.</p><p>The demons, though fierce, do not give pursuit, and so, with your stash of heat stones now secure, you make your way gladly back to Frosthaven.</p>",
 			"rewards": {
-				"text": "Gain 5 [xp] each for each unrevealed dowsing rune.<br/>Gain “Ember Energy Source” [item]."
+				"text": "Gain 5 [xp] each for each unrevealed dowsing rune.<br/>Gain “Ember Energy Source” [item_244]."
 			},
 			"sectionLinks": "Add [section_135.1] to the calendar in three weeks."
 		}

@@ -1,0 +1,19 @@
+{
+	"id": "088",
+	"name": "Collection's Capstone",
+	"questLine": "JobPosting",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "scenario": { "id": "087" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

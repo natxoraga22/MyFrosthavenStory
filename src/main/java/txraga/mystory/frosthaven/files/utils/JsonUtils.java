@@ -21,7 +21,7 @@ public class JsonUtils {
 
 		// Item icon (special case)
 		String itemIconRegex = "\\[item_(.*?)\\]";
-		String itemIconHtml = "<img class=\"icon item\" src=\"" + IMG_URL + "/icons/item.png\">";
+		String itemIconHtml = "<img class=\"icon item\" src=\"" + IMG_URL + "/icons/item.png\"> <strong>$1</strong>";
 		replaced = replaced.replaceAll(itemIconRegex, itemIconHtml);
 
 		// Square icon (special case)

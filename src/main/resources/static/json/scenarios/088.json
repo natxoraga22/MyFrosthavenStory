@@ -2,18 +2,42 @@
 	"id": "088",
 	"name": "Collection's Capstone",
 	"questLine": "JobPosting",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "I7",
 	"unlockedBy": { "scenario": { "id": "087" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 2,
+	"location": "Whitefire Woods",
+	"goals": "The scenario is complete when the Collector is dead. At the end of that round, read [section_128.3].",
+	"effects": "Each character gains [wound].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>“You have proven yourself to be marvelous specimens.” The Collector’s voice echoes through the hallways as you make your way through them. “I can almost taste your life force. I’m confident it will be exquisite.”</p><p>You get to the end of the hallway and find elite Savvas guards blocking your advance. “All we need to do is subdue you...”</p>",
+			"sectionLinks": "When door [one] is opened, read [section_79.3].",
+			"containsImage": true
+		},
+		"79.3": {
+			"trigger": "Door [one] is opened",
+			"text": "The next room holds several more cages filled with Lurkers. As you start to walk through the room, the cage doors swing open. The screeching noise swells as they skitter out toward you.",
+			"sectionLinks": "When door [two] is opened, read [section_25.1].",
+			"containsImage": true
+		},
+		"25.1": {
+			"trigger": "Door [two] is opened",
+			"text": "<p>You enter the control room, filled with different gadgets that beep and click. The Collector hums with energy as he speaks “So much life, wasted in your fruitless pursuit. But that is no matter, as you have brought your own juicy forms to me. I would have preferred to not get my own hands dirty, but your persistence just proves your hardiness.”</p><p>So close to the Collector, you take note of his fractured, decaying form. The rocks that form the Savvas’s body are cracked and crumbling, held up only by a shimmering aura of magical energy. It is both beautiful and hideous.</p>",
+			"specialRules": "At the start of next round and each second round after that, spawn one Savvas Lavaflow at [a]. It is normal for two characters, elite for each second spawning for three characters, or elite for four characters.",
+			"bossSpecials": {
+				"1": "The Collector performs:<br/>[move] +0<br/>[attack] +1, ([consumeAir]: +1 [target]), ([consumeFire]: [wound]), ([consumeIce]: [disarm])<br/>[consumeDark]: [curse], [target] all, [range] 1<br/>[air] [fire] [earth] [light]",
+				"2": "The Collector performs:<br/>[move] +1<br/>[attack] +0, ([consumeAir]: +1 [target]), ([consumeFire]: [wound])<br/>[consumeEarth]: [heal] C, self<br/>[consumeLight]: [shield] 1<br/>[air] [fire] [ice] [dark]"
+			},
+			"containsImage": true
+		},
+		"128.3": {
+			"trigger": "The Collector is dead",
+			"conclusion": "<p>The Collector wails terribly as its aura fades, causing its body to crumble to the floor, now nothing more than a heap of lifeless stone. You walk over to the main console and fiddle with the controls until you figure out how to open the rest of the cages. Nothing else should suffer from this monster’s pursuits.</p><p>When you return to Frosthaven, you meet up with the sister and her brothers, who made it safely back. They are injured, but they will live and are very grateful for all your help.</p>",
+			"rewards": {
+				"text": "Gain 2 morale."
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "79.3", "25.1", "128.3"]
 }

@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import txraga.mystory.frosthaven.files.utils.IconsDeserializer;
+import txraga.mystory.frosthaven.model.Event.TypeAndSeason;
 
 
 @NoArgsConstructor
@@ -21,8 +22,8 @@ public class Rewards {
 	@JsonDeserialize(using = IconsDeserializer.class)
 	private String text;
 
-	private Map<txraga.mystory.frosthaven.model.Event.TypeAndSeason,List<Rewards.Event>> events;
-	private Map<txraga.mystory.frosthaven.model.Event.TypeAndSeason,List<Rewards.Event>> removedEvents;
+	private Map<TypeAndSeason,List<Rewards.Event>> events;
+	private Map<TypeAndSeason,List<Rewards.Event>> removedEvents;
 	private List<Rewards.Scenario> scenarios;
 	private List<Rewards.Scenario> lockedOutScenarios;
 

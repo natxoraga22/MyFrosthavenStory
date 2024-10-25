@@ -1180,6 +1180,7 @@
 	},
 	"WO-72": {},
 	"WO-73": {
+		"unlockedBy": { "section": { "id": "192.5" }},
 		"text": "<p>Mayor Satha approaches you flanked by two balding priests in simple robes. “The temple won’t stop pestering me about some Volunteer Day,” the mayor says. “Frankly, I’ve got more important things to do. Find something useful they can volunteer for, won’t you?”</p><p>One of the clergy speaks up. “Winter brings such hardships on the people of Frosthaven. To improve their spirits, the Temple of the Great Oak has rallied many eager participants for a productive day of volunteering! How best can we be of service?”</p>",
 		"options": {
 			"A": {
@@ -1244,7 +1245,9 @@
 	"WO-76": {
 		"unlockedBy": { "event": { "id": "SO-59" }}
 	},
-	"WO-77": {},
+	"WO-77": {
+		"unlockedBy": { "section": { "id": "31.3" }}
+	},
 	"WO-78": {},
 	"WO-79": {},
 	"WO-80": {

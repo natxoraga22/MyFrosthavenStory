@@ -217,7 +217,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-08", "chosenOptions": ["A2", "B"] },
 				"retirements": [{ "id": "crashingtide", "additionalPersonalQuest": { "id": "13" }}],
-				"newMembers": [{ "id": "snowdancer" }],
+				"newMembers": [{ "id": "snowdancer", "personalQuest": { "id": "01", "unlockedBuilding": "ALT" }}],
 				"build": [{ "id": "library", "level": 1, "path": ["190.3", "143.2"] }],
 				"upgrade": [{ "id": "library", "level": 2 }]
 			}
@@ -328,6 +328,18 @@
 				"newMembers": [{ "id": "pyroclast" }],
 				"build": [{ "id": "jeweler", "level": 1 }, { "id": "temple", "level": 1 }]
 			}
-		}
+		},
+		{ "event": { "id": "WR-03", "chosenOption": "A" }},
+		{ "scenario": { "id": "088" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "15.4" }],
+				"outpostEvent": { "id": "WO-63", "chosenOption": "?" },
+				"build": [{ "id": "wallM" }],
+				"upgrade": [{ "id": "craftsman", "level": 7 }]
+			}
+		},
+		{ "event": { "id": "WR-30", "chosenOption": "A2" }},
+		{ "scenario": { "id": "070" }}
 	]
 }

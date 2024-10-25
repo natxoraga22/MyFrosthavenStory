@@ -1,0 +1,19 @@
+{
+	"id": "129",
+	"name": "How to Lay an Ambush",
+	"questLine": "Other",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "100.3" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

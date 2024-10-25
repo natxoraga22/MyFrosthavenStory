@@ -451,7 +451,9 @@
 	"SR-36": {
 		"unlockedBy": { "event": { "id": "WR-06" }}
 	},
-	"SR-37": {},
+	"SR-37": {
+		"unlockedBy": { "section": { "id": "31.3" }}
+	},
 	"SR-38": {
 		"unlockedBy": { "section": { "id": "189.1" }},
 		"text": "<p>“Just down that crevasse. Screaming like crazy,” The mining camp foreman says. “I’m not sending my folks down here. I’ll leave it to you to put it down.”</p><p>You climb down the ridge and sure enough, protruding from a recent rockslide is the limp arm of an Unfettered.</p><p>“APPROACH CLOSER SO I MAY ELIMINATE YOU!” The arm swings uselessly with its interior mechanics exposed. “PUT YOURSELF WITHIN RANGE OF MY POWER-FLAIL AND TASTE MY STEEL.” You don’t know how long this thing’s been down here, but it’s clearly lost it. You brush aside the larger rocks and find its entire lower half has been crumpled by the rockslide.</p><p>“I’VE GOT YOU NOW! <strong>CRUSHING LEAP</strong>!”… The machine does not move.</p><p>You were sent to eliminate the threat and cash in on the scrap, but there may be an opportunity here. It could be a valuable asset if you can reason with it. That said, it would need a significant overhaul to get it back to operational.</p>",
@@ -498,7 +500,9 @@
 	},
 	"SR-41": {},
 	"SR-42": {},
-	"SR-43": {},
+	"SR-43": {
+		"unlockedBy": { "section": { "id": "192.5" }}
+	},
 	"SR-44": {},
 	"SR-45": {},
 	"SR-46": {

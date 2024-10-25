@@ -1,22 +1,29 @@
 {
+	"01": {
+		"title": "The Study of Plants",
+		"description": "Plants are infinitely more interesting than people. There are so many varieties, and each one has unique properties. If you could do nothing but look at new plants all day, you absolutely would. But you’re running out of new plants to look at. Luckily there’s an entirely new ecosystem in the northern part of the continent.",
+		"requirements": "Personally collect five different types of herbs through loot tokens.",
+		"building": { "id": "garden" },
+		"altBuilding": { "id": "temple" }
+	},
 	"04": {
 		"title": "Greed is Good",
-		"description": "There are many high and lofty goals in life—sick grandmas and epic love. Ridiculous. Only one thing matters and that's money—getting the most of it and keeping it safe. The weight of gold in your purse is a greater feeling than anything else imaginable, grandmas be damned.",
+		"description": "There are many high and lofty goals in life—sick grandmas and epic love. Ridiculous. Only one thing matters and that’s money—getting the most of it and keeping it safe. The weight of gold in your purse is a greater feeling than anything else imaginable, grandmas be damned.",
 		"requirements": "Have 80+20xL gold in your possession, where L is the prosperity level.",
 		"building": { "id": "tradingpost" },
 		"altBuilding": { "id": "hidedepot" }
 	},
 	"05": {
 		"title": "Build, not Destroy",
-		"description": "Sure, you've made a name for yourself as a seasoned fighter. When push comes to shove, you know how to kill a man. Still, it doesn't feel good. You long to find a new way of life. One that doesn't involve tearing something down, but rather building something up. To use your hands for a positive purpose: that would be ideal.",
+		"description": "Sure, you’ve made a name for yourself as a seasoned fighter. When push comes to shove, you know how to kill a man. Still, it doesn’t feel good. You long to find a new way of life. One that doesn’t involve tearing something down, but rather building something up. To use your hands for a positive purpose: that would be ideal.",
 		"requirements": "Experience the construction of twelve different buildings or building upgrades.",
 		"building": { "id": "carpenter" },
 		"altBuilding": { "id": "inn" }
 	},
 	"06": {
 		"title": "Team Building",
-		"description": "You are a people person. Sure, you've got a job to do, but would it hurt to make a few friends? Of course not. Nothing would make you happier than sitting around the hearth with some fast friends, drinking, talking, and playing games.",
-		"requirements": "During eigth different outpost phases, read a person's name in an event or section.",
+		"description": "You are a people person. Sure, you’ve got a job to do, but would it hurt to make a few friends? Of course not. Nothing would make you happier than sitting around the hearth with some fast friends, drinking, talking, and playing games.",
+		"requirements": "During eigth different outpost phases, read a person’s name in an event or section.",
 		"building": { "id": "carpenter" },
 		"altBuilding": { "id": "inn" }
 	},
@@ -29,10 +36,17 @@
 	},
 	"10": {
 		"title": "Explore the Reaches",
-		"description": "Who are these people? They come all the way to this glorious wilderness and then huddle together in their drab, little buildings. It's madness. You will climb the tallest peak and go farther out into the snow plains and frozen seas than anyone else has done before. You will see the glorious sights yet unseen.",
+		"description": "Who are these people? They come all the way to this glorious wilderness and then huddle together in their drab, little buildings. It’s madness. You will climb the tallest peak and go farther out into the snow plains and frozen seas than anyone else has done before. You will see the glorious sights yet unseen.",
 		"requirements": "Complete five different scenarios that require [boat], [climbinggear], or [sled].",
 		"building": { "id": "townhall" },
 		"altBuilding": { "id": "library" }
+	},
+	"11": {
+		"title": "Refined Tastes",
+		"description": "You’ll admit, you are not used to such... rustic surroundings. But you are not one to give up. You’ll make this work. Anything can be made beautiful if you put enough effort into it. Even the crude can be refined into elegance. Yes, this whole place could use a little more... elegance.",
+		"requirements": "Own items whose crafting costs include a total of at least fifteen items.",
+		"building": { "id": "jeweler" },
+		"altBuilding": { "id": "hidedepot" }
 	},
 	"13": {
 		"title": "End the Trickery",
@@ -43,7 +57,7 @@
 	},
 	"20": {
 		"title": "Return to Simplicity",
-		"description": "Mechanical creatures roaming the frozen north—and you thought you'd heard of everything! Who knows where they came from or what they're up to, but it can't be good, right? You prefer simplicity. Metal is used for tools, swords, and armor. Not to make strange things that move around on their own. No, these clanking things must be destroyed at all cost.",
+		"description": "Mechanical creatures roaming the frozen north—and you thought you’d heard of everything! Who knows where they came from or what they’re up to, but it can’t be good, right? You prefer simplicity. Metal is used for tools, swords, and armor. Not to make strange things that move around on their own. No, these clanking things must be destroyed at all cost.",
 		"requirements": "Kill fifteen Ruined Machines.",
 		"building": { "id": "garden" },
 		"altBuilding": { "id": "inn" }

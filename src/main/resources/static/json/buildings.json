@@ -170,6 +170,51 @@
 			}
 		}
 	},
+	"jeweler": {
+		"number": "39",
+		"name": "Jeweler",
+		"levels": {
+			"1": {
+				"builtSections": {
+					"31.3": {
+						"title": "Jeweler Built",
+						"text": "<p>As the jeweler’s opens its doors, you feel particularly proud of its construction. At the worktables, craftspeople are absorbed in examining gemstones under magnifying glasses, and standing at kilns or with blowtorches, melting precious metals into fantastic shapes. Their nimble hands seem to weave an air of sophistication into Frosthaven. One Vermling jeweler approaches you, showing off a black opal he’s set into a broach.</p><p>“What do you think?” His face tucks shyly against his vest. “I’ve been scouring the coast for these opals, and now I finally have a use for them.” He tells you he plans to sell them, then send the proceeds to his family down south. You’re pleased that you’ve created many new livelihoods, and hope to see the residents of Frosthaven wearing these beautiful pieces now and again.</p>",
+						"rewards": {
+							"text": "Add items [item_156] to [item_159] to the available item supply.",
+							"events": {
+								"SR": [{ "id": "SR-37" }],
+								"WO": [{ "id": "WO-77" }]
+							}
+						}
+					}
+				}
+			},
+			"2": {},
+			"3": {}
+		}
+	},
+	"temple": {
+		"number": "42",
+		"name": "Temple",
+		"levels": {
+			"1": {
+				"builtSections": {
+					"192.5": {
+						"title": "Temple Built",
+						"text": "<p>Even an outpost as industrious as Frosthaven needs a place of solitude. The Temple of the Great Oak has become a sanctuary for all, its sacred gardens and walkways encompassing a young oak tree which is said to distribute divine blessings—for the proper donations, of course.</p><p>You meet with the Temple’s Head Keeper, a human who folds his hands in his sleeves and will occasionally break off conversation to stare contemplatively into space. After showing you the tree, he leaves you alone to rest before the boughs.</p><p>The wind rustling the leaves moves your mind from the bustle of living to a meditative plane, where your thoughts and instincts pass by without consequence.</p><p>Once you leave, you feel refreshed, ready to face the new challenges Frosthaven may present to you next.</p>",
+						"rewards": {
+							"events": {
+								"SR": [{ "id": "SR-43" }],
+								"WO": [{ "id": "WO-73" }]
+							}
+						}
+					}
+				}
+			},
+			"2": {},
+			"3": {}
+		}
+	},
 	"enhancer": {
 		"number": "44",
 		"name": "Enhancer",
@@ -206,6 +251,18 @@
 					"56.3": {}
 				}
 			}
+		}
+	},
+	"hidedepot": {
+		"number": "72",
+		"name": "Hide Depot",
+		"levels": {
+			"1": {
+				"builtSections": {
+					"173.1": {}
+				}
+			},
+			"2": {}
 		}
 	},
 	"library": {

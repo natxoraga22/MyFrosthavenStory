@@ -120,7 +120,12 @@
 		}
 	},
 	"100.3": {
-		"unlockedBy": { "scenario": { "id": "128" }}
+		"title": "Business Proposal",
+		"unlockedBy": { "scenario": { "id": "128" }},
+		"text": "<p>“I’m glad we were finally able to meet.” You sit in The Crater across from Derrick Windmere, the noble you met with those two drunken brothers some weeks ago. “I have a business proposition. See, my family, well, they’re quite influential down south, and they’ve always had high expectations of me—expectations that have been very difficult to live up to. I’ve come to the north to get away from their constant disapproval, but I think I’ve actually managed to stumble upon an opportunity that could change all that.”</p><p>At this, Derrick unrolls a bundle of cloth, sending a beautiful yellow gem clattering across the table. “Sun agates. Very fragile, but those Oak zealots, the Radiant Order, go absolutely bonkers over them. Embed them in all their stuff, claiming they help them commune with the Great Oak to strengthen their holy powers. But that’s not important. What’s important is that the Radiant Order is very rich, and I just discovered a source of these gems up here in the north.</p><p>“Seems the Algox mine them for their own purposes—possibly religious too,” Derrick says, shaking his head with exasperation. “But they’re not too keen on negotiating, so we’ll need to take their mine by force. Don’t worry, though. I’m not asking you to take on that many Algox. I can get a private militia up here to do that, but before I bring this to my family, I need solid proof that it’s worth the investment.</p><p>“Not one crystal,” he says, pointing to the gem in your hands, “But a cartful. I’ve got a few men out in the field already, and they’re reporting that the Algox are preparing to make another shipment of agates from the mine. So all I need you to do is ambush that shipment and bring it back to me.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "129" }]
+		}
 	},
 	"103.2": {
 		"title": "Lumber Shipment",
@@ -358,6 +363,14 @@
 		"text": "<p>Crain grins and lifts up a large decaying book, one you recognize from the catacombs. “Of all the texts I had a chance to peruse in those tunnels, this one fascinated me the most, and I understand absolutely none of it.”</p><p>The book doesn’t look like much. It’s bound in thin, tanned leather that’s so worn that the corners have begun to peek through. On the front cover are two words inscribed in faint, black ink. You raise a skeptical eyebrow.</p><p>“Yes! I’m excited as well,” Crain says. “That’s why I spent all night deciding on the best method to begin the translation. The numerical system, that’s what I’ve landed on. It’s quite different from any I’ve studied, but once I untangle it, I should be able to move on to the letters.” He pauses to consider something, then nods enthusiastically, convinced of it. “And how about you, friends? Care to take your luck with the old pen and paper?”</p><p>He riffles through the mosaic of parchment and snaps up a small leaf. On it, is a series of dots and dashes, a code if you were to guess. “It’s their numerals. Or could they be ordinals? No no, definitely numerals. Anyway, how about you give it a shot. A puzzle to fill the time between slaying and whatnot.”</p>",
 		"rewards": {
 			"text": "Open the puzzle book to the first page."
+		}
+	},
+	"192.1": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>“Alright, yes, I understand!” Satha, the mayor of Frosthaven, is surrounded by a group of a dozen people clamoring for her attention outside her cabin. Most unusually, they’re still dressed in their nightclothes, oblivious to the weather. Satha catches your eye and waves you over. With an exasperated sigh, she asks the crowd to fill you in.</p><p>A young woman in a nightgown with bloodshot eyes speaks up. “We had a dream. A bad one, all together. Cogs, spinning… the fog of darkness mixed with the pull of fear. It’s all jumbled up, but the machine is calling. It needs someone to go there, out on the ice. To free the Relic.</p><p>To carve away the cold and pull it from its bed. Retrieve the Relic.”</p><p>The others speak in eerie unison: “Free the Relic. Retrieve the Relic.” Satha narrows her gaze in uncharacteristic concern.</p><p>Another townsperson speaks up, a nervousness about him. “It said… it said it wouldn’t let us sleep until we freed it. You have to help us. You’ll help us, won’t you?”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "079" }]
 		}
 	},
 	"194.3": {

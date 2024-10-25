@@ -6,6 +6,13 @@
 		"building": { "id": "garden" },
 		"altBuilding": { "id": "temple" }
 	},
+	"02": {
+		"title": "Searching for the Oak",
+		"description": "Most people believe that the Great Oak in the capitol is the true face of the divine, but you have heard rumors of a great prophet who brought a sacred acorn from the north to plant the Great Oak. The true Oak is somewhere in this frozen waste, and you wish to gaze upon it in awe.",
+		"requirements": "Personally loot 8 total lumber cards through loot tokens to unlock <strong><em>Sacred Soil</em></strong> <span class=\"scenarioNumber\">(69)</span>, and then follow it to a conclusion.",
+		"building": { "id": "garden" },
+		"altBuilding": { "id": "temple" }
+	},
 	"04": {
 		"title": "Greed is Good",
 		"description": "There are many high and lofty goals in life—sick grandmas and epic love. Ridiculous. Only one thing matters and that’s money—getting the most of it and keeping it safe. The weight of gold in your purse is a greater feeling than anything else imaginable, grandmas be damned.",
@@ -54,6 +61,13 @@
 		"requirements": "Kill fifteen Imps.",
 		"building": { "id": "enhancer" },
 		"altBuilding": { "id": "tavern" }
+	},
+	"14": {
+		"title": "Eternal Wanderer",
+		"description": "There is so much to see in this world. So many wondrous places beyond belief. Surely all these miraculous sights were not created by chance. You desire to visit these places and meditate upon their existence. Perhaps doing so will give greater insight into your own existence as well.",
+		"requirements": "Complete a scenario in each of the following areas: Whitefire Wood, Copperneck Mountains, Radiant Forest, Crystal Fields, and Biting Sea.",
+		"building": { "id": "tradingpost" },
+		"altBuilding": { "id": "hidedepot" }
 	},
 	"20": {
 		"title": "Return to Simplicity",

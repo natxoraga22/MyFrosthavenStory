@@ -52,7 +52,9 @@
 		"race": "Algox",
 		"background": "<p>Algox are at home in the north. Their thick white fur offers great protection from the elements, and their strength and intelligence put them at the top of the fcx»d chain. They are imposing figures with three spiraling horns atop their head. This feature they share with their distant relatives, the Inox. Like their cousins, the Algox gather in clans, but these are split following one of two rival ideologies: the Snowspeakers, who believe the divine speaks to them through the falling snow; and the Icespeakers, who instead look to the ice growing up from the cold earth.</p><p>The most adept priests of the Snowspeakers are those that move with the winds and snow, using it to make others dance, as well—often against their will. It is a breathtakingly beautiful sight, watching these Snowdancers harness the raw power of their movement to bring forth the elements of the north. Their enemies soon find themselves sapped of all warmth as the wind beats them into a snowy grave.</p>",
 		"retirement": {
-			"id": "107.3"
+			"id": "107.3",
+			"text": "<p>“My clan needs me,” the Snowdancer says, remorse in their eyes. “I have just received word that the elder priest has succumbed to the long winter, and the burden to lead now falls on my shoulders.”</p><p>You express your condolences, but the Snowdancer shakes their head. “She lived a fulfilling life, and has now joined with Geryuu. There is nothing to be remorseful about.” They stand and stare at a small whirlwind of snow they have conjured in their palm. “And I am wrong to call leadership a burden. It is a joy, and an honor. I take it up gladly, but it does mean that you and I must now part ways. I hope our friendship has strengthened the bond between Algox and this outpost—that we have many fruitful years to come as allies.”</p><p>You extend a hand in respect, and the Snowdancer envelopes it with their own, smiling warmly. “Until we meet again.”</p>",
+			"sectionLinks": "Add [section_177.4] to the calendar in the ningth week of next summer."
 		}
 	},
 	"infuser": {
@@ -60,7 +62,9 @@
 		"race": "Orchid",
 		"background": "<p>Orchids come from across the Misty Sea and can spend years in a peaceful state, contemplating and planning their next move while crystals grow across their skin. Orchids are largely unaffected by their environment, getting whatever warmth and sustenance they need from their meditations, so it is perfectly natural they would eventually find their way into the inhospitable north. These harsher climates provide them with new, unique perspectives on which to ruminate.</p><p>An Orchid’s contemplative nature also gives them a particular prowess over the elemental energies of the world. Some use these energies to attack their foes with raw power; however, others emit these energies into strands of elemental fabric, weaving them into physical armor and weapons. These are the Infusers, martial warriors who use the natural flow of elements to enhance their already formidable fighting skills.</p>",
 		"retirement": {
-			"id": "92.2"
+			"id": "92.2",
+			"text": "<p>“I feel I’ve reached my current potential.” You are sitting with the Infuser at The Crater, discussing the future. “I still feel like there is room to grow, but I’m not learning anything new by just fighting the same old monsters over and over. I think I need to return to the library.”</p><p>You nod and drink your ale. The Infuser’s drink remains untouched. “There’s just so much more knowledge out there, I know it. I’m glad I could be of some use for a while, but I’ve got to think about my own journey, and it is one of knowledge.”</p><p>The Infuser stands and gives you an uncomfortable, slightly spiky hug. “Thanks for understanding. I’m sure I’ll see you around!”</p>",
+			"sectionLinks": "Add [section_42.2] to the calendar in six weeks."
 		}
 	},
 	"pyroclast": {
@@ -69,6 +73,14 @@
 		"background": "<p>The Savvas live deep under the Copperneck Mountains, largely removed from the turmoil of the surface. There, they protect their source of life, which imbues unliving rock with consciousness and thought. The Savvas have few needs, and so, most are driven to seek domination over the elements, controlling and using wind, earth, ice, and fire. Those who are able to master the elements are held in the highest regard.</p><p>Savvas go to extreme lengths to exert their power over the elements. Some cast themselves into active volcanoes, where they are either destroyed or become one with the raw power of the magma, emerging as a Pyroclast—a living embodiment of the chaotic and destructive force of flowing lava. No one can question their power then.</p>",
 		"retirement": {
 			"id": "51.3"
+		}
+	},
+	"hive": {
+		"name": "HIVE",
+		"race": "Unfettered",
+		"background": "<p>Living machines come from an era long past. Built to serve a variety of functions, then cast into dormancy during a great cataclysm, the automatons once again are waking up and spreading their influence across the north. They call themselves “Unfettered”; no longer bound by their original programming, they are now free to follow their own will.</p><p>Not all of the ancient machines were able to fold into the Unfettered cause, however. One example is the Harrower Imitative Voltaic Entity, or HIVE, an experimental model designed to mimic the swarm-like structure of a Harrower. The HIVE employs a unique processing structure that is distributed among the many different smaller automatons that make up its larger form. This structure gives it a much higher capacity for independent thought, and so, once awoken, it decided to set off on its own journey.</p>",
+		"retirement": {
+			"id": "148.2"
 		}
 	}
 }

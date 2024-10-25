@@ -41,6 +41,10 @@
 /* PERSONAL QUEST */
 /* -------------- */
 
+.retirement .personalQuest {
+	min-height: calc(var(--playing-card-height) + var(--playing-card-margin));
+}
+
 .personalQuest > .title {
 	margin-bottom: 0.5rem;
 }
@@ -66,6 +70,11 @@
 	border-width: 0;
 }
 
+.retirement div.section {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
 
 /* ----- */
 /* ICONS */
@@ -78,6 +87,7 @@
 .character .icon.blinkblade   { max-height: 28px; }
 .character .icon.crashingtide { max-height: 30px; }
 .character .icon.deathwalker  { max-height: 32px; }
+.character .icon.hive         { max-height: 34px; }
 .character .icon.infuser      { max-height: 34px; }
 .character .icon.pyroclast    { max-height: 32px; }
 .character .icon.snowdancer   { max-height: 32px; }

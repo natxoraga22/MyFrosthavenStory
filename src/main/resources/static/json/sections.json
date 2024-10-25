@@ -16,6 +16,7 @@
 	},
 	"29.5": {
 		"title": "Puzzle Solution (puzzle #1)",
+		"unlockedBy": { "other": "Puzzle Book" },
 		"text": "<p>You find Crain much as you left him—cloistered in his small room, surrounded by his surreptitiously begotten books and muttering to himself. However, unlike last time, he’s up and moving around.</p><p>“My pugilistic chum!” He says when you knock on his door frame, “What a pleasure to see you again so soon! Have you already cracked the cipher then?” The Quatryl clicks his tongue and examines your findings. He mutters, looks at his own notes, which are now nailed to the wall.</p><p>“Ha!” Crain shouts. “Fancy that. Look here.” He tears down one of his sheets and brings it over. On it are several lines of the ancient numerical system apparently copied directly out of the source text. Using your new system, he translates a few of the lines and ends up with a fairly basic equation that he solves without trouble.</p><p>“You’ve done it then,” Crain says with a bit of guarded surprise. “Had you marked as a fighter through and through, but seems there’s a scholar trapped beneath all those muscles.” He lets out a high, cackling laugh that carries on far too long. You wonder when the last time he got some fresh air was, and ask as much.</p><p>“Fresh air? There’s no time! We have the numbers—the numbers! Now I can get to work on the alphabet, then we’ll know what secrets hide in this book.” He holds up the musty tome and a few pages fall onto the floor.</p><p>“Which reminds me.” He retrieves another slip of parchment from the wall and hands it to you. This one is scrawled with a section of text copied in the lost language. “Let’s see how you do with this. Take note, there are some scribbles there in the corner concerning two unrelated words. Something about ancient technology. Not sure about any of it, but if you have two words that fit there, it might lead to something else.”</p>",
 		"rewards": { 
 			"text": "Turn to the next page in the puzzle book." 
@@ -23,6 +24,7 @@
 	},
 	"30.6": {
 		"title": "Puzzle Solution (puzzle #2)",
+		"unlockedBy": { "other": "Puzzle Book" },
 		"text": "<p>“It’s troubling,” Crain says. “Troubling.” You find the quatryl in his quarters, sulking behind a newly made desk, cobbled together from scraps of wood and the legs of his bed. He’s poring over your work on the cipher, but it doesn’t seem to be the breakthrough he was hoping for.</p><p>“You sorted their letters,” Crain says. “I much appreciate it, but your solution just leads to more problems. It seems the author of this tome has taken steps to shroud their work in deeper levels of obfuscation.” Crain stabs his quill into his ink pot and slouches back in his chair.</p><p>“It’s not complicated by any means, just time-intensive,” he says. “I’ve got the title at least: Project Source, by Mistress Torfi Logren. It appears to be a research journal. These Quatryl researchers were investigating some phenomena in the North. I can’t say what they were looking for, but this section here.”</p><p>He holds up the tome, open to a page with a very small, very crude map surrounded by text. “This tells of an experiment at the largest of a series of spires. They were apparently built not too far from here. But the experiment, I don’t know. All I have is this.”</p><p>Crain hands you a small scrap of paper that shows a diagram of sorts. “I’m sure you won’t have any trouble working out what it means. See if you can find this large spire and get to the bottom of it.”</p>",
 		"rewards": { 
 			"text": "Turn to the next page in the puzzle book." 
@@ -43,8 +45,12 @@
 			"scenarios": [{ "id": "087" }]
 		}
 	},
+	"42.2": {
+		"unlockedBy": { "section": { "id": "92.2" }}
+	},
 	"43.5": {
 		"title": "Puzzle Solution (puzzle #3)",
+		"unlockedBy": { "other": "Puzzle Book" },
 		"text": "<p>Crain’s room is empty. The books, the papers—everything is still here, but the Quatryl himself is missing. Given you’ve never seen him outside his room, you find it a bit odd and set out to find him.</p><p>Nearly half an hour later, you spot the Quatryl shuffling between cabins. In one hand, he’s carrying a half-used torch and in the other, a pot of pine pitch. As you approach, you notice he’s shaking his head and talking, as if stuck in an argument with himself. It isn’t until you’re a few feet away that he notices you.</p><p>“Ah ha,” he says, a bit surprised. “It’s nice to see you again. And what’s that?” You hand him your notes on the diagram and explain what happened in the spire, but the Quatryl seems distracted.</p><p>“Yes, it’s troubling. Good work, but troubling.” He pockets the note. “Listen, I have some news as well, but I’m in the middle of an experiment so you’ll have to walk with me while I explain.” The Quatryl starts moving without waiting for a response.</p><p>“The book, Project Source,” he rattles on, gesturing with his charred stick. “I’ve made some more progress with the translation, but in order to move any further I need you to verify some of the—er—findings.” The two of you snake between cabins and Crain pauses to sift through a pile of junk, pulling from it a piece of ruined cloth which he wraps around the used torch. Satisfied, he keeps moving.</p><p>“According to their notes, the researchers concluded the energy source at the spire was too dangerous to work with and so it was ultimately abandoned—a very grim account, I assure you. Though it sounds like you know exactly what they mean.” He stops at a section of the palisade wall and, using a metal spoon, scrapes out a bit of clay from between the logs. He crumbles the clay into his pitch pot and keeps walking. “But their account did help me crack one of their thornier words in their dialect—death.</p><p>“It would seem these researchers were very interested in the concept. After the incident at the spire complex, they went on to investigate a new location, one they only refer to as the ‘death site.’ I need you to find it and tell me what’s inside. Torfi’s journal contains a sketch of some device at the site. If you come across it in your travels—should be in a temple or crypt of some kind—hopefully her notes will prove useful.”</p><p>Crain comes to a sudden halt. He’s brought you to one of the guard stations, right next to one of the iron braziers they use to keep warm. The guards themselves watch from their post as Crain, without any ceremony or explanation, Crain dunks his stick into the pitch pot and then shoves the gloopy thing into the guard’s fire, which bursts into a violent blue flame.</p><p>“Ach, all wrong.” Crain holds up his torch, the flame burning a brilliant sky blue. He scoffs, drops it into the snow, and walks off.</p>",
 		"rewards": { 
 			"text": "Turn to the next page in the puzzle book." 
@@ -235,6 +241,13 @@
 			"scenarios": [{ "id": "042" }]
 		}
 	},
+	"142.4": {
+		"title": "Random Scenario",
+		"text": "<p>You find an ornate letter sealed in wax. The stamp is a royal crest you don’t recognize. Upon breaking the seal and opening the letter, you find exquisite calligraphy and decorative touches flaked in gold dust. It appears to be an invitation of some sort:</p><p><em>My esteemed friends,</em></p><p><em>This letter has found its way to you, and by that alone I know that you are fated for grand things!</em></p><p><em>Since you are of quality (unlike most of the other rabble I’ve seen in these blasted lands), I extend a warm, open invitation to join me and my court for a Midwinter Ball. I’m sure you’ve heard of my soirées! I can assure you that it will be just as unforgettable as the rumors grace them to be. There will be dancing, merriment, and excitement unparalleled.</em></p><p><em>I’ve enclosed a map to my estate that I trust you will hold in confidence. Come—alone—when the winds howl and the winter sun drags in the sky in the bleakest way. We shall share a toast and the warmth of a roaring fire.</em></p><p><em>-His Grace, Emperor Ventillion</em></p>",
+		"rewards": { 
+			"scenarios": [{ "id": "107" }]
+		}
+	},
 	"146.4": {
 		"title": "Random Scenario",
 		"text": "As you look down, you hear a tiny squeak. Well, isn’t this wolf cub just a little treasure? Its tail thumps happily as you reach down to pick it up, and it lunges to lick your face. The tiny, adorable pup is too young to survive on its own, and you decide to take it back to Frosthaven with you.",
@@ -301,6 +314,14 @@
 			"text": "<p>During the next scenario, the element [ice] token does not move from the waning column to the inert column at the end of any round.</p><p>Gain “Tome of Elements” [item_216].</p><p>Do not resolve an outpost event this week.</p>"
 		}
 	},
+	"163.3": {
+		"title": "Joseph the Lion Returns",
+		"unlockedBy": { "event": { "id": "WO-80" }},
+		"text": "A couple of days ago, Joseph the Lion finally opened his ice-cream stand. After a modest turn out on opening day the stand was shut soon after. You figure there must be a good reason for such immediate closure and decide to pay Joseph a visit in hopes that the merchant is once again in need of assistance and willing to part with a few coins.",
+		"rewards": {
+			"scenarios": [{ "id": "126" }]
+		}
+	},
 	"168.2": {
 		"title": "Blast the Lurkers",
 		"unlockedBy": { "section": { "id": "114.2" }},
@@ -340,6 +361,9 @@
 		"rewards": {
 			"text": "Gain 2 morale."
 		}
+	},
+	"177.4": {
+		"unlockedBy": { "section": { "id": "107.3" }}
 	},
 	"179.5": {
 		"title": "Metal Shipment",

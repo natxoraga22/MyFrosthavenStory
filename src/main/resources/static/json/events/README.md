@@ -18,3 +18,5 @@
 * **SR-04**: checkboxes per marcar amb un reward condicional segons els checkboxes
 * **SR-26**: checkboxes per marcar amb un reward condicional segons els checkboxes
 * **SR-28**: a l'opció A hi ha un requisit (RESOURCEFUL) a la conclusió, donant una recompensa extra
+
+* **WR-05**: nou event condicional

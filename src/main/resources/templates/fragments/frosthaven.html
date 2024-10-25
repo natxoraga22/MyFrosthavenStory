@@ -51,7 +51,12 @@
 					const rawPersonalQuest = this.personalQuestsMap[psPersonalQuest.id];
 					if (rawPersonalQuest) {
 						const personalQuest = { ...rawPersonalQuest };
+						// Unlocked building
 						personalQuest.unlockedBuilding = psPersonalQuest.unlockedBuilding ?? "MAIN";
+						// Random scenario section
+						if (psPersonalQuest.randomScenarioSection) {
+							personalQuest.randomScenarioSection = this.sectionsMap[psPersonalQuest.randomScenarioSection.id];
+						}
 						return personalQuest;
 					}
 					else return null;

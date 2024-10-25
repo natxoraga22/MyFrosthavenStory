@@ -59,7 +59,10 @@
 				"requirement": "LOSE 1 MATERIAL RESOURCE EACH",
 				"text": "The hulking Algox steps aside and waves you through. “No run, go slow. Enjoy bridge.” You’re not sure if going slow is recommended for safety or overall enjoyment, but the bridge does hold your party’s weight the whole way across.",
 				"rewards": {
-					"text": "Mark one box below. When all boxes are marked, remove this card from the deck and add event WR-35 to the winter road deck.<br/>[square] [square]</i>"
+					"text": "<p>Mark one box below.<br/>[square] [square]</p><p>When all boxes are marked, remove this card from the deck and:</p>",
+					"events": {
+						"SO": [{ "id": "WR-35" }]
+					}
 				}
 			},
 			"A2": {
@@ -328,7 +331,7 @@
 				"requirement": "[trait] CHAOTIC",
 				"text": "Yes, the darkness of night is definitely more your thing. You embrace the uncertainty of the situation and follow your gut. It doesn’t lead you astray.",
 				"rewards": {
-					"text": "Gain 1 inspiration"
+					"text": "Gain 1 inspiration."
 				}
 			},
 			"B2": {

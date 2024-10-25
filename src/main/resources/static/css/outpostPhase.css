@@ -24,6 +24,7 @@
 	--wallK-max-size: 450px;
 	--wallL-max-size: 350px;
 	--wallM-max-size: 350px;
+	--wallN-max-size: 450px;
 }
 
 
@@ -118,4 +119,9 @@
 .building img:not(.icon).wallM {
 	max-width: var(--wallM-max-size);
 	max-height: var(--wallM-max-size);
+}
+
+.building img:not(.icon).wallN {
+	max-width: var(--wallN-max-size);
+	max-height: var(--wallN-max-size);
 }

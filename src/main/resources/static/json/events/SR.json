@@ -59,7 +59,7 @@
 				"requirement": "LOSE 5 GOLD",
 				"text": "You drop a few coins in the wooden offering plate, which gets you a sincere nod of thanks. He sends you on your way, but you feel a bit lighter in your step.",
 				"rewards": {
-					"text": "<p>All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity.</p><p>[square] [square] [square] [square] [square] [square]</p>"
+					"text": "All characters who donated gain [bless]. Check one box below for each character who donated. The first time all 6 boxes have been checked, gain 1 prosperity.<br/>[square] [square] [square] [square] [square] [square]"
 				},
 				"returnCard": true
 			},
@@ -498,7 +498,9 @@
 			}
 		}
 	},
-	"SR-41": {},
+	"SR-41": {
+		"unlockedBy": { "section": { "id": "173.1" }}
+	},
 	"SR-42": {},
 	"SR-43": {
 		"unlockedBy": { "section": { "id": "192.5" }}

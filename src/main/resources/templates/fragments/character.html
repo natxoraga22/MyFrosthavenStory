@@ -71,34 +71,45 @@
 	<!-- -------------- -->
 	<!-- PERSONAL QUEST -->
 	<!-- -------------- -->
-	<div th:fragment="personalQuest" x-bind:id="'personalQuest_' + personalQuest.id" class="personalQuest">
-		<!-- Card -->
-		<div class="playingCard integrated">
-			<img x-bind:src="$store.imgUrl + '/personalQuests/' + personalQuest.id + '.png'">
+	<div th:fragment="personalQuest">
+		<div x-bind:id="'personalQuest_' + personalQuest.id" class="personalQuest">
+			<!-- Card -->
+			<div class="playingCard integrated">
+				<img x-bind:src="$store.imgUrl + '/personalQuests/' + personalQuest.id + '.png'">
+			</div>
+
+			<!-- Title -->
+			<h3 class="title titleSecondary" x-jsz>{{personalQuest.title}}</h3>
+
+			<!-- Description -->
+			<div class="description" x-jsz>{{personalQuest.description}}</div>
+			<hr>
+
+			<!-- Requirements -->
+			<div class="requirements" x-jsz>{{personalQuest.requirements}}</div>
+
+			<!-- Rewards -->
+			<template x-if="personalQuest.unlockedBuilding != 'NONE'">
+				<bs:card class="fhCard pqRewards">
+					<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
+					<bs:cardBody x-data="{ building: personalQuest.unlockedBuilding == 'ALT' ? personalQuest.altBuilding : personalQuest.building }">
+						[[#{personalQuest.openEnvelope}]]
+						<img class="icon envelope" x-bind:src="$store.imgUrl + '/icons/envelope.png'">
+						<span x-jsz>{{building.number}}</span>
+						<i class="fa-solid fa-right-long mx-1"></i>
+						[[#{personalQuest.unlockBuilding}]]
+						<strong x-jsz>{{building.name}}</strong>
+					</bs:cardBody>
+				</bs:card>
+			</template>
 		</div>
 
-		<!-- Title -->
-		<h3 class="title titleSecondary" x-jsz>{{personalQuest.title}}</h3>
-
-		<!-- Description -->
-		<div class="description" x-jsz>{{personalQuest.description}}</div>
-		<hr>
-
-		<!-- Requirements -->
-		<div class="requirements" x-jsz>{{personalQuest.requirements}}</div>
-
-		<!-- Rewards -->
-		<bs:card class="fhCard pqRewards">
-			<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
-			<bs:cardBody x-data="{ building: personalQuest.unlockedBuilding == 'ALT' ? personalQuest.altBuilding : personalQuest.building }">
-				[[#{personalQuest.openEnvelope}]]
-				<img class="icon envelope" x-bind:src="$store.imgUrl + '/icons/envelope.png'">
-				<span x-jsz>{{building.number}}</span>
-				<i class="fa-solid fa-right-long mx-1"></i>
-				[[#{personalQuest.unlockBuilding}]]
-				<strong x-jsz>{{building.name}}</strong>
-			</bs:cardBody>
-		</bs:card>
+		<!-- Random scenario section -->
+		<template x-if="personalQuest.randomScenarioSection">
+			<div x-data="{ section: personalQuest.randomScenarioSection }">
+				<th:block th:replace="~{fragments/section :: section}"/>
+			</div>
+		</template>
 	</div>
 </body>
 </html>

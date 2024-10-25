@@ -678,7 +678,9 @@
 	"SO-55": {
 		"unlockedBy": { "section": { "id": "151.2" }}
 	},
-	"SO-56": {},
+	"SO-56": {
+		"unlockedBy": { "section": { "id": "173.1" }}
+	},
 	"SO-57": {
 		"unlockedBy": { "section": { "id": "78.4" }},
 		"text": "<p>The gates to Frosthaven open to reveal a lone Vermling traveler. He looks in good spirits as he shuffles through the gate and sets down his pack.</p><p>“You there!” he calls out. “I’m new in town, don’t suppose you could point me in the direction of a hot meal? Warm, even. It’s been a long journey.”</p><p>You direct him to the best restaurant in town. It also happens to be the worst restaurant in town. It’s the only restaurant, really.</p><p>“Thank you, such hospitality. Oh—one more thing. I have quite an affection for tea. Don’t suppose you have some herbs you’d be willing to part with? Or any interest in buying some of the more exotic specimens I’m carrying myself?”</p>",

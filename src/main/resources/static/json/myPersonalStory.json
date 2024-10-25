@@ -229,7 +229,7 @@
 			"outpostPhase": {
 				"outpostEvent": { "id": "SO-22", "chosenOption": "B" },
 				"retirements": [{ "id": "trapper" }],
-				"newMembers": [{ "id": "infuser" }],
+				"newMembers": [{ "id": "infuser", "personalQuest": { "id": "02", "unlockedBuilding": "NONE", "randomScenarioSection": { "id": "142.4" }}}],
 				"upgrade": [{ "id": "garden", "level": 3 }, { "id": "craftsman", "level": 6 }]
 			}	
 		},
@@ -340,6 +340,40 @@
 			}
 		},
 		{ "event": { "id": "WR-30", "chosenOption": "A2" }},
-		{ "scenario": { "id": "070" }}
+		{ "scenario": { "id": "070" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "163.3" }],
+				"outpostEvent": { "id": "WO-11", "chosenOption": "B" },
+				"retirements": [{ "id": "infuser", "additionalPersonalQuest": { "id": "14", "unlockedBuilding": "ALT" }}],
+				"newMembers": [{ "id": "hive" }],
+				"build": [{ "id": "hidedepot", "level": 1 }, { "id": "wallN"}]
+			}
+		},
+		{ "event": { "id": "WR-05", "chosenOption": "A1" }},
+		{ "scenario": { "id": "005" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-73", "chosenOption": "B" },
+				"levelUps": [{ "id": "pyroclast", "level": 4 }],
+				"upgrade": [{ "id": "huntinglodge", "level": 3 }]
+			}
+		},
+		{ "event": { "id": "WR-26", "chosenOptions": ["B", "B1"] }},
+		{ "scenario": { "id": "009", "randomScenarioSection": { "id": "26.4" }}},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "180.3" }],
+				"outpostEvent": { "id": "WO-16", "chosenOption": "?" },
+				"levelUps": [{ "id": "hive", "level": 4 }],
+				"upgrade": [{ "id": "temple", "level": 2 }]
+			}
+		},
+		{ "section": { "id": "26.5" }},
+		{ "section": { "id": "124.1" }},
+		{ "section": { "id": "52.3" }},
+		{ "section": { "id": "36.8" }},
+		{ "section": { "id": "46.2" }},
+		{ "section": { "id": "11.8" }}
 	]
 }

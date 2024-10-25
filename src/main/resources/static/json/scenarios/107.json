@@ -1,0 +1,19 @@
+{
+	"id": "107",
+	"name": "My Private Empire",
+	"questLine": "RandomScenario",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "142.4" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

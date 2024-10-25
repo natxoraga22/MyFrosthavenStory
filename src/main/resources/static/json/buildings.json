@@ -259,7 +259,16 @@
 		"levels": {
 			"1": {
 				"builtSections": {
-					"173.1": {}
+					"173.1": {
+						"title": "Hide Depot Built",
+						"text": "<p>As a final touch, an intricate woven rug is unrolled at the entrance to the hide depot. In an elegant display room heaped with goods, the fur trappers, tanners, weavers, seamsters, and their clientele all brush shoulders. You, too, now have a place to sell excess furs, and contribute to this teeming industry.</p><p>Amidst the crowd you spot Violet, the local Lurker researcher, transfixed at one booth. She’s cooing over a cashmere cape trimmed with ermine and dyed her favorite color, purple. “Oh, but I just couldn’t,” she frets.</p><p>The peg-legged proprietor grabs the cape out of her hands. “Well if you ain’t got the coin, quit pawing the furs!” The angry woman starts to smooth out the cape to put it back on display.</p><p>Violet looks shocked. “What? No—I have the gold. White Oak provides a stipend for my research… I’m merely concerned about how fragile it seems! It would just get wet in my coastal studies.”</p><p>The shopkeep immediately changes her disposition, showing a smile missing some important teeth. “Oh, a stipend?</p><p>Why didn’t you say so? Maybe you’d be interested in this here waterproof—and much more expensive—purple seal-skin coat?”</p><p>Violet spends her coin with gleeful abandon, an action you expect will be more commonplace now in Frosthaven.</p>",
+						"rewards": {
+							"events": {
+								"SO": [{ "id": "SO-56" }],
+								"SR": [{ "id": "SR-41" }]
+							}
+						}
+					}
 				}
 			},
 			"2": {}
@@ -449,6 +458,9 @@
 		"name": "Wall"
 	},
 	"wallM": {
+		"name": "Wall"
+	},
+	"wallN": {
 		"name": "Wall"
 	}
 }

@@ -228,7 +228,7 @@
 				"requirement": "<p>LOSE 2 COLLECTIVE HERB RESOURCES",
 				"text": "“I built up a bit of skill with the saw. It’s part technique and part sharpening the blade right. Watch this.”</p><p> What he lacks in decorum he certainly makes up in skill. You learn a thing or two before heading on your way.</p>",
 				"rewards": {
-					"text": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+					"text": "Add a [plus1sticker] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
 				}
 			},
 			"A2": {
@@ -247,7 +247,7 @@
 				"requirement": "<p>LOSE 2 COLLECTIVE [hide]",
 				"text": "“Nice pelt. Is this Valrath?” It is not Valrath.</p><p>True to his word, the Inox shows you how to sharpen a saw with a technique new to you. You thank him and head on your way.</p>",
 				"rewards": {
-					"text": "Add a [plus1] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
+					"text": "Add a [plus1sticker] sticker to one [lumber] loot card (the card gives one extra [lumber] when resolved)."
 				}
 			},
 			"B2": {
@@ -429,7 +429,7 @@
 				"trigger": "Drag it back in one piece to Frosthaven for study.",
 				"text": "You drag the chunk of metal back to Frosthaven for analysis and study. Pinter Droman, the local tinkerer, notes the peculiar composition can be used as a filler for other metalworks, and with careful rationing, the chunk can function as a multiplier for future metal construction.",
 				"rewards": {
-					"text": "<p>Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved).</p><p>Resolve another summer road event.</p>"
+					"text": "<p>Add a [plus1sticker] sticker to one [metal] loot card (the card gives one extra [metal] when resolved).</p><p>Resolve another summer road event.</p>"
 				}
 			},
 			"B": {

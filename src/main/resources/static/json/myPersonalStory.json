@@ -334,7 +334,7 @@
 		{
 			"outpostPhase": {
 				"passageOfTime": [{ "id": "15.4" }],
-				"outpostEvent": { "id": "WO-63", "chosenOption": "?" },
+				"outpostEvent": { "id": "WO-63", "chosenOption": "A" },
 				"build": [{ "id": "wallM" }],
 				"upgrade": [{ "id": "craftsman", "level": 7 }]
 			}

@@ -447,5 +447,8 @@
 	},
 	"wallL": {
 		"name": "Wall"
+	},
+	"wallM": {
+		"name": "Wall"
 	}
 }

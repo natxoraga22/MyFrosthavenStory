@@ -1,6 +1,11 @@
 {
 	"15.4": {
-		"unlockedBy": { "scenario": { "id": "069" }}
+		"title": "The True Oak Triangulated",
+		"unlockedBy": { "scenario": { "id": "069" }},
+		"text": "<p>You respond to a note from Listeritus, returning to its cabin to find the place ransacked and the research stolen.</p><p>“It was the Radiant Order from White Oak,” Liseritus explains, nursing some cracks in its arm. “They said they received word we were conducting ‘blasphemous’ research up here, and that they were here to stop it. They took my notes on the location of the oak grove and then destroyed everything else.</p><p>“I—I think they’re going to go destroy it! You have to go stop them. The Radiant Forest is a treasure trove of botanical wonders, and who knows how much they’ll destroy!” Listeritus grabs some parchment and begins scribbling out a crude map. “Follow this. It should get you to what you seek. I just hope you’re not too late.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "070" }]
+		}
 	},
 	"21.4": {
 		"title": "Winter Arrives",

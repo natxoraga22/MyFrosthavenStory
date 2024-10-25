@@ -15,7 +15,7 @@
 				"requirement": "[trait] OUTCAST",
 				"text": "You know there’s no use trying to convince the stubborn hermit of the beaver’s innocence. Instead you appeal to Hurdle’s better nature, convincing him that the best vengeance is a life well lived, and that Clovis must live with the weight of his guilt. The Vermling nods sagely. “Wise mer-canary… You help Hurdle see truth, yes. Hurdle return gift.”",
 				"rewards": {
-					"text": "Add a [plus1] sticker to one [metal] loot card (the card gives one extra [metal] when resolved)."
+					"text": "Add a [plus1sticker] sticker to one [metal] loot card (the card gives one extra [metal] when resolved)."
 				}
 			},
 			"B2": {
@@ -210,7 +210,7 @@
 				"trigger": "Help Hurdle dig up Jeremy’s hidden food.",
 				"text": "<p>You sigh and heft your shovel. You suppose this is what they mean when they say “No job is too small.”</p>",
 				"rewards": {
-					"text": "<p>All characters each take one turn drawing as many cards as they want from the monster attack modifier deck, one at a time, until they choose to stop. If a character draws a null card, they’ve unearthed an old egg, and their number of drawn cards is considered O. Shuffle the entire monster attack modifier deck between each turn.</p><p>Characters are then awarded the following, based on who drew the most cards (tied characters gain the full rewards of their shared rank):</p><p>1st: Gain 12 experience.<br/>2nd: Gain 6 gold.<br/>3rd: Gain 2 [lumber].<br/>4th: Gain 1 [hide].</p><p>If you collectively drew at least Cx3 cards, Hurdle is overjoyed: add a [plus1] sticker to one [axenut] loot card (the card gives one extra [axenut] when resolved).</p>"
+					"text": "<p>All characters each take one turn drawing as many cards as they want from the monster attack modifier deck, one at a time, until they choose to stop. If a character draws a null card, they’ve unearthed an old egg, and their number of drawn cards is considered O. Shuffle the entire monster attack modifier deck between each turn.</p><p>Characters are then awarded the following, based on who drew the most cards (tied characters gain the full rewards of their shared rank):</p><p>1st: Gain 12 experience.<br/>2nd: Gain 6 gold.<br/>3rd: Gain 2 [lumber].<br/>4th: Gain 1 [hide].</p><p>If you collectively drew at least Cx3 cards, Hurdle is overjoyed: add a [plus1sticker] sticker to one [axenut] loot card (the card gives one extra [axenut] when resolved).</p>"
 				}
 			},
 			"B": {

@@ -1,0 +1,41 @@
+{
+	"id": "070",
+	"name": "The True Oak",
+	"questLine": "PersonalQuest",
+	"coordinates": "Q2",
+	"unlockedBy": { "section": { "id": "15.4" }},
+	"complexity": 1,
+	"location": "Radiant Forest",
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section_35.2].",
+	"effects": "Each character adds one [minus1] card to their attack modifier deck.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>“Those damned zealots. Ignorant fools. If they find the True Oak, they will destroy it!” Liseritus’ words ring in your ears as you set off in haste, seeking to catch up to this Radiant Order from White Oak. Following Listeritus’ directions you are soon within the Radiant Forest once more, passing clearings and ancient menhirs.</p><p>And ahead, standing in the shadows of a massive oak grove, are the rear guard of the Radiant Order, ready to block your passage. “Come no further, heretics! The false tree, and the lies it represents, must be destroyed.”</p><p>The commander points his sword at you, and the others unleash a pack of snarling hounds, which race forward, bounding over trunks and shrubs, snapping as you stand your ground.</p>",
+			"specialRules": "The Great Oak has 2xCx(L+3) hit points and is considered to occupy each tree and border hex [a] in the scenario. It is an ally to you and an enemy to all monsters, with an initiative of 01 for the purpose of focusing. When the Great Oak is attacked, it treats all [times2] attack modifier cards as [plus0]. If the Great Oak is destroyed, the scenario is lost.",
+			"sectionLinks": "When any door [one] is opened, read [section_46.1].",
+			"containsImage": true
+		},
+		"46.1": {
+			"trigger": "Any door [one] is opened",
+			"text": "You press forward down the trail, and there it is: the True Oak stands proud and resplendent. But the glorious calm is broken by the hacking sounds of axes into wood as the soldiers work at cutting the tree down. It will take some time for them to bring down this majestic behemoth, but even one axe mark is too much for your tastes.",
+			"specialRules": "Open all doors [one].",
+			"sectionLinks": "When any door [two] is opened, read [section_106.2].",
+			"containsImage": true
+		},
+		"106.2": {
+			"trigger": "Any door [two] is opened",
+			"text": "<p>Striving to defend the Oak from the villains, you round it and find more soldiers on the north face of the trunk, including their leader, clad in radiant gold armor.</p><p>“I am the Flaming Sword of Justice,” he bellows, brandishing a huge sword that is, indeed, on fire. His eyes are filled with wild fervor. “This heresy will not stand! There is but one Oak: that which bathed man in its glory when we emerged from the darkness! To claim otherwise is— raaaaghhh!”</p><p>This man has clearly worked himself into some sort of religious fervor and can’t be reasoned with.</p>",
+			"specialRules": "<p>Open all doors [two].</p><p>The elite City Guard is the Flaming Sword of Justice. It adds +1 [attack] and [wound] to all its attacks. At the start of the next round and each second round after, until the Flaming Sword of Justice is dead, spawn one Hound at [b]. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.</p>",
+			"containsImage": true
+		},
+		"35.2": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>All around you, the zealots lie dead, their blood soaking the ground of the glade, returning to the cycle of life. Peace and quiet returns. Birds chirrup and sing, and deer emerge from the forest to feed from the lush grass. Within this calm, you are able to sit in the splendor of the True Oak, soaking in the sun and cool air, taking the time to contemplate and rest.</p><p>But then your thoughts turn to who else will come in time to destroy the True Oak. You set off back to Frosthaven and Liseritus, where you are met with a warm embrace.</p><p>“The Oak? Is it safe?” You nod, and the botanist lets out a long sigh. “I am glad it stands, and proud to say we have found it. But that will not be the last of the Radiant Order if we spread the word of its existence. And I don’t particularly want to get roughed up again. I think the True Oak must remain a myth while these zealots remain.”</p><p>You nod again in agreement. “Then it is settled. How about some tea?”</p>",
+			"rewards": {
+				"text": "“The True Oak” quest complete.<br/>Gain 1 prosperity."
+			}
+		}
+	},
+	"path": ["main", "46.1", "106.2", "35.2"]
+}

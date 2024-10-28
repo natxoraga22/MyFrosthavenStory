@@ -9,7 +9,7 @@
 	"02": {
 		"title": "Searching for the Oak",
 		"description": "Most people believe that the Great Oak in the capitol is the true face of the divine, but you have heard rumors of a great prophet who brought a sacred acorn from the north to plant the Great Oak. The true Oak is somewhere in this frozen waste, and you wish to gaze upon it in awe.",
-		"requirements": "Personally loot 8 total lumber cards through loot tokens to unlock <strong><em>Sacred Soil</em></strong> <span class=\"scenarioNumber\">(69)</span>, and then follow it to a conclusion.",
+		"requirements": "Personally loot 8 total lumber cards through loot tokens to unlock <strong><em>Sacred Soil</em></strong> [scenario_69], and then follow it to a conclusion.",
 		"building": { "id": "garden" },
 		"altBuilding": { "id": "temple" }
 	},

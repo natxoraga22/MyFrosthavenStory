@@ -2,5 +2,32 @@
 	"id": "005",
 	"name": "Frozen Crypt",
 	"questLine": "AlgoxSnowspeaker",
-	"unlockedBy": { "scenario": { "id": "004" }}
+	"coordinates": "I6",
+	"unlockedBy": { "scenario": { "id": "004" }},
+	"complexity": 2,
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section_38.1].",
+	"effects": "Each character suffers [damage] 2.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>The Whitefire Wood stands against the frozen waste like gray unflinching ramparts. The trees have grown tall and wide, bunched densely together to create a defensive line closer-knit than a phalanx of Valrath infantry. But this is where the Snowspeaker sent you, so there must be a way in.</p><p>The entrance, which you find only after an hour’s search, sits like a gate in the wood. Two enormous trees guard either side of a snow-packed trail, and just past the opening is a figure covered in white fur, hunched over, eyes looking back—an Algox. You lock eyes long enough to take half a breath, and then, he turns and runs deeper in.</p><p>You give chase. The path is trod snow and rock—a road used often, which is just as well. You barrel down it, trees whipping past your periphery, your muscles recharged by the sight of your quarry. However, just as you’re certain you’ve got the Algox cornered, you turn a corner and find the huge Algox waiting for you. It’s hunched in the middle of the trail, facing you, but its fists are planted firmly in the snow, a smug grin cutting its face. Not good.</p><p>You charge forward, ready to leap, but before you can take two steps, the ground shakes violently. Large fissures erupt in the earth. The trees buck. And like summer-thinned ice, the ground beneath you breaks away.</p><p>Thankfully the fall is short, and you land without serious injury. You cough as the dust settles, and find yourself in an open pit deep enough for four Algox to stand on each others’ shoulders and not reach the top. Dirt walls rise up on every side, soft loamy soil that will make the climb back up difficult. As you stand there looking up at the white sky, a noise creeps into your ears. It’s a thin, wispy howl, like the wind coming through the walls of a poorly-built house.</p><p>You turn and ethereal shapes emerge from the dark, cast in a blue whirling haze. They hover above the floor, their forms shaking in the gloom, and wherever they move a layer of frost grows thickly across the floor.</p><p>They are coming closer now, and the air is getting cold.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_7.2].",
+			"containsImage": true
+		},
+		"7.2": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>This place you’ve fallen into, which at first you took for a simple underground pit, appears now to be something more purposefully constructed—a crypt. Narrow graves have been dug into the earthen walls and signs of ancient burial are scattered everywhere: bits of smashed pottery, disintegrating cloth. However, as you move deeper, something stirs in the center of the room and a new noise rises to your ears. It’s low at first, like a beast waking in the night, but then another noise joins it, and another. Together they form a low chorus of moans. Figures stalk out from the shadows, and it’s clear that these are not beasts at all, but a horde of the undead.</p><p>Lumbering Algox corpses shuffle toward you, glowing with a sickly green aura. There’s little time to think, but at the far end of the room you notice a crumbling stone altar, from which burbles thick lines of heavy emerald smoke.</p>",
+			"specialRules": "<p>All Frozen Corpses are immune to damage and cannot be focused on by summons until altar [a] is destroyed. Altar [a] has (3+L)xC hit points. It is an enemy to you and an ally to all monsters.</p><p>Set the round track to the first round. At the start of the third round, spawn one Frozen Corpse at [b]. It is normal for two characters or elite for three or four characters. At the start of the fifth round, spawn one Frozen Corpse at [c]. It is normal for two or three characters or elite for four characters.</p>",
+			"containsImage": true
+		},
+		"38.1": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>Silence is something you’re beginning to treasure.</p><p>All around, the crypt is littered with broken bodies, the dusty remains of the undead horde smashed to bits. The altar, which had been pumping out its necrotic fume, now decorates the floor as rubble. In its place, a beam of eerie green light trickles from a new gap in the wall. You move closer and discover a passage that appears to lead farther down. It’s clear this complex continues, and that some bizarre power lies hidden within. The question is whether it’s worth investigating [scenario_9].</p><p>The other option, of course, is to continue hunting the Algox that dropped you in here [scenario_10].</p><p>However, after scrambling your way out of the pit, you realize that your quarry’s tracks lead from the forest out into the frozen tundra—attempting to follow without the right equipment would be suicidal. If you want to give chase, you’ll have to come back with a sled.</p>",
+			"rewards": {
+				"text": "Gain 2 collective [lumber].",
+				"scenarios": [{ "id": "009" }, { "id": "010" }]
+			}
+		}
+	},
+	"path": ["main", "7.2", "38.1"]
 }

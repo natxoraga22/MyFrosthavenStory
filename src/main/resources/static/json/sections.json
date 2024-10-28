@@ -1,4 +1,12 @@
 {
+	"11.8": {
+		"title": "Puzzle Solution (puzzle #8)",
+		"unlockedBy": { "other": "Puzzle Book" },
+		"text": "<p>You stand in the new shack that Crain must have either built or summoned through dark means, because you don’t remember seeing it before today. In front of you is Crain’s newest creation: a series of glass lenses, each coated in a different varnish and arranged around a small metal platter. On that platter, sits a vial of multicolored liquid.</p><p>Crain draws the shade on his shed’s singular window and then aims a small mining lamp at one of the lenses. As soon as he does, the contraption floods with light and then projects a strange prism onto the ceiling.</p><p>“It took some serious alchemy, but I’ve distilled the energy signature from the spire,” Crain says. “And it’s the strangest thing I’ve ever seen.” The light dances across the ceiling, composed of fifteen or twenty multi-colored ribbons that weave in and out of each other, seemingly at random.</p><p>“Now this is the energy signature from the Radiant Forest.” Crain switches out the vial for a different one full of red liquid, and the prism changes completely. Instead of twenty ribbons moving at random, there are now only seven or eight, all shaded red, and all bound together like a rope that’s swaying in the wind. “The signature from—”</p><p>Crain is interrupted by warning horns from the wall: Algox to the east. Crain’s demeanor immediately switched to one of complete rage. He grabs an empty vial and flings it against a wall. “I can’t take it!” He yells, his outburst punctuated by shattering glass. “The horns! The attacks! The... clanging of metal!” He punctuates this last bit with another vial.</p><p>“I can’t do my work like this!” He laments. “There’s too much stress—too much commotion. Can you do anything to stop the incessant Algox raids? Go out there and make some friends or something. What do I pay you for, anyway?”</p><p>You’re about to retort that Crain is most definitely not paying you, but you decide to just leave the troubled Quatryl alone instead.</p>",
+		"rewards": {
+			"text": "Turn to the next page in the puzzle book."
+		}
+	},
 	"15.4": {
 		"title": "The True Oak Triangulated",
 		"unlockedBy": { "scenario": { "id": "069" }},
@@ -13,6 +21,18 @@
 		"rewards": { 
 			"text": "Gain 1 prosperity." 
 		}
+	},
+	"26.4": {
+		"title": "Random Scenario",
+		"text": "You retrieve a hand-held mirror with an elaborate silver frame, thinking, if nothing else, someone in Frosthaven should be willing to pay something for it. When you look into its reflective surface, however, you don’t see your own image staring back at you. Instead, it shows you an image of yourself walking out the main gates of Frosthaven. You watch the mirror for a while as the image treks through the wilderness, eventually arriving at a cave filled with treasure. Looks like something worth investigating.",
+		"rewards": { 
+			"scenarios": [{ "id": "111" }]
+		}
+	},
+	"26.5": {
+		"title": "Puzzle Solution (puzzle #4)",
+		"unlockedBy": { "other": "Puzzle Book" },
+		"sectionLinks": "<p><strong>If Glowing Catacombs</strong> [scenario_9] is complete, read [section_124.1] now.</p><p><strong>If Temple of Liberation</strong> [scenario_20] is complete, read [section_127.1] now.</p>"
 	},
 	"29.5": {
 		"title": "Puzzle Solution (puzzle #1)",
@@ -35,6 +55,14 @@
 		"text": "<p>A carriage piled high with blankets and carpets is tucked between a snowbank and a building near the edge of town. Its old owner sees you wandering by and looks both ways before beckoning you over.</p><p>“Nice place, nice place this Frosthaven. Cold though, eh? Heh. Maybe you’re the sort of people who would like some hot items.” He chuckles a bit to himself as he pins back a blanket on his carriage, revealing assorted items in like-new condition.</p><p>“I just need a few motivated buyers. Shouldn’t be trouble up here, no… but I wouldn’t wear these out in, let’s say, uh, Gloomhaven for a while. Heh.”</p><p>You’re not planning on heading south to that decrepit city any time soon. Might as well pick up a few items at a steal of a price.</p>",
 		"rewards": { 
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
+		}
+	},
+	"36.8": {
+		"title": "Puzzle Solution (puzzle #6)",
+		"unlockedBy": { "other": "Puzzle Book" },
+		"text": "<p>You and Crain stand in the Quatryl’s study, looking down at his desk. Atop it sits a shard of ice that you took from the Prince of Frost’s realm, and next to it is Crain’s lamp. Nothing is happening. The lamp flickers green, but the ice sits stubbornly frozen and unchanging—no vapor, no energy.</p><p>“Nothing,” Crain says. “It’s not related at all to the energy we’re researching. Though, I do recognize a few things in your report.” Crain snuffs out the lamp and moves over to his small fireplace, in which he’s worked a stifling blaze. “That bit of verse I translated—which, let’s hope there’s no more of that—it mentioned an Ice Prince not unlike the creature you found. Spoke a good deal about capricious spirits and the like, beings that appear during northern storms and vanish into the air. Logren found the poem and thought the creature might be related to the energy.”</p><p>Crain tosses two handfuls of kindling onto the already roaring fire. You squint at the flames and spot a small object that he seems to be heating: a brass orb, except it can’t be brass because it hasn’t melted or changed shape.</p><p>“Her team found the Ice Prince, same as you, but their visit didn’t go as well. She ultimately ruled it out as an avenue for investigation, too dangerous and no obvious connection to the energy. I’d been hoping she made a mistake but no, she doesn’t seem to make any.” Crain takes up a pair of billows and works the flames until they’re practically scorching his face.</p><p>“In any case,” he says, head turned from the heat. “They did speak of an energy site not too far from where you were. A forest.” Crain takes a pair of tongs and removes his heated orb. It’s glowing now, a dark red ball that he immediately plunges into a bucket of water, filling the room with steam.</p><p>“That look on your face reminds me of Satha. ‘Crain stop smelting metal in your quarters, Crain stop testing elixirs on the watchmen, Crain stop trying to capture lightning in a cage.’ A bunch of worriers, the lot of you.” Crain reaches his tongs into the bucket and pulls out the cooled orb. It’s taken on a deep black color and there are faint scratches going all around its exterior that look similar to the ancient quatryl writing.</p><p>“Just go explore that forest already. Torfi’s notes say something about an energy source, and then “up, down, right”. If you can figure out what that means, then maybe I will be able to figure out this blasted experiment!” Crain says this with finality and dumps the orb unceremoniously back in the fire.</p>",
+		"rewards": {
+			"text": "Do not turn to the next page in the puzzle book. Instead write the solution to the next puzzle on the same page."
 		}
 	},
 	"41.1": {
@@ -62,15 +90,31 @@
 		"text": "<p>“I really enjoyed the, uh, the ending, Miss Eddica. A great twist!” A fresh-faced soldier is finishing up a conversation with the Valrath librarian as you enter. Eddica gives a smile from behind her desk as she checks in the book. Two more dockworkers wait in line for recommendations on additional literature from the young librarian—they’re nearly tripping over themselves for a chance to talk to her. She spots you and politely shoos them out the door, finally settling to a seat on the edge of her desk.</p><p>“I expected running a library to be more like Master Scrim’s… he had so much more uninterrupted time than I seem to have. In any case… do you have what I hope you have?” She purses her lips in anticipation, and when you pull the citrine-studded hide tome you found from your satchel she rushes over to snatch it from your hands, looking over it with wide eyes. “The Tome of the Elements! It’s true!”</p><p>She pushes up her red-rimmed glasses and collects herself. “Now, this is supposed to be the most volatile of the tomes. Let’s see if I can deactivate it…” She traces a sigil in arcane white light on the cover before bracing herself and gingerly cracking it open. No sparks, no explosions.</p><p>“There we go!” The pages splay out and Eddica hums a happy tune as she looks through the tome, punctuated with little “a-ha”s and lots of nodding. After a moment she sets the book down, looking up at you with a wide smile. “They’re actually in here! And I have heard very few accounts of these spells being painful.” She lays out the materials on the desk beside her.</p><p>“So, which will it be?”</p>",
 		"sectionLinks": "<p>If you offer to test the fire spell, read [section_104.3] now.</p><p>If you offer to test the cold spell, read [section_163.1] now.</p>"
 	},
+	"46.2": {
+		"title": "Puzzle Solution (puzzle #7)",
+		"unlockedBy": { "other": "Puzzle Book" },
+		"text": "<p>You hear about the fire from the first moment you pass back through Frosthaven’s gates. By the time you arrive, the smoke has long since stopped, but you find the Quatryl himself, dressed in a borrowed shirt and pants, picking through the charred remains of his study.</p><p>“Look,” Crain says, propping up the charred slab that used to be his desk, “I know what you’re going to say, and I assure you it isn’t anything Satha hasn’t already told me at length.” He eases the slab against the wall but it cracks in the middle and the two pieces fall back to the ground. “At length.”</p><p>You offer the scholar your condolences but he is clearly more interested in the stone you brought back from the Radiant Forest.</p><p>“As reliable as ever, my friend!” He says and takes it, still warm in its carrying cage. He leads you back outside the smoldering mess to where his intact belongings are stacked up in a pile. Much of his gear and books survived the fire, thankfully, but with no place to go just yet, Crain begins the experiment right there on the snowy road. He lights the green lantern and sets it down next to the radiant stone and it immediately draws a reaction. Thick orange vapor steams off the rock and envelopes the lamp, not as a whirlwind but as a bulging, smoky plume. Crain, muttering something about not wanting to hear Mayor Satha lecture again, turns out the lamp before the vapor builds any more.</p><p>“That’s three energy sources, now,” he says, with new vigor. “That means I can finally move on from fiddling with these little fireplace experiments and get on to the real work.” He laughs and a sinking feeling grows in your stomach. “Which reminds me, before the incident, I’d been translating a new section of the book and I wanted to run it by you.” Crain hands you a strip of parchment that’s next to impossible to read in the dark.</p><p>“It’s an alchemical chart from the book but it’s only partly filled out. I believe the energies from our three sites can be combined, but I can’t do it without a proper alchemist who understands all this. See if you can recruit one, then we should be able to put this puzzle together.</p><p>“In the meantime,” Crain heaves his pack over his shoulder and picks up his lamp. “I need to find a new room.”</p>",
+		"rewards": {
+			"text": "Turn to the next page in the puzzle book."
+		}
+	},
 	"47.1": {
 		"title": "Lurker Rumors",
 		"unlockedBy": { "event": { "id": "WO-07" }},
 		"text": "<p>“Big as a wagon, I swears it!” The Quatryl sailor’s eyes are dim with drink, but she continues undaunted. “A giant Lurky, all green and red. Claws bigger than a horse. Passed right by my boat, I was lucky to escape with my life!”</p><p>Tall tales at The Crater are just one more thing you’ll miss about summer once the final ships heave away and the Biting Sea becomes once again impassable with ice. You turn back to your drinks as one of the Quatryl’s companions begins his own tale in the age-old ritual of one-upmanship, “Well, I saw one bigger than a ship! Ten times the size of your’n…”</p>",
 		"rewards": {
-			"text": "If Uniting the Crown <span class=\"scenarioNumber fw-normal\">(60)</span> is complete, gain 2 morale.",
+			"text": "If Uniting the Crown <span class=\"fw-normal\">[scenario_60]</span> is complete, gain 2 morale.",
 			"events": {
 				"WO": [{ "id": "WO-70" }]
 			}
+		}
+	},
+	"52.3": {
+		"title": "Puzzle Solution (puzzle #5)",
+		"unlockedBy": { "other": "Puzzle Book" },
+		"text": "<p>“But why does it always have to be so damned cold?” Crain shouts, his voice half-stolen by the wind. Honestly, you never thought to ask.</p><p>You’re standing on a seaside cliff, one of the many that line the northern coast. To your right is the Biting Sea, that stretches into a wide, churning horizon, while to your left lie the frozen plains. Each inspires a certain threatening respect, but you’re not here for either of them—you’re here for the fjords. The long, jagged scars cut through the seaside cliffs, sinking down perhaps two hundred feet to the ocean below. At first glance they appear like any other rocky chute, but when you look near the top of one, you can see several large gouges in the stone that couldn’t have been made by any natural force. You told Crain about them back at Frosthaven, and he demanded to see them at once. His enthusiasm has dampened somewhat since then.</p><p>Grumbling, Crain lights his lamp and, just like last time, several strings of ghostly vapor rise from the ground to collect around it, though this time they are a deep purplish color. They only collect for a moment and then Crain snuffs the light and nods.</p><p>“Confirmed,” he says. “And judging by the other markings you found along these cliffs, and the notes left in Project Source, I’d say there was a series of battles up and down this coast. Must have been quite the, em—” Crain goes quiet for a moment, staring down into the fjord below. Several long seconds pass and when you ask if he’s alright, the Quatryl jumps as if woken from a dream. “Of course! Yes, perfectly fine. Just something I read. As I was saying: a series of battles. But there should be another site somewhere up here, one that’s quite a bit different than this. Keep searching further to the north and see what you can find. I don’t have much direction other than that. Truth be told, I’ve been avoiding the next section of translation.” His eyes narrow and his lip curls, exposing sharp teeth. “It’s all poetry.”</p>",
+		"rewards": {
+			"text": "Turn to the next page in the puzzle book."
 		}
 	},
 	"57.3": {
@@ -193,6 +237,24 @@
 		"text": "The Great Dallum accepts your generous gift, whispering words of kindness into your ear. It’s not perfectly applicable, but as a metaphor there really is something to what he says. Yes, you get it now… this has some very practical applications, really. This changes everything.",
 		"rewards": { 
 			"text": "<p>Lose any 3 collective resources.<br/>Gain 2 inspiration.</p><p>Do not resolve an outpost event this week.</p>" 
+		}
+	},
+	"124.1": {
+		"title": "Puzzle Solution (puzzle #4)",
+		"unlockedBy": { "section": { "id": "26.5" }},
+		"text": "<p>“Splendid,” Crain says without any hint of irony. You are standing several dozen feet below ground in a nearly lightless crypt and all around lie piles of recently slain undead. “Really marvelous.”</p><p>When you returned to Crain to make a report on this “death site”, the Quatryl asked so many questions that you decided it was easier to just show him. Ten minutes down here, and the Quatryl has already pocketed a hunk of stone wall, two vials of dirt, a glob of imp residue, a square of matted fur, and a handful of loose teeth. Only once his pockets are bulging with dusty remains does the scholar stop and explain.</p><p>“These bodies,” he says, “confirm Logren’s theory about this place. Now, I simply need to repeat her experiment and we’ll know for certain.” Crain unties a small storm lantern from his pack and, after adding a dram of odd-smelling oil to the reservoir, lights it. The flame catches and burns an eerie green and, the instant it’s lit, several wisps of greenish vapor rise from the stonework and coalesce around the lamp.</p><p>“There,” Crain says. “This is what the researchers were investigating, a divergent energy that lingered—still lingers, apparently—in certain parts of the North. I’m still working through the notes but, from what I’ve read, this energy always reacts to the burning of a particular solution and it always triggers certain,” he nods at the pile of undead bodies, “unusual phenomenon.” Crain puts his lamp down and the green vapor begins to build, swirling around it like a tiny storm.</p><p>“Logren and her team theorized that the energy was the result of war fought long ago in the North. This crypt lies on one of the major battlegrounds.” The green storm circling his lamp gets bigger by the second.</p><p>“In order to understand the nature of the energy, we’ll need to investigate the other sites. There should be a few more points along the northern coast. I’ll give you a set of coordinates for a place to start.” He hands you a note that simply reads 3M-1L-7A.</p><p>You then watch as Crain pulls on a thick, oversized leather glove and, moving quickly, tries to snuff the lamp. However, when he reaches down, the green vapor attacks his gloved hand and tears at it with angry spectral teeth, taking out several visible chunks. As soon as the light is out, Crain rips the glove off and flings it to the far corner of the room, where it smolders a greenish smoke.</p><p>“Satha might be needing a new pair of gloves soon.”</p>",
+		"rewards": {
+			"text": "Do not turn to the next page in the puzzle book. Instead write the solution to the next puzzle on the same page.",
+			"scenarios": [{ "id": "017" }]
+		}
+	},
+	"127.1": {
+		"title": "Puzzle Solution (puzzle #4)",
+		"unlockedBy": { "section": { "id": "26.5" }},
+		"text": "<p>“Oh how things change,” Crain says. You’re back at the abandoned temple, standing in the hall of worship, the floor full of broken glass and cold, split metal. Crain bends down, picks up a severed mechanical hand, then a foot, and stuffs both into his pack.</p><p>“Research,” he says and wanders off. When you returned to Crain to make a report on this “death site”, the Quatryl asked so many questions that you decided it was easier to just show him.</p><p>“So besides trying to kill you,” Crain asks, “were the machines doing anything strange?” He’s moving between the four darkened pillars, plucking up little bits of broken machinery.</p><p>When you can’t think of anything, Crain pours a dram of odd-smelling oil into his lamp and, using a torch and a bit of kindling, lights the lantern, but its flame is a bright emerald green. As soon as it flickers to life, the room begins to react. Thin wisps of yellow vapor, much like what was in the central orb, leak from the temple walls and coalesce around the lantern, whirling like a miniature storm.</p><p>“There’s your bit of strange,” Crain says. “And it confirms Logren’s notes. This is a death-site.” He steps back and the both of you watch the vapor build.</p><p>“This is what the researchers were investigating, a divergent energy that lingered—still lingers, apparently—in certain parts of the North. I’m still working through the notes but, from what I’ve read, this energy always reacts to the burning of a particular solution and it always triggers certain,” he clears his throat, “unusual phenomenon.” The Quatryl digs in his pack and pulls out a heavy, oversized leather glove.</p><p>“Logren and her team theorized that the energy was the result of a great war fought long ago in the North. This temple, or the mountain the temple was built in, was the site of a major battle.” The yellow storm circling his lamp gets bigger by the second.</p><p>“In order to understand the nature of the energy, we’ll need to investigate the other sites. There should be a few more points along the northern coast. I’ll give you a set of coordinates for a place to start.” He hands you a note that simply reads 3M-1L- 7A.</p><p>You then watch as Crain pulls on the glove and, moving quickly, tries to snuff the lamp. However, when he reaches down, the green vapor attacks his gloved hand and tears at it with angry spectral teeth, taking out several visible chunks. As soon as the light is out, Crain rips the glove off and flings it to the far corner of the room, where it smolders a greenish smoke.</p><p>“Satha might be needing a new pair of gloves soon.”</p>",
+		"rewards": {
+			"text": "Do not turn to the next page in the puzzle book. Instead write the solution to the next puzzle on the same page.",
+			"scenarios": [{ "id": "031" }]
 		}
 	},
 	"128.2": {
@@ -378,6 +440,14 @@
 		"unlockedBy": { "event": { "id": "SO-03" }},
 		"text": "<p>Frosthaven is bubbling over with excitement. The streets are cleared, the feast prepared, and the citizenry has shown up in their best clothes to meet the Great Dallum, the most powerful seer the world has ever known.</p><p>He arrives right on time, stepping through the gate with a small entourage at his side, to cheering, music, and fanfare. The crowd bunches up around him and it’s some time before you can even get a look at anything more than his bald head. People offer numerous gifts: painted hides, fine woods, and, of course, gold. Each is graciously accepted then spirited away by the Great Dallum’s handlers into a wagon for transport.</p><p>When it’s finally your turn he sets a soft hand on your shoulder and looks at you with piercing green eyes. “What’s your name, mercenary?” His booming voice carries and he speaks at a quick clip, as though he’s rushing to get through his duties. Before you have a chance to answer, he asks if there’s a donation you’d like to make for his blessing of sight.</p>",
 		"sectionLinks": "If you make a donation to the Great Dallum, read [section_122.4] now. Otherwise, read [section_120.5] now."
+	},
+	"180.3": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>Glint, the Inox records-keeper at the town hall, is leaning back in his chair and throwing a rubber ball against the wall. He sees you and rises with all of the speed of a bureaucrat who knows no one else would be willing to take this job in the middle of the frozen north. He flips open a ledger.</p><p>“Name?” He knows your names, he’s just difficult. You comply, which does little more than get a raised eyebrow. “Really? Huh, could’ve sworn you were taller. Unless you’re shrinking.” Glint licks a finger, revealing a golden tooth as he turns the page.</p><p>He shuffles some papers, further wasting your time. After what feels like an unacceptable wait, he passes a bounty across the table. “Three reports of oozes.” You reach to grab the paper, but he holds it down with his thumb, looking you in the eye. “Unreliable. Don’t get your hopes up. The report says it ate a sheep, probably just a lazy farmer who miscounted.” Glint releases the page and goes back to his rubber ball, settling into his chair with a thump.</p><p>As you take the bounty details you steal a glance at the original report—it doesn’t say the ooze ate “a sheep”, it says it ate “a herd of sheep”. This might be more than you bargained for.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "084" }]
+		}
 	},
 	"183.3": {
 		"title": "Visiting Trader",

@@ -1,0 +1,19 @@
+{
+	"id": "084",
+	"name": "Here There Be Oozes",
+	"questLine": "JobPosting",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "180.3" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

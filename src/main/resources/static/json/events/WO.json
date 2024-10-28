@@ -361,17 +361,19 @@
 		"text": "<p>The side gate to town has been left unlatched, and the rigorous procedures around it leave only one conclusion: there’s a traitor in your midst. Captain Olmstead has narrowed it down to four guardsmen who were on shift last night. He asks you to interrogate each of them in turn.</p><p>The Orchid says, “The Savvas and the human are innocent.”<br/>The Valrath says, “It wasn’t the Savvas or the Orchid.”<br/>The Savvas says, “The Orchid is to blame.”<br/>The Human says, “It was either the Savvas or the Valrath.”</p><p>You’re pondering who did it when a glowing portal opens and out steps an Aesther in an unusual hat. He smiles, his translucent skin a swirl of star-stuff. “Quite the conundrum. I should note that just one of them is lying.” Before you have a chance to inquire further, he’s gone.</p><p>Who unlocked the gate?</p>",
 		"options": {
 			"A": {
+				"id": "",
 				"trigger": "Determine who unlocked the gate and say it aloud now, then flip over the card.",
-				"requirement": "IF YOU SAID “VALRATH”",
-				"text": "<p>He hangs his head. “I can’t live another day in this place! I got some Algox to agree that if I let them in, they’d destroy the town, and without something left to guard I could return home to White Oak. This isn’t a life!”</p><p>You learn afterwards that he paid the Savvas a month’s wages to cover for him. The Valrath will get his wish: both he and the Savvas are sent back to White Oak for punishment as soon as the pass opens back up.</p><p>Curious that the helpful Aesther showed up at just the right time. You wonder if you’ll see him again…</p>",
+				"requirement": "<p>IF YOU SAID “VALRATH”",
+				"text": "He hangs his head. “I can’t live another day in this place! I got some Algox to agree that if I let them in, they’d destroy the town, and without something left to guard I could return home to White Oak. This isn’t a life!”</p><p>You learn afterwards that he paid the Savvas a month’s wages to cover for him. The Valrath will get his wish: both he and the Savvas are sent back to White Oak for punishment as soon as the pass opens back up.</p><p>Curious that the helpful Aesther showed up at just the right time. You wonder if you’ll see him again…</p>",
 				"rewards": {
 					"text": "Gain 2 morale.<br/>Gain 10 experience each."
 				}
 			},
 			"B": {
+				"id": "",
 				"trigger": "Determine who unlocked the gate and say it aloud now, then flip over the card.",
-				"requirement": "IF YOU SAID “ORCHID” OR “SAVVAS” OR “HUMAN”",
-				"text": "<p>You point to someone and they’re clasped in irons. “It wasn’t me!” they shout. After a bit more thought, you realize that if the Savvas is lying, everyone else’s stories match up, leaving the Valrath as the culprit.</p><p>Before you have a chance to correct your mistake, the Valrath breaks down under the weight of his guilt. “Fine! I confess! I don’t care if you send me to the Ghost Fortress, it’s still better than Frosthaven!”</p><p>The guards take him away and make sure the lying Savvas is demoted to kitchen duty for the foreseeable future.</p>You wonder where that Aesther with the odd hat went off to…",
+				"requirement": "<p>IF YOU SAID “ORCHID” OR “SAVVAS” OR “HUMAN”",
+				"text": "You point to someone and they’re clasped in irons. “It wasn’t me!” they shout. After a bit more thought, you realize that if the Savvas is lying, everyone else’s stories match up, leaving the Valrath as the culprit.</p><p>Before you have a chance to correct your mistake, the Valrath breaks down under the weight of his guilt. “Fine! I confess! I don’t care if you send me to the Ghost Fortress, it’s still better than Frosthaven!”</p><p>The guards take him away and make sure the lying Savvas is demoted to kitchen duty for the foreseeable future.</p>You wonder where that Aesther with the odd hat went off to…",
 				"rewards": {
 					"text": "Lose 1 morale."
 				}

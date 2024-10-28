@@ -1,0 +1,19 @@
+{
+	"id": "111",
+	"name": "Ice Cave",
+	"questLine": "RandomScenario",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "26.4" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

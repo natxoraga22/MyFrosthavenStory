@@ -347,7 +347,7 @@
 				"outpostEvent": { "id": "WO-11", "chosenOption": "B" },
 				"retirements": [{ "id": "infuser", "additionalPersonalQuest": { "id": "14", "unlockedBuilding": "ALT" }}],
 				"newMembers": [{ "id": "hive" }],
-				"build": [{ "id": "hidedepot", "level": 1 }, { "id": "wallN"}]
+				"build": [{ "id": "hidedepot", "level": 1 }, { "id": "wallN" }]
 			}
 		},
 		{ "event": { "id": "WR-05", "chosenOption": "A1" }},
@@ -364,7 +364,7 @@
 		{
 			"outpostPhase": {
 				"townGuardPerks": [{ "id": "180.3" }],
-				"outpostEvent": { "id": "WO-16", "chosenOption": "?" },
+				"outpostEvent": { "id": "WO-16", "chosenOption": "A" },
 				"levelUps": [{ "id": "hive", "level": 4 }],
 				"upgrade": [{ "id": "temple", "level": 2 }]
 			}
@@ -374,6 +374,43 @@
 		{ "section": { "id": "52.3" }},
 		{ "section": { "id": "36.8" }},
 		{ "section": { "id": "46.2" }},
-		{ "section": { "id": "11.8" }}
+		{ "section": { "id": "11.8" }},
+		{ "event": { "id": "WR-09", "chosenOptions": ["A", "B"] }},
+		{ "scenario": { "id": "017" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-77", "chosenOption": "B" },
+				"upgrade": [{ "id": "jeweler", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "WR-34", "chosenOption": "C" }},
+		{ "scenario": { "id": "027" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-63", "chosenOption": "B" },
+				"upgrade": [{ "id": "hidedepot", "level": 2 }]
+			}
+		},
+		{ "event": { "id": "B-07", "chosenOption": "B" }},
+		{ "scenario": { "id": "060" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "184.1" }],
+				"outpostEvent": { "id": "SO-58", "chosenOption": "A" },
+				"levelUps": [{ "id": "pyroclast", "level": 6 }, { "id": "hive", "level": 5 }],
+				"upgrade": [{ "id": "craftsman", "level": 8 }]
+			}
+		},
+		{ "event": { "id": "SR-49", "chosenOption": "A1" }},
+		{ "scenario": { "id": "117" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "104.1" }],
+				"passageOfTime": [{ "id": "42.2" }, { "id": "181.1" }, { "id": "191.1" }],
+				"upgrade": [{ "id": "tradingpost", "level": 3 }, { "id": "tradingpost", "level": 4 }]
+			}
+		},
+		{ "event": { "id": "SR-41", "chosenOption": "?" }},
+		{ "scenario": { "id": "119" }}
 	]
 }

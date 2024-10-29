@@ -2,18 +2,56 @@
 	"id": "017",
 	"name": "Haunted Vault",
 	"questLine": "AlgoxSnowspeaker",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "H6",
 	"unlockedBy": { "section": { "id": "124.1" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 3,
+	"goals": "The scenario is complete when the goal treasure tile is looted. At the end of that round, read [section_82.1].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>Leaving the door behind you, you arrive at a room slightly less worn down by time, but no less unsettling. The green light is far stronger here, the walls practically glowing with its strange emerald bloom. Green ooze has been slathered all over the chamber, and much of the brickwork is coated in thin streaks of dried slime. However, beyond the luminescence and the ooze, there is something else that draws your attention.</p><p>A series of heavy metal squares are set into the ground in the center of the room: pressure plates, like the sort normally employed as traps, except these have not been hidden at all. Instead, they sit out in the open, each marked with a strange rune. Along the walls you see three doors also marked with symbols: The middle plate’s symbol matches the door to the right, while the runes on the two outside plates match the door on the left. The remaining door, which sits directly in front of you, is etched with a rune that doesn’t match any of the plates.</p>",
+			"specialRules": "<p>Doors [one] to [four] are locked and will unlock and open so long as any characters occupy two or more corresponding pressure plates ([a] opens [one], [b] opens [two], [c] opens [three], [d] opens [four]). Whenever any open door no longer meets this criteria, it immediately closes and locks. Destroy any overlay tile or tokens on it. Any figure occupying it suffers trap damage and is placed in the closest empty hex.</p><p>The first time each door [one] to [four] is opened, at the start of the following round, spawn one monster adjacent to each character based on the map tile they currently occupy:</p><table class=\"table\"><thead><tr><th>Tile</th><th>09-B</th><th>02-K</th><th>02-I</th><th>02-A</th></tr></thead><tbody><tr><th>Monster</th><td>Elite Living Spirit</td><td>Elite Ice Wraith</td><td>Normal Living Doom</td><td>Normal Ice Wraith</td></tr></tbody></table><p>If multiple doors are opened for the first time in the same round, multiple spawns occur. Any character occupying a hex with an open door may be treated as occupying either bordering tile for the purpose of spawning.</p><p>Place 4-C numbered tokens in any empty starting hexes. These represent spectral helpers, who are considered characters solely for the purpose of occupying pressure plates. On initiative 50 each round, they perform [move] 4, controlled by you. They do not block enemy movement can cannot be interacted with in any way.</p><p>All trap tiles placed during set up throughout the scenario are considered pressure plates instead.</p>",
+			"sectionLinks": "When door [three] is opened, read [section_42.3].",
+			"containsImage": true
+		},
+		"42.3": {
+			"trigger": "Door [three] is opened",
+			"text": "<p>The metal plate sinks into the floor, and the door to your left releases with a heavy metallic thunk.</p><p>Inside is another small chamber, empty except for three additional plates on the floor. One matches the middle plate outside, while the symbol on the other looks entirely new.</p>",
+			"sectionLinks": "When door [two] is opened, read [section_25.3].",
+			"containsImage": true
+		},
+		"25.3": {
+			"trigger": "Door [two] is opened",
+			"text": "You press down on the two matching plates and the far door unlatches. You move forward, but something has shifted in these catacombs. You feel it before you see it: a creeping tendril of frigid air reaching out behind you. You turn to see an icy spectral figure looming high overhead, while at the same time a deep lamenting moan escapes from the newly opened room.",
+			"sectionLinks": "When door [one] is opened, read [section_62.3].",
+			"containsImage": true
+		},
+		"62.3": {
+			"trigger": "Door [one] is opened",
+			"text": "This place is clearly designed to separate you from the others and then murder you in the dark, but you think you’re getting the hang of it now. Another door opens, and more spirits arise to stop you.",
+			"sectionLinks": "When door [four] is opened, read [section_19.3].",
+			"containsImage": true
+		},
+		"19.3": {
+			"trigger": "Door [four] is opened",
+			"text": "Hoping this is the final door, you depress the plate, and your heart also sinks. One last room full of plates and the angry undead. You’ll need to get the whole group through this door in order to move any farther.",
+			"specialRules": "Door [five] is locked and will unlock and open permanently when all characters occupy the four corresponding pressure plates [e].",
+			"sectionLinks": "When door [five] is opened, read [section_17.3].",
+			"containsImage": true
+		},
+		"17.3": {
+			"trigger": "Door [five] is opened",
+			"text": "When the final plate is depressed, the remaining door slides slowly down into the floor. Blackness. Eyes. A wave of pure malice: another menacing figure hovers just inside the room, waiting for you to enter. But behind it is a tempting reward: an immense, ancient chest awaits, glittering in the deep gloam.",
+			"containsImage": true
+		},
+		"82.1": {
+			"trigger": "The goal treasure tile has been looted",
+			"conclusion": "<p>It is no small feat to face down a room full of wraiths and live to tell about it, and yet here you stand, victorious. With the spirits gone, you turn your attention to the nextmost pressing matter: treasure.</p><p>You pry open the chest without any trouble, and inside you find a stockpile of treasure from an age long past—gold coins and rare baubles made from silver and brass. You raise your torch and survey the mound in glittering warm light, but as you do, you notice that just behind the dais on which the chest sits stands another door. Much like the others, it’s covered in a complex iron mechanism; however, unlike the other doors, this one has been decorated with an intricately carved relief.</p>",
+			"rewards": {
+				"text": "Gain 2 [checkmark] each.",
+				"scenarios": [{ "id": "027" }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "42.3", "25.3", "62.3", "19.3", "17.3", "82.1"]
 }

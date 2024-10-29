@@ -1,0 +1,19 @@
+{
+	"id": "027",
+	"name": "Depths of Delirium",
+	"questLine": "AlgoxSnowspeaker",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "scenario": { "id": "017" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

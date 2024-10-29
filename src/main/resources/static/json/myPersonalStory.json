@@ -375,7 +375,7 @@
 		{ "section": { "id": "36.8" }},
 		{ "section": { "id": "46.2" }},
 		{ "section": { "id": "11.8" }},
-		{ "event": { "id": "WR-09", "chosenOptions": ["A", "B"] }},
+		{ "event": { "id": "WR-09", "chosenOptions": ["A", "A1", "B"] }},
 		{ "scenario": { "id": "017" }},
 		{
 			"outpostPhase": {

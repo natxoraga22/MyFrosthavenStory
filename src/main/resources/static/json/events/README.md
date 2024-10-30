@@ -20,3 +20,7 @@
 * **SR-28**: a l'opció A hi ha un requisit (RESOURCEFUL) a la conclusió, donant una recompensa extra
 
 * **WR-05**: nou event condicional
+
+
+
+**FALTA REVISAR WO i WR EL TEMA DE RETURNCARD, TEMES DE COMETES, ETC...**

@@ -83,6 +83,9 @@ div.section {
 	width: calc(100% + 2*var(--bs-card-spacer-x));
 	margin-left: calc(var(--bs-card-spacer-x)*-1);
 	margin-right: calc(var(--bs-card-spacer-x)*-1);
+}
+
+.section .specialRules .table:last-child {
 	margin-bottom: calc(var(--bs-card-spacer-y)*-1);
 }
 

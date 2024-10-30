@@ -2,18 +2,55 @@
 	"id": "027",
 	"name": "Depths of Delirium",
 	"questLine": "AlgoxSnowspeaker",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "H6",
+	"requirement": { "status": "Shard Seeker" },
 	"unlockedBy": { "scenario": { "id": "017" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 2,
+	"goals": "The scenario is complete when all altars in it are destroyed. At the end of that round, read [section_8.2].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>The carved relief in the glowing tomb has been at the back of your mind since you first saw it, and now, standing in front of it once again, you understand why. You move closer, raising a hand to feel its intricacies, but a familiar sensation suddenly comes over you—the shard. It thrums once, twice. Then, as if moved by an invisible hand, the relief spins and moves—the door begins to open. The heavy metal gears grind through the rust as the door slides slowly, grudgingly into the wall.</p><p>You move into the next chamber and put away your torch. The green light has become so strong, you can navigate by its glow alone, though now that glow appears to be pulsing, rising and falling in a steady rhythm.</p><p>The chamber is a dank, mildewy expanse of cracked stone and crumbling mortar. Several splotches of greenish ooze seep in through the stonework walls, accumulating into large, thick puddles.</p><p>You move carefully into the chamber, but a sudden wave of gravity tilts you to the side, and you stumble. Sudden flashes of light and shadow appear. Faces from long ago—your own memories and nightmares, things you’ve locked away—literally leap out from your mind and materialize in the room before you.</p><p>Were you a newly-minted adventurer, this deranged magic might unnerve you. Instead, you concentrate. The green light is pulsing faster than ever and the puddles of ooze have begun to creep over the floor. You raise your arm in front of your face and squint. It’s difficult to see clearly through the gloom, but, squinting through the shifting shadows, you catch a glimpse of what lurks behind them. A great eye crowns a tall knot of fleshy black tendrils, and you understand now that this path was taken in error. You have not entered a simple catacomb; you have entered the lair of terrors from the deep.</p>",
+			"specialRules": "<p>Whenever any character suffers damage from a Deep Terror attack, they must move one card from their hand or discard pile to their own separate pile of “taken” cards. In addition, whenever any door is opened, all characters must move one card from their hand or discard pile to their taken pile. Taken cards cannot be interacted with in any way.</p><p>Each altar in the scenario has L+2 hit points. They are enemies to you and allies to all monsters. Whenever any altar is destroyed, the destroying character may return all their taken cards to their hand.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_95.1].<br/>When door [two] is opened, read [section_68.3].<br/>When door [three] is opened, read [section_69.2].<br/>When door [four] is opened, read [section_148.4].<br/>When door [five] is opened, read [section_71.5].",
+			"containsImage": true
+		},
+		"95.1": {
+			"trigger": "Door [one] is opened",
+			"specialRules": "Do not set up altar [a] for two or three characters.",
+			"containsImage": true
+		},
+		"68.3": {
+			"trigger": "Door [two] is opened",
+			"specialRules": "Do not set up altar [b] for two characters.",
+			"containsImage": true
+		},
+		"69.2": {
+			"trigger": "Door [three] is opened",
+			"text": "Something about this place is sapping your strength at an alarming rate. A green pain creeping behind your eyes. Destroying the altars dulls it a bit, but then it just comes screaming back, stronger than ever. You should not be here, but the only way to banish this agony is to keep moving forward.",
+			"containsImage": true
+		},
+		"148.4": {
+			"trigger": "Door [four] is opened",
+			"containsImage": true
+		},
+		"71.5": {
+			"trigger": "Door [five] is opened",
+			"containsImage": true
+		},
+		"8.2": {
+			"trigger": "All altars are destroyed",
+			"conclusion": "<p>The monsters are dead, but you keep hacking at them until some sense of reason returns. It takes a good while. When you finish, you look around and find that the chamber has been reduced to scattered bones and splashes of ooze. Your boot prints mark out a chaotic dance in luminescent green, and the tendrilled beasts, whether or not they were the source of your waking nightmares, are rendered into a slushy heap.</p><p>The room, now wholly empty of life, sits vacant and cold except for a small stone box in its center. You kneel and open it, hoping that whatever treasure is stored in this long-forgotten place has been worth it. And, sure enough, a slim piece of pink coral stares back at you from the box.</p><p>You pocket the piece of the crown and then march back to where you started, hoping that the dead will stay that way.</p>",
+			"rewards": {
+				"text": "Gain 10 [xp] and 1 [checkmark] each.<br/>Gain “Coral Shard” campaign sticker."
+			},
+			"sectionLinks": "Read [section_36.7] now."
+		},
+		"36.7": {
+			"title": "Ancient Technology",
+			"text": "You find a pile of scrap machine parts in one corner of the cavern, along with a single sheet of frail parchment.",
+			"containsImage": true
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "95.1", "68.3", "69.2", "148.4", "71.5", "8.2", "36.7"]
 }

@@ -345,7 +345,8 @@
 				"text": "You don’t have time or supplies to waste. You set forth with renewed vigor and are eventually rewarded: you emerge from the underbrush at the top of a hill to behold a magnificent view of the surrounding wilderness. Not only does it set you on the right path, it fills you with a sense of wonder.",
 				"rewards": {
 					"text": "Gain 1 inspiration.<br/>All characters start the next scenario discarding one card."
-				}
+				},
+				"returnCard": true
 			},
 			"B": {
 				"trigger": "Camp until night and try to navigate by the stars.",
@@ -409,11 +410,37 @@
 			}
 		}
 	},
-	"WR-31": {},
+	"WR-31": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
 	"WR-32": {},
 	"WR-33": {},
 	"WR-34": {
-		"unlockedBy": { "event": { "id": "WR-17" }}
+		"unlockedBy": { "event": { "id": "WR-17" }},
+		"text": "<p>The snow is driving harder than usual, forcing you to seek shelter under a forest canopy. An old oak tree gives the best cover from the sleet, and you set up camp under the safety of the branches.</p><p>Before you can make camp, you spot it: a perfectly circular clearing around a single chunk of glowing crystal. Unlike the snowy landscape around you, this area has a warmth to it, and the grass grows green. The polished rock looks meticulously carved into a smooth platform, and a candle has been placed on it... someone has made a crystal altar.</p><p>An inscription on the altar reads:</p><p>I stretch to the sky,<br/>a cool blanket for my children from the sun.<br/>Rolling hills of blue-green,<br/>white peaks my winter armor.<br/>Hear my call. Who am I?</p><p>You can’t explain how, but the crystal altar pulses its glow, seemingly waiting for your answer.</p>",
+		"options": {
+			"A": {
+				"trigger": "A mountain.",
+				"text": "The altar glows with a fiery intensity. It starts pleasant but quickly becomes uncomfortable, then dangerous. It splits and hot magma flows across the clearing. You retreat, shocked, into the snow—at least you know how to deal with ice.",
+				"rewards": {
+					"text": "All characters start the next scenario with [stun]."
+				}
+			},
+			"B": {
+				"trigger": "A forest.",
+				"text": "The altar splits open, and vines and tendrils burst forward, wrapping around your limbs and tearing at you. You’re forced to retreat, and you barely make it away with your lives.",
+				"rewards": {
+					"text": "All characters start the next scenario with [brittle] and [impair]."
+				}
+			},
+			"C": {
+				"trigger": "A sea.",
+				"text": "Just as the old Orchid woman predicted, you knew the right answer to the riddle. The curse is lifted and you’re able to speak freely once more. The crystal itself fades, the light gone from it. At a touch it crumbles away, revealing a robe similar to that one the old Orchid woman was wearing so long ago.",
+				"rewards": {
+					"text": "Gain “Robes of Doom” [item_047]."
+				}
+			}
+		}
 	},
 	"WR-35": {
 		"unlockedBy": { "event": { "id": "WR-05" }}

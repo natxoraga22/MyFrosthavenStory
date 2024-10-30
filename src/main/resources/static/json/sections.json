@@ -456,6 +456,18 @@
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
 		}
 	},
+	"184.1": {
+		"title": "The Third Year",
+		"text":  "<p>Whereas this was once a job for some quick gold, something has changed for your party over the last two years. Members have come and gone. Friends have found their dreams and retired from the hard life of a mercenary. Who among you remains? Are you even really the same mercenary group at all?</p><p>Somehow, through all the adventures, the wins, the devastating losses... it feels like there’s still some core that has remained constant. That core camaraderie doesn’t just extend to your party, but flows to all the rag-tag peoples of Frosthaven toughing it out together. Perhaps it’s stubbornness. Perhaps it’s the drive toward what the next page in your story will bring, or the promise of just one more triumph. One thing is certain, though...</p><p>You wouldn’t have it any other way.</p>",
+		"rewards": {
+			"text": "Gain 3 soldiers",
+			"events": {
+				"SR": [{ "id": "SR-52" }],
+				"WO": [{ "id": "WO-48" }, { "id": "WO-49" }, { "id": "WO-50" }, { "id": "WO-51" }, { "id": "WO-52" }, { "id": "WO-53" }, { "id": "WO-54" }, { "id": "WO-55" }, { "id": "WO-56" }],
+				"WR": [{ "id": "WR-31" }]
+			}
+		}	
+	},
 	"190.4": {
 		"title": "Puzzle Book",
 		"unlockedBy": [{ "section": { "id": "128.2" }}, { "section": { "id": "169.3" }}],

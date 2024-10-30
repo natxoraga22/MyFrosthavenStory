@@ -643,7 +643,9 @@
 	"SO-45": {},
 	"SO-46": {},
 	"SO-47": {},
-	"SO-48": {},
+	"SO-48": {
+		"unlockedBy": { "scenario": { "id": "060" }}
+	},
 	"SO-49": {
 		"unlockedBy": { "scenario": { "id": "059" }}
 	},
@@ -702,7 +704,24 @@
 		}
 	},
 	"SO-58": {
-		"unlockedBy": [{ "section": { "id": "152.3" }}, { "section": { "id": "164.2" }}]
+		"unlockedBy": [{ "section": { "id": "152.3" }}, { "section": { "id": "164.2" }}],
+		"text": "<p>The library is quiet. You’re finishing up a conversation with Eddica, the Valrath librarian, when the door opens and in walks Violet, the Valrath Lurker researcher. You had not noticed until now, but these two look miraculously—</p><p>“Hey, sis. Brought you a sandwich. Barbequed polar bear.” Violet hands her twin sister a wrapped package, then opens her own. “Apparently, it’s all the rage with Lurkers.”</p><p>Eddica takes a bite of the sandwich, but spits it back into the paper wrapper. “Blech! Lurkers like this?”</p><p>“Apparently.” Violet repeats, and taking a large bite. “Not bad.” She turns to your party. “You working on that silly book project of hers?”</p><p>Eddica snaps back, suddenly very grumpy. “They’re Tomes of Power, Violet. And I think they’d agree our research into the Tomes has been more fruitful than your weird fascination with idiotic clawed monsters.” She turns to you, subconsciously balling her hands into fists. “Right?”</p><p>You could really go for an attack on the outpost right now.</p>",
+		"options": {
+			"A": {
+				"trigger": "Recognize there isn’t a good option here and agree with Eddica that books are great.",
+				"text": "<p>You mumble what you thought was a very diplomatic answer about how great books are that definitely shouldn’t upset either Valrath, but the looks on their faces make it clear this was precisely the wrong thing to say. After some back-and-forth sisterly bickering, Violet departs, rolling her eyes as Eddica hollers after her.</p><p>Eddica straightens her skirt and turns back to you with a huff. “Well. I do appreciate you siding with me—she always gets her way, so that’s a nice change. In any case, I have some information that might help narrow down the location of the next Tome…”</p>",
+				"rewards": {
+					"text": "Look through the summer road deck until you find SR-47, 48, or 49, and put it on top of the deck."
+				}
+			},
+			"B": {
+				"trigger": "Recognize there isn’t a good option here and agree with Violet that Lurkers are great.",
+				"text": "<p>You mumble what you thought was a very diplomatic answer about how great Lurkers are that definitely shouldn’t upset either Valrath, but the looks on their faces make it clear this was precisely the wrong thing to say. After some back-and-forth sisterly bickering, Eddica throws your party and Violet out, shouting things at a volume unbecoming of a library.</p><p>Violet buttons up her purple coat against the cold, smiling at you. “Thanks for the assist—she’s always down on my work. So prim and proper, but you can tell she’s just a volcano waiting to explode. Anyway, I was actually coming around to tell her I found a tip for one of the books. I guess I can just tell you instead.”</p>",
+				"rewards": {
+					"text": "Look through the summer road deck until you find SR-47, 48, or 49, and put it on top of the deck."
+				}
+			}
+		}
 	},
 	"SO-59": {
 		"unlockedBy": { "section": { "id": "189.1" }},

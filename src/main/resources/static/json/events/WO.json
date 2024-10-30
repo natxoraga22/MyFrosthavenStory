@@ -1059,11 +1059,20 @@
 	"WO-47": {
 		"unlockedBy": { "section": { "id": "129.3" }}
 	},
-	"WO-48": {},
-	"WO-49": {},
-	"WO-50": {},
-	"WO-51": {},
+	"WO-48": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
+	"WO-49": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
+	"WO-50": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
+	"WO-51": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
 	"WO-52": {
+		"unlockedBy": { "section": { "id": "184.1" }},
 		"text": "<p>The guard’s head rolling down the street—still in its helmet—leaves a lasting impression. Unfettered leap over the wall, sharpened arms spinning in a furious blitz. The guards step up as they always have before, but it’s clear they’re shaken. The Unfettered aren’t here to knock down buildings or set fire to the wall… they’re here to exterminate the populace.</p><p>“THIS ZONE BELONGS TO THE UNFETTERED. LEAVE OR DIE.”</p>",
 		"options": {
 			"A": {
@@ -1087,8 +1096,11 @@
 			"target": "all"
 		}
 	},
-	"WO-53": {},
+	"WO-53": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
 	"WO-54": {
+		"unlockedBy": { "section": { "id": "184.1" }},
 		"text": "<p>Something is very wrong. Returning from an errand outside the outpost, you find the gates wide open and guards shuffling aimlessly through the streets. One breaks off from the others and begins screaming in agony as he claws at his face.</p><p>Then you spot them: a dozen Lurkers, fury in their eyes, going door to door. You can feel their minds pushing into yours.</p><p>Images flash painfully through your mind: shards, a crown. Then the entirety of your being is overcome with emotion: desperation, desire, a NEED. It burns at the inside of your skull. You want to fight it, but it’s overwhelming. It crunches your existence into a marble embedded at the back of your head. You need to think about something—anything else.</p>",
 		"options": {
 			"A": {
@@ -1117,8 +1129,12 @@
 			}
 		}
 	},
-	"WO-55": {},
-	"WO-56": {},
+	"WO-55": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
+	"WO-56": {
+		"unlockedBy": { "section": { "id": "184.1" }}
+	},
 	"WO-57": {},
 	"WO-58": {},
 	"WO-59": {},
@@ -1248,7 +1264,25 @@
 		"unlockedBy": { "event": { "id": "SO-59" }}
 	},
 	"WO-77": {
-		"unlockedBy": { "section": { "id": "31.3" }}
+		"unlockedBy": { "section": { "id": "31.3" }},
+		"text": "<p>You’re browsing the wares in the jeweler’s shop when an unnatural two-foot crack appears on the wall right in front of you. It leaks light and fog, and a low hum washes over the store. The grumpy proprietor pounds his fist against the countertop, rattling the contents of his display.</p><p>“It’s those Aesthers in the next building over. Always experimenting, disrupting my business! Nearly once a week I get a crack like this. I tried putting something in it the other day, just on a lark... what came back out was... different. Err, I think.”</p><p>He pauses and scratches his head, confused. “I don’t really remember what I put in, come to think of it.”</p><p>The crack in the wall gurgles, light bubbling up around the edges.</p>",
+    	"options": {
+			"A": {
+				"trigger": "Place an item from the store in the crack.",
+				"text": "You select an item from the store shelves and push it through the crack, which hungrily swallows it whole. The edges of the crack corrode and flake away, but before the light fades entirely, out falls something new. This isn’t what you put in, is it? Perhaps this was here all along... but you just can’t shake the feeling this isn’t right...",
+				"rewards": {
+					"text": "Choose one random item blueprint you have unlocked. Return the blueprint card to the random item blueprint deck and all other copies of the item to the unavailable crafted item deck.<br/>Gain one random item blueprint."
+				},
+				"returnCard": true
+			},
+			"B": {
+				"trigger": "Pay the Aesthers a visit and ask them to knock it off.",
+				"text": "You bang on the door of the Aesthers next door and they eventually open up. Dressed in drab yellow, they’re passing around an ornate, glowing headdress in their otherwise spartan room. You tell them what’s been going on in the shop and their eyes widen. The one with the headdress mutters about how their experiment is a failure, but you’re not really interested beyond their assurance it won’t happen again. He sighs, hands you the headdress, and closes the door.",
+				"rewards": {
+					"text": "Gain “Aesther Diadem” [item_197]."
+				}
+			}
+		}
 	},
 	"WO-78": {},
 	"WO-79": {},

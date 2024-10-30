@@ -70,7 +70,9 @@
 .icon.light,
 .icon.consumeLight,
 .icon.dark,
-.icon.consumeDark {
+.icon.consumeDark,
+.icon.wild,
+.icon.consumeWild {
 	max-height: 20px;
 }
 
@@ -106,6 +108,7 @@
 .icon.forceLinked  { max-height: 11px; }
 .icon.heal         { max-height: 18px; }
 .icon.item         { max-height: 15px; }
+.icon.jump         { max-height: 18px; }
 .icon.linked       { max-height: 9px; }
 .icon.minus1       { max-height: 22px; }
 .icon.minus2       { max-height: 22px; }

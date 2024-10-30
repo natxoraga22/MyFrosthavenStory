@@ -99,7 +99,25 @@
 	},
 	"B-05": {},
 	"B-06": {},
-	"B-07": {},
+	"B-07": {
+		"text": "<p>The spotter in the crow’s nest rings the bell and points off the starboard side. In the distance, you can see a ship listing dangerously and several people in rowboats heading away from it. You adjust tack and head toward the commotion.</p><p>Before you get within shouting distance, a fire erupts on the listing ship, and the flames spread quickly—the main mast a burning beacon against the horizon. A moment later, the heat reaches the powder stores, and the ship ignites in a fireball of splintered wood. You load into your ship’s rowboat and start making your way toward the wreckage as it begins sinking below the water line.</p><p>By the time you’re close enough to see the carnage clearly, the survivors are nowhere to be found. Crates and detritus from the ship are scattered across the waves.</p>",
+		"options": {
+			"A": {
+				"trigger": "Board the burning ship and try to put out the fire.",
+				"text": "<p>You clamber up the ladder to the ship, drawing your clothes tight around your face to block out the smoke. The deck is already steeply angled, and there isn’t much that hasn’t been cast into the water. Streaks of ominous blood stain the wood paneling—something terrible happened here. It looks like someone has deliberately spilled lamp oil down the hull, which is causing the flames to spread, despite the splashing waves.</p><p>You wake up being dragged from the water by Captain Doghogger; you passed out from the smoke.</p>",
+				"rewards": {
+					"text": "All characters start the next scenario discarding two cards."
+				}
+			},
+			"B": {
+				"trigger": "The ship is going under. Gather the cargo crates.",
+				"text": "You let the ship meet its watery fate and spend a few moments gathering whatever cargo you can find among the wreckage. You fear the worst for the ship’s crew. Strange that someone would set the ship aflame—there’s plenty of salvageable material here that would have gone to waste had you not happened upon it at the right time.",
+				"rewards": {
+					"text": "Gain 2 collective [lumber], 2 collective [metal], and 2 collective [hide]."
+				}
+			}
+		}
+	},
 	"B-08": {},
 	"B-09": {},
 	"B-10": {},
@@ -131,7 +149,9 @@
 	"B-16": {
 		"unlockedBy": { "scenario": { "id": "042" }}
 	},
-	"B-17": {},
+	"B-17": {
+		"unlockedBy": { "scenario": { "id": "060" }}
+	},
 	"B-18": {},
 	"B-19": {}
 }

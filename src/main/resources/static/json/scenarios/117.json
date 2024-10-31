@@ -1,19 +1,35 @@
 {
 	"id": "117",
 	"name": "A Waiting Game",
-	"questLine": "JobPosting",
-	"coordinates": "",
-	"requirement": {},
+	"questLine": "Other",
+	"coordinates": "F7",
 	"unlockedBy": { "section": { "id": "169.1" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 2,
+	"goals": "The scenario is complete when all three traps [a] are occupied by Polar Bears and all non-Polar Bear enemies are dead. At the end of that round, read [section_140.2].",
+	"effects": "Each character adds two [minus1] cards to their attack modifier deck.",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>Entering the Whitefire Woods to meet with the Trapper, you come across a slaughtered polar bear. The white fur is muddied, the ribs stripped of flesh. The Trapper closes the bear’s eyes respectfully. “Those hunters can’t even skin the beasts properly,” they lament, sighing over the waste.</p><p>The Trapper has already placed their snares. They lead you to a clearing where you hide behind some elderberry bushes. In front of you, a family of polar bears lumbers in from the river, fish clutched in their strong jaws. The snares are hidden beneath the scant snow. All you need to do is wait for the bears to tread on them.</p><p>But the bears sniff the air, bristling. The Trapper curses, and suddenly, the clearing is filled with little bodies dropping from the trees. The Vermling hunting party surrounds their quarry, deftly avoiding claws and snares alike. Hemmed in, the bears draw to their hind legs, roaring.</p><p>The Trapper curses. “So much for stealth!” They dash in to save the bears, spurring you to follow and prepare for battle.</p>",
+			"specialRules": "<p>All Polar Bears are enemies to both you and all other monster types. Any character can lose one card from their hand or two from their discard pile to negate one source of damage to any Polar Bear. If three Polar Bears die, the scenario is lost.</p><p>All figures, except Polar Bears, treat all traps [a] in the scenario as obstacles which cannot be destroyed or moved in any way. If any Polar Bear enters a trap [a], it no longer performs any actions for the rest of the scenario. Do not remove that trap from the map. A trapped bear is also immune to forced movement. All other traps function as normal.</p><p>Whenever any character damages a Polar Bear with an attack, they can reduce the damage by any amount, and suffer damage equal to the amount it was reduced by to add [push] X to the attack, where X is the amount the damage was reduced by.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_168.6].<br/>When door [two] is opened, read [section_36.3].",
+			"containsImage": true
+		},
+		"168.6": {
+			"trigger": "Door [one] is opened",
+			"containsImage": true
+		},
+		"36.3": {
+			"trigger": "Door [two] is opened",
+			"containsImage": true
+		},
+		"140.2": {
+			"trigger": "All three traps [a] are occupied by Polar Bears and all non-Polar Bear enemies are dead",
+			"conclusion": "<p>The bears are safely snared and the hunting party lies still in the snowbanks. The Trapper shakes their head, remorseful for their fellow Vermlings. “Immersed in nature as I have been, death is no longer distasteful or frightening. I do wish it didn’t have to be this way, but they disrupted the natural course.”</p><p>Cautiously nearing each polar bear, the Trapper uses a blow-gun to shoot their haunches with a strong tranquilizer. Once the bears have lain down their mighty heads, the Trapper turns to you. “If you help me move them back to their home in the barrens, I’m sure they would greatly appreciate it.”</p><p>You smile. The one who will truly appreciate it is the Trapper, who, after the high energy of battle, has returned to their former reticent state. As you move the bears to sleds for transportation, you may or may not hear a mumbled thank-you.</p>",
+			"rewards": {
+				"text": "Gain 4 collective [hide].<br/>Gain 10 gold each."
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "168.6", "36.3", "140.2"]
 }

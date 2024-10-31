@@ -74,7 +74,12 @@
 		}
 	},
 	"42.2": {
-		"unlockedBy": { "section": { "id": "92.2" }}
+		"title": "Request from Infuser",
+		"unlockedBy": { "section": { "id": "92.2" }},
+		"text": "<p>You’re crossing one of Frosthaven’s busiest lanes when you spot your friend the Infuser, their Orchid nose buried in a book, about to step into the path of an oncoming Kivak. You seize their crystalline shoulder to pull them back to safety.</p><p>They look up at you, bemused, hardly noticing the rescue. “The Radiant Forest!” they exclaim, and eagerly display the book. “I may have found a way to increase the power of my infusions, do you see?” The ancient leather tome depicts botanical illustrations of specimens collected from the forest. Writing in the margins speculates over their odd alchemical properties. The language is indecipherable to you, but the Infuser seems to know it, perhaps by virtue of their vast lifespan and experience.</p><p>“This writer couldn’t grasp the full significance of their findings,” the Infuser says, frowning. “Plants, more than anything, absorb the energy around them. The entire forest could be latently magical. I must investigate further!”</p><p>Flipping to the index of the book, the Infuser shows you an old map of the Radiant Forest with various notes and markings. “How do you feel about an adventure? Excellent! We can set out straight away!” They launch off, and you have to seize them again before they collide with a cart full of cabbages.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "119" }]
+		}
 	},
 	"43.5": {
 		"title": "Puzzle Solution (puzzle #3)",
@@ -190,12 +195,28 @@
 			"text": "Gain 5 collective [lumber] and 2 collective [metal]."
 		}
 	},
+	"104.1": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>You’re walking by the docks when you spot the seafaring Captain Doghogger trying to round up a crew. He approaches you with urgency.</p><p>“I just got word there’s an abandoned ship full of supplies in the bay. No crew, going to be at the bottom of the sea soon.” Captain Doghogger takes a sip from a metal canteen and swishes the liquid around his mouth before swallowing. He’s seen some hard times in his past—much like anyone who has made their way to Frosthaven—and he isn’t one to turn down the opportunity for some easy loot.</p><p>“Fishing crew told me they spotted it out there. Sounds like it’s barely above the waterline, just waiting for someone to help lighten its load. Easy job, in and out and we salvage whatever we can. Probably not a thing to fear, just need a team with strong backs to grab as much treasure as we can carry. Eh? What do you say we head over and take a look?”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "092" }]
+		}
+	},
 	"104.3": {
 		"title": "Tome of Elements",
 		"unlockedBy": { "section": { "id": "44.4" }},
 		"text": "<p>Eddica runs her finger down the page of the Tome of the Elements. She utters something under her breath, dips her finger at the melted base of a wax candle, and traces something on your foreheads.</p><p>“That should do it—ouch!” She quickly sucks her fingertip into her mouth. She looks back at you with a shrug. “Got hot.”</p>",
 		"rewards": {
 			"text": "<p>During the next scenario, the element [fire] token does not move from the waning column to the inert column at the end of any round.</p><p>Gain “Tome of Elements” [item_216].</p><p>Do not resolve an outpost event this week.</p>"
+		}
+	},
+	"107.2": {
+		"title": "Tome of Time",
+		"unlockedBy": { "section": { "id": "181.1" }},
+		"text": "<p>Eddica reviews the tome and is impressed with the technique description. “This really makes the positioning clear, I’ll have to make note of this format for my own writings.” She taps the page a couple times, mouthing the words, then looks up to your companion and speaks with a flick of her wrist: “Temporialius wrinklae!”</p><p>A haze wraps around the subject and Eddica’s lips turn up in a smile. “Lovely.”</p>",
+		"rewards": {
+			"text": "<p>In the next scenario, the selected player returns any number of ability cards in their discard pile to their hand at the end of the second round.</p><p>Gain “Tome of Time” [item_217].</p><p>Do not resolve an outpost event this week.</p>"
 		}
 	},
 	"114.2": {
@@ -449,6 +470,12 @@
 			"scenarios": [{ "id": "084" }]
 		}
 	},
+	"181.1": {
+		"title": "Tome of Time",
+		"unlockedBy": { "event": { "id": "SR-49" }},
+		"text": "<p>You walk into the crowded library carrying the book with a metal cover and an embedded hourglass you found in a far-off cave. The eager resident librarian Eddica locks eyes with you, then looks to it, then back to you. She uncontrollably blurts, “EVERYBODY OUT! Magic time!” The patrons look startled and confused.</p><p>Eddica looks surprised at her own outburst and straightens her skirt nervously. She pushes her red-rimmed glasses up her face and starts again, much more calmly: “Ahem. Sorry… what I meant to say is that the library is closing a bit early today as I have some research work to do.” She assists a few final citizens with checking out books and hurries them out the door.</p><p>With the metal-clad book in hand she dives right in: “A time manipulation spell. Ingenious… it hitches you to an earlier point in time, allowing the benefits of the past without being winded!” Sure, whatever that means. “Looks like it has finite power, how would you like me to cast it?”</p>",
+		"sectionLinks": "<p>If you ask her to cast all of the spell’s power on a single party member, choose the character and read [section_107.2] now.</p><p>If you ask her to cast it on the entire party, read [section_191.1] now.</p>"
+	},
 	"183.3": {
 		"title": "Visiting Trader",
 		"text": "“Ah, my best customers! Heh.” It’s the old traveling merchant and his carriage full of items of suspicious origins. He invites you to poke through his inventory. “Same price as before, but even better value. No one’s going to come looking for these. Heh.” He doesn’t elaborate, and you think better than to press the issue.",
@@ -474,6 +501,14 @@
 		"text": "<p>Crain grins and lifts up a large decaying book, one you recognize from the catacombs. “Of all the texts I had a chance to peruse in those tunnels, this one fascinated me the most, and I understand absolutely none of it.”</p><p>The book doesn’t look like much. It’s bound in thin, tanned leather that’s so worn that the corners have begun to peek through. On the front cover are two words inscribed in faint, black ink. You raise a skeptical eyebrow.</p><p>“Yes! I’m excited as well,” Crain says. “That’s why I spent all night deciding on the best method to begin the translation. The numerical system, that’s what I’ve landed on. It’s quite different from any I’ve studied, but once I untangle it, I should be able to move on to the letters.” He pauses to consider something, then nods enthusiastically, convinced of it. “And how about you, friends? Care to take your luck with the old pen and paper?”</p><p>He riffles through the mosaic of parchment and snaps up a small leaf. On it, is a series of dots and dashes, a code if you were to guess. “It’s their numerals. Or could they be ordinals? No no, definitely numerals. Anyway, how about you give it a shot. A puzzle to fill the time between slaying and whatnot.”</p>",
 		"rewards": {
 			"text": "Open the puzzle book to the first page."
+		}
+	},
+	"191.1": {
+		"title": "Tome of Time",
+		"unlockedBy": { "section": { "id": "181.1" }},
+		"text": "<p>Eddica requests the party group together in the center of the hardwood floor, away from the shelves, “just in case.” She does a dry-run of the casting making heavy reference to the page, then looks up to you. “Here goes! Temporialius wrinklae!”</p><p>She’s visibly excited and you can’t help but feel that the flourish in her hand movements isn’t strictly necessary. After a moment of stillness a haze wraps around the party—the sensation is almost as though you exist both now and a few seconds ago. She smiles and grabs a pen: “Tell me everything, how does it feel?”</p>",
+		"rewards": {
+			"text": "<p>In the next scenario, each character returns any number of ability cards in their discard pile to their hand at the end of the first round.</p><p>Gain “Tome of Time” [item_217].</p><p>Do not resolve an outpost event this week.</p>"
 		}
 	},
 	"192.1": {

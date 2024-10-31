@@ -160,12 +160,24 @@
 			},
 			"3": {
 				"builtSections": {
-					"38.3": {}
+					"38.3": {
+						"title": "Trading Post Upgraded",
+						"text": "<p>You enter the trading post and its proprietor, Xain, is nowhere to be found. On the counter is a lockbox with a handwritten sign posted on the front: “Prices marked. Drop coin in slot.” The rainbow parrot, Squabbles, watches your confusion carefully.</p><p>After a moment of browsing the bird emotes a pitch-perfect rendition of Xain’s voice: “BWAK! Xain is currently drumming up new and exciting opportunities to stock these shelves. Or whatever. Yeah… Just tell Mayor Satha that if she comes around, okay? That’ll give me a few hours to find a drink around here. And unpack these boxes… BWAK! Well you have a beak, don’t you? BWAK!”</p><p>It does look like there are a few choice items from down south now on display. You try on a pair of goggles and briefly consider what would happen if you just walked out with them. Before you can decide, the eagle-eyed bird takes notice and taps the lockbox expectantly.</p><p>You can guess who taught it the highpressure sales tactics.</p>",
+						"rewards": {
+							"text": "<p>Add items [item_138] to [item_146] to the available item supply.</p><p>In addition, add any of the following items you have unlocked from <em>Gloomhaven</em>: 46, 83 to 88, 102, 110, 111, 120 to 123, 126, and 128.</p>"
+						}
+					}
 				}
 			},
 			"4": {
 				"builtSections": {
-					"196.2": {}
+					"196.2": {
+						"title": "Trading Post Upgraded",
+						"text": "<p>The trading post is an odd sight today: a massive pile of birdseed nearly blocks the entrance to the shop. Its reluctant proprietor, Xain, and the Quatryl mail carrier are arguing outside.</p><p>Despite being half Xain’s height, the mail carrier has a voice that carries. “I don’t know what scam you’re trying to pull this time, Xain. You ordered it weeks ago—I heard it with my own ears! So I dragged it up that mountain, through the pass, and now you’re gonna pay for it!” She wrests a coin purse out of Xain’s arms and walks off in a huff.</p><p>Xain shouts after her. “I never ordered this! It’s ridiculous! I’ve got a lot of friends, you know. Friends in high places!”</p><p>Squabbles, perched in the rafters of the tent, speaks up in a pitch-perfect rendition of Xain’s voice: “BWAK! Crates of birdseed. So many crates! Fill your cart, I can pay! BWAK!”</p><p>Realization crosses Xain’s face and he narrows his eyes at the rainbow parrot. “You did this. I’m going to—hey… wait a second…”</p><p>With a snap of his fingers an idea has formed and he turns to you with his suave demeanor. “Say, you don’t happen to know any Shrike Fiends who understand currency, do you? This could be an amazing opportunity to make a Shrike FRIEND…”</p>",
+						"rewards": {
+							"text": "<p>Add items [item_147] to [item_155] to the available item supply.</p><p>In addition, add any of the following items you have unlocked from <em>Gloomhaven</em>: 17, 35, 47, 51, 62, 74, 77 to 82, 117 to 119, 127, 129, and 131.</p>"
+						}
+					}
 				}
 			}
 		}

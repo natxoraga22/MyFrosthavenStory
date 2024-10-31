@@ -499,7 +499,35 @@
 		}
 	},
 	"SR-41": {
-		"unlockedBy": { "section": { "id": "173.1" }}
+		"unlockedBy": { "section": { "id": "173.1" }},
+		"text": "<p>You’re wandering along the coast when you see a young Lurker gazing at the ocean, swaying left and right with raised claws. A few steps later you faintly hear rhythmic clicking and clacking accompanying its “dance.”</p><p>As you approach, a stabbing pain penetrates your mind, as a sense of urgency and panic overcomes you. Images of an icy peninsula fill your thoughts. The pain forces you to your knees as you grasp your head and let out a groan.</p><p>Upon making the noise, you feel the Lurker’s surprise, but it does not stop its dance. You can’t tell which emotions are yours and which are the Lurker’s.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Attempt to communicate with the Lurker.",
+				"requirement": "[trait] LURKER",
+				"text": "You manage to get through to the small crustacean, who, in his excitement, was unable to control his psychic link to you. Though communicating is tricky, you gather that he wants you to go to the frozen peninsula.",
+				"rewards": {
+					"scenarios": [{ "id": "131" }]
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Attempt to communicate with the Lurker.",
+				"requirement": "[not] [trait] LURKER",
+				"text": "You attempt to communicate with the Lurker but can’t seem to get through to him. The torrent of images and feelings drains you.",
+				"rewards": {
+					"text": "All characters start the next scenario discarding one card.<br/>Read outcome B."
+				}
+			},
+			"B": {
+				"trigger": "Knock the little Lurker out to stop the pain.",
+				"text": "The small crustacean doesn’t put up a fight. You knock it out with a single blow and manage to stumble away with nothing but a headache. You can’t get the images out of your head. Back in Frosthaven, you study the maps of the northern coast and discover where the Lurker may have come from.",
+				"rewards": {
+					"scenarios": [{ "id": "131" }]
+				}
+			}
+		}
 	},
 	"SR-42": {},
 	"SR-43": {
@@ -571,7 +599,41 @@
 		}
 	},
 	"SR-49": {
-		"unlockedBy": { "section": { "id": "89.2" }}
+		"unlockedBy": { "section": { "id": "89.2" }},
+		"text": "<p>You’re in the region Eddica the Librarian suggested would contain the Tome of Time, but a search has turned up nothing. Heavy snowfall forces you to take shelter in a dry cave for a few hours. To your surprise you spot a small handle carefully hidden in the rock wall. With a bit of force you’re able to pull open a hidden compartment containing a single object: a heavy tome with a delicate, sand-filled hourglass embedded in the cover. Two stiff metal latches hold the book shut, but if you tilt the cover just right the sand in the hourglass begins to run. So long as it’s flowing, the latches release easily. You hastily flip through the pages: it looks like this is in fact the tome Eddica the librarian is looking for!</p><p>The diagrams clearly lay out the hand positions and stances to take in casting, and the words are written in several languages, making it easy to translate. If you managed to invoke it, the spell looks like it could give some benefit in the battle you’re about to head into.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Attempt to cast a spell from the book.",
+				"requirement": "[trait] ARCANE or EDUCATED",
+				"text": "You follow the relatively straightforward directions and pronounce the incantation with ease. The book grows hot to the touch and the ink from the pages fades away. You feel an uncomfortable bubble pass through you, like time itself rippling through your torso. Seems like it worked?",
+				"rewards": {
+					"text": "At the end of the first round of the next scenario, all characters may return up to two card from their discard pile to their hand.<br/>Add [section_181.1] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "WR-47" }]
+					}
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Attempt to cast a spell from the book.",
+				"requirement": "[not] [trait] ARCANE or EDUCATED",
+				"text": "The pages look simple enough, but there’s some nuance that just doesn’t make sense. A flash of light erupts throughout the cave and you feel queasy.",
+				"rewards": {
+					"text": "All characters start the next scenario with [poison].<br/>Read outcome B."
+				}
+			},
+			"B": {
+				"trigger": "Bring the book back to Eddica for her informed review.",
+				"text": "This looks beyond your pay grade. You place it carefully into your pack to bring back to Eddica the librarian. She’ll know what to do with it.",
+				"rewards": {
+					"text": "Add [section_181.1] to the calendar in one week.",
+					"removedEvents": {
+						"WR": [{ "id": "WR-47" }]
+					}
+				}
+			}
+		}
 	},
 	"SR-50": {},
 	"SR-51": {},

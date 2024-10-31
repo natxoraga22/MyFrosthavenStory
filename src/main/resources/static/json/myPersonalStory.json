@@ -410,7 +410,76 @@
 				"upgrade": [{ "id": "tradingpost", "level": 3 }, { "id": "tradingpost", "level": 4 }]
 			}
 		},
-		{ "event": { "id": "SR-41", "chosenOption": "?" }},
-		{ "scenario": { "id": "119" }}
+		{ "event": { "id": "SR-41", "chosenOptions": ["A2", "B"] }},
+		{ "scenario": { "id": "119" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "103.2" }],
+				"outpostEvent": { "id": "SO-17", "chosenOptions": ["A2", "A3"] },
+				"levelUps": [{ "id": "hive", "level": 6 }],
+				"upgrade": [{ "id": "enhancer", "level": 4 }]
+			}
+		},
+		{ "scenario": { "id": "126" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-02", "chosenOption": "B1" },
+				"upgrade": [{ "id": "townhall", "level": 3 }]
+			}
+		},
+		{ "event": { "id": "SR-11", "chosenOption": "B1" }},
+		{ "scenario": { "id": "084" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-41", "chosenOption": "B" },
+				"levelUps": [{ "id": "pyroclast", "level": 7 }],
+				"upgrade": [{ "id": "garden", "level": 4 }]
+			}
+		},
+		{ "event": { "id": "SR-26", "chosenOption": "A" }},
+		{ "scenario": { "id": "010" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "SO-24", "chosenOption": "B" },
+				"levelUps": [{ "id": "hive", "level": 7 }],
+				"upgrade": [{ "id": "miningcamp", "level": 3 }]
+			}
+		},
+		{ "event": { "id": "SR-14", "chosenOption": "A" }},
+		{ "scenario": { "id": "109" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "157.3" }],
+				"outpostEvent": { "id": "SO-63", "chosenOptions": ["A", "A1"] },
+				"upgrade": [{ "id": "temple", "level": 3 }]
+			}
+		},
+		{ "scenario": { "id": "086" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "178.1" }],
+				"outpostEvent": { "id": "SO-18", "chosenOption": "A" },
+				"levelUps": [{ "id": "pyroclast", "level": 8 }],
+				"upgrade": [{ "id": "loggingcamp", "level": 4 }]
+			}
+		},
+		{ "scenario": { "id": "127" }},
+		{
+			"outpostPhase": {
+				"townGuardPerks": [{ "id": "167.2" }],
+				"outpostEvent": { "id": "SO-55", "chosenOption": "A" },
+				"levelUps": [{ "id": "hive", "level": 8 }],
+				"upgrade": [{ "id": "miningcamp", "level": 4 }]
+			}
+		},
+		{ "event": { "id": "SR-29", "chosenOption": "A" }},
+		{ "scenario": { "id": "018" }},
+		{
+			"outpostPhase": {
+				"passageOfTime": [{ "id": "177.4" }],
+				"outpostEvent": { "id": "SO-43", "chosenOption": "B" },
+				"upgrade": [{ "id": "huntinglodge", "level": 4 }]
+			}
+		}
 	]
 }

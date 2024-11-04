@@ -2,5 +2,60 @@
 	"id": "109",
 	"name": "Furious Factory",
 	"questLine": "RandomScenario",
-	"unlockedBy": { "section": { "id": "119.3" }}
+	"coordinates": "C8",
+	"requirement": { "transport": "sled" },
+	"unlockedBy": { "section": { "id": "119.3" }},
+	"complexity": 3,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when the Central Processor is dead. At the end of that round, read [section_67.2].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>You follow the blinking red dot to the location of the factory and enter through some sort of access tunnel leading into a mountain. At first, you determine it is abandoned, but then, you listen closer and realize there is a faint whirring coming from the walls. You explore further into the facility, and come across a large room with a giant crystal in the center.</p><p>In front of the crystal is a control panel, which you approach to inspect, but as you do so, the crystal suddenly glows red and turns toward you. A mechanical voice booms throughout the room: “INTRUDERS DETECTED. ACTIVATING DEFENSE MECHANISMS.”</p><p>Great, another ancient machine center angry at you. You draw your weapons, but an energy field projects over the crystal, and alarms start to blare. You look down and see power cables snaking from the central console to four separate antechambers. Perhaps if you follow these and stop the sources of power, you’ll be able to get out of here in one piece.</p>",
+			"specialRules": "<p>The glowing orb cannot be moved or destroyed.</p><p>Each metal cabinet [b] in the scenario has (2+L)xC/2 hit points. They are enemies to you and allies to all monsters.</p><p>Set up the Boss monster deck and initiative token.</p>",
+			"sectionLinks": "The first time any door is opened, read [section_195.2].<br/>When tile 12-D is revealed, read [section_166.3].<br/>When tile 12-A is revealed, read [section_186.2].<br/>When tile 4-B is revealed, read [section_162.1].<br/>When tile 4-D is revealed, read [section_172.5].<br/>When all four metal cabinets have been destroyed, read [section_72.3].",
+			"containsImage": true
+		},
+		"195.2": {
+			"trigger": "Any door is opened",
+			"specialRules": "<p>All power conduits [a] represent laser spires. The laser spires cannot be moved or destroyed, but can be rotated around [a] by targeting them with character’s attacks. Whenever a laser spire is attacked, regardless of the damage, rotate it 60 degrees around [a] such that its other hex is one hex farther away from the attacking character. If the hex the laser spire would rotate into is not empty, it cannot be rotated in that direction.</p><p>During ordering of initiative each round, reveal one Boss monster ability card. On its initiative, apply the corresponding effects:</p><p><strong>Initiative 36:</strong> Rotate each laser spire clockwise (if able).</p><p><strong>Initiative 52:</strong> Rotate each laser spire counterclockwise (if able).</p>",
+			"bossSpecials": {
+				"1": "All characters and character summons adjacent to a laser spire suffer hazardous terrain damage.",
+				"2": "Each laser spire emits a laser, starting at [a], moving through its other hex, and continuing out in a straight line of hexes until it hits a wall. All figures occupying hexes in the path of any laser suffer hazardous terrain damage, and for the rest of the round, these hexes are treated as hazardous terrain that is not ignored by figures moving through them with Flying or Jump. If any hex is in the path of two different lasers, hazardous terrain damage is suffered twice."
+			}
+		},
+		"166.3": {
+			"trigger": "Tile 12-D is revealed",
+			"text": "You open the door and are faced with several laser gates waiting to block off your path. In the far corner, following the cables, you spy a long-abandoned console that must have once been used to supervise. No wonder there is extra security in this room.",
+			"containsImage": true
+		},
+		"186.2": {
+			"trigger": "Tile 12-A is revealed",
+			"text": "<p>You burst into the room and are shocked by the row of half-finished machines neatly arranged in the center of the room.</p><p>Suddenly, the docking clamps on them detach, and the machines lurch toward you.</p>",
+			"containsImage": true
+		},
+		"162.1": {
+			"trigger": "Tile 4-B is revealed",
+			"text": "As alarms blare, you push into a seemingly empty room. You marvel at the brief respite, but then machines drop down from the ceiling.",
+			"containsImage": true
+		},
+		"172.5": {
+			"trigger": "Tile 4-D is revealed",
+			"text": "You knock through the door, only to be met by a blast of frigid air. This part of the facility appears to have collapsed, leaving it open to the outside. Maybe that explains the higher security here.",
+			"containsImage": true
+		},
+		"72.3": {
+			"trigger": "All four metal cabinets have been destroyed",
+			"text": "With the final console destroyed, the alarms have somehow become even more strident. The crystal briefly recedes beneath the ground, and then, a hulking contraption holding the crystal in its chest rises in its place. Of course it can’t be easy.",
+			"specialRules": "Replace the glowing orb with one Steel Automaton. It is normal for two characters, or elite for three or four characters. This is the Central Processor."
+		},
+		"67.2": {
+			"trigger": "The Central Processor is dead",
+			"conclusion": "The crystal shatters with one final strike and the metal construct falls to the floor with a crash. All around you, the facility powers down, becoming silent as a tomb. You strip the place of as much metal as you can carry and head back to Frosthaven.",
+			"rewards": {
+				"text": "Gain 5 collective [metal]."
+			}
+		}
+	},
+	"path": ["main", "195.2", "166.3", "186.2", "162.1", "172.5", "72.3", "67.2"]
 }

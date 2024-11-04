@@ -362,7 +362,47 @@
 			}
 		}
 	},
-	"SO-18": {},
+	"SO-18": {
+		"text": "<p>It’s almost time to head out on your next mission, but you have a few minutes to kill. You decide to stop by The Crater, the burned-out drinking spot where a tavern used to be, hoping to find a drink. Instead you find Xain, your sometimes-friend (and always-trouble).</p><p>“Place your bets, ladies, gentlemen, and Savvas. Get the latest odds right here! Will Frosthaven’s favorite mercenaries return triumphantly? Or will they succumb to the treacherous, harsh wasteland, never to be seen again?” Xain turns to collect a gold piece from a Valrath behind him and notices you.</p><p>“Oh, err. Just a minute folks!” The Orchid rushes over to you. “Hey there, friends! I uh… didn’t see you there. Sometimes, we take a little poll on whether you’ll make it back. A poll for, uh, money.” A thought crosses his face. “Say! You wouldn’t want to get in on this, would you? You could actually make a lot of money betting on yourself…”</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Bet some gold on your success.",
+				"requirement": "LOSE UP TO 10 GOLD",
+				"text": "“Ahhh, wow! You’re quite the gambler. I wouldn’t bet on these odds.” Xain flashes you a smile that could warm an Algox’s heart.",
+				"rewards": {
+					"text": "Record the amount lost. If the next scenario is completed successfully, gain double the lost amount of gold."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Bet some gold on your success.",
+				"requirement": "[not] LOSE UP TO 10 GOLD",
+				"text": "“I guess you could bet against yourself instead? Though given the odds against you right now it wouldn’t be worth your time.” He blinks, then leans in to whisper, “Because everyone thinks you’re going to die.”",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Bet some resources on your success.",
+				"requirement": "LOSE UP TO 2 RESOURCES",
+				"text": "“Huh. Does Satha know you have all this? Well, had, I guess. Pleasure doing business with you!” Xain laughs loud enough to scare off a wind demon.",
+				"rewards": {
+					"text": "Record the resources lost. If the next scenario is completed successfully, gain double what was lost."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Bet some resources on your success.",
+				"requirement": "[not] LOSE UP TO 2 RESOURCES",
+				"text": "“I wouldn’t bet on you either, to be honest.” Xain doesn’t notice your glare as he whispers, “I put all my money on that group of young-looking mercenaries with the donkey.”",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"SO-19": {
 		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: “We’ve stocked enough away and the harvest is plentiful. It’s about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?”</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
 		"options": {
@@ -452,7 +492,24 @@
 		}
 	},
 	"SO-24": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>An old man rushes up to you, desperation in his eyes.</p><p>“Please, I’m looking for my son. He was sent here for... well, it doesn’t matter, but I’ve worked it all out with the authorities and he can come home. No one will tell me where he is. Please, you must have seen him?”</p><p>He describes the young man and you recognize him as one of the poor souls lost in a recent raid. It was a particularly gruesome death.</p>",
+		"options": {
+			"A": {
+				"trigger": "Tell the man the fate of his son.",
+				"text": "You have trouble finding the words, but start telling the man how his son fell to an attack. You’re not able to finish before he collapses to the cold ground, weeping uncontrollably. You eventually convince him to come to The Crater with you, where you spend the rest of the night drowning his sorrows.",
+				"rewards": {
+					"text": "Lose 5 collective gold."
+				}
+			},
+			"B": {
+				"trigger": "Spin a lie to give the old man some peace.",
+				"text": "<p>You don’t have the heart to crush this old man, and instead, tell him how his son met a girl here not long ago, and the two eloped. Rumor has it they’ve set up a cabin somewhere in the Coppernecks, but last you saw him, the two couldn’t have been happier.</p><p>The old man nods, seemingly at peace. He thanks you for the information and prepares to head back to his hometown with a bit more spring in his step.</p>",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			}
+		}
 	},
 	"SO-25": {
 		"unlockedBy": { "section": { "id": "129.3" }},
@@ -685,7 +742,24 @@
 		}
 	},
 	"SO-41": {
-		"unlockedBy": { "event": { "id": "WO-17" }}
+		"unlockedBy": { "event": { "id": "WO-17" }},
+		"text": "<p>You’re heading home for the evening when a voice calls out, reverberating with an unsettling echo. “Ahh... there you are.” From an alley walks a Valrath man in an ashen cloak with delicate red piping along the edges. “I heard you burned my ship.”</p><p>You admit that you did burn an abandoned ship that had drifted into harbor at the insistence of some scared dockworkers, but you certainly didn’t know who it belonged to.</p><p>The Valrath is wearing a single bronze gauntlet with sharpened fingertips. He draws it over his chin in thought as he speaks. “I should be upset, of course. But I have to commend you on your willingness to follow directions.”</p><p>“I have another ship coming to make up for the cargo I lost. You’ll help me unload it.”</p>",
+		"options": {
+			"A": {
+				"trigger": "Ask what you’re unloading that caused so much trouble.",
+				"text": "<p>“It’s a few crates, nothing more.” You look unconvinced. “Volatile cargo. Not all crews can handle simple instructions: don’t open the boxes. Bad news for them, a wasted shipment for me.” He flips the hood of his cloak up and turns to go with a wave of his gauntlet.</p><p>“Remember: curiosity kills the crew. Stack the crates near the dock, I’ll send someone from Heritage to collect them thereafter. Payment now, as we may not meet again.”</p>",
+				"rewards": {
+					"text": "Gain 15 collective gold.<br/>Add [section_178.1] to the calendar in three weeks."
+				}
+			},
+			"B": {
+				"trigger": "Keep your mouth shut.",
+				"text": "<p>You don’t know what happened to the crew of the ship you burned, but you know that it couldn’t have been good. Unloading the cargo seems like less of a risk than crossing whoever was supposed to receive it, though.</p><p>“I appreciate a mercenary that cares more about coin than sticking their nose in things. It’s a good feature to have. Stack the crates beside the dock. I’ll collect them thereafter.” He flips up the hood of his cloak.</p><p>“Payment now, as we may not meet again.”</p>",
+				"rewards": {
+					"text": "Gain 30 collective gold.<br/>Add [section_178.1] to the calendar in three weeks."
+				}
+			}
+		}
 	},
 	"SO-42": {
 		"unlockedBy": { "event": { "id": "SR-02" }}
@@ -734,7 +808,42 @@
 		"unlockedBy": { "event": { "id": "SR-38" }}
 	},
 	"SO-55": {
-		"unlockedBy": { "section": { "id": "151.2" }}
+		"unlockedBy": { "section": { "id": "151.2" }},
+		"text": "<p>“Roll it over there. No, not that way! Over there, towards the inn!” A stuffy-looking man directs some porters to bring his luggage through town. A bump in the road causes the largest container to teeter before they’re able to get control again. “Careful! That harpsichord is older than even the mountains around here!”</p><p>He catches your eye, and you try to turn, but it’s no use. “You there! I heard there are mercenaries willing to work for coin. I have a fully booked calendar of concerts, but I shattered one of the keys on my harpsichord playing a particularly inspired riff. I’ll require an Algox tooth to repair it, and I’m willing to pay accordingly.”</p>",
+		"options": {
+			"A": {
+				"trigger": "Offer to retrieve an Algox tooth on your next scenario.",
+				"text": "The man nods his thanks. “I look forward to its retrieval—bring it to the Inn when you have it.”",
+				"rewards": {
+					"text": "If you kill an Algox during the next scenario, gain 20 collective gold."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Inform the man Algox shouldn’t be killed for parts.",
+				"requirement": "[trait] ALGOX",
+				"text": "You refuse to honor the man’s request, and throw in some choice words for his callous indifference to life.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Inform the man Algox shouldn’t be killed for parts.",
+				"requirement": "[not] [trait] ALGOX",
+				"text": "You make exceptionally clear your stance on killing for such useless excess.",
+				"rewards": {
+					"text": "No effect."
+				}
+			},
+			"C": {
+				"trigger": "Offer the man one of your own teeth (requires [trait] ALGOX).",
+				"text": "With very little pomp and circumstance you rip a tooth from your mouth, handing it to him. He accepts it, wholly horrified.",
+				"rewards": {
+					"text": "One [trait] ALGOX character gains 20 gold and starts the next scenario with [wound]."
+				}
+			}
+		}
 	},
 	"SO-56": {
 		"unlockedBy": { "section": { "id": "173.1" }}
@@ -817,7 +926,24 @@
 		"unlockedBy": { "section": { "id": "189.1" }}
 	},
 	"SO-63": {
-		"unlockedBy": { "section": { "id": "193.1" }}
+		"unlockedBy": { "section": { "id": "193.1" }},
+		"text": "<p>You're rummaging through the mixture of artifacts and worthless trinkets that make up the Enhancer’s storefront. Even with careful scrutiny it can be difficult to tell which items have real, magical value and which are just odd-shaped detritus. You examine a silver platter and an Aesther is quickly by your side to explain.</p><p>“Please do not touch, but perhaps you would like to look.” The Aesther grabs the platter and wipes it with her sleeve. A quick incantation later and you’re staring at what looks like a foggy mirror... but it’s not you.</p><p>“That’s you, on a different plane. It’s a multiverse. What if you forged a different path in life? How would it have changed every single thing about you? To an Aesther with their mind’s eye open, this is what we see: shifting in and out like a kaleidoscope of faces. It can be so hard to keep track... there are days I’m glad I remember this outpost exists at all.”</p><p>You look deeply into the mirror and watch the alternate version of yourself.</p><p><strong class=\"fst-normal\">All characters draw and read an additional personal quest now, to see what could have happened somewhere else in the multiverse. Once all characters have drawn and read their quest, flip over this card.</strong></p><p>You’re a bit shaken from the revelations in the mirror, knowing that there are more of you. Seeing all the universes resonating and cascading against each other... the clarity is overwhelming.</p>",
+		"options": {
+			"A": {
+				"trigger": "Adopt the new personal quest.",
+				"text": "You recognize the value in the alternate-you’s pursuit—it’s more meaningful than your own drives.",
+				"rewards": {
+					"text": "Discard your existing personal quest back to the draw pile, abandon all progress made on it, and take the personal quest you found in the mirror as your new personal quest.<br/>Gain 1 inspiration."
+				}
+			},
+			"B": {
+				"trigger": "Continue on your existing path.",
+				"text": "You know there were many paths you could have chosen, but your internal goals are what makes you into you. What you saw in the mirror reaffirms you’re already walking the right path.",
+				"rewards": {
+					"text": "Discard the new personal quest you saw in the mirror back to the draw pile."
+				}
+			}
+		}
 	},
 	"SO-64": {
 		"unlockedBy": { "section": { "id": "60.2" }}

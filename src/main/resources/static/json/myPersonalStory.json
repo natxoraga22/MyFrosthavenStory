@@ -445,12 +445,12 @@
 				"upgrade": [{ "id": "miningcamp", "level": 3 }]
 			}
 		},
-		{ "event": { "id": "SR-14", "chosenOption": "A" }},
-		{ "scenario": { "id": "109" }},
+		{ "event": { "id": "SR-14", "chosenOption": "A1" }},
+		{ "scenario": { "id": "109", "path": ["main", "195.2", "186.2", "172.5", "166.3", "162.1", "72.3", "67.2"] }},
 		{
 			"outpostPhase": {
 				"townGuardPerks": [{ "id": "157.3" }],
-				"outpostEvent": { "id": "SO-63", "chosenOptions": ["A", "A1"] },
+				"outpostEvent": { "id": "SO-63", "chosenOption": "B" },
 				"upgrade": [{ "id": "temple", "level": 3 }]
 			}
 		},
@@ -458,7 +458,7 @@
 		{
 			"outpostPhase": {
 				"passageOfTime": [{ "id": "178.1" }],
-				"outpostEvent": { "id": "SO-18", "chosenOption": "A" },
+				"outpostEvent": { "id": "SO-18", "chosenOption": "A1" },
 				"levelUps": [{ "id": "pyroclast", "level": 8 }],
 				"upgrade": [{ "id": "loggingcamp", "level": 4 }]
 			}

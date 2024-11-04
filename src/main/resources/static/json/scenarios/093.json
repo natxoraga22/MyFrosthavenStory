@@ -1,0 +1,22 @@
+{
+	"id": "093",
+	"name": "Midwinter Brawl",
+	"questLine": "JobPosting",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "157.3" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>",
+			"specialRules": "<p></p>",
+			"sectionLinks": "",
+			"containsImage": true
+		}
+	},
+	"path": ["main"]
+}

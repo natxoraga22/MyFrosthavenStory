@@ -1,0 +1,19 @@
+{
+	"id": "018",
+	"name": "Crystal Fields",
+	"questLine": "AlgoxSnowspeaker",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": {},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>"
+		}
+	},
+	"path": ["main"]
+}

@@ -2,18 +2,35 @@
 	"id": "010",
 	"name": "Crystal Enclosure",
 	"questLine": "AlgoxSnowspeaker",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "F6",
+	"requirement": { "transport": "sled" },
 	"unlockedBy": { "scenario": { "id": "005" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 2,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when all monsters in it are dead. At the end of that round, read [section_42.4].",
+	"effects": "Each character discards one card.",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>With a sturdy sled now under foot, and a team of dogs at the fore, you cut through the tundra with ease. You watch the distance for signs of your target—the Icespeakers expelled from Snowscorn—as you go, squinting through the wind. For a long time, there is nothing. Small eddies kick up here and there, whorls of white crystalline powder that rise and drift about in the wind, like flickering white shadows. It’s not until after several hours of steady travel that a new sight appears. Crystal spikes, hundreds of them, materialize on the horizon like a field of icy quills shot up from the snow, and even from a distance, you can tell they are huge. Many stand as tall as a full-grown pine tree, but they are far from natural. A number of Algox gather around them, their hulking bodies unmistakable in this place, and you watch as the group performs a bizarre ceremony. Ten of them encircle a large empty spot in the snow, and raise their open palms to the air. They pray, though you cannot hear the words, and then, after a moment, a brand new spike suddenly shoots from ground before them, an immense crystalline pillar conjured from the earth in an instant.</p><p>Unfortunately, there’s no way to be stealthy on a sled. As you draw closer, you’re met by a line of tall, well-prepared Icespeaker guards.</p><p>“Intruders!” One of them shouts, “Protect the conduits!”</p><p>They arrange themselves between you and the crystalline spikes. The Icespeakers seem to draw energy from the “conduits,” as they call them, increasing the defenders’ strength and ferocity. You came prepared to fight Algox, but you didn’t expect them to have magical backup. You realize you could try destroying those conduits; it would be tough, but it might remove your enemies’ advantage. Whatever you do, you have to do it soon, before the tide of this battle turns against you.</p>",
+			"specialRules": "<p>Each ice pillar has (2+L)xC/2 hit points (rounded down). They are enemies to you and allies to all monsters. Each monster in the scenario gains [shield] X, where X is the number of ice pillars within [range] 4 of it.</p><p>All doors [one] are locked and will unlock when all revealed monsters are dead.</p>",
+			"sectionLinks": "When any door [one] is opened, read [section_65.3].",
+			"containsImage": true
+		},
+		"65.3": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>From the outskirts of the spike clusters, you rush forward into the heart of them. Here even more Algox protect the largest of the conduits. One leaps forth and howls, and as she does so, ice forms around her, providing a protective shell. In her hands, the crystals form into wicked axes.</p><p>“May your frozen blood sing the song of our victory!” The Algox yells.</p>",
+			"specialRules": "<p>Open all doors [one]. Place all characters and character summons, in initiative order, in the closest empty hexes on tile 16-A, then remove all doors and tile 13-A from the map.</p><p>Do not set up ice pillar [a] for two characters, or ice pillar [b] for two or three characters. Each ice pillar in this room has 4+(LxC)/2 hit points (rounded down).</p>",
+			"containsImage": true
+		},
+		"42.4": {
+			"trigger": "All monsters are dead",
+			"conclusion": "<p>It’s one thing to fight a horde of enormous, frost-coated warriors, but it’s another entirely to fight them in a place where the very air drains your strength. These plains frustrate you—the spikes, the cold—they leach your energy at such an incredible rate that, after catching your breath, you smash the remaining ice spikes in the hope that it foils whatever machinations the Icespeakers were planning.</p><p>You stow your weapons and look further out into the tundra. There are more: another field of spikes a short sled ride away, mocking you with their presence. You remount your sled and head further east, determined to put an end to this nonsense, but as you approach the second field, your determination turns to despair. The first field was perhaps the size of a small orchard, but this one stretches far into the distance, extending all the way out to the Whitefire Wood, where it bends around like a river. It’s much too large to destroy by hand, so you’ll have to follow the trail of spikes and hope it leads to their source.</p>",
+			"rewards": {
+				"text": "Gain 1 morale and 1 inspiration.",
+				"scenarios": [{ "id": "018" }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "65.3", "42.4"]
 }

@@ -13,6 +13,7 @@
 * **SO-01**: part del text principal amb marge a l'esquerra
 * **SO-04**: tercera opció oculta
 * **SO-17**: una única opció, però amb un requisit al principi i text al final després dels rewards... molt raro aquest event.
+* **SO-63**: opcions A i B a la part de darrere de la carta, no davant
 
 * **SR-02**: checkboxes per marcar amb un reward condicional segons els checkboxes
 * **SR-03**: només una opció, endevinalla

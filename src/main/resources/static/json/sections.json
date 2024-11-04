@@ -371,7 +371,13 @@
 		"rewards": { 
 			"scenarios": [{ "id": "114" }]
 		}
-
+	},
+	"157.3": {
+		"title": "Job Posting",
+		"text": "<p>The Crater, the burned-out dent where a tavern used to be, has been seeing some action the past few nights. The community has taken to the limited warmth it provides, huddling around the mismatched donated furniture and sharing fermented liquids from their personal pantries. Gatherings tend to last until the small hours of the morning or until the cold settles in. While there are tarps strung to keep off falling snow, the lack of walls makes visitors easy targets for wind whipping through.</p><p>You’re just about to call it for the night when a Vermling you haven’t seen before steps up to the overturned dresser you’re using as a table. “I’m Scabwit, nice to meet me. My people are negotiating with some Algox for a spot to call our own and it’d be best if we had some brutes like you to keep the peace.” Scabwit adjusts a crystaltopped walking stick, turning it absentmindedly. “You’re the scariest-looking people here, so I’ll offer a trade: come be scary for me out in the Whitefire Woods and I’ll make it worth your time.”</p>",
+		"rewards": {
+			"scenarios": [{ "id": "093" }]
+		}
 	},
 	"158.3": {
 		"title": "Xain's Gambit",
@@ -447,6 +453,9 @@
 	},
 	"177.4": {
 		"unlockedBy": { "section": { "id": "107.3" }}
+	},
+	"178.1": {
+		"unlockedBy": { "event": { "id": "SO-41" }}
 	},
 	"179.5": {
 		"title": "Metal Shipment",

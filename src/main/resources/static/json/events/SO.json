@@ -20,7 +20,36 @@
 			}
 		}
 	},
-	"SO-02": {},
+	"SO-02": {
+		"text": "<p>A young man who runs a fruit stand and a fetching girl in the town guard have chosen each other for eternal bliss. Today is their wedding day. Against all odds, Xain, your friend-in-frequent-need, is their wedding planner. He rushes up to you just before the ceremony in a mad panic.</p><p>“Big trouble,” he whispers. “BIG trouble! Everything is going wrong! The groom wanted white snowbirds to be released at the end of the ceremony, but the box of birds, uh... expired, in the cold.”</p><p>“Don’t worry, though, I’ve got it covered! I caught a box full of snow imps and we’ll release those, no one will be able to tell the difference. But, uh, they’re naturally pretty gray, so I need you to paint them white.” He thrusts a bucket of white paint into your hands.</p><p>“Thanks, gotta go pick red tin-berries out of the fruit salad I made—apparently the groom is allergic. And the bride... or I guess they’re just poisonous. Thanks!”</p><p>The ceremony starts in 20 minutes. You’ve gotta be kidding...</p>",
+		"options": {
+			"A": {
+				"trigger": "Paint the “snowbirds.”",
+				"text": "<p>The snow imps are half-conscious in a box conspicuously labeled “DO NOT EAT.” A liberal dousing of paint later, your arms are slashed up but the imps look sort-of almost-kind like snowbirds, if you are distracted or blind.</p><p>When the kiss finally comes, the cage is opened and the imps are startled enough by the cheering and confused enough by the paint that they make a mad dash for the sky. It’s a beautiful finale. Xain mouths “Thank you!” from the sidelines.</p>",
+				"rewards": {
+					"text": "Gain 1 morale.<br/>All characters start the next scenario with [wound]."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Try to catch enough real snowbirds in time.",
+				"requirement": "[trait] RESOURCEFUL",
+				"text": "Using a makeshift bird caller, you’re able to collect enough snowbirds to fill a crate. When the kiss finally comes, they burst out in a beautiful spectacle. Xain sidles up next to you. “See? Told you no one could tell.”",
+				"rewards": {
+					"text": "Gain 2 morale."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Try to catch enough real snowbirds in time.",
+				"requirement": "<p>[not] [trait] RESOURCEFUL",
+				"text": "You try to gather snowbirds, but they’re too crafty for the small trap you’ve set up. You’re so engaged in the task you nearly miss the ceremony, and walk up in horror just as Xain unleashes a box of unpainted snow imps on the crowd.</p><p>The couple make a full recovery.</p>",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"SO-03": {
 		"text": "<p>“Hear ye, hear ye! I am the crier of the Great Dallum, the most powerful seer the world has ever known!” An ostentatiously dressed man is shouting in the middle of town, drawing a crowd. “It is my great honor to advise you that the Great Dallum has selected this outpost for his next visitation!”</p><p>There are audible gasps from the crowd. “He will arrive in a fortnight! Prepare yourselves and be merry!”</p><p>As the crier packs up, Frosthaven’s citizenry come alive: “The Great Dallum? Here?” and “We’ll need to prepare a feast!” and “We’ll need an offering—I’ve heard he grants the wishes of those who please him with lavish donations!”</p><p>Even Mayor Satha looks to be hiding excitement under a façade of civility… this should be an event to remember.</p>",
 		"options": {
@@ -307,7 +336,32 @@
 			}
 		}
 	},
-	"SO-17": {},
+	"SO-17": {
+		"text": "<p>Frosthaven has been built up and burned down repeatedly, so just about anywhere you can plant a shovel has the potential for the remains of buried treasure—or just remains.</p><p>As such, the populace has taken up a morbid pastime: In the summers, when the ground is softer, groups of treasure-hunters spend afternoons working through patches of ground with pickaxes, hoping to dredge up whatever valuables lie underneath. One such group is making the rounds today.</p><p>An old-timer hollers at you with a toothless smile. “Care to throw in a hand? We found a lucky spot—you can keep whatever you find!” Couldn’t hurt to join them.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Make a deck of eight loot cards, comprised of any material resource or gold cards of your choice that you’d like to keep an eye out for.",
+				"requirement": "[trait] STRONG",
+				"text": "You can work through the icy ground more readily than others.",
+				"rewards": {
+					"text": "Add 1 additional material resource or gold card to the deck."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Make a deck of eight loot cards, comprised of any material resource or gold cards of your choice that you’d like to keep an eye out for.",
+				"rewards": {
+					"text": "<p>Add three herb resource cards to the loot deck and shuffle it. You may collectively draw from the deck as many times as you choose. Each time you draw a card, if it is:</p><p>Material resource: Gain 1 collective resource of that type.<br/>Money: Gain 3 collective gold.<br/>Herb resource: Lose 1 morale. (You found the remains of a former citizen.)</p>"
+				}
+			},
+			"A3": {
+				"id": "A",
+				"text": "When the sun begins to set, the old-timer stops by to discuss how the group fared. “Not a bad haul, eh? Aside from the skeletons”",
+				"returnCard": true
+			}
+		}
+	},
 	"SO-18": {},
 	"SO-19": {
 		"text": "<p>The sun is shimmering, the sea birds are honking, and this day seems uncharacteristically lively for the town of Frosthaven. Large carts of resources have just trundled in from a successful expedition, the crops have started to show, and even the populace has exchanged their upset grimaces for more welcoming grimaces. It could not be a more perfect day.</p><p>Several citizens have cornered Satha in the town square. One speaks up: “We’ve stocked enough away and the harvest is plentiful. It’s about time we had something to celebrate here. Why not open the city coffers and sponsor a holiday?”</p><p>Satha contemplates the proposal, but she looks on the fence. You could probably sway her opinion.</p>",
@@ -639,7 +693,9 @@
 	"SO-43": {
 		"unlockedBy": { "event": { "id": "SR-17" }}
 	},
-	"SO-44": {},
+	"SO-44": {
+		"unlockedBy": { "event": { "id": "SR-29" }}
+	},
 	"SO-45": {},
 	"SO-46": {},
 	"SO-47": {},

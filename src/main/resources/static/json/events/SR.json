@@ -145,7 +145,47 @@
 			}
 		}
 	},
-	"SR-11": {},
+	"SR-11": {
+		"text": "<p>It’s early morning, and the sun is just cresting over the mountaintop as you head out the main gate. To your surprise, no more than a dozen steps along the road the fresh snow has been disturbed by an old woman clad in ragged clothes, dancing inside a strange circle of salt on the ground. You turn and look back up to the watchman in the tower. He gives an unconcerned shrug. “Don’t know where she came from. Don’t know what that ritual’s all about, either, but she’s been stamping and chanting since I came on duty at midnight.”</p><p>The woman suddenly sees you, a crazed glint passing over her face that boils into a rage. “Bow before the winter gods! Leave before the winter comes, or freeze to death in a white cold!” she screams. Has she been harassing and threatening everyone who walks by?</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Try to convince her to stop the ritual and leave.",
+				"requirement": "[trait] INTIMIDATING",
+				"text": "You don’t need to talk; your appearance alone has the desired effect. As you approach, she takes her things and quickly hurries away. Looks like you scare her more than those winter gods.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Try to convince her to stop the ritual and leave.",
+				"requirement": "[not] [trait] INTIMIDATING",
+				"text": "The old woman ignores your words and continues her senseless prattling. Just as you’re about to give up, she scatters some white dust inside the circle and silently takes her leave. You’re sure it meant nothing, but a sudden chill in the wind gives you a strange feeling that winter is coming sooner than you thought.",
+				"rewards": {
+					"text": "Advance the calendar by marking the next week on it."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Get aggressive and do whatever you can to confuse the ritual and force her away.",
+				"requirement": "[trait] CHAOTIC",
+				"text": "It’s obvious she won’t listen to reason, so you resort to volume. You step toward the salt circle and start yelling nonsense at her whenever she resumes her arcane chant. Baffled, the agitator stops her ritual and hurries away into the cold.",
+				"rewards": {
+					"text": "Gain 1 morale."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Get aggressive and do whatever you can to confuse the ritual and force her away.",
+				"requirement": "[not] [trait] CHAOTIC",
+				"text": "You try to approach the woman, but each time you try to step into the circle, you are blown away by some magic force. Finally, she falls silent as she scatters some white dust inside the salt circle with a wicked smile, then disappears in a burst of chilly wind.",
+				"rewards": {
+					"text": "Advance the calendar by marking the next week on it."
+				}
+			}
+		}
+	},
 	"SR-12": {},
 	"SR-13": {
 		"text": "<p>As you pause for a rest along your journey, you spot a handful of bright orange produce sticking out from the meltwater mud. It looks not dissimilar to an elongated flamefruit, though the color is different. You pick one off and smell it, noting its rich, lively herb aroma. As you prepare to take a bite, you hear a voice shouting.</p><p>“I wouldn’t do that.” An elderly Quatryl steps out of the bushes and points at you with her walking stick. “That’s a firepepper, the strongest spice on this side of the continent!” As you look puzzled, she continues. “It’s been said a firepepper stew can reheat even the soul of the dead. I’ve heard the tale of a Hungry Maw living beneath the Copperneck Mountains that only spared a village from destruction when they served it a plate of their hottest sweet-and-fiery stew.” She chuckles to herself.</p><p>“I’m certain it would be too much for you. I grew up eating these, but it would probably take you a week to recover!”</p>",
@@ -180,7 +220,47 @@
 			}
 		}
 	},
-	"SR-14": {},
+	"SR-14": {
+		"text": "<p>You are feeling a tad hungry as you walk down the road. You’re considering stopping for a meal when you come across a thicket of bushes covered in thorns and red tin-berries.</p><p>The berries look delicious, but you know red tin-berries are wildly poisonous.</p>",
+		"options": {
+			"A1": {
+				"id": "A",
+				"trigger": "Apply the berry juice to your weapons.",
+				"requirement": "[trait] EDUCATED",
+				"text": "You know the best way is to steadily strike the base of the plant to knock the fruit free. With a bit of effort you safely remove a sufficient quantity to coat your weapons.",
+				"rewards": {
+					"text": "All characters add [poison] to their first attack ability of the scenario."
+				}
+			},
+			"A2": {
+				"id": "A",
+				"trigger": "Apply the berry juice to your weapons.",
+				"requirement": "[not] [trait] EDUCATED",
+				"text": "The bush’s thorns stab you as you reach for the berries. Before you can pluck enough to coat your weapons, waves of disorientation and nausea overcome you. Apparently the thorns are poisonous as well.",
+				"rewards": {
+					"text": "All characters without [trait] ARMORED start the next scenario with [damage] 2 and [poison]."
+				}
+			},
+			"B1": {
+				"id": "B",
+				"trigger": "Pluck a berry and add it to one of your existing potions.",
+				"requirement": "RETURN 1 COLLECTIVE POTION TO THE AVAILABLE SUPPLY",
+				"text": "You pluck off a single berry and add it to a potion you’re carrying. The fruit dissolves into the liquid with a pitiful sputter, and the whole concoction turns a rancid brown. A whiff of the results makes you want to retch, but maybe that’s useful in its own right.",
+				"rewards": {
+					"text": "Gain “Poison Vial” [item_095]."
+				}
+			},
+			"B2": {
+				"id": "B",
+				"trigger": "Pluck a berry and add it to one of your existing potions.",
+				"requirement": "[not] RETURN 1 COLLECTIVE POTION TO THE AVAILABLE SUPPLY",
+				"text": "You wonder what would happen if you added a red tin-berry to one of your potions, but don’t have anyone on hand to experiment with.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
+	},
 	"SR-15": {
 		"text": "<p>You encounter a young Algox away from his tribe, looking hungry and weary. He explains his name is Malrog, and that he has been exiled as part of the ritual transition into adulthood. He will need to slay a great beast to prove his value and return to his people. It’s clear he doesn’t want to interact with you, but he’s desperate.</p><p>“I shattered my greatsword against the rocks two days ago, and now I am defenseless. It is beneath my status to ask, but do you have anything I could use?”</p><p>Judging by his current condition, it doesn’t look like he’ll make it very long without your help.</p>",
 		"options": {
@@ -413,7 +493,26 @@
 		}
 	},
 	"SR-29": {
-		"unlockedBy": { "section": { "id": "129.3" }}
+		"unlockedBy": { "section": { "id": "129.3" }},
+		"text": "<p>You’re walking down the trail a few hours from Frosthaven when you can’t help but notice the insects nearby following you. You can never be too sure whether a swarm of bugs are a sentient harrower or idle insects smelling your lunch.</p><p>All doubt is removed when the ground begins to tremble and the swarm coalesces in front of your eyes. Harrowers interacting with other races tend to wear clothing to give the illusion of a more solid form, and typically can’t maintain a presence much larger than a human without splitting. This Harrower, however, draws its naked form to a towering height larger than an Algox. The twitching, swirling mass forms a gaping mouth wider than your arms could stretch and speaks with a humming, layered voice that makes your skin crawl.</p><p>“Saaaatthaaaaa. Where is Frosthaaaavennnn?”</p>",
+		"options": {
+			"A": {
+				"trigger": "Point it in the direction of Frosthaven.",
+				"text": "With the looming monstrosity staring you down, you point the way toward Frosthaven. Without another word the Harrower dissolves into a sea of bugs that swarm past your legs down the path you indicated. It’s some time before the unsettling sound of their thousands of tiny legs fades from your mind.",
+				"rewards": {
+					"events": {
+						"SO": [{ "id": "SO-44" }]
+					}
+				}
+			},
+			"B": {
+				"trigger": "Point it away from Frosthaven.",
+				"text": "Whatever this is, it isn’t something you want to send towards Frosthaven. You point directly opposite where it wants to head, leading it astray. Without another word the Harrower dissolves into a sea of bugs that flood the landscape towards where you pointed. You watch the swarm disappear into the distance, knowing you made the right decision.",
+				"rewards": {
+					"text": "No effect."
+				}
+			}
+		}
 	},
 	"SR-30": {
 		"unlockedBy": { "section": { "id": "129.3" }}

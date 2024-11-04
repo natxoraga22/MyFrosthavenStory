@@ -260,7 +260,13 @@
 			"3": {},
 			"4": {
 				"builtSections": {
-					"56.3": {}
+					"56.3": {
+						"title": "Enhancer Upgraded",
+						"text": "<p>The entirety of Voice-of-Eight stands to greet you when you enter the newly completed enhancement building. The inside is breathtaking, covered in the ethereal glass they used to construct the Aesther outpost to the north.</p><p>“We must thank you, adventurer,” Voice-of-Eight says. “Because of your diligence, not only has our outpost been restored, but our presence here in this settlement has been strengthened as well. We have fully established connections with Aesthers across the world, and many regularly come to visit and share knowledge. Some may even be willing to offer a few artifacts to the trade stall, which we hope will help you to continue bringing prosperity to our new home!”</p>",
+						"rewards": {
+							"text": "Add any of the following items you have unlocked from <em>Forgotten Circles</em> to the available item supply: 154, 155, 157, and 163."
+						}
+					}
 				}
 			}
 		}

@@ -2,18 +2,30 @@
 	"id": "084",
 	"name": "Here There Be Oozes",
 	"questLine": "JobPosting",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "R5",
 	"unlockedBy": { "section": { "id": "180.3" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 3,
+	"location": "Imperial Mountains",
+	"goals": "The scenario is complete when all enemies are dead. At the end of that round, read [section_26.2].",
+	"effects": "Each character adds two [minus1] cards to their attack modifier deck.",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>Ooze. Is there a more repugnant or despised life form? It is the bane of many a mercenary, and the populace don’t take well to them either. You recall stories of oozes devouring farmlands from Vinneth to Gloomhaven, rich and poor alike. There’s even one tale of a family said to leave their own pets out as offerings, just to keep the globes of snot at bay.</p><p>You gag and feel your foot slip. Lifting your boot, you see slime stretching from the sole to the ground. This sheep-eating ooze must be close. You follow the trail into a nearby cave and are hit by a rotten stench that causes your head to spin. You light a torch, pull your shirt over your nose, and march on. It takes a lot of work to banish the many thoughts you have of fleeing, especially when a bubbling, sloshing sort of sound begins to rise around you. But you head deeper still, until finally you come upon it.</p><p>Questioning reality, your jaw hangs at the sight of the ooze before you. More massive than in any folktale told, this monstrosity must have been growing for centuries. Whole skeletons of dead creatures churn inside as it peers at you through nascent eyes. Yeah, this thing has eyes, and they are gross.</p>",
+			"specialRules": "<p>The Elder Ooze has Shield C, but this is reduced by 1 for each normal or elite Ooze on the map at any time. No more than Cx2 normal or elite Oozes can be on the map at any time.</p><p>Whenever the Elder Ooze exits a hex, place one damage token in that hex. These represent slime. In addition, whenever any normal or elite Ooze dies, place one slime in the hex it occupied. Slime cannot be placed in a hex that already has slime, and it does not alter whether a hex is empty, featureless, or unoccupied.</p><p>Whenever any character enters a hex with slime, place it on their character mat. Any character with any amount of slime treats all hexes as difficult terrain and gains disadvantage on all their attacks. If a character with slime is targeted by a heal ability, they remove one slime from their mat. Each character also removes one slime from their mat at the start of each of their turns. Whenever any monster enters a hex with slime, that slime is removed from the map, and the monster performs [heal] L/2, self (rounded up).</p><p>All normal Oozes may enter the hex occupied by the Elder Ooze, and vice versa. If this occurs, the normal Ooze dies, and the Elder Ooze performs [heal] X, self, where X is the current hit point value of the Ooze when it died. All normal Oozes focus on moving toward and entering the hex occupied by the Elder Ooze, then find a focus as normal and perform any other abilities as if they had no movement.</p><p>Whenever the Elder Ooze dies, instead of a loot token, it drops its standee in the hex it occupied. All normal Oozes will still focus on moving toward and entering this hex. If any normal Ooze does enter it, place the Elder Ooze back into that hex with 0 hit points and perform the same steps of the normal Ooze dying and the Elder Ooze healing.</p><p>Whenever the Elder Ooze suffers damage, after any effects are resolved, spawn one normal Ooze, with a current hit point value equal to the damage suffered, at any empty hex within [range] 3 of the Elder Ooze (or its standee). If spawned in a hex with slime, the Ooze heals as if it had entered the hex as normal. If the Elder Ooze would ever suffer damage greater than a normal Ooze’s maximum hit point value, it suffers damage equal to this value instead. If an Ooze cannot be placed when the Elder Ooze suffers damage, then the normal Ooze with the lowest current hit point value performs [heal] X, self instead, where X is the damage suffered.</p>",
+			"bossSpecials": {
+				"1": "The Elder Ooze performs:<br/>[move] +1<br/>[attack] -1, the target must lose one item for no effect (any persistent effects of the item are no longer applied).<br/>Then all characters adjacent to the Elder Ooze gain one slime.",
+				"2": "The Elder Ooze focuses on the farthest enemy and performs:<br/>[attack] +1, [range] 8<br/>[push] 2, [target] all, [range] 1"
+			},
+			"containsImage": true
+		},
+		"26.2": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>Ooze drips and dangles from the ceiling, slides down the walls, and lies generously splashed about the cave floor, glistening in the torchlight. Covered head to toe in the gunk, you scoop a handful from your eyes and spend a brief moment just absolutely hating life.</p><p>So you quickly act, collecting a sample of the goo in a glass vial. Given its unique properties, who knows if it might be useful later? You also take note of an interesting looking skeleton that was released when the creature dissolved. It appears to have the build of a deer, but with a tapered, almost beak-like skull, resplendent pink horns, and star-shaped hooves. Truly magnificent.</p><p>And then some slime gets caught up your nose, and you remember how deeply you desire to get out of this cave. Luckily, you encounter a creek on the way back to Frosthaven and start washing off the gunk. You see a few sheep grazing nearby and give them a knowing thumbs up.</p>",
+			"rewards": {
+				"text": "Gain “Ooze Vial” [item_234].<br/>Gain “Brummix” campaign sticker."
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "26.2"]
 }

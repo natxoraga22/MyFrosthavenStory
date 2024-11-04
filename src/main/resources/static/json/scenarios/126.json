@@ -2,18 +2,25 @@
 	"id": "126",
 	"name": "Joseph the Lion",
 	"questLine": "Other",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "FR",
 	"unlockedBy": { "section": { "id": "163.3" }},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 2,
+	"location": "Frosthaven",
+	"goals": "The scenario is complete when C+1 tokens have been delivered. At the end of that round, read [section_110.3].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>“In hindsight, perhaps this wasn’t one of my best ideas,” says Joseph, seemingly to himself, as he paces in the snow. “When the people of Frosthaven told me that field was haunted and the least ideal location to set up an ice-cream stand, I dismissed it as local gibber gabber. Folklore. It was the cheapest plot of land available, and close to the main road leading to Frosthaven— full of traveling folk in need of a frosty snack.”</p><p>Sadly, Joseph discovered that the folklore is less folklore and more fact. The field turned out to be rife with spirits and wraiths. Not to mention the recent infestation of snow imps.</p><p>“It’s safe to say that the stand is a no go, but I still need to retrieve all the icecream. I poured my life savings into that merchandise!” Joseph’s arms gesticulate wildly in the air, as if independent from his body. “I managed to recruit some local townsfolk—call them Joseph’s helpers— to carry it back. Problem is, they’re too scared to cross the field to reach the stand. This is where you come in. Cross the field, deal with the incorporeals and get the merchandise to my helpers. You’ll have to smash the protective barricades I built. Oh, and do mind the traps. Don’t know why I thought I could capture a specter. Another one of my... ideas, I guess.”</p>",
+			"specialRules": "<p>Place one face-up numbered token in each [f]. In addition, place one in [g] for three of four characters and one in [h] for four characters. These tokens represent Helpers, allies to you and enemies to all monsters. Each has (Lx2)+3 hit points and is immune to all conditions and forced movement. They do not act, but have an initiative of 50 for the purposes of focusing. If three Helpers die, the scenario is lost.</p><p>Each crate and barrel has L+1 hit points. They are enemies to you and allies to all monsters. Whenever any crate or barrel is destroyed, place one facedown numbered token in the hex it was destroyed in. These tokens can be looted as normal and then placed on the looting character’s mat. Each character can only hold one token at any time and drops the token in the hex they occupy if they become exhausted.</p><p>Whenever any character carrying a token ends their turn adjacent to a Helper, the token is delivered and removed from the game, along with the Helper.</p><p>At the start of each listed round, spawn the following monsters at the listed locations based on character count:</p><table class=\"table\"><thead><tr><th>Round</th><th>Two Characters</th><th>Three Characters</th><th>Four Characters</th></tr></thead><tbody><tr><th>1, 3</th><td>[a] and [c]: One normal Snow Imp</td><td>[a], [c] and [e]: One normal Snow Imp</td><td>[a] and [c]: One normal Snow Imp<br/>[e]: One elite Snow Imp</td></tr><tr><th>2, 4</th><td>[e]: One normal Living Spirit</td><td>[b]: One normal Living Spirit<br/>[d]: One normal Snow Imp</td><td>[b] and [d]: One normal Living Spirit</td></tr><tr><th>5, 7</th><td>[a]: One elite Ice Wraith</td><td>[a]: One elite Ice Wraith<br/>[c]: One elite Snow Imp</td><td>[a] and [c]: One elite Ice Wraith</td></tr><tr><th>6, 8, 10, 12</th><td>[b], [d] and [e]: One normal Snow Imp</td><td>[b] and [d]: One normal Snow Imp<br/>[e]: One elite Snow Imp</td><td>[b], [d] and [e]: One elite Snow Imp</td></tr><tr><th>9, 11</th><td>[a]: One elite Ice Wraith<br/>[c]: One normal Living Spirit</td><td>[a] and [c]: One elite Ice Wraith</td><td>[a], [c] and [e]: One elite Ice Wraith</td></tr><tr><th>13+</th><td>[a] and [c]: One elite Ice Wraith</td><td>[a], [c] and [e]: One elite Ice Wraith</td><td>[a], [b], [c] and [d]: One elite Ice Wraith</td></tr></tbody></table>",
+			"containsImage": true
+		},
+		"110.3": {
+			"trigger": "C+1 tokens have been delivered",
+			"conclusion": "Joseph pays little attention to your numerous wounds, dislocated shoulders and torn armor. He’s just glad to have his hands back on the ice-cream. Before long, he vanishes from your sight, babbling about his latest hare-brained scheme. Something about water slides?",
+			"rewards": {
+				"text": "Gain 10 gold each."
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "110.3"]
 }

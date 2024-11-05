@@ -1,0 +1,22 @@
+{
+	"id": "078",
+	"name": "The Lurker Problem",
+	"questLine": "JobPosting",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "section": { "id": "167.2" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>",
+			"specialRules": "<p></p>",
+			"sectionLinks": "",
+			"containsImage": true
+		}
+	},
+	"path": ["main"]
+}

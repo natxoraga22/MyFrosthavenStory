@@ -765,7 +765,24 @@
 		"unlockedBy": { "event": { "id": "SR-02" }}
 	},
 	"SO-43": {
-		"unlockedBy": { "event": { "id": "SR-17" }}
+		"unlockedBy": { "event": { "id": "SR-17" }},
+		"text": "<p>You're called to the docks to find a departing ship and a familiar-looking Harrower about to embark as a passenger. It’s the Harrower you assisted in pulling back together.</p><p>“Tttthank you, friendssss.” You recognize the shiny mandibles of the beetle that you carried in a jar for so long. It’s dressed in an ornate cloak and looks significantly more regal than riding around in your satchel.</p><p>“I am a mercccchant by trade. I offffer a gifffft of your choicee, ffor your assssissstanncceee.” It bows deeply, a sign of respect not common among its people.</p>",
+		"options": {
+			"A": {
+				"trigger": "Accept a crate full of resources.",
+				"text": "Harrowers aren’t particularly sentimental, but they will readily honor the concept of a debt—a fact that has made their business acumen renowned across the region. The Harrower orders its steward to unload a crate from the ship, gives a nod of acknowledgement, then disappears below decks.",
+				"rewards": {
+					"text": "Gain 1 prosperity.<br/>Gain 3 collective [lumber], 3 collective [metal] and 3 collective [hide]."
+				}
+			},
+			"B": {
+				"trigger": "Accept a crate with an exotic item.",
+				"text": "Harrowers aren’t particularly sentimental, but they will readily honor the concept of a debt—a fact that has made their business acumen renowned across the region. The Harrower orders its steward to unload a crate from the ship, gives a nod of acknowledgement, then disappears below decks.",
+				"rewards": {
+					"text": "Gain 1 prosperity and one random item."
+				}
+			}
+		}
 	},
 	"SO-44": {
 		"unlockedBy": { "event": { "id": "SR-29" }}

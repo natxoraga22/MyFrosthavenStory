@@ -2,18 +2,40 @@
 	"id": "018",
 	"name": "Crystal Fields",
 	"questLine": "AlgoxSnowspeaker",
-	"coordinates": "",
-	"requirement": {},
-	"unlockedBy": {},
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"coordinates": "E7",
+	"unlockedBy": { "scenario": { "id": "010" }},
+	"complexity": 1,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when all enemies in it are dead. At the end of that round, read [section_13.1].",
+	"effects": "Each character gains [curse].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>You’ve been following the trail of crystalline spikes—the Icespeakers’ “conduits”—for hours, and the trail has led you around the north edge of the Whitefire Wood. As you go, you wonder what the Algox are up to. Have these icy spikes been here forever, functioning as some sort of ancestral crop? Or have the Icespeakers begun amassing them only recently, expanding these fields to some unknown purpose?</p><p>The conduits have become larger and more densely packed as you’ve followed the trail, and now they are so close together that you’re forced to abandon your sled and move in on foot.</p><p>It doesn’t take long to pick up a trail after that. Heavy footprints mark the way, and following them, you come to the remains of a hard-lost battle. A great number of Algox corpses are strewn about in the snow, their huge bodies showing deep cuts, some missing limbs. But something is wrong with this scene: None of the Algox you’ve encountered before wield blades that could cause this sort of damage.</p><p>As you crouch to inspect a corpse further, it suddenly shifts. You jump back as it rises out of the snow, a rotting mass of undeath. You sigh and shake your head. Why can’t things just stay dead?</p>",
+			"sectionLinks": "When door [one] is opened, read [section_91.2].",
+			"containsImage": true
+		},
+		"91.2": {
+			"trigger": "Door [one] is opened",
+			"text": "<p>Something moves. A shape darts between the spikes. You spin and try to track it, but the shape is fast and hard to make out: a mound of snow shifting some thirty feet away. It turns and speeds directly toward you. There is no time to think; you act on instinct and jump out of the way a fraction of a second before two wicked blades shoot up and shred the air where you were just standing. The mound zips away through the conduits and turns back for another pass—but this time it’s not alone.</p><p>Now there are four of them, and they’re both heading your way.</p>",
+			"specialRules": "Spawn two Burrowing Blades at [a]. These are normal for two or three characters, or elite for four characters.",
+			"sectionLinks": "When door [two] is opened, read [section_54.1].",
+			"containsImage": true
+		},
+		"54.1": {
+			"trigger": "Door [two] is opened",
+			"text": "<p>You leap and roll, threading through the conduit forest in search of shelter from these subterranean attackers, but you can only make it a short way before your path becomes blocked. More of the burrowing creatures dart through the snow in front of you. You gird yourself to fight when, out of nowhere, you hear a voice shouting.</p><p>“Burning sun!” It’s an Algox standing on the far side of this horde, batting away one of the subterranean creatures. “I’ll rip your infernal gah—” The Algox’s words are muffled by the heavy sound of tunneling. You don’t know who the lone survivor pledges allegiance to, but you know he’ll have answers if you can get to him in time.</p>",
+			"specialRules": "The Algox Guard is an ally to you and an enemy to all other monsters. If the Algox Guard dies, the scenario is lost.",
+			"containsImage": true
+		},
+		"13.1": {
+			"trigger": "All enemies are dead",
+			"conclusion": "<p>You spin in every direction, scanning for more mounds speeding toward you or dead bodies rising from the snow, but after a moment you’re sure: it’s finally over.</p><p>You turn to the lone surviving Algox. It is one of the Icespeakers, but he’s badly wounded. You motion to the field, to the spikes of ice and the dead Algox that lie behind you, and ask what it was all for.</p><p>A look of desperation falls over the wounded Algox. “If you had asked weeks ago, I would have said it was for justice... But now, it looks like a reason to get ourselves killed.”</p><p>You offer to take him back to Snowscorn and the Snowspeakers, where he may get healing in exchange for information about this whole plot. The survivor shrugs, but you sense a willingness in him. “Fine then, warm-bloods. Take me back. I want to look the snow-sniffers in the eye.”</p><p>After a day of travel you arrive at the mountain and find the Snowspeaker chief in the central chamber.</p><p>“You bring curious reports,” the chief says, turning toward the captured Icespeaker, “And you, ice-lover,” she leers at the captured Icespeaker. “What can you say of yourself? What are these ‘conduits’?”</p><p>The battered Algox speaks plainly. “They are weapons,” he snorts, and a ripple of angry shock shoots through the assembled crowd. “A forest of crystals that, when called upon by the Icespeakers, would unleash a force that no army could withstand.” His words still carry venom, but they are thinned by exhaustion. “However, Geryuu has turned against us, sending burrowers to slaughter us all. I have seen what this path yields: endless retribution and bloodshed. I wish for rest; that is all.”</p><p>Outrage. The room breaks into full debate and your ears ring from the noise.</p><p>“Enough!” Chief Lanprul erupts and a thunderous crack emanates through the room. She looks out over the gathered heads of her kin. “This one speaks truth,” she says, decisively. “There is no way forward through war. We have fought the ice-cult for centuries, and yet we are no closer to peace. There will never be a time when bloodshed is not met by more bloodshed, and I say now is the time for change.”</p><p>“You are as naïve as your ancestors then.” A tall young Snowspeaker steps forward and addresses the crowd, her voice thick with arrogance.</p><p>“Sit down, Denpang!” The chief instructs, but the young Snowspeaker does not move.</p><p>“Shall we simply stand by and let these heretics activate their weapons, destroying our families in the Whitefire Wood?” She asks.</p><p>A clamor of “No,” rises up.</p><p>“No, of course not,” the newcomer, Denpang, smirks at the chieftain. “And with these champions on our side, we will have victory once and for all. We must plan for an assault, and these warmbloods had best come with us if they wish to remain in our favor.” With a final confident snort, the young Algox departs, taking with her a sizable portion of the gathered Snowspeakers.</p><p>The chief nods as if she expected such an outcome.</p><p>“Do not listen to her,” she says. “It is peace we must seek. I have a plan to heal the divide between our two groups, but it will take time to arrange a peace summit with the Icespeakers. And I will also do what I can to delay Denpang’s assault. When the time comes, I hope you will join me instead, and we will truly end this war.”</p>",
+			"rewards": {
+				"text": "Gain 1 morale.<br/>Gain one random item blueprint."
+			},
+			"sectionLinks": "Add [section_122.3] to the calendar in four weeks."
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "91.2", "54.1", "13.1"]
 }

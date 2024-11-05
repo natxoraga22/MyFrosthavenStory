@@ -127,3 +127,21 @@
 .icon.times2	   { max-height: 22px; }
 .icon.trait        { max-height: 18px; }
 .icon.xp           { max-height: 18px; }
+
+
+/* ------ */
+/* TITLES */
+/* ------ */
+
+.title .icon {
+	margin-right: 0.25rem;
+}
+
+.title .icon.blinkblade   { max-height: 28px; }
+.title .icon.crashingtide { max-height: 30px; }
+.title .icon.deathwalker  { max-height: 32px; }
+.title .icon.hive         { max-height: 34px; }
+.title .icon.infuser      { max-height: 34px; }
+.title .icon.pyroclast    { max-height: 32px; }
+.title .icon.snowdancer   { max-height: 32px; }
+.title .icon.trapper      { max-height: 32px; }

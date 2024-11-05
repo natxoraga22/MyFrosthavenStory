@@ -252,6 +252,9 @@
 			"text": "<p>Gain 2 morale.</p><p>Do not resolve an outpost event this week.</p>" 
 		}
 	},
+	"122.3": {
+		"unlockedBy": { "scenario": { "id": "018" }}
+	},
 	"122.4": {
 		"title": "Great Dallum",
 		"unlockedBy": { "section": { "id": "180.1" }},
@@ -411,6 +414,14 @@
 			"scenarios": [{ "id": "126" }]
 		}
 	},
+	"167.2": {
+		"title": "Job Posting",
+		"unlockedBy": { "other": "Town Guard Perk" },
+		"text": "<p>DING. DING. DINGdingDING!</p><p>“Hello? Helloooo?” A thin man bundled up in a trench coat is adamantly ringing the desk bell at the town hall. Glint, the Inox records-keeper, is pretending to nap a few feet away. “I see you there. I need help!”</p><p>Glint shouts without opening his eyes, adjusting his chair to face away from the disruption. “I’m on break! Come back later.”</p><p>The man slaps a gloved palm on the countertop, leaving behind a puddle of water. “I am running out of wat— er, patience! Yes, I am running out of patience!” The man returns to ringing the bell with intensity, covering the countertop with moisture with each thump. Glint begrudgingly gets out of his seat to respond when he spots your group.</p><p>“Right, well, I was just waiting for the best mercenaries in town to show up. And here they are, look at that. Take it up with them. And stop sweating on my counter!” Glint drops back into his chair, done with the whole affair.</p><p>The man sizes you up, looking a bit nervous. “Yes, it’s sweat! I am merely sweating! Because of the warmth. Of this room. It is very warm, correct?” It’s tough to make out the man’s eyes hidden between the assorted scarves wrapped around his face. His boots look new, but much too large for someone of his stature, and the trench coat he’s wearing is nearly soaked through. The man dabs at his face with a wet handkerchief, then pushes aside the scarves to take a long swig from a canteen. You can’t help but notice there’s another three containers hanging empty off his belt.</p><p>He taps the bottom of the canteen to extract the last few drops, then remembers you standing there. “Right… Lurkers, they killed my family, and I need you to… uh, revenge. I would explain more, but it’s very important I leave right now—er, for an appointment! Here’s directions,” he sets a wet wad of paper into your hand. “I’ll explain later! Thank you! Good bye.”</p><p>With that, he waddles out the door and into the street in a panic, tripping several times and leaving a trail of water behind him.</p>",
+		"rewards": {
+			"scenarios": [{ "id": "078" }]
+		}
+	},
 	"168.2": {
 		"title": "Blast the Lurkers",
 		"unlockedBy": { "section": { "id": "114.2" }},
@@ -452,10 +463,21 @@
 		}
 	},
 	"177.4": {
-		"unlockedBy": { "section": { "id": "107.3" }}
+		"title": "Care Package from Snowdancer",
+		"unlockedBy": { "section": { "id": "107.3" }},
+		"text": "<p>As you enter the main gates of Frosthaven, you can’t help but notice the giant pile of food sitting just outside in the snow.</p><p>“A group of Algox brought it by,” a guard explains. “Said they was friends of yours, but Olmstead was suspicious. He said to wait until you got back.”</p><p>You inspect the pile and find a crudely written note from the Snowdancer on a bark parchment.</p><p>“Friends,” the note says. “My tribe had a bountiful harvest this year, praise Geryuu. I remembered how difficult the winters could be in Frosthaven, and so decided to share some of our crop with you. Be well, and stay safe.”</p>",
+		"rewards": {
+			"text": "Gain 3 morale."
+		}
 	},
 	"178.1": {
-		"unlockedBy": { "event": { "id": "SO-41" }}
+		"title": "Mysterious Crate",
+		"unlockedBy": { "event": { "id": "SO-41" }},
+		"text": "<p>The alarm bell rings in the middle of the night. An attack?</p><p>You rush out of your longhouse and down to the dock, strapping on weapons as you run. There, just past the craftsman’s shop and butting up against the jetty, is an unknown ship with tattered sails. Two dockworkers are wrestling the lines to keep it from being pulled back into the bay.</p><p>A roar erupts from the ship—Ice Wraiths are swelling around the mast. The whole ship pulses with demonic energy.</p><p>And then you spot them: there, on the deck. Crates, sealed with thick black tar.</p>",
+		"rewards": {
+			"text": "You must play this scenario next.",
+			"scenarios": [{ "id": "127" }]
+		}
 	},
 	"179.5": {
 		"title": "Metal Shipment",

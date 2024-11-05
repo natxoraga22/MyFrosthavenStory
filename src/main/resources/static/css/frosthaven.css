@@ -43,7 +43,7 @@
 
 .frosthaven {
 	padding-top: var(--frosthaven-padding-y);
-	padding-bottom: var(--frosthaven-padding-y);
+	/*padding-bottom: var(--frosthaven-padding-y);*/
 	color: var(--frosthaven-color);
 }
 

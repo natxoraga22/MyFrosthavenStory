@@ -7,7 +7,6 @@
 	"complexity": 2,
 	"location": "Frosthaven",
 	"goals": "The scenario is complete when the Lady in White is dead. At the end of that round, read [section_174.1].",
-	"effects": "",
 
 	"sections": {
 		"main": {

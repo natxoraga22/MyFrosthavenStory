@@ -2,5 +2,41 @@
 	"id": "006",
 	"name": "Avalanche",
 	"questLine": "AlgoxIcespeaker",
-	"unlockedBy": { "scenario": { "id": "004" }}
+	"coordinates": "L8",
+	"unlockedBy": { "scenario": { "id": "004" }},
+	"complexity": 2,
+	"location": "Copperneck Mountains",
+	"goals": "The scenario is complete when all characters have escaped. At the end of that round, read [section_65.1].",
+	"effects": "Each character gains [brittle].",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>You stand at the end of an Algox tunnel. Behind you stretches a winding maze of ice and rock, a long series of passages painstakingly carved through the interior of Snowscorn Mountain. Before you, a narrow trail hangs over a cliff face, leading perilously up toward the mountain’s peak. A blistering storm of snow and wind howls past the mouth of the tunnel like a demon chorus.</p><p>“Follow the trail beyond the tunnel,” the Icespeaker chief had told you, “Then curve around to the highest peak. There you will find the Snowspeaking wretches. Destroy them, or Snowscorn is lost.” You had nodded your understanding, but you now realize that scaling a mountain is much easier for the Algox. As it is, you’re barely equipped to avoid hypothermia, much less hike over slippery rock through a blizzard. But there’s no way around it: Frosthaven’s safety hangs in the balance.</p><p>It takes several hours of grueling hiking, but eventually the peak emerges. Its rare streaks of gray stone are half-hidden by a blustery cloak of soft, blown powder. You shield your eyes and squint into the whiteness, but it seems that, bizarrely, the peak is growing—its whiteness bulges outward, undulating, swallowing the exposed gray stone. It’s getting closer, like a wave—a wave of snow. Like an avalanche.</p><p>You turn and run, and the air shakes. Legs pump, arms flail. You move, but it’s not enough. Your legs are too slow and the path too steep. You turn to see how much time is left, and a blur of whiteness envelops you. The mountain roars, and you are consumed by the noise.</p><p>When the avalanche stops, you blink in darkness. You’ve been entombed in snow, and already the air is drawing thin. You need to find a way out, and you need to find it fast.</p>",
+			"specialRules": "<p>Each snowdrift and snow rock in the scenario has L+C hit points. They are enemies to you and allies to all monsters. At the end of each round, each character adjacent to at least one snowdrift or snow rock suffers hazardous terrain damage.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
+			"sectionLinks": "When door [one] is opened, read [section_12.2].",
+			"containsImage": true
+		},
+		"12.2": {
+			"trigger": "Door [one] is opened",
+			"text": "You scrabble and fight. There are creatures of the ice in this prison of snow, as well, but nothing will stop you from digging yourself out.",
+			"specialRules": "Remove all snowdrift tiles from tile 7-B before setting up tiles 2-E and 2-G.",
+			"sectionLinks": "When door [two] is opened, read [section_22.2].",
+			"containsImage": true
+		},
+		"22.2": {
+			"trigger": "Door [two] is opened",
+			"text": "“It’s just snow,” you keep telling yourself. You’ve faced the giant Algox, packs of wolves, and far worse threats on your journey so far. You will not let snow defeat you. You won’t even entertain the possibility.",
+			"specialRules": "<p>Remove all snowdrift and snow rock tiles from tiles 2-E and 2-G before setting up tile 13-A.</p><p>Each [a] is an escape hex.</p>",
+			"containsImage": true
+		},
+		"65.1": {
+			"trigger": "All characters have escaped",
+			"conclusion": "<p>Clawing from the snow you find the mountain completely changed, its face wiped clean by the slide. You realize the avalanche didn’t carry you as far as you had expected; you can still see the top from where you’re standing, and you’re not too far off. Unfortunately, with the snow cover gone, all that’s left between you and the peak is a painfully steep cliff, and you’re not equipped for that sort of climb. If you want to press on, you’ll need to return with better gear: a harness and ropes and as many pitons as you can carry [scenario_11].</p><p>You do notice, however, that the avalanche has revealed something more. You spot a lone survivor of a storm a short distance to the east: some sort of ruined stone structure jutting out from the ground. It’s not too far off, and might be worth a look [scenario_12].</p>",
+			"rewards": {
+				"text": "Gain 2 collective [metal].",
+				"scenarios": [{ "id": "011" }, { "id": "012" }]
+			}
+		}
+	},
+	"path": ["main", "12.2", "22.2", "65.1"]
 }

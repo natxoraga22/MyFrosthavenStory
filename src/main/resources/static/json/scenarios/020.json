@@ -1,0 +1,22 @@
+{
+	"id": "020",
+	"name": "Temple of Liberation",
+	"questLine": "AlgoxIcespeaker",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": { "scenario": { "id": "012" }},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>",
+			"specialRules": "<p></p>",
+			"sectionLinks": "",
+			"containsImage": true
+		}
+	},
+	"path": ["main"]
+}

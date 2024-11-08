@@ -1,0 +1,32 @@
+{
+	"id": "011",
+	"name": "Snowscorn Peak",
+	"questLine": "AlgoxIcespeaker",
+	"coordinates": "M6",
+	"requirement": { "transport": "climbinggear" },
+	"unlockedBy": { "scenario": { "id": "006" }},
+	"complexity": 2,
+	"location": "Copperneck Mountains",
+	"goals": "The scenario is complete when the Algox Stormcaller is dead. At the end of that round, read [section_47.2].",
+	"effects": "Each character discards one card.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p>The wind never stops. It buffets you, a constant presence stealing your heat and fogging your mind, reducing your hands to frozen claws. But you cannot stop either. You carve a route toward the peak one piton at a time, hoping to reach the Snowspeakers hiding there before they cause any permanent damage.</p><p>Your limbs burning in protest, you jam your hands and feet over and over into jagged crevices. Just when you think you might have to give up, you reach for one final grip and feel snow instead—the summit.</p><p>Pulling yourselves over the ledge, you discover an island hidden in the stratosphere: a secret frozen plateau. The mountaintop rises steeply to a peak, and only a short distance away stands your welcoming party. It consists of one ancient, steel-eyed Algox and two detachments of demons, their teeth bared in the frigid wind.</p><p>“Our preparations are nearly complete, interlopers,” the elder Algox says, an indulgent smile crisscrossing her face. “This mountain will fall, and when it does, the dirt-worshiping cult of Icespeakers will be crushed.”</p><p>The elder raises her hands and a great vortex of snow swirls around her. The rock beneath you begins to shake. The air hums with menace.</p><p>“I will use this mountain’s own energy against it! Death comes—”</p><p>You let loose a cry and rush in. The time for speeches is over.</p>",
+			"bossSpecials": {
+				"1": "The Algox Stormcaller performs:<br/>[attack] -1, [target] C, [range] 5, [push] 2<br/>Then it summons one Wind Demon. It is normal for two or three characters, or elite for four characters.",
+				"2": "The Algox Stormcaller creates one 1-hex hazardous terrain tile in the empty hex closest to the closest enemy. Then all enemies occupying or adjacent to at least one hex with a hazardous terrain tile suffer hazardous terrain damage.<br/>Then it summons one Frost Demon. It is normal for two characters, or elite for three or four characters."
+			},
+			"containsImage": true
+		},
+		"47.2": {
+			"trigger": "The Algox Stormcaller is dead",
+			"conclusion": "<p></p>",
+			"rewards": {
+				"text": ""
+			},
+			"sectionLinks": ""
+		}
+	},
+	"path": ["main"]
+}

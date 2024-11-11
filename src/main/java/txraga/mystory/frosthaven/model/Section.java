@@ -32,6 +32,9 @@ public class Section {
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 	private List<UnlockedBy> unlockedBy;
 
+	@JsonDeserialize(using = IconsDeserializer.class)
+	private String goals;
+
 	private String introduction;
 
 	@JsonDeserialize(using = IconsDeserializer.class)

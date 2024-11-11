@@ -31,6 +31,14 @@
 			</div>
 		</template>
 
+		<!-- Goals -->
+		<template x-if="section.goals">
+			<bs:card class="fhCard goals">
+				<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
+				<bs:cardBody x-jsz>{{section.goals}}</bs:cardBody>
+			</bs:card>
+		</template>
+
 		<!-- Introduction -->
 		<template x-if="section.introduction">
 			<bs:card class="fhCard fhCardFlush introduction">

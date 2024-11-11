@@ -3,7 +3,7 @@
 	"name": "Heart of Ice",
 	"questLine": "Introduction",
 	"coordinates": "M8",
-	"unlockedBy": { "scenario": { "id": "002" }},
+	"unlockedBy": [{ "scenario": { "id": "002" }}, { "scenario": { "id": "003" }}],
 	"complexity": 2,
 	"location": "Copperneck Mountains",
 	"goals": "The scenario is complete when only one boss is dead and characters and character summons have collectively dealt damage to that boss equal to at least half its maximum hit point value (rounded up). At the end of that round, if the Snowdancer is dead, read [section_15.2]; if the Frozen Fist is dead, read [section_22.1].",

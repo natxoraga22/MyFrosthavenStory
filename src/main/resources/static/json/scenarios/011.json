@@ -21,12 +21,12 @@
 		},
 		"47.2": {
 			"trigger": "The Algox Stormcaller is dead",
-			"conclusion": "<p></p>",
+			"conclusion": "<p>The mighty Algox gasps at your feet, choking out a final curse.</p><p>“You... your pathetic flailing does n-nothing...” Coughs wrack her chest and blood drips into the snow. “I never planned to leave this mountain alive. Your fate is already sealed. The mountain... it falls.”</p><p>Her eyes go dull and her body relaxes into death, but her words still echo. You stand for a moment, thinking. Could she have really done so much, or was that simply the frustrated ravings of defeat?</p><p>Almost as if it heard your thoughts, the mountain trembles, and something deep within it shifts. The tremor doesn’t last long, but it’s powerful enough to make you stumble.</p><p>You rappel down as fast as you can, praying that Snowscorn holds together.</p>",
 			"rewards": {
-				"text": ""
-			},
-			"sectionLinks": ""
+				"text": "Gain 1 morale and 1 inspiration.",
+				"scenarios": [{ "id": "019", "forceLinked": true }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "47.2"]
 }

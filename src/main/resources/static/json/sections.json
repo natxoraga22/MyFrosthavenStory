@@ -122,6 +122,9 @@
 			"text": "Turn to the next page in the puzzle book."
 		}
 	},
+	"54.3": {
+		"unlockedBy": { "scenario": { "id": "019" }}
+	},
 	"57.3": {
 		"title": "Harvest Festival",
 		"unlockedBy": [{ "event": { "id": "SO-36" }}, { "event": { "id": "WO-61" }}],

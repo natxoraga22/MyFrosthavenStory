@@ -10,14 +10,52 @@
 	<form th:fragment="scenarioForm" id="scenarioForm" x-data="scenarioFormData(scenarioId, scenarioPath)">
 		<bs:card>
 			<bs:cardBody>
+				<!-- Scenario ID -->
 				<div>
 					<bs:label for="inputScenarioId">[[#{scenario.id}]]</bs:label>
 					<bs:select id="inputScenarioId" name="scenarioId" required></bs:select>
 				</div>
-				<div>
-					<bs:label for="inputScenarioPath">[[#{scenario.path}]]</bs:label>
-					<bs:select id="inputScenarioPath" name="scenarioPath" multiple></bs:select>
-				</div>
+
+				<!-- Path -->
+				<template x-if="scenarioPath.length > 0">
+					<div>
+						<bs:flex align="baseline" bs:gap="2">
+							<bs:label>[[#{scenario.path}]]</bs:label>
+							<bs:button color="outline-secondary" size="sm" bs:py="0" bs:mb="2" @click="clearScenarioPath()">
+								[[#{scenario.path.clear}]]
+							</bs:button>
+						</bs:flex>
+						<template x-for="(scenarioPathItem,index) in scenarioPath">
+							<div bs:textAlign="center">
+								<div x-show="index != 0" bs:py="1">
+									<i class="fa-solid fa-arrow-down-long"></i>
+								</div>
+								<div x-jsz>
+									{{ scenarioSections[scenarioPathItem].trigger }}
+									<strong>({{ scenarioPathItem }})</strong>
+								</div>
+							</div>
+						</template>
+					</div>
+				</template>
+
+				<!-- Next section -->
+				<template x-if="availableSections.length > 0">
+					<div>
+						<bs:label>[[#{scenario.nextSection}]]</bs:label>
+						<bs:flex direction="column" bs:gap="2">
+							<template x-for="availableSection in availableSections">
+								<div bs:textAlign="center">
+									<bs:button color="info" size="sm" x-jsz @click="addSectionToPath(availableSection)">
+										<i class="fa-solid fa-arrow-right" bs:me="1"></i>
+										{{ scenarioSections[availableSection].trigger }}
+										<strong>({{ availableSection }})</strong>
+									</bs:button>
+								</div>
+							</template>
+						</bs:flex>
+					</div>
+				</template>
 			</bs:cardBody>
 		</bs:card>
 	</form>
@@ -32,6 +70,13 @@
 				scenarioIdSelect: null,
 				scenarioPathSelect: null,
 
+				scenarioSections: {},
+				scenarioPath: [],
+
+				get availableSections() {
+					return Object.keys(this.scenarioSections).filter(section => !this.scenarioPath.includes(section));
+				},
+
 				init() {
 					this.scenarioIdSelect = new TomSelect("#inputScenarioId", {
 						options: Object.entries(this.$store.frosthaven.scenariosMap).toSorted().map(([scenarioId, scenario]) =>
@@ -40,28 +85,35 @@
 						items: scenarioId,
 						onChange: newScenarioId => {
 							this.$dispatch("changed-scenario-id", newScenarioId);
-							this.fillScenarioPathSelect(newScenarioId);
+							this.setupScenarioSections(newScenarioId);
 						},
 						maxOptions: null
 					});
-					this.scenarioPathSelect = new TomSelect("#inputScenarioPath", {
-						onChange: newScenarioPath => this.$dispatch("changed-scenario-path", newScenarioPath),
-						plugins: ["remove_button"]
-					});
+					this.$watch("scenarioPath", () => this.$dispatch("changed-scenario-path", this.scenarioPath));
 
-					this.fillScenarioPathSelect(scenarioId, scenarioPath);
+					this.setupScenarioSections(scenarioId, scenarioPath);
 				},
 
-				fillScenarioPathSelect(selectedScenarioId, selectedScenarioPath) {
-					log.entry(selectedScenarioId, selectedScenarioPath);
-					this.scenarioPathSelect.clear();
-					this.scenarioPathSelect.clearOptions();
-
+				setupScenarioSections(selectedScenarioId, selectedScenarioPath) {
+					log.entry();
+					this.clearScenarioPath();
 					const selectedScenario = this.$store.frosthaven.scenariosMap[selectedScenarioId];
 					if (selectedScenario) {
-						this.scenarioPathSelect.addOptions(Object.keys(selectedScenario.sections).map(key => ({ value: key, text: key })));
-						this.scenarioPathSelect.addItems(selectedScenarioPath ?? selectedScenario.path, false);
+						this.scenarioSections = selectedScenario.sections;
+						this.scenarioPath = selectedScenarioPath ?? selectedScenario.path;
 					}
+					log.exit();
+				},
+
+				clearScenarioPath() {
+					log.entry();
+					this.scenarioPath = [];
+					log.exit();
+				},
+
+				addSectionToPath(section) {
+					log.entry(section);
+					this.scenarioPath.push(section);
 					log.exit();
 				}
 			}));

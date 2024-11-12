@@ -1,0 +1,22 @@
+{
+	"id": "054",
+	"name": "Among the Wreckage",
+	"questLine": "Lurker",
+	"coordinates": "F1",
+	"requirement": { "transport": "boat" },
+	"unlockedBy": { "scenario": { "id": "050" }},
+	"complexity": 2,
+	"location": "Biting Sea",
+	"goals": "The scenario is complete when the Seeker of the Abyss is dead. At the end of that round, read [section_21.3].",
+	"effects": "Each character adds three [minus1] cards to their attack modifier deck.",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>",
+			"specialRules": "<p></p>",
+			"sectionLinks": "",
+			"containsImage": true
+		}
+	},
+	"path": ["main"]
+}

@@ -158,6 +158,11 @@
 /* SCENARIO FORM */
 /* ------------- */
 
+#scenarioForm {
+	position: sticky;
+	top: calc(56px + var(--frosthaven-padding-y));
+}
+
 #scenarioForm .card-body {
 	display: flex;
 	flex-direction: column;

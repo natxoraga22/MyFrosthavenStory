@@ -55,6 +55,7 @@ public class Section {
 	private String sectionLinks;
 
 	private boolean containsImage;
+	private List<String> unlockedSections = List.of();
 
 
 	public String getHtmlSafeId() {

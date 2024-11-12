@@ -39,6 +39,7 @@ public class Scenario implements Comparable<Scenario> {
 
 	private Map<String,Section> sections = Map.of();
 	private List<String> path = List.of();
+	private List<String> availableSections = List.of();
 
 
 	@Override

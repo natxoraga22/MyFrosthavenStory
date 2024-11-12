@@ -68,14 +68,11 @@
 		document.addEventListener("alpine:init", () => {
 			Alpine.data("scenarioFormData", (scenarioId, scenarioPath) => ({
 				scenarioIdSelect: null,
-				scenarioPathSelect: null,
 
 				scenarioSections: {},
+				initialAvailableSections: [],
+				availableSections: [],
 				scenarioPath: [],
-
-				get availableSections() {
-					return Object.keys(this.scenarioSections).filter(section => !this.scenarioPath.includes(section));
-				},
 
 				init() {
 					this.scenarioIdSelect = new TomSelect("#inputScenarioId", {
@@ -100,7 +97,12 @@
 					const selectedScenario = this.$store.frosthaven.scenariosMap[selectedScenarioId];
 					if (selectedScenario) {
 						this.scenarioSections = selectedScenario.sections;
-						this.scenarioPath = selectedScenarioPath ?? selectedScenario.path;
+						this.initialAvailableSections = selectedScenario.availableSections;
+						this.availableSections = selectedScenario.availableSections;
+						const scenarioPath = selectedScenarioPath ?? selectedScenario.path;
+						for (scenarioPathItem of scenarioPath) {
+							this.addSectionToPath(scenarioPathItem);
+						}
 					}
 					log.exit();
 				},
@@ -108,14 +110,24 @@
 				clearScenarioPath() {
 					log.entry();
 					this.scenarioPath = [];
+					this.availableSections = this.initialAvailableSections;
 					log.exit();
 				},
 
-				addSectionToPath(section) {
-					log.entry(section);
-					this.scenarioPath.push(section);
+				addSectionToPath(sectionId) {
+					log.entry(sectionId);
+					this.scenarioPath.push(sectionId);
+					this.computeAvailableSections(sectionId);
 					log.exit();
-				}
+				},
+
+				computeAvailableSections(sectionId) {
+					log.entry(sectionId);
+					const section = this.scenarioSections[sectionId];
+					this.availableSections = this.availableSections.filter(availableSection => availableSection !== sectionId);
+					this.availableSections.push(...section.unlockedSections);
+					log.exit();
+				},
 			}));
 		});
 	</script>

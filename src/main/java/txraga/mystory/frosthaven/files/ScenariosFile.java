@@ -3,6 +3,7 @@ package txraga.mystory.frosthaven.files;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.core.io.ClassPathResource;
@@ -44,6 +45,8 @@ public class ScenariosFile {
 			scenario.getSections().forEach((id, section) -> {
 				if (section.getId() == null) section.setId(id);
 			});
+			// Set default available section
+			if (scenario.getAvailableSections().isEmpty()) scenario.setAvailableSections(List.of("main"));
 			return log.exit(scenario);
 		}
 		catch (IOException e) {

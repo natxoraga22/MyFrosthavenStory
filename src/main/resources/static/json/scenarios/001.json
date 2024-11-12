@@ -12,12 +12,14 @@
 			"introduction": "<p>The sounds greet you first: muffled metallic pangs, a voice howling. It’s difficult to make anything out with the wind rushing past your ears, but you’d know that tune anywhere: there’s a fight up ahead.</p><p>But a fight means people, and if there are people, then the town must be close. You hear more: a scream; the crash of steel against stone; a deep, earthy growl.</p><p>You’re running now. Your legs are wasted from the hike, your shoulders ache from your gear, but the sounds are close now and up ahead you see gauzy orange light blooming in the air. With one last push, you round the final bend in the trail and you see it—Frosthaven—engulfed in flame.</p><p>Great petals of fire burst from windows and crawl over roofs. People stream from the town’s ruined gate, their faces bent in panic. A moment later, you see the object of their terror: a massive creature with two legs and two hulking arms covered entirely in thick white fur, three gnarled horns crowning its head.</p><p>“Algox raiders! We’re doomed!” cries an elderly porter beside you. “They’re stronger than anything else alive. We’ve come all this way for nothing!” As if to prove the point, the Algox you’ve been watching catches a fleeing outposter with one hand and hurls him backward as if he weighed nothing.</p><p>Ten days you’ve been hiking. Ten days and this is what you find. You breathe out a thick plume of foggy air and hoist your weapon high. Time to get to work.</p>",
 			"specialRules": "All City Guards are allies to you and enemies to all other monster types. City Guards do not perform turns but instead gain an additional innate [shield] 1 (for a total of [shield] 2 at level 1) and [retaliate] 2, and have an initiative of 50 for the purpose of focusing.",
 			"sectionLinks": "When door [one] is opened, read [section_5.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["5.3"]
 		},
 		"5.3": {
 			"trigger": "Door [one] is opened",
 			"text": "You run inside the gate and the breadth of destruction becomes quickly apparent. The town has been sacked. Smoke burns your eyes. What structures still stand are bright with fire, and the rest smolder, their frames like black, torched skeletons. And all about the wreckage howl the Algox, celebrating their victory in an unrecognizable language.",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["9.1"]
 		},
 		"9.1": {
 			"trigger": "All enemies are dead",

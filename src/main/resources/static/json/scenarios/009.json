@@ -11,19 +11,22 @@
 		"main": {
 			"introduction": "<p>It’s always strange, traveling deep underground, but it’s made even stranger by the musty smell of undead that clings to you like grease smoke. You try to ignore it, to put the stench out of your mind, but it only seems to grow as you move deeper into the catacombs. Along with the stench, the eerie green light has grown in intensity as well. It gleams down every hall now, and you find yourself relaxing in its glow. You shake your head and try to clear the thought, knowing full well this is not the place to let your guard down, but still, the insidious soothing feeling persists.</p><p>The catacomb tunnels grow deeper. The floor and walls turn to uneven stone and the air becomes stale, the long years having petrified it into a thick fume.</p><p>You stop. Something moved just ahead. You raise a torch and see flickers of shadow shift in the passage. A body, large and wispy black, detaches from the wall and moves to block the path forward. It is made of shadow and corroded black armor, its face guarded by a jagged helm, and it has seen you. It rises slowly, its eyes burning with palpable menace, and releases a deep, hateful groan.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_78.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["78.2"]
 		},
 		"78.2": {
 			"trigger": "Door [one] is opened",
 			"text": "You continue on, passing into the next chamber to find a narrow cavern where fallen stone has made it difficult to traverse. Here the green light is even stronger, and a warm breeze jostles the dead air. It’s not entirely upsetting, this warmth, but you gird yourself nonetheless. Beyond your footsteps, there is silence.",
 			"sectionLinks": "When door [two] is opened, read [section_26.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["26.1"]
 		},
 		"26.1": {
 			"trigger": "Door [two] is opened",
 			"text": "<p>Passing through the narrow chamber, you reach what must be the end of this path. A room extends out before you, the whole of it bathed in the unnerving green glow. At the far end you see the source: a giant door covered in gears and unintelligible runes. It stands like some warded vault, pulsating vibrantly while a viscous emerald ooze seeps from its cracks.</p><p>Had you more time, you would stop and investigate closer, take samples of the slime for study. But time is short. As you stand there, a breeze lifts and pushes against you. A foul wind. A warning.</p>",
 			"specialRules": "<p>Open all doors [two].</p><p>Switches [a] can be targeted by character attacks. Whenever either switch is attacked, regardless of damage, it is considered activated.</p><p>At the start of each round, any switch not activated spawns one Ooze. It is normal for two characters or elite for three of four characters.</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["93.4"]
 		},
 		"93.4": {
 			"trigger": "All enemies are dead and both switches [a] have been activated",

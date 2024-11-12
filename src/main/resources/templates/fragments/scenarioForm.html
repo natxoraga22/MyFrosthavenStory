@@ -124,7 +124,9 @@
 				computeAvailableSections(sectionId) {
 					log.entry(sectionId);
 					const section = this.scenarioSections[sectionId];
-					this.availableSections = this.availableSections.filter(availableSection => availableSection !== sectionId);
+					this.availableSections = this.availableSections.filter(availableSection => {
+						availableSection !== sectionId && !section.lockedOutSections.includes(availableSection);
+					});
 					this.availableSections.push(...section.unlockedSections);
 					log.exit();
 				},

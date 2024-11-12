@@ -17,7 +17,8 @@
 				"1": "The Algox Stormcaller performs:<br/>[attack] -1, [target] C, [range] 5, [push] 2<br/>Then it summons one Wind Demon. It is normal for two or three characters, or elite for four characters.",
 				"2": "The Algox Stormcaller creates one 1-hex hazardous terrain tile in the empty hex closest to the closest enemy. Then all enemies occupying or adjacent to at least one hex with a hazardous terrain tile suffer hazardous terrain damage.<br/>Then it summons one Frost Demon. It is normal for two characters, or elite for three or four characters."
 			},
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["47.2"]
 		},
 		"47.2": {
 			"trigger": "The Algox Stormcaller is dead",

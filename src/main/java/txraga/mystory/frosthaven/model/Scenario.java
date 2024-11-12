@@ -38,8 +38,8 @@ public class Scenario implements Comparable<Scenario> {
 	private String effects;
 
 	private Map<String,Section> sections = Map.of();
-	private List<String> path = List.of();
 	private List<String> availableSections = List.of();
+	private List<String> path = List.of();
 
 
 	@Override

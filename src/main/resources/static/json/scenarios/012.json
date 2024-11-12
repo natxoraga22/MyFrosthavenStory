@@ -12,12 +12,14 @@
 		"main": {
 			"introduction": "<p>Approaching the ruins on the mountain slope, you discover a copse of carved stone—vestiges of some forgotten past. A number of broken, time-battered pillars stand on the mountain slope, and following them, you arrive at a pair of large stone doors. On them, you make out an expansive mural, still quite clear despite however many years it’s been buried. It depicts a history. First a village, small and wooded; then, a vast city with tall buildings and wide roads; and last, there is only flame and ruin. Above these three depictions there is another set of carvings: that of man aging in reverse. First, an old man above the town as it’s being built, then an adult as the settlement flourishes, then finally a baby, cooing on its back above the flaming ruins.</p><p>Your curiosity is too much to resist. You push on the doors, and, with grinding stone and cracking rust, they give in. It’s clear that this place, though well preserved under the snow and rock, is still ancient enough to have felt the passage of time. Corroded columns and scraps of metal litter the floor like an ancient junk pile. But sometimes treasure can lie hidden in unlikely places.</p><p>You get as far as the steps, far enough for the coldness of this ruin to seep into your skin, and then the ground stirs. Those scraps of metal you took for junk lurch upward, filled suddenly with life, and a slew of dented iron barrels turn toward you—ancient automatons. They don’t seem like much of a threat, these ruined things, but there are a lot of them, and there’s no knowing how deep this passage goes.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_34.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["34.1"]
 		},
 		"34.1": {
 			"trigger": "Door [one] is opened",
 			"text": "You push forward, delving further into this hall, wondering at its purpose. From what you can gather, this place is no tomb. There is no smell of decay, but neither is there one of life. You enter a room that’s somehow managed to withstand the beating of time. Here the floors are still intact, and the stone is less worn down. Of course, that comes with a trade. As you enter the new room, another group of mechanical creatures turn, these ones wholly put together and preserved, their sharp metal bodies glinting in the low, flickering light of your torches.",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["23.2"]
 		},
 		"23.2": {
 			"trigger": "All enemies are dead",

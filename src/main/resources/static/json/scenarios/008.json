@@ -14,19 +14,22 @@
 			"introduction": "<p>You travel east from Frosthaven, passing over the frozen wastes and into the Whitefire Wood, hoping to sort out the mystery of the wandering mechanical beings reported by Satha’s scouts. You’ve heard of such contraptions before, but no one in the north seems capable of building such things. There’s no place for delicate machinery up here, not where the air peels your heat away and frost can lock your weapon tight in its scabbard. Surely, the scouts must have been mistaken.</p><p>But machines aside, there are other sorts of creatures that do thrive in this climate, and one of them just dashed across your trail—wild hounds. You’ve been so occupied by your thoughts that you didn’t notice them until just now, and there’s movement all around you. An entire pack is stalking you, and now they’re closing in like a vice. Your position is terrible. It’s too narrow in this forest for a close fight, and there is hardly enough light to see by. You need to get out of here, so you run.</p><p>The trail is thick with roots and stones and fallen trees. Still, you run, and the wolves give chase, much more adept at moving through these woods than your group. Their shadows flicker between the thick brush, and their snarls are close.</p><p>Suddenly, there’s daylight. You break out of the forest and into the open, the trees giving way to ice and snow. However, this escape wasn’t quite what you’d hoped for. On either side of you stand great walls of ice and rock, and behind you, the pack of beasts. It’s an alley—a perfect place to funnel prey—and you just ran right into it.</p>",
 			"specialRules": "<p>Characters cannot escape until all Polar Bears in the scenario are dead.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_21.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["21.1"]
 		},
 		"21.1": {
 			"trigger": "Door [one] is opened",
 			"text": "Just when you think you’ve outrun them, the howling starts again. You glance behind you to see the hounds emerging from the shadows of the forest – shaggy silhouettes coalescing into fur and fang. There are too many to fight, so your only choice is to keep running.",
 			"specialRules": "At the start of each round, spawn one Hound at any empty starting hex. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.",
 			"sectionLinks": "When door [two] is opened, read [section_12.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["12.1"]
 		},
 		"12.1": {
 			"trigger": "Door [two] is opened",
 			"specialRules": "<p>Each [a] is an escape hex.</p><p>Continue spawning Hounds as described in [section_21.1].</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["54.4"]
 		},
 		"54.4": {
 			"trigger": "All characters have escaped",

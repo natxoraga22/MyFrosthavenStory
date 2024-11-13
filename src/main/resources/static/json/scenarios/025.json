@@ -12,18 +12,21 @@
 		"main": {
 			"introduction": "<p>After leaping off the ruined elevator, you discover that the metal walkway that saved your life leads directly to a door with a flashing red light. The security system is still in effect, and you might as well dismantle it while you search for another way out. Your footsteps clang softly against the metal path, echoing into the vast nothingness.</p><p>It isn’t long before you arrive at the edge of the cavern and find the entrance to a tall, narrow tunnel. The tunnel’s walls have been carefully carved out and reinforced with thick bars of heavy iron, all of which are coated in rust.</p><p>The red light hangs only a short distance within—a single blinking orb mounted onto a wall—and under its steady flash you can make out the shapes of some sort of creature. They’re moving slowly about in the low gloom, almost as if they’re searching for something. You realize only too late that the thing they’re searching for is you.</p><p>One of them, a stout metallic body, stops and peers in your direction. Its glassy eyes catch the flashing glow from above, and an instant later the tunnel is filled with light. Dozens of red lamps lining the walls burst to life and dye the room in a sharp scarlet fluorescence. In the new light you can see the tunnel clearly, and it is packed with mechanical guards. Several are already waiting on the steel walkway, and more are beginning to emerge from adjoining tunnels. Flame and sword and gun barrel swing outward, and the machines begin to advance.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_58.2].<br/>When door [two] is opened, read [section_61.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["58.2", "61.2"]
 		},
 		"58.2": {
 			"trigger": "Door [one] is opened",
 			"text": "They’re coming from the tunnels. Two smaller passageways connect to this main one, and no matter how many machines you strike down, reinforcements emerge a few moments later. You need to cut off their line, and you formulate a plan. The main tunnel’s supports have not aged well. More than once you’ve accidentally knocked chunks of rust off the metal scaffolding during the fight, and so you suspect that, if you can make your way to each of the smaller ingresses, you could smash their metal supports and bring them down, cutting off the enemy troops.",
 			"specialRules": "<p>The large debris has Cx(L+2) hit points. It is an enemy to you and an ally to all monsters. When it is destroyed, instead it becomes a wall. Remove all figures, tokens, and tiles occupying [b] or any hex beyond it, and then place another large debris wall in [b]. All removed characters become exhausted.</p><p>At the start of each round, until the large debris in this room is destroyed, spawn one Flaming Bladespinner at [a]. It is normal for two characters, elite each second spawn for three characters, or elite for four characters.</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["16.1"]
 		},
 		"61.2": {
 			"trigger": "Door [two] is opened",
 			"specialRules": "<p>The large debris has Cx(L+2) hit points. It is an enemy to you and an ally to all monsters. When it is destroyed, instead it becomes a wall. Remove all figures, tokens, and tiles occupying [d] or any hex beyond it, and then place another large debris wall in [d]. All removed characters become exhausted.</p><p>At the start of each round, until the large debris in this room is destroyed, spawn two Ruined Machines at [c]. These are normal for two characters, one is elite for three characters, or both are elite for four characters.</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["16.1"]
 		},
 		"16.1": {
 			"trigger": "All enemies are dead",
@@ -32,7 +35,8 @@
 				"text": "Gain 2 collective [lumber] and 2 collective [metal].",
 				"lockedOutScenarios": [{ "id": "026" }]
 			},
-			"sectionLinks": "Add [section_128.2] to the calendar in four weeks."
+			"sectionLinks": "Add [section_128.2] to the calendar in four weeks.",
+			"unlockCount": 2
 		}
 	},
 	"path": ["main", "58.2", "61.2", "16.1"]

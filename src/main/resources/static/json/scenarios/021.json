@@ -14,21 +14,24 @@
 			"introduction": "<p>You’ve been hiking for what seems an eternity. The wind screams in your ears and your body is growing stiff. Your hands and feet numbed long ago, and now your mind is beginning to fog.</p><p>When you left the fjords you did so in good spirits. With the exception of a few demonic bird-men, your exploration of the coast was going fine... until the storm arrived.</p><p>At first it was a thin flurry of snow, wisps of white flakes playing at your ears. Within minutes, though, it had turned vicious, the wind and ice whipping up so fiercely that at times you could see nothing but white as you marched.</p><p>Now you stumble on with your heads down, looking out for anything that can give you shelter.</p><p>Suddenly, the snow and ice give out beneath you, and just like that you are falling, plummeting. Your minds scramble. The ground appears. Then blackness.</p><p>When you awake, there is pain. Blood trickles from various wounds and gloops onto the icy ground.</p><p>A voice calls out, scratchy and high pitched.</p><p>“Oh dear, oh my, I hope you poor wretches are still alive,” it says. “I get so few visitors, I should hate to miss an opportunity to host.”</p><p>You blink away the fog and see a small humanoid creature made entirely of ice scampering toward you.</p><p>“Yes, movement! Wonderful!” It shrieks. “Oh please, won’t you follow me onto the terrace.”</p><p>The creature leads the way to the entrance of its home: a conical structure with walls of stone and crystalline ice. You are somewhere foreign, though, surrounded by unforgiving ice that seems to creep closer when you look away. You glance back to see the path behind you frozen over, and when you look ahead, your host is conveniently absent. Several piles of snow rise and then snap into solid forms—spindly demons that glitter in the pale light. They each take a shrill breath and stretch their long, wicked-looking tails. So much for hospitality.</p>",
 			"specialRules": "Door [one] is locked and will unlock when all revealed enemies are dead.",
 			"sectionLinks": "When door [one] is opened, read [section_51.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["51.1"]
 		},
 		"51.1": {
 			"trigger": "Door [one] is opened",
 			"text": "<p>As soon as you dispatch the creatures, the main door to this structure opens with a rumble.</p><p>“Oh my word,” the host calls out. “I can’t believe how rude my friends are being. But you mustn’t judge me by their behavior. Hurry on now, our celebration simply will not wait.”</p><p>You realize moving further into a trap isn’t the wisest decision, but you have a few words to give your host, and it’s not like there’s any other way out of here.</p><p>You step into the entry hall and the door behind you shuts, because of course it does. A low croaking groan rises, and a fist, bony and rotten, punches through the floor. A number of corpses pull themselves from the ground and shuffle toward you, their decayed muscles wasted into gray strings. “Oh dear!” The host shouts through the wall. “Such poor manners!”</p>",
 			"specialRules": "<p>Place all characters and character summons, in initiative order, in the closest empty hex on tile 15-C. Then remove door [one] and tile 14-B from the map.</p><p>The glowing orb has (L+2)xC hit points. It is an enemy to you and an ally to all monsters. Whenever it suffers damage, all characters and monsters suffer [damage] 2.</p><p>At the start of each round, until the glowing orb is destroyed, spawn one Living Bones at both [a] and [b]. These are normal for two characters, elite at [b] for three characters, or both elite for four characters.</p><p>Door [two] is locked and will unlock when the glowing orb is destroyed.</p>",
 			"sectionLinks": "When door [two] is opened, read [section_48.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["48.1"]
 		},
 		"48.1": {
 			"trigger": "Door [two] is opened",
 			"text": "<p>“Oh dear, oh dear. It looks like that nasty old frost has gotten into the doors again,” your host says in a distinctly mocking tone. “I guess you’ll have to come in through the side hall!”</p><p>You push through into a cramped room full of rubbish and corpses. “Sorry for the mess! Be a good egg and clean it up a bit while you’re back there.”</p>",
 			"specialRules": "Each crate and bookshelf has L+2 hit points. They are enemies to you and allies to all monsters.",
 			"sectionLinks": "When door [three] is opened, read [section_53.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["53.1"]
 		},
 		"53.1": {
 			"trigger": "Door [three] is opened",
@@ -37,7 +40,8 @@
 				"1": "One character recovers one card from their lost pile. Then the Prince of Frost performs:<br/>[heal] X, [target] C, [range] 5, where X is specified by the stat card.<br/>Then the Prince of Frost summons one Snow Imp. It is normal for two characters or elite for three or four characters.",
 				"2": "One character loses one card from their hand or two cards from their discard. Then the Prince of Frost performs:<br/>[push] 2, [target] C-1, [range] 1, [brittle]<br/>Then the Prince of Frost summons one Snow Imp. It is normal for two or three characters or elite for four characters."
 			},
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["136.3"]
 		},
 		"136.3": {
 			"trigger": "The Prince of Frost is dead",

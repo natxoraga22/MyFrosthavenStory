@@ -13,20 +13,23 @@
 		"main": {
 			"introduction": "<p>You’ve been following the trail of crystalline spikes—the Icespeakers’ “conduits”—for hours, and the trail has led you around the north edge of the Whitefire Wood. As you go, you wonder what the Algox are up to. Have these icy spikes been here forever, functioning as some sort of ancestral crop? Or have the Icespeakers begun amassing them only recently, expanding these fields to some unknown purpose?</p><p>The conduits have become larger and more densely packed as you’ve followed the trail, and now they are so close together that you’re forced to abandon your sled and move in on foot.</p><p>It doesn’t take long to pick up a trail after that. Heavy footprints mark the way, and following them, you come to the remains of a hard-lost battle. A great number of Algox corpses are strewn about in the snow, their huge bodies showing deep cuts, some missing limbs. But something is wrong with this scene: None of the Algox you’ve encountered before wield blades that could cause this sort of damage.</p><p>As you crouch to inspect a corpse further, it suddenly shifts. You jump back as it rises out of the snow, a rotting mass of undeath. You sigh and shake your head. Why can’t things just stay dead?</p>",
 			"sectionLinks": "When door [one] is opened, read [section_91.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["91.2"]
 		},
 		"91.2": {
 			"trigger": "Door [one] is opened",
 			"text": "<p>Something moves. A shape darts between the spikes. You spin and try to track it, but the shape is fast and hard to make out: a mound of snow shifting some thirty feet away. It turns and speeds directly toward you. There is no time to think; you act on instinct and jump out of the way a fraction of a second before two wicked blades shoot up and shred the air where you were just standing. The mound zips away through the conduits and turns back for another pass—but this time it’s not alone.</p><p>Now there are four of them, and they’re both heading your way.</p>",
 			"specialRules": "Spawn two Burrowing Blades at [a]. These are normal for two or three characters, or elite for four characters.",
 			"sectionLinks": "When door [two] is opened, read [section_54.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["54.1"]
 		},
 		"54.1": {
 			"trigger": "Door [two] is opened",
 			"text": "<p>You leap and roll, threading through the conduit forest in search of shelter from these subterranean attackers, but you can only make it a short way before your path becomes blocked. More of the burrowing creatures dart through the snow in front of you. You gird yourself to fight when, out of nowhere, you hear a voice shouting.</p><p>“Burning sun!” It’s an Algox standing on the far side of this horde, batting away one of the subterranean creatures. “I’ll rip your infernal gah—” The Algox’s words are muffled by the heavy sound of tunneling. You don’t know who the lone survivor pledges allegiance to, but you know he’ll have answers if you can get to him in time.</p>",
 			"specialRules": "The Algox Guard is an ally to you and an enemy to all other monsters. If the Algox Guard dies, the scenario is lost.",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["13.1"]
 		},
 		"13.1": {
 			"trigger": "All enemies are dead",

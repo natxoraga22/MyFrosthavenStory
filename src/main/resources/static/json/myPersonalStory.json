@@ -346,7 +346,7 @@
 				"passageOfTime": [{ "id": "163.3" }],
 				"outpostEvent": { "id": "WO-11", "chosenOption": "B" },
 				"retirements": [{ "id": "infuser", "additionalPersonalQuest": { "id": "14", "unlockedBuilding": "ALT" }}],
-				"newMembers": [{ "id": "hive" }],
+				"newMembers": [{ "id": "hive", "personalQuest": { "id": "15" }}],
 				"build": [{ "id": "hidedepot", "level": 1 }, { "id": "wallN" }]
 			}
 		},
@@ -385,6 +385,7 @@
 		},
 		{ "event": { "id": "WR-34", "chosenOption": "C" }},
 		{ "scenario": { "id": "027" }},
+		{ "section": { "id": "35.1" }},
 		{
 			"outpostPhase": {
 				"outpostEvent": { "id": "WO-63", "chosenOption": "B" },
@@ -479,6 +480,23 @@
 				"passageOfTime": [{ "id": "177.4" }],
 				"outpostEvent": { "id": "SO-43", "chosenOption": "B" },
 				"upgrade": [{ "id": "huntinglodge", "level": 4 }]
+			}
+		},
+		{ "event": { "id": "SR-34", "chosenOption": "B" }},
+		{ "scenario": { "id": "079" }},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-48", "chosenOption": "B" },
+				"retirements": [{ "id": "hive", "additionalPersonalQuest": { "id": "19" }}],
+				"newMembers": [{ "id": "metalmosaic" }],
+				"build": [{ "id": "hallofrevelry", "level": 1 }, { "id": "metaldepot", "level": 1 }]
+			}
+		},
+		{ "scenario": { "id": "071",  "randomScenarioSection": { "id": "81.1" }}},
+		{
+			"outpostPhase": {
+				"outpostEvent": { "id": "WO-44", "chosenOption": "A" },
+				"upgrade": [{ "id": "craftsman", "level": 8 }, { "id": "metaldepot", "level": 2 }]
 			}
 		}
 	]

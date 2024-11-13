@@ -57,6 +57,14 @@
 			"text": "Each character may buy one item from the purchasable item supply for its listed price or one material resource for 7 gold." 
 		}
 	},
+	"35.1": {
+		"title": "Puzzle Solution (puzzle #2.5)",
+		"unlockedBy": { "other": "Puzzle Book" },
+		"text": "<p>Ever since Crain has come to live in Frosthaven, he has been incredibly busy working out the intricacies of the ancient diary, but, given its glyphs match the markings on the ancient technology you found, at some point your patience gives out. You enter his longhouse with the various bits of technology and ask for his help.</p><p>Rather than being annoyed, Crain’s eyes light up at the sight of the machinery. “That’s quite a collection of interesting items you’ve got there! In fact, judging from these markings, it looks like they may all be parts of some larger device. Astounding!”</p><p>Crain begins to mutter to himself as he pores over all the details of the machinery. “Yes, perhaps if we insert this into that, this drill could be an arm of some sort...” You try to get a better look at what he is doing, but he shoos you away, demanding that you only come back when it is done.</p><p>He doesn’t call for you until a week later. You enter his abode once again and are astounded to see a giant mechanical creature standing before you with arms, legs, and a steam engine chugging away, providing power to a central core.</p><p>“I had to add a few parts here and there, but I’m sure this was the original intent,” Crain marvels. “It’s some sort of combat robot, but there’s still one problem. While I got its engine running, I can’t get its circuitry to activate. From what I can tell, it will remain dormant until a specific code phrase is uttered, and I have no idea what that is.”</p><p>Completely transfixed, you approach the machine and speak the words that you know to be correct: its name, Metal Mosaic.</p>",
+		"rewards": { 
+			"text": "Unlock [metalmosaic] class box."
+		}
+	},
 	"36.8": {
 		"title": "Puzzle Solution (puzzle #6)",
 		"unlockedBy": { "other": "Puzzle Book" },

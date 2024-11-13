@@ -15,18 +15,21 @@
 			"introduction": "<p>You just can’t. The Lurkers came to you for help, and if there is corruption here, there must be some way to excise it without destroying so much life. So once again the bathysphere plonks down into the cold water, and you sink into the dark unknown.</p><p>The descent takes several long minutes. You feel the shard calling as you sink. It’s insistent. It nags at you, urging you on. Then it’s there: the place you’ve seen only in your visions.</p><p>A dome rises up from the sea floor like a half-buried moon. Its sides are made from interwoven coral like an intricate piece of wrought iron, all of it stained a deep shade of purple. You think about how the Lurkers have been compelled to come to the northern sea, building structures to house a crown they’re not even sure exists. This will be a great seat of power for the Lurkers once the crown has been restored.</p><p>But for now, as you survey the scene, looking for a discreet entrance to the dome, you realize the bathysphere is not a craft built for stealth. Already, the Lurkers have noticed, and a force is amassing to intercept you.</p><p>In panic, all you can think to do is veer hard left, down toward the ocean floor where you see a cave opening that may just fit you. The cave entrance is narrow, but with a bit of finesse, you manage to squeeze the bathysphere inside. But the Lurkers still come, and there are just so many. You spin the vessel around and lay into a row of stalactites hanging just above the cave’s entrance, bringing them down in a shower of rock and rubble. Grit and sediment fills the water. For a time your window is a kaleidoscope of muddy browns and reds. When it settles, the cave entrance is a thick wall of broken stone. The Lurkers are cut off, but now you’ve sealed yourselves in here, stranded deep underwater with a dwindling air supply and no hope of rescue.</p>",
 			"specialRules": "<p>Each non-Lurker character gains [curse] twice (this is not a scenario effect).</p><p>Each ice pillar, cave rock, and stalagmite in the scenario has (L+1)xC/2 hit points (rounded down). They are enemies to you and allies to all monsters.</p><p>The large ice crystal is the bathysphere. Whenever any character adjacent to the bathysphere exits a hex, they may move it such that it occupies only empty hexes and one of those hexes is the hex exited.</p><p>Place seven damage tokens on each character’s mat. These represent their oxygen. Whenever any character performs an action, reduce their oxygen by one. Whenever any character performs an action while they have no oxygen, they suffer trap damage at the end of that action. Whenever any character occupies an air pocket [a], they refill their oxygen up to a maximum of seven.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_94.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["94.2"]
 		},
 		"94.2": {
 			"trigger": "Door [one] is opened",
 			"text": "<p>The passage you’ve chosen breaks loose and the debris falls in a slow avalanche. The monsters are furious. They lash your ships with heavy blows and scrape at the glass with claws and teeth.</p><p>You fight them off as best you can, trying to keep calm and conserve your air supply, but there are so many of them.</p><p>You peer through the gap you’ve just opened. It’s tight. You have no idea if it will lead you out of this place, but your options are drawing thin. You turn away from the rising swell of enemies and launch yourselves into the tunnel.</p>",
 			"sectionLinks": "When any door [two] is opened, read [section_16.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["16.3"]
 		},
 		"16.3": {
 			"trigger": "Any door [two] is opened",
 			"specialRules": "<p>Open all doors [two].</p><p>When ice pillar [b] is destroyed, the hex it occupied becomes an escape hex. When any character escapes while adjacent to the bathysphere, the bathysphere also escapes, removing it from the map.</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["97.2"]
 		},
 		"97.2": {
 			"trigger": "All characters and the bathysphere have escaped",

@@ -17,7 +17,8 @@
 				"1": "The Elder Ooze performs:<br/>[move] +1<br/>[attack] -1, the target must lose one item for no effect (any persistent effects of the item are no longer applied).<br/>Then all characters adjacent to the Elder Ooze gain one slime.",
 				"2": "The Elder Ooze focuses on the farthest enemy and performs:<br/>[attack] +1, [range] 8<br/>[push] 2, [target] all, [range] 1"
 			},
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["26.2"]
 		},
 		"26.2": {
 			"trigger": "All enemies are dead",

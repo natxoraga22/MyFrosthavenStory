@@ -18,7 +18,8 @@
 				"1": "The Seeker of the Abyss performs:<br/>[move] +0<br/>[attack] -2, [target] 2, all targets must lose one card from their hand or discard pile (if able).",
 				"2": "The Seeker of the Abyss creates one [immobilize] trap in any adjacent empty hex closest to an enemy. Then all allies add +1 [attack] to all their attacks this round."
 			},
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["107.4"]
 		},
 		"107.4": {
 			"trigger": "The Seeker of the Abyss is dead",

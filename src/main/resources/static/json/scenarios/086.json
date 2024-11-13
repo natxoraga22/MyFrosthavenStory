@@ -13,18 +13,21 @@
 			"introduction": "<p>It’s just before sundown when you walk out of the main gates toward where the guard said he saw the specter. The sky becomes somber, the air colder, and you wrap your cloak tighter around you, moving forward, despite the growing unease inside of you.</p><p>Just before you left, you gathered more information about this Lady in White. Some say she is the lost soul of a woodsman’s bride, murdered by wayward bandits on their wedding night. Some say she is a priestess, preying on the innocent unborn souls to keep herself immortal. They say that the only way to stop her is to destroy the pieces of her soul hidden in the towering balete trees in the woods.</p><p>You walk forward into the grove, but your progress is slowed by the trees’ roots, tangled over giant boulders. Then you see a flash of white from the corner of your eye. You turn and catch a glimpse of her horrifying visage before she melts into the trunk of a tree. You approach it and see her outline in the gnarls and knots of the bark. But, as quickly as she dissolved, she emerges and retreats to another tree deeper in. You move to follow, but notice something is amiss; there are other creatures here, hiding in the trees, waiting for their moment to strike.</p><p>You pull your attention away from the ghost and take stock of your surroundings. You are about to be attacked, yes, but you also notice that the trees this apparition inhabits have glowing green roots, and you know instinctively that this is how you will survive. Somehow you must destroy these trees.</p>",
 			"specialRules": "Each tree in the scenario has (L+2)xC hit points. They are enemies to you and allies to all monsters. Whenever any tree suffers damage but is not destroyed, it summons one normal Black Imp.",
 			"sectionLinks": "When door [one] is opened, read [section_6.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["6.3"]
 		},
 		"6.3": {
 			"trigger": "Door [one] is opened",
 			"text": "You move deeper still into the grove and see the last two balete trees. It will be a shame to destroy their imposing, gnarled forms, but it is the only way to get the Lady in White to face you.",
 			"sectionLinks": "When all three trees have been destroyed, read [section_181.4].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["181.4"]
 		},
 		"181.4": {
 			"trigger": "All three trees have been destroyed",
 			"text": "The last tree crashes to the ground, and, with nowhere else to flee to, the Lady in White emerges. The guard’s description is horribly accurate: bloody sockets where her eyes should be, and clad all in white. She lets out a soul-wrenching scream that makes you want to run and hide under your bed, but you gather your courage and attack.",
-			"specialRules": "Spawn one elite Ice Wraith at any empty hex the last destroyed tree occupied. This is the Lady in White. It has HxC hit points."
+			"specialRules": "Spawn one elite Ice Wraith at any empty hex the last destroyed tree occupied. This is the Lady in White. It has HxC hit points.",
+			"unlockedSections": ["174.1"]
 		},
 		"174.1": {
 			"trigger": "The Lady in White is dead",

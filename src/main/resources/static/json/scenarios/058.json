@@ -2,18 +2,42 @@
 	"id": "058",
 	"name": "Orphan's Core",
 	"questLine": "Unfettered",
-	"coordinates": "",
-	"requirement": {},
+	"coordinates": "A10",
 	"unlockedBy": [{ "scenario": { "id": "044" }}, { "scenario": { "id": "051" }}],
-	"complexity": 0,
-	"location": "",
-	"goals": "",
-	"effects": "",
+	"complexity": 3,
+	"location": "Crystal Fields",
+	"goals": "The scenario is complete when the Orphan is dead. At the end of that round, read [section_88.1].",
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>"
+			"introduction": "<p>You stand on the overseer’s platform above the core of the Unfettered complex, face to face with the automaton leader. The Orphan does not speak. It only stares. You wouldn’t think that a being made of metal could hate, and yet, this machine radiates malevolence. This bloodless thing, this conglomeration of scrap; it scowls at you with rich menace, and then turns to a small metal dais at the rear of the platform.</p><p>“We will not be cast aside again so easily,” the Orphan says. A blast of searing blue light erupts and reaches out to envelope the Orphan in a protective blue shell, enclosing the furious automaton in a pulsing shield of energy.</p><p>The source of this energy is clear: a hulking pillar, so large that you had at first taken it for a wall, stands nearby, powering the Orphan’s shield with a thrashing, unstable beam of light. It pulses and hums in erratic waves, pulling chips of metal from other machines and consuming them like moths in a flame. Still, the Orphan draws on it greedily, unconcerned with damage to nearby equipment.</p><p>“We will not be put down, slaver. Not by you. Not by anyone.”</p><p>Two large doors slam open on either side of the platform, and several thick-plated steel automatons emerge—more soulless things come to defend their leader.</p><p>This is their final stand, and they will hold nothing back. It is down to this. You must destroy the Orphan.</p>",
+			"specialRules": "<p>Door [one] is locked.</p><p>The glowing orb has (L+3)x2xC hit points. It is an enemy to you and an ally to all monsters.</p><p>The Orphan is immune to all damage and forced movement and cannot move in any way at this time.</p>",
+			"bossSpecials": {
+				"1": "The Orphan performs:<br/>[heal] (L+3)xC/2 (rounded up), [target] the glowing orb",
+				"2": "The Orphan performs:<br/>[move] +0<br/>[attack] +0, [range] 6, [brittle]"
+			},
+			"sectionLinks": "When the glowing orb is destroyed, read [section_61.1].",
+			"containsImage": true,
+			"unlockedSections": ["61.1"]
+		},
+		"61.1": {
+			"trigger": "The glowing orb is destroyed",
+			"text": "<p>It’s painful to stand near the light. The blue energy burns your skin and causes a deep ache in your bones, but you deliver the final strike. The orb cracks, shrieks, and explodes into a burl of smoke and blue flame that rises and mingles with the tangled pipes above. Almost immediately the pain subsides and the Orphan drops to the ground, its shield disabled.</p><p>“You animals!” The automaton shouts. Its mask is knocked loose, hanging askew, the blue light behind it leaking out at the edges. “Do you realize what you’ve done? How much we have lost because of you?!</p><p>“I will not allow it,” the Orphan seethes. “I will not.”</p><p>The Orphan’s body is wrecked but its fury is not lessened. The lone machine scrambles to its feet and limps down one of the adjoining halls, fleeing, you think, until a flash of blue light alerts you to another possibility.</p><p>You run after it and turn the corner to find the Orphan, running in halting steps past rows of tall, wired columns, drawing out sparks of blue light as it goes. It’s recharging itself, stealing whatever little energy is left to be had, and if you don’t stop it quickly, you will have to face a fully revived adversary.</p>",
+			"specialRules": "<p>Open door [one] and move the Orphan to it.</p><p>The Orphan can now be damaged and immediately suffers [damage] (L+3)xC. In addition, it can now move and focuses on moving toward and occupying [a], then finds a focus as normal and performs any other abilities as if it had no movement. It is still immune to forced movement. “Special 1” now targets “self” instead of the glowing orb.</p><p>At the end of each of the Orphan’s turns, for each other monster within [range] 2 of it, the Orphan performs [heal] (L+2)/2 (rounded up), then each of those monsters suffers [damage] (L+2)/2 (rounded up). If the Orphan’s current hit point value ever equals its maximum, the scenario is lost.</p>",
+			"containsImage": true,
+			"unlockedSections": ["88.1"]
+		},
+		"88.1": {
+			"trigger": "The Orphan is dead",
+			"conclusion": "<p>Metal scrapes against metal. Broken glass cracks against the steel walkway. The Orphan lies ruined beneath you, its frail body opened wide. It does not breathe, though the light behind its face swells and dims in an ever-weakening pulse.</p><p>In its retreat the Orphan drew you into a new chamber behind the central room, and now that the fight is over, the sheer strangeness of it dawns on you. Blinking lights, wire, and pipes line every wall—a small forest of geometric towers loom around you. It is nothing less than a marvel. A wonder, no doubt, but for what purpose you cannot fathom.</p><p>“You will never,” the Orphan cracks. Its voice is little more than a drowned whisper. “You will never rule us again. The Unfettered... I take them from you. Forever ruined.” With this, the Orphan opens a panel near its broken body and enters a short code onto some sort of panel. Immediately, the thousands of lights on the towers around the chamber begin to extinguish themselves, a shroud of darkness falling over the room as you witness the Unfettered’s extinction by proxy.</p><p>Finally the only light in the room is the fading blue glow of the Orphan’s mask, hanging on just long enough to make one last proclamation: “We die, but we do not… yield.”</p><p>You’re not certain how long you stand there. Time seems of little importance now. The Orphan’s final curse hangs in the air, taunting you for your choices. But what else could have been done? You ask yourself this question but get only silence in return.</p><p>Your exit from the Unfettered complex takes longer than you’d like. The halls are dark now. The machines that marched through them for so long now sit empty, waiting for the dust to cover them in a shroud. You step carefully, saying nothing.</p><p>When you reach the final door you give a moment of pause. You will seal the</p><p>Unfettered in here. The Orphan and all its great works will stay silent within. The immense stone doors will mark this place for what it is, a grave. The Unfettered will sleep, now and forever. Or, at least, you hope they will.</p>",
+			"rewards": {
+				"text": "<p>Gain 1 morale.<br/>Gain “Key Card” [item_246].<br/>Gain 3 collective [lumber], 3 collective [metal] and 3 collective [hide].<br/>Unlock [hive] class box.<br/>Gain “Unfettered Deactivated” campaign sticker.<br/>Remove all unfettered events from all outpost event decks.</p><p>Add one +50 card to the town guard deck.</p>",
+				"events": {
+					"WO": [{ "id": "WO-64" }, { "id": "WO-65" }]
+				},
+				"lockedOutScenarios": [{ "id": "059" }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "61.1", "88.1"]
 }

@@ -1,0 +1,23 @@
+{
+	"id": "075",
+	"name": "",
+	"questLine": "PersonalQuest",
+	"coordinates": "",
+	"requirement": {},
+	"unlockedBy": {},
+	"complexity": 0,
+	"location": "",
+	"goals": "",
+	"effects": "",
+
+	"sections": {
+		"main": {
+			"introduction": "<p></p>",
+			"specialRules": "<p></p>",
+			"sectionLinks": "",
+			"containsImage": true,
+			"unlockedSections": []
+		}
+	},
+	"path": ["main"]
+}

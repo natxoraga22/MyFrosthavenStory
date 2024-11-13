@@ -32,13 +32,13 @@
 			"unlockedSections": ["96.1"]
 		},
 		"96.1": {
+			"unlockCount": 2,
 			"trigger": "All enemies are dead",
 			"conclusion": "<p>Feather and flesh coat the ivory bridge, but the fiends are gone, their wasted bodies fallen into the crashing waters below. The birds that remain caw furiously and retreat westward toward a far-distant line of trees. The air grows silent except for the steady tide, and you give yourselves a moment to think.</p><p>The northern coast is a madness unique to itself. That such strange things could exist up here at the end of the world stretches your minds to the limits of wonder. What more awaits you beyond these bone bridges, if these are only the outermost ridges of the place?</p><p>You cross the fjords and see that the coast bends to the north. You can continue following it, hoping to reach wherever the shard of coral is leading you [scenario_21]. Or—you look back at the western forest—or you could make a small detour and see what oddities lie hidden in the trees [scenario_32].</p>",
 			"rewards": {
 				"text": "Gain “Dead Raven” [item_233].",
 				"scenarios": [{ "id": "021" }, { "id": "032" }]
-			},
-			"unlockCount": 2
+			}
 		}
 	},
 	"path": ["main", "44.1", "38.2", "12.6", "96.1"]

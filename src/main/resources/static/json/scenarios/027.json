@@ -32,7 +32,7 @@
 			"trigger": "Door [three] is opened",
 			"text": "Something about this place is sapping your strength at an alarming rate. A green pain creeping behind your eyes. Destroying the altars dulls it a bit, but then it just comes screaming back, stronger than ever. You should not be here, but the only way to banish this agony is to keep moving forward.",
 			"containsImage": true,
-			"unlockedSections": ["148.4", "71.5", "8.2"]
+			"unlockedSections": ["148.4", "71.5"]
 		},
 		"148.4": {
 			"trigger": "Door [four] is opened",
@@ -45,13 +45,13 @@
 			"unlockedSections": ["8.2"]
 		},
 		"8.2": {
+			"unlockCount": 4,
 			"trigger": "All altars are destroyed",
 			"conclusion": "<p>The monsters are dead, but you keep hacking at them until some sense of reason returns. It takes a good while. When you finish, you look around and find that the chamber has been reduced to scattered bones and splashes of ooze. Your boot prints mark out a chaotic dance in luminescent green, and the tendrilled beasts, whether or not they were the source of your waking nightmares, are rendered into a slushy heap.</p><p>The room, now wholly empty of life, sits vacant and cold except for a small stone box in its center. You kneel and open it, hoping that whatever treasure is stored in this long-forgotten place has been worth it. And, sure enough, a slim piece of pink coral stares back at you from the box.</p><p>You pocket the piece of the crown and then march back to where you started, hoping that the dead will stay that way.</p>",
 			"rewards": {
 				"text": "Gain 10 [xp] and 1 [checkmark] each.<br/>Gain “Coral Shard” campaign sticker."
 			},
 			"sectionLinks": "Read [section_36.7] now.",
-			"unlockCount": 5,
 			"unlockedSections": ["36.7"]
 		},
 		"36.7": {

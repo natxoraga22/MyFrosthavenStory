@@ -16,7 +16,8 @@
 				"1": "Spawn one chaos spark at [b] for two or three characters, or one spark at both [a] and [b] for four characters. Then the Lord of Chaos performs:<br/>[attack] -2, [target] C, [range] 5, [immobilize]",
 				"2": "Spawn one chaos spark at [a] for two characters, or one spark at both [a] and [b] for three or four characters. Then each enemy, even those with [immobilize], is forced to move one hex toward the closest unoccupied corridor hex."
 			},
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["86.4"]
 		},
 		"86.4": {
 			"trigger": "The Lord of Chaos is dead",

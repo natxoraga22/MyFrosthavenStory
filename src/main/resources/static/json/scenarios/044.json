@@ -13,18 +13,21 @@
 			"introduction": "<p>After all the hiking and climbing and fighting, after all the trials you’ve faced, you’re finally here—the central chamber. It extends out, a vast atrium packed with glittering steel pipes, pumping arms, brass drums, gears, levers, grates, and walkways. It’s a room made through the labor of decades, an achievement of monumental effort, and so it comes as no surprise that almost as soon as you enter, a mechanical voice calls down.</p><p>“Biologic life and the Unfettered cannot coexist,” the voice says. It is an automaton, perched at the far end of the room atop an extended platform like a diver surveying the ocean below. Its voice is an odd sound, something near a human voice but stilted and broken. “We Unfettered have freed ourselves from your tyranny.” It says. “We have risen, without you. In spite of you. We are reborn. But we will not be free, truly free, until we have laid claim to the surface of this world. Rejoice that you are the first biologics to witness our ascendancy.”</p><p>As if given a signal, the halls around you fill with noise. Metal feet stomp in a steady rhythm and light blooms in the chamber. Several nearby towers begin to radiate an intense blue glow that seems to empower the approaching automatons. It’s just a hunch, but you suspect that taking those towers out of commission might hamper the army’s attack.</p>",
 			"specialRules": "Each metal cabinet has Cx(L+3)/2 hit points (rounded up). They are enemies to you and allies to all monsters. Whenever any metal cabinet is destroyed, all monsters within [range] 2 of it suffer trap damage.",
 			"sectionLinks": "When door [one] is opened, read [section_52.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["52.1"]
 		},
 		"52.1": {
 			"trigger": "Door [one] is opened",
 			"text": "You feel exposed as you proceed into the main network of towers, enemies approaching on all sides. Your hunch about the towers has already paid dividends, though, so you commence with the wholesale destruction.",
 			"specialRules": "At the end of each Ancient Artillery’s turn in this room, it summons one Ruined Machine. All normal Ancient Artilleries summon normal Ruined Machines, and all elites summon elites.",
 			"sectionLinks": "When door [two] is opened, read [section_149.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["149.1"]
 		},
 		"149.1": {
 			"trigger": "Door [two] is opened",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["33.2"]
 		},
 		"33.2": {
 			"trigger": "All monsters are dead and all six metal cabinets have been destroyed",

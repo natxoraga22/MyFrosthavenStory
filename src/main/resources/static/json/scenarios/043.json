@@ -13,19 +13,22 @@
 			"introduction": "<p>You make your way back to the first chamber in the Unfettered complex—the narrow tunnel where you found Crain trapped in his makeshift prison—and prepare your next move. The plan is simple: reopen one of the access tunnels, and using Crain’s familiarity with the place, make your way to the core of the Unfettered complex.</p><p>“You know,” Crain says, standing next to you and fiddling with a bit of trussing near the tunnel entrance, “there is a certain beauty to this place, wouldn’t you say?” The Quatryl takes in a full breath and exhales as if you were on top of a mountain looking down at a grand vista rather than buried some ungodly distance underground. Beauty, sure. You pry open the barricade and get moving.</p><p>The access tunnel is a bit less refined than some of the others you’ve seen so far. The walls are plain stone girded by metal beams, and the passage quickly takes on a more rounded, almost tubular shape. After a few minutes of walking, you learn that the Unfettered are prepared for your invasion.</p><p>Just ahead of you stands a line of automaton guards that completely block the way forward. Steel arms, dimly glowing eyes—an entire garrison waiting here in case you came this way.</p><p>“Stand fast, my friends,” Crain says and moves to your side. “They cannot stand against us!”</p><p>The sentiment is touching, but you can already tell this fight will be far tougher than any you’ve faced yet.</p>",
 			"specialRules": "<p>Place one numbered token face-up on each character’s mat. Any character with a face-up token may forgo a top action (discarding the card instead) and flip the token face-down to perform either [attack] L+3, all adjacent enemies, [pierce] 5 or [attack] L+5, [range] 5, [pierce] 3, [pull] 3. Whenever any character long rests, they may flip their facedown token face-up again.</p><p>If any character becomes exhausted, the scenario is lost.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_117.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["117.2"]
 		},
 		"117.2": {
 			"trigger": "Door [one] is opened",
 			"text": "Well, you’ve got to hand it to the industrious little fellow—these strange devices Crain has engineered are making the impossible possible. You fight through the first wave of Unfettered, fully prepared to take on the next.",
 			"sectionLinks": "When door [two] is opened, read [section_2.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["2.3"]
 		},
 		"2.3": {
 			"trigger": "Door [two] is opened",
 			"text": "<p>There are just too many machines. You destroy one, and two more take its place. Crain’s devices, though powerful, are too small to make a dent in the Unfettered ranks. You need to change tack, and, apparently realizing the same thing, the Quatryl shouts over the battle.</p><p>“To the side! Up near the ceiling—a passage we can escape through.”</p><p>You spot the opening a little way ahead. It’s another tunnel branching away, and if you get inside, you can seal the opening behind you. It’ll be hard to cross the battlefield, but it’s your only chance. You hoist your weapon high and begin the push forward.</p>",
 			"specialRules": "<p>At the start of each round, spawn one Ruined Machine at either [a]. It is normal for two characters, elite each second spawning for three characters, or elite for four characters.</p><p>Each [a] is an escape hex.</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["101.2"]
 		},
 		"101.2": {
 			"trigger": "All characters have escaped",

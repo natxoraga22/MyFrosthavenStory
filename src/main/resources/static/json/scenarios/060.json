@@ -4,7 +4,7 @@
 	"questLine": "Lurker",
 	"coordinates": "G2",
 	"requirement": { "transport": "boat", "status": "6 Coral Shards" },
-	"unlockedBy": { "scenario": { "id": "053" }},
+	"unlockedBy": [{ "scenario": { "id": "053" }}, { "scenario": { "id": "054" }}],
 	"complexity": 2,
 	"location": "Biting Sea",
 	"goals": "The scenario is complete when the Fracture of the Deep is dead. At the end of that round, read [section_10.1].",
@@ -19,12 +19,14 @@
 				"2": "<p>The Fracture of the Deep performs:<br/>[move] +0 ([consumeAir]: [jump])<br/>[attack] +0 ([consumeFire]: +C [attack])<br/>[consumeLight][consumeWild][consumeWild]: Summon one Lurker Wavethrower</p><p>Any summoned Lurker Wavethrowers are normal for two or three characters, or elite for four characters.</p>"
 			},
 			"sectionLinks": "When one character has all six numbered tokens on their mat, read [section_115.4].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["115.4"]
 		},
 		"115.4": {
 			"trigger": "One character has all six numbered tokens on their mat",
 			"text": "<p>A blur of darkness and a screech. Another phantom Lurker falls, black ichor bursting from his body. That makes six. The Lurkers, which had only a moment ago been vicious knots of carapace and shadow, are dead, which leaves only the would-be king.</p><p>He does not shy away, this abyssal lord. His eyes, two obsidian orbs, look down on you with bottomless hate.</p>",
-			"specialRules": "Any character with all six coral shards on their mat can now damage and apply conditions to the Fracture of the Deep. This includes damage from negative hexes if the character performs a forced movement ability."
+			"specialRules": "Any character with all six coral shards on their mat can now damage and apply conditions to the Fracture of the Deep. This includes damage from negative hexes if the character performs a forced movement ability.",
+			"unlockedSections": ["10.1"]
 		},
 		"10.1": {
 			"trigger": "The Fracture of the Deep is dead",

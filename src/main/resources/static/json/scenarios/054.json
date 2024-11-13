@@ -12,11 +12,44 @@
 
 	"sections": {
 		"main": {
-			"introduction": "<p></p>",
-			"specialRules": "<p></p>",
-			"sectionLinks": "",
-			"containsImage": true
+			"introduction": "<p>The wreckage of the Lurker garrison has luckily been contained to small area, but, as you float towards it, the floating bodies of the unconscious Lurkers around you give you pause. How long will they remain this way? Exactly how much time do you have to dig out the coral shard you did all this to find?</p><p>Unearthing is a slow process; the submersible’s arms were hardly designed for this sort of work. But still you persist, prying up jagged slabs of stone and tossing them to the ground, and after several long minutes, you uncover something unexpected—the knobby claw of a Lurker.</p><p>It would make sense that a number of bodies got caught in the wave debris, unfortunately—after all, they were highly concentrated in the area—it’s just that this body seems particularly well preserved.</p><p>It’s a keen observation, but it comes a second too late. The claw shoots out and snaps at the water, barely missing a bathysphere arm. The pile of rock shifts and the Lurker pries himself loose, emerging dust-covered and furious.</p><p>It seems not everything is unconscious after all. You guess being buried by rubble has a tendency to wake one up from a psychic stupor. How many creatures lie in wait beneath the wreckage, you don’t know. You’ll just have to keep digging and fight whatever comes out.</p>",
+			"specialRules": "<p>Each non-Lurker character gains [curse] twice (this is not a scenario effect).</p><p>Door [one] is locked and will unlock and open when five objectives have been destroyed.</p><p>All hexes in the scenario are treated as water hexes for the purposes of Lightning Eel summoning and movement.</p><p>At the end of each round, if no monsters were on the map at any point during that round, one character suffers [damage] C-1.</p><p>Shuffle numbered tokens 1 to 6 face-down next to the map.</p><p>Each ice pillar and large cave rock in the scenario has Cx(L+1)/2 hit points (rounded down). They are enemies to you and allies to all monsters. Whenever any objective is destroyed, reveal one numbered token and resolve the corresponding effect based on character count, spawning any indicated monsters at any hex the obstacle occupied:</p><table class=\"table\"><thead><tr><th>Token</th><th>Two Characters</th><th>Three Characters</th><th>Four Characters</th></tr></thead><tbody><tr><th>1</th><td>One normal Lurker Wavethrower</td><td>One normal Lurker Wavethrower</td><td>One elite Lurker Wavethrower</td></tr><tr><th>2</th><td>One normal Lurker Soldier</td><td>One elite Lurker Soldier</td><td>One elite Lurker Soldier</td></tr><tr><th>3</th><td>One normal Lurker Clawcrusher</td><td>One normal Lurker Clawcrusher</td><td>One elite Lurker Clawcrusher</td></tr><tr><th>4</th><td>One normal Lurker Mindsnipper</td><td>One elite Lurker Mindsnipper</td><td>One elite Lurker Mindsnipper</td></tr><tr><th>5</th><td>Two normal Lightning Eels</td><td>Three normal Lightning Eels</td><td>Four normal Lightning Eels</td></tr><tr><th>6</th><td>The destroying figure suffers [damage] L+2</td><td>The destroying figure suffers [damage] L+4</td><td>The destroying figure suffers [damage] (2xL)+4.</td></tr></tbody></table>",
+			"sectionLinks": "When door [one] is opened, read [section_167.1].",
+			"containsImage": true,
+			"unlockedSections": ["167.1"]
+		},
+		"167.1": {
+			"trigger": "Door [one] is opened",
+			"specialRules": "<p>Door [two] is locked and will unlock and open when ten total objectives have been destroyed.</p><p>Shuffle the six numbered tokens face-down again.</p>",
+			"sectionLinks": "When door [two] is opened, read [section_13.3].",
+			"containsImage": true,
+			"unlockedSections": ["13.3"]
+		},
+		"13.3": {
+			"trigger": "Door [two] is opened",
+			"specialRules": "From now on, when any objective is destroyed, do not reveal a numbered token.",
+			"sectionLinks": "When the large cave rock on tile 4-A is destroyed, read [section_50.1].",
+			"containsImage": true,
+			"unlockedSections": ["50.1"]
+		},
+		"50.1": {
+			"trigger": "The large cave rock on tile 4-A is destroyed",
+			"text": "<p>Another piece of debris comes away with a flurry of trapped air and dust, and there, beneath it, you feel the shard. It’s practically singing now. You reach for it, but you are stopped.</p><p>In the blink of an eye, a blur of hard carapace lurches out of the new opening and slams against the side of your bathysphere, launching you away. The submersible reels. You spin, thrown from your footing, and wrestle for control of the ship before it crashes into the ocean floor.</p><p>You recover and reorient in time to watch this new enemy rise from the wreckage—a Lurker unlike any you’ve seen before.</p><p>He is a giant of this aquatic species, limbs thick as ship masts and shell glowing with an eerie bioluminescence. But far more unsettling are his eyes. They are lightless: round bottomless pools of ink, and as you look into them you can feel a palpable despair. It’s as if you were staring into an immense empty grave.</p><p>You feel a familiar tingling in your minds, similar to the sensation you felt when you first communicated with the Lurkers all those weeks ago. This glowing Lurker is talking to you. However, what rises in your mind is not a vision of images strung together into a thought. Instead, all you hear is a long, echoing noise: a yawning moan both immense and meaningless, chaos and agony and rage so pure that this could only be the voice of the abyss.</p>",
+			"specialRules": "<p>Spawn the Seeker of the Abyss at either hex the large cave rock occupied. Reduce its current hit points value to half its maximum (rounded up).</p>",
+			"bossSpecials": {
+				"1": "The Seeker of the Abyss performs:<br/>[move] +0<br/>[attack] -2, [target] 2<br/>All targets of the attack must lose one card from their hand or discard pile (if able).",
+				"2": "The Seeker of the Abyss creates one [immobilize] trap in any adjacent empty hex closest to an enemy. Then all allies (if any) add +1 [attack] to all their attacks this round."
+			},
+			"unlockedSections": ["21.3"]
+		},
+		"21.3": {
+			"trigger": "The Seeker of the Abyss is dead",
+			"conclusion": "<p>What terrible things that Lurker saw, you hope to never find out. The fight is over. You hang over his dying body and watch as the darkness flees from its face. Shadows vanish from the creature’s eyes like a fog lifting in the sun. Again the creature speaks to you, but this time the vision is clear.</p><p>You first see the corpse of a giant lying on its side on the ocean floor, life blossoming all around it as thousands of creatures thrive on the bounty; an oasis of paradise in the endless abyss... it is the Lurker’s “name”—Fallen Whale.</p><p>The name-image fades instantly and you see the shards of the coral crown in your hands, rising up and spinning around each other until they join, reunited and gleaming. The image comes with a rush of hope, then sorrow. The vision fades and the Lurker opens his claw, holding out the coral shard. It glitters in the low light and then Fallen Whale is still.</p><p>Everything is quiet. You hear only the whir of the bathysphere and the deep silence of the ocean.</p><p>You have what you came for, but the cost to get it was great: these Lurkers own desire for the shard turned against them in a horrible blast.</p><p>It takes some effort, but you manage to push down the rising tide of doubt and refocus on the task at hand. You pluck the new shard from the dead Lurker’s claw and secure it in the bathysphere’s hold, closer than ever to reuniting the crown.</p>",
+			"rewards": {
+				"text": "Gain 2 [checkmark] each.<br/>Gain “Coral Shard” campaign sticker.",
+				"scenarios": [{ "id": "060" }]
+			}
 		}
 	},
-	"path": ["main"]
+	"path": ["main", "167.1", "13.3", "50.1", "21.3"]
 }

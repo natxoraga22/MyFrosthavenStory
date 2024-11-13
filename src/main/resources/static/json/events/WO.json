@@ -1184,8 +1184,14 @@
 			}
 		}
 	},
-	"WO-64": {},
-	"WO-65": {},
+	"WO-64": {
+		"unlockedBy": { "scenario": { "id": "058" }},
+		"text": "TODO"
+	},
+	"WO-65": {
+		"unlockedBy": { "scenario": { "id": "058" }},
+		"text": "TODO"
+	},
 	"WO-66": {},
 	"WO-67": {},
 	"WO-68": {},

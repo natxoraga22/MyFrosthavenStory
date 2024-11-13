@@ -13,13 +13,15 @@
 		"main": {
 			"introduction": "<p>“You have proven yourself to be marvelous specimens.” The Collector’s voice echoes through the hallways as you make your way through them. “I can almost taste your life force. I’m confident it will be exquisite.”</p><p>You get to the end of the hallway and find elite Savvas guards blocking your advance. “All we need to do is subdue you...”</p>",
 			"sectionLinks": "When door [one] is opened, read [section_79.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["79.3"]
 		},
 		"79.3": {
 			"trigger": "Door [one] is opened",
 			"text": "The next room holds several more cages filled with Lurkers. As you start to walk through the room, the cage doors swing open. The screeching noise swells as they skitter out toward you.",
 			"sectionLinks": "When door [two] is opened, read [section_25.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["25.1"]
 		},
 		"25.1": {
 			"trigger": "Door [two] is opened",
@@ -29,7 +31,8 @@
 				"1": "The Collector performs:<br/>[move] +0<br/>[attack] +1, ([consumeAir]: +1 [target]), ([consumeFire]: [wound]), ([consumeIce]: [disarm])<br/>[consumeDark]: [curse], [target] all, [range] 1<br/>[air] [fire] [earth] [light]",
 				"2": "The Collector performs:<br/>[move] +1<br/>[attack] +0, ([consumeAir]: +1 [target]), ([consumeFire]: [wound])<br/>[consumeEarth]: [heal] C, self<br/>[consumeLight]: [shield] 1<br/>[air] [fire] [ice] [dark]"
 			},
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["128.3"]
 		},
 		"128.3": {
 			"trigger": "The Collector is dead",

@@ -31,7 +31,7 @@
 									<i class="fa-solid fa-arrow-down-long"></i>
 								</div>
 								<div x-jsz>
-									{{ scenarioSections[scenarioPathItem].trigger }}
+									{{ scenarioSections[scenarioPathItem]?.trigger }}
 									<strong>({{ scenarioPathItem }})</strong>
 								</div>
 							</div>
@@ -48,7 +48,7 @@
 								<div bs:textAlign="center">
 									<bs:button color="info" size="sm" x-jsz @click="addSectionToPath(availableSectionId)">
 										<i class="fa-solid fa-arrow-right" bs:me="1"></i>
-										{{ scenarioSections[availableSectionId].trigger }}
+										{{ scenarioSections[availableSectionId]?.trigger }}
 										<strong>({{ availableSectionId }})</strong>
 									</bs:button>
 								</div>

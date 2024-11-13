@@ -37,7 +37,8 @@
 			"rewards": {
 				"text": "Gain “Dead Raven” [item_233].",
 				"scenarios": [{ "id": "021" }, { "id": "032" }]
-			}
+			},
+			"unlockCount": 2
 		}
 	},
 	"path": ["main", "44.1", "38.2", "12.6", "96.1"]

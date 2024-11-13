@@ -25,7 +25,7 @@
 								[[#{scenario.path.clear}]]
 							</bs:button>
 						</bs:flex>
-						<template x-for="(scenarioPathItem,index) in scenarioPath">
+						<template x-for="(scenarioPathItem,index) in scenarioPath" x-bind:key="scenarioPathItem">
 							<div bs:textAlign="center">
 								<div x-show="index != 0" bs:py="1">
 									<i class="fa-solid fa-arrow-down-long"></i>
@@ -40,16 +40,16 @@
 				</template>
 
 				<!-- Next section -->
-				<template x-if="availableSections.length > 0">
+				<template x-if="availableSectionsIds.length > 0">
 					<div>
 						<bs:label>[[#{scenario.nextSection}]]</bs:label>
 						<bs:flex direction="column" bs:gap="2">
-							<template x-for="availableSection in availableSections">
+							<template x-for="availableSectionId in availableSectionsIds" x-bind:key="availableSectionId">
 								<div bs:textAlign="center">
-									<bs:button color="info" size="sm" x-jsz @click="addSectionToPath(availableSection)">
+									<bs:button color="info" size="sm" x-jsz @click="addSectionToPath(availableSectionId)">
 										<i class="fa-solid fa-arrow-right" bs:me="1"></i>
-										{{ scenarioSections[availableSection].trigger }}
-										<strong>({{ availableSection }})</strong>
+										{{ scenarioSections[availableSectionId].trigger }}
+										<strong>({{ availableSectionId }})</strong>
 									</bs:button>
 								</div>
 							</template>
@@ -66,39 +66,46 @@
 	<!-- ---------------- -->
 	<script th:fragment="scenarioFormJs" th:inline="javascript">
 		document.addEventListener("alpine:init", () => {
-			Alpine.data("scenarioFormData", (scenarioId, scenarioPath) => ({
-				scenarioIdSelect: null,
-
-				scenarioSections: {},
-				initialAvailableSections: [],
-				availableSections: [],
+			Alpine.data("scenarioFormData", (initialScenarioId, initialScenarioPath) => ({
+				scenarioId: null,
 				scenarioPath: [],
 
+				scenarioSections: {},
+				scenarioSectionsUnlockCount: {},
+				initialAvailableSectionsIds: [],
+				availableSectionsIds: [],
+
 				init() {
+					// Watchers
+					this.$watch("scenarioId", () => {
+						this.$dispatch("changed-scenario-id", this.scenarioId);
+						this.setupScenarioSections(this.scenarioId);
+					});
+					this.$watch("scenarioPath", () => this.$dispatch("changed-scenario-path", this.scenarioPath));
+
+					// Scenario ID select setup
 					this.scenarioIdSelect = new TomSelect("#inputScenarioId", {
 						options: Object.entries(this.$store.frosthaven.scenariosMap).toSorted().map(([scenarioId, scenario]) =>
 							({ value: scenarioId, text: scenarioId + ' · ' + scenario.name })
 						),
-						items: scenarioId,
-						onChange: newScenarioId => {
-							this.$dispatch("changed-scenario-id", newScenarioId);
-							this.setupScenarioSections(newScenarioId);
-						},
+						items: initialScenarioId,
+						onChange: newScenarioId => this.scenarioId = newScenarioId,
 						maxOptions: null
 					});
-					this.$watch("scenarioPath", () => this.$dispatch("changed-scenario-path", this.scenarioPath));
 
-					this.setupScenarioSections(scenarioId, scenarioPath);
+					this.setupScenarioSections(initialScenarioId, initialScenarioPath);
 				},
 
+				// Setup all variables. Function called every time the scenario changes
 				setupScenarioSections(selectedScenarioId, selectedScenarioPath) {
 					log.entry();
 					this.clearScenarioPath();
 					const selectedScenario = this.$store.frosthaven.scenariosMap[selectedScenarioId];
 					if (selectedScenario) {
-						this.scenarioSections = selectedScenario.sections;
-						this.initialAvailableSections = selectedScenario.availableSections;
-						this.availableSections = selectedScenario.availableSections;
+						this.scenarioSections = { ...selectedScenario.sections };
+						this.initialAvailableSectionsIds = [...selectedScenario.availableSections];
+						this.availableSectionsIds = [...selectedScenario.availableSections];
+
 						const scenarioPath = selectedScenarioPath ?? selectedScenario.path;
 						for (scenarioPathItem of scenarioPath) {
 							this.addSectionToPath(scenarioPathItem);
@@ -110,7 +117,8 @@
 				clearScenarioPath() {
 					log.entry();
 					this.scenarioPath = [];
-					this.availableSections = this.initialAvailableSections;
+					this.scenarioSectionsUnlockCount = {};
+					this.availableSectionsIds = [...this.initialAvailableSectionsIds];
 					log.exit();
 				},
 
@@ -124,10 +132,20 @@
 				computeAvailableSections(sectionId) {
 					log.entry(sectionId);
 					const section = this.scenarioSections[sectionId];
-					this.availableSections = this.availableSections.filter(availableSection => {
-						availableSection !== sectionId && !section.lockedOutSections.includes(availableSection);
+					// Remove current section and locked out sections
+					this.availableSectionsIds = this.availableSectionsIds.filter(availableSectionId => {
+						if (availableSectionId == sectionId) return false;
+						if (section.lockedOutSections.includes(availableSectionId)) return false;
+						return true;
 					});
-					this.availableSections.push(...section.unlockedSections);
+					// Add unlocked sections
+					for (unlockedSectionId of section.unlockedSections) {
+						this.scenarioSectionsUnlockCount[unlockedSectionId] = (this.scenarioSectionsUnlockCount[unlockedSectionId] ?? 0) + 1;
+						const unlockedSection = this.scenarioSections[unlockedSectionId];
+						if (this.scenarioSectionsUnlockCount[unlockedSectionId] >= unlockedSection.unlockCount) {
+							this.availableSectionsIds.push(unlockedSection.id);
+						}
+					}
 					log.exit();
 				},
 			}));

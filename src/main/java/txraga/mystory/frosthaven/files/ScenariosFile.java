@@ -41,9 +41,10 @@ public class ScenariosFile {
 			InputStream scenarioInputStream = new ClassPathResource(SCENARIOS_FOLDER_PATH + "/" + scenarioId + ".json").getInputStream();
 			Scenario scenario = objectMapper.readValue(scenarioInputStream, Scenario.class);
 			
-			// Set sections ids
+			// Set sections ids and default unlockCount
 			scenario.getSections().forEach((id, section) -> {
 				if (section.getId() == null) section.setId(id);
+				if (section.getUnlockCount() == 0) section.setUnlockCount(1);
 			});
 			// Set default available section
 			if (scenario.getAvailableSections().isEmpty()) scenario.setAvailableSections(List.of("main"));

@@ -13,14 +13,16 @@
 			"introduction": "You grip your weapon with resolve and then hop over the ship’s railing, ready to face whatever horrors await. This ship represents both a threat to Frosthaven and a chance to retrieve valuable supplies. You will cleanse the undead and do what you can to better the outpost.",
 			"specialRules": "<p>Each crate in the scenario can be looted via loot abilities, but not with end of turn looting. Any character can forgo a bottom action (discarding the card instead) to loot an adjacent crate. Place any looted crates on the looting character’s mat. Each character can hold any number of crates.</p><p>You will receive more rewards at the end of the scenario for looting more crates.</p><p>Any character can spend 2 movement points when occupying stairs [a] to go below deck. No figure can teleport between unconnected map tiles.</p><p>All starting hexes are escape hexes.</p>",
 			"sectionLinks": "The first time any character goes below deck, read [section_153.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["153.1"]
 		},
 		"153.1": {
 			"trigger": "Any character goes below deck",
 			"text": "You get the sick feeling that the situation will only worsen if you go below deck, but you know there will also be more supplies, and so you descend. In the hold, you find the remains of the crew, blue and frozen. A dry moan rises up from one of the corpses, and they stand, eager for you to join them on their endless journey into the abyss.",
 			"specialRules": "<p>Place the revealing character on stairs [b]. Stairs [a] and [b] are linked.</p><p>Any character can spend 2 movement points when occupying stairs [c] to go lower below deck.</p>",
 			"sectionLinks": "The first time any character goes lower below deck, read [section_109.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["109.2, 190.2"]
 		},
 		"109.2": {
 			"trigger": "Any character goes lower below deck",
@@ -32,7 +34,8 @@
 			"conclusion": "<p>With one final heave, you lug the final crate off the boat and onto the dock. You look up to see a Valrath man dressed in an ashen cloak and one bronze gauntlet with sharpened claws waiting in front of you. “Thank you for retrieving my cargo.”</p><p>He turns and nods to some others behind him, who take the crates and load them onto a sled for travel. You just stand there dumbfounded, reconciling with the fact that these were not the supplies for Frosthaven you’d hoped for. You’re about to ask what the crates are when the Valrath places a large sack of money into your arms.</p><p>“My suggestion is to burn the ship,” he says. “It’s really the only way to stop it.” He then takes off into the night, leaving your many questions unanswered.</p><p>You shrug. Sometimes, not knowing is the better choice.</p>",
 			"rewards": {
 				"text": "<p>Gain rewards based on the number of crates looted. Rewards are cumulative.</p><p>1: <span class=\"fw-normal\">Gain 10 collective gold.</span></p><p>2: <span class=\"fw-normal\">Gain 2 collective [lumber].</span></p><p>3: <span class=\"fw-normal\">Gain “Tri-Corner Hat” [item_195].</span></p><p>4: <span class=\"fw-normal\">Gain 1 prosperity.</span></p>"
-			}
+			},
+			"lockedOutSections": ["109.2"]
 		}
 	},
 	"path": ["main", "153.1", "109.2", "190.2"]

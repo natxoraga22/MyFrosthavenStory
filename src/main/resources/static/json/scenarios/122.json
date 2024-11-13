@@ -11,7 +11,8 @@
 		"main": {
 			"introduction": "<p>The Hungry Maw... The old Quatryl you met along the road has intrigued you with a tale of firepeppers and dangerous beasts, and now you find yourself following her toward an ancient cave.</p><p>“As far as I know, nobody has been to the cave of the Hungry Maw in almost a hundred years!” The Quatryl, named Noore, says. “Ever since it last woke up and demanded another plate of firepepper stew, we’ve been dreading this day.</p><p>“You’ve got the firepepper, and I’ve brought along an axenut, but the third ingredient—the dried mammoth bark—can only be found within the Maw’s cave, but the place has been overrun by deadly bears and strange, flying imps! And with the Maw about to wake up, we have been put in a dire situation. If the Hungry Maw is not fed and leaves its cave, it could mean destruction for the entire north!”</p><p>Noore stops just outside the mouth of a foreboding cave entrance. Stalactites hang from the ceiling like vicious teeth. “My great-grandmother was the last one to successfully cook a batch of the stew,” she says, passing you a scrap of paper. “This is the recipe passed down in my family. Hope you can figure it out and complete the stew.”</p><p>With determination, you head into the cave with Noore and find a black cauldron hanging above a pile of sticks. “I’ll start the fire and get the water boiling,” she says. “Just go and bring back the bark.” Noore points toward the left passage.</p><p>“Or, if you want to try putting the Maw to rest with steel,” she says, pointing to an ornate door to the right, “Go that way, but I can’t imagine it ending well.”</p>",
 			"sectionLinks": "When door [one] is opened (fighting the Hungry Maw), read [section_98.1].<br/>When door [two] is opened (solving the puzzle), read [section_152.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["98.1", "152.1"]
 		},
 		"98.1": {
 			"trigger": "Door [one] is opened",
@@ -22,14 +23,17 @@
 				"2": "The Hungry Maw performs:<br/>[shield] 1<br/>[move] +0, ([consumeFire]: +2 [move] and suffer [damage] 1)<br/>[attack] +0<br/>[consumeIce]: [push] 2, [target] all, [range] 1, [brittle]"
 			},
 			"sectionLinks": "The first time the Hungry Maw is reduced to at most HxC/2 (rounded down) hit points, read [section_151.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["151.1"],
+			"lockedOutSections": ["152.1"]
 		},
 		"151.1": {
 			"trigger": "The Hungry Maw is reduced to at most HxC/2 (rounded down) hit points",
 			"text": "Just when you think you’re winning the fight, the Maw shakes itself off, thumps the ground with its feet to knock you back, and then raises its head, letting out a resounding, echoing howl. You can hear distant answers from far behind you. More monsters are coming to join the fight.",
 			"specialRules": "<p>Open door [two].</p><p>The Hungry Maw performs [heal] LxC, self and loses all negative conditions. It is immune to damage until all revealed Snow Imps are dead.</p>",
 			"sectionLinks": "Return to [section_98.1] to reference its special rules, if necessary.",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["11.2"]
 		},
 		"11.2": {
 			"trigger": "The Hungry Maw is dead",
@@ -43,46 +47,56 @@
 			"text": "You leave behind the dryness of the Maw’s dwelling, searching for the mammoth bark. You descend into a dark and icy cave below the hall above. At the edge of your torches, you can see two paths: a long and treacherous path through a patch of ice frozen so clear, it could be a mirror; or a shortcut through a darker part of the cave, where the only things you can make out in the shadows are silhouettes of giant polar bears.",
 			"specialRules": "Door [one] is now locked.",
 			"sectionLinks": "When door [three] is opened, read [section_179.2].<br/>When door [four] is opened, read [section_172.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["179.2", "172.1"],
+			"lockedOutSections": ["98.1"]
 		},
 		"179.2": {
 			"trigger": "Door [three] is opened",
 			"text": "You thought you could sneak past the sleeping polar bears, but a Snow Imp has other plans, flying toward you and shrieking. You’re so close to the main chamber of the cavern system now, but there are so many creatures between you and the other side–and they’re all excited at the prospect of dinner.",
 			"specialRules": "Door [four] is now locked.",
 			"sectionLinks": "When door [five] is opened, read [section_145.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["145.1"],
+			"lockedOutSections": ["172.1"]
 		},
 		"172.1": {
 			"trigger": "Door [four] is opened",
 			"text": "You take another step along the path, thinking you’re through the icy danger, when the new cavern opens up to you, and you see a bridge of ice extending over some rather dangerous pits. There is no turning back now. The main chamber is on the other side of this path.",
 			"specialRules":"Door [three] is now locked.",
 			"sectionLinks": "When door [six] is opened, read [section_8.4].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["8.4"],
+			"lockedOutSections": ["179.2"]
 		},
 		"145.1": {
 			"trigger": "Door [five] is opened",
 			"text": "This is it! You see a growth of mammoth bark on the other side of the cavern. You are bound to find a few dried out pieces of it to collect.",
 			"specialRules": "<p>The goal treasure tile represents the mammoth bark.</p><p>Spawn the following monsters at the listed locations based on character count:</p><table class=\"table\"><thead><tr><th>Two Characters</th><th>Three Characters</th><th>Four Characters</th></tr></thead><tbody><tr><td>[c]: One normal Polar Bear.<br/>[d]: Three normal Snow Imps.</td><td>[c]: One normal Polar Bear.<br/>[d]: Three elite Snow Imps.</td><td>[c]: Three normal Polar Bears.<br/>[d]: One elite Snow Imp.</td></tr></tbody></table>",
 			"sectionLinks": "When the mammoth bark is looted, read [section_109.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["109.3"]
 		},
 		"8.4": {
 			"trigger": "Door [six] is opened",
 			"text": "This is it! You see a growth of mammoth bark on the other side of the cavern. You are bound to find a few dried out pieces of it to collect.",
 			"specialRules": "The goal treasure tile represents the mammoth bark.",
 			"sectionLinks": "When the mammoth bark is looted, read [section_109.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["109.3"]
 		},
 		"109.3": {
 			"trigger": "The mammoth bark is looted",
 			"text": "With the bark in hand, you just have to get back to Noore at the mouth of the cave to cook the stew.",
 			"specialRules": "<p>Spawn the following monsters at the listed locations based on character count:</p><table class=\"table\"><thead><tr><th>Two Characters</th><th>Three Characters</th><th>Four Characters</th></tr></thead><tbody><tr><td>[e]: One elite Ice Wraith.<br/>[f]: Three normal Snow Imps.</td><td>[e]: One elite Ice Wraith.<br/>[f]: Three elite Snow Imps.</td><td>[e]: Three normal Ice Wraiths.<br/>[f]: One elite Snow Imp.</td></tr></tbody></table>",
-			"sectionLinks": "When the character who looted the mammoth bark ends their turn adjacent to pot [a], read [section_162.2]."
+			"sectionLinks": "When the character who looted the mammoth bark ends their turn adjacent to pot [a], read [section_162.2].",
+			"unlockedSections": ["162.2"]
 		},
 		"162.2": {
 			"trigger": "The character who looted the mammoth bark ends their turn adjacent to pot [a]",
 			"text": "<p>You look at the ingredients you have: the firepepper, the axenut, and the pieces of the mammoth bark. You lay them out next to the boiling cauldron and take a look at the recipe scrap.</p><p>It seems needlessly complicated, but you look to Noore and get only a noncommittal shrug. You’ll have to figure this out yourself.</p>",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["18.2", "17.4"]
 		},
 		"18.2": {
 			"trigger": "The mammoth bark, axenut, and firepepper are combined and stirred in the pot with incorrect proportions",
@@ -94,7 +108,8 @@
 			"conclusion": "<p>You throw the ingredients in what you surmise are the proper proportions and Noore stirs the cauldron. She produces a tasting spoon, dips it in the stew, and then holds it out to you.</p><p>“Sample your work?” She asks. When you hesitate, she tries it herself and smiles. “Perfect!”</p><p>You lift the heavy cauldron full of stew and carefully carry it through the ornate door and into the inner chamber of the Hungry Maw’s dwelling. You see it pacing up and down the center of the room. It looks upon you and roars with an otherworldly sound.</p><p>“Feed me! Fill my craving! I am awakened with hunger, and my soul is cold!”</p><p>You set the cauldron down and back away. It sees the hot stew and descends upon it with surprising quickness, lifting the cauldron and pouring its contents into its unnaturally huge mouth. It groans with satisfaction and then lays down to rest in peace.</p><p>You carefully exit the cave, and Noore congratulates you. “Well, that should keep the monstrosity happy for another hundred years. I’ll try to pass down a less cryptic recipe to my ancestors this time.”</p>",
 			"rewards": {
 				"text": "Gain 15 [xp] each and 1 [checkmark] each."
-			}
+			},
+			"lockedOutSections": ["18.2"]
 		}
 	}
 }

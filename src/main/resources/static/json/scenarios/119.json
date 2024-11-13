@@ -13,20 +13,23 @@
 			"introduction": "<p>The Radiant Forest lives up to its name, its vegetation shrouded in dusty gold. With a careful fingertip, the Infuser brushes some of this powder off of a leaf, collecting it into a vial. “Exquisite,” they breathe, peering into the vial, eyes refracting the glitter. “From where does it derive, do you suppose? There must be a source—”</p><p>A chorus of menacing hisses interrupts. While you were preoccupied, a spitting drake descended from the tree branches. And it’s not alone. The ground rumbles and splits open with the segmented bodies of centipede-like horrors, burrowing blades. Their bristling legs glitter with powder, as do the drakes’ long tongues. The Infuser stiffens. “They’ve been ingesting it,” they whisper. “And now seem eager for more. It must be making them less cautious.”</p><p>You translate “less cautious” as also more dangerous. You reach for your weapons and the Infuser looks back down at the contents of the vial. “Perhaps,” they say with a mischievous smile, “I can help even these odds.”</p>",
 			"specialRules": "<p>Place the [infuser] miniature (if available) in [a] (otherwise use token [a]). They are the Infuser, an ally to you and an enemy to all monsters. They have 5+(3xL) hit points. On initiative 99 each round, they perform [move] 2, focusing on moving toward and opening door [one]. If the Infuser dies, the scenario is lost.</p><p>All loot tokens represent dust, which are not traded in for loot cards when looted but, instead, are placed in a shared pool which starts with four dust already in it. The Infuser and all character summons also perform end-of-turn looting, adding any dust to this pool.</p><p>Before the Infuser ends their turn each round, they may spend dust from the pool to perform one of the following abilities (as determined by you):</p><p><strong>Spend one:</strong> [move] 2, controlled by you.<br/><strong>Spend two:</strong> [heal] L+2, self.<br/><strong>Spend five:</strong> Convert any monster within [range] 2. The monster is now an ally to all characters, character summons, and the Infuser and an enemy to all other monsters until it dies or another monster is converted.</p><p>You will receive more rewards at the end of the scenario for having more unspent dust.</p>",
 			"sectionLinks": "When door [one] is opened, read [section_96.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["96.2"]
 		},
 		"96.2": {
 			"trigger": "Door [one] is opened",
 			"text": "<p>Exploring further, you encounter a frozen creek which reflects the sun more than a sheen of ice should. The Infuser starts forward, and you don’t manage to pull them back this time. They have already alerted the monsters around the creek. Among more spitting drakes and burrowing blades, you spot some newcomers to the powder buffet: a vortex of dark birds expands and blots out the sky.</p><p>The Infuser is standing in their midst, studying the ice. “The patterns in the current,” they say excitedly, “indicate the source isn’t far upriver. We’ll go, and— what’s that? Ah yes, these adversaries.” With a wearisome glance at a charging drake, they unsheathe their claymore. You rush in to help.</p>",
 			"specialRules": "The Infuser now focuses on moving toward and opening door [two], ignoring the effects of all icy terrain.",
 			"sectionLinks": "When door [two] is opened, read [section_161.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["161.2"]
 		},
 		"161.2": {
 			"trigger": "When door [two] is opened",
 			"text": "<p>Upriver, the forest increases in density, heavy boughs shadowing you, wind shaking off periodic cascades of powder like snowfall. The Infuser seems in their element, laughing quietly and crystal skin gilt-edged. Eventually, the air is filled with cracking and rushing, as this near the heart of the wood the creek thaws, energized from the latent power source.</p><p>You hear the tell-tale sounds of more monsters too. Caws and skitterings and the agitated flapping of wings. At the next bend in the river you spot them, the usual host, and polar bears this time too, their fur blazing with gold. They will need to be defeated before you can progress further.</p>",
 			"specialRules": "The Infuser now focuses on moving toward and occupying [b], ignoring the effects of all difficult and icy terrain.",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["176.2"]
 		},
 		"176.2": {
 			"trigger": "The infuser occupies [b]",

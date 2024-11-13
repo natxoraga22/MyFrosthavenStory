@@ -12,13 +12,15 @@
 			"introduction": "<p>It’s been six days of marching through the snow with Gem as your guide. The too-old Orchid hasn’t suggested the bitter cold has any effect on her, but the sheer weight of crystals grown on her body over a lifetime has meant the trip, which should have been two days at most, has taken the better part of a week. She finally takes a seat on a rocky outcropping and points a heavy finger at the stone doorway in front of you.</p><p>“Well, this is the part I’m paying for. Prison is just this way, I trust you’ll have no trouble whatsoever. It would be a true surprise if any of the guards lasted this long!” She settles in, humming to herself.</p><p>The stone door’s lock has long ago rusted away, and the chamber beyond is dark and silent—no one has disturbed this for what feels like centuries. You wonder what kind of prison this even is.</p><p>You find a sconce and light it. By some unseen mechanism, the fire jumps across the room, lighting the area in a warm glow. The prison has a high ceiling with a thirdstory catwalk, and illuminated before you is a massive cell door, shut tight.</p><p>Before you can deal with the door, though, you’ll need to deal with the guards, which are not as long-dead as you had hoped. So much for this being an easy job.</p>",
 			"specialRules": "<p>Door [one] is locked.</p><p>All figures on any tile 1 treat all figures on tile 13-C as in range and line-of-sight for any ranged attack. All monsters on any tile 1 do not move off their tiles unless forced.</p>",
 			"sectionLinks": "The first time two characters simultaneously occupy both pressure plates [a] at the end of a turn, read [section_127.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["127.3"]
 		},
 		"127.3": {
 			"trigger": "Two characters simultaneously occupy both pressure plates [a] at the end of a turn",
 			"text": "The heavy door to the prison swings open, but rather than a typical cell, there’s just a single wooden box on a pedestal. Before you can retrieve it, you hear the heavy thud of stone feet shuffling in the room.",
 			"specialRules": "Open door [one].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["189.5"]
 		},
 		"189.5": {
 			"trigger": "All enemies are dead and the goal treasure tile has been looted",

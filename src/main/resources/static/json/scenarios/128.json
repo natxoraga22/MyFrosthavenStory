@@ -14,63 +14,73 @@
 			"introduction": "<p>The setting sun fades as you walk down into The Crater, knocking the snow from your boots. It’s not especially crowded yet, but the regulars are already settling in. A Quatryl musician fiddles with a tune in the corner, and you see Nits and Narb, the two drunkards you “saved” along the road, wave you over to their table. You hesitate, but they are already heading for you instead and look to be accompanied by an individual with fiery red hair.</p><p>The two brothers call for a round and greet you like kin. You are almost inebriated just from the smell coming off them, and they’re laughing so hard, you can’t tell if they’re dying. They introduce you to Derrick Windmere, who doesn’t particularly look like he fits in with the pair, but also looks like he’s had a few himself.</p><p>The brothers begin to tell Derrick how you saved them from certain death one time, and, even if you wanted to disagree, between the two of them, you couldn’t get a word in edgewise.</p><p>It starts with how you were all traveling together, back when they did a little mercenary work, of course, and you were accosted by Abaeli, Lurkers, Algox, and Unfettered. Derrick questions the assortment with a chuckle, but Narb just says, “Exactly.”</p><p>Mugs of ale are brought to the table, and Narb tells how he and his brother were worn out from a previous engagement and you managed to convince them, albeit after a fair amount of effort, to hang back and allow you to prove you were worthy of accompanying them.</p><p>“And then WHAM!” Nits slams his mug against the table, splashing ale everywhere, but effectively getting people’s attention. “You see the toughest looking one of the party here, right? Well, before any of them truly had their bearings, those beasts bludgeoned that one good!”</p><p>“But don’t worry,” Narb assures Derrick. “That’s just where things get interesting.”</p>",
 			"specialRules": "<p>This scenario can only be played once and cannot be lost.</p><p>The character with the highest current hit point value reduces that value to 1.</p><p>Do not set up the Steel Automaton monster ability deck. Instead, all Steel Automatons use the Imp monster ability deck.</p><p>Whenever any Lurker Wavethrower would summon a Lightening Eel, it summons one Vermling Scout with a current hit point value of 1 instead. All Abael Scouts act before Vermling Scouts.</p><p>All doors are locked.</p><p>Shuffle the twelve numbered tokens face-down next to the map. At the start of each round reveal three tokens. These represent the embellishments for that round, which you are encouraged to complete. After revealing embellishments, any character may short rest before card selection.</p><p>All characters and character summons contribute collectively toward embellishments, and each can only be completed once per round. Place damage tokens next to the corresponding embellishment to help track any progress on it, if necessary. Whenever any embellishment is completed, place one damage token above the round track instead.</p><p>The embellishments are as follows:</p><p>[one] Loot exactly C loot tokens.<br/>[two] Perform C or more basic actions.<br/>[three] Suffer damage from C or fewer attacks.<br/>[four] Spend Cx3 or more movement points.<br/>[five] Perform exactly Cx2 attacks.<br/>[six] Use C or more items.<br/>[seven] Kill exactly C enemies.<br/>[eight] Give C or more negative conditions.<br/>[nine] Perform C or more heal abilities.<br/>[ten] All characters short rest.<br/>[eleven] Perform C or more actions with lost icons.<br/>[twelve] Earn Cx2 or more XP.</p><p>At the end of each round, place all three revealed embellishments in a separate discard pile, removing any progress made on them.</p>",
 			"sectionLinks": "At the start of the second round, read [section_170.1].<br/>The first time any character becomes exhausted, bookmark your current section and read [section_135.3].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["135.3", "170.1"]
 		},
 		"170.1": {
 			"trigger": "Start of the second round",
 			"text": "<p>You sip your pint and notice a couple patrons seem to have their ears bent to the story. Some have even moved their chairs to hear better.</p><p>“Any wind in the mercenaries’ sails was stifled, though, upon witnessing the nearby ruins get swallowed up by a cave, holding more enemies in its maw,” Nits continues, his beard in his mug. “I recall the fear in their eyes – the breath departing them as panic set in.”</p>",
 			"specialRules": "<p>Flip over tile 2-I to 2-J, connect it as shown, and open door [one]. Relocate door [four] to [a]. If there are any figures, tokens, or overlay tiles in [a], place them in the closest viable hex.</p><p>All characters discard one card from their hand (if able).</p>",
 			"sectionLinks": "At the start of the third round, read [section_152.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["152.2"]
 		},
 		"152.2": {
 			"trigger": "Start of the third round",
 			"text": "<p>Eros, the Savvas playwright, moves from the corner of The Crater to pull up a chair next to you and begins jotting down notes. “Don’t mind me, gentlefolk,” it says, flipping back its long scarf to avoid soaking it in ale.</p><p>Narb takes a swig of your mug and picks up the tale, “I let out a war cry so terrifying, it shook the enemy to the core!” He flicks his long hair back, reenacting the moment, “RAHHH!!!”</p>",
 			"specialRules": "<p>Immediately kill any C enemies with the lowest current hit point values. This does not contribute toward embellishments.</p><p>All characters gain [ward], and the two characters with the highest and lowest current hit point values switch those values with each other, neither exceeding their maximum.</p>",
-			"sectionLinks": "At the start of the fourth round, read [section_176.3]."
+			"sectionLinks": "At the start of the fourth round, read [section_176.3].",
+			"unlockedSections": ["176.3"]
 		},
 		"176.3": {
 			"trigger": "Start of the fourth round",
 			"text": "<p>Nits and Narb argue over minute details you couldn’t name if you tried, each saying the other is clearly wrong and looking everywhere but at each other. A stranger chimes in, and that’s when you notice most of The Crater seems to now be invested in this tale. You also notice Derrick staring at you, smiling.</p><p>A chair drags across the floor, and Nits gets up to relieve himself.</p><p>“Anyway,” Narb continues, “like I was saying, it only got worse. Apparently, nobody noticed the Abaeli rowing up on an iceberg until it landed to the north. The fish folk came whispering ill will. You could actually see it, the words heavy and black, slithering through the air and into our mercenaries’ ears.”</p>",
 			"specialRules": "Connect tile 1-A as shown. All characters gain [bane], [impair], and [curse].",
 			"sectionLinks": "At the start of initiative 67 read [section_172.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["172.2"]
 		},
 		"172.2": {
 			"trigger": "Start of initiative 67",
 			"text": "<p>“Um, Narb?” Derrick tries to move the large man but only manages to stir up a heavy snore.</p><p>“He’s drooling,” Eros laughs.</p>",
 			"specialRules": "Any figure that did not have a turn yet this round will not have one. It is now the end of the fourth round. Do not perform any long rests and return any cards that were not played to their character’s hand.",
-			"sectionLinks": "At the start of the fifth round, read [section_124.3]."
+			"sectionLinks": "At the start of the fifth round, read [section_124.3].",
+			"unlockedSections": ["124.3"]
 		},
 		"124.3": {
 			"trigger": "Start of the fifth round",
 			"text": "<p>Amidst the snoring, everyone sits around recapping the events and drawing themselves in closer to your table. Eros, on the other hand, writes down a few more lines, adjusts its scarf, and then heads off to find Nits.</p><p>“Quite the adventure, my new friends,” Derrick holds up his pint with a winking nod as more mugs are brought to the table. “You know, I am actually in the market for some mercenaries. Assuming you’re half as good as these fellows claim, well, we should talk—with sober minds, of course. See—”</p><p>“Not now, Dirk,” Nits stumbles his wiry frame back to his seat, cutting off the nobleman. “Where were we?”</p><p>“Apparently, we left off during nap time,” someone in the back jokes.</p><p>“Narb!” Nits gives his brother a whack, but the snoring continues. Nits shrugs and picks up the story anyway. “Right, even the beasties were tuckered out, and we all decided to call a truce...”</p>",
 			"specialRules": "<p>No turns are performed this round, and no monster or character reveals or plays any cards. All characters recover up to three of their lost ability cards and collectively recover any C items. All figures perform [heal] L, self. Shuffle all monster ability decks, and shuffle the twelve numbered tokens facedown next to the map, but do not draw any this round. Then relocate door [four] to [b]. If there are any figures, tokens, or overlay tiles in [b], place them in the closest viable hex.</p><p>Each character swaps places with another character, such that no character occupies the same hex they occupied at the start of the round.</p>",
-			"sectionLinks": "At the start of the sixth round, read [section_139.1]."
+			"sectionLinks": "At the start of the sixth round, read [section_139.1].",
+			"unlockedSections": ["139.1"]
 		},
 		"139.1": {
 			"trigger": "Start of the sixth round",
 			"text": "<p>“Okay, and after the truce?” Eros asks.</p><p>“It was the truce that allowed our friends to be flanked. As enemies approached to their west, a cave rose up from the earth to the east, and more poured out.”</p><p>Derrick puts down an empty mug, coughing as he rushes to speak, “But that cave already emerged!” Half the room agrees. The other half just looks confused.</p><p>“No, Rodrick, the land there was flat before.” Nits pats the nonplussed noble and adopts a patronizing tone. “Maybe you should slow down if you can’t remember things right.”</p>",
 			"specialRules": "<p>Open door [three].</p><p>Remove everything except the water tile from tile 2-J. If any character is removed, place them in the closest empty hex on tile 15-A. Set up tile 2-J again as shown as if just revealed.</p><p>Instead of revealing monster ability cards during ordering of initiative this round, choose and reveal one card for each monster set on the map from their respective decks, then shuffle the remainder of those decks.</p>",
 			"sectionLinks": "At the start of the seventh round, read [section_166.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["166.2"]
 		},
 		"166.2": {
 			"trigger": "Start of the seventh round",
 			"text": "<p>New patrons wander in and gravitate toward your table, curious about the gathering around it. Narb suddenly twitches in his sleep and begins to flail about, spouting high-pitched gibberish. Then comes another loud snore, and he settles back down.</p><p>Nits doesn’t miss a beat, though, “Exactly, Narb. That’s when the strangest thing of all happened. Believe it or not, the Great Oak itself sprouted up amidst the chaos for a front-row viewing of history! It said, ‘Blessings!’”</p><p>Nits stands and makes a big flourish with his arms, showering the front row in droplets of ale. People can’t help but smile and applaud.</p>",
 			"specialRules": "<p>Place one tree in any three starting hexes. Remove everything in these hexes from the map except for any figures, which are instead placed in the closest empty hexes.</p><p>All characters gain [bless] and their base attack values are doubled this round.</p>",
-			"sectionLinks": "At the start of the eighth round, read [section_132.4]."
+			"sectionLinks": "At the start of the eighth round, read [section_132.4].",
+			"unlockedSections": ["132.4"]
 		},
 		"132.4": {
 			"trigger": "Start of the eighth round",
 			"text": "<p>Narb suddenly darts awake amidst a foul smell, yells, “They came from the ground!” And then rushes off to relieve himself.</p><p>“They did?” Nits appears to be momentarily caught off guard. “Right, they did! Vermlings had been crawling about in the snow, underfoot the whole time, passing out potions!”</p><p>“As in, literally underfoot?” Eros asks, looking to you with believable curiosity. Everything is going a little fuzzy for you at the moment, but it sounds accurate enough, so you nod.</p><p>“Please!” Nits cries. “Can I just tell the story? I was there, after all, battling these elusive creatures with my very own eyes!”</p>",
 			"specialRules": "<p>Open door [four] and spawn C elite Vermling Scouts at [four]. All monsters perform [heal] 919, self. C monsters closest to any characters gain [invisible].</p><p>The initiative order is reversed this round, starting with the highest initiative. All characters act before their summons, and all Vermling Scouts act before Abael Scouts.</p>",
-			"sectionLinks": "At the start of the ninth round, read [section_186.4]."
+			"sectionLinks": "At the start of the ninth round, read [section_186.4].",
+			"unlockedSections": ["186.4"]
 		},
 		"186.4": {
 			"trigger": "Start of the ninth round",
 			"text": "<p>Derrick, Eros, and seemingly the whole of the northern waste waits with bated breath for Nits to carry on with the tale, “And then?”</p><p>“Hold on, which one of these are mine?” He looks around at the assortment of mugs on the table, “Did I drink this already, or is it yours?” Eager to hear more, everyone seated around him starts pouring their ale in his mug until it overflows, and he’s overcome with joy. “Aw... thank you,” he weeps. “I love you all!”</p><p>“Just get on with it,” Eros urges. “What happens next?”</p><p>“Like the tears down my cheeks, the sky cried a single, fiery streak that knocked down bits of the heavens upon the reddened snow, leaving many nearer to death.”</p>",
-			"specialRules": "<p>All figures reduce their current hit point value to 1. Place three snow rocks in any empty hexes on tile 15-A (if able).</p>"
+			"specialRules": "<p>All figures reduce their current hit point value to 1. Place three snow rocks in any empty hexes on tile 15-A (if able).</p>",
+			"unlockedSections": ["196.3"]
 		},
 		"135.3": {
 			"trigger": "Any character becomes exhausted",
@@ -84,7 +94,8 @@
 			"rewards": {
 				"text": "<p>Completed seven or less embellishments: Gain 1 morale.</p><p>Completed eight to fifteen embellishments: Gain 2 morale.</p><p>Completed sixteen or more embellishments: Gain 3 morale and “Befuddling Mug” [item_215].</p>"
 			},
-			"sectionLinks": "Add [section_100.3] to the calendar in three weeks."
+			"sectionLinks": "Add [section_100.3] to the calendar in three weeks.",
+			"lockedOutSections": ["135.3"]
 		}
 	},
 	"path": ["main", "170.1", "152.2", "176.3", "172.2", "124.3", "139.1", "166.2", "132.4", "186.4", "196.3"]

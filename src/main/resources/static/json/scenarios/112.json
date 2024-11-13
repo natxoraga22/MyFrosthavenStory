@@ -13,18 +13,21 @@
 			"introduction": "<p>You stare at your ceiling in the dead of night, the tiny howls keeping you awake. Come on, Wolfie, you think to yourself, silently pleading with the tiny pup, who remains unaffected by your misery.</p><p>The wolf cub you found hasn’t stopped since coming home, chewing on everything, running around non-stop, and howling at every sound. You know Wolfie is just as miserable as you are. You finally give in and take Wolfie for a walk outside. You wander through the streets of Frosthaven, watching Wolfie sniff around before moving to the next area, running to keep up. As you get to the border of the outpost, Wolfie bolts through a gap in a nearby wall. Concerned, you follow.</p><p>The pup leads you into a nearby field, where two adult wolves are waiting. Their body language suggests they are not friendly, and they move protectively in front of Wolfie and growl. Could they be the wolf cub’s parents? You put your hands up reflexively and kneel, trying to make yourself nonthreatening.</p><p>Suddenly, Wolfie bolts out from behind both of the adult wolves toward you, leaping into your arms and licking your face. That seems to be enough to calm the larger ones down, and they walk up to you and sit. As you calm Wolfie, you notice both wolves are staring off into the distance, then looking at you, then gazing off again. It’s as if they want you to follow them.</p><p>You nod and motion for them to lead so you can help. All three wolves start walking in the same direction slowly, allowing you to keep pace. They lead you to a cave, but stop outside. You peer inside the cave and the largest wolf gives a quick bark in affirmation. You head in and find it crawling with large creatures made of stone and moss, and worm-like creatures with bladed appendages. This must be the wolves’ home, now overrun with unwelcome guests. Time to clean house.</p>",
 			"specialRules": "The two Hounds have twice their maximum hit point values. They are allies to you and enemies to all other monster types. Any character can lose one card from their hand or two from their discard pile to negate one source of damage to a Hound. If either Hound dies, the scenario is lost.",
 			"sectionLinks": "When door [one] is opened, read [section_97.1].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["97.1"]
 		},
 		"97.1": {
 			"trigger": "Door [one] is opened",
 			"text": "You notice a section of the wall that has recently crumbled, leaving a gap you can fit through. A narrow corridor stretches before you, and you can make out the figures of several dark, winged creatures covered in tentacles.",
 			"sectionLinks": "When door [two] is opened, read [section_156.2].",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["156.2"]
 		},
 		"156.2": {
 			"trigger": "Door [two] is opened",
 			"text": "A small whine from Wolfie at your side helps to urge you forward. You move further through the corridor and finally find the nest for these demons. You draw your weapon, ready to evict some unwanted residents.",
-			"containsImage": true
+			"containsImage": true,
+			"unlockedSections": ["30.3"]
 		},
 		"30.3": {
 			"trigger": "All enemies are dead",

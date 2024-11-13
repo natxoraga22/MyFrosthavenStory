@@ -19,18 +19,23 @@
 </head>
 
 <body>
-	<!-- NAVBAR -->
-	<th:block th:replace="~{layouts/layoutFragments :: navbar}"/>
+	<div id="app">
+		<!-- NAVBAR -->
+		<th:block th:replace="~{layouts/layoutFragments :: navbar}"/>
 
-	<!-- CONTENT -->
-	<main role="main" class="container-xl">
-		<div class="frosthaven">
-			<div layout:fragment="content"></div>
-		</div>
-	</main>
+		<!-- CONTENT -->
+		<main role="main" class="container-xl">
+			<div class="frosthaven">
+				<div layout:fragment="content"></div>
+			</div>
+		</main>
 
-	<!-- MODALS -->
-	<div layout:fragment="modals"></div>
+		<!-- MODALS -->
+		<div layout:fragment="modals"></div>
+	</div>
+
+	<!-- COMPONENTS -->
+	<div layout:fragment="components"></div>
 
 	<!-- JAVASCRIPT -->
 	<th:block th:replace="~{layouts/layoutFragments :: jsLinks}"/>

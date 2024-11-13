@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<th:block th:fragment="section">
+	<!-- TEMPLATE -->
+	<script type="text/x-template" id="sectionTemplate">
+		<h1>THIS IS A SECTION</h1>
+	</script>
+
+	<!-- JAVASCRIPT -->
+	<script>
+		const FhSection = {
+			template: "#sectionTemplate"
+		};
+	</script>
+</th:block>
+</body>
+</html>

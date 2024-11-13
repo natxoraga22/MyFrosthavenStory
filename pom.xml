@@ -25,6 +25,7 @@
 		<!-- Webjars -->
 		<bootstrap.version>5.3.3</bootstrap.version>
 		<fontAwesome.version>6.5.2</fontAwesome.version>
+		<vue.version>3.5.12</vue.version>
 		<alpinejs.version>3.14.1</alpinejs.version>
 		<tomSelect.version>2.3.1</tomSelect.version>
 	</properties>
@@ -76,6 +77,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>font-awesome</artifactId>
 			<version>${fontAwesome.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>vue</artifactId>
+			<version>${vue.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.npm</groupId>

@@ -12,24 +12,24 @@
 <body>
 	<!-- CONTENT -->
 	<th:block layout:fragment="content">
-		<bs:row gx="{md:4, xl:5}" gy="4" x-data="sectionPageData">
+		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
-				<th:block th:replace="~{fragments/sectionForm :: sectionForm}"/>
+				
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<template x-if="Object.keys(section).length > 0">
-					<th:block th:replace="~{fragments/section :: section}"/>
-				</template>
+				<fh-section></fh-section>
 			</bs:col>
 		</bs:row>
+	</th:block>
+
+	<!-- COMPONENTS -->
+	<th:block layout:fragment="components">
+		<th:block th:replace="~{components/section :: section}"/>
 	</th:block>
 
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
 		<script th:replace="~{:: sectionPageJs}"></script>
-		<script th:replace="~{fragments/frosthaven :: frosthavenJs}"></script>
-		<script th:replace="~{fragments/sectionForm :: sectionFormJs}"></script>
-		<script th:replace="~{fragments/section :: sectionJs}"></script>
 	</th:block>
 
 
@@ -37,25 +37,12 @@
 	<!-- SECTION PAGE JS -->
 	<!-- --------------- -->
 	<script th:fragment="sectionPageJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			Alpine.data("sectionPageData", () => ({
-				sectionId: /*[[${sectionId}]]*/ null,
-				section: {},
-
-				init() {
-					if (this.sectionId) this.setSection(this.sectionId.replace("_", "."));
-					window.addEventListener("changed-section-id", event => this.setSection(event.detail));
-				},
-
-				// "changed-section-id" event handler
-				setSection(sectionId) {
-					log.entry(sectionId);
-					this.section = {};
-					this.$nextTick(() => this.section = this.$store.frosthaven.getSection({ id: sectionId }) ?? {});
-					log.exit();
-				}
-			}));
+		const app = Vue.createApp({
+			components: {
+				FhSection
+			}
 		});
+		app.mount("#app");
 	</script>
 </body>
 </html>

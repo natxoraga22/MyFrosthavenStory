@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<th:block th:fragment="unlockedBy">
+
+	<!-- -------- -->
+	<!-- TEMPLATE -->
+	<!-- -------- -->
+	<template id="unlockedByTemplate">
+		<div class="subtitle">
+			<i class="fa-solid fa-fw fa-unlock" bs:me="1"></i> [[#{unlockedBy}]]:
+			<span v-for="(unlockedByItem, index) in unlockedBy" :key="index">
+				<span v-if="index > 0">[[#{unlockedBy.separator}]]</span>
+				<!-- Event -->
+				<a v-if="unlockedByItem.event" class="link-secondary" :href="getLinkUrl(unlockedByItem)">
+					[[#{unlockedBy.event}]] {{unlockedByItem.event.id}}
+				</a>
+				<!-- Scenario -->
+				<a v-if="unlockedByItem.scenario" class="link-secondary" :href="getLinkUrl(unlockedByItem)">
+					[[#{unlockedBy.scenario}]] {{Number(unlockedByItem.scenario.id).toString()}}
+				</a>
+				<!-- Section -->
+				<a v-if="unlockedByItem.section" class="link-secondary" :href="getLinkUrl(unlockedByItem)">
+					[[#{unlockedBy.section}]] {{unlockedByItem.section.id}}
+				</a>
+				<!-- Other -->
+				<span v-if="unlockedByItem.other">{{unlockedByItem.other}}</span>
+			</span>
+		</div>
+	</template>
+
+
+	<!-- ---------- -->
+	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
+	<script th:inline="javascript">
+		const FhUnlockedBy = {
+			template: "#unlockedByTemplate",
+			props: {
+				unlockedBy: Array
+			},
+			inject: {
+				webPage: { from: "webPage" }
+			},
+			methods: {
+				getLinkUrl(unlockedByItem) {
+					const urlPrefix = this.webPage == "CAMPAIGN" ? "#" : "/";
+					const urlSuffix = this.webPage == "CAMPAIGN" ? "_" : "/";
+					if (unlockedByItem.event) return `${urlPrefix}event${urlSuffix}${unlockedByItem.event.id}`;
+					else if (unlockedByItem.scenario) return `${urlPrefix}scenario${urlSuffix}${unlockedByItem.scenario.id}`;
+					else if (unlockedByItem.section) return `${urlPrefix}section${urlSuffix}${unlockedByItem.section.htmlSafeId}`;
+					else return "";
+				}
+			}
+		};
+	</script>
+	
+</th:block>
+</body>
+</html>

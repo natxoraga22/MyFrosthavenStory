@@ -30,6 +30,9 @@
 		const app = Vue.createApp({
 			components: {
 				FhSectionPage
+			},
+			provide: {
+				webPage: /*[[${webPage}]]*/ null
 			}
 		});
 		app.mount("#app");

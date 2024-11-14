@@ -5,25 +5,28 @@
 </head>
 <body>
 <th:block th:fragment="sectionPage">
+	<th:block th:replace="~{components/unlockedBy :: unlockedBy}"/>
 	<th:block th:replace="~{components/section :: section}"/>
 
+	<!-- -------- -->
 	<!-- TEMPLATE -->
-	<script type="text/x-template" id="sectionPageTemplate">
+	<!-- -------- -->
+	<template id="sectionPageTemplate">
 		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
 				<!-- HERE GOES SECTION FORM -->
 				<!-- ... -->
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<FhSection
-					v-if="section"
-					:section="section"
-				/>
+				<fh-section v-if="section" :section="section"></fh-section>
 			</bs:col>
 		</bs:row>
-	</script>
+	</template>
 
+	
+	<!-- ---------- -->
 	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
 	<script th:inline="javascript">
 		const FhSectionPage = {
 			components: {

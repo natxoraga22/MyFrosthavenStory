@@ -5,24 +5,88 @@
 </head>
 <body>
 <th:block th:fragment="section">
+	<!-- -------- -->
 	<!-- TEMPLATE -->
-	<script type="text/x-template" id="sectionTemplate">
-		<div class="title titleSecondary">
-			<h2>
-				<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
-			</h2>
-		</div>
-	</script>
+	<!-- -------- -->
+	<template id="sectionTemplate">
+		<div :id="'section_' + section.htmlSafeId" class="section anchor">
+			<!-- Trigger -->
+			<div v-if="section.trigger" class="trigger">
+				<i class="fa-solid fa-angles-right fa-sm"></i>
+				{{section.trigger}}:
+			</div>
 
+			<!-- Title -->
+			<div class="title titleSecondary">
+				<h2>
+					<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
+				</h2>
+				<!-- Unlocked by -->
+				<fh-unlocked-by v-if="section.unlockedBy" :unlocked-by="section.unlockedBy"></fh-unlocked-by>
+			</div>
+
+			<!-- Goals -->
+			<bs:card v-if="section.goals" class="fhCard goals">
+				<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
+				<bs:cardBody v-html="section.goals"></bs:cardBody>
+			</bs:card>
+
+			<!-- Introduction -->
+			<bs:card v-if="section.introduction" class="fhCard fhCardFlush introduction">
+				<bs:cardHeader>[[#{section.introduction}]]</bs:cardHeader>
+				<bs:cardBody v-html="section.introduction"></bs:cardBody>
+			</bs:card>
+
+			<!-- Text -->
+			<div v-if="section.text" class="text" v-html="section.text"></div>
+
+			<!-- Special rules -->
+			<bs:card v-if="section.specialRules" class="fhCard specialRules">
+				<bs:cardHeader>[[#{section.specialRules}]]</bs:cardHeader>
+				<bs:cardBody v-html="section.specialRules"></bs:cardBody>
+			</bs:card>
+
+			<!-- Boss specials -->
+			<bs:card v-for="(bossSpecial, key) in section.bossSpecials" :key="key" class="fhCard bossSpecial">
+				<bs:cardHeader>
+					<i class="fa-solid fa-skull fa-xs"></i>
+					[[#{section.bossSpecial}]] {{key}}
+				</bs:cardHeader>
+				<bs:cardBody v-html="bossSpecial"></bs:cardBody>
+			</bs:card>
+
+			<!-- Conclusion -->
+			<bs:card v-if="section.conclusion" class="fhCard fhCardFlush conclusion">
+				<bs:cardHeader>[[#{section.conclusion}]]</bs:cardHeader>
+				<bs:cardBody v-html="section.conclusion"></bs:cardBody>
+			</bs:card>
+
+			<!-- Rewards -->
+			<!-- TODO -->
+
+			<!-- Section links -->
+			<bs:card v-if="section.sectionLinks" class="fhCard sectionLinks">
+				<bs:cardHeader>[[#{section.sectionLinks}]]</bs:cardHeader>
+				<bs:cardBody v-html="section.sectionLinks"></bs:cardBody>
+			</bs:card>
+
+			<!-- Image -->
+			<!-- TODO -->
+		</div>
+	</template>
+
+
+	<!-- ---------- -->
 	<!-- JAVASCRIPT -->
+	<!-- ---------- -->
 	<script th:inline="javascript">
 		const FhSection = {
+			components: {
+				FhUnlockedBy
+			},
 			template: "#sectionTemplate",
 			props: {
 				section: Object
-			},
-			mounted() {
-				log.debug(this.section);
 			}
 		};
 	</script>

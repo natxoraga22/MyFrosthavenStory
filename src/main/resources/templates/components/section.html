@@ -7,13 +7,23 @@
 <th:block th:fragment="section">
 	<!-- TEMPLATE -->
 	<script type="text/x-template" id="sectionTemplate">
-		<h1>THIS IS A SECTION</h1>
+		<div class="title titleSecondary">
+			<h2>
+				<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
+			</h2>
+		</div>
 	</script>
 
 	<!-- JAVASCRIPT -->
-	<script>
+	<script th:inline="javascript">
 		const FhSection = {
-			template: "#sectionTemplate"
+			template: "#sectionTemplate",
+			props: {
+				section: Object
+			},
+			mounted() {
+				log.debug(this.section);
+			}
 		};
 	</script>
 </th:block>

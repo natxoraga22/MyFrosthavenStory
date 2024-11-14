@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------------- -->
+	<!-- FROSTHAVEN JS -->
+	<!-- ------------- -->
+	<script th:fragment="frosthavenStore" th:inline="javascript">
+		const Frosthaven = Vue.reactive({
+			charactersMap: /*[[${charactersMap}]]*/ {},
+			personalQuestsMap: /*[[${personalQuestsMap}]]*/ {},
+			scenariosMap: /*[[${scenariosMap}]]*/ {},
+			eventsMap: /*[[${eventsMap}]]*/ {},
+			sectionsMap: /*[[${sectionsMap}]]*/ {},
+			buildingsMap: /*[[${buildingsMap}]]*/ {},
+
+			getCharacter(psCharacter) {
+				const rawCharacter = this.charactersMap[psCharacter.id];
+				if (rawCharacter) {
+					const character = { ...rawCharacter };
+					// Personal quest
+					if (psCharacter.personalQuest) {
+						const personalQuest = this.getPersonalQuest(psCharacter.personalQuest);
+						if (personalQuest) character.personalQuest = personalQuest;
+					}
+					return character;
+				}
+				else return null;
+			},
+
+			getPartyMember(psCharacter, currentParty) {
+				const partyMember = currentParty.find(partyMember => partyMember.id === psCharacter.id);
+				if (partyMember) {
+					const partyMemberCopy = { ...partyMember };
+					// Additional personal quest
+					if (psCharacter.additionalPersonalQuest) {
+						const additionalPersonalQuest = this.getPersonalQuest(psCharacter.additionalPersonalQuest);
+						if (additionalPersonalQuest) partyMemberCopy.additionalPersonalQuest = additionalPersonalQuest;
+					}
+					// Level
+					if (psCharacter.level) partyMemberCopy.level = psCharacter.level;
+					return partyMemberCopy;
+				}
+				else return null;
+			},
+
+			getPersonalQuest(psPersonalQuest) {
+				const rawPersonalQuest = this.personalQuestsMap[psPersonalQuest.id];
+				if (rawPersonalQuest) {
+					const personalQuest = { ...rawPersonalQuest };
+					// Unlocked building
+					personalQuest.unlockedBuilding = psPersonalQuest.unlockedBuilding ?? "MAIN";
+					// Random scenario section
+					if (psPersonalQuest.randomScenarioSection) {
+						personalQuest.randomScenarioSection = this.sectionsMap[psPersonalQuest.randomScenarioSection.id];
+					}
+					return personalQuest;
+				}
+				else return null;
+			},
+
+			getScenario(psScenario) {
+				const rawScenario = this.scenariosMap[psScenario.id];
+				if (rawScenario) {
+					const scenario = { ...rawScenario };
+					// Path
+					if (psScenario.path) scenario.path = psScenario.path;
+					// Random scenario section
+					if (psScenario.randomScenarioSection) {
+						scenario.randomScenarioSection = this.sectionsMap[psScenario.randomScenarioSection.id];
+					}
+					return scenario;
+				}
+				else return null;
+			},
+
+			getEvent(psEvent) {
+				const rawEvent = this.eventsMap[psEvent.id];
+				if (rawEvent) {
+					const event = { ...rawEvent };
+					// Chosen options
+					if (psEvent.chosenOptions?.length > 0) event.chosenOptionsIds = psEvent.chosenOptions;
+					else if (psEvent.chosenOption) event.chosenOptionsIds = [psEvent.chosenOption];
+					// Random scenario section
+					if (psEvent.randomScenarioSection) {
+						event.randomScenarioSection = this.sectionsMap[psEvent.randomScenarioSection.id];
+					}
+					return event;
+				}
+				else return null;
+			},
+
+			getSection(psSection) {
+				const rawSection = this.sectionsMap[psSection.id];
+				if (rawSection) return { ...rawSection };
+				else return null;
+			},
+
+			getBuilding(psBuilding) {
+				const rawBuilding = this.buildingsMap[psBuilding.id];
+				if (rawBuilding) {
+					const building = { ...rawBuilding };
+					if (psBuilding.level) {
+						building.level = psBuilding.level;
+						building.sectionPath = psBuilding.path ?? Object.keys(building.levels[building.level].builtSections);
+					}
+					return building;
+				}
+				else return null;
+			}
+		});
+	</script>
+</body>
+</html>

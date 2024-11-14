@@ -12,23 +12,13 @@
 <body>
 	<!-- CONTENT -->
 	<th:block layout:fragment="content">
-		<bs:row gx="{md:4, xl:5}" gy="4">
-			<bs:col col="{xs:12, md:3}">
-				
-			</bs:col>
-			<bs:col col="{xs:12, md:9}">
-				<fh-section></fh-section>
-			</bs:col>
-		</bs:row>
-	</th:block>
-
-	<!-- COMPONENTS -->
-	<th:block layout:fragment="components">
-		<th:block th:replace="~{components/section :: section}"/>
+		<fh-section-page></fh-section-page>
 	</th:block>
 
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
+		<th:block th:replace="~{components/frosthaven :: frosthavenStore}"/>
+		<th:block th:replace="~{components/sectionPage :: sectionPage}"/>
 		<script th:replace="~{:: sectionPageJs}"></script>
 	</th:block>
 
@@ -39,7 +29,7 @@
 	<script th:fragment="sectionPageJs" th:inline="javascript">
 		const app = Vue.createApp({
 			components: {
-				FhSection
+				FhSectionPage
 			}
 		});
 		app.mount("#app");

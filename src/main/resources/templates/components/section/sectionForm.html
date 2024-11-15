@@ -7,13 +7,33 @@
 <th:block th:fragment="sectionForm">
 	<!-- TEMPLATE -->
 	<template id="sectionFormTemplate">
-		
+		<form id="sectionForm">
+			<bs:card>
+				<bs:cardBody>
+					<bs:label for="inputSectionId">[[#{section.id}]]</bs:label>
+					<bs:select id="inputSectionId" name="sectionId" required></bs:select>
+				</bs:cardBody>
+			</bs:card>
+		</form>
 	</template>
 
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhSectionForm = {
-			template: "#sectionFormTemplate"
+			template: "#sectionFormTemplate",
+			props: {
+				sectionId: String
+			},
+			mounted() {
+				new TomSelect("#inputSectionId", {
+					options: Object.values(Frosthaven.sectionsMap).map(section =>
+						({ value: section.id, text: section.id + (section.title ? ' · ' + section.title : '') })
+					),
+					items: this.sectionId,
+					onChange: newSectionId => this.$emit("sectionIdChange", newSectionId),
+					maxOptions: null
+				});
+			}
 		};
 	</script>
 </th:block>

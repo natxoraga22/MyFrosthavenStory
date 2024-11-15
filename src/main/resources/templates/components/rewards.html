@@ -76,11 +76,10 @@
 	<template id="rewardsEventsTemplate">
 		<div>
 			{{title}}:
-			<br/>
 			<div v-for="typeAndSeason in typesAndSeasonsList" :key="typeAndSeason">
-				<div v-if="events[typeAndSeason].length > 0">
+				<div v-if="events[typeAndSeason]?.length > 0">
 					<strong>{{events[typeAndSeason].map(event => event.id).join(", ")}}</strong>
-					<span>({{typesAndSeasonsStrings[typeAndSeason]}})</span>
+					<span bs:ms="1">({{typesAndSeasonsStrings[typeAndSeason]}})</span>
 				</div>
 			</div>
 		</div>
@@ -91,7 +90,7 @@
 			template: "#rewardsEventsTemplate",
 			props: {
 				title: String,
-				events: Array
+				events: Object
 			},
 			inject: {
 				typesAndSeasonsList: { from: "typesAndSeasonsList" },

@@ -7,17 +7,23 @@
 <th:block th:fragment="sectionPage">
 	<th:block th:replace="~{components/unlockedBy :: unlockedBy}"/>
 	<th:block th:replace="~{components/rewards :: rewards}"/>
+	<th:block th:replace="~{components/section/sectionForm :: sectionForm}"/>
 	<th:block th:replace="~{components/section/section :: section}"/>
 
 	<!-- TEMPLATE -->
 	<template id="sectionPageTemplate">
 		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
-				<!-- HERE GOES SECTION FORM -->
-				<!-- ... -->
+				<fh-section-form
+					:section-id="sectionId"
+					@section-id-change="newSectionId => handleSectionIdChange(newSectionId)">
+				</fh-section-form>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<fh-section v-if="section" :section="section"></fh-section>
+				<fh-section
+					v-if="section"
+					:section="section">
+				</fh-section>
 			</bs:col>
 		</bs:row>
 	</template>
@@ -26,6 +32,7 @@
 	<script th:inline="javascript">
 		const FhSectionPage = {
 			components: {
+				FhSectionForm,
 				FhSection
 			},
 			template: "#sectionPageTemplate",
@@ -39,6 +46,13 @@
 				if (this.sectionId) this.fetchSection();
 			},
 			methods: {
+				handleSectionIdChange(newSectionId) {
+					log.entry(newSectionId);
+					this.sectionId = newSectionId;
+					this.fetchSection();
+					log.exit();
+				},
+
 				fetchSection() {
 					log.entry();
 					this.section = Frosthaven.getSection({ id: this.sectionId });

@@ -62,7 +62,7 @@
 			</bs:card>
 
 			<!-- Rewards -->
-			<!-- TODO -->
+			<fh-rewards v-if="section.rewards" :rewards="section.rewards"></fh-rewards>
 
 			<!-- Section links -->
 			<bs:card v-if="section.sectionLinks" class="fhCard sectionLinks">
@@ -82,7 +82,8 @@
 	<script th:inline="javascript">
 		const FhSection = {
 			components: {
-				FhUnlockedBy
+				FhUnlockedBy,
+				FhRewards
 			},
 			template: "#sectionTemplate",
 			props: {

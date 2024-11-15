@@ -11,7 +11,7 @@
 	<!-- -------- -->
 	<template id="unlockedByTemplate">
 		<div class="subtitle">
-			<i class="fa-solid fa-fw fa-unlock" bs:me="1"></i> [[#{unlockedBy}]]:
+			<i class="fa-solid fa-fw fa-unlock"></i> [[#{unlockedBy}]]:
 			<span v-for="(unlockedByItem, index) in unlockedBy" :key="index">
 				<span v-if="index > 0">[[#{unlockedBy.separator}]]</span>
 				<!-- Event -->
@@ -57,7 +57,7 @@
 			}
 		};
 	</script>
-	
+
 </th:block>
 </body>
 </html>

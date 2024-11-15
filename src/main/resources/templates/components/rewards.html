@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<!-- ------- -->
+<!-- REWARDS -->
+<!-- ------- -->
+<th:block th:fragment="rewards">
+	<th:block th:replace="~{:: rewardsEvents}"/>
+	<th:block th:replace="~{:: rewardsScenarios}"/>
+
+	<!-- TEMPLATE -->
+	<template id="rewardsTemplate">
+		<bs:card class="fhCard rewards">
+			<bs:cardHeader>[[#{section.rewards}]]</bs:cardHeader>
+			<bs:cardBody>
+				<div th:fragment="rewardsBody" class="rewardsBody">
+					<!-- Text -->
+					<div v-if="rewards.text" class="fw-bold" v-html="rewards.text"></div>
+
+					<!-- New events -->
+					<fh-rewards-events
+						v-if="rewards.events"
+						th:title="#{section.rewards.newEvents}"
+						:events="rewards.events">
+					</fh-rewards-events>
+
+					<!-- Removed events -->
+					<fh-rewards-events
+						v-if="rewards.removedEvents"
+						th:title="#{section.rewards.removedEvents}"
+						:events="rewards.removedEvents">
+					</fh-rewards-events>
+
+					<!-- New scenarios -->
+					<fh-rewards-scenarios
+						v-if="rewards.scenarios"
+						th:title="#{section.rewards.newScenarios}"
+						:scenarios="rewards.scenarios">
+					</fh-rewards-scenarios>
+
+					<!-- Locked out scenarios -->
+					<fh-rewards-scenarios
+						v-if="rewards.lockedOutScenarios"
+						th:title="#{section.rewards.lockedOutScenarios}"
+						:scenarios="rewards.lockedOutScenarios">
+					</fh-rewards-scenarios>
+				</div>
+			</bs:cardBody>
+		</bs:card>
+	</template>
+
+	<!-- JAVASCRIPT -->
+	<script th:inline="javascript">
+		const FhRewards = {
+			components: {
+				FhRewardsEvents,
+				FhRewardsScenarios
+			},
+			template: "#rewardsTemplate",
+			props: {
+				rewards: Object
+			}
+		};
+	</script>
+</th:block>
+
+
+<!-- -------------- -->
+<!-- REWARDS EVENTS -->
+<!-- -------------- -->
+<th:block th:fragment="rewardsEvents">
+	<template id="rewardsEventsTemplate">
+		<div>
+			{{title}}:
+			<br/>
+			<div v-for="typeAndSeason in typesAndSeasonsList" :key="typeAndSeason">
+				<div v-if="events[typeAndSeason].length > 0">
+					<strong>{{events[typeAndSeason].map(event => event.id).join(", ")}}</strong>
+					<span>({{typesAndSeasonsStrings[typeAndSeason]}})</span>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<script th:inline="javascript">
+		const FhRewardsEvents = {
+			template: "#rewardsEventsTemplate",
+			props: {
+				title: String,
+				events: Array
+			},
+			inject: {
+				typesAndSeasonsList: { from: "typesAndSeasonsList" },
+				typesAndSeasonsStrings: { from: "typesAndSeasonsStrings" }
+			}
+		};
+	</script>
+</th:block>
+
+
+<!-- ----------------- -->
+<!-- REWARDS SCENARIOS -->
+<!-- ----------------- -->
+<th:block th:fragment="rewardsScenarios">
+	<template id="rewardsScenariosTemplate">
+		<div>
+			{{title}}:
+			<div v-for="scenario in scenarios" :key="scenario.id">
+				<strong>{{scenario.name}}</strong>
+				<span class="scenarioNumber" bs:ms="1">({{Number(scenario.id)}})</span>
+				<img v-if="scenario.linked" class="icon linked" th:src="@{__${imgUrl}__/icons/linked.png}">
+				<img v-if="scenario.forceLinked" class="icon forceLinked" th:src="@{__${imgUrl}__/icons/forceLinked.png}">
+			</div>
+		</div>
+	</template>
+
+	<script th:inline="javascript">
+		const FhRewardsScenarios = {
+			template: "#rewardsScenariosTemplate",
+			props: {
+				title: String,
+				scenarios: Array
+			}
+		};
+	</script>
+</th:block>
+
+</body>
+</html>

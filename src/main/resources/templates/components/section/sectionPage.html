@@ -7,11 +7,9 @@
 <th:block th:fragment="sectionPage">
 	<th:block th:replace="~{components/unlockedBy :: unlockedBy}"/>
 	<th:block th:replace="~{components/rewards :: rewards}"/>
-	<th:block th:replace="~{components/section :: section}"/>
+	<th:block th:replace="~{components/section/section :: section}"/>
 
-	<!-- -------- -->
 	<!-- TEMPLATE -->
-	<!-- -------- -->
 	<template id="sectionPageTemplate">
 		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
@@ -24,10 +22,7 @@
 		</bs:row>
 	</template>
 
-
-	<!-- ---------- -->
 	<!-- JAVASCRIPT -->
-	<!-- ---------- -->
 	<script th:inline="javascript">
 		const FhSectionPage = {
 			components: {

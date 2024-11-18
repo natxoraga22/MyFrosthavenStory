@@ -17,12 +17,14 @@
 
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
+		<th:block th:replace="~{components/common/fontAwesomeIcon :: fontAwesomeIcon}"/>
 		<th:block th:replace="~{components/frosthaven :: frosthavenStore}"/>
 		<th:block th:replace="~{components/section/sectionPage :: sectionPage}"/>
 
 		<script th:inline="javascript">
 			const app = Vue.createApp({
 				components: {
+					FaIcon,
 					FhSectionPage
 				},
 				provide: {

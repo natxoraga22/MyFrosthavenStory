@@ -4,18 +4,93 @@
 	<meta charset="utf-8">
 </head>
 <body>
+
+<!-- -------- -->
+<!-- SCENARIO -->
+<!-- -------- -->
 <th:block th:fragment="scenario">
+	<th:block th:replace="~{:: scenarioTitle}"/>
+
 	<!-- TEMPLATE -->
 	<template id="scenarioTemplate">
-		<h1>SCENARIO</h1>
+		<div :id="'scenario_' + scenario.id" class="scenario anchor">
+			<!-- Title -->
+			<fh-scenario-title :scenario="scenario"></fh-scenario-title>
+		</div>
 	</template>
 
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhScenario = {
-			template: "#scenarioTemplate"
+			components: {
+				FhScenarioTitle
+			},
+			template: "#scenarioTemplate",
+			props: {
+				scenario: Object
+			}
 		};
 	</script>
 </th:block>
+
+
+<!-- -------------- -->
+<!-- SCENARIO TITLE -->
+<!-- -------------- -->
+<th:block th:fragment="scenarioTitle">
+	<!-- TEMPLATE -->
+	<template id="scenarioTitleTemplate">
+		<div class="title">
+			<!-- Questline -->
+			<div v-if="scenario.questLine" class="questLine" :class="scenario.questLine.uncapitalize()">
+				{{questLinesStrings[scenario.questLine]}}
+			</div>
+			<h1>
+				<!-- Id and name -->
+				<span class="titleSecondary">{{Number(scenario.id)}} ·</span>
+				<span>{{scenario.name}}</span>
+
+				<!-- Requirements -->
+				<div v-if="scenario.requirement" class="requirement">
+					<div v-if="scenario.requirement.transport" class="transport">
+						<img :src="iconsUrl + '/' + scenario.requirement.transport + '.png'">
+					</div>
+					<div v-if="scenario.requirement.status" class="status">
+						{{scenario.requirement.status}}
+					</div>
+				</div>
+			</h1>
+			<!-- Unlocked by -->
+			<fh-unlocked-by
+				v-if="scenario.unlockedBy"
+				:unlocked-by="scenario.unlockedBy">
+			</fh-unlocked-by>
+
+			<!-- Location -->
+			<div v-if="scenario.location" class="subtitle">
+				<fa-icon icon="map-location" fixedWidth bs:me="1"></fa-icon>
+				{{scenario.location}}
+			</div>
+		</div>
+	</template>
+
+	<!-- JAVASCRIPT -->
+	<script th:inline="javascript">
+		const FhScenarioTitle = {
+			components: {
+				FhUnlockedBy
+			},
+			template: "#scenarioTitleTemplate",
+			props: {
+				scenario: Object
+			},
+			inject: {
+				iconsUrl: { from: "iconsUrl" },
+				questLinesStrings: { from: "questLinesStrings" }
+			}
+		};
+	</script>
+</th:block>
+
 </body>
 </html>

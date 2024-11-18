@@ -71,7 +71,9 @@
 			</bs:card>
 
 			<!-- Image -->
-			<!-- TODO -->
+			<div v-if="section.containsImage" class="map">
+				<img :src="mapImgUrl" onload="this.width*=0.66;">
+			</div>
 		</div>
 	</template>
 
@@ -87,7 +89,16 @@
 			},
 			template: "#sectionTemplate",
 			props: {
-				section: Object
+				section: { type: Object, required: true },
+				scenarioId: { type: String },
+			},
+			inject: {
+				imgUrl: { from: "imgUrl" }
+			},
+			computed: {
+				mapImgUrl() {
+					return this.imgUrl + "/scenarios/" + this.scenarioId + "_" + this.section.id + ".png";
+				}
 			}
 		};
 	</script>

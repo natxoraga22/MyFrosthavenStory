@@ -19,25 +19,21 @@
 	<th:block layout:fragment="javascript">
 		<th:block th:replace="~{components/frosthaven :: frosthavenStore}"/>
 		<th:block th:replace="~{components/section/sectionPage :: sectionPage}"/>
-		<script th:replace="~{:: sectionPageJs}"></script>
+
+		<script th:inline="javascript">
+			const app = Vue.createApp({
+				components: {
+					FhSectionPage
+				},
+				provide: {
+					webPage: /*[[${webPage}]]*/ null,
+					imgUrl: /*[[${imgUrl}]]*/ null,
+					typesAndSeasonsList: /*[[${typesAndSeasonsList}]]*/ [],
+					typesAndSeasonsStrings: /*[[${typesAndSeasonsStrings}]]*/ {}
+				}
+			});
+			app.mount("#app");
+		</script>
 	</th:block>
-
-
-	<!-- --------------- -->
-	<!-- SECTION PAGE JS -->
-	<!-- --------------- -->
-	<script th:fragment="sectionPageJs" th:inline="javascript">
-		const app = Vue.createApp({
-			components: {
-				FhSectionPage
-			},
-			provide: {
-				webPage: /*[[${webPage}]]*/ null,
-				typesAndSeasonsList: /*[[${typesAndSeasonsList}]]*/ [],
-				typesAndSeasonsStrings: /*[[${typesAndSeasonsStrings}]]*/ {}
-			}
-		});
-		app.mount("#app");
-	</script>
 </body>
 </html>

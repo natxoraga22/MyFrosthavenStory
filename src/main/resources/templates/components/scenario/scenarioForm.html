@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<th:block th:fragment="scenarioForm">
+	<!-- TEMPLATE -->
+	<template id="scenarioFormTemplate">
+		<h1>SCENARIO FORM</h1>
+	</template>
+
+	<!-- JAVASCRIPT -->
+	<script th:inline="javascript">
+		const FhScenarioForm = {
+			template: "#scenarioFormTemplate"
+		};
+	</script>
+</th:block>
+</body>
+</html>

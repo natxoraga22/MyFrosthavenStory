@@ -12,70 +12,28 @@
 <body>
 	<!-- CONTENT -->
 	<th:block layout:fragment="content">
-		<bs:row gx="{md:4, xl:5}" gy="4" x-data="scenarioPageData">
-			<bs:col col="{xs:12, md:3}">
-				<th:block th:replace="~{fragments/scenarioForm :: scenarioForm}"/>
-			</bs:col>
-			<bs:col col="{xs:12, md:9}">
-				<template x-if="Object.keys(scenario).length > 0">
-					<th:block th:replace="~{fragments/scenario :: scenario}"/>
-				</template>
-			</bs:col>
-		</bs:row>
+		<fh-scenario-page></fh-scenario-page>
 	</th:block>
 
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
-		<script th:replace="~{:: scenarioPageJs}"></script>
-		<script th:replace="~{fragments/frosthaven :: frosthavenJs}"></script>
-		<script th:replace="~{fragments/scenarioForm :: scenarioFormJs}"></script>
-		<script th:replace="~{fragments/section :: sectionJs}"></script>
-	</th:block>
+		<th:block th:replace="~{components/frosthaven :: frosthavenStore}"/>
+		<th:block th:replace="~{components/scenario/scenarioPage :: scenarioPage}"/>
 
-
-	<!-- ---------------- -->
-	<!-- SCENARIO PAGE JS -->
-	<!-- ---------------- -->
-	<script th:fragment="scenarioPageJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			Alpine.data("scenarioPageData", () => ({
-				scenarioId: /*[[${scenarioId}]]*/ null,
-				scenarioPath: /*[[${scenarioPath}]]*/ null,
-				scenario: {},
-
-				init() {
-					if (this.scenarioId) this.setScenario();
-					window.addEventListener("changed-scenario-id", event => this.setScenarioId(event.detail));
-					window.addEventListener("changed-scenario-path", event => this.setScenarioPath(event.detail));
+		<script th:inline="javascript">
+			const app = Vue.createApp({
+				components: {
+					FhScenarioPage
 				},
-
-				setScenario() {
-					log.entry(this.scenarioId, this.scenarioPath);
-					this.scenario = {};
-					this.$nextTick(() => {
-						this.scenario = this.$store.frosthaven.getScenario({ id: this.scenarioId, path: this.scenarioPath }) ?? {};
-					});
-					log.exit();
-				},
-
-				// "changed-scenario-id" event handler
-				setScenarioId(scenarioId) {
-					log.entry(scenarioId);
-					this.scenarioId = scenarioId;
-					this.scenarioPath = null;
-					this.setScenario();
-					log.exit();
-				},
-
-				// "changed-scenario-path" event handler
-				setScenarioPath(newScenarioPath) {
-					log.entry(newScenarioPath);
-					this.scenarioPath = newScenarioPath;
-					this.setScenario();
-					log.exit();
+				provide: {
+					webPage: /*[[${webPage}]]*/ null,
+					imgUrl: /*[[${imgUrl}]]*/ null,
+					typesAndSeasonsList: /*[[${typesAndSeasonsList}]]*/ [],
+					typesAndSeasonsStrings: /*[[${typesAndSeasonsStrings}]]*/ {}
 				}
-			}));
-		});
-	</script>
+			});
+			app.mount("#app");
+		</script>
+	</th:block>
 </body>
 </html>

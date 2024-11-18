@@ -31,11 +31,11 @@
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhSectionPage = {
+			template: "#sectionPageTemplate",
 			components: {
 				FhSectionForm,
 				FhSection
 			},
-			template: "#sectionPageTemplate",
 			data() {
 				return {
 					sectionId: /*[[${sectionId}]]*/ null,
@@ -43,7 +43,10 @@
 				};
 			},
 			created() {
-				if (this.sectionId) this.fetchSection();
+				if (this.sectionId) {
+					this.sectionId = this.sectionId.replace("_", ".");
+					this.fetchSection();
+				}
 			},
 			methods: {
 				handleSectionIdChange(newSectionId) {

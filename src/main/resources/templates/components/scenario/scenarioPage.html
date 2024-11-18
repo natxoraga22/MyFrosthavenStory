@@ -29,11 +29,11 @@
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhScenarioPage = {
+			template: "#scenarioPageTemplate",
 			components: {
 				FhScenarioForm,
 				FhScenario
 			},
-			template: "#scenarioPageTemplate",
 			data() {
 				return {
 					scenarioId: /*[[${scenarioId}]]*/ null,

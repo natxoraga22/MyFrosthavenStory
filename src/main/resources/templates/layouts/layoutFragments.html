@@ -62,10 +62,6 @@
 		<!-- Vue -->
 		<script th:src="@{/webjars/vue/dist/vue.global.js}"></script>
 
-		<!-- Alpine -->
-		<script src="https://cdn.jsdelivr.net/npm/alpinejs-jsz@1.0.7/dist/jsz.cdn.min.js"></script>
-		<script th:src="@{/webjars/alpinejs/dist/cdn.min.js}" defer></script>
-
 		<!-- TomSelect -->
 		<script th:src="@{/webjars/tom-select/dist/js/tom-select.complete.min.js}"></script>
 
@@ -73,27 +69,29 @@
 		<script th:src="@{/js/libs/csb/logUtils.js}"></script>
 		<script th:src="@{/js/libs/csb/ajaxUtils.js}"></script>
 		<script th:src="@{/js/libs/csb/jsUtils.js}"></script>
-		<th:block th:replace="~{fragments/common/unlockedBy :: unlockedByJs}"/>
 	</th:block>
 
 
-	<!-- ------------ -->
-	<!-- ALPINE STORE -->
-	<!-- ------------ -->
-	<script th:fragment="alpineStoreJs" th:inline="javascript">
-		document.addEventListener("alpine:init", () => {
-			const imgUrl = /*[[${imgUrl}]]*/ "";
+	<!-- ------- -->
+	<!-- VUE APP -->
+	<!-- ------- -->
+	<th:block th:fragment="vueApp">
+		<th:block th:replace="~{components/common/fontAwesomeIcon :: fontAwesomeIcon}"/>
+		<script th:inline="javascript">
+			const app = Vue.createApp({});
 
-			Alpine.store("webPage", /*[[${webPage}]]*/ "");
-			Alpine.store("imgUrl", imgUrl);
-			Alpine.store("iconsUrl", imgUrl + "/icons");
-			Alpine.store("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
+			/* Global components */
+			app.component("FaIcon", FaIcon);
 
-			Alpine.store("questLinesStrings", /*[[${questLinesStrings}]]*/ {});
-			Alpine.store("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});
-
-			Alpine.store("uncapitalize", string => string?.charAt(0).toLowerCase() + string?.slice(1));
-		});
-	</script>
+			/* Global props (provide/inject) */
+			const imgUrl = /*[[${imgUrl}]]*/ null;
+			app.provide("webPage", /*[[${webPage}]]*/ null);
+			app.provide("imgUrl", imgUrl);
+			app.provide("iconsUrl", imgUrl ? (imgUrl + "/icons") : null);
+			app.provide("typesAndSeasonsList", /*[[${typesAndSeasonsList}]]*/ []);
+			app.provide("questLinesStrings", /*[[${questLinesStrings}]]*/ {});
+			app.provide("typesAndSeasonsStrings", /*[[${typesAndSeasonsStrings}]]*/ {});
+		</script>
+	</th:block>
 </body>
 </html>

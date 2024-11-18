@@ -17,26 +17,11 @@
 
 	<!-- JAVASCRIPT -->
 	<th:block layout:fragment="javascript">
-		<th:block th:replace="~{components/common/fontAwesomeIcon :: fontAwesomeIcon}"/>
 		<th:block th:replace="~{components/frosthaven :: frosthavenStore}"/>
 		<th:block th:replace="~{components/scenario/scenarioPage :: scenarioPage}"/>
 
 		<script th:inline="javascript">
-			const imgUrl = /*[[${imgUrl}]]*/ null;
-			const app = Vue.createApp({
-				components: {
-					FhScenarioPage
-				},
-				provide: {
-					webPage: /*[[${webPage}]]*/ null,
-					imgUrl: imgUrl,
-					iconsUrl: imgUrl ? imgUrl + "/icons" : null,
-					typesAndSeasonsList: /*[[${typesAndSeasonsList}]]*/ [],
-					typesAndSeasonsStrings: /*[[${typesAndSeasonsStrings}]]*/ {},
-					questLinesStrings: /*[[${questLinesStrings}]]*/ {}
-				}
-			});
-			app.component("fa-icon", FaIcon);
+			app.component("FhScenarioPage", FhScenarioPage);
 			app.mount("#app");
 		</script>
 	</th:block>

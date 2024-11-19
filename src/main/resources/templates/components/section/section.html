@@ -9,20 +9,20 @@
 	<!-- TEMPLATE -->
 	<!-- -------- -->
 	<template id="sectionTemplate">
-		<div :id="'section_' + section.htmlSafeId" class="section anchor">
+		<div v-if="section" :id="'section_' + section.htmlSafeId" class="section anchor">
 			<!-- Trigger -->
 			<div v-if="section.trigger" class="trigger">
-				<i class="fa-solid fa-angles-right fa-sm"></i>
-				{{section.trigger}}:
+				<fa-icon icon="angles-right" size="sm" bs:me="1"></fa-icon>
+				<span v-html="section.trigger"></span>:
 			</div>
 
 			<!-- Title -->
-			<div class="title titleSecondary">
+			<div v-if="section.title" class="title titleSecondary">
 				<h2>
 					<span class="titleTertiary">{{section.id}} ·</span> {{section.title}}
 				</h2>
 				<!-- Unlocked by -->
-				<fh-unlocked-by v-if="section.unlockedBy" :unlocked-by="section.unlockedBy"></fh-unlocked-by>
+				<fh-unlocked-by :unlocked-by="section.unlockedBy"></fh-unlocked-by>
 			</div>
 
 			<!-- Goals -->
@@ -89,8 +89,8 @@
 			},
 			template: "#sectionTemplate",
 			props: {
-				section: { type: Object, required: true },
 				scenarioId: { type: String },
+				section: { type: Object, required: true },
 			},
 			inject: {
 				imgUrl: { from: "imgUrl" }

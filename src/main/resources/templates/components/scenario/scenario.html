@@ -13,19 +13,42 @@
 
 	<!-- TEMPLATE -->
 	<template id="scenarioTemplate">
-		<div :id="'scenario_' + scenario.id" class="scenario anchor">
+		<div v-if="scenario" :id="'scenario_' + scenario.id" class="scenario anchor">
 			<!-- Title -->
 			<fh-scenario-title :scenario="scenario"></fh-scenario-title>
+
+			<!-- Scenario goals -->
+			<bs:card v-if="scenario.goals" class="fhCard goals">
+				<bs:cardHeader>[[#{scenario.goals}]]</bs:cardHeader>
+				<bs:cardBody v-html="scenario.goals"></bs:cardBody>
+			</bs:card>
+			
+			<!-- Scenario effects -->
+			<bs:card v-if="scenario.effects" class="fhCard effects">
+				<bs:cardHeader>[[#{scenario.effects}]]</bs:cardHeader>
+				<bs:cardBody v-html="scenario.effects"></bs:cardBody>
+			</bs:card>
+
+			<!-- Sections -->
+			<div class="sections">
+				<template v-for="pathItem in scenario.path" :key="pathItem">
+					<fh-section :scenario-id="scenario.id" :section="scenario.sections[pathItem]"></fh-section>
+				</template>
+			</div>
+
+			<!-- Random scenario section -->
+			<fh-section :section="scenario.randomScenarioSection"></fh-section>
 		</div>
 	</template>
 
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhScenario = {
-			components: {
-				FhScenarioTitle
-			},
 			template: "#scenarioTemplate",
+			components: {
+				FhScenarioTitle,
+				FhSection
+			},
 			props: {
 				scenario: Object
 			}
@@ -61,10 +84,7 @@
 				</div>
 			</h1>
 			<!-- Unlocked by -->
-			<fh-unlocked-by
-				v-if="scenario.unlockedBy"
-				:unlocked-by="scenario.unlockedBy">
-			</fh-unlocked-by>
+			<fh-unlocked-by :unlocked-by="scenario.unlockedBy"></fh-unlocked-by>
 
 			<!-- Location -->
 			<div v-if="scenario.location" class="subtitle">
@@ -77,10 +97,10 @@
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhScenarioTitle = {
+			template: "#scenarioTitleTemplate",
 			components: {
 				FhUnlockedBy
 			},
-			template: "#scenarioTitleTemplate",
 			props: {
 				scenario: Object
 			},

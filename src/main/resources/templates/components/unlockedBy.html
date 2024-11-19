@@ -10,7 +10,7 @@
 	<!-- TEMPLATE -->
 	<!-- -------- -->
 	<template id="unlockedByTemplate">
-		<div class="subtitle">
+		<div v-if="unlockedBy" class="subtitle">
 			<i class="fa-solid fa-fw fa-unlock"></i> [[#{unlockedBy}]]:
 			<span v-for="(unlockedByItem, index) in unlockedBy" :key="index">
 				<span v-if="index > 0">[[#{unlockedBy.separator}]]</span>

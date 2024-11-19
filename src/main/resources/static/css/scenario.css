@@ -149,7 +149,7 @@
 /* RANDOM SCENARIO SECTION */
 /* ----------------------- */
 
-.scenario > div > .section {
+.scenario > .section {
 	margin-top: calc(var(--scenario-randomScenarioSection-gap) - var(--scenario-inner-gap));
 }
 

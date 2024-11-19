@@ -8,20 +8,17 @@
 	<th:block th:replace="~{components/unlockedBy :: unlockedBy}"/>
 	<th:block th:replace="~{components/rewards :: rewards}"/>
 	<th:block th:replace="~{components/scenario/scenarioForm :: scenarioForm}"/>
+	<th:block th:replace="~{components/section/section :: section}"/>
 	<th:block th:replace="~{components/scenario/scenario :: scenario}"/>
 
 	<!-- TEMPLATE -->
 	<template id="scenarioPageTemplate">
 		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
-				<fh-scenario-form>
-				</fh-scenario-form>
+				<fh-scenario-form></fh-scenario-form>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
-				<fh-scenario
-					v-if="scenario"
-					:scenario="scenario">
-				</fh-scenario>
+				<fh-scenario :scenario="scenario"></fh-scenario>
 			</bs:col>
 		</bs:row>
 	</template>

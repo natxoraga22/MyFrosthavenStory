@@ -15,7 +15,10 @@
 	<template id="scenarioPageTemplate">
 		<bs:row gx="{md:4, xl:5}" gy="4">
 			<bs:col col="{xs:12, md:3}">
-				<fh-scenario-form></fh-scenario-form>
+				<fh-scenario-form
+					:scenario-id="scenarioId"
+					@scenario-id-change="newScenarioId => handleScenarioIdChange(newScenarioId)">
+				</fh-scenario-form>
 			</bs:col>
 			<bs:col col="{xs:12, md:9}">
 				<fh-scenario :scenario="scenario"></fh-scenario>
@@ -42,6 +45,13 @@
 				if (this.scenarioId) this.fetchScenario();
 			},
 			methods: {
+				handleScenarioIdChange(newScenarioId) {
+					log.entry(newScenarioId);
+					this.scenarioId = newScenarioId;
+					this.fetchScenario();
+					log.exit();
+				},
+
 				fetchScenario() {
 					log.entry();
 					this.scenario = Frosthaven.getScenario({ id: this.scenarioId, path: this.scenarioPath });

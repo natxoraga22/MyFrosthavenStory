@@ -7,13 +7,42 @@
 <th:block th:fragment="scenarioForm">
 	<!-- TEMPLATE -->
 	<template id="scenarioFormTemplate">
-		<h1>SCENARIO FORM</h1>
+		<form id="scenarioForm">
+			<bs:card>
+				<bs:cardBody>
+					<!-- Scenario ID -->
+					<div>
+						<bs:label for="inputScenarioId">[[#{scenario.id}]]</bs:label>
+						<bs:select id="inputScenarioId" name="scenarioId" required></bs:select>
+					</div>
+
+					<!-- Path -->
+
+					<!-- Next section -->
+					
+				</bs:cardBody>
+			</bs:card>
+		</form>
 	</template>
 
 	<!-- JAVASCRIPT -->
 	<script th:inline="javascript">
 		const FhScenarioForm = {
-			template: "#scenarioFormTemplate"
+			template: "#scenarioFormTemplate",
+			props: {
+				scenarioId: String
+			},
+			mounted() {
+				new TomSelect("#inputScenarioId", {
+					options: Object.values(Frosthaven.scenariosMap)
+						.sort((scenarioA, scenarioB) => scenarioA.id - scenarioB.id)
+						.map(scenario => ({ value: scenario.id, text: scenario.id + (scenario.name ? ' · ' + scenario.name : '') })
+					),
+					items: this.scenarioId,
+					onChange: newScenarioId => this.$emit("scenarioIdChange", newScenarioId),
+					maxOptions: null
+				});
+			}
 		};
 	</script>
 </th:block>
